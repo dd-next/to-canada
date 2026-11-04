@@ -1,0 +1,135 @@
+/*
+ * Northward design tokens.
+ * Warm paper, charcoal ink, one muted brick accent. Square corners, strong rules,
+ * heavy display type, editorial serif for explanations, tabular numerals for data.
+ * Breakpoints (not expressible as custom properties): 820px (explorer mobile), 1100px (wide).
+ */
+:root {
+  /* ---- surfaces */
+  --paper: #f2ece1;
+  --paper-2: #e8e0d2; /* panels */
+  --paper-3: #ddd3c2; /* tracks, pressed states */
+  --paper-hi: #f8f4ec; /* inputs, raised cards */
+  --land: #e7dfd0; /* map land */
+  --charcoal: #262421; /* full-bleed dark sections */
+  --charcoal-2: #34312c;
+  --charcoal-3: #4a463f;
+
+  /* ---- ink */
+  --ink: #1f1d1a;
+  --ink-2: #4a453e; /* secondary text, 8:1 on paper */
+  --ink-3: #625b51; /* tertiary text, >=5:1 on paper and paper-2 */
+  --hair: rgb(31 29 26 / 0.16); /* hairline rules */
+  --hair-2: rgb(31 29 26 / 0.3);
+  --on-dark: #f2ece1;
+  --on-dark-2: #c4bbac;
+  --hair-dark: rgb(242 236 225 / 0.2);
+
+  /* ---- accent (muted brick) + restrained secondaries */
+  --accent: #a63d2a; /* 5.4:1 on paper */
+  --accent-hover: #86301f;
+  --accent-ink: #f8f4ec; /* text on accent */
+  --accent-tint: #f1dcd2;
+  --accent-on-dark: #e8977d; /* 5.9:1 on charcoal */
+  --pine: #2d6862;
+  --blue: #2d5f8b;
+  --ochre: #c8952c;
+  --ochre-ink: #7a5a14; /* ochre for text, 5:1 on paper */
+  --caution: #8a5a12;
+
+  /* ---- data */
+  --compare-1: #b5442f;
+  --compare-2: #2d5f8b;
+  --compare-3: #c8952c;
+  --missing-fill: var(--paper);
+  --missing-stroke: var(--ink);
+
+  /* ---- type */
+  --font-display: 'Archivo Variable', 'Archivo', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --font-ui: var(--font-display);
+  --font-serif: 'Newsreader Variable', 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --fs-2xs: 0.6875rem; /* 11px labels */
+  --fs-xs: 0.75rem; /* 12px */
+  --fs-sm: 0.8125rem; /* 13px */
+  --fs-base: 0.9375rem; /* 15px UI */
+  --fs-md: 1.0625rem; /* 17px */
+  --fs-serif: 1.1875rem; /* 19px editorial body */
+  --fs-lg: 1.375rem; /* 22px */
+  --fs-xl: 1.75rem; /* 28px */
+  --fs-2xl: 2.5rem; /* 40px */
+  --fs-3xl: 3.5rem; /* 56px */
+  --fs-display: clamp(3rem, 2rem + 5vw, 7rem);
+
+  --lh-tight: 0.92;
+  --lh-snug: 1.1;
+  --lh-ui: 1.35;
+  --lh-serif: 1.55;
+
+  --tracking-label: 0.08em;
+  --tracking-wordmark: 0.14em;
+  --stretch-condensed: 82%;
+  --stretch-semi: 90%;
+  --stretch-expanded: 118%;
+
+  /* ---- space (4px base) */
+  --s-0: 2px;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --gutter: clamp(16px, 3vw, 40px);
+  --measure: 66ch;
+  --page-max: 1280px;
+
+  /* ---- structure */
+  --rule-w: 1.5px;
+  --rule-w-strong: 2px;
+  --rule: var(--rule-w) solid var(--ink);
+  --rule-strong: var(--rule-w-strong) solid var(--ink);
+  --rule-hair: 1px solid var(--hair);
+  --radius: 0;
+  --radius-sm: 2px;
+  --header-h: 56px;
+  --panel-w: clamp(360px, 28vw, 412px);
+  --drawer-w: 380px;
+  --control-h: 36px;
+  --control-h-sm: 30px;
+
+  /* ---- motion */
+  --t-fast: 120ms;
+  --t-med: 180ms;
+  --t-slow: 240ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* ---- layers */
+  --z-map-overlay: 5;
+  --z-drawer: 20;
+  --z-header: 40;
+  --z-popover: 60;
+  --z-sheet: 70;
+  --z-tooltip: 80;
+
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-fast: 0ms;
+    --t-med: 0ms;
+    --t-slow: 0ms;
+  }
+}
+
+@media (max-width: 819.98px) {
+  :root {
+    --header-h: 52px;
+    --fs-serif: 1.125rem;
+  }
+}

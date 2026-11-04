@@ -1,0 +1,292 @@
+[
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "rent_asking_studio",
+  "label": "Average asking rent, studio",
+  "shortLabel": "Asking rent, studio",
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "description": "Average advertised monthly rent for vacant units listed for rent. Asking rents run above what sitting tenants pay.",
+  "basis": "asking (advertised) rent, all listed units",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "fixture-rent-asking"
+  ],
+  "dims": {
+   "family": "rent_asking",
+   "unitType": "Studio"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "rent_asking_1br",
+  "label": "Average asking rent, 1 bedroom",
+  "shortLabel": "Asking rent, 1 bed",
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "description": "Average advertised monthly rent for vacant units listed for rent. Asking rents run above what sitting tenants pay.",
+  "basis": "asking (advertised) rent, all listed units",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "fixture-rent-asking"
+  ],
+  "dims": {
+   "family": "rent_asking",
+   "unitType": "1 bedroom"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "rent_asking_2br",
+  "label": "Average asking rent, 2 bedroom",
+  "shortLabel": "Asking rent, 2 bed",
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "description": "Average advertised monthly rent for vacant units listed for rent. Asking rents run above what sitting tenants pay.",
+  "basis": "asking (advertised) rent, all listed units",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "fixture-rent-asking"
+  ],
+  "dims": {
+   "family": "rent_asking",
+   "unitType": "2 bedroom"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "rent_asking_3br",
+  "label": "Average asking rent, 3 bedroom+",
+  "shortLabel": "Asking rent, 3+ bed",
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "description": "Average advertised monthly rent for vacant units listed for rent. Asking rents run above what sitting tenants pay.",
+  "basis": "asking (advertised) rent, all listed units",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "fixture-rent-asking"
+  ],
+  "dims": {
+   "family": "rent_asking",
+   "unitType": "3 bedroom+"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "rent_vacancy_rate",
+  "label": "Rental vacancy rate",
+  "shortLabel": "Vacancy rate",
+  "category": "housing",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "better",
+  "description": "Share of purpose-built rental units that were vacant and available in the October survey.",
+  "geoLevel": "cma",
+  "periodType": "year",
+  "sourceIds": [
+   "fixture-rent-vacancy"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": false,
+  "id": "rent_asking_1br_yoy",
+  "label": "Asking rent change, 1 bedroom (year over year)",
+  "shortLabel": "Rent change, 1 bed",
+  "category": "housing",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "worse",
+  "description": "Not a map layer — used to check that mapLayer:false metrics stay off the map.",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "sourceIds": [
+   "fixture-rent-asking"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "lfs_unemployment_rate",
+  "label": "Unemployment rate",
+  "shortLabel": "Unemployment rate",
+  "category": "work",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "worse",
+  "description": "Share of the labour force aged 15+ that is unemployed and looking for work. Three-month moving average, not seasonally adjusted.",
+  "basis": "population aged 15 and over",
+  "geoLevel": "cma",
+  "periodType": "three_month_avg",
+  "seasonalAdjustment": "unadjusted",
+  "sourceIds": [
+   "fixture-lfs"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "lfs_employment_rate",
+  "label": "Employment rate",
+  "shortLabel": "Employment rate",
+  "category": "work",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "better",
+  "description": "Share of the population aged 15+ that is employed. Three-month moving average, not seasonally adjusted.",
+  "basis": "population aged 15 and over",
+  "geoLevel": "cma",
+  "periodType": "three_month_avg",
+  "seasonalAdjustment": "unadjusted",
+  "sourceIds": [
+   "fixture-lfs"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "cost_mbm_family4",
+  "label": "Poverty-line basket, family of four",
+  "shortLabel": "Basket cost, family of 4",
+  "category": "cost",
+  "unit": "CAD_year",
+  "decimals": 0,
+  "higherIs": "worse",
+  "description": "Disposable income a family of four needs for a modest basket of food, clothing, shelter, transport and other necessities.",
+  "basis": "disposable family income, reference family of two adults and two children",
+  "geoLevel": "mbm_region",
+  "periodType": "year",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "fixture-mbm"
+  ],
+  "comparabilityNote": "Smaller places share a provincial size-class threshold."
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "imm_pr_admissions",
+  "label": "New permanent residents",
+  "shortLabel": "New permanent residents",
+  "category": "immigration",
+  "unit": "persons",
+  "decimals": 0,
+  "higherIs": "neutral",
+  "description": "Permanent residents admitted who named this area as their intended destination, calendar year.",
+  "geoLevel": "cma",
+  "periodType": "year",
+  "sourceIds": [
+   "fixture-ircc"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "clim_jan_mean_temp",
+  "label": "January mean temperature",
+  "shortLabel": "January mean temp.",
+  "category": "climate",
+  "unit": "degC",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Average of daily mean temperatures in January over the 1991–2020 normals period at the nearest long-record station.",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "sourceIds": [
+   "fixture-climate"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "clim_jul_mean_temp",
+  "label": "July mean temperature",
+  "shortLabel": "July mean temp.",
+  "category": "climate",
+  "unit": "degC",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Average of daily mean temperatures in July over the 1991–2020 normals period at the nearest long-record station.",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "sourceIds": [
+   "fixture-climate"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "clim_annual_snow",
+  "label": "Annual snowfall",
+  "shortLabel": "Snowfall",
+  "category": "climate",
+  "unit": "cm",
+  "decimals": 0,
+  "higherIs": "neutral",
+  "description": "Average total snowfall per year, 1991–2020 normals.",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "sourceIds": [
+   "fixture-climate"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "pop_population",
+  "label": "Population",
+  "shortLabel": "Population",
+  "category": "people",
+  "unit": "persons",
+  "decimals": 0,
+  "higherIs": "neutral",
+  "description": "Census population of the statistical area.",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "sourceIds": [
+   "fixture-census"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "mapLayer": true,
+  "id": "pop_growth_5yr",
+  "label": "Population growth, 2016–2021",
+  "shortLabel": "Population growth (5 yr)",
+  "category": "people",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Percentage change in census population between 2016 and 2021.",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "sourceIds": [
+   "fixture-census"
+  ]
+ }
+]

@@ -1,0 +1,126 @@
+[
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "noc": "21231",
+  "title": "Software engineers and designers",
+  "teer": 1,
+  "broadCategory": "2",
+  "broadTitle": "Natural and applied sciences and related occupations",
+  "examples": [
+   "Software engineer",
+   "Software architect",
+   "Application architect"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "noc": "31301",
+  "title": "Registered nurses and registered psychiatric nurses",
+  "teer": 1,
+  "broadCategory": "3",
+  "broadTitle": "Health occupations",
+  "examples": [
+   "Registered nurse",
+   "Clinical nurse",
+   "Psychiatric nurse"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "noc": "72310",
+  "title": "Carpenters",
+  "teer": 2,
+  "broadCategory": "7",
+  "broadTitle": "Trades, transport and equipment operators and related occupations",
+  "examples": [
+   "Carpenter",
+   "Finish carpenter",
+   "Framer"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "noc": "13110",
+  "title": "Administrative assistants",
+  "teer": 3,
+  "broadCategory": "1",
+  "broadTitle": "Business, finance and administration occupations",
+  "examples": [
+   "Executive assistant",
+   "Office administrator"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "noc": "41220",
+  "title": "Secondary school teachers",
+  "teer": 1,
+  "broadCategory": "4",
+  "broadTitle": "Occupations in education, law and social, community and government services",
+  "examples": [
+   "High school teacher",
+   "Science teacher"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "noc": "63200",
+  "title": "Cooks",
+  "teer": 3,
+  "broadCategory": "6",
+  "broadTitle": "Sales and service occupations",
+  "examples": [
+   "Line cook",
+   "Institutional cook"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "noc": "72410",
+  "title": "Automotive service technicians, truck and bus mechanics and mechanical repairers",
+  "teer": 2,
+  "broadCategory": "7",
+  "broadTitle": "Trades, transport and equipment operators and related occupations",
+  "examples": [
+   "Auto mechanic",
+   "Truck mechanic"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "noc": "11100",
+  "title": "Financial auditors and accountants",
+  "teer": 1,
+  "broadCategory": "1",
+  "broadTitle": "Business, finance and administration occupations",
+  "examples": [
+   "Accountant",
+   "Auditor",
+   "CPA"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "noc": "33102",
+  "title": "Nurse aides, orderlies and patient service associates",
+  "teer": 3,
+  "broadCategory": "3",
+  "broadTitle": "Health occupations",
+  "examples": [
+   "Personal support worker",
+   "Patient care aide"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "noc": "00012",
+  "title": "Senior managers - financial, communications and other business services",
+  "teer": 0,
+  "broadCategory": "0",
+  "broadTitle": "Legislative and senior management occupations",
+  "examples": [
+   "Chief financial officer",
+   "Vice-president, marketing"
+  ]
+ }
+]

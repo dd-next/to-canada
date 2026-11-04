@@ -1,0 +1,184 @@
+{
+ "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+ "product": "Northward (synthetic fixtures)",
+ "builtAt": "2026-10-28T09:00:00Z",
+ "files": {
+  "places.json": {
+   "bytes": 38423,
+   "records": 31
+  },
+  "metrics.json": {
+   "bytes": 8907,
+   "records": 15
+  },
+  "observations.json": {
+   "bytes": 160643,
+   "records": 459
+  },
+  "sources.json": {
+   "bytes": 5869,
+   "records": 8
+  },
+  "occupations.json": {
+   "bytes": 3409,
+   "records": 10
+  }
+ },
+ "coverage": [
+  {
+   "placeId": "toronto",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "montreal",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "vancouver",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "calgary",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "edmonton",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "ottawa",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "gatineau",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "winnipeg",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "quebec-city",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "hamilton",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "kitchener-waterloo",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "london",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "halifax",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "victoria",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "saskatoon",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "regina",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "st-johns",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "windsor",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "kelowna",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "abbotsford-mission",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "moncton",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "saint-john",
+   "metrics": 13,
+   "core": true
+  },
+  {
+   "placeId": "fredericton",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "sherbrooke",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "sudbury",
+   "metrics": 14,
+   "core": true
+  },
+  {
+   "placeId": "thunder-bay",
+   "metrics": 13,
+   "core": true
+  },
+  {
+   "placeId": "charlottetown",
+   "metrics": 13,
+   "core": false
+  },
+  {
+   "placeId": "brandon",
+   "metrics": 10,
+   "core": false
+  },
+  {
+   "placeId": "whitehorse",
+   "metrics": 8,
+   "core": false
+  },
+  {
+   "placeId": "yellowknife",
+   "metrics": 7,
+   "core": false
+  },
+  {
+   "placeId": "iqaluit",
+   "metrics": 5,
+   "core": false
+  }
+ ]
+}

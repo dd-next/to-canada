@@ -1,0 +1,1943 @@
+[
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "toronto",
+  "name": "Toronto",
+  "statLabel": "Toronto CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 43.6532,
+  "lon": -79.3832,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3530",
+     "name": "Toronto"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "535",
+    "name": "Toronto",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-toronto",
+    "name": "Toronto",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Mississauga",
+   "Brampton",
+   "Markham",
+   "Vaughan",
+   "Richmond Hill",
+   "Oakville",
+   "Ajax",
+   "Pickering",
+   "Milton",
+   "Newmarket"
+  ],
+  "population": {
+   "value": 6200000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "535",
+    "name": "Toronto",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION TORONTO",
+   "climateId": "FX40310",
+   "lat": 43.703199999999995,
+   "lon": -79.4632,
+   "distanceKm": 7,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "montreal",
+  "name": "Montréal",
+  "statLabel": "Montréal CMA",
+  "province": "QC",
+  "region": "quebec",
+  "lat": 45.5019,
+  "lon": -73.5674,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2440",
+     "name": "Montréal"
+    },
+    {
+     "level": "economic_region",
+     "id": "2445",
+     "name": "Laval"
+    },
+    {
+     "level": "economic_region",
+     "id": "2435",
+     "name": "Montérégie"
+    },
+    {
+     "level": "economic_region",
+     "id": "2450",
+     "name": "Lanaudière"
+    },
+    {
+     "level": "economic_region",
+     "id": "2455",
+     "name": "Laurentides"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "24",
+    "name": "Quebec"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "462",
+    "name": "Montréal",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-montreal",
+    "name": "Montréal",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Laval",
+   "Longueuil",
+   "Terrebonne",
+   "Brossard",
+   "Repentigny"
+  ],
+  "population": {
+   "value": 4300000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "462",
+    "name": "Montréal",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION MONTRÉAL",
+   "climateId": "FX97323",
+   "lat": 45.551899999999996,
+   "lon": -73.6474,
+   "distanceKm": 5,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "quebec"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "vancouver",
+  "name": "Vancouver",
+  "statLabel": "Vancouver CMA",
+  "province": "BC",
+  "region": "west",
+  "lat": 49.2827,
+  "lon": -123.1207,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5920",
+     "name": "Lower Mainland--Southwest"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "59",
+    "name": "British Columbia"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "933",
+    "name": "Vancouver",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-vancouver",
+    "name": "Vancouver",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Surrey",
+   "Burnaby",
+   "Richmond",
+   "Coquitlam",
+   "Langley",
+   "Delta",
+   "North Vancouver",
+   "New Westminster"
+  ],
+  "population": {
+   "value": 2650000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "933",
+    "name": "Vancouver",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION VANCOUVER",
+   "climateId": "FX14996",
+   "lat": 49.332699999999996,
+   "lon": -123.2007,
+   "distanceKm": 4,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "calgary",
+  "name": "Calgary",
+  "statLabel": "Calgary CMA",
+  "province": "AB",
+  "region": "prairies",
+  "lat": 51.0447,
+  "lon": -114.0719,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4830",
+     "name": "Calgary"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "48",
+    "name": "Alberta"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "825",
+    "name": "Calgary",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-calgary",
+    "name": "Calgary",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Airdrie",
+   "Chestermere",
+   "Cochrane"
+  ],
+  "population": {
+   "value": 1500000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "825",
+    "name": "Calgary",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION CALGARY",
+   "climateId": "FX55366",
+   "lat": 51.094699999999996,
+   "lon": -114.1519,
+   "distanceKm": 14,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "edmonton",
+  "name": "Edmonton",
+  "statLabel": "Edmonton CMA",
+  "province": "AB",
+  "region": "prairies",
+  "lat": 53.5461,
+  "lon": -113.4938,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4860",
+     "name": "Edmonton"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "48",
+    "name": "Alberta"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "835",
+    "name": "Edmonton",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-edmonton",
+    "name": "Edmonton",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "St. Albert",
+   "Strathcona County",
+   "Spruce Grove",
+   "Leduc",
+   "Fort Saskatchewan"
+  ],
+  "population": {
+   "value": 1420000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "835",
+    "name": "Edmonton",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION EDMONTON",
+   "climateId": "FX85831",
+   "lat": 53.5961,
+   "lon": -113.57379999999999,
+   "distanceKm": 17,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "ottawa",
+  "name": "Ottawa",
+  "statLabel": "Ottawa–Gatineau CMA (Ontario part)",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 45.4215,
+  "lon": -75.6972,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3510",
+     "name": "Ottawa"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "505",
+    "name": "Ottawa - Gatineau",
+    "vintage": "2021"
+   },
+   "cmaPart": {
+    "level": "cma_part",
+    "id": "35505",
+    "name": "Ottawa - Gatineau (Ontario part)",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-ottawa",
+    "name": "Ottawa",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Clarence-Rockland",
+   "Russell"
+  ],
+  "population": {
+   "value": 1100000,
+   "period": "2021",
+   "geo": {
+    "level": "cma_part",
+    "id": "35505",
+    "name": "Ottawa - Gatineau (Ontario part)",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION OTTAWA",
+   "climateId": "FX91549",
+   "lat": 45.4715,
+   "lon": -75.7772,
+   "distanceKm": 8,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "gatineau",
+  "name": "Gatineau",
+  "statLabel": "Ottawa–Gatineau CMA (Quebec part)",
+  "province": "QC",
+  "region": "quebec",
+  "lat": 45.4765,
+  "lon": -75.7013,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2460",
+     "name": "Outaouais"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "24",
+    "name": "Quebec"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "505",
+    "name": "Ottawa - Gatineau",
+    "vintage": "2021"
+   },
+   "cmaPart": {
+    "level": "cma_part",
+    "id": "24505",
+    "name": "Ottawa - Gatineau (Quebec part)",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-gatineau",
+    "name": "Gatineau",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Cantley",
+   "Chelsea",
+   "Val-des-Monts"
+  ],
+  "population": {
+   "value": 340000,
+   "period": "2021",
+   "geo": {
+    "level": "cma_part",
+    "id": "24505",
+    "name": "Ottawa - Gatineau (Quebec part)",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION GATINEAU",
+   "climateId": "FX98541",
+   "lat": 45.5265,
+   "lon": -75.7813,
+   "distanceKm": 14,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "quebec"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "winnipeg",
+  "name": "Winnipeg",
+  "statLabel": "Winnipeg CMA",
+  "province": "MB",
+  "region": "prairies",
+  "lat": 49.8951,
+  "lon": -97.1384,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4650",
+     "name": "Winnipeg"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "46",
+    "name": "Manitoba"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "602",
+    "name": "Winnipeg",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-winnipeg",
+    "name": "Winnipeg",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 830000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "602",
+    "name": "Winnipeg",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION WINNIPEG",
+   "climateId": "FX60516",
+   "lat": 49.9451,
+   "lon": -97.2184,
+   "distanceKm": 13,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "quebec-city",
+  "name": "Québec City",
+  "statLabel": "Québec City CMA",
+  "province": "QC",
+  "region": "quebec",
+  "lat": 46.8139,
+  "lon": -71.208,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2420",
+     "name": "Capitale-Nationale"
+    },
+    {
+     "level": "economic_region",
+     "id": "2425",
+     "name": "Chaudière-Appalaches"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "24",
+    "name": "Quebec"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "421",
+    "name": "Québec",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-quebec-city",
+    "name": "Québec City",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Lévis"
+  ],
+  "population": {
+   "value": 840000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "421",
+    "name": "Québec",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION QUÉBEC CITY",
+   "climateId": "FX14572",
+   "lat": 46.863899999999994,
+   "lon": -71.288,
+   "distanceKm": 19,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "quebec"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "hamilton",
+  "name": "Hamilton",
+  "statLabel": "Hamilton CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 43.2557,
+  "lon": -79.8711,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3550",
+     "name": "Hamilton--Niagara Peninsula"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "537",
+    "name": "Hamilton",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-hamilton",
+    "name": "Hamilton",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Burlington",
+   "Grimsby"
+  ],
+  "population": {
+   "value": 790000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "537",
+    "name": "Hamilton",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION HAMILTON",
+   "climateId": "FX91797",
+   "lat": 43.305699999999995,
+   "lon": -79.9511,
+   "distanceKm": 12,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "kitchener-waterloo",
+  "name": "Kitchener–Waterloo",
+  "statLabel": "Kitchener–Waterloo CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 43.4516,
+  "lon": -80.4925,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3540",
+     "name": "Kitchener--Waterloo--Barrie"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "541",
+    "name": "Kitchener - Cambridge - Waterloo",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-kitchener-waterloo",
+    "name": "Kitchener–Waterloo",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Kitchener",
+   "Cambridge",
+   "Waterloo"
+  ],
+  "population": {
+   "value": 580000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "541",
+    "name": "Kitchener - Cambridge - Waterloo",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION KITCHENER–WATERLOO",
+   "climateId": "FX2696",
+   "lat": 43.501599999999996,
+   "lon": -80.5725,
+   "distanceKm": 16,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "london",
+  "name": "London",
+  "statLabel": "London CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 42.9849,
+  "lon": -81.2453,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3560",
+     "name": "London"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "555",
+    "name": "London",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-london",
+    "name": "London",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "St. Thomas",
+   "Strathroy-Caradoc"
+  ],
+  "population": {
+   "value": 540000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "555",
+    "name": "London",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION LONDON",
+   "climateId": "FX50431",
+   "lat": 43.0349,
+   "lon": -81.3253,
+   "distanceKm": 5,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "halifax",
+  "name": "Halifax",
+  "statLabel": "Halifax CMA",
+  "province": "NS",
+  "region": "atlantic",
+  "lat": 44.6488,
+  "lon": -63.5752,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1250",
+     "name": "Halifax"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "12",
+    "name": "Nova Scotia"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "205",
+    "name": "Halifax",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-halifax",
+    "name": "Halifax",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Dartmouth"
+  ],
+  "population": {
+   "value": 470000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "205",
+    "name": "Halifax",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION HALIFAX",
+   "climateId": "FX93364",
+   "lat": 44.6988,
+   "lon": -63.6552,
+   "distanceKm": 5,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "aip"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "victoria",
+  "name": "Victoria",
+  "statLabel": "Victoria CMA",
+  "province": "BC",
+  "region": "west",
+  "lat": 48.4284,
+  "lon": -123.3656,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5910",
+     "name": "Vancouver Island and Coast"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "59",
+    "name": "British Columbia"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "935",
+    "name": "Victoria",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-victoria",
+    "name": "Victoria",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Saanich",
+   "Langford",
+   "Oak Bay",
+   "Esquimalt",
+   "Colwood"
+  ],
+  "population": {
+   "value": 400000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "935",
+    "name": "Victoria",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION VICTORIA",
+   "climateId": "FX78988",
+   "lat": 48.4784,
+   "lon": -123.4456,
+   "distanceKm": 5,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "saskatoon",
+  "name": "Saskatoon",
+  "statLabel": "Saskatoon CMA",
+  "province": "SK",
+  "region": "prairies",
+  "lat": 52.1332,
+  "lon": -106.67,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4730",
+     "name": "Saskatoon--Biggar"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "47",
+    "name": "Saskatchewan"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "725",
+    "name": "Saskatoon",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-saskatoon",
+    "name": "Saskatoon",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 320000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "725",
+    "name": "Saskatoon",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION SASKATOON",
+   "climateId": "FX65834",
+   "lat": 52.1832,
+   "lon": -106.75,
+   "distanceKm": 11,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "regina",
+  "name": "Regina",
+  "statLabel": "Regina CMA",
+  "province": "SK",
+  "region": "prairies",
+  "lat": 50.4452,
+  "lon": -104.6189,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4710",
+     "name": "Regina--Moose Mountain"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "47",
+    "name": "Saskatchewan"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "705",
+    "name": "Regina",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-regina",
+    "name": "Regina",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 250000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "705",
+    "name": "Regina",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION REGINA",
+   "climateId": "FX62685",
+   "lat": 50.4952,
+   "lon": -104.6989,
+   "distanceKm": 13,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "st-johns",
+  "name": "St. John's",
+  "statLabel": "St. John's CMA",
+  "province": "NL",
+  "region": "atlantic",
+  "lat": 47.5615,
+  "lon": -52.7126,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1010",
+     "name": "Avalon Peninsula"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "10",
+    "name": "Newfoundland and Labrador"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "001",
+    "name": "St. John's",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-st-johns",
+    "name": "St. John's",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Mount Pearl",
+   "Conception Bay South",
+   "Paradise"
+  ],
+  "population": {
+   "value": 210000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "001",
+    "name": "St. John's",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION ST. JOHN'S",
+   "climateId": "FX89221",
+   "lat": 47.6115,
+   "lon": -52.7926,
+   "distanceKm": 15,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "aip"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "windsor",
+  "name": "Windsor",
+  "statLabel": "Windsor CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 42.3149,
+  "lon": -83.0364,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3570",
+     "name": "Windsor--Sarnia"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "559",
+    "name": "Windsor",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-windsor",
+    "name": "Windsor",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "LaSalle",
+   "Tecumseh",
+   "Lakeshore"
+  ],
+  "population": {
+   "value": 420000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "559",
+    "name": "Windsor",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION WINDSOR",
+   "climateId": "FX37057",
+   "lat": 42.3649,
+   "lon": -83.1164,
+   "distanceKm": 17,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "kelowna",
+  "name": "Kelowna",
+  "statLabel": "Kelowna CMA",
+  "province": "BC",
+  "region": "west",
+  "lat": 49.888,
+  "lon": -119.496,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5930",
+     "name": "Thompson--Okanagan"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "59",
+    "name": "British Columbia"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "915",
+    "name": "Kelowna",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-kelowna",
+    "name": "Kelowna",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "West Kelowna",
+   "Lake Country"
+  ],
+  "population": {
+   "value": 220000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "915",
+    "name": "Kelowna",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION KELOWNA",
+   "climateId": "FX89612",
+   "lat": 49.937999999999995,
+   "lon": -119.576,
+   "distanceKm": 15,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "abbotsford-mission",
+  "name": "Abbotsford–Mission",
+  "statLabel": "Abbotsford–Mission CMA",
+  "province": "BC",
+  "region": "west",
+  "lat": 49.0504,
+  "lon": -122.3045,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5920",
+     "name": "Lower Mainland--Southwest"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "59",
+    "name": "British Columbia"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "932",
+    "name": "Abbotsford - Mission",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-abbotsford-mission",
+    "name": "Abbotsford–Mission",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Abbotsford",
+   "Mission"
+  ],
+  "population": {
+   "value": 200000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "932",
+    "name": "Abbotsford - Mission",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION ABBOTSFORD–MISSION",
+   "climateId": "FX13074",
+   "lat": 49.1004,
+   "lon": -122.3845,
+   "distanceKm": 16,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "moncton",
+  "name": "Moncton",
+  "statLabel": "Moncton CMA",
+  "province": "NB",
+  "region": "atlantic",
+  "lat": 46.0878,
+  "lon": -64.7782,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1320",
+     "name": "Moncton--Richibucto"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "13",
+    "name": "New Brunswick"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "305",
+    "name": "Moncton",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-moncton",
+    "name": "Moncton",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Dieppe",
+   "Riverview"
+  ],
+  "population": {
+   "value": 160000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "305",
+    "name": "Moncton",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION MONCTON",
+   "climateId": "FX34927",
+   "lat": 46.1378,
+   "lon": -64.8582,
+   "distanceKm": 13,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "aip"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "saint-john",
+  "name": "Saint John",
+  "statLabel": "Saint John CMA",
+  "province": "NB",
+  "region": "atlantic",
+  "lat": 45.2733,
+  "lon": -66.0633,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1330",
+     "name": "Saint John--St. Stephen"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "13",
+    "name": "New Brunswick"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "310",
+    "name": "Saint John",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-saint-john",
+    "name": "Saint John",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Rothesay",
+   "Quispamsis"
+  ],
+  "population": {
+   "value": 130000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "310",
+    "name": "Saint John",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION SAINT JOHN",
+   "climateId": "FX58684",
+   "lat": 45.323299999999996,
+   "lon": -66.1433,
+   "distanceKm": 5,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "aip"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "fredericton",
+  "name": "Fredericton",
+  "statLabel": "Fredericton CMA",
+  "province": "NB",
+  "region": "atlantic",
+  "lat": 45.9636,
+  "lon": -66.6431,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1340",
+     "name": "Fredericton--Oromocto"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "13",
+    "name": "New Brunswick"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "320",
+    "name": "Fredericton",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-fredericton",
+    "name": "Fredericton",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Oromocto"
+  ],
+  "population": {
+   "value": 110000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "320",
+    "name": "Fredericton",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION FREDERICTON",
+   "climateId": "FX94640",
+   "lat": 46.0136,
+   "lon": -66.7231,
+   "distanceKm": 20,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "aip"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "sherbrooke",
+  "name": "Sherbrooke",
+  "statLabel": "Sherbrooke CMA",
+  "province": "QC",
+  "region": "quebec",
+  "lat": 45.4042,
+  "lon": -71.8929,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2430",
+     "name": "Estrie"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "24",
+    "name": "Quebec"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "433",
+    "name": "Sherbrooke",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-sherbrooke",
+    "name": "Sherbrooke",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Magog"
+  ],
+  "population": {
+   "value": 230000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "433",
+    "name": "Sherbrooke",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION SHERBROOKE",
+   "climateId": "FX18019",
+   "lat": 45.4542,
+   "lon": -71.9729,
+   "distanceKm": 13,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "quebec"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "sudbury",
+  "name": "Greater Sudbury",
+  "statLabel": "Greater Sudbury CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 46.4917,
+  "lon": -80.993,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3590",
+     "name": "Northeast"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "580",
+    "name": "Greater Sudbury / Grand Sudbury",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-sudbury",
+    "name": "Greater Sudbury",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 170000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "580",
+    "name": "Greater Sudbury / Grand Sudbury",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION GREATER SUDBURY",
+   "climateId": "FX30971",
+   "lat": 46.5417,
+   "lon": -81.073,
+   "distanceKm": 12,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "thunder-bay",
+  "name": "Thunder Bay",
+  "statLabel": "Thunder Bay CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 48.3809,
+  "lon": -89.2477,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3595",
+     "name": "Northwest"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "595",
+    "name": "Thunder Bay",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-thunder-bay",
+    "name": "Thunder Bay",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 125000,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "595",
+    "name": "Thunder Bay",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION THUNDER BAY",
+   "climateId": "FX84352",
+   "lat": 48.430899999999994,
+   "lon": -89.3277,
+   "distanceKm": 13,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  }
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "charlottetown",
+  "name": "Charlottetown",
+  "statLabel": "Charlottetown CA",
+  "province": "PE",
+  "region": "atlantic",
+  "lat": 46.2382,
+  "lon": -63.1311,
+  "tier": "extended",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1110",
+     "name": "Prince Edward Island"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "11",
+    "name": "Prince Edward Island"
+   },
+   "cma": {
+    "level": "ca",
+    "id": "105",
+    "name": "Charlottetown",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-charlottetown",
+    "name": "Charlottetown",
+    "vintage": "2021"
+   }
+  },
+  "municipalities": [
+   "Stratford",
+   "Cornwall"
+  ],
+  "population": {
+   "value": 80000,
+   "period": "2021",
+   "geo": {
+    "level": "ca",
+    "id": "105",
+    "name": "Charlottetown",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION CHARLOTTETOWN",
+   "climateId": "FX82391",
+   "lat": 46.288199999999996,
+   "lon": -63.2111,
+   "distanceKm": 7,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "aip"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "brandon",
+  "name": "Brandon",
+  "statLabel": "Brandon CA",
+  "province": "MB",
+  "region": "prairies",
+  "lat": 49.8485,
+  "lon": -99.9501,
+  "tier": "extended",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4630",
+     "name": "Southwest"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "46",
+    "name": "Manitoba"
+   },
+   "cma": {
+    "level": "ca",
+    "id": "610",
+    "name": "Brandon",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-brandon",
+    "name": "Brandon",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 52000,
+   "period": "2021",
+   "geo": {
+    "level": "ca",
+    "id": "610",
+    "name": "Brandon",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION BRANDON",
+   "climateId": "FX31055",
+   "lat": 49.8985,
+   "lon": -100.0301,
+   "distanceKm": 9,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "rcip"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "whitehorse",
+  "name": "Whitehorse",
+  "statLabel": "Whitehorse CA",
+  "province": "YT",
+  "region": "north",
+  "lat": 60.7212,
+  "lon": -135.0568,
+  "tier": "extended",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "6010",
+     "name": "Yukon"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "60",
+    "name": "Yukon"
+   },
+   "cma": {
+    "level": "ca",
+    "id": "990",
+    "name": "Whitehorse",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-whitehorse",
+    "name": "Whitehorse",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 31000,
+   "period": "2021",
+   "geo": {
+    "level": "ca",
+    "id": "990",
+    "name": "Whitehorse",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION WHITEHORSE",
+   "climateId": "FX39179",
+   "lat": 60.7712,
+   "lon": -135.13680000000002,
+   "distanceKm": 20,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "rcip"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "yellowknife",
+  "name": "Yellowknife",
+  "statLabel": "Yellowknife CA",
+  "province": "NT",
+  "region": "north",
+  "lat": 62.454,
+  "lon": -114.3718,
+  "tier": "extended",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "6110",
+     "name": "Northwest Territories"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "61",
+    "name": "Northwest Territories"
+   },
+   "cma": {
+    "level": "ca",
+    "id": "995",
+    "name": "Yellowknife",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-yellowknife",
+    "name": "Yellowknife",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 21000,
+   "period": "2021",
+   "geo": {
+    "level": "ca",
+    "id": "995",
+    "name": "Yellowknife",
+    "vintage": "2021"
+   },
+   "sourceId": "fixture-census"
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION YELLOWKNIFE",
+   "climateId": "FX41934",
+   "lat": 62.504,
+   "lon": -114.45179999999999,
+   "distanceKm": 5,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "rcip"
+  ]
+ },
+ {
+  "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
+  "id": "iqaluit",
+  "name": "Iqaluit",
+  "statLabel": "City of Iqaluit",
+  "province": "NU",
+  "region": "north",
+  "lat": 63.7467,
+  "lon": -68.517,
+  "tier": "extended",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "6210",
+     "name": "Nunavut"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "62",
+    "name": "Nunavut"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "FIXTURE-iqaluit",
+    "name": "Iqaluit",
+    "vintage": "2021"
+   }
+  },
+  "climateStation": {
+   "name": "SYNTHETIC STATION IQALUIT",
+   "climateId": "FX87152",
+   "lat": 63.796699999999994,
+   "lon": -68.597,
+   "distanceKm": 8,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "fixture-climate"
+  },
+  "programTags": [
+   "rcip"
+  ]
+ }
+]
