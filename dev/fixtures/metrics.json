@@ -219,7 +219,11 @@
   "periodType": "normals",
   "sourceIds": [
    "fixture-climate"
-  ]
+  ],
+  "dims": {
+   "family": "clim_mean_temp",
+   "month": "01"
+  }
  },
  {
   "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",
@@ -236,7 +240,11 @@
   "periodType": "normals",
   "sourceIds": [
    "fixture-climate"
-  ]
+  ],
+  "dims": {
+   "family": "clim_mean_temp",
+   "month": "07"
+  }
  },
  {
   "_note": "SYNTHETIC FIXTURE — invented for interface development, not real data",

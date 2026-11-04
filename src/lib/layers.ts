@@ -24,7 +24,23 @@ export const UNIT_TYPE_ORDER = ['Studio', '1 bedroom', '2 bedroom', '3 bedroom+'
 const UNIT_TYPE_SHORT: Record<string, string> = { Studio: 'Studio', '1 bedroom': '1 bed', '2 bedroom': '2 bed', '3 bedroom+': '3+ bed' };
 const UNIT_TYPE_SLUG: Record<string, string> = { Studio: 'studio', '1 bedroom': '1br', '2 bedroom': '2br', '3 bedroom+': '3br' };
 
+const UNIT_TYPE_BUTTON: Record<string, string> = { Studio: 'Studio', '1 bedroom': '1', '2 bedroom': '2', '3 bedroom+': '3+' };
+
 export const unitTypeShort = (t: string) => UNIT_TYPE_SHORT[t] ?? t;
+/** Compact button label: Studio / 1 / 2 / 3+. */
+export const unitTypeButton = (t: string) => UNIT_TYPE_BUTTON[t] ?? t;
+
+export const MONTHS_LONG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+/** dims.month -> 1..12 ('01', '1', 'jan', 'January' all work). */
+export function monthIndex(m: string | undefined): number | null {
+  if (!m) return null;
+  const n = Number(m);
+  if (Number.isInteger(n) && n >= 1 && n <= 12) return n;
+  const i = MONTHS_LONG.findIndex((x) => x.toLowerCase().startsWith(m.toLowerCase().slice(0, 3)));
+  return i >= 0 ? i + 1 : null;
+}
+export const monthSlug = (n: number) => String(n).padStart(2, '0');
+const MONTH_RE = new RegExp(`\\b(${MONTHS_LONG.join('|')}|${MONTHS_LONG.map((m) => m.slice(0, 3)).join('|')})\\b\\.?`, 'i');
 export function unitTypeSlug(t: string): string {
   return UNIT_TYPE_SLUG[t] ?? t.toLowerCase().replace(/\+/g, 'plus').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
@@ -38,7 +54,9 @@ export interface LayerEntry {
   label: string;
   category: MetricCategory;
   family?: string;
-  /** Variants in canonical unit-type order (length 1 when not a family). */
+  /** Which dimension the variants differ by. */
+  dim?: 'unitType' | 'month';
+  /** Variants in canonical unit-type / month order (length 1 when not a family). */
   variants: MetricDef[];
 }
 
@@ -49,7 +67,11 @@ export interface LayerCatalog {
   entryOfMetric: Map<string, LayerEntry>;
 }
 
-function commonLabel(variants: MetricDef[]): string {
+function commonLabel(variants: MetricDef[], dim?: LayerEntry['dim']): string {
+  if (dim === 'month') {
+    const base = variants[0].label.replace(MONTH_RE, '').replace(/\s{2,}/g, ' ').replace(/^[\s,·–-]+|[\s,·–-]+$/g, '');
+    return base ? base[0].toUpperCase() + base.slice(1) : variants[0].shortLabel;
+  }
   if (variants.length === 1) {
     const m = variants[0];
     const t = m.dims?.unitType;
@@ -86,8 +108,13 @@ export function buildLayerCatalog(metrics: MetricDef[]): LayerCatalog {
     } else entries.push({ key: m.id, label: m.shortLabel, category: m.category, variants: [m] });
   }
   for (const e of families.values()) {
-    e.variants.sort((a, b) => unitOrder(a.dims?.unitType) - unitOrder(b.dims?.unitType) || a.id.localeCompare(b.id));
-    e.label = commonLabel(e.variants);
+    e.dim = e.variants.some((v) => monthIndex(v.dims?.month) !== null) ? 'month' : 'unitType';
+    e.variants.sort((a, b) =>
+      e.dim === 'month'
+        ? (monthIndex(a.dims?.month) ?? 99) - (monthIndex(b.dims?.month) ?? 99)
+        : unitOrder(a.dims?.unitType) - unitOrder(b.dims?.unitType) || a.id.localeCompare(b.id),
+    );
+    e.label = commonLabel(e.variants, e.dim);
   }
   const byCategory = new Map<MetricCategory, LayerEntry[]>();
   for (const c of CATEGORY_ORDER) byCategory.set(c, []);
@@ -111,10 +138,19 @@ export interface ResolvedLayer {
   entry: LayerEntry | null;
   metric: MetricDef | null;
   unitType?: string;
+  /** 1..12 for month families. */
+  month?: number;
 }
 
-/** Pick the variant for a unit-type slug, falling back to 1 bedroom, then the first. */
-export function pickVariant(entry: LayerEntry, unitSlug: string | null | undefined): MetricDef {
+/**
+ * Pick the variant: unit-type slug for unit families (fallback 1 bedroom), month
+ * ('01'..'12') for month families (fallback January), else the first.
+ */
+export function pickVariant(entry: LayerEntry, unitSlug: string | null | undefined, monthParam?: string | null): MetricDef {
+  if (entry.dim === 'month') {
+    const want = monthIndex(monthParam ?? undefined);
+    return (want && entry.variants.find((v) => monthIndex(v.dims?.month) === want)) || entry.variants[0];
+  }
   const bySlug = unitSlug ? entry.variants.find((v) => v.dims?.unitType && unitTypeSlug(v.dims.unitType) === unitSlug) : undefined;
   return bySlug ?? entry.variants.find((v) => v.dims?.unitType === '1 bedroom') ?? entry.variants[0];
 }
@@ -124,20 +160,28 @@ export function pickVariant(entry: LayerEntry, unitSlug: string | null | undefin
  * family id ('rent_asking') or a concrete metric id ('rent_asking_2br', e.g. from
  * an Insight finding). Unknown values fall back to the default layer.
  */
-export function resolveLayer(catalog: LayerCatalog, metricParam: string | null, unitParam: string | null): ResolvedLayer {
+export function resolveLayer(catalog: LayerCatalog, metricParam: string | null, unitParam: string | null, monthParam: string | null = null): ResolvedLayer {
   let entry = metricParam ? catalog.byKey.get(metricParam) : undefined;
   let metric: MetricDef | undefined;
-  if (entry) metric = pickVariant(entry, unitParam);
+  if (entry) metric = pickVariant(entry, unitParam, monthParam);
   else if (metricParam && catalog.entryOfMetric.has(metricParam)) {
     entry = catalog.entryOfMetric.get(metricParam)!;
-    metric = unitParam && entry.family ? pickVariant(entry, unitParam) : entry.variants.find((v) => v.id === metricParam);
+    const wantsVariant = entry.family && ((entry.dim === 'unitType' && unitParam) || (entry.dim === 'month' && monthParam));
+    metric = wantsVariant ? pickVariant(entry, unitParam, monthParam) : entry.variants.find((v) => v.id === metricParam);
   }
   if (!entry || !metric) {
     const key = defaultLayerKey(catalog);
     entry = key ? catalog.byKey.get(key) : undefined;
-    metric = entry ? pickVariant(entry, unitParam) : undefined;
+    metric = entry ? pickVariant(entry, unitParam, monthParam) : undefined;
   }
-  return { entry: entry ?? null, metric: metric ?? null, unitType: metric?.dims?.unitType };
+  return { entry: entry ?? null, metric: metric ?? null, unitType: metric?.dims?.unitType, month: monthIndex(metric?.dims?.month) ?? undefined };
+}
+
+/** The asking-rent family used by the rent-share calculation (dims.family with unit types, monthly dollars). */
+export function rentFamily(catalog: LayerCatalog): LayerEntry | null {
+  const preferred = catalog.byKey.get('rent_asking');
+  if (preferred?.dim === 'unitType') return preferred;
+  return catalog.entries.find((e) => e.dim === 'unitType' && e.category === 'housing' && e.variants[0]?.unit === 'CAD_month') ?? null;
 }
 
 // ------------------------------------------------------------------ per-place layer data
@@ -162,6 +206,8 @@ export interface LayerDatum {
   flags: Flag[];
   /** Low / high range (wages). */
   range?: [number | null, number | null];
+  /** Reproducible calculation, for derived layers (labelled CALCULATION in the UI). */
+  calc?: string;
   /** National rank among comparable values for the layer's main period (1 = first in the default order). */
   rank?: number;
 }
@@ -176,12 +222,14 @@ export interface LayerData {
   sourceIds: string[];
   /** Extra caveat for the legend (e.g. annual wages on an hourly layer). */
   caveat?: string;
+  /** Derived layer: the legend and drawer label it CALCULATION and show this assumption. */
+  calculation?: string;
 }
 
 /** Default "best-first" order: lowest first when higher is worse, otherwise highest first. */
 export const defaultAscending = (m: Pick<MetricDef, 'higherIs'>) => m.higherIs === 'worse';
 
-function finalize(metric: MetricDef, data: Map<string, LayerDatum>, caveat?: string): LayerData {
+function finalize(metric: MetricDef, data: Map<string, LayerDatum>, caveat?: string, calculation?: string): LayerData {
   const periodCount = new Map<string, number>();
   for (const d of data.values()) if (d.value !== null && d.period) periodCount.set(d.period, (periodCount.get(d.period) ?? 0) + 1);
   const periods = [...periodCount.entries()].map(([period, count]) => ({ period, count })).sort((a, b) => b.count - a.count || (a.period < b.period ? 1 : -1));
@@ -209,7 +257,7 @@ function finalize(metric: MetricDef, data: Map<string, LayerDatum>, caveat?: str
   }
   periods.sort((a, b) => (a.period < b.period ? 1 : -1));
   const sourceIds = [...new Set([...metric.sourceIds, ...[...data.values()].map((d) => d.obs?.sourceId).filter((s): s is string => !!s)])];
-  return { metric, data, primaryPeriod, periods, counts, sourceIds, caveat };
+  return { metric, data, primaryPeriod, periods, counts, sourceIds, caveat, calculation };
 }
 
 /** Build layer data for a real metric from obsIndex (latest observation per place). */
@@ -407,4 +455,88 @@ export function keyObservations(
       if (item && out.length < limit) out.push(item);
     }
   return out;
+}
+
+// ------------------------------------------------------------------ rent as share of gross pay (calculation)
+
+/** Id of the virtual calculation layer (URL: ?metric=rent_share&noc=31301&unit=1br). */
+export const RENT_SHARE_KEY = 'rent_share';
+/** Paid hours per week assumed when turning an hourly median into monthly gross pay. */
+export const HOURS_PER_WEEK = 37.5;
+export const monthlyFromHourly = (hourly: number) => (hourly * HOURS_PER_WEEK * 52) / 12;
+
+export function rentShareMetric(occupation: Pick<Occupation, 'noc' | 'title'>, rent: MetricDef, wageSourceId: string): MetricDef {
+  const unitType = rent.dims?.unitType;
+  return {
+    id: RENT_SHARE_KEY,
+    label: `Rent as share of gross pay: ${occupation.title}`,
+    shortLabel: 'Rent ÷ gross pay',
+    category: 'housing',
+    unit: 'percent',
+    decimals: 0,
+    higherIs: 'worse',
+    description: `Asking rent for ${unitType ? `a ${unitType.toLowerCase()} unit` : 'a unit'} divided by gross monthly pay at the median wage for ${occupation.title.toLowerCase()} (hourly median × ${HOURS_PER_WEEK} h × 52 weeks ÷ 12). Gross pay before tax and deductions — not take-home pay.`,
+    basis: `calculation: asking rent ÷ gross monthly median wage, ${HOURS_PER_WEEK} paid hours a week`,
+    geoLevel: 'cma',
+    periodType: rent.periodType,
+    sourceIds: [...rent.sourceIds, wageSourceId].filter(Boolean),
+    comparabilityNote: 'Rent and wage reference periods differ; the wage describes the economic region.',
+    mapLayer: true,
+    dims: { noc: occupation.noc, ...(unitType ? { unitType } : {}) },
+  };
+}
+
+const money = (v: number, d = 0) => `$${v.toLocaleString('en-CA', { minimumFractionDigits: d, maximumFractionDigits: d })}`;
+
+/**
+ * Rent ÷ gross monthly pay for one occupation, per place. Missing when either
+ * input is missing. Hourly medians become monthly at HOURS_PER_WEEK; annual cells ÷ 12.
+ */
+export function buildRentShareLayer(rent: LayerData, wage: LayerData, occupation: Pick<Occupation, 'noc' | 'title'>, places: Place[]): LayerData {
+  const metric = rentShareMetric(occupation, rent.metric, wage.metric.sourceIds[0] ?? '');
+  const data = new Map<string, LayerDatum>();
+  for (const p of places) {
+    const r = rent.data.get(p.id);
+    const w = wage.data.get(p.id);
+    const rentVal = r && (r.status === 'ok' || r.status === 'other_period') ? r.value : null;
+    const wageVal = w?.shown ?? null;
+    const flags = [...new Set([...(r?.flags ?? []), ...(w?.flags ?? [])])].filter((f) => f !== 'not_available' && f !== 'annual_wage') as Flag[];
+    if (rentVal === null || wageVal === null || !r?.obs || !w) {
+      const what = rentVal === null && wageVal === null ? 'rent or wage' : rentVal === null ? 'asking-rent' : 'wage';
+      const why = rentVal === null ? r?.reason : w?.reason;
+      data.set(p.id, {
+        placeId: p.id,
+        obs: r?.obs ? { ...r.obs, metricId: RENT_SHARE_KEY, value: null, flags: ['not_available'] } : null,
+        value: null,
+        shown: null,
+        shownUnit: 'percent',
+        status: 'missing',
+        period: r?.period ?? null,
+        qualifier: null,
+        reason: `Needs both inputs — no ${what} value${why ? ` (${why.replace(/\.$/, '')})` : ''}`,
+        flags: ['not_available'],
+      });
+      continue;
+    }
+    const annual = w.shownUnit === 'CAD_year';
+    const monthly = annual ? wageVal / 12 : monthlyFromHourly(wageVal);
+    const share = (rentVal / monthly) * 100;
+    const calc = annual
+      ? `${money(rentVal)}/mo ÷ (${money(wageVal)}/yr ÷ 12 = ${money(monthly)}/mo) = ${share.toFixed(1)}%`
+      : `${money(rentVal)}/mo ÷ (${money(wageVal, 2)}/hr × ${HOURS_PER_WEEK} h × 52 ÷ 12 = ${money(monthly)}/mo) = ${share.toFixed(1)}%`;
+    data.set(p.id, {
+      placeId: p.id,
+      obs: { ...r.obs, metricId: RENT_SHARE_KEY, value: share, flags, note: calc },
+      value: share,
+      shown: share,
+      shownUnit: 'percent',
+      status: 'ok',
+      period: r.period,
+      qualifier: w.qualifier ? `Wage — ${w.qualifier}` : null,
+      reason: null,
+      flags,
+      calc,
+    });
+  }
+  return finalize(metric, data, undefined, `Calculation · gross pay at ${HOURS_PER_WEEK} h a week, before tax — not take-home`);
 }

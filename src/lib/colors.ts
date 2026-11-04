@@ -88,8 +88,8 @@ export function contrastRatio(a: string, b: string): number {
   const lb = luminance(b);
   return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
 }
-export const INK = '#1f1d1a';
-export const PAPER = '#f2ece1';
+export const INK = '#272727';
+export const PAPER = '#f6ece3';
 /** Ink or paper, whichever reads better on the given fill. */
 export function textOn(fill: string): string {
   return contrastRatio(fill, INK) >= contrastRatio(fill, PAPER) ? INK : PAPER;
@@ -97,14 +97,14 @@ export function textOn(fill: string): string {
 
 // ------------------------------------------------------------------ palettes
 export const PALETTES = {
-  /** higher is worse: sand -> brick */
-  worse: ['#f1e2bf', '#e8c18c', '#d8945f', '#c06844', '#a03f2b', '#6e2618'],
+  /** higher is worse: sand -> brick (lightest stop stays distinct from the map's linen land) */
+  worse: ['#eccf92', '#e2ab6c', '#d3844f', '#bb5d3c', '#9c3a28', '#6a2316'],
   /** higher is better: sage -> pine */
-  better: ['#e4e9cf', '#b8d0a9', '#80ae91', '#4f8a7c', '#2d6862', '#173f45'],
+  better: ['#d6e1b6', '#a9c79b', '#76a68a', '#4a8577', '#2b645e', '#163d43'],
   /** neutral magnitudes: stone -> slate */
-  neutral: ['#ebe4d5', '#cbc8bd', '#9ea6a6', '#70828e', '#485b6c', '#28394a'],
+  neutral: ['#d8d6c9', '#b4bab5', '#8c9ba0', '#657b89', '#43596a', '#26384a'],
   /** used for the negative side of neutral signed values */
-  neutralNeg: ['#ebe4d5', '#dcc59b', '#bf9a59', '#8e6c2f'],
+  neutralNeg: ['#e3d3ad', '#d4b77c', '#b8924f', '#8a6a2c'],
 } as const;
 
 /** Temperature anchors (°C -> colour). Blue below 0, warm above. */

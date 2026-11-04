@@ -19,6 +19,8 @@ export const PROVINCES: Record<ProvinceCode, { name: string; abbr: string; regio
 export const PROVINCE_ORDER: ProvinceCode[] = ['BC', 'AB', 'SK', 'MB', 'ON', 'QC', 'NB', 'NS', 'PE', 'NL', 'YT', 'NT', 'NU'];
 
 export type LonLatBox = [[number, number], [number, number]];
+/** A map framing target: a lon/lat box, or explicit anchor points to keep in view. */
+export type MapFrame = LonLatBox | { points: [number, number][] };
 
 export interface RegionDef {
   code: RegionCode;
@@ -39,8 +41,33 @@ export const REGIONS: RegionDef[] = [
 ];
 export const REGION_BY_CODE = new Map(REGIONS.map((r) => [r.code, r]));
 
-/** Whole-country framing: all provinces, trimmed above ~71°N so the populated south gets the canvas. */
-export const CANADA_FRAME: LonLatBox = [[-139.5, 41.7], [-52.6, 70.5]];
+/**
+ * Whole-country framing: anchor points along the southern edge, the Pacific and
+ * Atlantic coasts, the territorial capitals and the mainland Arctic coast. The
+ * high Arctic islands sit just past the top edge, so the populated south gets
+ * the canvas (pan or zoom out to see them).
+ */
+export const CANADA_FRAME: MapFrame = {
+  points: [
+    [-141.0, 69.6],
+    [-141.0, 60.0],
+    [-133.0, 54.2],
+    [-128.3, 50.4],
+    [-123.4, 48.3],
+    [-95.2, 49.0],
+    [-82.6, 41.8],
+    [-67.2, 44.6],
+    [-59.8, 43.9],
+    [-52.6, 47.5],
+    [-55.6, 52.2],
+    [-64.4, 60.4],
+    [-61.8, 66.6],
+    [-75.0, 70.2],
+    [-95.0, 70.6],
+    [-118.0, 71.2],
+    [-134.0, 69.6],
+  ],
+};
 
 export const provinceName = (code: ProvinceCode | string) => PROVINCES[code as ProvinceCode]?.name ?? code;
 export const provinceAbbr = (code: ProvinceCode | string) => PROVINCES[code as ProvinceCode]?.abbr ?? code;

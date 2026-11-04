@@ -142,8 +142,8 @@ a:hover {
   font-weight: 800;
 }
 .label {
-  font-family: var(--font-ui);
-  font-weight: 600;
+  font-family: var(--font-label);
+  font-weight: 500;
   font-size: var(--fs-2xs);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;

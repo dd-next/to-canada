@@ -1,0 +1,194 @@
+[
+ {
+  "category": "cost",
+  "unit": "CAD_year",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "mbm_region",
+  "periodType": "year",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-11-10-0066-01"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "MBM regions differ from CMAs (named cities, or population classes such as 'Ontario, population 100,000 to 499,999'); several places share one regional value. Annual dollars for a reference family of four, not per person.",
+  "id": "cost_mbm_food",
+  "label": "MBM basket - food (reference family, per year)",
+  "shortLabel": "MBM food",
+  "description": "Food: the cost of a nutritious diet (per the National Nutritious Food Basket) prepared at home. Annual cost for the MBM reference family (2 adults + 2 children; Nunavut: 2 adults + 3 children), 2025 current dollars, 2023-base MBM. To approximate other household sizes, StatCan's MBM uses a square-root equivalence scale: the cost for a household of n persons is the reference-family (4 persons) cost x sqrt(n/4); e.g. 1 person = 50%, 2 persons = 71%, 3 persons = 87%, 5 persons = 112%. Published family-size totals in table 11-10-0104-01 follow this scale.",
+  "basis": "Market Basket Measure (2023 base), reference family of four, current dollars, annual",
+  "dims": {
+   "family": "cost_mbm",
+   "component": "Food"
+  }
+ },
+ {
+  "category": "cost",
+  "unit": "CAD_year",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "mbm_region",
+  "periodType": "year",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-11-10-0066-01"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "MBM regions differ from CMAs (named cities, or population classes such as 'Ontario, population 100,000 to 499,999'); several places share one regional value. Annual dollars for a reference family of four, not per person.",
+  "id": "cost_mbm_clothing",
+  "label": "MBM basket - clothing (reference family, per year)",
+  "shortLabel": "MBM clothing",
+  "description": "Clothing and footwear basket. Annual cost for the MBM reference family (2 adults + 2 children; Nunavut: 2 adults + 3 children), 2025 current dollars, 2023-base MBM. To approximate other household sizes, StatCan's MBM uses a square-root equivalence scale: the cost for a household of n persons is the reference-family (4 persons) cost x sqrt(n/4); e.g. 1 person = 50%, 2 persons = 71%, 3 persons = 87%, 5 persons = 112%. Published family-size totals in table 11-10-0104-01 follow this scale.",
+  "basis": "Market Basket Measure (2023 base), reference family of four, current dollars, annual",
+  "dims": {
+   "family": "cost_mbm",
+   "component": "Clothing"
+  }
+ },
+ {
+  "category": "cost",
+  "unit": "CAD_year",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "mbm_region",
+  "periodType": "year",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-11-10-0066-01"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "MBM regions differ from CMAs (named cities, or population classes such as 'Ontario, population 100,000 to 499,999'); several places share one regional value. Annual dollars for a reference family of four, not per person.",
+  "id": "cost_mbm_transport",
+  "label": "MBM basket - transportation (reference family, per year)",
+  "shortLabel": "MBM transportation",
+  "description": "Transportation: the basket's cost of getting around (public transit and/or running a vehicle, depending on the region). Annual cost for the MBM reference family (2 adults + 2 children; Nunavut: 2 adults + 3 children), 2025 current dollars, 2023-base MBM. To approximate other household sizes, StatCan's MBM uses a square-root equivalence scale: the cost for a household of n persons is the reference-family (4 persons) cost x sqrt(n/4); e.g. 1 person = 50%, 2 persons = 71%, 3 persons = 87%, 5 persons = 112%. Published family-size totals in table 11-10-0104-01 follow this scale.",
+  "basis": "Market Basket Measure (2023 base), reference family of four, current dollars, annual",
+  "dims": {
+   "family": "cost_mbm",
+   "component": "Transportation"
+  }
+ },
+ {
+  "category": "cost",
+  "unit": "CAD_year",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "mbm_region",
+  "periodType": "year",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-11-10-0066-01"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "MBM regions differ from CMAs (named cities, or population classes such as 'Ontario, population 100,000 to 499,999'); several places share one regional value. Annual dollars for a reference family of four, not per person.",
+  "id": "cost_mbm_shelter",
+  "label": "MBM basket - shelter (reference family, per year)",
+  "shortLabel": "MBM shelter",
+  "description": "Shelter: the housing cost in the basket (rent and utilities for a modest rental dwelling in the region); it is a benchmark, not an advertised rent. Left out of the arrival budget scenario because asking rent is entered separately. Annual cost for the MBM reference family (2 adults + 2 children; Nunavut: 2 adults + 3 children), 2025 current dollars, 2023-base MBM. To approximate other household sizes, StatCan's MBM uses a square-root equivalence scale: the cost for a household of n persons is the reference-family (4 persons) cost x sqrt(n/4); e.g. 1 person = 50%, 2 persons = 71%, 3 persons = 87%, 5 persons = 112%. Published family-size totals in table 11-10-0104-01 follow this scale.",
+  "basis": "Market Basket Measure (2023 base), reference family of four, current dollars, annual",
+  "dims": {
+   "family": "cost_mbm",
+   "component": "Shelter"
+  }
+ },
+ {
+  "category": "cost",
+  "unit": "CAD_year",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "mbm_region",
+  "periodType": "year",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-11-10-0066-01"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "MBM regions differ from CMAs (named cities, or population classes such as 'Ontario, population 100,000 to 499,999'); several places share one regional value. Annual dollars for a reference family of four, not per person.",
+  "id": "cost_mbm_communication",
+  "label": "MBM basket - communication services (reference family, per year)",
+  "shortLabel": "MBM communication services",
+  "description": "Communication services (phone and internet) - a separate component in the 2023-base MBM. Annual cost for the MBM reference family (2 adults + 2 children; Nunavut: 2 adults + 3 children), 2025 current dollars, 2023-base MBM. To approximate other household sizes, StatCan's MBM uses a square-root equivalence scale: the cost for a household of n persons is the reference-family (4 persons) cost x sqrt(n/4); e.g. 1 person = 50%, 2 persons = 71%, 3 persons = 87%, 5 persons = 112%. Published family-size totals in table 11-10-0104-01 follow this scale.",
+  "basis": "Market Basket Measure (2023 base), reference family of four, current dollars, annual",
+  "dims": {
+   "family": "cost_mbm",
+   "component": "Communication services"
+  }
+ },
+ {
+  "category": "cost",
+  "unit": "CAD_year",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "mbm_region",
+  "periodType": "year",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-11-10-0066-01"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "MBM regions differ from CMAs (named cities, or population classes such as 'Ontario, population 100,000 to 499,999'); several places share one regional value. Annual dollars for a reference family of four, not per person.",
+  "id": "cost_mbm_other",
+  "label": "MBM basket - other expenses (reference family, per year)",
+  "shortLabel": "MBM other expenses",
+  "description": "Other expenses: the allowance in the basket for everything else (for example personal care, household needs, recreation and reading). Annual cost for the MBM reference family (2 adults + 2 children; Nunavut: 2 adults + 3 children), 2025 current dollars, 2023-base MBM. To approximate other household sizes, StatCan's MBM uses a square-root equivalence scale: the cost for a household of n persons is the reference-family (4 persons) cost x sqrt(n/4); e.g. 1 person = 50%, 2 persons = 71%, 3 persons = 87%, 5 persons = 112%. Published family-size totals in table 11-10-0104-01 follow this scale.",
+  "basis": "Market Basket Measure (2023 base), reference family of four, current dollars, annual",
+  "dims": {
+   "family": "cost_mbm",
+   "component": "Other expenses"
+  }
+ },
+ {
+  "category": "cost",
+  "unit": "CAD_year",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "mbm_region",
+  "periodType": "year",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-11-10-0066-01"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "MBM regions differ from CMAs (named cities, or population classes such as 'Ontario, population 100,000 to 499,999'); several places share one regional value. Annual dollars for a reference family of four, not per person.",
+  "id": "cost_mbm_total",
+  "label": "MBM basket - total (reference family, per year)",
+  "shortLabel": "MBM total",
+  "description": "Total MBM threshold: the sum of all components (food, clothing, transportation, shelter, communication services, other expenses). Annual cost for the MBM reference family (2 adults + 2 children; Nunavut: 2 adults + 3 children), 2025 current dollars, 2023-base MBM. To approximate other household sizes, StatCan's MBM uses a square-root equivalence scale: the cost for a household of n persons is the reference-family (4 persons) cost x sqrt(n/4); e.g. 1 person = 50%, 2 persons = 71%, 3 persons = 87%, 5 persons = 112%. Published family-size totals in table 11-10-0104-01 follow this scale.",
+  "basis": "Market Basket Measure (2023 base), reference family of four, current dollars, annual",
+  "dims": {
+   "family": "cost_mbm",
+   "component": "Total"
+  }
+ },
+ {
+  "category": "cost",
+  "unit": "CAD_year",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "mbm_region",
+  "periodType": "year",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-11-10-0066-01"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "MBM regions differ from CMAs (named cities, or population classes such as 'Ontario, population 100,000 to 499,999'); several places share one regional value. Annual dollars for a reference family of four, not per person.",
+  "id": "cost_mbm_inuusiqattiarniq",
+  "label": "MBM basket - Inuusiqattiarniq (Nunavut only)",
+  "shortLabel": "MBM Inuusiqattiarniq",
+  "description": "Nunavut-only component, applicable to Indigenous families; included in Nunavut total thresholds.",
+  "dims": {
+   "family": "cost_mbm",
+   "component": "Inuusiqattiarniq"
+  },
+  "basis": "MBM 2023 base, Nunavut"
+ }
+]

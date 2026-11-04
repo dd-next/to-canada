@@ -1,0 +1,44 @@
+[
+ {
+  "id": "statcan-11-10-0066-01",
+  "title": "Market Basket Measure (MBM) thresholds for the reference family by Market Basket Measure region, component and base year",
+  "publisher": "Statistics Canada",
+  "tableId": "11-10-0066-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/11100066-eng.zip",
+  "releaseDate": "2026-04-29",
+  "retrievedAt": "2026-11-04T17:56:54+00:00",
+  "referencePeriod": "2025 (annual), 2023-base MBM, current dollars",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 11-10-0066-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Filtered to Base year '2023 base', Dollar concept 'Current dollars', latest year; components mapped Food, Clothing, Transportation, Shelter, Communication services, Other expenses, Total threshold.",
+   "Each place mapped to an MBM region explicitly (see observation geo and notes)."
+  ],
+  "notes": [
+   "Reference family: 2 adults + 2 children (Nunavut: 2 adults + 3 children). Dollars are annual, as published.",
+   "Total threshold = sum of components (Communication services is its own component in the 2023-base MBM); Nunavut totals also include Inuusiqattiarniq."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-11-10-0104-01",
+  "title": "Market Basket Measure thresholds by Market Basket Measure region and family size, in current dollars",
+  "publisher": "Statistics Canada",
+  "tableId": "11-10-0104-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110010401",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/11100104-eng.zip",
+  "releaseDate": "2026-04-29",
+  "retrievedAt": "2026-11-04T17:56:55+00:00",
+  "referencePeriod": "2025 (annual)",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 11-10-0104-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Used only to verify the square-root equivalence scale (not ingested as observations)."
+  ],
+  "notes": [
+   "Total MBM threshold by family size 1..10 persons; matches reference-family total x sqrt(n/4)."
+  ],
+  "status": "ok"
+ }
+]

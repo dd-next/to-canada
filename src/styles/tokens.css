@@ -6,30 +6,31 @@
  */
 :root {
   /* ---- surfaces */
-  --paper: #f2ece1;
-  --paper-2: #e8e0d2; /* panels */
-  --paper-3: #ddd3c2; /* tracks, pressed states */
-  --paper-hi: #f8f4ec; /* inputs, raised cards */
-  --land: #e7dfd0; /* map land */
-  --charcoal: #262421; /* full-bleed dark sections */
-  --charcoal-2: #34312c;
-  --charcoal-3: #4a463f;
+  --paper: #f6ece3; /* linen */
+  --paper-2: #efe3d6; /* panels, hover */
+  --paper-3: #e3d4c4; /* tracks, pressed states */
+  --paper-hi: #fbf6f1; /* inputs, cards */
+  --linen: #ead2be; /* chips, selected rows */
+  --land: #ebdfd1; /* map land */
+  --charcoal: #272727; /* full-bleed dark sections */
+  --charcoal-2: #3d3d3d;
+  --charcoal-3: #4f4f4f;
 
   /* ---- ink */
-  --ink: #1f1d1a;
-  --ink-2: #4a453e; /* secondary text, 8:1 on paper */
-  --ink-3: #625b51; /* tertiary text, >=5:1 on paper and paper-2 */
-  --hair: rgb(31 29 26 / 0.16); /* hairline rules */
-  --hair-2: rgb(31 29 26 / 0.3);
-  --on-dark: #f2ece1;
-  --on-dark-2: #c4bbac;
-  --hair-dark: rgb(242 236 225 / 0.2);
+  --ink: #272727;
+  --ink-2: #474747; /* secondary text, 8:1 on paper */
+  --ink-3: #646464; /* tertiary text, >=4.6:1 on paper and paper-2 (not on linen) */
+  --hair: rgb(39 39 39 / 0.16); /* hairline rules */
+  --hair-2: rgb(39 39 39 / 0.3);
+  --on-dark: #f6ece3;
+  --on-dark-2: #b0b0b0;
+  --hair-dark: rgb(246 236 227 / 0.2);
 
   /* ---- accent (muted brick) + restrained secondaries */
   --accent: #a63d2a; /* 5.4:1 on paper */
   --accent-hover: #86301f;
   --accent-ink: #f8f4ec; /* text on accent */
-  --accent-tint: #f1dcd2;
+  --accent-tint: #f4dacf;
   --accent-on-dark: #e8977d; /* 5.9:1 on charcoal */
   --pine: #2d6862;
   --blue: #2d5f8b;
@@ -49,6 +50,8 @@
   --font-ui: var(--font-display);
   --font-serif: 'Newsreader Variable', 'Newsreader', Georgia, 'Times New Roman', serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  /* small uppercase labels, nav, kickers, legend titles, axis labels */
+  --font-label: var(--font-mono);
 
   --fs-2xs: 0.6875rem; /* 11px labels */
   --fs-xs: 0.75rem; /* 12px */
@@ -60,14 +63,14 @@
   --fs-xl: 1.75rem; /* 28px */
   --fs-2xl: 2.5rem; /* 40px */
   --fs-3xl: 3.5rem; /* 56px */
-  --fs-display: clamp(3rem, 2rem + 5vw, 7rem);
+  --fs-display: clamp(2.5rem, 6vw, 4.5rem);
 
   --lh-tight: 0.92;
   --lh-snug: 1.1;
   --lh-ui: 1.35;
   --lh-serif: 1.55;
 
-  --tracking-label: 0.08em;
+  --tracking-label: 0.12em;
   --tracking-wordmark: 0.14em;
   --stretch-condensed: 82%;
   --stretch-semi: 90%;
@@ -89,8 +92,8 @@
   --page-max: 1280px;
 
   /* ---- structure */
-  --rule-w: 1.5px;
-  --rule-w-strong: 2px;
+  --rule-w: 1px; /* structural hairlines */
+  --rule-w-strong: 2px; /* emphasis only */
   --rule: var(--rule-w) solid var(--ink);
   --rule-strong: var(--rule-w-strong) solid var(--ink);
   --rule-hair: 1px solid var(--hair);

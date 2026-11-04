@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { memo, useCallback, type ReactNode } from 'react';
 import type { MetricDef, Place } from '../../types/contract';
 import type { ClassScale } from '../../lib/colors';
 import { formatPeriod, formatValue, plural } from '../../lib/format';
@@ -62,6 +62,10 @@ export interface ResultsListProps {
   totalPlaces: number;
   filterLabel?: string | null;
   onClearFilters?: () => void;
+  /** Filters (region chips, search, province) rendered under the sticky header. */
+  filters?: ReactNode;
+  /** Summary block above the list (e.g. lowest / highest). */
+  extremes?: ReactNode;
 }
 
 export function ResultsList({
@@ -83,6 +87,8 @@ export function ResultsList({
   totalPlaces,
   filterLabel,
   onClearFilters,
+  filters,
+  extremes,
 }: ResultsListProps) {
   const sorted = sortRows(rows, metric, sort);
   const toggleCompare = useCallback(
@@ -119,6 +125,8 @@ export function ResultsList({
           ]}
         />
       </div>
+      {filters}
+      {rows.length > 0 && extremes}
       {rows.length === 0 ? (
         <EmptyState
           title="No places match these filters."

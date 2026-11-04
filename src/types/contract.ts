@@ -49,7 +49,7 @@ export type Unit =
   | 'CAD' | 'CAD_hour' | 'CAD_month' | 'CAD_year'
   | 'percent' | 'pp'          // percent, percentage points
   | 'degC' | 'mm' | 'cm' | 'days' | 'hours'
-  | 'count' | 'persons' | 'index' | 'ratio' | 'minutes' | 'km';
+  | 'count' | 'persons' | 'index' | 'ratio' | 'minutes' | 'km' | 'months';
 
 /** Quality / provenance flags. Keep the source's own meaning. */
 export type Flag =

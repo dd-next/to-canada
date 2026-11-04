@@ -14,7 +14,7 @@ PROCESSED = ROOT / "data" / "processed"
 SEED = ROOT / "pipeline" / "places_seed.json"
 
 UNITS = {"CAD", "CAD_hour", "CAD_month", "CAD_year", "percent", "pp", "degC", "mm", "cm", "days", "hours",
-         "count", "persons", "index", "ratio", "minutes", "km"}
+         "count", "persons", "index", "ratio", "minutes", "km", "months"}
 FLAGS = {"suppressed", "not_available", "use_with_caution", "too_unreliable", "preliminary", "revised", "rounded",
          "regional_value", "provincial_value", "national_value", "station_proxy", "cma_wide", "annual_wage", "small_sample"}
 

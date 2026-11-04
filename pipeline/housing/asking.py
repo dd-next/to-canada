@@ -123,7 +123,7 @@ def metric_defs():
         out.append({**base, "id": f"rent_paid_{mid}", "label": f"Average paid rent, {labels[ut]}",
                     "shortLabel": f"Paid rent, {ut.replace(' bedroom', ' bed')}",
                     "description": "StatCan experimental estimate of the average rent paid for occupied private rental apartments, "
-                                   "as a moving average of the last three quarters. Published for apartments with 1 or 2 bedrooms in 18 CMAs only.",
+                                   "as a moving average of the last three quarters. Published for only a subset of CMAs (a handful for 1-bedroom apartments, about 17 for 2-bedroom in 2026-Q2) and not for studios.",
                     "basis": "paid rent, 3-quarter moving average, apartments, CMA", "mapLayer": False,
                     "dims": {"family": "rent_paid", "unitType": ut}})
     return out

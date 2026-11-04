@@ -135,7 +135,7 @@
   "id": "rent_paid_1br",
   "label": "Average paid rent, 1-bedroom apartment",
   "shortLabel": "Paid rent, 1 bed",
-  "description": "StatCan experimental estimate of the average rent paid for occupied private rental apartments, as a moving average of the last three quarters. Published for apartments with 1 or 2 bedrooms in 18 CMAs only.",
+  "description": "StatCan experimental estimate of the average rent paid for occupied private rental apartments, as a moving average of the last three quarters. Published for only a subset of CMAs (a handful for 1-bedroom apartments, about 17 for 2-bedroom in 2026-Q2) and not for studios.",
   "basis": "paid rent, 3-quarter moving average, apartments, CMA",
   "mapLayer": false,
   "dims": {
@@ -159,12 +159,174 @@
   "id": "rent_paid_2br",
   "label": "Average paid rent, 2-bedroom apartment",
   "shortLabel": "Paid rent, 2 bed",
-  "description": "StatCan experimental estimate of the average rent paid for occupied private rental apartments, as a moving average of the last three quarters. Published for apartments with 1 or 2 bedrooms in 18 CMAs only.",
+  "description": "StatCan experimental estimate of the average rent paid for occupied private rental apartments, as a moving average of the last three quarters. Published for only a subset of CMAs (a handful for 1-bedroom apartments, about 17 for 2-bedroom in 2026-Q2) and not for studios.",
   "basis": "paid rent, 3-quarter moving average, apartments, CMA",
   "mapLayer": false,
   "dims": {
    "family": "rent_paid",
    "unitType": "2 bedroom"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "month",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "cmhc-rms-2025"
+  ],
+  "comparabilityNote": "CMHC surveys purpose-built rental apartment structures of 3+ units each October, reporting rents actually charged to sitting and new tenants (stock average). Not comparable with StatCan asking rents (online listings of units advertised during a quarter).",
+  "id": "rent_cmhc_avg_studio",
+  "label": "CMHC average rent, studio apartment",
+  "shortLabel": "CMHC avg rent, Studio",
+  "description": "Average monthly rent of studio units in privately initiated rental apartment structures of three or more units in the October 2025 CMHC Rental Market Survey (all units, occupied and vacant-for-rent; sitting tenants included).",
+  "basis": "average rent charged, purpose-built rental apartments (3+ units), October survey",
+  "mapLayer": true,
+  "dims": {
+   "family": "rent_cmhc_avg",
+   "unitType": "Studio"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "month",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "cmhc-rms-2025"
+  ],
+  "comparabilityNote": "CMHC surveys purpose-built rental apartment structures of 3+ units each October, reporting rents actually charged to sitting and new tenants (stock average). Not comparable with StatCan asking rents (online listings of units advertised during a quarter).",
+  "id": "rent_cmhc_avg_1br",
+  "label": "CMHC average rent, 1-bedroom apartment",
+  "shortLabel": "CMHC avg rent, 1 bed",
+  "description": "Average monthly rent of 1-bedroom units in privately initiated rental apartment structures of three or more units in the October 2025 CMHC Rental Market Survey (all units, occupied and vacant-for-rent; sitting tenants included).",
+  "basis": "average rent charged, purpose-built rental apartments (3+ units), October survey",
+  "mapLayer": true,
+  "dims": {
+   "family": "rent_cmhc_avg",
+   "unitType": "1 bedroom"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "month",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "cmhc-rms-2025"
+  ],
+  "comparabilityNote": "CMHC surveys purpose-built rental apartment structures of 3+ units each October, reporting rents actually charged to sitting and new tenants (stock average). Not comparable with StatCan asking rents (online listings of units advertised during a quarter).",
+  "id": "rent_cmhc_avg_2br",
+  "label": "CMHC average rent, 2-bedroom apartment",
+  "shortLabel": "CMHC avg rent, 2 bed",
+  "description": "Average monthly rent of 2-bedroom units in privately initiated rental apartment structures of three or more units in the October 2025 CMHC Rental Market Survey (all units, occupied and vacant-for-rent; sitting tenants included).",
+  "basis": "average rent charged, purpose-built rental apartments (3+ units), October survey",
+  "mapLayer": true,
+  "dims": {
+   "family": "rent_cmhc_avg",
+   "unitType": "2 bedroom"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "month",
+  "seasonalAdjustment": "not_applicable",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "cmhc-rms-2025"
+  ],
+  "comparabilityNote": "CMHC surveys purpose-built rental apartment structures of 3+ units each October, reporting rents actually charged to sitting and new tenants (stock average). Not comparable with StatCan asking rents (online listings of units advertised during a quarter).",
+  "id": "rent_cmhc_avg_3br",
+  "label": "CMHC average rent, 3-bedroom+ apartment",
+  "shortLabel": "CMHC avg rent, 3 bed+",
+  "description": "Average monthly rent of 3-bedroom+ units in privately initiated rental apartment structures of three or more units in the October 2025 CMHC Rental Market Survey (all units, occupied and vacant-for-rent; sitting tenants included).",
+  "basis": "average rent charged, purpose-built rental apartments (3+ units), October survey",
+  "mapLayer": true,
+  "dims": {
+   "family": "rent_cmhc_avg",
+   "unitType": "3 bedroom+"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "better",
+  "geoLevel": "cma",
+  "periodType": "month",
+  "seasonalAdjustment": "not_applicable",
+  "sourceIds": [
+   "cmhc-rms-2025"
+  ],
+  "comparabilityNote": "CMHC surveys purpose-built rental apartment structures of 3+ units each October, reporting rents actually charged to sitting and new tenants (stock average). Not comparable with StatCan asking rents (online listings of units advertised during a quarter).",
+  "id": "rent_vacancy_rate",
+  "label": "CMHC rental vacancy rate (all bedroom types)",
+  "shortLabel": "Vacancy rate",
+  "description": "Share of purpose-built rental apartment units (structures of 3+ units) that were vacant and available for immediate rental on the October 2025 survey date. Higher vacancy generally means more choice for renters.",
+  "basis": "CMHC October survey, apartments in structures of 3+ units, total of all bedroom types",
+  "mapLayer": true,
+  "dims": {
+   "family": "rent_vacancy"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "month",
+  "seasonalAdjustment": "unadjusted",
+  "sourceIds": [
+   "statcan-18-10-0004-01"
+  ],
+  "mapLayer": true,
+  "comparabilityNote": "CPI measures price change over time, not price levels: do not use it to rank which place is cheaper. Published for provinces and selected cities only; other places show their province's value (flagged provincial_value).",
+  "id": "cpi_rent_change_1y",
+  "label": "Rent price change, 12 months (CPI rented accommodation)",
+  "shortLabel": "Rent CPI, 1y change",
+  "description": "12-month percentage change in the Consumer Price Index for rented accommodation (rent and closely related tenant costs) - how fast rents already being paid by tenants are rising. City series where StatCan publishes one, otherwise provincial.",
+  "basis": "CPI (2002=100), not seasonally adjusted, price change not price level",
+  "dims": {
+   "family": "cpi_rent"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "month",
+  "seasonalAdjustment": "unadjusted",
+  "sourceIds": [
+   "statcan-18-10-0004-01"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "CPI measures price change over time, not price levels: do not use it to rank which place is cheaper. Published for provinces and selected cities only; other places show their province's value (flagged provincial_value).",
+  "id": "cpi_all_items_change_1y",
+  "label": "All-items inflation, 12 months (CPI)",
+  "shortLabel": "CPI all-items, 1y change",
+  "description": "12-month percentage change in the all-items Consumer Price Index. Not a cost-of-living index.",
+  "basis": "CPI (2002=100), not seasonally adjusted",
+  "dims": {
+   "family": "cpi_all_items"
   }
  }
 ]

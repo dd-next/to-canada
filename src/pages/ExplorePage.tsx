@@ -5,12 +5,15 @@ import type { MetricDef, Occupation, Place, ProvinceCode, RegionCode, WageTable 
 import { CanadaMap, populationRadius, type MapMarker } from '../components/map/CanadaMap';
 import { MapLegend } from '../components/map/MapLegend';
 import { useCanadaGeo } from '../components/map/geo';
-import { MetricSwitcher } from '../components/explore/MetricSwitcher';
+import { MetricSwitcher, type VariantControl, type VirtualLayer } from '../components/explore/MetricSwitcher';
 import { ProfessionPicker } from '../components/explore/ProfessionPicker';
+import { QuestionPresets, type QuestionPreset } from '../components/explore/QuestionPresets';
+import { RankExtremes } from '../components/explore/RankExtremes';
 import { RegionChips, WhereFilters } from '../components/explore/WhereFilters';
 import { ResultsList, type SortMode } from '../components/explore/ResultsList';
 import { PlaceDetail, PlacePeek, PlaceTooltip } from '../components/explore/PlaceDetail';
 import { Button } from '../components/ui/Button';
+import { ToggleChip } from '../components/ui/Chip';
 import { Drawer } from '../components/ui/Drawer';
 import { Icon } from '../components/ui/Icon';
 import { SegmentedControl } from '../components/ui/SegmentedControl';
@@ -21,24 +24,44 @@ import { useIsMobile } from '../lib/hooks';
 import {
   buildLayerCatalog,
   buildMetricLayer,
+  buildRentShareLayer,
   buildWageLayer,
   CATEGORY_LABELS,
+  HOURS_PER_WEEK,
   keyObservations,
+  monthIndex,
+  MONTHS_LONG,
+  pickVariant,
+  RENT_SHARE_KEY,
+  rentFamily,
+  rentShareMetric,
   resolveLayer,
   unitTypeShort,
+  unitTypeSlug,
   WAGE_LAYER_KEY,
   wageMetric,
+  type LayerCatalog,
+  type LayerData,
   type LayerEntry,
 } from '../lib/layers';
 import { boxAround, PROVINCES, REGION_BY_CODE, regionLabel, provinceName } from '../lib/places';
-import { parseIdList, useCompareTray, useFavourites, useUrlState } from '../lib/state';
+import { parseIdList, useCompareTray, useFavourites, useUrlState, type ParamPatch } from '../lib/state';
 
-const PENDING_FILL = '#d8cfbf';
+const PENDING_FILL = '#d9cbbb';
 const DRAWER_W = 380;
 const SHEET_PEEK = 196;
+const PLACEHOLDER_TABLE: WageTable = { sourceId: '', referencePeriod: '', geos: {}, byNoc: {} };
 
 const isRegion = (v: string | null): v is RegionCode => !!v && REGION_BY_CODE.has(v as RegionCode);
 const isProv = (v: string | null): v is ProvinceCode => !!v && v in PROVINCES;
+
+/** A January temperature layer, as a month family or a plain metric. */
+function januaryLayer(catalog: LayerCatalog): ParamPatch | null {
+  const fam = catalog.entries.find((e) => e.dim === 'month' && e.category === 'climate' && /temp/i.test(e.label));
+  if (fam && fam.variants.some((v) => monthIndex(v.dims?.month) === 1)) return { metric: fam.key, month: '01' };
+  const jan = catalog.entries.find((e) => e.category === 'climate' && /jan/i.test(e.key) && /temp/i.test(e.key));
+  return jan ? { metric: jan.key } : null;
+}
 
 export default function ExplorePage() {
   const core = useCore();
@@ -48,11 +71,13 @@ export default function ExplorePage() {
   const compare = useCompareTray();
   const { geo, error: geoError } = useCanadaGeo();
   const catalog = useMemo(() => buildLayerCatalog(core.metrics), [core.metrics]);
+  const rentFam = useMemo(() => rentFamily(catalog), [catalog]);
   const occupations = useJSON<Occupation[]>('occupations.json');
 
   // ---------------------------------------------------------------- URL state
   const metricParam = params.get('metric');
   const unitParam = params.get('unit');
+  const monthParam = params.get('month');
   const noc = params.get('noc');
   const regionRaw = params.get('region');
   const provRaw = params.get('prov');
@@ -67,20 +92,41 @@ export default function ExplorePage() {
   // ---------------------------------------------------------------- layers
   const occupation = useMemo(() => (noc ? (occupations.data?.find((o) => o.noc === noc) ?? null) : null), [noc, occupations.data]);
   const nocInvalid = !!noc && !!occupations.data && !occupation;
-  const wages = useJSON<WageTable>(noc && !nocInvalid ? 'wages.json' : null);
-  const wageActive = metricParam === WAGE_LAYER_KEY && !!noc && !nocInvalid;
+  const nocOk = !!noc && !nocInvalid;
+  const wages = useJSON<WageTable>(nocOk ? 'wages.json' : null);
+  const wageActive = metricParam === WAGE_LAYER_KEY && nocOk;
+  const shareActive = metricParam === RENT_SHARE_KEY && nocOk && !!rentFam;
+  const virtualActive = wageActive || shareActive;
+  const occLike = useMemo(() => (noc ? { noc, title: occupation?.title ?? `NOC ${noc}` } : null), [noc, occupation]);
 
-  const resolved = useMemo(() => resolveLayer(catalog, metricParam === WAGE_LAYER_KEY ? null : metricParam, unitParam), [catalog, metricParam, unitParam]);
-  const metricLayer = useMemo(() => (resolved.metric ? buildMetricLayer(resolved.metric, core.places, core.obsIndex) : null), [resolved.metric, core.places, core.obsIndex]);
+  const resolved = useMemo(
+    () => resolveLayer(catalog, metricParam === WAGE_LAYER_KEY || metricParam === RENT_SHARE_KEY ? null : metricParam, unitParam, monthParam),
+    [catalog, metricParam, unitParam, monthParam],
+  );
+  const metricLayer = useMemo(() => (!virtualActive && resolved.metric ? buildMetricLayer(resolved.metric, core.places, core.obsIndex) : null), [virtualActive, resolved.metric, core.places, core.obsIndex]);
   const wageLayer = useMemo(() => (wages.data && occupation ? buildWageLayer(wages.data, occupation, core.places) : null), [wages.data, occupation, core.places]);
-  const pending = wageActive && !wageLayer && !wages.error;
-  const layer = wageActive ? wageLayer : metricLayer;
+  const rentMetric = useMemo(() => (rentFam ? pickVariant(rentFam, unitParam) : null), [rentFam, unitParam]);
+  const shareLayer = useMemo(() => {
+    if (!shareActive || !rentMetric || !wageLayer || !occupation) return null;
+    return buildRentShareLayer(buildMetricLayer(rentMetric, core.places, core.obsIndex), wageLayer, occupation, core.places);
+  }, [shareActive, rentMetric, wageLayer, occupation, core.places, core.obsIndex]);
+
+  const pending = virtualActive && !wageLayer && !wages.error;
+  const layer: LayerData | null = wageActive ? wageLayer : shareActive ? shareLayer : metricLayer;
   const metric: MetricDef | null = useMemo(() => {
-    if (!wageActive) return resolved.metric;
-    if (wageLayer) return wageLayer.metric;
-    return wageMetric({ noc: noc!, title: occupation?.title ?? `NOC ${noc}` }, { sourceId: 'jobbank', referencePeriod: '', geos: {}, byNoc: {} }, false);
-  }, [wageActive, wageLayer, resolved.metric, noc, occupation]);
+    if (wageActive) return wageLayer?.metric ?? wageMetric(occLike!, PLACEHOLDER_TABLE, false);
+    if (shareActive) return shareLayer?.metric ?? rentShareMetric(occLike!, rentMetric!, '');
+    return resolved.metric;
+  }, [wageActive, shareActive, wageLayer, shareLayer, occLike, rentMetric, resolved.metric]);
   const scale = useMemo(() => (layer ? buildClassScale(layer.metric, [...layer.data.values()].map((d) => d.value)) : null), [layer]);
+
+  const variant: VariantControl = useMemo(() => {
+    if (shareActive && rentFam && rentMetric) return { kind: 'unitType', entry: rentFam, value: unitTypeSlug(rentMetric.dims?.unitType ?? '') };
+    if (virtualActive || !resolved.entry) return null;
+    if (resolved.entry.dim === 'unitType' && resolved.entry.variants.length > 1) return { kind: 'unitType', entry: resolved.entry, value: unitTypeSlug(resolved.unitType ?? '') };
+    if (resolved.entry.dim === 'month') return { kind: 'month', entry: resolved.entry, value: resolved.month ?? 1 };
+    return null;
+  }, [shareActive, rentFam, rentMetric, virtualActive, resolved]);
 
   // ---------------------------------------------------------------- filters, highlight, framing
   const inFilter = useCallback((p: Place) => (!region || p.region === region) && (!prov || p.province === prov), [region, prov]);
@@ -111,6 +157,7 @@ export default function ExplorePage() {
     return () => window.clearTimeout(t);
   }, [notice]);
   useEffect(() => setSheetExpanded(false), [placeId]);
+  useEffect(() => setSort('auto'), [metric?.id]);
 
   const selectPlace = useCallback(
     (id: string | null, via: 'pointer' | 'keyboard' = 'pointer') => {
@@ -120,19 +167,65 @@ export default function ExplorePage() {
     [update],
   );
   const onCompareFull = useCallback(() => setNotice('Compare holds three places. Remove one to add another.'), []);
-
-  const chooseEntry = useCallback(
-    (e: LayerEntry) => update({ metric: e.key, unit: e.family ? (unitParam ?? null) : null }),
-    [update, unitParam],
-  );
-  const chooseUnit = useCallback((slug: string) => update({ metric: resolved.entry?.key ?? null, unit: slug }), [update, resolved.entry]);
+  const chooseEntry = useCallback((e: LayerEntry) => update({ metric: e.key }), [update]);
+  const chooseUnit = useCallback((slug: string) => update(shareActive ? { unit: slug } : { metric: resolved.entry?.key ?? null, unit: slug }), [update, shareActive, resolved.entry]);
+  const chooseMonth = useCallback((slug: string) => update({ metric: resolved.entry?.key ?? null, month: slug }), [update, resolved.entry]);
   const chooseNoc = useCallback(
     (code: string | null) => {
-      if (code) update({ noc: code, metric: WAGE_LAYER_KEY });
-      else update({ noc: null, metric: metricParam === WAGE_LAYER_KEY ? null : metricParam });
+      if (code) update({ noc: code, metric: metricParam === RENT_SHARE_KEY ? RENT_SHARE_KEY : WAGE_LAYER_KEY });
+      else update({ noc: null, metric: virtualActive || metricParam === WAGE_LAYER_KEY || metricParam === RENT_SHARE_KEY ? null : metricParam });
     },
-    [update, metricParam],
+    [update, metricParam, virtualActive],
   );
+
+  const virtuals: VirtualLayer[] = occupation
+    ? [
+        {
+          key: WAGE_LAYER_KEY,
+          category: 'work',
+          label: `Median wage: ${occupation.title}`,
+          title: `Median wage of people employed as ${occupation.title.toLowerCase()}, by economic region`,
+          tag: 'ER',
+          active: wageActive,
+          onSelect: () => update({ metric: WAGE_LAYER_KEY }),
+        },
+        ...(rentFam
+          ? [
+              {
+                key: RENT_SHARE_KEY,
+                category: 'housing' as const,
+                label: `Rent ÷ pay: ${occupation.title}`,
+                title: `Asking rent as a share of gross monthly pay at the median wage (${HOURS_PER_WEEK} h a week)`,
+                tag: 'Calc',
+                active: shareActive,
+                onSelect: () => update({ metric: RENT_SHARE_KEY }),
+              },
+            ]
+          : []),
+      ]
+    : [];
+
+  // ---------------------------------------------------------------- question presets
+  const presets = useMemo<QuestionPreset[]>(() => {
+    const known = (code: string) => !occupations.data || occupations.data.some((o) => o.noc === code);
+    const out: Omit<QuestionPreset, 'active'>[] = [];
+    const reset: ParamPatch = { region: null, prov: null, highlight: null, from: null };
+    if (rentFam && known('31301')) out.push({ id: 'nurse', label: 'Can a nurse afford a one-bedroom?', params: { ...reset, metric: RENT_SHARE_KEY, noc: '31301', unit: '1br' } });
+    const jan = januaryLayer(catalog);
+    if (jan) out.push({ id: 'winter', label: 'Where are winters mildest?', params: { ...reset, ...jan } });
+    if (catalog.byKey.has('lfs_unemployment_rate')) out.push({ id: 'jobs', label: 'Where is work easiest to find?', params: { ...reset, metric: 'lfs_unemployment_rate' } });
+    const french = catalog.entries.find((e) => /french/i.test(`${e.key} ${e.label}`));
+    if (french) out.push({ id: 'french', label: 'Where can I live in French?', params: { ...reset, metric: french.key } });
+    if (rentFam?.variants.some((v) => v.dims?.unitType === '3 bedroom+')) out.push({ id: 'family', label: 'Room for a family: 3+ bedroom rents', params: { ...reset, metric: rentFam.key, unit: '3br' } });
+    const pilots = core.places.filter((p) => p.programTags?.some((t) => t === 'rcip' || t === 'fcip')).map((p) => p.id);
+    if (pilots.length) out.push({ id: 'pilots', label: 'Smaller places with community pilots', params: { region: null, prov: null, highlight: pilots, from: 'Smaller places with community immigration pilots' } });
+    const same = (k: string, v: unknown) => {
+      const cur = params.get(k);
+      if (v === null || v === undefined) return cur === null;
+      return cur === (Array.isArray(v) ? v.join(',') : String(v));
+    };
+    return out.map((p) => ({ ...p, active: Object.entries(p.params).every(([k, v]) => same(k, v)) }));
+  }, [catalog, rentFam, occupations.data, core.places, params]);
 
   // ---------------------------------------------------------------- map inputs
   const radius = useMemo(() => populationRadius(core.places), [core.places]);
@@ -180,23 +273,31 @@ export default function ExplorePage() {
     () =>
       placeId
         ? keyObservations(placeId, core.metrics, core.obsIndex, {
-            exclude: wageActive ? [] : (resolved.entry?.variants.map((v) => v.id) ?? []),
-            preferUnitType: resolved.unitType,
+            exclude: virtualActive ? [] : (resolved.entry?.variants.map((v) => v.id) ?? []),
+            preferUnitType: shareActive ? rentMetric?.dims?.unitType : resolved.unitType,
             limit: 6,
           })
         : [],
-    [placeId, core.metrics, core.obsIndex, wageActive, resolved.entry, resolved.unitType],
+    [placeId, core.metrics, core.obsIndex, virtualActive, shareActive, rentMetric, resolved.entry, resolved.unitType],
   );
   const insets = useMemo(() => (place ? (isMobile ? { bottom: SHEET_PEEK } : { right: DRAWER_W }) : undefined), [place, isMobile]);
+  const rows = useMemo(() => filtered.map((p) => ({ place: p, datum: layer?.data.get(p.id) })), [filtered, layer]);
 
   // ---------------------------------------------------------------- copy
-  const entryTitle = wageActive ? 'Median wage' : (resolved.entry?.label ?? metric?.shortLabel ?? 'Map');
-  const entrySub = wageActive ? (occupation?.title ?? `NOC ${noc}`) : resolved.unitType ? unitTypeShort(resolved.unitType) : null;
+  let entryTitle = resolved.entry?.label ?? metric?.shortLabel ?? 'Map';
+  let entrySub: string | null = resolved.unitType ? unitTypeShort(resolved.unitType) : resolved.month ? MONTHS_LONG[resolved.month - 1] : null;
+  if (wageActive) {
+    entryTitle = 'Median wage';
+    entrySub = occLike?.title ?? null;
+  } else if (shareActive) {
+    entryTitle = 'Rent ÷ gross pay';
+    entrySub = `${rentMetric?.dims?.unitType ? `${unitTypeShort(rentMetric.dims.unitType)} · ` : ''}${occLike?.title ?? ''}`;
+  }
   const periodText = layer?.periods.length ? layer.periods.map((p) => formatPeriod(p.period, metric?.periodType)).join(', ') : '';
   const wageSummary =
     occupation && wageLayer ? (
       <>
-        Median wages of employed workers by <strong>economic region (ER value)</strong>, Job Bank {formatPeriod(wages.data?.referencePeriod, 'period')}.{' '}
+        Wages of people employed in this occupation, by <strong>economic region (ER value)</strong> — Job Bank {formatPeriod(wages.data?.referencePeriod, 'period')}.{' '}
         {coverageLine(wageLayer)}
       </>
     ) : occupation && wages.loading ? (
@@ -204,7 +305,7 @@ export default function ExplorePage() {
     ) : wages.error ? (
       `Wages could not be loaded (${wages.error.message}).`
     ) : (
-      'Adds a wage layer: what people employed in that occupation earn in each economic region.'
+      'Adds two layers: the median wage in each economic region, and asking rent as a share of that pay.'
     );
 
   const detailProps = place
@@ -231,7 +332,7 @@ export default function ExplorePage() {
       <aside className="xp" aria-label="Explorer controls and place list">
         <div className="xp__intro">
           <p className="xp__kicker">
-            {plural(core.places.length, 'Canadian city', 'Canadian cities')} on one honest scale — every number traced to the official source it came from.
+            {plural(core.places.length, 'Canadian city', 'Canadian cities')} on one honest scale — every number traced to the official table it came from.
           </p>
         </div>
 
@@ -257,6 +358,13 @@ export default function ExplorePage() {
         </div>
 
         <div id="xp-controls" className="xp__controls">
+          <section className="xp__section xp__section--questions" aria-labelledby="xp-q-h">
+            <h2 id="xp-q-h" className="xp__h">
+              Start with a question
+            </h2>
+            <QuestionPresets presets={presets} onApply={(p) => update(p.params)} />
+          </section>
+
           <section className="xp__section" aria-labelledby="xp-layer-h">
             <h2 id="xp-layer-h" className="xp__h">
               Map layer
@@ -264,19 +372,12 @@ export default function ExplorePage() {
             <MetricSwitcher
               catalog={catalog}
               activeKey={resolved.entry?.key ?? null}
-              activeMetric={wageActive ? metric : resolved.metric}
+              activeMetric={virtualActive ? metric : resolved.metric}
               onSelectEntry={chooseEntry}
               onUnitChange={chooseUnit}
-              wage={
-                occupation
-                  ? {
-                      label: `Median wage: ${occupation.title}`,
-                      title: `Median wage of employed ${occupation.title.toLowerCase()}`,
-                      active: wageActive,
-                      onSelect: () => update({ metric: WAGE_LAYER_KEY }),
-                    }
-                  : null
-              }
+              onMonthChange={chooseMonth}
+              virtuals={virtuals}
+              variant={variant}
             />
             {metric && <p className="xp__desc">{metric.description}</p>}
           </section>
@@ -286,23 +387,24 @@ export default function ExplorePage() {
               Profession lens
             </h2>
             <ProfessionPicker occupations={occupations.data} loading={occupations.loading} error={occupations.error} noc={noc} onChange={chooseNoc} summary={wageSummary} />
+            {occupation && (
+              <div className="profession__layers" role="group" aria-label="Show the profession on the map as">
+                <ToggleChip size="sm" pressed={wageActive} onPressedChange={() => update({ metric: WAGE_LAYER_KEY })}>
+                  Median wage
+                </ToggleChip>
+                {rentFam && (
+                  <ToggleChip size="sm" pressed={shareActive} onPressedChange={() => update({ metric: RENT_SHARE_KEY })}>
+                    Rent ÷ pay
+                  </ToggleChip>
+                )}
+              </div>
+            )}
           </section>
-
-          <section className="xp__section xp__section--where" aria-labelledby="xp-where-h">
-            <h2 id="xp-where-h" className="xp__h">
-              Where
-            </h2>
-            <WhereFilters region={region} prov={prov} onProv={(p) => update({ prov: p })} places={core.places} onPick={(id) => selectPlace(id, 'pointer')} />
-          </section>
-        </div>
-
-        <div className="xp__regions">
-          <RegionChips region={region} onRegion={(r) => update({ region: r, prov: null })} places={core.places} />
         </div>
 
         <div className="xp__results">
           <ResultsList
-            rows={filtered.map((p) => ({ place: p, datum: layer?.data.get(p.id) }))}
+            rows={rows}
             metric={metric}
             layer={layer}
             scale={scale}
@@ -320,6 +422,17 @@ export default function ExplorePage() {
             totalPlaces={core.places.length}
             filterLabel={filterLabel}
             onClearFilters={() => update({ region: null, prov: null })}
+            filters={
+              <div className="xp__filters">
+                <div className="xp__regions">
+                  <RegionChips region={region} onRegion={(r) => update({ region: r, prov: null })} places={core.places} />
+                </div>
+                <div className="xp__where">
+                  <WhereFilters region={region} prov={prov} onProv={(p) => update({ prov: p })} places={core.places} onPick={(id) => selectPlace(id, 'pointer')} />
+                </div>
+              </div>
+            }
+            extremes={!pending && <RankExtremes rows={rows} metric={metric} scale={scale} selectedId={placeId} onSelect={selectPlace} onHover={setHoverId} />}
           />
         </div>
       </aside>
@@ -402,7 +515,7 @@ export default function ExplorePage() {
   );
 }
 
-function coverageLine(layer: { counts: { ok: number; otherPeriod: number; notComparable: number; missing: number; total: number }; data: Map<string, { flags: string[]; value: number | null }> }) {
+function coverageLine(layer: LayerData) {
   let province = 0;
   for (const d of layer.data.values()) if (d.value !== null && d.flags.includes('provincial_value')) province++;
   const withValue = layer.counts.ok + layer.counts.otherPeriod;

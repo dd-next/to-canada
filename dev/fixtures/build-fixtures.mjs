@@ -259,6 +259,7 @@ const metrics = [
     geoLevel: 'station',
     periodType: 'normals',
     sourceIds: ['fixture-climate'],
+    dims: { family: 'clim_mean_temp', month: '01' },
   }),
   M({
     id: 'clim_jul_mean_temp',
@@ -272,6 +273,7 @@ const metrics = [
     geoLevel: 'station',
     periodType: 'normals',
     sourceIds: ['fixture-climate'],
+    dims: { family: 'clim_mean_temp', month: '07' },
   }),
   M({
     id: 'clim_annual_snow',

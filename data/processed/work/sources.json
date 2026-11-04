@@ -1,0 +1,106 @@
+[
+ {
+  "id": "jobbank-wages-2025",
+  "title": "Wages (Job Bank), 2025 edition",
+  "publisher": "Employment and Social Development Canada (Job Bank)",
+  "tableId": "adad580f-76b0-4502-bd05-20c125de9116",
+  "url": "https://open.canada.ca/data/en/dataset/adad580f-76b0-4502-bd05-20c125de9116",
+  "downloadUrl": "https://open.canada.ca/data/dataset/adad580f-76b0-4502-bd05-20c125de9116/resource/9da94d63-b178-4a64-aeb3-b6a3bd721ad2/download/2a71-das-wage2025opendata-esdc-all-19nov2025-vf.csv",
+  "releaseDate": "2025-11-19",
+  "retrievedAt": "2026-11-04T17:51:49+00:00",
+  "referencePeriod": "2023-2024 (most cells); 2024; 2021 Census (few)",
+  "licence": "Open Government Licence - Canada",
+  "attribution": "Contains information licensed under the Open Government Licence - Canada. Source: Employment and Social Development Canada, Job Bank Wages.",
+  "transformations": [
+   "Kept NOC 2021 unit groups (5-digit), the economic regions used by our places, provinces, and Canada.",
+   "Low/median/high wage kept as published; hourly dollars unless Annual_Wage_Flag = 1 (annual dollars).",
+   "Cells with no published wage are omitted (not zero-filled); the Job Bank file refers users to the provincial/national wage in that case."
+  ],
+  "notes": [
+   "Wages are of employed workers in the occupation (not advertised pay). Estimates come from the Labour Force Survey (2023-2024), Employment Insurance survey data, Small Area Estimation (2024) and, for a few occupations, the 2021 Census; the source of each cell is in the open file (Data_Source_E).",
+   "Job Bank's ER_Name differs slightly from StatCan for ER 5920 ('Lower Mainland' vs 'Lower Mainland--Southwest') and ER 6010 ('Yukon Territory' vs 'Yukon').",
+   "Territories and PEI have a single economic region equal to the territory/province; no separate provincial key is stored.",
+   "Cells kept by reference period label: {'2021': 356, '2023-2024': 10265, '2024': 5997}",
+   "Newer edition: the dataset is updated annually (previous editions 2024-12-11, 2023-12-08); re-run to pick up a 2026 edition once published (update WAGE_URL in pipeline/work/wages.py).",
+   "ER verification against our places: ER 5920: place list says 'Lower Mainland--Southwest', Job Bank says 'Lower Mainland'; ER 6010: place list says 'Yukon', Job Bank says 'Yukon Territory'"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-noc-2021-v1.0",
+  "title": "National Occupational Classification (NOC) 2021 Version 1.0: classification structure and elements",
+  "publisher": "Statistics Canada",
+  "url": "https://www.statcan.gc.ca/en/subjects/standard/noc/2021/indexV1",
+  "downloadUrl": "https://www.statcan.gc.ca/en/subjects/standard/noc/2021/indexV1/noc-2021-v1.0-classification-structure.csv",
+  "retrievedAt": "2026-11-04T18:02:43+00:00",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, NOC 2021 Version 1.0.",
+  "transformations": [
+   "Unit groups (level 5) with TEER = second digit of the code; broad category = first digit; examples = first six 'Illustrative example(s)' elements."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-14-10-0459-01",
+  "title": "Labour force characteristics by census metropolitan area, three-month moving average, seasonally adjusted",
+  "publisher": "Statistics Canada",
+  "tableId": "14-10-0459-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410045901",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/14100459-eng.zip",
+  "releaseDate": "2026-10-09",
+  "retrievedAt": "2026-11-04T17:53:16+00:00",
+  "referencePeriod": "2011-01-01 to 2026-09-01",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 14-10-0459-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Selected seasonally adjusted rows for the places' CMAs, Ottawa-Gatineau Ontario/Quebec parts and Prince Edward Island; unemployment, employment and participation rates (Estimate) plus standard errors.",
+   "1-year change = rate(t) - rate(t-12 months), percentage points; monthly series since 2019-01 kept as published."
+  ],
+  "notes": [
+   "Rates are three-month moving averages: each month's value is the average of that month and the two before it, so month-to-month changes are smoothed and overlap."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-14-10-0292-01",
+  "title": "Labour force characteristics by territory, three-month moving average, seasonally adjusted and unadjusted",
+  "publisher": "Statistics Canada",
+  "tableId": "14-10-0292-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410029201",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/14100292-eng.zip",
+  "releaseDate": "2026-10-09",
+  "retrievedAt": "2026-11-04T17:53:19+00:00",
+  "referencePeriod": "1992-03-01 to 2026-09-01",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 14-10-0292-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Seasonally adjusted rows, Total gender, age 15+, for Yukon, Northwest Territories, Nunavut.",
+   "1-year change = rate(t) - rate(t-12 months), percentage points; monthly series since 2019-01 kept as published."
+  ],
+  "notes": [
+   "Rates are three-month moving averages: each month's value is the average of that month and the two before it, so month-to-month changes are smoothed and overlap."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-14-10-0462-01",
+  "title": "Labour force characteristics by economic region, three-month moving average, unadjusted for seasonality",
+  "publisher": "Statistics Canada",
+  "tableId": "14-10-0462-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410046201",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/14100462-eng.zip",
+  "releaseDate": "2026-10-09",
+  "retrievedAt": "2026-11-04T17:53:22+00:00",
+  "referencePeriod": "2011-03-01 to 2026-09-01",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 14-10-0462-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Southwest, Manitoba economic region only (Brandon); unadjusted 3-month moving average.",
+   "1-year change = rate(t) - rate(t-12 months), percentage points; monthly series since 2019-01 kept as published."
+  ],
+  "notes": [
+   "Rates are three-month moving averages: each month's value is the average of that month and the two before it, so month-to-month changes are smoothed and overlap."
+  ],
+  "status": "ok"
+ }
+]

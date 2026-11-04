@@ -3,6 +3,7 @@ import type { MetricDef } from '../../types/contract';
 import { compactForUnit, MISSING_LABEL, scaleReading, type ClassScale } from '../../lib/colors';
 import { formatPeriod, formatTick, plural, unitLabel } from '../../lib/format';
 import type { LayerData } from '../../lib/layers';
+import { Badge } from '../ui/Badge';
 import { SourceNote } from '../ui/SourceNote';
 import { Icon } from '../ui/Icon';
 
@@ -34,6 +35,11 @@ export function MapLegend({ metric, layer, scale, collapsible, pending, classNam
           </button>
         )}
       </div>
+      {layer?.calculation && (
+        <p className="legend__calc">
+          <Badge variant="estimate">Calculation</Badge> <span>{layer.calculation.replace(/^Calculation · /, '')}</span>
+        </p>
+      )}
       <p className="legend__unit">
         {unitLabel(metric.unit)}
         {periods.length > 0 && (

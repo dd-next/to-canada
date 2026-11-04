@@ -1,0 +1,3054 @@
+[
+ {
+  "placeId": "toronto",
+  "metricId": "cost_mbm_food",
+  "value": 14988,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "30",
+   "name": "Toronto, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Toronto, Ontario' (named region = Toronto CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "cost_mbm_clothing",
+  "value": 3064,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "30",
+   "name": "Toronto, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Toronto, Ontario' (named region = Toronto CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "cost_mbm_transport",
+  "value": 7469,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "30",
+   "name": "Toronto, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Toronto, Ontario' (named region = Toronto CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "cost_mbm_shelter",
+  "value": 26791,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "30",
+   "name": "Toronto, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Toronto, Ontario' (named region = Toronto CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "cost_mbm_communication",
+  "value": 1464,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "30",
+   "name": "Toronto, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Toronto, Ontario' (named region = Toronto CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "cost_mbm_other",
+  "value": 9103,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "30",
+   "name": "Toronto, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Toronto, Ontario' (named region = Toronto CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "cost_mbm_total",
+  "value": 62880,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "30",
+   "name": "Toronto, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Toronto, Ontario' (named region = Toronto CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "cost_mbm_food",
+  "value": 16382,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "23",
+   "name": "Montréal, Québec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Montréal, Québec' (named region = Montréal CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "cost_mbm_clothing",
+  "value": 3222,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "23",
+   "name": "Montréal, Québec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Montréal, Québec' (named region = Montréal CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "cost_mbm_transport",
+  "value": 4922,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "23",
+   "name": "Montréal, Québec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Montréal, Québec' (named region = Montréal CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "cost_mbm_shelter",
+  "value": 14193,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "23",
+   "name": "Montréal, Québec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Montréal, Québec' (named region = Montréal CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "cost_mbm_communication",
+  "value": 1552,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "23",
+   "name": "Montréal, Québec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Montréal, Québec' (named region = Montréal CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "cost_mbm_other",
+  "value": 10017,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "23",
+   "name": "Montréal, Québec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Montréal, Québec' (named region = Montréal CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "cost_mbm_total",
+  "value": 50287,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "23",
+   "name": "Montréal, Québec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Montréal, Québec' (named region = Montréal CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cost_mbm_food",
+  "value": 16690,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "50",
+   "name": "Vancouver, British Columbia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Vancouver, British Columbia' (named region = Vancouver CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cost_mbm_clothing",
+  "value": 2895,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "50",
+   "name": "Vancouver, British Columbia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Vancouver, British Columbia' (named region = Vancouver CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cost_mbm_transport",
+  "value": 5282,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "50",
+   "name": "Vancouver, British Columbia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Vancouver, British Columbia' (named region = Vancouver CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cost_mbm_shelter",
+  "value": 28147,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "50",
+   "name": "Vancouver, British Columbia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Vancouver, British Columbia' (named region = Vancouver CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cost_mbm_communication",
+  "value": 1540,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "50",
+   "name": "Vancouver, British Columbia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Vancouver, British Columbia' (named region = Vancouver CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cost_mbm_other",
+  "value": 9796,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "50",
+   "name": "Vancouver, British Columbia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Vancouver, British Columbia' (named region = Vancouver CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cost_mbm_total",
+  "value": 64351,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "50",
+   "name": "Vancouver, British Columbia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Vancouver, British Columbia' (named region = Vancouver CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "cost_mbm_food",
+  "value": 17407,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "45",
+   "name": "Calgary, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Calgary, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "cost_mbm_clothing",
+  "value": 2567,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "45",
+   "name": "Calgary, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Calgary, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "cost_mbm_transport",
+  "value": 6114,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "45",
+   "name": "Calgary, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Calgary, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "cost_mbm_shelter",
+  "value": 21643,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "45",
+   "name": "Calgary, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Calgary, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "cost_mbm_communication",
+  "value": 1485,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "45",
+   "name": "Calgary, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Calgary, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "cost_mbm_other",
+  "value": 9936,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "45",
+   "name": "Calgary, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Calgary, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "cost_mbm_total",
+  "value": 59153,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "45",
+   "name": "Calgary, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Calgary, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "cost_mbm_food",
+  "value": 16998,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "44",
+   "name": "Edmonton, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Edmonton, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "cost_mbm_clothing",
+  "value": 2567,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "44",
+   "name": "Edmonton, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Edmonton, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "cost_mbm_transport",
+  "value": 6023,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "44",
+   "name": "Edmonton, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Edmonton, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "cost_mbm_shelter",
+  "value": 22069,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "44",
+   "name": "Edmonton, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Edmonton, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "cost_mbm_communication",
+  "value": 1485,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "44",
+   "name": "Edmonton, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Edmonton, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "cost_mbm_other",
+  "value": 9735,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "44",
+   "name": "Edmonton, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Edmonton, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "cost_mbm_total",
+  "value": 58876,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "44",
+   "name": "Edmonton, Alberta",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Edmonton, Alberta' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "cost_mbm_food",
+  "value": 15590,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "28",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ottawa-Gatineau, Ontario part, Ontario/Quebec' (named region = Ontario part of Ottawa-Gatineau). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "cost_mbm_clothing",
+  "value": 3064,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "28",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ottawa-Gatineau, Ontario part, Ontario/Quebec' (named region = Ontario part of Ottawa-Gatineau). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "cost_mbm_transport",
+  "value": 5969,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "28",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ottawa-Gatineau, Ontario part, Ontario/Quebec' (named region = Ontario part of Ottawa-Gatineau). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "cost_mbm_shelter",
+  "value": 23313,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "28",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ottawa-Gatineau, Ontario part, Ontario/Quebec' (named region = Ontario part of Ottawa-Gatineau). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "cost_mbm_communication",
+  "value": 1464,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "28",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ottawa-Gatineau, Ontario part, Ontario/Quebec' (named region = Ontario part of Ottawa-Gatineau). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "cost_mbm_other",
+  "value": 9403,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "28",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ottawa-Gatineau, Ontario part, Ontario/Quebec' (named region = Ontario part of Ottawa-Gatineau). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "cost_mbm_total",
+  "value": 58803,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "28",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ottawa-Gatineau, Ontario part, Ontario/Quebec' (named region = Ontario part of Ottawa-Gatineau). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cost_mbm_food",
+  "value": 16039,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (ASSUMPTION: StatCan lists only the Ontario part of Ottawa-Gatineau as a named region; the Quebec part (Gatineau, 100,000-499,999 residents) is taken to fall in the Quebec 100,000-499,999 class - verify with Statistics Canada). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cost_mbm_clothing",
+  "value": 3222,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (ASSUMPTION: StatCan lists only the Ontario part of Ottawa-Gatineau as a named region; the Quebec part (Gatineau, 100,000-499,999 residents) is taken to fall in the Quebec 100,000-499,999 class - verify with Statistics Canada). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cost_mbm_transport",
+  "value": 5268,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (ASSUMPTION: StatCan lists only the Ontario part of Ottawa-Gatineau as a named region; the Quebec part (Gatineau, 100,000-499,999 residents) is taken to fall in the Quebec 100,000-499,999 class - verify with Statistics Canada). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cost_mbm_shelter",
+  "value": 11489,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (ASSUMPTION: StatCan lists only the Ontario part of Ottawa-Gatineau as a named region; the Quebec part (Gatineau, 100,000-499,999 residents) is taken to fall in the Quebec 100,000-499,999 class - verify with Statistics Canada). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cost_mbm_communication",
+  "value": 1552,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (ASSUMPTION: StatCan lists only the Ontario part of Ottawa-Gatineau as a named region; the Quebec part (Gatineau, 100,000-499,999 residents) is taken to fall in the Quebec 100,000-499,999 class - verify with Statistics Canada). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cost_mbm_other",
+  "value": 9844,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (ASSUMPTION: StatCan lists only the Ontario part of Ottawa-Gatineau as a named region; the Quebec part (Gatineau, 100,000-499,999 residents) is taken to fall in the Quebec 100,000-499,999 class - verify with Statistics Canada). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cost_mbm_total",
+  "value": 47414,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (ASSUMPTION: StatCan lists only the Ontario part of Ottawa-Gatineau as a named region; the Quebec part (Gatineau, 100,000-499,999 residents) is taken to fall in the Quebec 100,000-499,999 class - verify with Statistics Canada). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cost_mbm_food",
+  "value": 16326,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "34",
+   "name": "Winnipeg, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Winnipeg, Manitoba' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cost_mbm_clothing",
+  "value": 3161,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "34",
+   "name": "Winnipeg, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Winnipeg, Manitoba' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cost_mbm_transport",
+  "value": 5511,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "34",
+   "name": "Winnipeg, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Winnipeg, Manitoba' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cost_mbm_shelter",
+  "value": 19562,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "34",
+   "name": "Winnipeg, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Winnipeg, Manitoba' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cost_mbm_communication",
+  "value": 1610,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "34",
+   "name": "Winnipeg, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Winnipeg, Manitoba' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cost_mbm_other",
+  "value": 9642,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "34",
+   "name": "Winnipeg, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Winnipeg, Manitoba' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cost_mbm_total",
+  "value": 55813,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "34",
+   "name": "Winnipeg, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Winnipeg, Manitoba' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cost_mbm_food",
+  "value": 16175,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "22",
+   "name": "Québec, Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Québec, Quebec' (named region = Québec CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cost_mbm_clothing",
+  "value": 3222,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "22",
+   "name": "Québec, Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Québec, Quebec' (named region = Québec CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cost_mbm_transport",
+  "value": 5129,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "22",
+   "name": "Québec, Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Québec, Quebec' (named region = Québec CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cost_mbm_shelter",
+  "value": 13405,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "22",
+   "name": "Québec, Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Québec, Quebec' (named region = Québec CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cost_mbm_communication",
+  "value": 1552,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "22",
+   "name": "Québec, Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Québec, Quebec' (named region = Québec CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cost_mbm_other",
+  "value": 9912,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "22",
+   "name": "Québec, Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Québec, Quebec' (named region = Québec CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cost_mbm_total",
+  "value": 49394,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "22",
+   "name": "Québec, Quebec",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Québec, Quebec' (named region = Québec CMA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "cost_mbm_food",
+  "value": 15151,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "29",
+   "name": "Hamilton/Burlington, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Hamilton/Burlington, Ontario' (named region = Hamilton CMA (includes Burlington)). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "cost_mbm_clothing",
+  "value": 3064,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "29",
+   "name": "Hamilton/Burlington, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Hamilton/Burlington, Ontario' (named region = Hamilton CMA (includes Burlington)). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "cost_mbm_transport",
+  "value": 6732,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "29",
+   "name": "Hamilton/Burlington, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Hamilton/Burlington, Ontario' (named region = Hamilton CMA (includes Burlington)). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "cost_mbm_shelter",
+  "value": 23909,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "29",
+   "name": "Hamilton/Burlington, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Hamilton/Burlington, Ontario' (named region = Hamilton CMA (includes Burlington)). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "cost_mbm_communication",
+  "value": 1464,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "29",
+   "name": "Hamilton/Burlington, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Hamilton/Burlington, Ontario' (named region = Hamilton CMA (includes Burlington)). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "cost_mbm_other",
+  "value": 9184,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "29",
+   "name": "Hamilton/Burlington, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Hamilton/Burlington, Ontario' (named region = Hamilton CMA (includes Burlington)). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "cost_mbm_total",
+  "value": 59504,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "29",
+   "name": "Hamilton/Burlington, Ontario",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Hamilton/Burlington, Ontario' (named region = Hamilton CMA (includes Burlington)). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "cost_mbm_food",
+  "value": 15187,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "cost_mbm_clothing",
+  "value": 3064,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "cost_mbm_transport",
+  "value": 5795,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "cost_mbm_shelter",
+  "value": 20722,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "cost_mbm_communication",
+  "value": 1464,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "cost_mbm_other",
+  "value": 9202,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "cost_mbm_total",
+  "value": 55434,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "london",
+  "metricId": "cost_mbm_food",
+  "value": 15187,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "london",
+  "metricId": "cost_mbm_clothing",
+  "value": 3064,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "london",
+  "metricId": "cost_mbm_transport",
+  "value": 5795,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "london",
+  "metricId": "cost_mbm_shelter",
+  "value": 20722,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "london",
+  "metricId": "cost_mbm_communication",
+  "value": 1464,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "london",
+  "metricId": "cost_mbm_other",
+  "value": 9202,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "london",
+  "metricId": "cost_mbm_total",
+  "value": 55434,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "52",
+   "name": "Ontario, population 500,000 and over",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 500,000 and over' (CMA with 500,000+ residents (2021 Census), no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "cost_mbm_food",
+  "value": 16775,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "10",
+   "name": "Halifax, Nova Scotia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Halifax, Nova Scotia' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "cost_mbm_clothing",
+  "value": 2692,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "10",
+   "name": "Halifax, Nova Scotia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Halifax, Nova Scotia' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "cost_mbm_transport",
+  "value": 5597,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "10",
+   "name": "Halifax, Nova Scotia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Halifax, Nova Scotia' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "cost_mbm_shelter",
+  "value": 18243,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "10",
+   "name": "Halifax, Nova Scotia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Halifax, Nova Scotia' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "cost_mbm_communication",
+  "value": 1770,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "10",
+   "name": "Halifax, Nova Scotia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Halifax, Nova Scotia' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "cost_mbm_other",
+  "value": 9778,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "10",
+   "name": "Halifax, Nova Scotia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Halifax, Nova Scotia' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "cost_mbm_total",
+  "value": 54855,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "10",
+   "name": "Halifax, Nova Scotia",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Halifax, Nova Scotia' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "cost_mbm_food",
+  "value": 16463,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "cost_mbm_clothing",
+  "value": 2895,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "cost_mbm_transport",
+  "value": 5272,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "cost_mbm_shelter",
+  "value": 23510,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "cost_mbm_communication",
+  "value": 1540,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "cost_mbm_other",
+  "value": 9684,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "cost_mbm_total",
+  "value": 59363,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "cost_mbm_food",
+  "value": 16537,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "38",
+   "name": "Saskatoon, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saskatoon, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "cost_mbm_clothing",
+  "value": 2733,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "38",
+   "name": "Saskatoon, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saskatoon, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "cost_mbm_transport",
+  "value": 5454,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "38",
+   "name": "Saskatoon, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saskatoon, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "cost_mbm_shelter",
+  "value": 20055,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "38",
+   "name": "Saskatoon, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saskatoon, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "cost_mbm_communication",
+  "value": 1618,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "38",
+   "name": "Saskatoon, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saskatoon, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "cost_mbm_other",
+  "value": 9484,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "38",
+   "name": "Saskatoon, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saskatoon, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "cost_mbm_total",
+  "value": 55881,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "38",
+   "name": "Saskatoon, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saskatoon, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "cost_mbm_food",
+  "value": 16486,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "39",
+   "name": "Regina, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Regina, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "cost_mbm_clothing",
+  "value": 2733,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "39",
+   "name": "Regina, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Regina, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "cost_mbm_transport",
+  "value": 5549,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "39",
+   "name": "Regina, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Regina, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "cost_mbm_shelter",
+  "value": 19920,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "39",
+   "name": "Regina, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Regina, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "cost_mbm_communication",
+  "value": 1618,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "39",
+   "name": "Regina, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Regina, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "cost_mbm_other",
+  "value": 9459,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "39",
+   "name": "Regina, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Regina, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "cost_mbm_total",
+  "value": 55765,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "39",
+   "name": "Regina, Saskatchewan",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Regina, Saskatchewan' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "cost_mbm_food",
+  "value": 17234,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "3",
+   "name": "St. John's, Newfoundland and Labrador",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'St. John's, Newfoundland and Labrador' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "cost_mbm_clothing",
+  "value": 2708,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "3",
+   "name": "St. John's, Newfoundland and Labrador",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'St. John's, Newfoundland and Labrador' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "cost_mbm_transport",
+  "value": 5715,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "3",
+   "name": "St. John's, Newfoundland and Labrador",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'St. John's, Newfoundland and Labrador' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "cost_mbm_shelter",
+  "value": 16331,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "3",
+   "name": "St. John's, Newfoundland and Labrador",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'St. John's, Newfoundland and Labrador' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "cost_mbm_communication",
+  "value": 1958,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "3",
+   "name": "St. John's, Newfoundland and Labrador",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'St. John's, Newfoundland and Labrador' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "cost_mbm_other",
+  "value": 9902,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "3",
+   "name": "St. John's, Newfoundland and Labrador",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'St. John's, Newfoundland and Labrador' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "cost_mbm_total",
+  "value": 53849,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "3",
+   "name": "St. John's, Newfoundland and Labrador",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'St. John's, Newfoundland and Labrador' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "cost_mbm_food",
+  "value": 15152,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "cost_mbm_clothing",
+  "value": 3064,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "cost_mbm_transport",
+  "value": 5916,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "cost_mbm_shelter",
+  "value": 19964,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "cost_mbm_communication",
+  "value": 1464,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "cost_mbm_other",
+  "value": 9185,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "cost_mbm_total",
+  "value": 54744,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "cost_mbm_food",
+  "value": 16463,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "cost_mbm_clothing",
+  "value": 2895,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "cost_mbm_transport",
+  "value": 5272,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "cost_mbm_shelter",
+  "value": 23510,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "cost_mbm_communication",
+  "value": 1540,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "cost_mbm_other",
+  "value": 9684,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "cost_mbm_total",
+  "value": 59363,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "cost_mbm_food",
+  "value": 16463,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "cost_mbm_clothing",
+  "value": 2895,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "cost_mbm_transport",
+  "value": 5272,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "cost_mbm_shelter",
+  "value": 23510,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "cost_mbm_communication",
+  "value": 1540,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "cost_mbm_other",
+  "value": 9684,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "cost_mbm_total",
+  "value": 59363,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "49",
+   "name": "British Columbia, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'British Columbia, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "cost_mbm_food",
+  "value": 17133,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "17",
+   "name": "Moncton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Moncton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "cost_mbm_clothing",
+  "value": 2860,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "17",
+   "name": "Moncton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Moncton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "cost_mbm_transport",
+  "value": 5344,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "17",
+   "name": "Moncton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Moncton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "cost_mbm_shelter",
+  "value": 17988,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "17",
+   "name": "Moncton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Moncton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "cost_mbm_communication",
+  "value": 1895,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "17",
+   "name": "Moncton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Moncton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "cost_mbm_other",
+  "value": 9939,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "17",
+   "name": "Moncton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Moncton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "cost_mbm_total",
+  "value": 55159,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "17",
+   "name": "Moncton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Moncton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cost_mbm_food",
+  "value": 16738,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "16",
+   "name": "Saint John, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saint John, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cost_mbm_clothing",
+  "value": 2860,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "16",
+   "name": "Saint John, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saint John, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cost_mbm_transport",
+  "value": 5788,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "16",
+   "name": "Saint John, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saint John, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cost_mbm_shelter",
+  "value": 14604,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "16",
+   "name": "Saint John, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saint John, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cost_mbm_communication",
+  "value": 1895,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "16",
+   "name": "Saint John, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saint John, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cost_mbm_other",
+  "value": 9746,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "16",
+   "name": "Saint John, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saint John, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cost_mbm_total",
+  "value": 51631,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "16",
+   "name": "Saint John, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Saint John, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "cost_mbm_food",
+  "value": 17152,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "15",
+   "name": "Fredericton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Fredericton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "cost_mbm_clothing",
+  "value": 2860,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "15",
+   "name": "Fredericton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Fredericton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "cost_mbm_transport",
+  "value": 5901,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "15",
+   "name": "Fredericton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Fredericton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "cost_mbm_shelter",
+  "value": 16404,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "15",
+   "name": "Fredericton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Fredericton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "cost_mbm_communication",
+  "value": 1895,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "15",
+   "name": "Fredericton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Fredericton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "cost_mbm_other",
+  "value": 9949,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "15",
+   "name": "Fredericton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Fredericton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "cost_mbm_total",
+  "value": 54161,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "15",
+   "name": "Fredericton, New Brunswick",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Fredericton, New Brunswick' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "cost_mbm_food",
+  "value": 16039,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "cost_mbm_clothing",
+  "value": 3222,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "cost_mbm_transport",
+  "value": 5268,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "cost_mbm_shelter",
+  "value": 11489,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "cost_mbm_communication",
+  "value": 1552,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "cost_mbm_other",
+  "value": 9844,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "cost_mbm_total",
+  "value": 47414,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "21",
+   "name": "Quebec, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Quebec, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "cost_mbm_food",
+  "value": 15152,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "cost_mbm_clothing",
+  "value": 3064,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "cost_mbm_transport",
+  "value": 5916,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "cost_mbm_shelter",
+  "value": 19964,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "cost_mbm_communication",
+  "value": 1464,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "cost_mbm_other",
+  "value": 9185,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "cost_mbm_total",
+  "value": 54744,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "cost_mbm_food",
+  "value": 15152,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "cost_mbm_clothing",
+  "value": 3064,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "cost_mbm_transport",
+  "value": 5916,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "cost_mbm_shelter",
+  "value": 19964,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "cost_mbm_communication",
+  "value": 1464,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "cost_mbm_other",
+  "value": 9185,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "cost_mbm_total",
+  "value": 54744,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "27",
+   "name": "Ontario, population 100,000 to 499,999",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Ontario, population 100,000 to 499,999' (CMA of 100,000-499,999 residents, no named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "cost_mbm_food",
+  "value": 16722,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "6",
+   "name": "Charlottetown, Prince Edward Island",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Charlottetown, Prince Edward Island' (named region = Charlottetown CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "cost_mbm_clothing",
+  "value": 2734,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "6",
+   "name": "Charlottetown, Prince Edward Island",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Charlottetown, Prince Edward Island' (named region = Charlottetown CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "cost_mbm_transport",
+  "value": 5337,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "6",
+   "name": "Charlottetown, Prince Edward Island",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Charlottetown, Prince Edward Island' (named region = Charlottetown CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "cost_mbm_shelter",
+  "value": 18769,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "6",
+   "name": "Charlottetown, Prince Edward Island",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Charlottetown, Prince Edward Island' (named region = Charlottetown CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "cost_mbm_communication",
+  "value": 1774,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "6",
+   "name": "Charlottetown, Prince Edward Island",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Charlottetown, Prince Edward Island' (named region = Charlottetown CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "cost_mbm_other",
+  "value": 9639,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "6",
+   "name": "Charlottetown, Prince Edward Island",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Charlottetown, Prince Edward Island' (named region = Charlottetown CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "cost_mbm_total",
+  "value": 54975,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "6",
+   "name": "Charlottetown, Prince Edward Island",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Charlottetown, Prince Edward Island' (named region = Charlottetown CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "cost_mbm_food",
+  "value": 17293,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "33",
+   "name": "Brandon, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Brandon, Manitoba' (named region = Brandon CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "cost_mbm_clothing",
+  "value": 3161,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "33",
+   "name": "Brandon, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Brandon, Manitoba' (named region = Brandon CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "cost_mbm_transport",
+  "value": 5563,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "33",
+   "name": "Brandon, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Brandon, Manitoba' (named region = Brandon CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "cost_mbm_shelter",
+  "value": 15590,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "33",
+   "name": "Brandon, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Brandon, Manitoba' (named region = Brandon CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "cost_mbm_communication",
+  "value": 1610,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "33",
+   "name": "Brandon, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Brandon, Manitoba' (named region = Brandon CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "cost_mbm_other",
+  "value": 10113,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "33",
+   "name": "Brandon, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Brandon, Manitoba' (named region = Brandon CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "cost_mbm_total",
+  "value": 53331,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "33",
+   "name": "Brandon, Manitoba",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Brandon, Manitoba' (named region = Brandon CA). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "cost_mbm_food",
+  "value": 17398,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "56",
+   "name": "Yukon, Whitehorse",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Yukon, Whitehorse' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "cost_mbm_clothing",
+  "value": 3708,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "56",
+   "name": "Yukon, Whitehorse",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Yukon, Whitehorse' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "cost_mbm_transport",
+  "value": 8863,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "56",
+   "name": "Yukon, Whitehorse",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Yukon, Whitehorse' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "cost_mbm_shelter",
+  "value": 25010,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "56",
+   "name": "Yukon, Whitehorse",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Yukon, Whitehorse' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "cost_mbm_communication",
+  "value": 2452,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "56",
+   "name": "Yukon, Whitehorse",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Yukon, Whitehorse' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "cost_mbm_other",
+  "value": 10521,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "56",
+   "name": "Yukon, Whitehorse",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Yukon, Whitehorse' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "cost_mbm_total",
+  "value": 67951,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "56",
+   "name": "Yukon, Whitehorse",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Yukon, Whitehorse' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "cost_mbm_food",
+  "value": 18997,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "62",
+   "name": "Northwest Territories, Yellowknife",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Northwest Territories, Yellowknife' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "cost_mbm_clothing",
+  "value": 4459,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "62",
+   "name": "Northwest Territories, Yellowknife",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Northwest Territories, Yellowknife' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "cost_mbm_transport",
+  "value": 6722,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "62",
+   "name": "Northwest Territories, Yellowknife",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Northwest Territories, Yellowknife' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "cost_mbm_shelter",
+  "value": 32133,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "62",
+   "name": "Northwest Territories, Yellowknife",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Northwest Territories, Yellowknife' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "cost_mbm_communication",
+  "value": 2265,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "62",
+   "name": "Northwest Territories, Yellowknife",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Northwest Territories, Yellowknife' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "cost_mbm_other",
+  "value": 11711,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "62",
+   "name": "Northwest Territories, Yellowknife",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Northwest Territories, Yellowknife' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "cost_mbm_total",
+  "value": 76287,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "62",
+   "name": "Northwest Territories, Yellowknife",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Northwest Territories, Yellowknife' (named region). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "cost_mbm_food",
+  "value": 32131,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "66",
+   "name": "Nunavut, Iqaluit",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Nunavut, Iqaluit' (named region; reference family is 2 adults + 3 children in Nunavut). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "cost_mbm_clothing",
+  "value": 6661,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "66",
+   "name": "Nunavut, Iqaluit",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Nunavut, Iqaluit' (named region; reference family is 2 adults + 3 children in Nunavut). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "cost_mbm_transport",
+  "value": 8143,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "66",
+   "name": "Nunavut, Iqaluit",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Nunavut, Iqaluit' (named region; reference family is 2 adults + 3 children in Nunavut). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "cost_mbm_shelter",
+  "value": 41932,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "66",
+   "name": "Nunavut, Iqaluit",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Nunavut, Iqaluit' (named region; reference family is 2 adults + 3 children in Nunavut). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "cost_mbm_communication",
+  "value": 1884,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "66",
+   "name": "Nunavut, Iqaluit",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Nunavut, Iqaluit' (named region; reference family is 2 adults + 3 children in Nunavut). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "cost_mbm_other",
+  "value": 19840,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "66",
+   "name": "Nunavut, Iqaluit",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Nunavut, Iqaluit' (named region; reference family is 2 adults + 3 children in Nunavut). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "cost_mbm_total",
+  "value": 117179,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "66",
+   "name": "Nunavut, Iqaluit",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "MBM region 'Nunavut, Iqaluit' (named region; reference family is 2 adults + 3 children in Nunavut). Reference family (2 adults + 2 children; Nunavut 2 adults + 3 children), 2025 current dollars, 2023-base MBM."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "cost_mbm_inuusiqattiarniq",
+  "value": 6589,
+  "period": "2025",
+  "geo": {
+   "level": "mbm_region",
+   "id": "66",
+   "name": "Nunavut, Iqaluit",
+   "vintage": "MBM 2023 base"
+  },
+  "sourceId": "statcan-11-10-0066-01",
+  "note": "Nunavut-only component, applicable to Indigenous families; included in the total threshold."
+ }
+]

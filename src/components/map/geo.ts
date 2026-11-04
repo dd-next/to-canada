@@ -10,7 +10,7 @@ import type { GeometryCollection, Topology } from 'topojson-specification';
 import { zoomIdentity, type ZoomTransform } from 'd3-zoom';
 import { useMemo } from 'react';
 import { useJSON } from '../../data/useJSON';
-import type { LonLatBox } from '../../lib/places';
+import type { LonLatBox, MapFrame } from '../../lib/places';
 
 export interface ProvinceProps {
   code?: string;
@@ -69,6 +69,11 @@ export function boxGeometry([[w, s], [e, n]]: LonLatBox): MultiPoint {
   return { type: 'MultiPoint', coordinates: pts };
 }
 
+/** Geometry to fit for a frame (boxes are densified so they fit correctly under the conic). */
+export function frameGeometry(f: MapFrame): MultiPoint {
+  return 'points' in f ? { type: 'MultiPoint', coordinates: f.points } : boxGeometry(f);
+}
+
 export interface Insets {
   top: number;
   right: number;
@@ -78,7 +83,7 @@ export interface Insets {
 export const noInsets: Insets = { top: 0, right: 0, bottom: 0, left: 0 };
 
 /** StatCan Lambert fitted so `frame` fills the drawable area. */
-export function makeProjection(width: number, height: number, frame: LonLatBox, pad: Insets): GeoProjection {
+export function makeProjection(width: number, height: number, frame: MapFrame, pad: Insets): GeoProjection {
   const p = geoConicConformal().parallels([49, 77]).rotate([91.8667, 0]);
   const x0 = pad.left;
   const y0 = pad.top;
@@ -89,7 +94,7 @@ export function makeProjection(width: number, height: number, frame: LonLatBox, 
       [x0, y0],
       [x1, y1],
     ],
-    boxGeometry(frame),
+    frameGeometry(frame),
   );
   return p;
 }
@@ -97,7 +102,7 @@ export function makeProjection(width: number, height: number, frame: LonLatBox, 
 /** Zoom transform that frames a lon/lat box inside the visible part of the viewport. */
 export function frameTransform(
   projection: GeoProjection,
-  box: LonLatBox,
+  frame: MapFrame,
   width: number,
   height: number,
   visible: Insets,
@@ -105,7 +110,7 @@ export function frameTransform(
   /** Share of the visible area the box should fill. */
   fill = 0.94,
 ): ZoomTransform {
-  const b = geoPath(projection).bounds(boxGeometry(box));
+  const b = geoPath(projection).bounds(frameGeometry(frame));
   const [[bx0, by0], [bx1, by1]] = b;
   const vw = Math.max(40, width - visible.left - visible.right);
   const vh = Math.max(40, height - visible.top - visible.bottom);

@@ -1,0 +1,86 @@
+[
+ {
+  "category": "work",
+  "decimals": 1,
+  "geoLevel": "cma",
+  "periodType": "three_month_avg",
+  "seasonalAdjustment": "seasonally_adjusted",
+  "mapLayer": true,
+  "id": "lfs_unemployment_rate",
+  "label": "Unemployment rate (LFS, 3-month average)",
+  "shortLabel": "Unemployment rate",
+  "unit": "percent",
+  "higherIs": "worse",
+  "description": "Unemployed people as a percentage of the labour force, population aged 15 and over; three-month moving average, seasonally adjusted.",
+  "basis": "persons aged 15+, LFS 3-month moving average, seasonally adjusted",
+  "sourceIds": [
+   "statcan-14-10-0459-01",
+   "statcan-14-10-0292-01",
+   "statcan-14-10-0462-01"
+  ],
+  "comparabilityNote": "CMA and Ottawa/Gatineau part values: Statistics Canada LFS, three-month moving average, seasonally adjusted (Table 14-10-0459-01). Whitehorse, Yellowknife and Iqaluit show territory-wide values (14-10-0292-01, SA series; Nunavut's published SA values equal its unadjusted values in every month since 2019, and the Northwest Territories' in about a third of months). Charlottetown shows Prince Edward Island (province-wide, same table). Brandon shows the Southwest economic region, unadjusted 3-month moving average (14-10-0462-01) because no seasonally adjusted series exists below the province: do not rank it strictly against the SA values. LFS estimates for small areas carry large sampling variability."
+ },
+ {
+  "category": "work",
+  "decimals": 1,
+  "geoLevel": "cma",
+  "periodType": "three_month_avg",
+  "seasonalAdjustment": "seasonally_adjusted",
+  "mapLayer": true,
+  "id": "lfs_employment_rate",
+  "label": "Employment rate (LFS, 3-month average)",
+  "shortLabel": "Employment rate",
+  "unit": "percent",
+  "higherIs": "better",
+  "description": "Employed people as a percentage of the population aged 15 and over; three-month moving average, seasonally adjusted.",
+  "basis": "persons aged 15+, LFS 3-month moving average, seasonally adjusted",
+  "sourceIds": [
+   "statcan-14-10-0459-01",
+   "statcan-14-10-0292-01",
+   "statcan-14-10-0462-01"
+  ],
+  "comparabilityNote": "CMA and Ottawa/Gatineau part values: Statistics Canada LFS, three-month moving average, seasonally adjusted (Table 14-10-0459-01). Whitehorse, Yellowknife and Iqaluit show territory-wide values (14-10-0292-01, SA series; Nunavut's published SA values equal its unadjusted values in every month since 2019, and the Northwest Territories' in about a third of months). Charlottetown shows Prince Edward Island (province-wide, same table). Brandon shows the Southwest economic region, unadjusted 3-month moving average (14-10-0462-01) because no seasonally adjusted series exists below the province: do not rank it strictly against the SA values. LFS estimates for small areas carry large sampling variability."
+ },
+ {
+  "category": "work",
+  "decimals": 1,
+  "geoLevel": "cma",
+  "periodType": "three_month_avg",
+  "seasonalAdjustment": "seasonally_adjusted",
+  "mapLayer": true,
+  "id": "lfs_participation_rate",
+  "label": "Participation rate (LFS, 3-month average)",
+  "shortLabel": "Participation rate",
+  "unit": "percent",
+  "higherIs": "neutral",
+  "description": "Labour force (employed + unemployed) as a percentage of the population aged 15 and over; three-month moving average, seasonally adjusted.",
+  "basis": "persons aged 15+, LFS 3-month moving average, seasonally adjusted",
+  "sourceIds": [
+   "statcan-14-10-0459-01",
+   "statcan-14-10-0292-01",
+   "statcan-14-10-0462-01"
+  ],
+  "comparabilityNote": "CMA and Ottawa/Gatineau part values: Statistics Canada LFS, three-month moving average, seasonally adjusted (Table 14-10-0459-01). Whitehorse, Yellowknife and Iqaluit show territory-wide values (14-10-0292-01, SA series; Nunavut's published SA values equal its unadjusted values in every month since 2019, and the Northwest Territories' in about a third of months). Charlottetown shows Prince Edward Island (province-wide, same table). Brandon shows the Southwest economic region, unadjusted 3-month moving average (14-10-0462-01) because no seasonally adjusted series exists below the province: do not rank it strictly against the SA values. LFS estimates for small areas carry large sampling variability."
+ },
+ {
+  "category": "work",
+  "decimals": 1,
+  "geoLevel": "cma",
+  "periodType": "three_month_avg",
+  "seasonalAdjustment": "seasonally_adjusted",
+  "mapLayer": false,
+  "id": "lfs_unemployment_rate_change_1y",
+  "label": "Change in unemployment rate vs a year earlier",
+  "shortLabel": "Unemployment rate, 1-yr change",
+  "unit": "pp",
+  "higherIs": "worse",
+  "description": "Unemployment rate (3-month moving average) minus the same measure 12 months earlier, in percentage points. Calculated from published rates; the note on each value gives Statistics Canada's standard error of the year-over-year change where published.",
+  "basis": "difference of two published 3-month moving averages",
+  "sourceIds": [
+   "statcan-14-10-0459-01",
+   "statcan-14-10-0292-01",
+   "statcan-14-10-0462-01"
+  ],
+  "comparabilityNote": "CMA and Ottawa/Gatineau part values: Statistics Canada LFS, three-month moving average, seasonally adjusted (Table 14-10-0459-01). Whitehorse, Yellowknife and Iqaluit show territory-wide values (14-10-0292-01, SA series; Nunavut's published SA values equal its unadjusted values in every month since 2019, and the Northwest Territories' in about a third of months). Charlottetown shows Prince Edward Island (province-wide, same table). Brandon shows the Southwest economic region, unadjusted 3-month moving average (14-10-0462-01) because no seasonally adjusted series exists below the province: do not rank it strictly against the SA values. LFS estimates for small areas carry large sampling variability."
+ }
+]

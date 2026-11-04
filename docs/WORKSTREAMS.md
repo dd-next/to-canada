@@ -38,8 +38,8 @@ contract in `src/types/contract.ts` and `docs/DATA_CONTRACT.md`.
 
 | domain | ids |
 |---|---|
-| housing (A) | `rent_asking_studio`, `rent_asking_1br`, `rent_asking_2br`, `rent_asking_3br` (family `rent_asking`); `rent_cmhc_avg_studio` … `rent_cmhc_avg_3br` (family `rent_cmhc_avg`); `rent_vacancy_rate`; `rent_asking_1br_change_1y`; `cpi_rent_change_1y` |
-| cost (A) | `cost_mbm_food`, `cost_mbm_clothing`, `cost_mbm_transport`, `cost_mbm_other`, `cost_mbm_shelter`, `cost_mbm_total` (annual, reference family of four, as published) |
+| housing (A) | `rent_asking_studio`, `rent_asking_1br`, `rent_asking_2br`, `rent_asking_3br` (family `rent_asking`); `rent_cmhc_avg_studio` … `rent_cmhc_avg_3br` (family `rent_cmhc_avg`); `rent_paid_1br`, `rent_paid_2br`; `rent_vacancy_rate`; `rent_asking_1br_change_1y`; `cpi_rent_change_1y`, `cpi_all_items_change_1y` |
+| cost (A) | `cost_mbm_food`, `cost_mbm_clothing`, `cost_mbm_transport`, `cost_mbm_communication`, `cost_mbm_other`, `cost_mbm_shelter`, `cost_mbm_total` (annual, reference family of four, as published) |
 | work (B) | `lfs_unemployment_rate`, `lfs_employment_rate`, `lfs_participation_rate`, `lfs_unemployment_rate_change_1y` |
 | immigration (C) | `imm_pr_admissions`, `imm_pr_admissions_per_1000`, `imm_pr_admissions_change`, `imm_retention_5y`, `imm_median_wages_5y` |
 | people (D) | `pop_2021`, `pop_change_2016_2021`, `pop_immigrant_share`, `pop_recent_immigrant_share`, `lang_french_knowledge`, `lang_bilingual`, `lang_nonofficial_home`, `commute_transit_share`, `commute_car_share`, `commute_active_share`, `commute_45min_share`, `hh_avg_size` |

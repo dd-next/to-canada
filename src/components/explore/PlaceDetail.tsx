@@ -5,6 +5,7 @@ import { defaultAscending, type LayerData, type LayerDatum } from '../../lib/lay
 import { provinceName, regionLabel } from '../../lib/places';
 import type { CompareTray, Favourites } from '../../lib/state';
 import { ObservationList } from '../data/ObservationList';
+import { Badge } from '../ui/Badge';
 import { Button, ButtonLink, IconButton } from '../ui/Button';
 import { MissingValue } from '../ui/EmptyState';
 import { Kicker } from '../ui/SectionHeader';
@@ -103,6 +104,13 @@ function ActiveStat({ metric, datum, layer, scale, pending }: { metric: MetricDe
         {range && (
           <p className="detail__range num">
             Low {formatValue(range[0], datum!.shownUnit)} · High {formatValue(range[1], datum!.shownUnit)}
+          </p>
+        )}
+        {datum?.calc && (
+          <p className="detail__calc">
+            <Badge variant="estimate">Calculation</Badge>
+            <span className="mono">{datum.calc}</span>
+            {layer?.calculation && <span className="detail__calc-note">{layer.calculation.replace(/^Calculation · /, '')}</span>}
           </p>
         )}
         {rankLine(datum, layer, metric) && <p className="detail__rank">{rankLine(datum, layer, metric)}</p>}
@@ -251,6 +259,7 @@ export function PlaceTooltip({ place, metric, datum, layer, pending }: { place: 
           {datum.qualifier && <> · {datum.qualifier}</>}
         </p>
       )}
+      {datum?.calc && <p className="tip__calc">Calculation · gross pay, not take-home</p>}
       {datum?.reason && <p className="tip__reason">{datum.reason}</p>}
       {datum?.rank !== undefined && layer && (
         <p className="tip__rank">

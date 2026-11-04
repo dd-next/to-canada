@@ -37,6 +37,10 @@ export interface JobBoardAdapter {
 /** Shape of public/data/job_search.json (written by the work pipeline). */
 export interface JobSearchConfig {
   retrievedAt: string;
+  /** Board-specific location ids, e.g. Job Bank's city id per place (looked up once, verified). */
+  placeLocations?: Record<string, { label: string; jbCityId?: string }>;
+  /** Whether a permitted live feed of current postings exists, with the reason. */
+  feedStatus?: { currentPostingsFeed: 'none_permitted' | 'available' | string; explanation: string };
   boards: {
     id: string;
     label: string;
@@ -54,13 +58,16 @@ export interface JobSearchConfig {
 
 const enc = encodeURIComponent;
 
-function fill(template: string, q: JobSearchQuery): string | null {
+function fill(template: string, q: JobSearchQuery, config?: JobSearchConfig): string | null {
+  const loc = q.place ? config?.placeLocations?.[q.place.id] : undefined;
   const values: Record<string, string | undefined> = {
     query: q.occupationTitle,
     noc: q.noc,
     location: q.place ? `${q.place.name}, ${q.place.province}` : undefined,
-    city: q.place?.name,
+    // Job Bank expects its own location label alongside its city id.
+    city: loc?.label ?? q.place?.name,
     province: q.place?.province,
+    jbCityId: loc?.jbCityId,
   };
   let missing = false;
   const url = template.replace(/\{(\w+)\}/g, (_, k: string) => {
@@ -79,7 +86,7 @@ export const jobBankAdapter: JobBoardAdapter = {
     const board = config?.boards.find((b) => b.id === 'jobbank');
     const out: JobSearchLink[] = [];
     for (const t of board?.templates ?? []) {
-      const url = fill(t.urlTemplate, q);
+      const url = fill(t.urlTemplate, q, config);
       if (url) out.push({ boardId: 'jobbank', label: t.label, description: t.description, url, verifiedAt: t.verifiedAt });
     }
     if (!out.some((l) => l.url.startsWith('https://www.jobbank.gc.ca/findajob/foreign-candidates'))) {

@@ -1,0 +1,3284 @@
+[
+ {
+  "id": "work-wages",
+  "topic": "work",
+  "title": "Pay depends more on the occupation than the city, but some regions pay a clear premium",
+  "question": "What do people in common newcomer occupations earn, and how much does it differ between places?",
+  "dek": "Job Bank wage estimates for ten occupations: low, median and high hourly wages of employed workers, by economic region.",
+  "findings": [
+   {
+    "id": "wage-occupation-gap",
+    "kind": "calculation",
+    "headline": "Median hourly pay across 10 common newcomer occupations ranges from $17.31 (retail salespersons) to $48.08 (software developers)",
+    "detail": "Canada-wide medians for employed workers run from $17.31/hour for retail salespersons to $48.08/hour for software developers, a ratio of 2.8x. Within an occupation the low-to-high range is wide: software developers run $30.00-$76.92. These describe people already working in the occupation in Canada, not starting pay for new arrivals.",
+    "stat": {
+     "value": 48.08,
+     "unit": "CAD_hour",
+     "label": "Median, software developers, Canada",
+     "period": "2023-2024"
+    },
+    "placeIds": [],
+    "metricId": null,
+    "sourceIds": [
+     "jobbank-wages-2025"
+    ],
+    "calc": "Job Bank Wages 2025 edition, geography Canada (ER00), median wage for NOC 21232, 31301, 73300, 42202, 11100, 72200, 63200, 64100, 44101, 72106 (all hourly, Annual_Wage_Flag=0); ratio = max median / min median."
+   },
+   {
+    "id": "wage-rn-regional",
+    "kind": "calculation",
+    "headline": "Registered nurses' median hourly wage is $48.01 in Calgary but $39.38 in Québec City (provinces, same occupation)",
+    "detail": "Among the places' economic regions in the ten provinces, the highest published median for registered nurses and registered psychiatric nurses is $48.01 (Calgary economic region) and the lowest $39.38 (Québec City), a gap of $8.63/hour. Territorial medians are higher still (Whitehorse $48.50, Yellowknife $58.00, Iqaluit $57.99). Remote places also tend to have higher living costs; wages here are nominal and not adjusted for prices.",
+    "stat": {
+     "value": 8.63,
+     "unit": "CAD_hour",
+     "label": "Gap between highest and lowest provincial place median",
+     "period": "2023-2024"
+    },
+    "placeIds": [
+     "calgary",
+     "quebec-city",
+     "whitehorse",
+     "yellowknife",
+     "iqaluit"
+    ],
+    "metricId": null,
+    "sourceIds": [
+     "jobbank-wages-2025"
+    ],
+    "calc": "For each place take the median wage of NOC 31301 in its primary economic region (geo.economicRegions[0]); shared ERs counted once; gap = max - min over the 10 provinces' places, territories reported separately."
+   },
+   {
+    "id": "wage-alberta-trades",
+    "kind": "calculation",
+    "headline": "Welders' median wage in Calgary and Edmonton ($37.72, $39.90) is about 39% above Toronto and Montréal ($28.00, $28.00)",
+    "detail": "The pattern is similar for transport truck drivers: $30.00 (Calgary) and $28.85 (Edmonton) versus $25.10 (Toronto) and $23.68 (Montréal), about 21% higher. For child-care, retail and food-service occupations regional differences are much smaller. Always compare against local rents before treating a wage gap as a gain.",
+    "stat": {
+     "value": 38.6,
+     "unit": "percent",
+     "label": "Welders: Calgary/Edmonton mean median vs Toronto/Montréal mean median",
+     "period": "2023-2024"
+    },
+    "placeIds": [
+     "calgary",
+     "edmonton",
+     "toronto",
+     "montreal"
+    ],
+    "metricId": null,
+    "sourceIds": [
+     "jobbank-wages-2025"
+    ],
+    "calc": "Median wage NOC 72106 (welders) and 73300 (truck drivers) in primary ERs of the four places (4830, 4860, 3530, 2440); percent = mean(Calgary, Edmonton) / mean(Toronto, Montréal) - 1."
+   }
+  ],
+  "charts": [
+   {
+    "id": "occupation-wage-range",
+    "type": "range",
+    "title": "Ten common occupations: hourly wage range, Canada",
+    "subtitle": "Low, median and high wage of employed workers, 2023-2024",
+    "unit": "CAD_hour",
+    "yLabel": "CAD per hour",
+    "series": [
+     {
+      "id": "canada",
+      "label": "Canada",
+      "points": [
+       {
+        "x": "Software developers",
+        "y": 48.08,
+        "y0": 30.0,
+        "y1": 76.92
+       },
+       {
+        "x": "Registered nurses",
+        "y": 43.27,
+        "y0": 30.0,
+        "y1": 54.37
+       },
+       {
+        "x": "Accountants and auditors",
+        "y": 40.36,
+        "y0": 25.0,
+        "y1": 71.43
+       },
+       {
+        "x": "Electricians",
+        "y": 35.0,
+        "y0": 20.0,
+        "y1": 48.0
+       },
+       {
+        "x": "Welders",
+        "y": 30.0,
+        "y0": 22.0,
+        "y1": 47.0
+       },
+       {
+        "x": "Transport truck drivers",
+        "y": 26.42,
+        "y0": 19.45,
+        "y1": 37.0
+       },
+       {
+        "x": "Early childhood educators",
+        "y": 22.3,
+        "y0": 16.95,
+        "y1": 30.03
+       },
+       {
+        "x": "Home support workers",
+        "y": 20.5,
+        "y0": 16.0,
+        "y1": 27.0
+       },
+       {
+        "x": "Cooks",
+        "y": 18.0,
+        "y0": 15.0,
+        "y1": 25.0
+       },
+       {
+        "x": "Retail salespersons",
+        "y": 17.31,
+        "y0": 15.0,
+        "y1": 28.85
+       }
+      ]
+     }
+    ],
+    "notes": "Wages of people currently employed in the occupation; not advertised pay and not an offer you should expect on arrival.",
+    "sourceIds": [
+     "jobbank-wages-2025"
+    ]
+   },
+   {
+    "id": "rn-wage-range",
+    "type": "range",
+    "title": "Registered nurses: hourly wage range by place's economic region",
+    "subtitle": "Low, median and high wage of employed workers, NOC 31301, 2023-2024 reference period",
+    "unit": "CAD_hour",
+    "yLabel": "CAD per hour",
+    "series": [
+     {
+      "id": "rn",
+      "label": "Registered nurses and registered psychiatric nurses",
+      "points": [
+       {
+        "x": "Yellowknife",
+        "y": 58.0,
+        "y0": 45.0,
+        "y1": 69.23,
+        "placeId": "yellowknife"
+       },
+       {
+        "x": "Iqaluit",
+        "y": 57.99,
+        "y0": 45.0,
+        "y1": 71.57,
+        "placeId": "iqaluit"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 48.5,
+        "y0": 33.0,
+        "y1": 60.88,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Calgary",
+        "y": 48.01,
+        "y0": 34.57,
+        "y1": 55.0,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 48.0,
+        "y0": 37.8,
+        "y1": 52.0,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Kelowna",
+        "y": 48.0,
+        "y0": 40.35,
+        "y1": 56.0,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "Vancouver / Abbotsford–Mission",
+        "y": 47.54,
+        "y0": 34.0,
+        "y1": 57.0,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Regina",
+        "y": 47.27,
+        "y0": 37.0,
+        "y1": 53.49,
+        "placeId": "regina"
+       },
+       {
+        "x": "Victoria",
+        "y": 47.0,
+        "y0": 36.42,
+        "y1": 55.61,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Edmonton",
+        "y": 46.0,
+        "y0": 30.0,
+        "y1": 53.74,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "Ottawa",
+        "y": 45.0,
+        "y0": 28.85,
+        "y1": 54.38,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 45.0,
+        "y0": 35.0,
+        "y1": 52.4,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Moncton",
+        "y": 45.0,
+        "y0": 28.57,
+        "y1": 50.0,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Saint John",
+        "y": 45.0,
+        "y0": 31.0,
+        "y1": 48.0,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Fredericton",
+        "y": 44.77,
+        "y0": 31.0,
+        "y1": 49.0,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "St. John's",
+        "y": 44.0,
+        "y0": 33.11,
+        "y1": 51.66,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Windsor",
+        "y": 44.0,
+        "y0": 27.86,
+        "y1": 55.0,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 44.0,
+        "y0": 31.0,
+        "y1": 55.0,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "London",
+        "y": 43.27,
+        "y0": 31.4,
+        "y1": 55.0,
+        "placeId": "london"
+       },
+       {
+        "x": "Hamilton",
+        "y": 43.0,
+        "y0": 29.6,
+        "y1": 56.0,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 42.5,
+        "y0": 31.0,
+        "y1": 56.0,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Halifax",
+        "y": 42.0,
+        "y0": 30.0,
+        "y1": 51.0,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 42.0,
+        "y0": 31.5,
+        "y1": 49.98,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Gatineau",
+        "y": 41.0,
+        "y0": 25.0,
+        "y1": 53.42,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 41.0,
+        "y0": 29.73,
+        "y1": 55.0,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 41.0,
+        "y0": 26.67,
+        "y1": 47.98,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Toronto",
+        "y": 40.59,
+        "y0": 28.0,
+        "y1": 55.0,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Montréal",
+        "y": 40.0,
+        "y0": 28.07,
+        "y1": 50.48,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Brandon",
+        "y": 40.0,
+        "y0": 31.52,
+        "y1": 50.0,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Québec City",
+        "y": 39.38,
+        "y0": 27.0,
+        "y1": 48.0,
+        "placeId": "quebec-city"
+       }
+      ]
+     }
+    ],
+    "notes": "Each point is the place's primary Job Bank economic region, not the city alone. Vancouver and Abbotsford-Mission share one region.",
+    "sourceIds": [
+     "jobbank-wages-2025"
+    ]
+   },
+   {
+    "id": "welder-wage-ranked",
+    "type": "bar_ranked",
+    "title": "Welders: median hourly wage by place's economic region",
+    "subtitle": "NOC 72106, employed workers, 2023-2024",
+    "unit": "CAD_hour",
+    "series": [
+     {
+      "id": "welders",
+      "label": "Median wage, welders and related machine operators",
+      "points": [
+       {
+        "x": "Yellowknife",
+        "y": 48.29,
+        "placeId": "yellowknife"
+       },
+       {
+        "x": "Edmonton",
+        "y": 39.9,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "Calgary",
+        "y": 37.72,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Vancouver / Abbotsford–Mission",
+        "y": 37.5,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 37.47,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "St. John's",
+        "y": 36.0,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 36.0,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Victoria",
+        "y": 35.0,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Kelowna",
+        "y": 34.87,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "Regina",
+        "y": 32.82,
+        "placeId": "regina"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 32.45,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 32.0,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Halifax",
+        "y": 31.6,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Saint John",
+        "y": 29.0,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Toronto",
+        "y": 28.0,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Montréal",
+        "y": 28.0,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Ottawa",
+        "y": 28.0,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Gatineau",
+        "y": 28.0,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 28.0,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Québec City",
+        "y": 28.0,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "London",
+        "y": 28.0,
+        "placeId": "london"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 28.0,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 27.66,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Hamilton",
+        "y": 27.0,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Moncton",
+        "y": 27.0,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Fredericton",
+        "y": 27.0,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Brandon",
+        "y": 26.25,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Windsor",
+        "y": 25.5,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 25.0,
+        "placeId": "charlottetown"
+       }
+      ]
+     }
+    ],
+    "notes": "Places whose economic region has no published welder wage are omitted.",
+    "sourceIds": [
+     "jobbank-wages-2025"
+    ]
+   }
+  ],
+  "interpretation": [
+   "Use the occupation first: the spread between occupations is far larger than the spread between most cities for the same occupation. Regional differences matter most for trades, truck driving and health care, where Alberta, British Columbia and the territories sit at the top.",
+   "The low wage in several occupations is identical across occupations within a region (for example $17.60 for cooks, retail and food-service workers in Toronto and Ottawa), which looks like a minimum-wage floor, so low-end figures partly reflect legal floors rather than market pay. Median and high values say more about experienced workers.",
+   "Credential recognition, licensing and Canadian experience can put new arrivals below these medians at first, especially in regulated occupations such as nursing."
+  ],
+  "methodology": [
+   "Source: Employment and Social Development Canada, Job Bank Wages (open data, 2025 edition, revision date 2025-11-19). Wage estimates are for employed workers by NOC 2021 unit group and economic region; they are not advertised wages.",
+   "Estimates come from the Labour Force Survey (2023-2024), Employment Insurance survey data, Small Area Estimation (2024) and, for a few occupations, the 2021 Census; the source of each cell is in the open file.",
+   "Each place is represented by its primary economic region (the first economic region listed for the place). Values are nominal hourly dollars; all ten occupations are published hourly.",
+   "Occupations were chosen for newcomer relevance (high-demand, large and regulated and trades occupations) and for data availability; occupations with an annual-rate flag were avoided."
+  ],
+  "limitations": [
+   "Economic regions are not the same as cities: Vancouver and Abbotsford-Mission share one region (Lower Mainland--Southwest), Québec City's primary region is Capitale-Nationale, and Montréal's is the Montréal region only (not Laval or the suburbs).",
+   "Small Area Estimation and LFS-based estimates carry sampling error; cells without enough data are not published and are left empty here (not replaced by provincial values). Missing places per occupation: Software developers: Iqaluit, Thunder Bay, Whitehorse, Yellowknife; Electricians: Whitehorse; Welders: Iqaluit",
+   "Reference period is 2023-2024 (mostly); wages have moved since. Wages are not adjusted for local prices and exclude benefits."
+  ],
+  "sourceIds": [
+   "jobbank-wages-2025",
+   "statcan-noc-2021-v1.0"
+  ],
+  "relatedPlaceIds": [
+   "calgary",
+   "edmonton",
+   "montreal",
+   "toronto",
+   "vancouver",
+   "yellowknife"
+  ],
+  "computedAt": "2026-11-04T18:02:44+00:00"
+ },
+ {
+  "id": "work-labour",
+  "topic": "work",
+  "title": "Job markets differ by several points between Canadian cities, and the year-on-year moves are mostly small",
+  "question": "Which cities have tighter labour markets, and how are conditions changing?",
+  "dek": "Labour Force Survey rates for 26 metro areas, with the smaller places shown on their published geography.",
+  "findings": [
+   {
+    "id": "labour-rate-spread",
+    "kind": "observation",
+    "headline": "Unemployment ranges from 4.0% in Sherbrooke to 9.3% in Kelowna (three months to 2026-09)",
+    "detail": "Across 26 CMAs and CMA parts the seasonally adjusted three-month average unemployment rate runs from 4.0% (Sherbrooke) to 9.3% (Kelowna); the middle is about 6.5%. Employment rates (share of everyone 15+ who is working) range from 57.5% in London to 66.8% in Calgary, which also reflects age structure and who is in the labour force. The Ottawa-Gatineau halves differ: Ontario part 7.2%, Quebec part 6.3%. Differences of one point or less between nearby cities are often within sampling error.",
+    "stat": {
+     "value": 5.3,
+     "unit": "pp",
+     "label": "Highest minus lowest unemployment rate",
+     "period": "2026-09"
+    },
+    "placeIds": [
+     "sherbrooke",
+     "kelowna",
+     "calgary",
+     "london",
+     "ottawa",
+     "gatineau"
+    ],
+    "metricId": "lfs_unemployment_rate",
+    "sourceIds": [
+     "statcan-14-10-0459-01"
+    ],
+    "calc": "Table 14-10-0459-01, seasonally adjusted, Estimate, REF_DATE 2026-09; unemployment rate and employment rate for the 26 CMA / Ottawa-Gatineau part places; territories, Charlottetown (provincial) and Brandon (regional, unadjusted) excluded from the ranking."
+   },
+   {
+    "id": "labour-yoy-change",
+    "kind": "calculation",
+    "headline": "Compared with a year earlier, unemployment fell in 16 of 26 places and rose in 10, but only 5 changes are clearly larger than sampling noise",
+    "detail": "Changes beyond 1.96 standard errors: Windsor -3.1 pp, Toronto -1.9 pp, Calgary -1.8 pp, Winnipeg -1.4 pp, London +2.1 pp. Every other change is small relative to the survey's sampling error and should not be read as a trend. Both values are three-month moving averages, so a one-month swing is dampened and consecutive months overlap.",
+    "stat": {
+     "value": 2.1,
+     "unit": "pp",
+     "label": "Largest significant change (London)",
+     "period": "2026-09"
+    },
+    "placeIds": [
+     "windsor",
+     "toronto",
+     "calgary",
+     "winnipeg",
+     "london"
+    ],
+    "metricId": "lfs_unemployment_rate_change_1y",
+    "sourceIds": [
+     "statcan-14-10-0459-01"
+    ],
+    "calc": "change = rate(2026-09) - rate(2025-09) from 14-10-0459-01 (SA, 3-month moving average); significant if |change| > 1.96 x published standard error of year-over-year change; 26 CMA / part places."
+   }
+  ],
+  "charts": [
+   {
+    "id": "unemployment-ranked",
+    "type": "bar_ranked",
+    "title": "Unemployment rate by city, three months to 2026-09",
+    "subtitle": "Seasonally adjusted three-month moving average, population 15+",
+    "unit": "percent",
+    "series": [
+     {
+      "id": "ur",
+      "label": "Unemployment rate",
+      "points": [
+       {
+        "x": "Kelowna",
+        "y": 9.3,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "London",
+        "y": 8.4,
+        "placeId": "london"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 7.7,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Moncton",
+        "y": 7.6,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Windsor",
+        "y": 7.3,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Ottawa",
+        "y": 7.2,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Toronto",
+        "y": 6.9,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Hamilton",
+        "y": 6.9,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Edmonton",
+        "y": 6.9,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "Montréal",
+        "y": 6.8,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 6.8,
+        "placeId": "abbotsford-mission"
+       },
+       {
+        "x": "St. John's",
+        "y": 6.6,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Vancouver",
+        "y": 6.5,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Regina",
+        "y": 6.4,
+        "placeId": "regina"
+       },
+       {
+        "x": "Gatineau",
+        "y": 6.3,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Calgary",
+        "y": 6.3,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 6.0,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Fredericton",
+        "y": 6.0,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 5.9,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Halifax",
+        "y": 5.8,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Saint John",
+        "y": 5.6,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Victoria",
+        "y": 5.3,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 5.0,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 4.3,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Québec City",
+        "y": 4.3,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 4.0,
+        "placeId": "sherbrooke"
+       }
+      ]
+     }
+    ],
+    "notes": "CMAs and Ottawa-Gatineau provincial parts only; territories, Charlottetown and Brandon are not ranked because the LFS publishes them on a different geography or basis.",
+    "sourceIds": [
+     "statcan-14-10-0459-01"
+    ]
+   },
+   {
+    "id": "unemployment-change-ranked",
+    "type": "bar_ranked",
+    "title": "Change in unemployment rate vs a year earlier (percentage points)",
+    "subtitle": "2026-09 minus 2025-09, three-month moving averages",
+    "unit": "pp",
+    "series": [
+     {
+      "id": "chg",
+      "label": "Change, pp",
+      "points": [
+       {
+        "x": "Kelowna",
+        "y": 2.2,
+        "placeId": "kelowna",
+        "label": "within sampling error"
+       },
+       {
+        "x": "London",
+        "y": 2.1,
+        "placeId": "london",
+        "label": "significant at 1.96 SE"
+       },
+       {
+        "x": "Victoria",
+        "y": 0.6,
+        "placeId": "victoria",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 0.6,
+        "placeId": "saskatoon",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Montréal",
+        "y": 0.4,
+        "placeId": "montreal",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 0.4,
+        "placeId": "kitchener-waterloo",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Moncton",
+        "y": 0.4,
+        "placeId": "moncton",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Vancouver",
+        "y": 0.2,
+        "placeId": "vancouver",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Halifax",
+        "y": 0.2,
+        "placeId": "halifax",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Ottawa",
+        "y": 0.1,
+        "placeId": "ottawa",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Regina",
+        "y": -0.1,
+        "placeId": "regina",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Hamilton",
+        "y": -0.3,
+        "placeId": "hamilton",
+        "label": "within sampling error"
+       },
+       {
+        "x": "St. John's",
+        "y": -0.4,
+        "placeId": "st-johns",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": -0.4,
+        "placeId": "abbotsford-mission",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Québec City",
+        "y": -0.5,
+        "placeId": "quebec-city",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Fredericton",
+        "y": -0.5,
+        "placeId": "fredericton",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": -0.5,
+        "placeId": "thunder-bay",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Gatineau",
+        "y": -0.6,
+        "placeId": "gatineau",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": -0.7,
+        "placeId": "sudbury",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": -1.2,
+        "placeId": "sherbrooke",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Winnipeg",
+        "y": -1.4,
+        "placeId": "winnipeg",
+        "label": "significant at 1.96 SE"
+       },
+       {
+        "x": "Edmonton",
+        "y": -1.7,
+        "placeId": "edmonton",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Calgary",
+        "y": -1.8,
+        "placeId": "calgary",
+        "label": "significant at 1.96 SE"
+       },
+       {
+        "x": "Toronto",
+        "y": -1.9,
+        "placeId": "toronto",
+        "label": "significant at 1.96 SE"
+       },
+       {
+        "x": "Saint John",
+        "y": -2.0,
+        "placeId": "saint-john",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Windsor",
+        "y": -3.1,
+        "placeId": "windsor",
+        "label": "significant at 1.96 SE"
+       }
+      ]
+     }
+    ],
+    "notes": "Label says whether the change exceeds 1.96 x Statistics Canada's standard error of the year-over-year change.",
+    "sourceIds": [
+     "statcan-14-10-0459-01"
+    ]
+   },
+   {
+    "id": "unemployment-trend",
+    "type": "line",
+    "title": "Unemployment rate since January 2019, selected CMAs",
+    "subtitle": "Seasonally adjusted three-month moving average",
+    "unit": "percent",
+    "series": [
+     {
+      "id": "toronto",
+      "label": "Toronto",
+      "placeId": "toronto",
+      "points": [
+       {
+        "x": "2019-01",
+        "y": 6.2
+       },
+       {
+        "x": "2019-02",
+        "y": 6.3
+       },
+       {
+        "x": "2019-03",
+        "y": 6.5
+       },
+       {
+        "x": "2019-04",
+        "y": 6.5
+       },
+       {
+        "x": "2019-05",
+        "y": 6.2
+       },
+       {
+        "x": "2019-06",
+        "y": 5.9
+       },
+       {
+        "x": "2019-07",
+        "y": 5.7
+       },
+       {
+        "x": "2019-08",
+        "y": 5.8
+       },
+       {
+        "x": "2019-09",
+        "y": 5.6
+       },
+       {
+        "x": "2019-10",
+        "y": 5.5
+       },
+       {
+        "x": "2019-11",
+        "y": 5.5
+       },
+       {
+        "x": "2019-12",
+        "y": 5.4
+       },
+       {
+        "x": "2020-01",
+        "y": 5.3
+       },
+       {
+        "x": "2020-02",
+        "y": 5.4
+       },
+       {
+        "x": "2020-03",
+        "y": 6.5
+       },
+       {
+        "x": "2020-04",
+        "y": 8.8
+       },
+       {
+        "x": "2020-05",
+        "y": 12.4
+       },
+       {
+        "x": "2020-06",
+        "y": 14.3
+       },
+       {
+        "x": "2020-07",
+        "y": 15.1
+       },
+       {
+        "x": "2020-08",
+        "y": 13.8
+       },
+       {
+        "x": "2020-09",
+        "y": 12.7
+       },
+       {
+        "x": "2020-10",
+        "y": 11.2
+       },
+       {
+        "x": "2020-11",
+        "y": 10.4
+       },
+       {
+        "x": "2020-12",
+        "y": 10.5
+       },
+       {
+        "x": "2021-01",
+        "y": 11.2
+       },
+       {
+        "x": "2021-02",
+        "y": 11.6
+       },
+       {
+        "x": "2021-03",
+        "y": 10.8
+       },
+       {
+        "x": "2021-04",
+        "y": 10.1
+       },
+       {
+        "x": "2021-05",
+        "y": 10.0
+       },
+       {
+        "x": "2021-06",
+        "y": 10.3
+       },
+       {
+        "x": "2021-07",
+        "y": 10.0
+       },
+       {
+        "x": "2021-08",
+        "y": 9.3
+       },
+       {
+        "x": "2021-09",
+        "y": 8.8
+       },
+       {
+        "x": "2021-10",
+        "y": 8.2
+       },
+       {
+        "x": "2021-11",
+        "y": 7.7
+       },
+       {
+        "x": "2021-12",
+        "y": 7.4
+       },
+       {
+        "x": "2022-01",
+        "y": 7.8
+       },
+       {
+        "x": "2022-02",
+        "y": 7.6
+       },
+       {
+        "x": "2022-03",
+        "y": 7.3
+       },
+       {
+        "x": "2022-04",
+        "y": 6.5
+       },
+       {
+        "x": "2022-05",
+        "y": 6.2
+       },
+       {
+        "x": "2022-06",
+        "y": 6.0
+       },
+       {
+        "x": "2022-07",
+        "y": 5.8
+       },
+       {
+        "x": "2022-08",
+        "y": 5.7
+       },
+       {
+        "x": "2022-09",
+        "y": 5.9
+       },
+       {
+        "x": "2022-10",
+        "y": 6.1
+       },
+       {
+        "x": "2022-11",
+        "y": 6.4
+       },
+       {
+        "x": "2022-12",
+        "y": 6.3
+       },
+       {
+        "x": "2023-01",
+        "y": 6.2
+       },
+       {
+        "x": "2023-02",
+        "y": 5.9
+       },
+       {
+        "x": "2023-03",
+        "y": 5.8
+       },
+       {
+        "x": "2023-04",
+        "y": 5.7
+       },
+       {
+        "x": "2023-05",
+        "y": 5.8
+       },
+       {
+        "x": "2023-06",
+        "y": 6.1
+       },
+       {
+        "x": "2023-07",
+        "y": 6.3
+       },
+       {
+        "x": "2023-08",
+        "y": 6.5
+       },
+       {
+        "x": "2023-09",
+        "y": 6.5
+       },
+       {
+        "x": "2023-10",
+        "y": 6.7
+       },
+       {
+        "x": "2023-11",
+        "y": 6.8
+       },
+       {
+        "x": "2023-12",
+        "y": 6.9
+       },
+       {
+        "x": "2024-01",
+        "y": 7.0
+       },
+       {
+        "x": "2024-02",
+        "y": 7.2
+       },
+       {
+        "x": "2024-03",
+        "y": 7.5
+       },
+       {
+        "x": "2024-04",
+        "y": 7.7
+       },
+       {
+        "x": "2024-05",
+        "y": 7.8
+       },
+       {
+        "x": "2024-06",
+        "y": 7.7
+       },
+       {
+        "x": "2024-07",
+        "y": 7.6
+       },
+       {
+        "x": "2024-08",
+        "y": 8.0
+       },
+       {
+        "x": "2024-09",
+        "y": 8.0
+       },
+       {
+        "x": "2024-10",
+        "y": 8.1
+       },
+       {
+        "x": "2024-11",
+        "y": 8.3
+       },
+       {
+        "x": "2024-12",
+        "y": 8.5
+       },
+       {
+        "x": "2025-01",
+        "y": 8.8
+       },
+       {
+        "x": "2025-02",
+        "y": 8.6
+       },
+       {
+        "x": "2025-03",
+        "y": 8.7
+       },
+       {
+        "x": "2025-04",
+        "y": 8.6
+       },
+       {
+        "x": "2025-05",
+        "y": 8.7
+       },
+       {
+        "x": "2025-06",
+        "y": 8.7
+       },
+       {
+        "x": "2025-07",
+        "y": 8.9
+       },
+       {
+        "x": "2025-08",
+        "y": 8.8
+       },
+       {
+        "x": "2025-09",
+        "y": 8.8
+       },
+       {
+        "x": "2025-10",
+        "y": 8.6
+       },
+       {
+        "x": "2025-11",
+        "y": 8.2
+       },
+       {
+        "x": "2025-12",
+        "y": 8.1
+       },
+       {
+        "x": "2026-01",
+        "y": 7.9
+       },
+       {
+        "x": "2026-02",
+        "y": 8.1
+       },
+       {
+        "x": "2026-03",
+        "y": 8.1
+       },
+       {
+        "x": "2026-04",
+        "y": 8.2
+       },
+       {
+        "x": "2026-05",
+        "y": 7.6
+       },
+       {
+        "x": "2026-06",
+        "y": 7.2
+       },
+       {
+        "x": "2026-07",
+        "y": 6.8
+       },
+       {
+        "x": "2026-08",
+        "y": 6.8
+       },
+       {
+        "x": "2026-09",
+        "y": 6.9
+       }
+      ]
+     },
+     {
+      "id": "montreal",
+      "label": "Montréal",
+      "placeId": "montreal",
+      "points": [
+       {
+        "x": "2019-01",
+        "y": 6.0
+       },
+       {
+        "x": "2019-02",
+        "y": 6.0
+       },
+       {
+        "x": "2019-03",
+        "y": 5.8
+       },
+       {
+        "x": "2019-04",
+        "y": 5.5
+       },
+       {
+        "x": "2019-05",
+        "y": 5.4
+       },
+       {
+        "x": "2019-06",
+        "y": 5.5
+       },
+       {
+        "x": "2019-07",
+        "y": 5.6
+       },
+       {
+        "x": "2019-08",
+        "y": 5.5
+       },
+       {
+        "x": "2019-09",
+        "y": 5.4
+       },
+       {
+        "x": "2019-10",
+        "y": 5.4
+       },
+       {
+        "x": "2019-11",
+        "y": 5.8
+       },
+       {
+        "x": "2019-12",
+        "y": 5.7
+       },
+       {
+        "x": "2020-01",
+        "y": 5.6
+       },
+       {
+        "x": "2020-02",
+        "y": 5.4
+       },
+       {
+        "x": "2020-03",
+        "y": 6.4
+       },
+       {
+        "x": "2020-04",
+        "y": 10.8
+       },
+       {
+        "x": "2020-05",
+        "y": 14.4
+       },
+       {
+        "x": "2020-06",
+        "y": 15.4
+       },
+       {
+        "x": "2020-07",
+        "y": 12.9
+       },
+       {
+        "x": "2020-08",
+        "y": 11.5
+       },
+       {
+        "x": "2020-09",
+        "y": 10.3
+       },
+       {
+        "x": "2020-10",
+        "y": 9.4
+       },
+       {
+        "x": "2020-11",
+        "y": 8.5
+       },
+       {
+        "x": "2020-12",
+        "y": 8.3
+       },
+       {
+        "x": "2021-01",
+        "y": 8.4
+       },
+       {
+        "x": "2021-02",
+        "y": 8.2
+       },
+       {
+        "x": "2021-03",
+        "y": 8.2
+       },
+       {
+        "x": "2021-04",
+        "y": 7.7
+       },
+       {
+        "x": "2021-05",
+        "y": 7.6
+       },
+       {
+        "x": "2021-06",
+        "y": 7.4
+       },
+       {
+        "x": "2021-07",
+        "y": 7.2
+       },
+       {
+        "x": "2021-08",
+        "y": 6.8
+       },
+       {
+        "x": "2021-09",
+        "y": 6.7
+       },
+       {
+        "x": "2021-10",
+        "y": 6.3
+       },
+       {
+        "x": "2021-11",
+        "y": 5.9
+       },
+       {
+        "x": "2021-12",
+        "y": 5.4
+       },
+       {
+        "x": "2022-01",
+        "y": 5.1
+       },
+       {
+        "x": "2022-02",
+        "y": 5.1
+       },
+       {
+        "x": "2022-03",
+        "y": 5.0
+       },
+       {
+        "x": "2022-04",
+        "y": 4.9
+       },
+       {
+        "x": "2022-05",
+        "y": 5.0
+       },
+       {
+        "x": "2022-06",
+        "y": 5.1
+       },
+       {
+        "x": "2022-07",
+        "y": 4.9
+       },
+       {
+        "x": "2022-08",
+        "y": 4.8
+       },
+       {
+        "x": "2022-09",
+        "y": 4.8
+       },
+       {
+        "x": "2022-10",
+        "y": 4.7
+       },
+       {
+        "x": "2022-11",
+        "y": 4.5
+       },
+       {
+        "x": "2022-12",
+        "y": 4.4
+       },
+       {
+        "x": "2023-01",
+        "y": 4.7
+       },
+       {
+        "x": "2023-02",
+        "y": 4.9
+       },
+       {
+        "x": "2023-03",
+        "y": 4.9
+       },
+       {
+        "x": "2023-04",
+        "y": 4.8
+       },
+       {
+        "x": "2023-05",
+        "y": 4.6
+       },
+       {
+        "x": "2023-06",
+        "y": 4.5
+       },
+       {
+        "x": "2023-07",
+        "y": 4.7
+       },
+       {
+        "x": "2023-08",
+        "y": 4.9
+       },
+       {
+        "x": "2023-09",
+        "y": 5.1
+       },
+       {
+        "x": "2023-10",
+        "y": 5.4
+       },
+       {
+        "x": "2023-11",
+        "y": 5.7
+       },
+       {
+        "x": "2023-12",
+        "y": 6.0
+       },
+       {
+        "x": "2024-01",
+        "y": 5.9
+       },
+       {
+        "x": "2024-02",
+        "y": 5.9
+       },
+       {
+        "x": "2024-03",
+        "y": 5.8
+       },
+       {
+        "x": "2024-04",
+        "y": 5.8
+       },
+       {
+        "x": "2024-05",
+        "y": 6.0
+       },
+       {
+        "x": "2024-06",
+        "y": 6.2
+       },
+       {
+        "x": "2024-07",
+        "y": 6.5
+       },
+       {
+        "x": "2024-08",
+        "y": 6.7
+       },
+       {
+        "x": "2024-09",
+        "y": 6.5
+       },
+       {
+        "x": "2024-10",
+        "y": 6.6
+       },
+       {
+        "x": "2024-11",
+        "y": 6.6
+       },
+       {
+        "x": "2024-12",
+        "y": 6.6
+       },
+       {
+        "x": "2025-01",
+        "y": 6.5
+       },
+       {
+        "x": "2025-02",
+        "y": 6.4
+       },
+       {
+        "x": "2025-03",
+        "y": 6.6
+       },
+       {
+        "x": "2025-04",
+        "y": 6.8
+       },
+       {
+        "x": "2025-05",
+        "y": 6.8
+       },
+       {
+        "x": "2025-06",
+        "y": 6.9
+       },
+       {
+        "x": "2025-07",
+        "y": 6.6
+       },
+       {
+        "x": "2025-08",
+        "y": 6.7
+       },
+       {
+        "x": "2025-09",
+        "y": 6.4
+       },
+       {
+        "x": "2025-10",
+        "y": 6.3
+       },
+       {
+        "x": "2025-11",
+        "y": 5.9
+       },
+       {
+        "x": "2025-12",
+        "y": 5.9
+       },
+       {
+        "x": "2026-01",
+        "y": 6.1
+       },
+       {
+        "x": "2026-02",
+        "y": 6.6
+       },
+       {
+        "x": "2026-03",
+        "y": 6.6
+       },
+       {
+        "x": "2026-04",
+        "y": 7.1
+       },
+       {
+        "x": "2026-05",
+        "y": 6.9
+       },
+       {
+        "x": "2026-06",
+        "y": 6.7
+       },
+       {
+        "x": "2026-07",
+        "y": 6.3
+       },
+       {
+        "x": "2026-08",
+        "y": 6.3
+       },
+       {
+        "x": "2026-09",
+        "y": 6.8
+       }
+      ]
+     },
+     {
+      "id": "vancouver",
+      "label": "Vancouver",
+      "placeId": "vancouver",
+      "points": [
+       {
+        "x": "2019-01",
+        "y": 4.7
+       },
+       {
+        "x": "2019-02",
+        "y": 4.8
+       },
+       {
+        "x": "2019-03",
+        "y": 4.8
+       },
+       {
+        "x": "2019-04",
+        "y": 4.6
+       },
+       {
+        "x": "2019-05",
+        "y": 4.5
+       },
+       {
+        "x": "2019-06",
+        "y": 4.4
+       },
+       {
+        "x": "2019-07",
+        "y": 4.4
+       },
+       {
+        "x": "2019-08",
+        "y": 4.5
+       },
+       {
+        "x": "2019-09",
+        "y": 4.6
+       },
+       {
+        "x": "2019-10",
+        "y": 4.8
+       },
+       {
+        "x": "2019-11",
+        "y": 4.9
+       },
+       {
+        "x": "2019-12",
+        "y": 4.8
+       },
+       {
+        "x": "2020-01",
+        "y": 4.6
+       },
+       {
+        "x": "2020-02",
+        "y": 4.6
+       },
+       {
+        "x": "2020-03",
+        "y": 5.6
+       },
+       {
+        "x": "2020-04",
+        "y": 8.0
+       },
+       {
+        "x": "2020-05",
+        "y": 11.0
+       },
+       {
+        "x": "2020-06",
+        "y": 13.1
+       },
+       {
+        "x": "2020-07",
+        "y": 13.0
+       },
+       {
+        "x": "2020-08",
+        "y": 12.2
+       },
+       {
+        "x": "2020-09",
+        "y": 10.6
+       },
+       {
+        "x": "2020-10",
+        "y": 9.5
+       },
+       {
+        "x": "2020-11",
+        "y": 8.5
+       },
+       {
+        "x": "2020-12",
+        "y": 8.0
+       },
+       {
+        "x": "2021-01",
+        "y": 8.0
+       },
+       {
+        "x": "2021-02",
+        "y": 7.9
+       },
+       {
+        "x": "2021-03",
+        "y": 7.7
+       },
+       {
+        "x": "2021-04",
+        "y": 7.3
+       },
+       {
+        "x": "2021-05",
+        "y": 7.2
+       },
+       {
+        "x": "2021-06",
+        "y": 7.2
+       },
+       {
+        "x": "2021-07",
+        "y": 7.1
+       },
+       {
+        "x": "2021-08",
+        "y": 6.9
+       },
+       {
+        "x": "2021-09",
+        "y": 6.6
+       },
+       {
+        "x": "2021-10",
+        "y": 6.3
+       },
+       {
+        "x": "2021-11",
+        "y": 5.9
+       },
+       {
+        "x": "2021-12",
+        "y": 5.6
+       },
+       {
+        "x": "2022-01",
+        "y": 5.5
+       },
+       {
+        "x": "2022-02",
+        "y": 5.2
+       },
+       {
+        "x": "2022-03",
+        "y": 5.1
+       },
+       {
+        "x": "2022-04",
+        "y": 5.0
+       },
+       {
+        "x": "2022-05",
+        "y": 5.1
+       },
+       {
+        "x": "2022-06",
+        "y": 4.9
+       },
+       {
+        "x": "2022-07",
+        "y": 4.8
+       },
+       {
+        "x": "2022-08",
+        "y": 4.6
+       },
+       {
+        "x": "2022-09",
+        "y": 4.4
+       },
+       {
+        "x": "2022-10",
+        "y": 4.5
+       },
+       {
+        "x": "2022-11",
+        "y": 4.6
+       },
+       {
+        "x": "2022-12",
+        "y": 4.7
+       },
+       {
+        "x": "2023-01",
+        "y": 4.7
+       },
+       {
+        "x": "2023-02",
+        "y": 5.0
+       },
+       {
+        "x": "2023-03",
+        "y": 5.2
+       },
+       {
+        "x": "2023-04",
+        "y": 5.4
+       },
+       {
+        "x": "2023-05",
+        "y": 5.2
+       },
+       {
+        "x": "2023-06",
+        "y": 5.5
+       },
+       {
+        "x": "2023-07",
+        "y": 5.6
+       },
+       {
+        "x": "2023-08",
+        "y": 5.8
+       },
+       {
+        "x": "2023-09",
+        "y": 6.0
+       },
+       {
+        "x": "2023-10",
+        "y": 5.9
+       },
+       {
+        "x": "2023-11",
+        "y": 6.0
+       },
+       {
+        "x": "2023-12",
+        "y": 6.0
+       },
+       {
+        "x": "2024-01",
+        "y": 5.9
+       },
+       {
+        "x": "2024-02",
+        "y": 5.6
+       },
+       {
+        "x": "2024-03",
+        "y": 5.5
+       },
+       {
+        "x": "2024-04",
+        "y": 5.5
+       },
+       {
+        "x": "2024-05",
+        "y": 5.7
+       },
+       {
+        "x": "2024-06",
+        "y": 5.7
+       },
+       {
+        "x": "2024-07",
+        "y": 5.9
+       },
+       {
+        "x": "2024-08",
+        "y": 6.0
+       },
+       {
+        "x": "2024-09",
+        "y": 6.1
+       },
+       {
+        "x": "2024-10",
+        "y": 6.2
+       },
+       {
+        "x": "2024-11",
+        "y": 6.3
+       },
+       {
+        "x": "2024-12",
+        "y": 6.4
+       },
+       {
+        "x": "2025-01",
+        "y": 6.5
+       },
+       {
+        "x": "2025-02",
+        "y": 6.7
+       },
+       {
+        "x": "2025-03",
+        "y": 6.7
+       },
+       {
+        "x": "2025-04",
+        "y": 6.5
+       },
+       {
+        "x": "2025-05",
+        "y": 6.4
+       },
+       {
+        "x": "2025-06",
+        "y": 6.2
+       },
+       {
+        "x": "2025-07",
+        "y": 6.2
+       },
+       {
+        "x": "2025-08",
+        "y": 6.2
+       },
+       {
+        "x": "2025-09",
+        "y": 6.3
+       },
+       {
+        "x": "2025-10",
+        "y": 6.3
+       },
+       {
+        "x": "2025-11",
+        "y": 6.2
+       },
+       {
+        "x": "2025-12",
+        "y": 6.3
+       },
+       {
+        "x": "2026-01",
+        "y": 6.3
+       },
+       {
+        "x": "2026-02",
+        "y": 6.2
+       },
+       {
+        "x": "2026-03",
+        "y": 6.2
+       },
+       {
+        "x": "2026-04",
+        "y": 6.5
+       },
+       {
+        "x": "2026-05",
+        "y": 6.7
+       },
+       {
+        "x": "2026-06",
+        "y": 6.6
+       },
+       {
+        "x": "2026-07",
+        "y": 6.3
+       },
+       {
+        "x": "2026-08",
+        "y": 6.4
+       },
+       {
+        "x": "2026-09",
+        "y": 6.5
+       }
+      ]
+     },
+     {
+      "id": "calgary",
+      "label": "Calgary",
+      "placeId": "calgary",
+      "points": [
+       {
+        "x": "2019-01",
+        "y": 7.5
+       },
+       {
+        "x": "2019-02",
+        "y": 7.5
+       },
+       {
+        "x": "2019-03",
+        "y": 7.4
+       },
+       {
+        "x": "2019-04",
+        "y": 7.2
+       },
+       {
+        "x": "2019-05",
+        "y": 6.7
+       },
+       {
+        "x": "2019-06",
+        "y": 6.8
+       },
+       {
+        "x": "2019-07",
+        "y": 6.8
+       },
+       {
+        "x": "2019-08",
+        "y": 7.5
+       },
+       {
+        "x": "2019-09",
+        "y": 7.5
+       },
+       {
+        "x": "2019-10",
+        "y": 7.6
+       },
+       {
+        "x": "2019-11",
+        "y": 7.3
+       },
+       {
+        "x": "2019-12",
+        "y": 7.2
+       },
+       {
+        "x": "2020-01",
+        "y": 7.2
+       },
+       {
+        "x": "2020-02",
+        "y": 7.4
+       },
+       {
+        "x": "2020-03",
+        "y": 8.5
+       },
+       {
+        "x": "2020-04",
+        "y": 10.7
+       },
+       {
+        "x": "2020-05",
+        "y": 13.5
+       },
+       {
+        "x": "2020-06",
+        "y": 15.5
+       },
+       {
+        "x": "2020-07",
+        "y": 15.4
+       },
+       {
+        "x": "2020-08",
+        "y": 14.2
+       },
+       {
+        "x": "2020-09",
+        "y": 13.0
+       },
+       {
+        "x": "2020-10",
+        "y": 12.2
+       },
+       {
+        "x": "2020-11",
+        "y": 11.5
+       },
+       {
+        "x": "2020-12",
+        "y": 10.8
+       },
+       {
+        "x": "2021-01",
+        "y": 10.5
+       },
+       {
+        "x": "2021-02",
+        "y": 10.5
+       },
+       {
+        "x": "2021-03",
+        "y": 10.2
+       },
+       {
+        "x": "2021-04",
+        "y": 9.6
+       },
+       {
+        "x": "2021-05",
+        "y": 9.0
+       },
+       {
+        "x": "2021-06",
+        "y": 9.2
+       },
+       {
+        "x": "2021-07",
+        "y": 9.4
+       },
+       {
+        "x": "2021-08",
+        "y": 9.3
+       },
+       {
+        "x": "2021-09",
+        "y": 8.6
+       },
+       {
+        "x": "2021-10",
+        "y": 8.1
+       },
+       {
+        "x": "2021-11",
+        "y": 8.2
+       },
+       {
+        "x": "2021-12",
+        "y": 8.0
+       },
+       {
+        "x": "2022-01",
+        "y": 7.8
+       },
+       {
+        "x": "2022-02",
+        "y": 7.3
+       },
+       {
+        "x": "2022-03",
+        "y": 7.0
+       },
+       {
+        "x": "2022-04",
+        "y": 6.9
+       },
+       {
+        "x": "2022-05",
+        "y": 6.7
+       },
+       {
+        "x": "2022-06",
+        "y": 5.8
+       },
+       {
+        "x": "2022-07",
+        "y": 5.2
+       },
+       {
+        "x": "2022-08",
+        "y": 5.1
+       },
+       {
+        "x": "2022-09",
+        "y": 5.6
+       },
+       {
+        "x": "2022-10",
+        "y": 5.9
+       },
+       {
+        "x": "2022-11",
+        "y": 6.2
+       },
+       {
+        "x": "2022-12",
+        "y": 6.5
+       },
+       {
+        "x": "2023-01",
+        "y": 6.8
+       },
+       {
+        "x": "2023-02",
+        "y": 6.7
+       },
+       {
+        "x": "2023-03",
+        "y": 6.6
+       },
+       {
+        "x": "2023-04",
+        "y": 6.4
+       },
+       {
+        "x": "2023-05",
+        "y": 6.2
+       },
+       {
+        "x": "2023-06",
+        "y": 6.1
+       },
+       {
+        "x": "2023-07",
+        "y": 6.1
+       },
+       {
+        "x": "2023-08",
+        "y": 5.9
+       },
+       {
+        "x": "2023-09",
+        "y": 5.9
+       },
+       {
+        "x": "2023-10",
+        "y": 5.7
+       },
+       {
+        "x": "2023-11",
+        "y": 5.8
+       },
+       {
+        "x": "2023-12",
+        "y": 5.8
+       },
+       {
+        "x": "2024-01",
+        "y": 6.0
+       },
+       {
+        "x": "2024-02",
+        "y": 6.4
+       },
+       {
+        "x": "2024-03",
+        "y": 6.7
+       },
+       {
+        "x": "2024-04",
+        "y": 7.8
+       },
+       {
+        "x": "2024-05",
+        "y": 8.1
+       },
+       {
+        "x": "2024-06",
+        "y": 8.5
+       },
+       {
+        "x": "2024-07",
+        "y": 7.6
+       },
+       {
+        "x": "2024-08",
+        "y": 7.6
+       },
+       {
+        "x": "2024-09",
+        "y": 7.5
+       },
+       {
+        "x": "2024-10",
+        "y": 8.0
+       },
+       {
+        "x": "2024-11",
+        "y": 8.2
+       },
+       {
+        "x": "2024-12",
+        "y": 8.1
+       },
+       {
+        "x": "2025-01",
+        "y": 7.8
+       },
+       {
+        "x": "2025-02",
+        "y": 7.4
+       },
+       {
+        "x": "2025-03",
+        "y": 7.4
+       },
+       {
+        "x": "2025-04",
+        "y": 7.5
+       },
+       {
+        "x": "2025-05",
+        "y": 7.8
+       },
+       {
+        "x": "2025-06",
+        "y": 7.2
+       },
+       {
+        "x": "2025-07",
+        "y": 7.4
+       },
+       {
+        "x": "2025-08",
+        "y": 7.5
+       },
+       {
+        "x": "2025-09",
+        "y": 8.1
+       },
+       {
+        "x": "2025-10",
+        "y": 7.8
+       },
+       {
+        "x": "2025-11",
+        "y": 7.2
+       },
+       {
+        "x": "2025-12",
+        "y": 6.8
+       },
+       {
+        "x": "2026-01",
+        "y": 6.7
+       },
+       {
+        "x": "2026-02",
+        "y": 6.6
+       },
+       {
+        "x": "2026-03",
+        "y": 6.7
+       },
+       {
+        "x": "2026-04",
+        "y": 6.7
+       },
+       {
+        "x": "2026-05",
+        "y": 7.0
+       },
+       {
+        "x": "2026-06",
+        "y": 7.1
+       },
+       {
+        "x": "2026-07",
+        "y": 6.8
+       },
+       {
+        "x": "2026-08",
+        "y": 6.7
+       },
+       {
+        "x": "2026-09",
+        "y": 6.3
+       }
+      ]
+     },
+     {
+      "id": "halifax",
+      "label": "Halifax",
+      "placeId": "halifax",
+      "points": [
+       {
+        "x": "2019-01",
+        "y": 5.2
+       },
+       {
+        "x": "2019-02",
+        "y": 5.0
+       },
+       {
+        "x": "2019-03",
+        "y": 5.1
+       },
+       {
+        "x": "2019-04",
+        "y": 5.4
+       },
+       {
+        "x": "2019-05",
+        "y": 5.4
+       },
+       {
+        "x": "2019-06",
+        "y": 5.3
+       },
+       {
+        "x": "2019-07",
+        "y": 5.1
+       },
+       {
+        "x": "2019-08",
+        "y": 5.5
+       },
+       {
+        "x": "2019-09",
+        "y": 5.7
+       },
+       {
+        "x": "2019-10",
+        "y": 6.1
+       },
+       {
+        "x": "2019-11",
+        "y": 6.3
+       },
+       {
+        "x": "2019-12",
+        "y": 6.7
+       },
+       {
+        "x": "2020-01",
+        "y": 6.6
+       },
+       {
+        "x": "2020-02",
+        "y": 6.9
+       },
+       {
+        "x": "2020-03",
+        "y": 7.1
+       },
+       {
+        "x": "2020-04",
+        "y": 9.2
+       },
+       {
+        "x": "2020-05",
+        "y": 10.8
+       },
+       {
+        "x": "2020-06",
+        "y": 12.1
+       },
+       {
+        "x": "2020-07",
+        "y": 11.2
+       },
+       {
+        "x": "2020-08",
+        "y": 10.4
+       },
+       {
+        "x": "2020-09",
+        "y": 8.8
+       },
+       {
+        "x": "2020-10",
+        "y": 7.9
+       },
+       {
+        "x": "2020-11",
+        "y": 6.6
+       },
+       {
+        "x": "2020-12",
+        "y": 7.3
+       },
+       {
+        "x": "2021-01",
+        "y": 7.6
+       },
+       {
+        "x": "2021-02",
+        "y": 8.5
+       },
+       {
+        "x": "2021-03",
+        "y": 8.6
+       },
+       {
+        "x": "2021-04",
+        "y": 8.5
+       },
+       {
+        "x": "2021-05",
+        "y": 8.9
+       },
+       {
+        "x": "2021-06",
+        "y": 8.6
+       },
+       {
+        "x": "2021-07",
+        "y": 8.2
+       },
+       {
+        "x": "2021-08",
+        "y": 7.1
+       },
+       {
+        "x": "2021-09",
+        "y": 6.7
+       },
+       {
+        "x": "2021-10",
+        "y": 6.1
+       },
+       {
+        "x": "2021-11",
+        "y": 6.1
+       },
+       {
+        "x": "2021-12",
+        "y": 6.0
+       },
+       {
+        "x": "2022-01",
+        "y": 6.1
+       },
+       {
+        "x": "2022-02",
+        "y": 5.8
+       },
+       {
+        "x": "2022-03",
+        "y": 5.5
+       },
+       {
+        "x": "2022-04",
+        "y": 5.0
+       },
+       {
+        "x": "2022-05",
+        "y": 4.8
+       },
+       {
+        "x": "2022-06",
+        "y": 4.5
+       },
+       {
+        "x": "2022-07",
+        "y": 4.8
+       },
+       {
+        "x": "2022-08",
+        "y": 5.0
+       },
+       {
+        "x": "2022-09",
+        "y": 4.9
+       },
+       {
+        "x": "2022-10",
+        "y": 5.2
+       },
+       {
+        "x": "2022-11",
+        "y": 5.0
+       },
+       {
+        "x": "2022-12",
+        "y": 5.1
+       },
+       {
+        "x": "2023-01",
+        "y": 4.7
+       },
+       {
+        "x": "2023-02",
+        "y": 4.9
+       },
+       {
+        "x": "2023-03",
+        "y": 4.9
+       },
+       {
+        "x": "2023-04",
+        "y": 5.2
+       },
+       {
+        "x": "2023-05",
+        "y": 5.2
+       },
+       {
+        "x": "2023-06",
+        "y": 5.6
+       },
+       {
+        "x": "2023-07",
+        "y": 6.4
+       },
+       {
+        "x": "2023-08",
+        "y": 6.4
+       },
+       {
+        "x": "2023-09",
+        "y": 6.6
+       },
+       {
+        "x": "2023-10",
+        "y": 5.6
+       },
+       {
+        "x": "2023-11",
+        "y": 5.6
+       },
+       {
+        "x": "2023-12",
+        "y": 5.1
+       },
+       {
+        "x": "2024-01",
+        "y": 5.6
+       },
+       {
+        "x": "2024-02",
+        "y": 5.4
+       },
+       {
+        "x": "2024-03",
+        "y": 5.8
+       },
+       {
+        "x": "2024-04",
+        "y": 5.5
+       },
+       {
+        "x": "2024-05",
+        "y": 5.7
+       },
+       {
+        "x": "2024-06",
+        "y": 5.6
+       },
+       {
+        "x": "2024-07",
+        "y": 5.5
+       },
+       {
+        "x": "2024-08",
+        "y": 5.5
+       },
+       {
+        "x": "2024-09",
+        "y": 5.4
+       },
+       {
+        "x": "2024-10",
+        "y": 5.4
+       },
+       {
+        "x": "2024-11",
+        "y": 5.2
+       },
+       {
+        "x": "2024-12",
+        "y": 5.2
+       },
+       {
+        "x": "2025-01",
+        "y": 5.2
+       },
+       {
+        "x": "2025-02",
+        "y": 5.2
+       },
+       {
+        "x": "2025-03",
+        "y": 5.1
+       },
+       {
+        "x": "2025-04",
+        "y": 5.6
+       },
+       {
+        "x": "2025-05",
+        "y": 5.7
+       },
+       {
+        "x": "2025-06",
+        "y": 5.9
+       },
+       {
+        "x": "2025-07",
+        "y": 5.5
+       },
+       {
+        "x": "2025-08",
+        "y": 5.7
+       },
+       {
+        "x": "2025-09",
+        "y": 5.6
+       },
+       {
+        "x": "2025-10",
+        "y": 5.8
+       },
+       {
+        "x": "2025-11",
+        "y": 5.6
+       },
+       {
+        "x": "2025-12",
+        "y": 5.7
+       },
+       {
+        "x": "2026-01",
+        "y": 5.8
+       },
+       {
+        "x": "2026-02",
+        "y": 6.1
+       },
+       {
+        "x": "2026-03",
+        "y": 6.1
+       },
+       {
+        "x": "2026-04",
+        "y": 6.0
+       },
+       {
+        "x": "2026-05",
+        "y": 5.7
+       },
+       {
+        "x": "2026-06",
+        "y": 5.6
+       },
+       {
+        "x": "2026-07",
+        "y": 5.7
+       },
+       {
+        "x": "2026-08",
+        "y": 5.5
+       },
+       {
+        "x": "2026-09",
+        "y": 5.8
+       }
+      ]
+     },
+     {
+      "id": "quebec-city",
+      "label": "Québec City",
+      "placeId": "quebec-city",
+      "points": [
+       {
+        "x": "2019-01",
+        "y": 3.7
+       },
+       {
+        "x": "2019-02",
+        "y": 3.6
+       },
+       {
+        "x": "2019-03",
+        "y": 3.2
+       },
+       {
+        "x": "2019-04",
+        "y": 2.8
+       },
+       {
+        "x": "2019-05",
+        "y": 2.5
+       },
+       {
+        "x": "2019-06",
+        "y": 2.1
+       },
+       {
+        "x": "2019-07",
+        "y": 2.2
+       },
+       {
+        "x": "2019-08",
+        "y": 2.8
+       },
+       {
+        "x": "2019-09",
+        "y": 3.5
+       },
+       {
+        "x": "2019-10",
+        "y": 3.8
+       },
+       {
+        "x": "2019-11",
+        "y": 3.8
+       },
+       {
+        "x": "2019-12",
+        "y": 3.8
+       },
+       {
+        "x": "2020-01",
+        "y": 3.9
+       },
+       {
+        "x": "2020-02",
+        "y": 3.9
+       },
+       {
+        "x": "2020-03",
+        "y": 5.6
+       },
+       {
+        "x": "2020-04",
+        "y": 10.0
+       },
+       {
+        "x": "2020-05",
+        "y": 12.6
+       },
+       {
+        "x": "2020-06",
+        "y": 12.5
+       },
+       {
+        "x": "2020-07",
+        "y": 9.0
+       },
+       {
+        "x": "2020-08",
+        "y": 6.8
+       },
+       {
+        "x": "2020-09",
+        "y": 5.4
+       },
+       {
+        "x": "2020-10",
+        "y": 5.1
+       },
+       {
+        "x": "2020-11",
+        "y": 4.7
+       },
+       {
+        "x": "2020-12",
+        "y": 4.6
+       },
+       {
+        "x": "2021-01",
+        "y": 4.7
+       },
+       {
+        "x": "2021-02",
+        "y": 4.8
+       },
+       {
+        "x": "2021-03",
+        "y": 4.6
+       },
+       {
+        "x": "2021-04",
+        "y": 4.7
+       },
+       {
+        "x": "2021-05",
+        "y": 5.2
+       },
+       {
+        "x": "2021-06",
+        "y": 5.4
+       },
+       {
+        "x": "2021-07",
+        "y": 4.6
+       },
+       {
+        "x": "2021-08",
+        "y": 4.3
+       },
+       {
+        "x": "2021-09",
+        "y": 4.1
+       },
+       {
+        "x": "2021-10",
+        "y": 3.5
+       },
+       {
+        "x": "2021-11",
+        "y": 2.8
+       },
+       {
+        "x": "2021-12",
+        "y": 2.4
+       },
+       {
+        "x": "2022-01",
+        "y": 2.6
+       },
+       {
+        "x": "2022-02",
+        "y": 2.6
+       },
+       {
+        "x": "2022-03",
+        "y": 2.7
+       },
+       {
+        "x": "2022-04",
+        "y": 2.6
+       },
+       {
+        "x": "2022-05",
+        "y": 2.6
+       },
+       {
+        "x": "2022-06",
+        "y": 2.7
+       },
+       {
+        "x": "2022-07",
+        "y": 2.5
+       },
+       {
+        "x": "2022-08",
+        "y": 2.7
+       },
+       {
+        "x": "2022-09",
+        "y": 2.6
+       },
+       {
+        "x": "2022-10",
+        "y": 3.0
+       },
+       {
+        "x": "2022-11",
+        "y": 3.1
+       },
+       {
+        "x": "2022-12",
+        "y": 3.1
+       },
+       {
+        "x": "2023-01",
+        "y": 2.5
+       },
+       {
+        "x": "2023-02",
+        "y": 2.2
+       },
+       {
+        "x": "2023-03",
+        "y": 2.0
+       },
+       {
+        "x": "2023-04",
+        "y": 2.1
+       },
+       {
+        "x": "2023-05",
+        "y": 2.4
+       },
+       {
+        "x": "2023-06",
+        "y": 2.8
+       },
+       {
+        "x": "2023-07",
+        "y": 3.0
+       },
+       {
+        "x": "2023-08",
+        "y": 3.0
+       },
+       {
+        "x": "2023-09",
+        "y": 2.8
+       },
+       {
+        "x": "2023-10",
+        "y": 2.7
+       },
+       {
+        "x": "2023-11",
+        "y": 2.6
+       },
+       {
+        "x": "2023-12",
+        "y": 2.7
+       },
+       {
+        "x": "2024-01",
+        "y": 2.9
+       },
+       {
+        "x": "2024-02",
+        "y": 3.1
+       },
+       {
+        "x": "2024-03",
+        "y": 3.3
+       },
+       {
+        "x": "2024-04",
+        "y": 3.4
+       },
+       {
+        "x": "2024-05",
+        "y": 3.4
+       },
+       {
+        "x": "2024-06",
+        "y": 3.4
+       },
+       {
+        "x": "2024-07",
+        "y": 3.7
+       },
+       {
+        "x": "2024-08",
+        "y": 3.9
+       },
+       {
+        "x": "2024-09",
+        "y": 4.3
+       },
+       {
+        "x": "2024-10",
+        "y": 4.3
+       },
+       {
+        "x": "2024-11",
+        "y": 4.6
+       },
+       {
+        "x": "2024-12",
+        "y": 4.6
+       },
+       {
+        "x": "2025-01",
+        "y": 4.6
+       },
+       {
+        "x": "2025-02",
+        "y": 4.6
+       },
+       {
+        "x": "2025-03",
+        "y": 4.5
+       },
+       {
+        "x": "2025-04",
+        "y": 4.3
+       },
+       {
+        "x": "2025-05",
+        "y": 4.6
+       },
+       {
+        "x": "2025-06",
+        "y": 4.5
+       },
+       {
+        "x": "2025-07",
+        "y": 4.6
+       },
+       {
+        "x": "2025-08",
+        "y": 4.3
+       },
+       {
+        "x": "2025-09",
+        "y": 4.8
+       },
+       {
+        "x": "2025-10",
+        "y": 4.4
+       },
+       {
+        "x": "2025-11",
+        "y": 4.2
+       },
+       {
+        "x": "2025-12",
+        "y": 3.3
+       },
+       {
+        "x": "2026-01",
+        "y": 3.0
+       },
+       {
+        "x": "2026-02",
+        "y": 2.7
+       },
+       {
+        "x": "2026-03",
+        "y": 2.6
+       },
+       {
+        "x": "2026-04",
+        "y": 3.3
+       },
+       {
+        "x": "2026-05",
+        "y": 3.8
+       },
+       {
+        "x": "2026-06",
+        "y": 4.3
+       },
+       {
+        "x": "2026-07",
+        "y": 4.0
+       },
+       {
+        "x": "2026-08",
+        "y": 4.3
+       },
+       {
+        "x": "2026-09",
+        "y": 4.3
+       }
+      ]
+     }
+    ],
+    "notes": "The 2020 spike reflects the pandemic; compare current levels with 2019 and early 2020 for context.",
+    "sourceIds": [
+     "statcan-14-10-0459-01"
+    ]
+   }
+  ],
+  "interpretation": [
+   "A lower unemployment rate and a higher employment rate usually mean employers compete harder for workers, but rates describe everyone in the labour force, not newcomers in your occupation. Check Job Bank wages and current postings for your field.",
+   "Treat gaps of a point or less as ties. Small metropolitan areas have larger sampling error, and the three-month moving average smooths month-to-month changes.",
+   "For Whitehorse, Yellowknife and Iqaluit the figures are territory-wide; Charlottetown shows Prince Edward Island; Brandon shows the Southwest economic region (unadjusted). They sit in the map and place profiles with that label rather than in the rankings."
+  ],
+  "methodology": [
+   "Source: Statistics Canada Labour Force Survey, Table 14-10-0459-01 (CMA, three-month moving average, seasonally adjusted), latest period 2026-09 (released 2026-10-09). Territories: Table 14-10-0292-01 (seasonally adjusted series); Brandon: Table 14-10-0462-01 (economic region, unadjusted).",
+   "Each rate is the three-month moving average ending in the month shown. The one-year change subtracts the same measure twelve months earlier; significance uses Statistics Canada's standard error of the year-over-year change.",
+   "Ottawa and Gatineau use the LFS's Ontario and Quebec parts of the Ottawa-Gatineau CMA."
+  ],
+  "limitations": [
+   "The LFS is a sample survey; estimates for small metros are volatile and Statistics Canada rounds to one decimal. Levels and changes are not forecasts.",
+   "Rates describe all residents 15+, including students, retirees and people outside the labour force, and say little about opportunities for a specific occupation or for people who are not yet in Canada.",
+   "For Nunavut the published seasonally adjusted values equal the unadjusted values in every month since 2019 (and in about a third of months for the Northwest Territories), so the SA label is largely nominal there."
+  ],
+  "sourceIds": [
+   "statcan-14-10-0459-01",
+   "statcan-14-10-0292-01",
+   "statcan-14-10-0462-01"
+  ],
+  "relatedPlaceIds": [
+   "calgary",
+   "gatineau",
+   "kelowna",
+   "london",
+   "montreal",
+   "ottawa",
+   "sherbrooke",
+   "toronto",
+   "vancouver"
+  ],
+  "computedAt": "2026-11-04T18:02:44+00:00"
+ }
+]

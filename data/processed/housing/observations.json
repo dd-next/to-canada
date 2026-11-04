@@ -3131,5 +3131,3301 @@
    "not_available"
   ],
   "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1491.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Toronto CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1761.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Toronto CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 2046.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Toronto CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 2317.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Toronto CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_vacancy_rate",
+  "value": 3.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Toronto CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1005.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Montréal CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1131.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Montréal CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1346.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Montréal CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1626.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Montréal CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_vacancy_rate",
+  "value": 2.9,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Montréal CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1667.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Vancouver CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1806.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Vancouver CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 2363.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Vancouver CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 3009.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Vancouver CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_vacancy_rate",
+  "value": 3.7,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Vancouver CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1441.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Calgary CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1582.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Calgary CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1914.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Calgary CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 2171.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Calgary CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_vacancy_rate",
+  "value": 5.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Calgary CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1108.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Edmonton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1301.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Edmonton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1603.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Edmonton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1793.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Edmonton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_vacancy_rate",
+  "value": 3.8,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Edmonton CMA', all bedroom types ('Total'). CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1331.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Ottawa CMA'. CMHC reports the Ontario/Quebec parts of Ottawa-Gatineau as separate centres; this is the provincial part. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1594.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Ottawa CMA'. CMHC reports the Ontario/Quebec parts of Ottawa-Gatineau as separate centres; this is the provincial part. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1926.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Ottawa CMA'. CMHC reports the Ontario/Quebec parts of Ottawa-Gatineau as separate centres; this is the provincial part. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 2203.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Ottawa CMA'. CMHC reports the Ontario/Quebec parts of Ottawa-Gatineau as separate centres; this is the provincial part. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_vacancy_rate",
+  "value": 3.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Ottawa CMA', all bedroom types ('Total'). CMHC reports the Ontario/Quebec parts of Ottawa-Gatineau as separate centres; this is the provincial part. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1046.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Gatineau CMA'. CMHC reports the Ontario/Quebec parts of Ottawa-Gatineau as separate centres; this is the provincial part. CMHC reliability code 'c' (good)."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1362.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Gatineau CMA'. CMHC reports the Ontario/Quebec parts of Ottawa-Gatineau as separate centres; this is the provincial part. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1460.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Gatineau CMA'. CMHC reports the Ontario/Quebec parts of Ottawa-Gatineau as separate centres; this is the provincial part. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1520.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Gatineau CMA'. CMHC reports the Ontario/Quebec parts of Ottawa-Gatineau as separate centres; this is the provincial part. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_vacancy_rate",
+  "value": 3.8,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Gatineau CMA', all bedroom types ('Total'). CMHC reports the Ontario/Quebec parts of Ottawa-Gatineau as separate centres; this is the provincial part. CMHC reliability code 'c' (good)."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 915.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Winnipeg CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1232.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Winnipeg CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1571.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Winnipeg CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1861.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Winnipeg CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_vacancy_rate",
+  "value": 2.8,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Winnipeg CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 855.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Québec CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1107.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Québec CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1277.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Québec CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1475.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Québec CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_vacancy_rate",
+  "value": 2.4,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Québec CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1076.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Hamilton CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1402.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Hamilton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1656.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Hamilton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1895.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Hamilton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_vacancy_rate",
+  "value": 3.6,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Hamilton CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1261.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Kitchener - Cambridge - Waterloo CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1545.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Kitchener - Cambridge - Waterloo CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1832.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Kitchener - Cambridge - Waterloo CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1980.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Kitchener - Cambridge - Waterloo CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_vacancy_rate",
+  "value": 4.1,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Kitchener - Cambridge - Waterloo CMA', all bedroom types ('Total'). CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1066.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'London CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1371.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'London CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1651.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'London CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1987.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'London CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_vacancy_rate",
+  "value": 4.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'London CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1362.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Halifax CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1540.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Halifax CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1826.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Halifax CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 2251.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Halifax CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_vacancy_rate",
+  "value": 2.7,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Halifax CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1349.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Victoria CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1625.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Victoria CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 2120.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Victoria CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 2886.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Victoria CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_vacancy_rate",
+  "value": 3.3,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Victoria CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 981.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Saskatoon CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1259.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Saskatoon CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1548.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Saskatoon CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1732.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Saskatoon CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_vacancy_rate",
+  "value": 3.3,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Saskatoon CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 901.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Regina CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1238.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Regina CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1473.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Regina CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1958.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Regina CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_vacancy_rate",
+  "value": 2.7,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Regina CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 945.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'St. John's CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1086.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'St. John's CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1361.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'St. John's CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1243.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'St. John's CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_vacancy_rate",
+  "value": 2.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'St. John's CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 942.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Windsor CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1192.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Windsor CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1454.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Windsor CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "suppressed"
+  ],
+  "note": "CMHC table 1.1.2, row 'Windsor CMA'. CMHC '**': data suppressed."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_vacancy_rate",
+  "value": 3.7,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Windsor CMA', all bedroom types ('Total'). CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1395.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Kelowna CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1596.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Kelowna CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 2118.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Kelowna CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 2895.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Kelowna CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_vacancy_rate",
+  "value": 6.4,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Kelowna CMA', all bedroom types ('Total'). CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1077.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Abbotsford - Mission CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1282.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Abbotsford - Mission CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1592.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Abbotsford - Mission CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 2211.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Abbotsford - Mission CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_vacancy_rate",
+  "value": 2.8,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Abbotsford - Mission CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1028.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Moncton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1164.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Moncton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1453.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Moncton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1553.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Moncton CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_vacancy_rate",
+  "value": 3.9,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Moncton CMA', all bedroom types ('Total'). CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 838.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Saint John CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1011.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Saint John CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1290.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Saint John CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1292.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Saint John CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_vacancy_rate",
+  "value": 1.9,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Saint John CMA', all bedroom types ('Total'). CMHC reliability code 'c' (good)."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1046.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Fredericton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1203.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Fredericton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1413.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Fredericton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1656.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Fredericton CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_vacancy_rate",
+  "value": 2.5,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Fredericton CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 712.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Sherbrooke CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 906.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Sherbrooke CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1062.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Sherbrooke CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1376.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Sherbrooke CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_vacancy_rate",
+  "value": 2.7,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Sherbrooke CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 904.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Greater Sudbury / Grand Sudbury CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1244.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Greater Sudbury / Grand Sudbury CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1558.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Greater Sudbury / Grand Sudbury CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1816.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Greater Sudbury / Grand Sudbury CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_vacancy_rate",
+  "value": 1.2,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Greater Sudbury / Grand Sudbury CMA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 976.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Thunder Bay CMA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1173.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Thunder Bay CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1495.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Thunder Bay CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1864.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Thunder Bay CMA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_vacancy_rate",
+  "value": 4.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Thunder Bay CMA', all bedroom types ('Total'). CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 984.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Charlottetown CA'. CMHC reliability code 'c' (good)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1066.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Charlottetown CA'. CMHC reliability code 'b' (very good)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 1300.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Charlottetown CA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 1582.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Charlottetown CA'. CMHC reliability code 'c' (good)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "rent_vacancy_rate",
+  "value": 1.6,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Charlottetown CA', all bedroom types ('Total'). CMHC reliability code 'c' (good)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Brandon CA is not among the CMHC Rental Market Survey centres in the 2025 data tables (no workbook)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Brandon CA is not among the CMHC Rental Market Survey centres in the 2025 data tables (no workbook)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Brandon CA is not among the CMHC Rental Market Survey centres in the 2025 data tables (no workbook)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Brandon CA is not among the CMHC Rental Market Survey centres in the 2025 data tables (no workbook)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "rent_vacancy_rate",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Brandon CA is not among the CMHC Rental Market Survey centres in the 2025 data tables (no workbook)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Whitehorse is not among the CMHC Rental Market Survey centres in the 2025 data tables (no workbook)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Whitehorse is not among the CMHC Rental Market Survey centres in the 2025 data tables (no workbook)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Whitehorse is not among the CMHC Rental Market Survey centres in the 2025 data tables (no workbook)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Whitehorse is not among the CMHC Rental Market Survey centres in the 2025 data tables (no workbook)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "rent_vacancy_rate",
+  "value": null,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Whitehorse is not among the CMHC Rental Market Survey centres in the 2025 data tables (no workbook)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "rent_cmhc_avg_studio",
+  "value": 1606.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Yellowknife CA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "rent_cmhc_avg_1br",
+  "value": 1757.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Yellowknife CA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "rent_cmhc_avg_2br",
+  "value": 2124.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Yellowknife CA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "rent_cmhc_avg_3br",
+  "value": 2391.0,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.2, row 'Yellowknife CA'. CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "rent_vacancy_rate",
+  "value": 1.3,
+  "period": "2025-10",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "cmhc-rms-2025",
+  "note": "CMHC table 1.1.1, row 'Yellowknife CA', all bedroom types ('Total'). CMHC reliability code 'a' (excellent)."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "cpi_rent_change_1y",
+  "value": 1.8,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto, Ontario",
+   "dguid": "2011S0503535",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Toronto, Ontario, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 2.1,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto, Ontario",
+   "dguid": "2011S0503535",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Toronto, Ontario, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "cpi_rent_change_1y",
+  "value": 2.6,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal, Quebec",
+   "dguid": "2011S0503462",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Montréal, Quebec, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.0,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal, Quebec",
+   "dguid": "2011S0503462",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Montréal, Quebec, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cpi_rent_change_1y",
+  "value": 6.3,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver, British Columbia",
+   "dguid": "2011S0503933",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Vancouver, British Columbia, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.0,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver, British Columbia",
+   "dguid": "2011S0503933",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Vancouver, British Columbia, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "cpi_rent_change_1y",
+  "value": -4.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary, Alberta",
+   "dguid": "2011S0503825",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Calgary, Alberta, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.4,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary, Alberta",
+   "dguid": "2011S0503825",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Calgary, Alberta, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "cpi_rent_change_1y",
+  "value": -0.1,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton, Alberta",
+   "dguid": "2011S0503835",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Edmonton, Alberta, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.5,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton, Alberta",
+   "dguid": "2011S0503835",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Edmonton, Alberta, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "cpi_rent_change_1y",
+  "value": 3.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "dguid": "2011S050535505",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ottawa-Gatineau, Ontario part, Ontario/Quebec, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.0,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "dguid": "2011S050535505",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Ottawa-Gatineau, Ontario part, Ontario/Quebec, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cpi_rent_change_1y",
+  "value": 3.2,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "24",
+   "name": "Quebec",
+   "dguid": "2016A000224",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Quebec, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.1,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "24",
+   "name": "Quebec",
+   "dguid": "2016A000224",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for Quebec, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cpi_rent_change_1y",
+  "value": 5.3,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg, Manitoba",
+   "dguid": "2011S0503602",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Winnipeg, Manitoba, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 4.2,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg, Manitoba",
+   "dguid": "2011S0503602",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Winnipeg, Manitoba, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cpi_rent_change_1y",
+  "value": 2.7,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec, Quebec",
+   "dguid": "2011S0503421",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Québec, Quebec, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.3,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec, Quebec",
+   "dguid": "2011S0503421",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Québec, Quebec, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "cpi_rent_change_1y",
+  "value": 1.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2016A000235",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 2.5,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2016A000235",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "cpi_rent_change_1y",
+  "value": 1.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2016A000235",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 2.5,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2016A000235",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "london",
+  "metricId": "cpi_rent_change_1y",
+  "value": 1.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2016A000235",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "london",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 2.5,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2016A000235",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "cpi_rent_change_1y",
+  "value": 7.0,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax, Nova Scotia",
+   "dguid": "2011S0503205",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Halifax, Nova Scotia, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 5.4,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax, Nova Scotia",
+   "dguid": "2011S0503205",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Halifax, Nova Scotia, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "cpi_rent_change_1y",
+  "value": 9.5,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria, British Columbia",
+   "dguid": "2011S0503935",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Victoria, British Columbia, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.4,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria, British Columbia",
+   "dguid": "2011S0503935",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Victoria, British Columbia, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "cpi_rent_change_1y",
+  "value": 1.7,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon, Saskatchewan",
+   "dguid": "2011S0503725",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Saskatoon, Saskatchewan, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.1,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon, Saskatchewan",
+   "dguid": "2011S0503725",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Saskatoon, Saskatchewan, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "cpi_rent_change_1y",
+  "value": 4.4,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina, Saskatchewan",
+   "dguid": "2011S0503705",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Regina, Saskatchewan, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.4,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina, Saskatchewan",
+   "dguid": "2011S0503705",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Regina, Saskatchewan, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "cpi_rent_change_1y",
+  "value": 8.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's, Newfoundland and Labrador",
+   "dguid": "2011S0503001",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for St. John's, Newfoundland and Labrador, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 4.6,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's, Newfoundland and Labrador",
+   "dguid": "2011S0503001",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for St. John's, Newfoundland and Labrador, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "cpi_rent_change_1y",
+  "value": 1.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2016A000235",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 2.5,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2016A000235",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "cpi_rent_change_1y",
+  "value": 5.3,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "59",
+   "name": "British Columbia",
+   "dguid": "2016A000259",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for British Columbia, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.0,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "59",
+   "name": "British Columbia",
+   "dguid": "2016A000259",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for British Columbia, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "cpi_rent_change_1y",
+  "value": 5.3,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "59",
+   "name": "British Columbia",
+   "dguid": "2016A000259",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for British Columbia, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.0,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "59",
+   "name": "British Columbia",
+   "dguid": "2016A000259",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for British Columbia, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "cpi_rent_change_1y",
+  "value": 6.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "13",
+   "name": "New Brunswick",
+   "dguid": "2016A000213",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for New Brunswick, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 5.0,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "13",
+   "name": "New Brunswick",
+   "dguid": "2016A000213",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for New Brunswick, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cpi_rent_change_1y",
+  "value": 2.8,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John, New Brunswick",
+   "dguid": "2011S0503310",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Saint John, New Brunswick, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 4.8,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John, New Brunswick",
+   "dguid": "2011S0503310",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Saint John, New Brunswick, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "cpi_rent_change_1y",
+  "value": 6.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "13",
+   "name": "New Brunswick",
+   "dguid": "2016A000213",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for New Brunswick, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 5.0,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "13",
+   "name": "New Brunswick",
+   "dguid": "2016A000213",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for New Brunswick, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "cpi_rent_change_1y",
+  "value": 3.2,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "24",
+   "name": "Quebec",
+   "dguid": "2016A000224",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Quebec, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.1,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "24",
+   "name": "Quebec",
+   "dguid": "2016A000224",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for Quebec, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "cpi_rent_change_1y",
+  "value": 1.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2016A000235",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 2.5,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2016A000235",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "cpi_rent_change_1y",
+  "value": 7.9,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay, Ontario",
+   "dguid": "2011S0503595",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Thunder Bay, Ontario, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 2.8,
+  "period": "2026-09",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay, Ontario",
+   "dguid": "2011S0503595",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Thunder Bay, Ontario, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "cpi_rent_change_1y",
+  "value": 8.0,
+  "period": "2026-09",
+  "geo": {
+   "level": "ca",
+   "id": "charlottetown-summerside",
+   "name": "Charlottetown and Summerside, Prince Edward Island"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "regional_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Charlottetown and Summerside, Prince Edward Island, 2026-09 vs 2025-09. Published for Charlottetown and Summerside combined."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 5.6,
+  "period": "2026-09",
+  "geo": {
+   "level": "ca",
+   "id": "charlottetown-summerside",
+   "name": "Charlottetown and Summerside, Prince Edward Island"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "regional_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for Charlottetown and Summerside, Prince Edward Island, 2026-09 vs 2025-09. Published for Charlottetown and Summerside combined."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "cpi_rent_change_1y",
+  "value": 5.2,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "46",
+   "name": "Manitoba",
+   "dguid": "2016A000246",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Manitoba, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 4.4,
+  "period": "2026-09",
+  "geo": {
+   "level": "province",
+   "id": "46",
+   "name": "Manitoba",
+   "dguid": "2016A000246",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for Manitoba, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "cpi_rent_change_1y",
+  "value": null,
+  "period": "2026-09",
+  "geo": {
+   "level": "csd",
+   "id": "6001009",
+   "name": "Whitehorse, Yukon",
+   "dguid": "2011A00056001009",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Whitehorse, Yukon, 2026-09 vs 2025-09. Rented accommodation CPI is not published for this geography."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 6.1,
+  "period": "2026-09",
+  "geo": {
+   "level": "csd",
+   "id": "6001009",
+   "name": "Whitehorse, Yukon",
+   "dguid": "2011A00056001009",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Whitehorse, Yukon, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "cpi_rent_change_1y",
+  "value": null,
+  "period": "2026-09",
+  "geo": {
+   "level": "csd",
+   "id": "6106023",
+   "name": "Yellowknife, Northwest Territories",
+   "dguid": "2011A00056106023",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Yellowknife, Northwest Territories, 2026-09 vs 2025-09. Rented accommodation CPI is not published for this geography."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 4.7,
+  "period": "2026-09",
+  "geo": {
+   "level": "csd",
+   "id": "6106023",
+   "name": "Yellowknife, Northwest Territories",
+   "dguid": "2011A00056106023",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Yellowknife, Northwest Territories, 2026-09 vs 2025-09."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "cpi_rent_change_1y",
+  "value": null,
+  "period": "2026-09",
+  "geo": {
+   "level": "csd",
+   "id": "6204003",
+   "name": "Iqaluit, Nunavut",
+   "dguid": "2011A00056204003",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Iqaluit, Nunavut, 2026-09 vs 2025-09. Rented accommodation CPI is not published for this geography."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.0,
+  "period": "2026-09",
+  "geo": {
+   "level": "csd",
+   "id": "6204003",
+   "name": "Iqaluit, Nunavut",
+   "dguid": "2011A00056204003",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Iqaluit, Nunavut, 2026-09 vs 2025-09."
  }
 ]

@@ -6,7 +6,7 @@ import { zoom, zoomIdentity, zoomTransform, type ZoomBehavior, type ZoomTransfor
 import { useCallback, useEffect, useId, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
 import type { Place } from '../../types/contract';
 import { useElementSize, usePrefersReducedMotion } from '../../lib/hooks';
-import { CANADA_FRAME, type LonLatBox } from '../../lib/places';
+import { CANADA_FRAME, type MapFrame } from '../../lib/places';
 import { IconButton } from '../ui/Button';
 import { frameTransform, graticule, makeProjection, noInsets, type CanadaGeo, type Insets } from './geo';
 import { dodge, placeLabels, resetMeasureCache, type LayoutNode } from './layout';
@@ -42,7 +42,7 @@ export interface CanadaMapProps {
   /** Tooltip body for a hovered / focused marker. */
   renderTooltip?: (id: string) => ReactNode;
   /** Region preset to frame (null = all of Canada). */
-  frame?: LonLatBox | null;
+  frame?: MapFrame | null;
   /** Changing this animates to `frame`. */
   frameKey?: string;
   /** Screen space covered by overlays (e.g. the detail drawer); framing and auto-pan avoid it. */
@@ -200,7 +200,7 @@ export function CanadaMap({
   );
 
   const targetFor = useCallback(
-    (box: LonLatBox | null) => {
+    (box: MapFrame | null) => {
       if (!projection) return zoomIdentity;
       if (!box && !insets.right && !insets.left) return zoomIdentity;
       return frameTransform(projection, box ?? CANADA_FRAME, width, height, { ...insets, top: insets.top + 8, bottom: insets.bottom + 8 }, SCALE_EXTENT, box ? 0.92 : 1);
