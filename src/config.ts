@@ -6,7 +6,9 @@ export const PRODUCT = {
   description:
     'An independent explorer of Canadian cities built on official open data: rents, wages by occupation, labour markets, climate and immigration reference.',
   /** Base URL for data snapshots (served from /public/data). */
-  dataBase: `${import.meta.env.BASE_URL}data/`,
+  dataBase:
+    (import.meta.env.DEV && (import.meta.env.VITE_DATA_BASE as string | undefined)) ||
+    `${import.meta.env.BASE_URL}data/`,
 } as const;
 
 /** Local-storage keys (personal inputs never leave the browser unless shared explicitly). */

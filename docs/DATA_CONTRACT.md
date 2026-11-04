@@ -72,3 +72,22 @@ immigration → `programs.json` (`ProgramRecord[]`).
 
 Need a dependency or a change to a lead-owned file? Write it in your final
 report; the lead applies it.
+
+## Conventions the interface relies on
+
+* **Metric families.** Variants of one measure share `dims.family`; the
+  housing-type control switches `dims.unitType` within a family. Unit types use
+  Canadian terms: `Studio`, `1 bedroom`, `2 bedroom`, `3 bedroom+`.
+  e.g. `rent_asking_1br` → `dims: { family: 'rent_asking', unitType: '1 bedroom' }`.
+* **Map layers** are metrics with `mapLayer: true`, grouped by `category`.
+  The profession layer is virtual: the UI reads `wages.json` for the chosen
+  NOC and each place's `geo.economicRegions[0]` (falling back to the province
+  only when the ER cell is missing, flagged `provincial_value`).
+* **Geometry** `public/data/geo/canada.topo.json` (WGS84 lon/lat, TopoJSON):
+  object `provinces` (properties `code` 'ON', `pruid` '35', `name`) and
+  optional object `cmas` (properties `placeId`, `cmaId`, `name`, `level`).
+  Projection in the UI: Statistics Canada Lambert conformal conic
+  (standard parallels 49°N and 77°N, central meridian 91°52′W).
+* **Chart-ready insights.** `ChartSpec` points use `x` (category or period),
+  `y` (value), optional `y0`/`y1` (ranges), `placeId` (enables highlighting and
+  links). Periods sort lexicographically ('2024-Q4' < '2025-Q1').
