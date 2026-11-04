@@ -16,13 +16,6 @@
      "name": "Toronto",
      "dguid": "2021S05003530",
      "vintage": "2021"
-    },
-    {
-     "level": "economic_region",
-     "id": "3540",
-     "name": "Kitchener--Waterloo--Barrie",
-     "dguid": "2021S05003540",
-     "vintage": "2021"
     }
    ],
    "province": {
@@ -888,8 +881,8 @@
   "statLabel": "Victoria CMA",
   "province": "BC",
   "region": "west",
-  "lat": 48.4831,
-  "lon": -123.3685,
+  "lat": 48.4283,
+  "lon": -123.3562,
   "tier": "core",
   "geo": {
    "economicRegions": [
@@ -910,9 +903,9 @@
    },
    "principalCsd": {
     "level": "csd",
-    "id": "5917021",
-    "name": "Saanich",
-    "dguid": "2021A00055917021",
+    "id": "5917034",
+    "name": "Victoria",
+    "dguid": "2021A00055917034",
     "vintage": "2021"
    },
    "cma": {
@@ -1387,13 +1380,13 @@
    "Moncton",
    "Dieppe",
    "Riverview",
-   "Moncton",
    "Memramcook",
    "Coverdale",
    "Salisbury",
    "Hillsborough",
-   "Hillsborough",
-   "Elgin"
+   "Elgin",
+   "Dorchester",
+   "Saint-Paul"
   ]
  },
  {
@@ -1457,9 +1450,9 @@
    "Hampton",
    "Simonds",
    "Kingston",
-   "Hampton",
    "Westfield",
-   "Upham"
+   "Upham",
+   "Norton"
   ]
  },
  {
@@ -1524,8 +1517,8 @@
    "New Maryland",
    "Bright",
    "Kingsclear",
-   "New Maryland",
-   "Manners Sutton"
+   "Manners Sutton",
+   "Maugerville"
   ]
  },
  {
@@ -1778,8 +1771,8 @@
    "North Shore",
    "East River, Part 1",
    "Crossroads",
-   "North Shore",
-   "Miltonvale Park"
+   "Miltonvale Park",
+   "Kingston"
   ]
  },
  {

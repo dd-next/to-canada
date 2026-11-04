@@ -54,7 +54,16 @@ def layer_query(layer: str, where: str = "1=1", offset: float = 0.001, fields: s
 
 def proj(g):
     g = transform(TO3347, g)
-    return g if g.is_valid else g.buffer(0)
+    if g.is_valid:
+        return g
+    try:
+        g = make_valid(g)
+    except Exception:
+        return g.buffer(0)
+    if g.geom_type == "GeometryCollection":
+        polys = [x for x in g.geoms if x.geom_type in ("Polygon", "MultiPolygon")]
+        g = unary_union(polys)
+    return g
 
 
 def unproj(g):
@@ -95,7 +104,7 @@ def main() -> None:
 
     cma_geo = layer_query("CMA", offset=0.002)
     cma_feats = {f["properties"]["CMAPUID"]: f for f in cma_geo["features"]}
-    er_geo = layer_query("ER", offset=0.005)
+    er_geo = layer_query("ER", offset=0.0007)
     er_shapes = [(f["properties"], proj(shape(f["geometry"]))) for f in er_geo["features"]]
     pr_names = {f["properties"]["PRUID"]: f["properties"] for f in layer_query("PR", offset=0.5)["features"]}
 
@@ -144,6 +153,12 @@ def main() -> None:
         else:
             ordinary = [(r.csduid, r.pop) for r in csd_filter.itertuples() if r.csduid in csd]
             principal_uid = ordinary[0][0]
+            # the principal municipality is the CSD named like the place when it exists (e.g. Victoria, not larger Saanich)
+            for u, _pp in ordinary:
+                nm = csd[u]["properties"]["CSDNAME"]
+                if nm.lower() == sp["name"].lower().replace("–", "-") or nm.lower() == sp["name"].lower():
+                    principal_uid = u
+                    break
             csd_pop = dict(ordinary)
         pf = csd[principal_uid]["properties"]
         pgeom = proj(shape(csd[principal_uid]["geometry"]))
@@ -178,14 +193,15 @@ def main() -> None:
         for u, pop in csd_pop.items():
             g = proj(shape(csd[u]["geometry"]))
             rp = g.representative_point()
-            for ep, eg in er_shapes:
-                if eg.contains(rp):
-                    er_pop[ep["ERUID"]] = er_pop.get(ep["ERUID"], 0) + (pop or 0)
-                    if u == principal_uid:
-                        er_prim = ep["ERUID"]
-                    break
+            hits = [(eg.area, ep) for ep, eg in er_shapes if eg.contains(rp)]
+            if hits:
+                ep = min(hits, key=lambda h: h[0])[1]  # smallest containing polygon (guards against invalid/enclosing geometry)
+                er_pop[ep["ERUID"]] = er_pop.get(ep["ERUID"], 0) + (pop or 0)
+                if u == principal_uid:
+                    er_prim = ep["ERUID"]
         tot = sum(er_pop.values()) or 1
-        ers = [e for e in sorted(er_pop, key=lambda k: -er_pop[k]) if er_pop[e] / tot >= 0.02 or e == er_prim]
+        if pid == "montreal": print("DEBUG", er_pop, len(csd_pop), len(csd))
+        ers = [e for e in sorted(er_pop, key=lambda k: -er_pop[k]) if er_pop[e] / tot >= 0.03 or e == er_prim]
         ers = [er_prim] + [e for e in ers if e != er_prim]
         ereg = {ep["ERUID"]: ep for ep, _ in er_shapes}
         er_refs = [geo("economic_region", e, ereg[e]["ERNAME"], ereg[e]["DGUID"], "2021") for e in ers]
@@ -225,6 +241,8 @@ def main() -> None:
                 t = csd[r.csduid]["properties"]["CSDTYPE"] if r.csduid in csd else None
                 if t in ("IRI", "S-É", "RA", "TR", "R", "IGD", "TC", "NV", "NO", "TI", "TK", "TL", "NL", "SNO", "IRI", "RIV"):
                     continue
+                if r.csd_name in top:
+                    continue
                 top.append(r.csd_name)
                 if len(top) == 10:
                     break
@@ -254,9 +272,9 @@ def main() -> None:
     out = GEO_DIR / "canada.topo.json"
     GEO_DIR.mkdir(parents=True, exist_ok=True)
     npx = ["npx", "--no-install", "mapshaper"]
-    subprocess.run(npx + ["-i", str(tmp / "provinces.geojson"), "-simplify", "1.5%", "weighted", "keep-shapes",
+    subprocess.run(npx + ["-i", str(tmp / "provinces.geojson"), "-simplify", "7%", "weighted", "keep-shapes",
                           "-o", str(tmp / "prov_s.json"), "format=geojson"], check=True, cwd=ROOT_DIR)
-    subprocess.run(npx + ["-i", str(tmp / "cmas.geojson"), "-simplify", "12%", "weighted", "keep-shapes",
+    subprocess.run(npx + ["-i", str(tmp / "cmas.geojson"), "-simplify", "30%", "weighted", "keep-shapes",
                           "-o", str(tmp / "cmas_s.json"), "format=geojson"], check=True, cwd=ROOT_DIR)
     subprocess.run(npx + ["-i", str(tmp / "prov_s.json"), str(tmp / "cmas_s.json"), "combine-files", "-rename-layers", "provinces,cmas",
                           "-o", str(out), "format=topojson", "quantization=100000", "force"], check=True, cwd=ROOT_DIR)

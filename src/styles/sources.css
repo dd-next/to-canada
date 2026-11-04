@@ -1,0 +1,213 @@
+.srcpage__toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-5);
+  margin-top: var(--s-5);
+  font-family: var(--font-label);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.srcpage__built {
+  margin-top: var(--s-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.srcpage__sec {
+  margin-top: var(--s-8);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s-4);
+  scroll-margin-top: calc(var(--header-h) + var(--s-4));
+}
+.srcpage__sec > .h2 {
+  border-bottom: var(--rule-strong);
+  padding-bottom: var(--s-2);
+}
+.srcpage__lede {
+  max-width: 72ch;
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+.srcpage__legend {
+  list-style: none;
+  padding-left: 0 !important;
+  display: grid;
+  gap: var(--s-2);
+  font-family: var(--font-ui);
+  font-size: var(--fs-sm);
+}
+.srcpage__legend .badge {
+  margin-right: var(--s-2);
+}
+.srcpage__code {
+  padding: var(--s-4);
+  background: var(--charcoal);
+  color: var(--on-dark);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  overflow-x: auto;
+  line-height: 1.7;
+}
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--paper-2);
+  padding: 1px 4px;
+}
+
+/* ---- registry */
+.srcgroups {
+  display: grid;
+  gap: var(--s-6);
+}
+.srcgroup__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-3);
+  font-family: var(--font-display);
+  font-weight: 850;
+  font-stretch: var(--stretch-semi);
+  font-size: var(--fs-lg);
+  padding-bottom: var(--s-2);
+  border-bottom: var(--rule);
+}
+.srcgroup__items {
+  display: grid;
+}
+.src {
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-4) 0;
+  border-bottom: var(--rule-hair);
+}
+.src__head {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-3);
+  align-items: flex-start;
+}
+.src__title {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 80ch;
+}
+.src__dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: var(--s-2) var(--s-4);
+  font-size: var(--fs-sm);
+}
+.src__dl dt {
+  color: var(--ink-3);
+}
+.src__dl dd {
+  margin: 2px 0 0;
+  overflow-wrap: anywhere;
+}
+.src__more {
+  display: grid;
+  gap: var(--s-2);
+  font-size: var(--fs-sm);
+  max-width: 90ch;
+}
+.src__more ul {
+  padding-left: 1.1em;
+  display: grid;
+  gap: 4px;
+}
+.src__attr {
+  color: var(--ink-2);
+  font-size: var(--fs-xs);
+}
+.src__url {
+  overflow-wrap: anywhere;
+}
+
+/* ---- coverage */
+.cov__legend {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-5);
+  margin-bottom: var(--s-3);
+  font-size: var(--fs-xs);
+}
+.cov__legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cov__scroll {
+  overflow-x: auto;
+  border: var(--rule);
+  background: var(--paper-hi);
+  max-height: 640px;
+}
+.cov {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: var(--fs-sm);
+}
+.cov th,
+.cov td {
+  padding: 6px var(--s-3);
+  border-bottom: var(--rule-hair);
+  text-align: left;
+}
+.cov thead th {
+  position: sticky;
+  top: 0;
+  background: var(--paper-hi);
+  z-index: 2;
+  font-family: var(--font-label);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: var(--rule);
+}
+.cov tbody th {
+  font-weight: 600;
+  position: sticky;
+  left: 0;
+  background: var(--paper-hi);
+  white-space: nowrap;
+}
+.cov .cov__c {
+  text-align: center;
+}
+.cov__tot {
+  display: block;
+  font-weight: 400;
+  color: var(--ink-3);
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--font-mono);
+}
+.cov__prov {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  color: var(--ink-3);
+  font-weight: 400;
+}
+.cov__mark {
+  display: inline-block;
+  vertical-align: middle;
+}
+.cov__note {
+  margin-top: var(--s-3);
+  max-width: 80ch;
+  font-size: var(--fs-xs);
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+.cov td {
+  position: relative;
+}
