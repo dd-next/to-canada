@@ -32,7 +32,7 @@
   "publisher": "Statistics Canada",
   "url": "https://www.statcan.gc.ca/en/subjects/standard/noc/2021/indexV1",
   "downloadUrl": "https://www.statcan.gc.ca/en/subjects/standard/noc/2021/indexV1/noc-2021-v1.0-classification-structure.csv",
-  "retrievedAt": "2026-11-04T18:02:43+00:00",
+  "retrievedAt": "2026-11-04T18:23:00+00:00",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, NOC 2021 Version 1.0.",
   "transformations": [

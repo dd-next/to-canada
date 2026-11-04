@@ -318,8 +318,10 @@ export interface Finding {
   stat?: { value: number; unit: Unit; label: string; period: string };
   /** Places this finding is about — powers "show on map". */
   placeIds: string[];
-  /** Map layer to switch to when jumping to the map. */
+  /** Map layer to switch to when jumping to the map (a metric id, or a virtual layer: 'noc_wage', 'rent_share'). */
   metricId?: string;
+  /** Extra explorer URL parameters for the jump, e.g. { noc: '31301', unit: '1 bedroom' }. */
+  mapParams?: Record<string, string>;
   sourceIds: string[];
   /** Reproducible description of the calculation. */
   calc?: string;

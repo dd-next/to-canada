@@ -42,7 +42,10 @@
      "yellowknife",
      "iqaluit"
     ],
-    "metricId": null,
+    "metricId": "noc_wage",
+    "mapParams": {
+     "noc": "31301"
+    },
     "sourceIds": [
      "jobbank-wages-2025"
     ],
@@ -65,7 +68,10 @@
      "toronto",
      "montreal"
     ],
-    "metricId": null,
+    "metricId": "noc_wage",
+    "mapParams": {
+     "noc": "72106"
+    },
     "sourceIds": [
      "jobbank-wages-2025"
     ],
@@ -576,7 +582,7 @@
    "vancouver",
    "yellowknife"
   ],
-  "computedAt": "2026-11-04T18:02:44+00:00"
+  "computedAt": "2026-11-04T18:23:00+00:00"
  },
  {
   "id": "work-labour",
@@ -3279,6 +3285,6 @@
    "toronto",
    "vancouver"
   ],
-  "computedAt": "2026-11-04T18:02:44+00:00"
+  "computedAt": "2026-11-04T18:23:00+00:00"
  }
 ]

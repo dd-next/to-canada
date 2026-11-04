@@ -80,7 +80,7 @@
    {
     "id": "asking-vs-cmhc-2br",
     "kind": "calculation",
-    "headline": "Advertised 2-bedroom rents sit a median +17% from CMHC's average rent - the gap ranges from -1% to +43%",
+    "headline": "Advertised 2-bedroom rents sit a median 17% above CMHC's average rent; the gap ranges from -1% to +43%",
     "detail": "Asking rent for 2-bedroom apartments in 2025-Q4 (StatCan) vs CMHC's October 2025 average rent for purpose-built apartments, 26 places. Largest gaps: Montréal +43% (asking $1,920 vs $1,346), Hamilton +32% (asking $2,190 vs $1,656), Vancouver +31% (asking $3,090 vs $2,363), Toronto +30% (asking $2,670 vs $2,046); smallest: Saskatoon -1%, Calgary +1%, Edmonton +1%. The gap is not 'overpricing': the two measure different things - units advertised for rent during a quarter on listing platforms (new leases, any building type) vs a survey of the average rent across all units in purpose-built rental structures of 3+ units, including long-standing tenancies. For a newcomer, the asking rent is the better guide to what a new lease costs.",
     "stat": {
      "value": 17.4,

@@ -84,7 +84,7 @@ def build():
                      f"and the lowest ${rn_lo['c'][1]:.2f} ({rn_lo['label']}), a gap of ${rn_hi['c'][1]-rn_lo['c'][1]:.2f}/hour. Territorial medians are higher still ({terr_txt}). "
                      "Remote places also tend to have higher living costs; wages here are nominal and not adjusted for prices."),
           "stat": {"value": round(rn_hi['c'][1] - rn_lo['c'][1], 2), "unit": "CAD_hour", "label": "Gap between highest and lowest provincial place median", "period": "2023-2024"},
-          "placeIds": [rn_hi["pid"], rn_lo["pid"]] + [r["pid"] for r in terr], "metricId": None, "sourceIds": [WSRC],
+          "placeIds": [rn_hi["pid"], rn_lo["pid"]] + [r["pid"] for r in terr], "metricId": "noc_wage", "mapParams": {"noc": "31301"}, "sourceIds": [WSRC],
           "calc": "For each place take the median wage of NOC 31301 in its primary economic region (geo.economicRegions[0]); shared ERs counted once; gap = max - min over the 10 provinces' places, territories reported separately."}
     # trades premium
     wel = per_place(table, "72106", places)
@@ -98,7 +98,7 @@ def build():
           "detail": (f"The pattern is similar for transport truck drivers: ${trk['calgary'][1]:.2f} (Calgary) and ${trk['edmonton'][1]:.2f} (Edmonton) versus ${trk['toronto'][1]:.2f} (Toronto) and ${trk['montreal'][1]:.2f} (Montréal), "
                      f"about {100*(trk_ab/trk_ot-1):.0f}% higher. For child-care, retail and food-service occupations regional differences are much smaller. Always compare against local rents before treating a wage gap as a gain."),
           "stat": {"value": round(100 * (wel_ab / wel_ot - 1), 1), "unit": "percent", "label": "Welders: Calgary/Edmonton mean median vs Toronto/Montréal mean median", "period": "2023-2024"},
-          "placeIds": ["calgary", "edmonton", "toronto", "montreal"], "metricId": None, "sourceIds": [WSRC],
+          "placeIds": ["calgary", "edmonton", "toronto", "montreal"], "metricId": "noc_wage", "mapParams": {"noc": "72106"}, "sourceIds": [WSRC],
           "calc": "Median wage NOC 72106 (welders) and 73300 (truck drivers) in primary ERs of the four places (4830, 4860, 3530, 2440); percent = mean(Calgary, Edmonton) / mean(Toronto, Montréal) - 1."}
 
     def rng_points(items):

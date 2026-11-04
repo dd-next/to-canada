@@ -1,0 +1,2008 @@
+[
+ {
+  "id": "toronto",
+  "name": "Toronto",
+  "statLabel": "Toronto CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 43.7235,
+  "lon": -79.3964,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3530",
+     "name": "Toronto",
+     "dguid": "2021S05003530",
+     "vintage": "2021"
+    },
+    {
+     "level": "economic_region",
+     "id": "3540",
+     "name": "Kitchener--Waterloo--Barrie",
+     "dguid": "2021S05003540",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario",
+    "dguid": "2021A000235",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "3520005",
+    "name": "Toronto",
+    "dguid": "2021A00053520005",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "535",
+    "name": "Toronto",
+    "dguid": "2021S0503535",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 6202225,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "535",
+    "name": "Toronto",
+    "dguid": "2021S0503535",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Toronto",
+   "Mississauga",
+   "Brampton",
+   "Markham",
+   "Vaughan",
+   "Oakville",
+   "Richmond Hill",
+   "Milton",
+   "Ajax",
+   "Pickering"
+  ]
+ },
+ {
+  "id": "montreal",
+  "name": "Montréal",
+  "statLabel": "Montréal CMA",
+  "province": "QC",
+  "region": "quebec",
+  "lat": 45.5344,
+  "lon": -73.6375,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2440",
+     "name": "Montréal",
+     "dguid": "2021S05002440",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "24",
+    "name": "Quebec",
+    "dguid": "2021A000224",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "2466023",
+    "name": "Montréal",
+    "dguid": "2021A00052466023",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "462",
+    "name": "Montréal",
+    "dguid": "2021S0503462",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 4291732,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "462",
+    "name": "Montréal",
+    "dguid": "2021S0503462",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Montréal",
+   "Laval",
+   "Longueuil",
+   "Terrebonne",
+   "Saint-Jean-sur-Richelieu",
+   "Brossard",
+   "Repentigny",
+   "Saint-Jérôme",
+   "Mirabel",
+   "Blainville"
+  ]
+ },
+ {
+  "id": "vancouver",
+  "name": "Vancouver",
+  "statLabel": "Vancouver CMA",
+  "province": "BC",
+  "region": "west",
+  "lat": 49.2477,
+  "lon": -123.1048,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5920",
+     "name": "Lower Mainland--Southwest / Lower Mainland--Sud-ouest",
+     "dguid": "2021S05005920",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "59",
+    "name": "British Columbia",
+    "dguid": "2021A000259",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "5915022",
+    "name": "Vancouver",
+    "dguid": "2021A00055915022",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "933",
+    "name": "Vancouver",
+    "dguid": "2021S0503933",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 2642825,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "933",
+    "name": "Vancouver",
+    "dguid": "2021S0503933",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Vancouver",
+   "Surrey",
+   "Burnaby",
+   "Richmond",
+   "Coquitlam",
+   "Langley",
+   "Delta",
+   "Maple Ridge",
+   "North Vancouver",
+   "New Westminster"
+  ]
+ },
+ {
+  "id": "calgary",
+  "name": "Calgary",
+  "statLabel": "Calgary CMA",
+  "province": "AB",
+  "region": "prairies",
+  "lat": 51.0347,
+  "lon": -114.0652,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4830",
+     "name": "Calgary",
+     "dguid": "2021S05004830",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "48",
+    "name": "Alberta",
+    "dguid": "2021A000248",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "4806016",
+    "name": "Calgary",
+    "dguid": "2021A00054806016",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "825",
+    "name": "Calgary",
+    "dguid": "2021S0503825",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 1481806,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "825",
+    "name": "Calgary",
+    "dguid": "2021S0503825",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Calgary",
+   "Airdrie",
+   "Rocky View County",
+   "Cochrane",
+   "Chestermere",
+   "Crossfield",
+   "Irricana",
+   "Beiseker"
+  ]
+ },
+ {
+  "id": "edmonton",
+  "name": "Edmonton",
+  "statLabel": "Edmonton CMA",
+  "province": "AB",
+  "region": "prairies",
+  "lat": 53.5202,
+  "lon": -113.5185,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4860",
+     "name": "Edmonton",
+     "dguid": "2021S05004860",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "48",
+    "name": "Alberta",
+    "dguid": "2021A000248",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "4811061",
+    "name": "Edmonton",
+    "dguid": "2021A00054811061",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "835",
+    "name": "Edmonton",
+    "dguid": "2021S0503835",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 1418118,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "835",
+    "name": "Edmonton",
+    "dguid": "2021S0503835",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Edmonton",
+   "Strathcona County",
+   "St. Albert",
+   "Spruce Grove",
+   "Leduc",
+   "Parkland County",
+   "Fort Saskatchewan",
+   "Beaumont",
+   "Sturgeon County",
+   "Stony Plain"
+  ]
+ },
+ {
+  "id": "ottawa",
+  "name": "Ottawa",
+  "statLabel": "Ottawa–Gatineau CMA (Ontario part)",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 45.3752,
+  "lon": -75.6551,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3510",
+     "name": "Ottawa",
+     "dguid": "2021S05003510",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario",
+    "dguid": "2021A000235",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "3506008",
+    "name": "Ottawa",
+    "dguid": "2021A00053506008",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "505",
+    "name": "Ottawa - Gatineau",
+    "dguid": "2021S0503505",
+    "vintage": "2021"
+   },
+   "cmaPart": {
+    "level": "cma_part",
+    "id": "35505",
+    "name": "Ottawa - Gatineau (Ontario part)",
+    "dguid": "2021S050535505",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 1135010,
+   "period": "2021",
+   "geo": {
+    "level": "cma_part",
+    "id": "35505",
+    "name": "Ottawa - Gatineau (Ontario part)",
+    "dguid": "2021S050535505",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0030-01"
+  },
+  "municipalities": [
+   "Ottawa",
+   "Clarence-Rockland",
+   "Russell",
+   "North Grenville",
+   "Mississippi Mills",
+   "Carleton Place",
+   "Arnprior",
+   "Beckwith",
+   "McNab/Braeside"
+  ]
+ },
+ {
+  "id": "gatineau",
+  "name": "Gatineau",
+  "statLabel": "Ottawa–Gatineau CMA (Quebec part)",
+  "province": "QC",
+  "region": "quebec",
+  "lat": 45.4615,
+  "lon": -75.7184,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2460",
+     "name": "Outaouais",
+     "dguid": "2021S05002460",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "24",
+    "name": "Quebec",
+    "dguid": "2021A000224",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "2481017",
+    "name": "Gatineau",
+    "dguid": "2021A00052481017",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "505",
+    "name": "Ottawa - Gatineau",
+    "dguid": "2021S0503505",
+    "vintage": "2021"
+   },
+   "cmaPart": {
+    "level": "cma_part",
+    "id": "24505",
+    "name": "Ottawa - Gatineau (Quebec part)",
+    "dguid": "2021S050524505",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 353295,
+   "period": "2021",
+   "geo": {
+    "level": "cma_part",
+    "id": "24505",
+    "name": "Ottawa - Gatineau (Quebec part)",
+    "dguid": "2021S050524505",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0030-01"
+  },
+  "municipalities": [
+   "Gatineau",
+   "Val-des-Monts",
+   "Cantley",
+   "La Pêche",
+   "Chelsea",
+   "Pontiac",
+   "L'Ange-Gardien",
+   "Thurso",
+   "Lochaber-Partie-Ouest",
+   "Val-des-Bois"
+  ]
+ },
+ {
+  "id": "winnipeg",
+  "name": "Winnipeg",
+  "statLabel": "Winnipeg CMA",
+  "province": "MB",
+  "region": "prairies",
+  "lat": 49.8772,
+  "lon": -97.1518,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4650",
+     "name": "Winnipeg",
+     "dguid": "2021S05004650",
+     "vintage": "2021"
+    },
+    {
+     "level": "economic_region",
+     "id": "4610",
+     "name": "Southeast / Sud-est",
+     "dguid": "2021S05004610",
+     "vintage": "2021"
+    },
+    {
+     "level": "economic_region",
+     "id": "4660",
+     "name": "Interlake",
+     "dguid": "2021S05004660",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "46",
+    "name": "Manitoba",
+    "dguid": "2021A000246",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "4611040",
+    "name": "Winnipeg",
+    "dguid": "2021A00054611040",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "602",
+    "name": "Winnipeg",
+    "dguid": "2021S0503602",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 834678,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "602",
+    "name": "Winnipeg",
+    "dguid": "2021S0503602",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Winnipeg",
+   "Springfield",
+   "Taché",
+   "St. Clements",
+   "East St. Paul",
+   "Macdonald",
+   "Ritchot",
+   "West St. Paul",
+   "Niverville",
+   "Headingley"
+  ]
+ },
+ {
+  "id": "quebec-city",
+  "name": "Québec City",
+  "statLabel": "Québec CMA",
+  "province": "QC",
+  "region": "quebec",
+  "lat": 46.8433,
+  "lon": -71.303,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2420",
+     "name": "Capitale-Nationale",
+     "dguid": "2021S05002420",
+     "vintage": "2021"
+    },
+    {
+     "level": "economic_region",
+     "id": "2425",
+     "name": "Chaudière-Appalaches",
+     "dguid": "2021S05002425",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "24",
+    "name": "Quebec",
+    "dguid": "2021A000224",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "2423027",
+    "name": "Québec",
+    "dguid": "2021A00052423027",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "421",
+    "name": "Québec",
+    "dguid": "2021S0503421",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 839311,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "421",
+    "name": "Québec",
+    "dguid": "2021S0503421",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Québec",
+   "Lévis",
+   "Saint-Augustin-de-Desmaures",
+   "L'Ancienne-Lorette",
+   "Stoneham-et-Tewkesbury",
+   "Sainte-Brigitte-de-Laval",
+   "Sainte-Catherine-de-la-Jacques-Cartier",
+   "Boischatel",
+   "Lac-Beauport",
+   "Saint-Apollinaire"
+  ]
+ },
+ {
+  "id": "hamilton",
+  "name": "Hamilton",
+  "statLabel": "Hamilton CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 43.2321,
+  "lon": -79.8565,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3550",
+     "name": "Hamilton--Niagara Peninsula",
+     "dguid": "2021S05003550",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario",
+    "dguid": "2021A000235",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "3525005",
+    "name": "Hamilton",
+    "dguid": "2021A00053525005",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "537",
+    "name": "Hamilton",
+    "dguid": "2021S0503537",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 785184,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "537",
+    "name": "Hamilton",
+    "dguid": "2021S0503537",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Hamilton",
+   "Burlington",
+   "Grimsby"
+  ]
+ },
+ {
+  "id": "kitchener-waterloo",
+  "name": "Kitchener–Waterloo",
+  "statLabel": "Kitchener–Cambridge–Waterloo CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 43.4238,
+  "lon": -80.4687,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3540",
+     "name": "Kitchener--Waterloo--Barrie",
+     "dguid": "2021S05003540",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario",
+    "dguid": "2021A000235",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "3530013",
+    "name": "Kitchener",
+    "dguid": "2021A00053530013",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "541",
+    "name": "Kitchener - Cambridge - Waterloo",
+    "dguid": "2021S0503541",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 575847,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "541",
+    "name": "Kitchener - Cambridge - Waterloo",
+    "dguid": "2021S0503541",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Kitchener",
+   "Cambridge",
+   "Waterloo",
+   "Woolwich",
+   "Wilmot",
+   "North Dumfries"
+  ]
+ },
+ {
+  "id": "london",
+  "name": "London",
+  "statLabel": "London CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 42.9808,
+  "lon": -81.2496,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3560",
+     "name": "London",
+     "dguid": "2021S05003560",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario",
+    "dguid": "2021A000235",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "3539036",
+    "name": "London",
+    "dguid": "2021A00053539036",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "555",
+    "name": "London",
+    "dguid": "2021S0503555",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 543551,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "555",
+    "name": "London",
+    "dguid": "2021S0503555",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "London",
+   "St. Thomas",
+   "Strathroy-Caradoc",
+   "Middlesex Centre",
+   "Thames Centre",
+   "Central Elgin",
+   "Southwold",
+   "Adelaide-Metcalfe"
+  ]
+ },
+ {
+  "id": "halifax",
+  "name": "Halifax",
+  "statLabel": "Halifax CMA",
+  "province": "NS",
+  "region": "atlantic",
+  "lat": 44.706,
+  "lon": -63.6126,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1250",
+     "name": "Halifax",
+     "dguid": "2021S05001250",
+     "vintage": "2021"
+    },
+    {
+     "level": "economic_region",
+     "id": "1230",
+     "name": "Annapolis Valley",
+     "dguid": "2021S05001230",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "12",
+    "name": "Nova Scotia",
+    "dguid": "2021A000212",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "1209034",
+    "name": "Halifax",
+    "dguid": "2021A00051209034",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "205",
+    "name": "Halifax",
+    "dguid": "2021S0503205",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 465703,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "205",
+    "name": "Halifax",
+    "dguid": "2021S0503205",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Halifax",
+   "East Hants"
+  ]
+ },
+ {
+  "id": "victoria",
+  "name": "Victoria",
+  "statLabel": "Victoria CMA",
+  "province": "BC",
+  "region": "west",
+  "lat": 48.4831,
+  "lon": -123.3685,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5910",
+     "name": "Vancouver Island and Coast / Île de Vancouver et la côte",
+     "dguid": "2021S05005910",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "59",
+    "name": "British Columbia",
+    "dguid": "2021A000259",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "5917021",
+    "name": "Saanich",
+    "dguid": "2021A00055917021",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "935",
+    "name": "Victoria",
+    "dguid": "2021S0503935",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 397237,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "935",
+    "name": "Victoria",
+    "dguid": "2021S0503935",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Saanich",
+   "Victoria",
+   "Langford",
+   "Colwood",
+   "Oak Bay",
+   "Esquimalt",
+   "Central Saanich",
+   "Sooke",
+   "Sidney",
+   "North Saanich"
+  ]
+ },
+ {
+  "id": "saskatoon",
+  "name": "Saskatoon",
+  "statLabel": "Saskatoon CMA",
+  "province": "SK",
+  "region": "prairies",
+  "lat": 52.1359,
+  "lon": -106.6464,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4730",
+     "name": "Saskatoon--Biggar",
+     "dguid": "2021S05004730",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "47",
+    "name": "Saskatchewan",
+    "dguid": "2021A000247",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "4711066",
+    "name": "Saskatoon",
+    "dguid": "2021A00054711066",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "725",
+    "name": "Saskatoon",
+    "dguid": "2021S0503725",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 317480,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "725",
+    "name": "Saskatoon",
+    "dguid": "2021S0503725",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Saskatoon",
+   "Warman",
+   "Martensville",
+   "Corman Park No. 344",
+   "Vanscoy No. 345",
+   "Dundurn No. 314",
+   "Blucher No. 343",
+   "Dalmeny",
+   "Langham",
+   "Aberdeen No. 373"
+  ]
+ },
+ {
+  "id": "regina",
+  "name": "Regina",
+  "statLabel": "Regina CMA",
+  "province": "SK",
+  "region": "prairies",
+  "lat": 50.4529,
+  "lon": -104.6132,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4710",
+     "name": "Regina--Moose Mountain",
+     "dguid": "2021S05004710",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "47",
+    "name": "Saskatchewan",
+    "dguid": "2021A000247",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "4706027",
+    "name": "Regina",
+    "dguid": "2021A00054706027",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "705",
+    "name": "Regina",
+    "dguid": "2021S0503705",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 249217,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "705",
+    "name": "Regina",
+    "dguid": "2021S0503705",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Regina",
+   "Edenwold No. 158",
+   "White City",
+   "Pilot Butte",
+   "Lumsden No. 189",
+   "Lumsden",
+   "Balgonie",
+   "Regina Beach",
+   "Sherwood No. 159",
+   "Lajord No. 128"
+  ]
+ },
+ {
+  "id": "st-johns",
+  "name": "St. John's",
+  "statLabel": "St. John's CMA",
+  "province": "NL",
+  "region": "atlantic",
+  "lat": 47.554,
+  "lon": -52.7476,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1010",
+     "name": "Avalon Peninsula",
+     "dguid": "2021S05001010",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "10",
+    "name": "Newfoundland and Labrador",
+    "dguid": "2021A000210",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "1001519",
+    "name": "St. John's",
+    "dguid": "2021A00051001519",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "001",
+    "name": "St. John's",
+    "dguid": "2021S0503001",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 212579,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "001",
+    "name": "St. John's",
+    "dguid": "2021S0503001",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "St. John's",
+   "Conception Bay South",
+   "Paradise",
+   "Mount Pearl",
+   "Portugal Cove-St. Philip's",
+   "Torbay",
+   "Holyrood",
+   "Logy Bay-Middle Cove-Outer Cove",
+   "Pouch Cove",
+   "Flatrock"
+  ]
+ },
+ {
+  "id": "windsor",
+  "name": "Windsor",
+  "statLabel": "Windsor CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 42.2917,
+  "lon": -82.9892,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3570",
+     "name": "Windsor--Sarnia",
+     "dguid": "2021S05003570",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario",
+    "dguid": "2021A000235",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "3537039",
+    "name": "Windsor",
+    "dguid": "2021A00053537039",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "559",
+    "name": "Windsor",
+    "dguid": "2021S0503559",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 422630,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "559",
+    "name": "Windsor",
+    "dguid": "2021S0503559",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Windsor",
+   "Lakeshore",
+   "LaSalle",
+   "Leamington",
+   "Amherstburg",
+   "Tecumseh",
+   "Kingsville",
+   "Essex"
+  ]
+ },
+ {
+  "id": "kelowna",
+  "name": "Kelowna",
+  "statLabel": "Kelowna CMA",
+  "province": "BC",
+  "region": "west",
+  "lat": 49.8744,
+  "lon": -119.4435,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5930",
+     "name": "Thompson--Okanagan",
+     "dguid": "2021S05005930",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "59",
+    "name": "British Columbia",
+    "dguid": "2021A000259",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "5935010",
+    "name": "Kelowna",
+    "dguid": "2021A00055935010",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "915",
+    "name": "Kelowna",
+    "dguid": "2021S0503915",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 222162,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "915",
+    "name": "Kelowna",
+    "dguid": "2021S0503915",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Kelowna",
+   "West Kelowna",
+   "Lake Country",
+   "Peachland",
+   "Central Okanagan",
+   "Central Okanagan West"
+  ]
+ },
+ {
+  "id": "abbotsford-mission",
+  "name": "Abbotsford–Mission",
+  "statLabel": "Abbotsford–Mission CMA",
+  "province": "BC",
+  "region": "west",
+  "lat": 49.049,
+  "lon": -122.2981,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5920",
+     "name": "Lower Mainland--Southwest / Lower Mainland--Sud-ouest",
+     "dguid": "2021S05005920",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "59",
+    "name": "British Columbia",
+    "dguid": "2021A000259",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "5909052",
+    "name": "Abbotsford",
+    "dguid": "2021A00055909052",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "932",
+    "name": "Abbotsford - Mission",
+    "dguid": "2021S0503932",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 195726,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "932",
+    "name": "Abbotsford - Mission",
+    "dguid": "2021S0503932",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Abbotsford",
+   "Mission"
+  ]
+ },
+ {
+  "id": "moncton",
+  "name": "Moncton",
+  "statLabel": "Moncton CMA",
+  "province": "NB",
+  "region": "atlantic",
+  "lat": 46.1035,
+  "lon": -64.8074,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1320",
+     "name": "Moncton--Richibucto",
+     "dguid": "2021S05001320",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "13",
+    "name": "New Brunswick",
+    "dguid": "2021A000213",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "1307022",
+    "name": "Moncton",
+    "dguid": "2021A00051307022",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "305",
+    "name": "Moncton",
+    "dguid": "2021S0503305",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 157717,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "305",
+    "name": "Moncton",
+    "dguid": "2021S0503305",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Moncton",
+   "Dieppe",
+   "Riverview",
+   "Moncton",
+   "Memramcook",
+   "Coverdale",
+   "Salisbury",
+   "Hillsborough",
+   "Hillsborough",
+   "Elgin"
+  ]
+ },
+ {
+  "id": "saint-john",
+  "name": "Saint John",
+  "statLabel": "Saint John CMA",
+  "province": "NB",
+  "region": "atlantic",
+  "lat": 45.3048,
+  "lon": -66.1035,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1330",
+     "name": "Saint John--St. Stephen",
+     "dguid": "2021S05001330",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "13",
+    "name": "New Brunswick",
+    "dguid": "2021A000213",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "1301006",
+    "name": "Saint John",
+    "dguid": "2021A00051301006",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "310",
+    "name": "Saint John",
+    "dguid": "2021S0503310",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 130613,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "310",
+    "name": "Saint John",
+    "dguid": "2021S0503310",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Saint John",
+   "Quispamsis",
+   "Rothesay",
+   "Grand Bay-Westfield",
+   "Hampton",
+   "Simonds",
+   "Kingston",
+   "Hampton",
+   "Westfield",
+   "Upham"
+  ]
+ },
+ {
+  "id": "fredericton",
+  "name": "Fredericton",
+  "statLabel": "Fredericton CMA",
+  "province": "NB",
+  "region": "atlantic",
+  "lat": 45.9626,
+  "lon": -66.6467,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1340",
+     "name": "Fredericton--Oromocto",
+     "dguid": "2021S05001340",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "13",
+    "name": "New Brunswick",
+    "dguid": "2021A000213",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "1310032",
+    "name": "Fredericton",
+    "dguid": "2021A00051310032",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "320",
+    "name": "Fredericton",
+    "dguid": "2021S0503320",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 108610,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "320",
+    "name": "Fredericton",
+    "dguid": "2021S0503320",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Fredericton",
+   "Lincoln",
+   "Douglas",
+   "Saint Marys",
+   "Hanwell",
+   "New Maryland",
+   "Bright",
+   "Kingsclear",
+   "New Maryland",
+   "Manners Sutton"
+  ]
+ },
+ {
+  "id": "sherbrooke",
+  "name": "Sherbrooke",
+  "statLabel": "Sherbrooke CMA",
+  "province": "QC",
+  "region": "quebec",
+  "lat": 45.3882,
+  "lon": -71.9333,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2430",
+     "name": "Estrie",
+     "dguid": "2021S05002430",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "24",
+    "name": "Quebec",
+    "dguid": "2021A000224",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "2443027",
+    "name": "Sherbrooke",
+    "dguid": "2021A00052443027",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "433",
+    "name": "Sherbrooke",
+    "dguid": "2021S0503433",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 227398,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "433",
+    "name": "Sherbrooke",
+    "dguid": "2021S0503433",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Sherbrooke",
+   "Magog",
+   "Orford",
+   "Saint-Denis-de-Brompton",
+   "Ascot Corner",
+   "Compton",
+   "Stoke",
+   "Waterville",
+   "Hatley",
+   "Val-Joli"
+  ]
+ },
+ {
+  "id": "sudbury",
+  "name": "Greater Sudbury",
+  "statLabel": "Greater Sudbury CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 46.4968,
+  "lon": -80.9632,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3590",
+     "name": "Northeast / Nord-est",
+     "dguid": "2021S05003590",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario",
+    "dguid": "2021A000235",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "3553005",
+    "name": "Greater Sudbury / Grand Sudbury",
+    "dguid": "2021A00053553005",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "580",
+    "name": "Greater Sudbury / Grand Sudbury",
+    "dguid": "2021S0503580",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 170605,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "580",
+    "name": "Greater Sudbury / Grand Sudbury",
+    "dguid": "2021S0503580",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Greater Sudbury / Grand Sudbury",
+   "Markstay-Warren",
+   "St.-Charles"
+  ]
+ },
+ {
+  "id": "thunder-bay",
+  "name": "Thunder Bay",
+  "statLabel": "Thunder Bay CMA",
+  "province": "ON",
+  "region": "ontario",
+  "lat": 48.4147,
+  "lon": -89.266,
+  "tier": "core",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3595",
+     "name": "Northwest / Nord-ouest",
+     "dguid": "2021S05003595",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "35",
+    "name": "Ontario",
+    "dguid": "2021A000235",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "3558004",
+    "name": "Thunder Bay",
+    "dguid": "2021A00053558004",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "cma",
+    "id": "595",
+    "name": "Thunder Bay",
+    "dguid": "2021S0503595",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 123258,
+   "period": "2021",
+   "geo": {
+    "level": "cma",
+    "id": "595",
+    "name": "Thunder Bay",
+    "dguid": "2021S0503595",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Thunder Bay",
+   "Oliver Paipoonge",
+   "Shuniah",
+   "Neebing",
+   "Conmee",
+   "O'Connor",
+   "Gillies"
+  ]
+ },
+ {
+  "id": "charlottetown",
+  "name": "Charlottetown",
+  "statLabel": "Charlottetown CA",
+  "province": "PE",
+  "region": "atlantic",
+  "lat": 46.2672,
+  "lon": -63.1331,
+  "tier": "extended",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1110",
+     "name": "Prince Edward Island / Île-du-Prince-Édouard",
+     "dguid": "2021S05001110",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "11",
+    "name": "Prince Edward Island",
+    "dguid": "2021A000211",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "1102075",
+    "name": "Charlottetown",
+    "dguid": "2021A00051102075",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "ca",
+    "id": "105",
+    "name": "Charlottetown",
+    "dguid": "2021S0504105",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 78858,
+   "period": "2021",
+   "geo": {
+    "level": "ca",
+    "id": "105",
+    "name": "Charlottetown",
+    "dguid": "2021S0504105",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Charlottetown",
+   "Stratford",
+   "Cornwall",
+   "New Glasgow",
+   "West River",
+   "North Shore",
+   "East River, Part 1",
+   "Crossroads",
+   "North Shore",
+   "Miltonvale Park"
+  ]
+ },
+ {
+  "id": "brandon",
+  "name": "Brandon",
+  "statLabel": "Brandon CA",
+  "province": "MB",
+  "region": "prairies",
+  "lat": 49.8436,
+  "lon": -99.9576,
+  "tier": "extended",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4630",
+     "name": "Southwest / Sud-ouest",
+     "dguid": "2021S05004630",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "46",
+    "name": "Manitoba",
+    "dguid": "2021A000246",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "4607062",
+    "name": "Brandon",
+    "dguid": "2021A00054607062",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "ca",
+    "id": "610",
+    "name": "Brandon",
+    "dguid": "2021S0504610",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 54268,
+   "period": "2021",
+   "geo": {
+    "level": "ca",
+    "id": "610",
+    "name": "Brandon",
+    "dguid": "2021S0504610",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Brandon",
+   "Whitehead",
+   "Elton"
+  ]
+ },
+ {
+  "id": "whitehorse",
+  "name": "Whitehorse",
+  "statLabel": "Whitehorse CA",
+  "province": "YT",
+  "region": "north",
+  "lat": 60.7394,
+  "lon": -135.0987,
+  "tier": "extended",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "6010",
+     "name": "Yukon",
+     "dguid": "2021S05006010",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "60",
+    "name": "Yukon",
+    "dguid": "2021A000260",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "6001009",
+    "name": "Whitehorse",
+    "dguid": "2021A00056001009",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "ca",
+    "id": "990",
+    "name": "Whitehorse",
+    "dguid": "2021S0504990",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 31913,
+   "period": "2021",
+   "geo": {
+    "level": "ca",
+    "id": "990",
+    "name": "Whitehorse",
+    "dguid": "2021S0504990",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Whitehorse",
+   "Ibex Valley",
+   "Mt. Lorne",
+   "Lake Laberge 1"
+  ]
+ },
+ {
+  "id": "yellowknife",
+  "name": "Yellowknife",
+  "statLabel": "Yellowknife CA",
+  "province": "NT",
+  "region": "north",
+  "lat": 62.4561,
+  "lon": -114.4079,
+  "tier": "extended",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "6110",
+     "name": "Northwest Territories / Territoires du Nord-Ouest",
+     "dguid": "2021S05006110",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "61",
+    "name": "Northwest Territories",
+    "dguid": "2021A000261",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "6106023",
+    "name": "Yellowknife",
+    "dguid": "2021A00056106023",
+    "vintage": "2021"
+   },
+   "cma": {
+    "level": "ca",
+    "id": "995",
+    "name": "Yellowknife",
+    "dguid": "2021S0504995",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 20340,
+   "period": "2021",
+   "geo": {
+    "level": "ca",
+    "id": "995",
+    "name": "Yellowknife",
+    "dguid": "2021S0504995",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0005-01"
+  },
+  "municipalities": [
+   "Yellowknife"
+  ]
+ },
+ {
+  "id": "iqaluit",
+  "name": "Iqaluit",
+  "statLabel": "Iqaluit (city)",
+  "province": "NU",
+  "region": "north",
+  "lat": 63.7501,
+  "lon": -68.5142,
+  "tier": "extended",
+  "geo": {
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "6210",
+     "name": "Nunavut",
+     "dguid": "2021S05006210",
+     "vintage": "2021"
+    }
+   ],
+   "province": {
+    "level": "province",
+    "id": "62",
+    "name": "Nunavut",
+    "dguid": "2021A000262",
+    "vintage": "2021"
+   },
+   "principalCsd": {
+    "level": "csd",
+    "id": "6204003",
+    "name": "Iqaluit",
+    "dguid": "2021A00056204003",
+    "vintage": "2021"
+   }
+  },
+  "population": {
+   "value": 7429,
+   "period": "2021",
+   "geo": {
+    "level": "csd",
+    "id": "6204003",
+    "name": "Iqaluit",
+    "dguid": "2021A00056204003",
+    "vintage": "2021"
+   },
+   "sourceId": "statcan-98-10-0002-01"
+  }
+ }
+]

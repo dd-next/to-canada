@@ -104,7 +104,7 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
     med_gap = st.median(x[3] for x in gaps)
     f4 = {
         "id": "asking-vs-cmhc-2br", "kind": "calculation",
-        "headline": f"Advertised 2-bedroom rents sit a median {med_gap:+.0f}% from CMHC's average rent - the gap ranges from {gaps[0][3]:+.0f}% to {gaps[-1][3]:+.0f}%",
+        "headline": f"Advertised 2-bedroom rents sit a median {med_gap:.0f}% above CMHC's average rent; the gap ranges from {gaps[0][3]:+.0f}% to {gaps[-1][3]:+.0f}%",
         "detail": (f"Asking rent for 2-bedroom apartments in {quarter_label(q2025_4)} (StatCan) vs CMHC's October 2025 average rent for purpose-built apartments, {len(gaps)} places. "
                    "Largest gaps: " + ", ".join(f"{names[x[0]]} {x[3]:+.0f}% (asking ${x[1]:,.0f} vs ${x[2]:,.0f})" for x in gaps[::-1][:4])
                    + "; smallest: " + ", ".join(f"{names[x[0]]} {x[3]:+.0f}%" for x in gaps[:3]) + ". The gap is not 'overpricing': the two measure different things - "
