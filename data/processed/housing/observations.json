@@ -1,0 +1,3135 @@
+[
+ {
+  "placeId": "toronto",
+  "metricId": "rent_asking_studio",
+  "value": 1750.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_asking_1br",
+  "value": 2090.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -2.8,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_paid_1br",
+  "value": 1840.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_asking_2br",
+  "value": 2650.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_paid_2br",
+  "value": 2160.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "rent_asking_3br",
+  "value": 3270.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_asking_studio",
+  "value": 1250.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_asking_1br",
+  "value": 1480.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -3.3,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_paid_1br",
+  "value": 1170.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_asking_2br",
+  "value": 1820.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_paid_2br",
+  "value": 1360.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "rent_asking_3br",
+  "value": 2260.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_asking_studio",
+  "value": 2000.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_asking_1br",
+  "value": 2280.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -4.2,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_paid_1br",
+  "value": 1890.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_asking_2br",
+  "value": 3030.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_paid_2br",
+  "value": 2470.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "rent_asking_3br",
+  "value": 4150.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_asking_studio",
+  "value": 1320.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_asking_1br",
+  "value": 1550.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -6.1,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_asking_2br",
+  "value": 1890.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_paid_2br",
+  "value": 1930.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "rent_asking_3br",
+  "value": 2180.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_asking_studio",
+  "value": 1070.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_asking_1br",
+  "value": 1260.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -2.3,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_asking_2br",
+  "value": 1570.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_paid_2br",
+  "value": 1570.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "rent_asking_3br",
+  "value": 1910.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_asking_studio",
+  "value": 1550.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_asking_1br",
+  "value": 1900.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -2.6,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_paid_1br",
+  "value": 1690.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_asking_2br",
+  "value": 2360.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "rent_asking_3br",
+  "value": 2740.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_asking_studio",
+  "value": 1070.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_asking_1br",
+  "value": 1440.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -3.4,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_asking_2br",
+  "value": 1700.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_paid_2br",
+  "value": 1370.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "rent_asking_3br",
+  "value": 1910.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_asking_studio",
+  "value": 1060.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_asking_1br",
+  "value": 1320.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": 3.9,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_paid_1br",
+  "value": 1260.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_asking_2br",
+  "value": 1660.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_paid_2br",
+  "value": 1550.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "rent_asking_3br",
+  "value": 1970.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_asking_studio",
+  "value": 960.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_asking_1br",
+  "value": 1210.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": 2.5,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_asking_2br",
+  "value": 1460.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_paid_2br",
+  "value": 1230.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "rent_asking_3br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_asking_studio",
+  "value": 1470.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_asking_1br",
+  "value": 1720.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -3.9,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_asking_2br",
+  "value": 2150.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "rent_asking_3br",
+  "value": 2540.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_asking_studio",
+  "value": 1470.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_asking_1br",
+  "value": 1740.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -4.4,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_asking_2br",
+  "value": 2120.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_paid_2br",
+  "value": 1720.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "rent_asking_3br",
+  "value": 2410.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_asking_studio",
+  "value": 1300.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_asking_1br",
+  "value": 1560.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -4.3,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_asking_2br",
+  "value": 1920.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_paid_2br",
+  "value": 1560.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "london",
+  "metricId": "rent_asking_3br",
+  "value": 2400.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_asking_studio",
+  "value": 1560.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_asking_1br",
+  "value": 1880.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": 4.4,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_asking_2br",
+  "value": 2400.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_paid_2br",
+  "value": 1770.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "rent_asking_3br",
+  "value": 2940.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_asking_studio",
+  "value": 1670.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_asking_1br",
+  "value": 2040.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -2.4,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_asking_2br",
+  "value": 2640.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "rent_asking_3br",
+  "value": 3260.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_asking_studio",
+  "value": 1140.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ]
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_asking_1br",
+  "value": 1340.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": 3.9,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_asking_2br",
+  "value": 1620.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_paid_2br",
+  "value": 1470.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "rent_asking_3br",
+  "value": 2020.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_asking_studio",
+  "value": 970.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_asking_1br",
+  "value": 1250.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": 1.6,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_asking_2br",
+  "value": 1480.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_paid_2br",
+  "value": 1580.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "rent_asking_3br",
+  "value": 1860.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_asking_1br",
+  "value": 1270.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_asking_2br",
+  "value": 1530.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "rent_asking_3br",
+  "value": 2080.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_asking_studio",
+  "value": 1190.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_asking_1br",
+  "value": 1520.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": 2.7,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_asking_2br",
+  "value": 1850.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "rent_asking_3br",
+  "value": 2050.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_asking_1br",
+  "value": 1880.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_asking_2br",
+  "value": 2330.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "rent_asking_3br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_asking_1br",
+  "value": 1560.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -4.9,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_asking_2br",
+  "value": 1890.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "rent_asking_3br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_asking_1br",
+  "value": 1290.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -0.8,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_asking_2br",
+  "value": 1460.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "rent_asking_3br",
+  "value": 1810.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_asking_1br",
+  "value": 1230.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": 1.7,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_asking_2br",
+  "value": 1530.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "rent_asking_3br",
+  "value": 1660.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_asking_1br",
+  "value": 1430.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": 5.1,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_asking_2br",
+  "value": 1670.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "rent_asking_3br",
+  "value": 2070.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_asking_studio",
+  "value": 790.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ]
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_asking_1br",
+  "value": 1040.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": -1.9,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_asking_2br",
+  "value": 1300.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_paid_2br",
+  "value": 960.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "rent_asking_3br",
+  "value": 1540.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_asking_1br",
+  "value": 1630.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": 2.5,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_asking_2br",
+  "value": 1940.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_paid_2br",
+  "value": 1400.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "rent_asking_3br",
+  "value": 2580.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_asking_1br",
+  "value": 1470.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_asking_1br_change_1y",
+  "value": 3.5,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "use_with_caution"
+  ],
+  "note": "(asking rent 2026-Q2 / 2025-Q2 - 1) x 100; computed from published rounded values."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_paid_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_asking_2br",
+  "value": 1980.0,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01"
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_paid_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Average paid rent is a moving average of the last three quarters."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "rent_asking_3br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ]
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "rent_asking_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "rent_asking_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "rent_asking_3br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "rent_asking_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "rent_asking_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "rent_asking_3br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "rent_asking_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "rent_asking_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "rent_asking_3br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "rent_asking_studio",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "rent_asking_1br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "rent_asking_2br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "rent_asking_3br",
+  "value": null,
+  "period": "2026-Q2",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-46-10-0092-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Geography not published in StatCan 46-10-0092-01 (CMAs only)."
+ }
+]

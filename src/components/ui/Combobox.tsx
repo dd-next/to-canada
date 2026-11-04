@@ -211,38 +211,38 @@ export function Combobox<T>({
             <Icon name="close" size={14} />
           </button>
         )}
-      </div>
-      <ul id={listId} role="listbox" aria-label={typeof label === 'string' ? label : undefined} className="combo__list" hidden={!open}>
-        {open &&
-          options.map((o, i) => (
-            <li
-              key={o.key}
-              id={`${baseId}-opt-${i}`}
-              role="option"
-              aria-selected={i === active}
-              className={['combo__opt', i === active && 'is-active', selected?.key === o.key && 'is-selected'].filter(Boolean).join(' ')}
-              onMouseDown={(e) => e.preventDefault()}
-              onMouseMove={() => active !== i && setActive(i)}
-              onClick={() => choose(o)}
-            >
-              <span className="combo__opt-main">
-                <span className="combo__opt-label">{highlight(o.label, editing ? query : '')}</span>
-                {o.meta && <span className="combo__opt-meta mono">{o.meta}</span>}
-              </span>
-              {o.description && <span className="combo__opt-desc">{o.description}</span>}
+        <ul id={listId} role="listbox" aria-label={typeof label === 'string' ? label : undefined} className="combo__list" hidden={!open}>
+          {open &&
+            options.map((o, i) => (
+              <li
+                key={o.key}
+                id={`${baseId}-opt-${i}`}
+                role="option"
+                aria-selected={i === active}
+                className={['combo__opt', i === active && 'is-active', selected?.key === o.key && 'is-selected'].filter(Boolean).join(' ')}
+                onMouseDown={(e) => e.preventDefault()}
+                onMouseMove={() => active !== i && setActive(i)}
+                onClick={() => choose(o)}
+              >
+                <span className="combo__opt-main">
+                  <span className="combo__opt-label">{highlight(o.label, editing ? query : '')}</span>
+                  {o.meta && <span className="combo__opt-meta mono">{o.meta}</span>}
+                </span>
+                {o.description && <span className="combo__opt-desc">{o.description}</span>}
+              </li>
+            ))}
+          {open && options.length === 0 && (
+            <li className="combo__empty" role="presentation">
+              {emptyMessage ? emptyMessage(query) : `Nothing matches “${query}”.`}
             </li>
-          ))}
-        {open && options.length === 0 && (
-          <li className="combo__empty" role="presentation">
-            {emptyMessage ? emptyMessage(query) : `Nothing matches “${query}”.`}
-          </li>
-        )}
-        {open && more > 0 && (
-          <li className="combo__more" role="presentation">
-            {more} more — keep typing to narrow
-          </li>
-        )}
-      </ul>
+          )}
+          {open && more > 0 && (
+            <li className="combo__more" role="presentation">
+              {more} more — keep typing to narrow
+            </li>
+          )}
+        </ul>
+      </div>
       <div className="sr-only" role="status" aria-live="polite">
         {status}
       </div>

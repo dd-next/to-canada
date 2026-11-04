@@ -1,0 +1,170 @@
+[
+ {
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-46-10-0092-01"
+  ],
+  "comparabilityNote": "Experimental StatCan estimates built from online listings (asking rent) for apartments in CMAs; not comparable to CMHC survey rents (paid by sitting tenants in purpose-built rentals) or to census rents.",
+  "id": "rent_asking_studio",
+  "label": "Average asking rent, studio (no-bedroom) apartment",
+  "shortLabel": "Asking rent, Studio",
+  "description": "Average advertised monthly rent for studio (no-bedroom) apartment listings in the quarter (new listings, not rents currently paid by sitting tenants). Rounded to the nearest $10 by StatCan.",
+  "basis": "asking (advertised) rent, apartments, CMA",
+  "mapLayer": true,
+  "dims": {
+   "family": "rent_asking",
+   "unitType": "Studio"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-46-10-0092-01"
+  ],
+  "comparabilityNote": "Experimental StatCan estimates built from online listings (asking rent) for apartments in CMAs; not comparable to CMHC survey rents (paid by sitting tenants in purpose-built rentals) or to census rents.",
+  "id": "rent_asking_1br",
+  "label": "Average asking rent, 1-bedroom apartment",
+  "shortLabel": "Asking rent, 1 bed",
+  "description": "Average advertised monthly rent for 1-bedroom apartment listings in the quarter (new listings, not rents currently paid by sitting tenants). Rounded to the nearest $10 by StatCan.",
+  "basis": "asking (advertised) rent, apartments, CMA",
+  "mapLayer": true,
+  "dims": {
+   "family": "rent_asking",
+   "unitType": "1 bedroom"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-46-10-0092-01"
+  ],
+  "comparabilityNote": "Experimental StatCan estimates built from online listings (asking rent) for apartments in CMAs; not comparable to CMHC survey rents (paid by sitting tenants in purpose-built rentals) or to census rents.",
+  "id": "rent_asking_2br",
+  "label": "Average asking rent, 2-bedroom apartment",
+  "shortLabel": "Asking rent, 2 bed",
+  "description": "Average advertised monthly rent for 2-bedroom apartment listings in the quarter (new listings, not rents currently paid by sitting tenants). Rounded to the nearest $10 by StatCan.",
+  "basis": "asking (advertised) rent, apartments, CMA",
+  "mapLayer": true,
+  "dims": {
+   "family": "rent_asking",
+   "unitType": "2 bedroom"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-46-10-0092-01"
+  ],
+  "comparabilityNote": "Experimental StatCan estimates built from online listings (asking rent) for apartments in CMAs; not comparable to CMHC survey rents (paid by sitting tenants in purpose-built rentals) or to census rents.",
+  "id": "rent_asking_3br",
+  "label": "Average asking rent, apartment with 3 or more bedrooms",
+  "shortLabel": "Asking rent, 3 bed+",
+  "description": "Average advertised monthly rent for apartment with 3 or more bedrooms listings in the quarter (new listings, not rents currently paid by sitting tenants). Rounded to the nearest $10 by StatCan.",
+  "basis": "asking (advertised) rent, apartments, CMA",
+  "mapLayer": true,
+  "dims": {
+   "family": "rent_asking",
+   "unitType": "3 bedroom+"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-46-10-0092-01"
+  ],
+  "comparabilityNote": "Experimental StatCan estimates built from online listings (asking rent) for apartments in CMAs; not comparable to CMHC survey rents (paid by sitting tenants in purpose-built rentals) or to census rents.",
+  "id": "rent_asking_1br_change_1y",
+  "label": "Change in average asking rent, 1-bedroom, vs a year earlier",
+  "shortLabel": "Asking rent 1 bed, 1y change",
+  "description": "Percentage change in the 1-bedroom apartment average asking rent from the same quarter a year earlier. A change in advertised prices, not a price level. Caution: StatCan flags 2025-Q2 estimates (the comparison quarter) as modelled because one listing platform was unavailable.",
+  "basis": "asking (advertised) rent, computed from published values",
+  "mapLayer": true,
+  "dims": {
+   "family": "rent_asking_change",
+   "unitType": "1 bedroom"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-46-10-0092-01"
+  ],
+  "comparabilityNote": "Experimental StatCan estimates built from online listings (asking rent) for apartments in CMAs; not comparable to CMHC survey rents (paid by sitting tenants in purpose-built rentals) or to census rents.",
+  "id": "rent_paid_1br",
+  "label": "Average paid rent, 1-bedroom apartment",
+  "shortLabel": "Paid rent, 1 bed",
+  "description": "StatCan experimental estimate of the average rent paid for occupied private rental apartments, as a moving average of the last three quarters. Published for apartments with 1 or 2 bedrooms in 18 CMAs only.",
+  "basis": "paid rent, 3-quarter moving average, apartments, CMA",
+  "mapLayer": false,
+  "dims": {
+   "family": "rent_paid",
+   "unitType": "1 bedroom"
+  }
+ },
+ {
+  "category": "housing",
+  "unit": "CAD_month",
+  "decimals": 0,
+  "higherIs": "worse",
+  "geoLevel": "cma",
+  "periodType": "quarter",
+  "seasonalAdjustment": "unadjusted",
+  "priceBasis": "current_dollars",
+  "sourceIds": [
+   "statcan-46-10-0092-01"
+  ],
+  "comparabilityNote": "Experimental StatCan estimates built from online listings (asking rent) for apartments in CMAs; not comparable to CMHC survey rents (paid by sitting tenants in purpose-built rentals) or to census rents.",
+  "id": "rent_paid_2br",
+  "label": "Average paid rent, 2-bedroom apartment",
+  "shortLabel": "Paid rent, 2 bed",
+  "description": "StatCan experimental estimate of the average rent paid for occupied private rental apartments, as a moving average of the last three quarters. Published for apartments with 1 or 2 bedrooms in 18 CMAs only.",
+  "basis": "paid rent, 3-quarter moving average, apartments, CMA",
+  "mapLayer": false,
+  "dims": {
+   "family": "rent_paid",
+   "unitType": "2 bedroom"
+  }
+ }
+]

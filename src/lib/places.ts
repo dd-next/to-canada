@@ -112,3 +112,24 @@ export function describeMatch(m: PlaceMatch): string {
   if (m.via === 'province') return `${m.place.statLabel} · ${provinceName(m.place.province)}`;
   return `${m.place.statLabel} · ${provinceName(m.place.province)}`;
 }
+
+/** Padded lon/lat frame around a set of places (for province filters and highlights). */
+export function boxAround(places: Pick<Place, 'lon' | 'lat'>[], minLon = 7, minLat = 3.5): LonLatBox | null {
+  if (places.length === 0) return null;
+  let w = Infinity;
+  let e = -Infinity;
+  let s = Infinity;
+  let n = -Infinity;
+  for (const p of places) {
+    w = Math.min(w, p.lon);
+    e = Math.max(e, p.lon);
+    s = Math.min(s, p.lat);
+    n = Math.max(n, p.lat);
+  }
+  const padLon = Math.max((minLon - (e - w)) / 2, (e - w) * 0.18);
+  const padLat = Math.max((minLat - (n - s)) / 2, (n - s) * 0.18);
+  return [
+    [w - padLon, s - padLat],
+    [e + padLon, n + padLat],
+  ];
+}

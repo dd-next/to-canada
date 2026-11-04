@@ -1,2 +1,20 @@
-/* Replaced by the design workstream (tokens.css + base styles). */
-body { margin: 0; font-family: system-ui, sans-serif; background: #f2ece1; color: #1f1d1a; }
+/*
+ * Northward styles. Fonts are bundled from @fontsource (no external hosts):
+ *  - Archivo Variable (wght + wdth) for display and UI
+ *  - Newsreader Variable (wght + opsz) for editorial explanations
+ *  - IBM Plex Mono for compact data labels
+ */
+@import '@fontsource-variable/archivo/standard.css';
+@import '@fontsource-variable/newsreader/standard.css';
+@import '@fontsource-variable/newsreader/standard-italic.css';
+@import '@fontsource/ibm-plex-mono/latin-400.css';
+@import '@fontsource/ibm-plex-mono/latin-500.css';
+@import '@fontsource/ibm-plex-mono/latin-600.css';
+
+@import './tokens.css';
+@import './base.css';
+@import './layout.css';
+@import './ui.css';
+@import './map.css';
+@import './explore.css';
+@import './pages.css';

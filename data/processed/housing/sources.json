@@ -1,0 +1,27 @@
+[
+ {
+  "id": "statcan-46-10-0092-01",
+  "title": "Asking rent and paid rent prices, by rental unit type and number of bedrooms, experimental estimates",
+  "publisher": "Statistics Canada",
+  "tableId": "46-10-0092-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=4610009201",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/46100092-eng.zip",
+  "releaseDate": "2026-09-09",
+  "retrievedAt": "2026-11-04T17:51:39+00:00",
+  "referencePeriod": "2019-Q1 to 2026-Q2 (quarterly; REF_DATE is first month of quarter)",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 46-10-0092-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Kept apartment rows only (Studio = 'Apartment - No bedroom'; 3 bedroom+ = 'Apartment - 3 or more bedrooms'); houses and rooms not used.",
+   "REF_DATE 'YYYY-MM' (first month of quarter) relabelled 'YYYY-Qn'.",
+   "Values are StatCan's published dollars (rounded to $10); '..' -> null/not_available, E -> use_with_caution.",
+   "1-year change computed as value(t)/value(t-4 quarters)-1."
+  ],
+  "notes": [
+   "Experimental estimates (Quarterly Rent Statistics): asking rents from major online rental platforms (Rentals.ca Network, Zumper and others); in scope = units advertised at any point in the quarter; excludes subsidised, lease transfers, short-term.",
+   "StatCan: 2025-Q2 and 2025-Q3 estimates should be used with caution (one platform unavailable; modelled), Calgary values for those quarters partly unavailable.",
+   "Average paid rent (moving average of last three quarters, apartments with 1 or 2 bedrooms) is published for 18 CMAs only, added 2026-09-09."
+  ],
+  "status": "ok"
+ }
+]

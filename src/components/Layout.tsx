@@ -1,9 +1,3 @@
-import '@fontsource-variable/archivo/standard.css';
-import '@fontsource-variable/newsreader/standard.css';
-import '@fontsource-variable/newsreader/standard-italic.css';
-import '@fontsource/ibm-plex-mono/latin-400.css';
-import '@fontsource/ibm-plex-mono/latin-500.css';
-import '@fontsource/ibm-plex-mono/latin-600.css';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { PRODUCT } from '../config';
