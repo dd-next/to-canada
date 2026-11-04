@@ -25,7 +25,7 @@ from common.statcan import WDS, pid_of, source_record, full_table_csv  # noqa: E
 from common.contract import obs, geo  # noqa: E402
 
 PERIOD = "2021"
-SRC = {t: f"statcan-{t}" for t in ["98-10-0030-01", "98-10-0002-01", "98-10-0038-01", "98-10-0308-01", "98-10-0175-01",
+SRC = {t: f"statcan-{t}" for t in ["98-10-0005-01", "98-10-0030-01", "98-10-0002-01", "98-10-0038-01", "98-10-0308-01", "98-10-0175-01",
                                    "98-10-0227-01", "98-10-0457-01"]}
 
 
@@ -65,12 +65,12 @@ def metric_defs() -> list[dict]:
         d(id="pop_2021", label="Population, 2021 Census", shortLabel="Population 2021", unit="persons", decimals=0,
           higherIs="neutral", description="Total population counted in the 2021 Census for the place's census metropolitan area / agglomeration (or provincial part of Ottawa–Gatineau; Iqaluit is the city itself).",
           basis="100% data; total population, 2021 boundaries; counts are randomly rounded to a multiple of 5 only for small areas",
-          sourceIds=src("98-10-0030-01", "98-10-0002-01"), mapLayer=False,
+          sourceIds=src("98-10-0005-01", "98-10-0030-01", "98-10-0002-01"), mapLayer=False,
           comparabilityNote="Compares CMA/CA populations (not city-proper populations). Ottawa and Gatineau are the Ontario and Quebec parts of one CMA. Iqaluit is a single municipality, not a CA."),
         d(id="pop_change_2016_2021", label="Population change, 2016 to 2021", shortLabel="Pop. change 2016–21", unit="percent", decimals=1,
           higherIs="neutral", description="Percentage change in census population between the 2016 and 2021 censuses, on 2021 geographic boundaries.",
           basis="100% data; (2021 count − 2016 count on 2021 boundaries) ÷ 2016 count; computed from published counts",
-          sourceIds=src("98-10-0030-01", "98-10-0002-01"),
+          sourceIds=src("98-10-0005-01", "98-10-0030-01", "98-10-0002-01"),
           comparabilityNote="Census counts, not July estimates; undercoverage differs by census year."),
         d(id="pop_immigrant_share", label="Immigrants, share of population", shortLabel="Immigrant share", unit="percent", decimals=1,
           higherIs="neutral", description="Share of the population in private households who are or have ever been landed immigrants or permanent residents (immigrant status).",
@@ -126,13 +126,21 @@ def main(places: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
     t = "98-10-0030-01"
     df = stream(t, dguids, {"Gender (3a)": "Total - Gender", "Broad age groups (5)": "Total - Age"})
     row = {r["DGUID"]: r for _, r in df.iterrows()}
+    w5 = pd.read_csv(full_table_csv("98-10-0005-01")[0], dtype=str, encoding="utf-8-sig", keep_default_na=False)
+    c21 = [c for c in w5.columns if "Population, 2021" in c][0]
+    c16 = [c for c in w5.columns if "Population, 2016" in c][0]
+    w5 = {r["DGUID"]: r for _, r in w5.iterrows()}
     for p in places:
         if p["id"] == "iqaluit":
             continue
-        r = row[ref(p)["dguid"]]
-        v21, v16 = num(r["View:2021 counts[1]"]), num(r["View:2016 counts[3]"])
-        out.append(obs(p["id"], "pop_2021", v21, PERIOD, ref(p), SRC[t]))
-        out.append(obs(p["id"], "pop_change_2016_2021", round((v21 - v16) / v16 * 100, 3), PERIOD, ref(p), SRC[t],
+        if p["geo"].get("cmaPart"):   # provincial parts: only in the age/gender table (counts randomly rounded)
+            r = row[ref(p)["dguid"]]
+            v21, v16, tt, fl = num(r["View:2021 counts[1]"]), num(r["View:2016 counts[3]"]), t, ["rounded"]
+        else:
+            r = w5[ref(p)["dguid"]]
+            v21, v16, tt, fl = num(r[c21]), num(r[c16]), "98-10-0005-01", []
+        out.append(obs(p["id"], "pop_2021", v21, PERIOD, ref(p), SRC[tt], flags=fl))
+        out.append(obs(p["id"], "pop_change_2016_2021", round((v21 - v16) / v16 * 100, 3), PERIOD, ref(p), SRC[tt], flags=fl,
                        note=f"2021 {int(v21)} vs 2016 {int(v16)} (2021 boundaries)"))
     # Iqaluit (CSD)
     t = "98-10-0002-01"
@@ -224,7 +232,8 @@ def main(places: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
     notes_common = ["Census of Population 2021 (reference day 11 May 2021).",
                     "Counts from the long-form (25% sample) tables are randomly rounded (typically to a multiple of 5); percentages are computed from rounded counts."]
     titles = {
-        "98-10-0030-01": ("100% data; total gender and total age rows used.", ["Used 2021 and 2016 counts; percent change computed as (2021-2016)/2016."]),
+        "98-10-0005-01": ("100% data.", ["Whole-CMA/CA 2021 and 2016 counts used as published."]),
+        "98-10-0030-01": ("100% data; total gender and total age rows used; only used for Ottawa–Gatineau provincial parts (counts randomly rounded).", ["Used 2021 and 2016 counts; percent change computed as (2021-2016)/2016."]),
         "98-10-0002-01": ("100% data; Iqaluit CSD row.", ["Used only for Iqaluit population."]),
         "98-10-0038-01": ("100% data.", ["Average household size computed as population in private dwellings / private dwellings occupied by usual residents."]),
         "98-10-0308-01": ("25% sample; rows: total age, total gender, count, total visible minority.", ["Immigrant share = Immigrants / Total; recent = 2016 to 2021 / Total."]),

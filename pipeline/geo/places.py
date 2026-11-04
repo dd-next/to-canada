@@ -196,11 +196,10 @@ def main() -> None:
             hits = [(eg.area, ep) for ep, eg in er_shapes if eg.contains(rp)]
             if hits:
                 ep = min(hits, key=lambda h: h[0])[1]  # smallest containing polygon (guards against invalid/enclosing geometry)
-                er_pop[ep["ERUID"]] = er_pop.get(ep["ERUID"], 0) + (pop or 0)
+                er_pop[ep["ERUID"]] = er_pop.get(ep["ERUID"], 0) + (0 if pop is None or pop != pop else pop)
                 if u == principal_uid:
                     er_prim = ep["ERUID"]
         tot = sum(er_pop.values()) or 1
-        if pid == "montreal": print("DEBUG", er_pop, len(csd_pop), len(csd))
         ers = [e for e in sorted(er_pop, key=lambda k: -er_pop[k]) if er_pop[e] / tot >= 0.03 or e == er_prim]
         ers = [er_prim] + [e for e in ers if e != er_prim]
         ereg = {ep["ERUID"]: ep for ep, _ in er_shapes}
