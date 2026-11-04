@@ -108,7 +108,7 @@ def metric_defs() -> list[dict]:
           higherIs="worse", description="Share of workers whose usual one-way commuting duration is 45 minutes or more.",
           basis=f"{sample25}; universe: employed labour force aged 15+ with a usual place of work; (45–59 + 60+ minutes) ÷ total; computed from counts",
           sourceIds=src("98-10-0457-01"), comparabilityNote="Self-reported usual one-way duration, May 2021."),
-        d(id="hh_avg_size", label="Average household size", shortLabel="Avg household size", unit="ratio", decimals=2,
+        d(id="hh_avg_size", label="Average household size", shortLabel="Avg household size", unit="persons", decimals=2,
           higherIs="neutral", description="Average number of persons per private household (population in private dwellings ÷ private dwellings occupied by usual residents), persons per household.",
           basis="100% data; computed from published counts of population in private dwellings and occupied private dwellings",
           sourceIds=src("98-10-0038-01"), comparabilityNote="Computed average (published counts); may differ in the last decimal from StatCan's own rounded average."),

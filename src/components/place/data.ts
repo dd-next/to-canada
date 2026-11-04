@@ -159,12 +159,21 @@ export function wageRows(table: WageTable, noc: string, place: Place): { primary
   const rows: WageRow[] = [];
   const er = place.geo.economicRegions[0];
   if (primary && primary.fallback === null)
-    rows.push({ key: 'er', label: `Economic region: ${geoName(primary.geo.name)}`, cell: primary, flags: ['regional_value'] });
+    rows.push({ key: 'er', label: `ER: ${geoName(primary.geo.name)}`, cell: primary, flags: ['regional_value'] });
   else
-    rows.push({ key: 'er', label: `Economic region: ${er ? geoName(er.name) : '—'}`, cell: null, flags: ['not_available'] });
+    rows.push({ key: 'er', label: `ER: ${er ? geoName(er.name) : '—'}`, cell: null, flags: ['not_available'] });
   rows.push({ key: 'province', label: provinceName(place.province), cell: provKey ? pack(cells[provKey]) : null, flags: ['provincial_value'] });
   rows.push({ key: 'canada', label: 'Canada', cell: caKey ? pack(cells[caKey]) : null, flags: ['national_value'] });
   return { primary, rows, territoryNoProvince: !provKey };
+}
+
+/** Why a place has no wage cell: "…in the Toronto economic region or Ontario" (no repetition for territories). */
+export function noWageReason(place: Place): string {
+  const er = place.geo.economicRegions[0];
+  const erName = er ? geoName(er.name) : null;
+  const prov = geoName(place.geo.province.name);
+  const where = erName && erName !== prov ? `the ${erName} economic region or ${prov}` : prov;
+  return `Job Bank publishes no median wage for this occupation in ${where}`;
 }
 
 /** Job Bank's reference period token ('2023-2024 (LFS…)' → '2023–2024'). */

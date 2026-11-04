@@ -78,6 +78,11 @@ function fill(template: string, q: JobSearchQuery, config?: JobSearchConfig): st
   return missing ? null : url;
 }
 
+function fillText(text: string, q: JobSearchQuery): string {
+  const v: Record<string, string | undefined> = { query: q.occupationTitle, noc: q.noc, city: q.place?.name, location: q.place?.name, province: q.place?.province };
+  return text.replace(/\{(\w+)\}/g, (m, k: string) => v[k] ?? m);
+}
+
 /** Job Bank (ESDC). Links only: no permitted bulk feed of current postings is used in this version. */
 export const jobBankAdapter: JobBoardAdapter = {
   id: 'jobbank',
@@ -87,7 +92,8 @@ export const jobBankAdapter: JobBoardAdapter = {
     const out: JobSearchLink[] = [];
     for (const t of board?.templates ?? []) {
       const url = fill(t.urlTemplate, q, config);
-      if (url) out.push({ boardId: 'jobbank', label: t.label, description: t.description, url, verifiedAt: t.verifiedAt });
+      if (url)
+        out.push({ boardId: 'jobbank', label: fillText(t.label, q), description: fillText(t.description, q), url, verifiedAt: t.verifiedAt });
     }
     if (!out.some((l) => l.url.startsWith('https://www.jobbank.gc.ca/findajob/foreign-candidates'))) {
       out.unshift({

@@ -230,6 +230,22 @@ def main() -> int:
     else:
         errors.append("geo/canada.topo.json missing")
 
+    # ---------------------------------------------------------------- program tags on places
+    # Community pilots name specific places (verified program records); AIP covers the four
+    # Atlantic provinces and Quebec runs its own selection system (both jurisdiction facts).
+    tags: dict[str, set] = {p["id"]: set() for p in places}
+    for pr in programs or []:
+        for pid in pr.get("placeIds") or []:
+            if pid in tags and pr.get("category") == "community_pilot":
+                tags[pid].add(pr["id"].split("-")[0])
+    for p in places:
+        if p["province"] in ("NB", "NS", "PE", "NL"):
+            tags[p["id"]].add("aip")
+        if p["province"] == "QC":
+            tags[p["id"]].add("quebec")
+        if tags[p["id"]]:
+            p["programTags"] = sorted(tags[p["id"]])
+
     # ---------------------------------------------------------------- core files + manifest
     dump("places.json", places, files)
     dump("metrics.json", list(metrics.values()), files)

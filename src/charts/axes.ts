@@ -100,16 +100,18 @@ export interface XTick {
  */
 export function xTicks(xs: readonly (string | number)[], kind: XKind, plotWidth: number): XTick[] {
   if (xs.length === 0) return [];
-  const gap = 14;
+  const gap = 10;
+  const avail = plotWidth / Math.max(1, xs.length - 1);
+  // Extent of a tick label, anchored as LineChart draws it (start/end near the edges, else centred).
+  const extent = (t: XTick): [number, number] => {
+    const pos = xs.indexOf(t.x) * avail;
+    const w = textWidth(t.label, FONT_TICK);
+    if (pos > plotWidth - 20) return [pos - w, pos];
+    if (pos < 20) return [pos, pos + w];
+    return [pos - w / 2, pos + w / 2];
+  };
   const fits = (ticks: XTick[]) => {
-    if (ticks.length <= 1) return true;
-    const avail = plotWidth / Math.max(1, xs.length - 1);
-    for (let i = 1; i < ticks.length; i++) {
-      const a = xs.indexOf(ticks[i - 1].x);
-      const b = xs.indexOf(ticks[i].x);
-      const dist = (b - a) * avail;
-      if (dist < (textWidth(ticks[i - 1].label, FONT_TICK) + textWidth(ticks[i].label, FONT_TICK)) / 2 + gap) return false;
-    }
+    for (let i = 1; i < ticks.length; i++) if (extent(ticks[i])[0] - extent(ticks[i - 1])[1] < gap) return false;
     return true;
   };
   const thin = (cands: XTick[]): XTick[] => {

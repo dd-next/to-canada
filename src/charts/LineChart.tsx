@@ -93,8 +93,13 @@ export function LineChart({ spec, width, ctx, height: hProp }: LineChartProps) {
   const showValue = (s: Styled) => s.emphasis === 'hi' || (series.length <= 4 && s.emphasis === 'normal');
   const maxLabelW = Math.min(narrow ? width * 0.34 : 190, width * 0.4);
   const labelText = (s: Styled, y: number) => {
-    const name = showValue(s) ? `${s.label} ${fmt(y, unit, decimals)}` : s.label;
-    return fitText(name, maxLabelW, s.emphasis === 'hi' ? FONT_LABEL_STRONG : FONT_LABEL);
+    const font = s.emphasis === 'hi' ? FONT_LABEL_STRONG : FONT_LABEL;
+    if (!showValue(s)) return fitText(s.label, maxLabelW, font);
+    const full = `${s.label} ${fmt(y, unit, decimals)}`;
+    if (textWidth(full, font) <= maxLabelW) return full;
+    // Narrow: the value alone (the legend and tooltip name the series) for coloured series, else the name.
+    const value = fmt(y, unit, decimals);
+    return series.length > 1 && textWidth(value, font) <= maxLabelW ? value : fitText(full, maxLabelW, font);
   };
   const endLabels = labelled.map((e) => ({ ...e, text: labelText(e.s, e.last.y) }));
   const right = endLabels.length ? Math.ceil(Math.max(...endLabels.map((e) => textWidth(e.text, e.s.emphasis === 'hi' ? FONT_LABEL_STRONG : FONT_LABEL)))) + 18 : 14;

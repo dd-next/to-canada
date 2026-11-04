@@ -1,7 +1,7 @@
 import { useId, useState } from 'react';
 import { useCoreState } from '../../data/core';
 import type { MetricDef, SourceRecord } from '../../types/contract';
-import { formatDate, formatPeriod } from '../../lib/format';
+import { formatDate, formatPeriod, formatPeriodText } from '../../lib/format';
 import { Icon } from './Icon';
 
 export interface SourceNoteProps {
@@ -78,7 +78,7 @@ export function SourceNote({ sourceId, period, periodType, lead = 'Source', defa
               {rec.referencePeriod && (
                 <>
                   <dt>Reference period</dt>
-                  <dd>{formatPeriod(rec.referencePeriod)}</dd>
+                  <dd>{formatPeriodText(rec.referencePeriod)}</dd>
                 </>
               )}
               {rec.releaseDate && (

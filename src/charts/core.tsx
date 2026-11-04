@@ -115,7 +115,9 @@ export function HitLayer({ targets, active, onActive, label, activatePlace, orie
               if (e.pointerType !== 'touch') onActive(i);
             }}
             onPointerLeave={(e) => {
-              if (e.pointerType !== 'touch' && document.activeElement !== refs.current[i]) onActive(null);
+              // Keep the tooltip only for keyboard focus (a mouse click also focuses the button).
+              const el = refs.current[i];
+              if (e.pointerType !== 'touch' && !(document.activeElement === el && el?.matches(':focus-visible'))) onActive(null);
             }}
             onFocus={() => {
               setRover(i);

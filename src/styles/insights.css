@@ -465,7 +465,7 @@
   max-width: 880px;
 }
 .ins-sec {
-  scroll-margin-top: calc(var(--header-h) + 16px);
+  scroll-margin-top: 16px;
 }
 .ins-sec + .ins-sec {
   margin-top: var(--s-8);
@@ -514,7 +514,7 @@
   grid-template-columns: 56px minmax(0, 1fr);
   gap: var(--s-4);
   padding: var(--s-5) 0;
-  scroll-margin-top: calc(var(--header-h) + 16px);
+  scroll-margin-top: 16px;
 }
 .finding + .finding {
   border-top: var(--rule);

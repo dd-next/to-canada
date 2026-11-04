@@ -17,7 +17,7 @@ import { SegmentedControl } from '../ui/SegmentedControl';
 import { SourceNote } from '../ui/SourceNote';
 import { Stat } from '../ui/Stat';
 import { GroupSource, ObsStat } from './KeyFacts';
-import { findMetric, findSeries, geoName, hasValue, lineSpec, toChartSeries, wagePeriod, wageRows } from './data';
+import { findMetric, findSeries, geoName, hasValue, lineSpec, noWageReason, toChartSeries, wagePeriod, wageRows } from './data';
 
 /** "Registered nurses and registered psychiatric nurses" -> "Registered nurses"; one-word heads keep the full title. */
 function shortTitle(t: string): string {
@@ -146,7 +146,7 @@ function WagePanel({ core, place, occupation, noc, wages }: { core: CoreData; pl
           periodType="period"
           qualifier={primary ? (primary.fallback === 'province' ? `Province-wide value (${geoName(primary.geo.name)}) — no economic-region wage` : `Economic region: ${geoName(primary.geo.name)}`) : null}
           flags={primary ? [primary.fallback === 'province' ? 'provincial_value' : 'regional_value'] : ['not_available']}
-          missingReason={primary ? null : `Job Bank publishes no median wage for this occupation in ${er ? geoName(er.name) : 'the economic region'} or ${place.geo.province.name}`}
+          missingReason={primary ? null : noWageReason(place)}
         >
           <p className="pwage__basis">
             <Badge variant="neutral">{annual ? 'Annual wage' : 'Hourly wage'}</Badge> Wages of people employed in the occupation — not advertised pay, and not an offer to
@@ -155,7 +155,20 @@ function WagePanel({ core, place, occupation, noc, wages }: { core: CoreData; pl
         </Stat>
       </div>
 
-      {sameBasis.length > 0 && <ChartRenderer spec={spec} highlightIds={[place.id]} titleLevel={4} linkPlaces={false} showSource={false} />}
+      {sameBasis.length > 0 && (
+        <ChartRenderer
+          spec={spec}
+          highlightIds={[place.id]}
+          titleLevel={4}
+          linkPlaces={false}
+          showSource={false}
+          footer={
+            <p className="ppanel__note">
+              ER = economic region, the area Job Bank publishes local wages for.{er ? ` ${place.name} is in the ${geoName(er.name)} economic region.` : ''}
+            </p>
+          }
+        />
+      )}
       {otherBasis.length > 0 && (
         <p className="ppanel__note">
           {otherBasis.map((r) => r.label).join(' and ')} {otherBasis.length === 1 ? 'is' : 'are'} published as {annual ? 'hourly' : 'annual'} wages and left out of the chart

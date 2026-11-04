@@ -16,6 +16,8 @@ const GROUPS: { id: string; title: string; test: (m: MetricDef) => boolean }[] =
   { id: 'commute', title: 'Getting to work', test: (m) => m.id.startsWith('commute_') },
 ];
 
+const capitalize = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
+
 export const hasPeopleData = (core: CoreData) => core.metrics.some((m) => m.category === 'people');
 
 /** Census 2021 profile: population, language, households, commuting (scope notes from each metric). */
@@ -38,7 +40,7 @@ export function PeopleSection({ core, place }: { core: CoreData; place: Place })
           title: 'Main way to get to work',
           subtitle: `Share of commuters · ${formatPeriod(modeObs[0].o!.period, 'census')}`,
           unit: 'percent',
-          series: [{ id: 'modes', label: 'Share of commuters', points: modeObs.map((x) => ({ x: x.m.shortLabel.replace(/^commute:\s*/i, ''), y: x.o!.value, f: x.o!.flags })).sort((a, b) => (b.y ?? 0) - (a.y ?? 0)) }],
+          series: [{ id: 'modes', label: 'Share of commuters', points: modeObs.map((x) => ({ x: capitalize(x.m.shortLabel.replace(/^commute:\s*/i, '')), y: x.o!.value, f: x.o!.flags })).sort((a, b) => (b.y ?? 0) - (a.y ?? 0)) }],
           sourceIds: [...new Set(modeObs.map((x) => x.o!.sourceId))],
           notes: modes[0]?.basis ?? modes[0]?.description,
         }

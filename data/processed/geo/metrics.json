@@ -221,7 +221,7 @@
   "id": "hh_avg_size",
   "label": "Average household size",
   "shortLabel": "Avg household size",
-  "unit": "ratio",
+  "unit": "persons",
   "decimals": 2,
   "higherIs": "neutral",
   "description": "Average number of persons per private household (population in private dwellings ÷ private dwellings occupied by usual residents), persons per household.",

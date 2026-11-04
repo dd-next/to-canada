@@ -391,6 +391,19 @@ export interface Insight {
   computedAt: string;
 }
 
+/** Row of public/data/insights/index.json. */
+export interface InsightSummary {
+  id: string;
+  topic: InsightTopic;
+  title: string;
+  question: string;
+  dek: string;
+  relatedPlaceIds: string[];
+  sourceIds: string[];
+  leadStat?: Finding['stat'];
+  leadHeadline?: string;
+}
+
 // ---------------------------------------------------------------- App bundle manifest
 
 export interface DataManifest {

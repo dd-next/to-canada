@@ -145,7 +145,7 @@ export function MonthlyClimateChart({ spec, width, ctx }: MonthlyClimateProps) {
   const L = layoutFor(width, groups, hasPrecip);
   const temps = all.flatMap((m) => [m.mean, m.max, m.min]).filter(isNum);
   const pre = all.map(precipOf).filter(isNum);
-  const tScale = valueScale(temps.length ? temps : [0, 1], [L.titleH + L.tH, L.titleH], { zero: false, ticks: multi ? 4 : 5 });
+  const tScale = valueScale(temps.length ? temps : [0, 1], [L.titleH + L.tH, L.titleH], { zero: false, ticks: 5 });
   const pScale = valueScale(pre.length ? pre : [0, 1], [L.titleH + L.tH + L.precipGap + L.pH, L.titleH + L.tH + L.precipGap], { zero: true, ticks: 2 });
   const tickW = Math.max(
     24,
@@ -301,9 +301,8 @@ function Panel({
   const colW = Math.min(16, band * 0.56);
   const am = activeMonth ? months[activeMonth - 1] : null;
 
-  // Direct labels (single place): the mean at the right end; daily high and low above and below the band at the warmest month.
+  // Direct label (single place): the mean at the right end; the band is named in the legend and the tooltip.
   const lastMean = [...months].reverse().find((x) => isNum(x.mean));
-  const peak = months.filter((m) => isNum(m.max) && isNum(m.min)).reduce<ClimateMonth | null>((a, b) => (!a || (b.max as number) > (a.max as number) ? b : a), null);
   const annualMean = months.filter((m) => isNum(m.mean));
   const jan = months[0];
   const jul = months[6];
@@ -347,16 +346,7 @@ function Panel({
           Mean
         </text>
       )}
-      {!multi && peak && (
-        <>
-          <text className="ct-label ct-label--soft" x={xm(peak.m)} y={yt(peak.max as number) - 8} textAnchor="middle">
-            Average daily high
-          </text>
-          <text className="ct-label ct-label--soft" x={xm(peak.m)} y={yt(peak.min as number) + 18} textAnchor="middle">
-            Average daily low
-          </text>
-        </>
-      )}
+
       {hasPrecip && (
         <>
           <text className="ct-axis-title" x={0} y={pTop - (multi ? 8 : 10)}>

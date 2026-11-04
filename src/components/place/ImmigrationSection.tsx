@@ -121,14 +121,12 @@ export function ImmigrationSection({ core, place, series, programs }: { core: Co
             ))}
           </ul>
           <div className="cluster">
-            <ButtonLink to={`/immigration?province=${place.province}`} variant="outline" size="sm" iconRight="arrowRight">
-              Programs in {provinceName(place.province)}
+            <ButtonLink to={`/immigration?place=${encodeURIComponent(place.id)}`} variant="outline" size="sm" iconRight="arrowRight">
+              All programs for {place.name}
             </ButtonLink>
-            {list.some((p) => (p.placeIds ?? []).includes(place.id)) && (
-              <ButtonLink to={`/immigration?place=${encodeURIComponent(place.id)}`} variant="ghost" size="sm" iconRight="arrowRight">
-                Community pilots here
-              </ButtonLink>
-            )}
+            <ButtonLink to={`/immigration?jurisdiction=${place.province}`} variant="ghost" size="sm" iconRight="arrowRight">
+              {provinceName(place.province)} only
+            </ButtonLink>
           </div>
           <p className="ppanel__note">
             Reference only, not eligibility advice. Status is shown only where the official page stated it on the day it was checked. <Link to="/immigration">All programs</Link>

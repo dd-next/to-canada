@@ -22,7 +22,7 @@ export function KindBadge({ kind }: { kind: Finding['kind'] }) {
 
 /** Place chips that link to profiles. */
 export function PlaceChips({ ids, placeById, label }: { ids: string[]; placeById: Map<string, Place>; label: string }) {
-  const known = ids.filter((id) => placeById.has(id));
+  const known = [...new Set(ids)].filter((id) => placeById.has(id));
   if (!known.length) return null;
   return (
     <ul className="place-chips" aria-label={label}>
@@ -45,7 +45,7 @@ export interface FindingItemProps {
 
 /** A numbered finding: kind, headline, detail, stat, calculation, map/compare jumps and sources. */
 export function FindingItem({ finding: f, n, placeById }: FindingItemProps) {
-  const places = f.placeIds.filter((id) => placeById.has(id));
+  const places = [...new Set(f.placeIds)].filter((id) => placeById.has(id));
   const compare = compareTheseHref(places);
   const canMap = !!f.metricId || places.length > 0;
   return (

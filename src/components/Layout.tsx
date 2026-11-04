@@ -28,6 +28,9 @@ export default function Layout({ children }: { children: ReactNode }) {
   const menuPanel = useRef<HTMLDivElement>(null);
   useDismiss(menuOpen, () => setMenuOpen(false), [menuBtn, menuPanel]);
   useEffect(() => setMenuOpen(false), [pathname]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   const isExplore = pathname === '/';
 
   return (

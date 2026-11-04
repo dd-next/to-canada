@@ -6,7 +6,7 @@ import { Button } from '../ui/Button';
 import { MissingValue } from '../ui/EmptyState';
 import { SourceNote } from '../ui/SourceNote';
 import { Stat } from '../ui/Stat';
-import { climateMetric, findMetric, geoName, hasValue, wagePeriod } from './data';
+import { climateMetric, findMetric, geoName, hasValue, noWageReason, wagePeriod } from './data';
 
 const NOT_IN_SNAPSHOT = 'Not in this data snapshot yet';
 
@@ -125,7 +125,6 @@ function WageFact({ place, occupation, wages, loading, onPick }: { place: Place;
       </div>
     );
   const cell = lookupWage(wages, occupation.noc, place);
-  const er = place.geo.economicRegions[0];
   return (
     <Stat
       size="md"
@@ -136,7 +135,7 @@ function WageFact({ place, occupation, wages, loading, onPick }: { place: Place;
       periodType="period"
       qualifier={cell ? (cell.fallback === 'province' ? `Province-wide value (${geoName(cell.geo.name)}) — no economic-region wage` : `Economic region: ${geoName(cell.geo.name)}`) : null}
       flags={cell ? [cell.fallback === 'province' ? 'provincial_value' : 'regional_value', ...(cell.annual ? (['annual_wage'] as const) : [])] : ['not_available']}
-      missingReason={cell ? null : `Job Bank publishes no median wage for this occupation in ${er ? geoName(er.name) : 'this economic region'} or ${place.geo.province.name}`}
+      missingReason={cell ? null : noWageReason(place)}
       sourceId={wages.sourceId}
     >
       <p className="pfacts__extra">Employed workers’ wages, not job-ad pay · {wagePeriod(wages)}</p>

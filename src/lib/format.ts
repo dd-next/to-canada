@@ -205,6 +205,17 @@ const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
  *  '2024/2025' -> '2024/25' · '2023-2024' -> '2023–2024' · '2021' (census) -> '2021 Census'
  *  three_month_avg '2025-09' -> 'Jul–Sep 2025 avg'
  */
+/** Free-text periods ('2019-Q1 to 2026-Q2 (quarterly)'): format each recognisable token, keep the rest. */
+export function formatPeriodText(text: string | null | undefined): string {
+  if (!text) return DASH;
+  return text
+    .replace(/\b(\d{4})-Q([1-4])\b/g, 'Q$2 $1')
+    .replace(/\b(\d{4})-(\d{2})(?!-\d)\b/g, (m, y: string, mm: string) => {
+      const i = Number(mm) - 1;
+      return i >= 0 && i < 12 ? `${MONTHS[i]} ${y}` : m;
+    });
+}
+
 export function formatPeriod(period: string | null | undefined, periodType?: MetricDef['periodType']): string {
   if (!period) return DASH;
   const p = period.trim();
@@ -265,12 +276,19 @@ export function geoQualifier(o: Pick<Observation, 'geo' | 'flags'> | null | unde
   if (!o) return null;
   const flags = o.flags ?? [];
   const g = o.geo;
-  if (flags.includes('provincial_value')) return g?.name ? `Province-wide value (${cleanGeoName(g.name)})` : 'Province-wide value';
+  if (flags.includes('provincial_value')) {
+    const kind = isTerritory(g) ? 'Territory-wide value' : 'Province-wide value';
+    return g?.name ? `${kind} (${cleanGeoName(g.name)})` : kind;
+  }
   if (flags.includes('national_value')) return 'Canada-wide value';
   if (flags.includes('cma_wide')) return g?.name ? `Whole ${cleanGeoName(g.name)} CMA` : 'Whole CMA value';
   if (flags.includes('regional_value')) return regionQualifier(g);
   if (flags.includes('station_proxy') || g?.level === 'station') return g?.name ? `Station: ${g.name}` : 'Nearest climate station';
   return null;
+}
+
+function isTerritory(g: GeoRef | undefined): boolean {
+  return !!g && (['60', '61', '62'].includes(g.id) || /Yukon|Northwest Territories|Nunavut/i.test(g.name));
 }
 
 function regionQualifier(g: GeoRef | undefined): string {
@@ -282,7 +300,7 @@ function regionQualifier(g: GeoRef | undefined): string {
     case 'mbm_region':
       return `Basket region: ${name}`;
     case 'province':
-      return `Province-wide value (${name})`;
+      return `${isTerritory(g) ? 'Territory-wide' : 'Province-wide'} value (${name})`;
     case 'cma':
       return `Whole ${name} CMA`;
     default:

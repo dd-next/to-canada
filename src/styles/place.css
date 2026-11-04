@@ -181,8 +181,9 @@
 }
 
 /* ---- sections */
+/* html already pads anchor scrolling by the header height; add the sticky section nav. */
 .psec {
-  scroll-margin-top: calc(var(--header-h) + var(--pnav-h) + 12px);
+  scroll-margin-top: calc(var(--pnav-h) + 12px);
 }
 .psec + .psec {
   margin-top: var(--s-8);
@@ -862,7 +863,11 @@ ul.ppanel__text {
 }
 @media (max-width: 479.98px) {
   .pfacts {
-    gap: 0 var(--s-4);
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pfacts > li:nth-child(2) {
+    border-top: var(--rule);
+    padding-top: var(--s-4);
   }
   .pfacts .stat__value {
     font-size: 1.75rem;

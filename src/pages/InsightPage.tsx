@@ -200,8 +200,8 @@ export default function InsightPage() {
                 What it means
               </h2>
               <div className="prose ins-interp">
-                {insight.interpretation.map((p) => (
-                  <p key={p.slice(0, 40)}>{p}</p>
+                {insight.interpretation.map((p, i) => (
+                  <p key={i}>{p}</p>
                 ))}
               </div>
             </section>
@@ -213,15 +213,15 @@ export default function InsightPage() {
               <div className="ins-method">
                 <Disclosure summary={`How it was computed · ${plural(insight.methodology.length, 'step')}`} variant="boxed" defaultOpen={false}>
                   <ol className="ins-list">
-                    {insight.methodology.map((m) => (
-                      <li key={m.slice(0, 40)}>{m}</li>
+                    {insight.methodology.map((m, i) => (
+                      <li key={i}>{m}</li>
                     ))}
                   </ol>
                 </Disclosure>
                 <Disclosure summary={`Limitations · ${plural(insight.limitations.length, 'caveat')}`} variant="boxed" defaultOpen={false}>
                   <ul className="ins-list">
-                    {insight.limitations.map((m) => (
-                      <li key={m.slice(0, 40)}>{m}</li>
+                    {insight.limitations.map((m, i) => (
+                      <li key={i}>{m}</li>
                     ))}
                   </ul>
                 </Disclosure>
