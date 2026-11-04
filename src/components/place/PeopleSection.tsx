@@ -1,8 +1,10 @@
+import { Fragment } from 'react';
 import type { ChartSpec, MetricDef, Place } from '../../types/contract';
 import type { CoreData } from '../../data/core';
 import { formatPeriod } from '../../lib/format';
 import { ChartRenderer } from '../../charts';
 import { ObservationList } from '../data/ObservationList';
+import { Disclosure } from '../ui/Disclosure';
 import { MissingValue } from '../ui/EmptyState';
 import { hasValue } from './data';
 import { ListSource } from './ClimateSection';
@@ -41,7 +43,7 @@ export function PeopleSection({ core, place }: { core: CoreData; place: Place })
           notes: modes[0]?.basis ?? modes[0]?.description,
         }
       : null;
-  const scope = [...new Set(people.map((m) => m.basis).filter((b): b is string => !!b))].slice(0, 3);
+  const scope = people.filter((m) => m.basis && byPlace?.has(m.id));
 
   return (
     <div className="ppeople">
@@ -60,11 +62,20 @@ export function PeopleSection({ core, place }: { core: CoreData; place: Place })
       {scope.length > 0 && (
         <div className="ppanel ppanel--quiet ppeople__scope">
           <p className="ppanel__title">Census scope</p>
-          <ul className="ppanel__text">
-            {scope.map((s) => (
-              <li key={s}>{s}</li>
-            ))}
-          </ul>
+          <p className="ppanel__text">
+            Counts of people and households are 100% census data; shares about immigrants, language and commuting come from the 25% long-form sample, so they carry
+            sampling variability and random rounding. Each measure has its own universe:
+          </p>
+          <Disclosure summary="Universe and basis of each measure" variant="plain">
+            <dl className="pdl ppeople__dl">
+              {scope.map((m) => (
+                <Fragment key={m.id}>
+                  <dt>{m.shortLabel}</dt>
+                  <dd>{m.basis}</dd>
+                </Fragment>
+              ))}
+            </dl>
+          </Disclosure>
         </div>
       )}
     </div>
