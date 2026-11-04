@@ -1,0 +1,240 @@
+[
+ {
+  "id": "statcan-cbf-2021",
+  "title": "2021 Census Cartographic Boundary Files (provinces/territories, economic regions, CMAs/CAs, census subdivisions, population centres)",
+  "publisher": "Statistics Canada",
+  "tableId": "92-160-X (2021 Census boundary files)",
+  "url": "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21",
+  "downloadUrl": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Cartographic_boundary_files/MapServer",
+  "referencePeriod": "2021 Census geography",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, 2021 Census Boundary files. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Read through the official StatCan GIS REST service (layers PR, ER, CMA, PC, CSD) as GeoJSON in WGS84 because the www12.statcan.gc.ca file downloads answer 403 to non-browser clients.",
+   "Provinces/territories queried one by one with identical minimal server generalization (0.0005 deg); simplified with mapshaper (topology-aware, weighted Visvalingam, keep-shapes), snapped, and densified to 0.25 deg so parallels curve under conic projection.",
+   "CMA/CA polygons for the place CMAs/CAs (Ottawa-Gatineau as its two provincial parts; Iqaluit as its CSD) simplified separately.",
+   "Economic regions overlapping each CMA/CA: each CSD in the CMA/CA assigned to the ER containing its representative point; ERs holding >= 3% of the CMA/CA population (by CSD population) are listed, the ER of the principal CSD first.",
+   "Marker: centroid (EPSG:3347) of the part of the largest population centre inside the principal CSD (representative point of the CSD if none)."
+  ],
+  "notes": [
+   "Cartographic (shoreline-clipped) boundaries are generalized for display; not for area measurement."
+  ],
+  "status": "ok",
+  "retrievedAt": "2026-11-04T18:58:11+00:00"
+ },
+ {
+  "id": "statcan-98-10-0003-01",
+  "title": "Population and dwelling counts: Census metropolitan areas, census agglomerations and census subdivisions (municipalities)",
+  "publisher": "Statistics Canada",
+  "tableId": "98-10-0003-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810000301",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/98100003-eng.zip",
+  "releaseDate": "2022-02-09",
+  "retrievedAt": "2026-11-04T17:53:35+00:00",
+  "referencePeriod": "2021 Census",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 98-10-0003-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "CMA/CA -> CSD hierarchy and 2021 CSD populations; used to list the ten largest municipalities and to weight economic regions."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-98-10-0005-01",
+  "title": "Population and dwelling counts: Canada, provinces and territories, census metropolitan areas and census agglomerations",
+  "publisher": "Statistics Canada",
+  "tableId": "98-10-0005-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810000501",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/98100005-eng.zip",
+  "releaseDate": "2022-02-09",
+  "retrievedAt": "2026-11-04T17:53:37+00:00",
+  "referencePeriod": "2021 Census (May 2021)",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 98-10-0005-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Whole-CMA/CA 2021 and 2016 counts used as published."
+  ],
+  "notes": [
+   "100% data.",
+   "Census of Population 2021 (reference day 11 May 2021).",
+   "Counts from the long-form (25% sample) tables are randomly rounded (typically to a multiple of 5); percentages are computed from rounded counts."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-98-10-0030-01",
+  "title": "Broad age groups, gender and census year: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "publisher": "Statistics Canada",
+  "tableId": "98-10-0030-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810003001",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/98100030-eng.zip",
+  "releaseDate": "2022-04-27",
+  "retrievedAt": "2026-11-04T17:55:33+00:00",
+  "referencePeriod": "2021 Census (May 2021)",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 98-10-0030-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Used 2021 and 2016 counts; percent change computed as (2021-2016)/2016."
+  ],
+  "notes": [
+   "100% data; total gender and total age rows used; only used for Ottawa–Gatineau provincial parts (counts randomly rounded).",
+   "Census of Population 2021 (reference day 11 May 2021).",
+   "Counts from the long-form (25% sample) tables are randomly rounded (typically to a multiple of 5); percentages are computed from rounded counts."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-98-10-0002-01",
+  "title": "Population and dwelling counts: Canada and census subdivisions (municipalities)",
+  "publisher": "Statistics Canada",
+  "tableId": "98-10-0002-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810000201",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/98100002-eng.zip",
+  "releaseDate": "2022-02-09",
+  "retrievedAt": "2026-11-04T17:57:26+00:00",
+  "referencePeriod": "2021 Census (May 2021)",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 98-10-0002-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Used only for Iqaluit population."
+  ],
+  "notes": [
+   "100% data; Iqaluit CSD row.",
+   "Census of Population 2021 (reference day 11 May 2021).",
+   "Counts from the long-form (25% sample) tables are randomly rounded (typically to a multiple of 5); percentages are computed from rounded counts."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-98-10-0038-01",
+  "title": "Dwellings occupied by usual residents and population in dwellings: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "publisher": "Statistics Canada",
+  "tableId": "98-10-0038-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810003801",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/98100038-eng.zip",
+  "releaseDate": "2022-04-27",
+  "retrievedAt": "2026-11-04T18:29:39+00:00",
+  "referencePeriod": "2021 Census (May 2021)",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 98-10-0038-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Average household size computed as population in private dwellings / private dwellings occupied by usual residents."
+  ],
+  "notes": [
+   "100% data.",
+   "Census of Population 2021 (reference day 11 May 2021).",
+   "Counts from the long-form (25% sample) tables are randomly rounded (typically to a multiple of 5); percentages are computed from rounded counts."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-98-10-0308-01",
+  "title": "Visible minority by immigrant status and period of immigration: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "publisher": "Statistics Canada",
+  "tableId": "98-10-0308-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810030801",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/98100308-eng.zip",
+  "releaseDate": "2022-10-26",
+  "retrievedAt": "2026-11-04T18:29:41+00:00",
+  "referencePeriod": "2021 Census (May 2021)",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 98-10-0308-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Immigrant share = Immigrants / Total; recent = 2016 to 2021 / Total."
+  ],
+  "notes": [
+   "25% sample; rows: total age, total gender, count, total visible minority.",
+   "Census of Population 2021 (reference day 11 May 2021).",
+   "Counts from the long-form (25% sample) tables are randomly rounded (typically to a multiple of 5); percentages are computed from rounded counts."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-98-10-0175-01",
+  "title": "Mother tongue by knowledge of official languages: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "publisher": "Statistics Canada",
+  "tableId": "98-10-0175-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810017501",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/98100175-eng.zip",
+  "releaseDate": "2022-08-17",
+  "retrievedAt": "2026-11-04T17:54:33+00:00",
+  "referencePeriod": "2021 Census (May 2021)",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 98-10-0175-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "French knowledge = (French only + English and French) / Total; bilingual = English and French / Total."
+  ],
+  "notes": [
+   "25% sample; rows: total gender, total age, total mother tongue.",
+   "Census of Population 2021 (reference day 11 May 2021).",
+   "Counts from the long-form (25% sample) tables are randomly rounded (typically to a multiple of 5); percentages are computed from rounded counts."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-98-10-0227-01",
+  "title": "Language spoken most often at home by age: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "publisher": "Statistics Canada",
+  "tableId": "98-10-0227-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810022701",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/98100227-eng.zip",
+  "releaseDate": "2022-08-17",
+  "retrievedAt": "2026-11-04T17:54:38+00:00",
+  "referencePeriod": "2021 Census (May 2021)",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 98-10-0227-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Share = 'Non-official language' / Total."
+  ],
+  "notes": [
+   "25% sample; total age; single-response non-official language.",
+   "Census of Population 2021 (reference day 11 May 2021).",
+   "Counts from the long-form (25% sample) tables are randomly rounded (typically to a multiple of 5); percentages are computed from rounded counts."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-98-10-0457-01",
+  "title": "Main mode of commuting by commuting duration, time leaving for work, age and gender: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "publisher": "Statistics Canada",
+  "tableId": "98-10-0457-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810045701",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/98100457-eng.zip",
+  "releaseDate": "2022-11-30",
+  "retrievedAt": "2026-11-04T17:54:45+00:00",
+  "referencePeriod": "2021 Census (May 2021)",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 98-10-0457-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Shares computed from main mode rows; 45+ minutes = 45 to 59 + 60 minutes and over."
+  ],
+  "notes": [
+   "25% sample; total time leaving, total age, total gender, count.",
+   "Census of Population 2021 (reference day 11 May 2021).",
+   "Counts from the long-form (25% sample) tables are randomly rounded (typically to a multiple of 5); percentages are computed from rounded counts."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "eccc-climate-normals-1991-2020",
+  "title": "Canadian Climate Normals 1991–2020 (station pages and composite station inventory)",
+  "publisher": "Environment and Climate Change Canada (Meteorological Service of Canada)",
+  "tableId": "Canadian Climate Normals 1991-2020",
+  "url": "https://climate.weather.gc.ca/climate_normals/index_e.html",
+  "downloadUrl": "https://climate.weather.gc.ca/climate_normals/station_inventory_e.html?yr=1991",
+  "retrievedAt": "2026-11-04T18:58:11+00:00",
+  "referencePeriod": "1991-2020 (30-year climate normals)",
+  "licence": "Environment and Climate Change Canada data servers end-use licence / Open Government Licence – Canada",
+  "attribution": "Source: Environment and Climate Change Canada, Canadian Climate Normals 1991-2020.",
+  "transformations": [
+   "Station pages (results_1991_2020_e.html?climate_id=...) parsed: monthly rows for daily average/maximum/minimum temperature, precipitation and snowfall; annual 'Year' column used for totals and for days with minimum < -20 °C and maximum > 30 °C.",
+   "One composite station per place chosen by rule (see pipeline/geo/README.md); values are not adjusted or interpolated."
+  ],
+  "notes": [
+   "The MSC GeoMet OGC API (climate-normals collection) and the dd.weather.gc.ca datamart only hold the 1981-2010 normals, so the 1991-2020 station pages were used.",
+   "ECCC normals codes: A = WMO '3 and 5' rule met; B = at least 25 years; C = at least 20 years; D = at least 15 years; E-G = fewer years (kept with use_with_caution)."
+  ],
+  "status": "ok"
+ }
+]

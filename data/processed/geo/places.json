@@ -63,7 +63,17 @@
    "Milton",
    "Ajax",
    "Pickering"
-  ]
+  ],
+  "climateStation": {
+   "name": "TORONTO PEARSON (AIRPORT)",
+   "climateId": "6158731",
+   "lat": 43.68,
+   "lon": -79.63,
+   "elevationM": 173.4,
+   "distanceKm": 19.4,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "montreal",
@@ -81,6 +91,34 @@
      "id": "2440",
      "name": "Montréal",
      "dguid": "2021S05002440",
+     "vintage": "2021"
+    },
+    {
+     "level": "economic_region",
+     "id": "2435",
+     "name": "Montérégie",
+     "dguid": "2021S05002435",
+     "vintage": "2021"
+    },
+    {
+     "level": "economic_region",
+     "id": "2445",
+     "name": "Laval",
+     "dguid": "2021S05002445",
+     "vintage": "2021"
+    },
+    {
+     "level": "economic_region",
+     "id": "2455",
+     "name": "Laurentides",
+     "dguid": "2021S05002455",
+     "vintage": "2021"
+    },
+    {
+     "level": "economic_region",
+     "id": "2450",
+     "name": "Lanaudière",
+     "dguid": "2021S05002450",
      "vintage": "2021"
     }
    ],
@@ -129,7 +167,17 @@
    "Saint-Jérôme",
    "Mirabel",
    "Blainville"
-  ]
+  ],
+  "climateStation": {
+   "name": "MONTREAL TRUDEAU (AIRPORT)",
+   "climateId": "7025251",
+   "lat": 45.47,
+   "lon": -73.74,
+   "elevationM": 36.0,
+   "distanceKm": 10.7,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "vancouver",
@@ -195,7 +243,17 @@
    "Maple Ridge",
    "North Vancouver",
    "New Westminster"
-  ]
+  ],
+  "climateStation": {
+   "name": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "climateId": "1108447",
+   "lat": 49.2,
+   "lon": -123.18,
+   "elevationM": 4.3,
+   "distanceKm": 7.6,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "calgary",
@@ -259,7 +317,17 @@
    "Crossfield",
    "Irricana",
    "Beiseker"
-  ]
+  ],
+  "climateStation": {
+   "name": "CALGARY (AIRPORT)",
+   "climateId": "3031093",
+   "lat": 51.11,
+   "lon": -114.02,
+   "elevationM": 1084.1,
+   "distanceKm": 8.9,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "edmonton",
@@ -325,7 +393,17 @@
    "Beaumont",
    "Sturgeon County",
    "Stony Plain"
-  ]
+  ],
+  "climateStation": {
+   "name": "EDMONTON (AIRPORT)",
+   "climateId": "3012205",
+   "lat": 53.32,
+   "lon": -113.58,
+   "elevationM": 723.3,
+   "distanceKm": 22.6,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "ottawa",
@@ -397,7 +475,17 @@
    "Arnprior",
    "Beckwith",
    "McNab/Braeside"
-  ]
+  ],
+  "climateStation": {
+   "name": "OTTAWA (AIRPORT)",
+   "climateId": "6106001",
+   "lat": 45.32,
+   "lon": -75.67,
+   "elevationM": 114.9,
+   "distanceKm": 6.2,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "gatineau",
@@ -470,7 +558,17 @@
    "Thurso",
    "Lochaber-Partie-Ouest",
    "Val-des-Bois"
-  ]
+  ],
+  "climateStation": {
+   "name": "OTTAWA (AIRPORT)",
+   "climateId": "6106001",
+   "lat": 45.32,
+   "lon": -75.67,
+   "elevationM": 114.9,
+   "distanceKm": 16.2,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "winnipeg",
@@ -550,7 +648,17 @@
    "West St. Paul",
    "Niverville",
    "Headingley"
-  ]
+  ],
+  "climateStation": {
+   "name": "WINNIPEG RICHARDSON (AIRPORT)",
+   "climateId": "5023227",
+   "lat": 49.91,
+   "lon": -97.24,
+   "elevationM": 238.7,
+   "distanceKm": 7.3,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "quebec-city",
@@ -623,7 +731,17 @@
    "Boischatel",
    "Lac-Beauport",
    "Saint-Apollinaire"
-  ]
+  ],
+  "climateStation": {
+   "name": "QUEBEC JEAN LESAGE (AIRPORT)",
+   "climateId": "701S001",
+   "lat": 46.8,
+   "lon": -71.38,
+   "elevationM": 60.0,
+   "distanceKm": 7.6,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "hamilton",
@@ -682,7 +800,17 @@
    "Hamilton",
    "Burlington",
    "Grimsby"
-  ]
+  ],
+  "climateStation": {
+   "name": "HAMILTON",
+   "climateId": "6153194",
+   "lat": 43.17,
+   "lon": -79.93,
+   "elevationM": 237.7,
+   "distanceKm": 9.1,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "kitchener-waterloo",
@@ -744,7 +872,17 @@
    "Woolwich",
    "Wilmot",
    "North Dumfries"
-  ]
+  ],
+  "climateStation": {
+   "name": "KITCHENER/WATERLOO",
+   "climateId": "6144239",
+   "lat": 43.46,
+   "lon": -80.38,
+   "elevationM": 321.6,
+   "distanceKm": 8.2,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "london",
@@ -808,7 +946,17 @@
    "Central Elgin",
    "Southwold",
    "Adelaide-Metcalfe"
-  ]
+  ],
+  "climateStation": {
+   "name": "LONDON",
+   "climateId": "6144473",
+   "lat": 43.03,
+   "lon": -81.15,
+   "elevationM": 278.0,
+   "distanceKm": 9.8,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "halifax",
@@ -873,7 +1021,17 @@
   "municipalities": [
    "Halifax",
    "East Hants"
-  ]
+  ],
+  "climateStation": {
+   "name": "HALIFAX STANFIELD (AIRPORT)",
+   "climateId": "8202251",
+   "lat": 44.88,
+   "lon": -63.51,
+   "elevationM": 145.4,
+   "distanceKm": 21.0,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "victoria",
@@ -939,7 +1097,17 @@
    "Sooke",
    "Sidney",
    "North Saanich"
-  ]
+  ],
+  "climateStation": {
+   "name": "VICTORIA (AIRPORT)",
+   "climateId": "1018620",
+   "lat": 48.65,
+   "lon": -123.43,
+   "elevationM": 19.5,
+   "distanceKm": 25.2,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "saskatoon",
@@ -1005,7 +1173,17 @@
    "Dalmeny",
    "Langham",
    "Aberdeen No. 373"
-  ]
+  ],
+  "climateStation": {
+   "name": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "climateId": "4057152",
+   "lat": 52.17,
+   "lon": -106.7,
+   "elevationM": 504.1,
+   "distanceKm": 5.3,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "regina",
@@ -1071,7 +1249,17 @@
    "Regina Beach",
    "Sherwood No. 159",
    "Lajord No. 128"
-  ]
+  ],
+  "climateStation": {
+   "name": "REGINA (AIRPORT)",
+   "climateId": "4016560",
+   "lat": 50.43,
+   "lon": -104.67,
+   "elevationM": 577.6,
+   "distanceKm": 4.8,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "st-johns",
@@ -1137,7 +1325,17 @@
    "Logy Bay-Middle Cove-Outer Cove",
    "Pouch Cove",
    "Flatrock"
-  ]
+  ],
+  "climateStation": {
+   "name": "ST. JOHN'S (AIRPORT)",
+   "climateId": "8403505",
+   "lat": 47.62,
+   "lon": -52.75,
+   "elevationM": 140.5,
+   "distanceKm": 7.3,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "windsor",
@@ -1201,7 +1399,17 @@
    "Tecumseh",
    "Kingsville",
    "Essex"
-  ]
+  ],
+  "climateStation": {
+   "name": "WINDSOR",
+   "climateId": "6139525",
+   "lat": 42.28,
+   "lon": -82.96,
+   "elevationM": 189.6,
+   "distanceKm": 2.7,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "kelowna",
@@ -1263,7 +1471,17 @@
    "Peachland",
    "Central Okanagan",
    "Central Okanagan West"
-  ]
+  ],
+  "climateStation": {
+   "name": "KELOWNA",
+   "climateId": "1123939",
+   "lat": 49.96,
+   "lon": -119.38,
+   "elevationM": 433.1,
+   "distanceKm": 10.5,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "abbotsford-mission",
@@ -1321,7 +1539,17 @@
   "municipalities": [
    "Abbotsford",
    "Mission"
-  ]
+  ],
+  "climateStation": {
+   "name": "ABBOTSFORD",
+   "climateId": "1100030",
+   "lat": 49.03,
+   "lon": -122.36,
+   "elevationM": 59.1,
+   "distanceKm": 5.0,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "moncton",
@@ -1387,7 +1615,17 @@
    "Elgin",
    "Dorchester",
    "Saint-Paul"
-  ]
+  ],
+  "climateStation": {
+   "name": "MONCTON",
+   "climateId": "8103200",
+   "lat": 46.11,
+   "lon": -64.68,
+   "elevationM": 70.7,
+   "distanceKm": 9.8,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "saint-john",
@@ -1453,7 +1691,17 @@
    "Westfield",
    "Upham",
    "Norton"
-  ]
+  ],
+  "climateStation": {
+   "name": "SAINT JOHN",
+   "climateId": "8104900",
+   "lat": 45.32,
+   "lon": -65.89,
+   "elevationM": 108.8,
+   "distanceKm": 16.8,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "fredericton",
@@ -1519,7 +1767,17 @@
    "Kingsclear",
    "Manners Sutton",
    "Maugerville"
-  ]
+  ],
+  "climateStation": {
+   "name": "FREDERICTON (AIRPORT)",
+   "climateId": "8101505",
+   "lat": 45.87,
+   "lon": -66.54,
+   "elevationM": 20.7,
+   "distanceKm": 13.2,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "sherbrooke",
@@ -1585,7 +1843,17 @@
    "Waterville",
    "Hatley",
    "Val-Joli"
-  ]
+  ],
+  "climateStation": {
+   "name": "LENNOXVILLE",
+   "climateId": "7024280",
+   "lat": 45.37,
+   "lon": -71.82,
+   "elevationM": 181.0,
+   "distanceKm": 9.1,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "sudbury",
@@ -1644,7 +1912,17 @@
    "Greater Sudbury / Grand Sudbury",
    "Markstay-Warren",
    "St.-Charles"
-  ]
+  ],
+  "climateStation": {
+   "name": "SUDBURY",
+   "climateId": "6068150",
+   "lat": 46.63,
+   "lon": -80.8,
+   "elevationM": 348.4,
+   "distanceKm": 19.4,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "thunder-bay",
@@ -1707,7 +1985,17 @@
    "Conmee",
    "O'Connor",
    "Gillies"
-  ]
+  ],
+  "climateStation": {
+   "name": "THUNDER BAY",
+   "climateId": "6048260",
+   "lat": 48.37,
+   "lon": -89.32,
+   "elevationM": 199.3,
+   "distanceKm": 6.4,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "charlottetown",
@@ -1773,7 +2061,17 @@
    "Crossroads",
    "Miltonvale Park",
    "Kingston"
-  ]
+  ],
+  "climateStation": {
+   "name": "CHARLOTTETOWN (AIRPORT)",
+   "climateId": "8300300",
+   "lat": 46.29,
+   "lon": -63.13,
+   "elevationM": 48.8,
+   "distanceKm": 2.5,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "brandon",
@@ -1832,7 +2130,17 @@
    "Brandon",
    "Whitehead",
    "Elton"
-  ]
+  ],
+  "climateStation": {
+   "name": "BRANDON",
+   "climateId": "5010480",
+   "lat": 49.91,
+   "lon": -99.95,
+   "elevationM": 409.4,
+   "distanceKm": 7.4,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "whitehorse",
@@ -1892,7 +2200,17 @@
    "Ibex Valley",
    "Mt. Lorne",
    "Lake Laberge 1"
-  ]
+  ],
+  "climateStation": {
+   "name": "WHITEHORSE",
+   "climateId": "2101310",
+   "lat": 60.73,
+   "lon": -135.1,
+   "elevationM": 707.0,
+   "distanceKm": 1.0,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "yellowknife",
@@ -1949,7 +2267,17 @@
   },
   "municipalities": [
    "Yellowknife"
-  ]
+  ],
+  "climateStation": {
+   "name": "YELLOWKNIFE (AIRPORT)",
+   "climateId": "2204100",
+   "lat": 62.46,
+   "lon": -114.44,
+   "elevationM": 205.7,
+   "distanceKm": 1.7,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
+  }
  },
  {
   "id": "iqaluit",
@@ -1996,6 +2324,16 @@
     "vintage": "2021"
    },
    "sourceId": "statcan-98-10-0002-01"
+  },
+  "climateStation": {
+   "name": "IQALUIT",
+   "climateId": "2402592",
+   "lat": 63.75,
+   "lon": -68.54,
+   "elevationM": 33.5,
+   "distanceKm": 1.3,
+   "normalsPeriod": "1991-2020",
+   "sourceId": "eccc-climate-normals-1991-2020"
   }
  }
 ]

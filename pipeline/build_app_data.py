@@ -63,9 +63,9 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
     files: dict = {}
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    OUT.mkdir(parents=True)
+    # Overwrite in place (deleting the directory confuses dev servers watching public/);
+    # stale files are pruned at the end.
+    OUT.mkdir(parents=True, exist_ok=True)
 
     # ---------------------------------------------------------------- places
     places = read("geo", "places")
@@ -128,6 +128,46 @@ def main() -> int:
                 errors.append(f"observation {k} non-numeric value {v!r}")
             observations.append(o)
     errors += [f"duplicate observation {k}" for k, n in keys.items() if n > 1]
+
+    # ---------------------------------------------------------------- derived monthly climate layers
+    # Monthly 1991-2020 normals arrive as per-place Series (t='01'..'12'). The map's month selector
+    # needs one metric per month, so derive them here 1:1 from the series values (no modelling).
+    MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+              "October", "November", "December"]
+    MONTHLY = {"temp_mean": ("clim_m_temp_mean", "Mean daily temperature", "Mean temp", "degC", 1,
+                             "Average of daily mean temperatures for the month, 1991-2020 climate normals at the place's reference station."),
+               "precip": ("clim_m_precip", "Total precipitation", "Precipitation", "mm", 0,
+                          "Average total precipitation (rain + snow water equivalent) for the month, 1991-2020 climate normals at the place's reference station.")}
+    geo_series = read("geo", "series", []) or []
+    derived_m, derived_o = {}, []
+    for srs in geo_series:
+        el = (srs.get("dims") or {}).get("element")
+        if el not in MONTHLY or not srs.get("placeId") or srs["placeId"] not in place_ids:
+            continue
+        fam, label, short, unit, dec, desc = MONTHLY[el]
+        code = (srs.get("dims") or {}).get("normalsCode", "")
+        for pt in srs.get("points", []):
+            mm = str(pt["t"]).zfill(2)
+            if not mm.isdigit() or not 1 <= int(mm) <= 12:
+                continue
+            mid = f"{fam}_{mm}"
+            derived_m.setdefault(mid, {
+                "id": mid, "label": f"{label}, {MONTHS[int(mm) - 1]} (1991–2020 normals)",
+                "shortLabel": f"{short}, {MONTHS[int(mm) - 1][:3]}", "category": "climate", "unit": unit,
+                "decimals": dec, "higherIs": "neutral", "description": desc, "basis": "station climate normals",
+                "geoLevel": "station", "periodType": "normals", "sourceIds": [srs["sourceId"]], "mapLayer": True,
+                "dims": {"family": fam, "month": mm},
+                "comparabilityNote": "Station proxy for the place; stations differ in elevation and distance from the city centre."})
+            flags = ["station_proxy"] + ([] if code in ("A", "B", "C", "D", "") else ["use_with_caution"])
+            v = pt.get("v")
+            derived_o.append({"placeId": srs["placeId"], "metricId": mid, "value": v, "period": "1991-2020",
+                              "geo": srs["geo"], "sourceId": srs["sourceId"],
+                              "flags": sorted(set(flags + ([] if v is not None else ["not_available"])))})
+    for mid, m in derived_m.items():
+        if mid in metrics:
+            errors.append(f"derived monthly metric {mid} collides with a domain metric")
+        metrics[mid] = m
+    observations += derived_o
 
     # ---------------------------------------------------------------- series (split per place)
     per_place: dict[str, list] = defaultdict(list)
@@ -206,6 +246,13 @@ def main() -> int:
     manifest = {"product": PRODUCT, "provisional": provisional, "builtAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
                 "files": files, "coverage": cov}
     dump("manifest.json", manifest, files)
+
+    for f in sorted(OUT.rglob("*")):
+        if f.is_file() and f.relative_to(OUT).as_posix() not in files:
+            f.unlink()
+    for d in sorted((d for d in OUT.rglob("*") if d.is_dir()), key=lambda d: len(d.parts), reverse=True):
+        if not any(d.iterdir()):
+            d.rmdir()
 
     for w in warnings:
         print("WARN ", w)

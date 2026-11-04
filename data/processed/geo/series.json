@@ -1,0 +1,10222 @@
+[
+ {
+  "id": "normals-toronto-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "toronto",
+  "geo": {
+   "level": "station",
+   "id": "6158731",
+   "name": "TORONTO PEARSON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "TORONTO PEARSON (AIRPORT)",
+   "normalsCode": "B",
+   "year": "8.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -5.0
+   },
+   {
+    "t": "02",
+    "v": -4.4
+   },
+   {
+    "t": "03",
+    "v": 0.6
+   },
+   {
+    "t": "04",
+    "v": 7.0
+   },
+   {
+    "t": "05",
+    "v": 13.7
+   },
+   {
+    "t": "06",
+    "v": 19.2
+   },
+   {
+    "t": "07",
+    "v": 22.1
+   },
+   {
+    "t": "08",
+    "v": 21.1
+   },
+   {
+    "t": "09",
+    "v": 16.9
+   },
+   {
+    "t": "10",
+    "v": 10.0
+   },
+   {
+    "t": "11",
+    "v": 4.1
+   },
+   {
+    "t": "12",
+    "v": -1.6
+   }
+  ]
+ },
+ {
+  "id": "normals-toronto-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "toronto",
+  "geo": {
+   "level": "station",
+   "id": "6158731",
+   "name": "TORONTO PEARSON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "TORONTO PEARSON (AIRPORT)",
+   "normalsCode": "B",
+   "year": "13.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -1.2
+   },
+   {
+    "t": "02",
+    "v": -0.3
+   },
+   {
+    "t": "03",
+    "v": 5.0
+   },
+   {
+    "t": "04",
+    "v": 12.0
+   },
+   {
+    "t": "05",
+    "v": 19.2
+   },
+   {
+    "t": "06",
+    "v": 24.5
+   },
+   {
+    "t": "07",
+    "v": 27.4
+   },
+   {
+    "t": "08",
+    "v": 26.3
+   },
+   {
+    "t": "09",
+    "v": 22.3
+   },
+   {
+    "t": "10",
+    "v": 14.6
+   },
+   {
+    "t": "11",
+    "v": 7.9
+   },
+   {
+    "t": "12",
+    "v": 1.9
+   }
+  ]
+ },
+ {
+  "id": "normals-toronto-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "toronto",
+  "geo": {
+   "level": "station",
+   "id": "6158731",
+   "name": "TORONTO PEARSON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "TORONTO PEARSON (AIRPORT)",
+   "normalsCode": "B",
+   "year": "3.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -8.9
+   },
+   {
+    "t": "02",
+    "v": -8.5
+   },
+   {
+    "t": "03",
+    "v": -3.8
+   },
+   {
+    "t": "04",
+    "v": 1.9
+   },
+   {
+    "t": "05",
+    "v": 8.2
+   },
+   {
+    "t": "06",
+    "v": 13.9
+   },
+   {
+    "t": "07",
+    "v": 16.6
+   },
+   {
+    "t": "08",
+    "v": 15.8
+   },
+   {
+    "t": "09",
+    "v": 11.6
+   },
+   {
+    "t": "10",
+    "v": 5.3
+   },
+   {
+    "t": "11",
+    "v": 0.2
+   },
+   {
+    "t": "12",
+    "v": -5.0
+   }
+  ]
+ },
+ {
+  "id": "normals-toronto-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "toronto",
+  "geo": {
+   "level": "station",
+   "id": "6158731",
+   "name": "TORONTO PEARSON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "TORONTO PEARSON (AIRPORT)",
+   "normalsCode": "B",
+   "year": "806.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 61.6
+   },
+   {
+    "t": "02",
+    "v": 50.2
+   },
+   {
+    "t": "03",
+    "v": 50.5
+   },
+   {
+    "t": "04",
+    "v": 76.7
+   },
+   {
+    "t": "05",
+    "v": 77.6
+   },
+   {
+    "t": "06",
+    "v": 80.7
+   },
+   {
+    "t": "07",
+    "v": 74.0
+   },
+   {
+    "t": "08",
+    "v": 68.5
+   },
+   {
+    "t": "09",
+    "v": 69.4
+   },
+   {
+    "t": "10",
+    "v": 67.2
+   },
+   {
+    "t": "11",
+    "v": 71.8
+   },
+   {
+    "t": "12",
+    "v": 58.6
+   }
+  ]
+ },
+ {
+  "id": "normals-toronto-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "toronto",
+  "geo": {
+   "level": "station",
+   "id": "6158731",
+   "name": "TORONTO PEARSON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "TORONTO PEARSON (AIRPORT)",
+   "normalsCode": "B",
+   "year": "114.5"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 31.5
+   },
+   {
+    "t": "02",
+    "v": 27.7
+   },
+   {
+    "t": "03",
+    "v": 17.2
+   },
+   {
+    "t": "04",
+    "v": 4.5
+   },
+   {
+    "t": "05",
+    "v": 0.1
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 0.2
+   },
+   {
+    "t": "11",
+    "v": 9.3
+   },
+   {
+    "t": "12",
+    "v": 24.1
+   }
+  ]
+ },
+ {
+  "id": "normals-montreal-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "montreal",
+  "geo": {
+   "level": "station",
+   "id": "7025251",
+   "name": "MONTREAL TRUDEAU (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "MONTREAL TRUDEAU (AIRPORT)",
+   "normalsCode": "A",
+   "year": "7.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -9.2
+   },
+   {
+    "t": "02",
+    "v": -8.0
+   },
+   {
+    "t": "03",
+    "v": -2.0
+   },
+   {
+    "t": "04",
+    "v": 6.2
+   },
+   {
+    "t": "05",
+    "v": 13.9
+   },
+   {
+    "t": "06",
+    "v": 19.0
+   },
+   {
+    "t": "07",
+    "v": 21.7
+   },
+   {
+    "t": "08",
+    "v": 20.6
+   },
+   {
+    "t": "09",
+    "v": 16.0
+   },
+   {
+    "t": "10",
+    "v": 8.9
+   },
+   {
+    "t": "11",
+    "v": 2.3
+   },
+   {
+    "t": "12",
+    "v": -5.0
+   }
+  ]
+ },
+ {
+  "id": "normals-montreal-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "montreal",
+  "geo": {
+   "level": "station",
+   "id": "7025251",
+   "name": "MONTREAL TRUDEAU (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "MONTREAL TRUDEAU (AIRPORT)",
+   "normalsCode": "A",
+   "year": "11.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -5.0
+   },
+   {
+    "t": "02",
+    "v": -3.4
+   },
+   {
+    "t": "03",
+    "v": 2.4
+   },
+   {
+    "t": "04",
+    "v": 11.3
+   },
+   {
+    "t": "05",
+    "v": 19.4
+   },
+   {
+    "t": "06",
+    "v": 24.2
+   },
+   {
+    "t": "07",
+    "v": 26.7
+   },
+   {
+    "t": "08",
+    "v": 25.7
+   },
+   {
+    "t": "09",
+    "v": 21.1
+   },
+   {
+    "t": "10",
+    "v": 13.2
+   },
+   {
+    "t": "11",
+    "v": 6.1
+   },
+   {
+    "t": "12",
+    "v": -1.2
+   }
+  ]
+ },
+ {
+  "id": "normals-montreal-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "montreal",
+  "geo": {
+   "level": "station",
+   "id": "7025251",
+   "name": "MONTREAL TRUDEAU (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "MONTREAL TRUDEAU (AIRPORT)",
+   "normalsCode": "A",
+   "year": "2.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -13.5
+   },
+   {
+    "t": "02",
+    "v": -12.4
+   },
+   {
+    "t": "03",
+    "v": -6.5
+   },
+   {
+    "t": "04",
+    "v": 1.1
+   },
+   {
+    "t": "05",
+    "v": 8.3
+   },
+   {
+    "t": "06",
+    "v": 13.8
+   },
+   {
+    "t": "07",
+    "v": 16.7
+   },
+   {
+    "t": "08",
+    "v": 15.6
+   },
+   {
+    "t": "09",
+    "v": 10.9
+   },
+   {
+    "t": "10",
+    "v": 4.5
+   },
+   {
+    "t": "11",
+    "v": -1.7
+   },
+   {
+    "t": "12",
+    "v": -8.7
+   }
+  ]
+ },
+ {
+  "id": "normals-montreal-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "montreal",
+  "geo": {
+   "level": "station",
+   "id": "7025251",
+   "name": "MONTREAL TRUDEAU (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "MONTREAL TRUDEAU (AIRPORT)",
+   "normalsCode": "C",
+   "year": "1,040.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 85.8
+   },
+   {
+    "t": "02",
+    "v": 65.5
+   },
+   {
+    "t": "03",
+    "v": 77.2
+   },
+   {
+    "t": "04",
+    "v": 90.0
+   },
+   {
+    "t": "05",
+    "v": 85.6
+   },
+   {
+    "t": "06",
+    "v": 83.6
+   },
+   {
+    "t": "07",
+    "v": 91.1
+   },
+   {
+    "t": "08",
+    "v": 93.6
+   },
+   {
+    "t": "09",
+    "v": 89.2
+   },
+   {
+    "t": "10",
+    "v": 103.1
+   },
+   {
+    "t": "11",
+    "v": 84.2
+   },
+   {
+    "t": "12",
+    "v": 91.9
+   }
+  ]
+ },
+ {
+  "id": "normals-montreal-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "montreal",
+  "geo": {
+   "level": "station",
+   "id": "7025251",
+   "name": "MONTREAL TRUDEAU (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "MONTREAL TRUDEAU (AIRPORT)",
+   "normalsCode": "C",
+   "year": "216.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 52.0
+   },
+   {
+    "t": "02",
+    "v": 47.1
+   },
+   {
+    "t": "03",
+    "v": 37.1
+   },
+   {
+    "t": "04",
+    "v": 14.8
+   },
+   {
+    "t": "05",
+    "v": 0.0
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 1.1
+   },
+   {
+    "t": "11",
+    "v": 16.3
+   },
+   {
+    "t": "12",
+    "v": 48.2
+   }
+  ]
+ },
+ {
+  "id": "normals-vancouver-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "vancouver",
+  "geo": {
+   "level": "station",
+   "id": "1108447",
+   "name": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "normalsCode": "B",
+   "year": "10.5"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 4.1
+   },
+   {
+    "t": "02",
+    "v": 4.7
+   },
+   {
+    "t": "03",
+    "v": 6.7
+   },
+   {
+    "t": "04",
+    "v": 9.4
+   },
+   {
+    "t": "05",
+    "v": 13.0
+   },
+   {
+    "t": "06",
+    "v": 15.8
+   },
+   {
+    "t": "07",
+    "v": 18.2
+   },
+   {
+    "t": "08",
+    "v": 18.2
+   },
+   {
+    "t": "09",
+    "v": 15.2
+   },
+   {
+    "t": "10",
+    "v": 10.3
+   },
+   {
+    "t": "11",
+    "v": 6.4
+   },
+   {
+    "t": "12",
+    "v": 3.9
+   }
+  ]
+ },
+ {
+  "id": "normals-vancouver-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "vancouver",
+  "geo": {
+   "level": "station",
+   "id": "1108447",
+   "name": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "normalsCode": "B",
+   "year": "14.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 6.8
+   },
+   {
+    "t": "02",
+    "v": 7.9
+   },
+   {
+    "t": "03",
+    "v": 10.1
+   },
+   {
+    "t": "04",
+    "v": 13.1
+   },
+   {
+    "t": "05",
+    "v": 16.9
+   },
+   {
+    "t": "06",
+    "v": 19.6
+   },
+   {
+    "t": "07",
+    "v": 22.4
+   },
+   {
+    "t": "08",
+    "v": 22.4
+   },
+   {
+    "t": "09",
+    "v": 19.1
+   },
+   {
+    "t": "10",
+    "v": 13.5
+   },
+   {
+    "t": "11",
+    "v": 9.3
+   },
+   {
+    "t": "12",
+    "v": 6.6
+   }
+  ]
+ },
+ {
+  "id": "normals-vancouver-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "vancouver",
+  "geo": {
+   "level": "station",
+   "id": "1108447",
+   "name": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "normalsCode": "B",
+   "year": "7.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 1.4
+   },
+   {
+    "t": "02",
+    "v": 1.5
+   },
+   {
+    "t": "03",
+    "v": 3.3
+   },
+   {
+    "t": "04",
+    "v": 5.7
+   },
+   {
+    "t": "05",
+    "v": 9.0
+   },
+   {
+    "t": "06",
+    "v": 11.9
+   },
+   {
+    "t": "07",
+    "v": 13.9
+   },
+   {
+    "t": "08",
+    "v": 14.0
+   },
+   {
+    "t": "09",
+    "v": 11.2
+   },
+   {
+    "t": "10",
+    "v": 7.0
+   },
+   {
+    "t": "11",
+    "v": 3.6
+   },
+   {
+    "t": "12",
+    "v": 1.2
+   }
+  ]
+ },
+ {
+  "id": "normals-vancouver-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "vancouver",
+  "geo": {
+   "level": "station",
+   "id": "1108447",
+   "name": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "normalsCode": "C",
+   "year": "1,159.5"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 174.0
+   },
+   {
+    "t": "02",
+    "v": 90.8
+   },
+   {
+    "t": "03",
+    "v": 106.4
+   },
+   {
+    "t": "04",
+    "v": 85.5
+   },
+   {
+    "t": "05",
+    "v": 59.1
+   },
+   {
+    "t": "06",
+    "v": 51.1
+   },
+   {
+    "t": "07",
+    "v": 34.1
+   },
+   {
+    "t": "08",
+    "v": 36.1
+   },
+   {
+    "t": "09",
+    "v": 51.9
+   },
+   {
+    "t": "10",
+    "v": 123.9
+   },
+   {
+    "t": "11",
+    "v": 174.6
+   },
+   {
+    "t": "12",
+    "v": 172.2
+   }
+  ]
+ },
+ {
+  "id": "normals-vancouver-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "vancouver",
+  "geo": {
+   "level": "station",
+   "id": "1108447",
+   "name": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "VANCOUVER INTERNATIONAL (AIRPORT)",
+   "normalsCode": "C",
+   "year": "36.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 12.3
+   },
+   {
+    "t": "02",
+    "v": 4.5
+   },
+   {
+    "t": "03",
+    "v": 2.6
+   },
+   {
+    "t": "04",
+    "v": 0.1
+   },
+   {
+    "t": "05",
+    "v": 0.0
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 0.1
+   },
+   {
+    "t": "11",
+    "v": 3.2
+   },
+   {
+    "t": "12",
+    "v": 13.9
+   }
+  ]
+ },
+ {
+  "id": "normals-calgary-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "calgary",
+  "geo": {
+   "level": "station",
+   "id": "3031093",
+   "name": "CALGARY (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "CALGARY (AIRPORT)",
+   "normalsCode": "C",
+   "year": "4.5"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -7.6
+   },
+   {
+    "t": "02",
+    "v": -5.9
+   },
+   {
+    "t": "03",
+    "v": -2.2
+   },
+   {
+    "t": "04",
+    "v": 4.5
+   },
+   {
+    "t": "05",
+    "v": 9.9
+   },
+   {
+    "t": "06",
+    "v": 13.7
+   },
+   {
+    "t": "07",
+    "v": 16.9
+   },
+   {
+    "t": "08",
+    "v": 16.2
+   },
+   {
+    "t": "09",
+    "v": 11.5
+   },
+   {
+    "t": "10",
+    "v": 4.9
+   },
+   {
+    "t": "11",
+    "v": -1.7
+   },
+   {
+    "t": "12",
+    "v": -6.3
+   }
+  ]
+ },
+ {
+  "id": "normals-calgary-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "calgary",
+  "geo": {
+   "level": "station",
+   "id": "3031093",
+   "name": "CALGARY (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "CALGARY (AIRPORT)",
+   "normalsCode": "C",
+   "year": "10.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -1.5
+   },
+   {
+    "t": "02",
+    "v": 0.1
+   },
+   {
+    "t": "03",
+    "v": 3.8
+   },
+   {
+    "t": "04",
+    "v": 10.8
+   },
+   {
+    "t": "05",
+    "v": 16.4
+   },
+   {
+    "t": "06",
+    "v": 19.7
+   },
+   {
+    "t": "07",
+    "v": 23.5
+   },
+   {
+    "t": "08",
+    "v": 23.1
+   },
+   {
+    "t": "09",
+    "v": 18.3
+   },
+   {
+    "t": "10",
+    "v": 11.1
+   },
+   {
+    "t": "11",
+    "v": 4.1
+   },
+   {
+    "t": "12",
+    "v": -0.4
+   }
+  ]
+ },
+ {
+  "id": "normals-calgary-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "calgary",
+  "geo": {
+   "level": "station",
+   "id": "3031093",
+   "name": "CALGARY (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "CALGARY (AIRPORT)",
+   "normalsCode": "C",
+   "year": "-1.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -13.5
+   },
+   {
+    "t": "02",
+    "v": -11.8
+   },
+   {
+    "t": "03",
+    "v": -8.1
+   },
+   {
+    "t": "04",
+    "v": -1.9
+   },
+   {
+    "t": "05",
+    "v": 3.4
+   },
+   {
+    "t": "06",
+    "v": 7.7
+   },
+   {
+    "t": "07",
+    "v": 10.2
+   },
+   {
+    "t": "08",
+    "v": 9.2
+   },
+   {
+    "t": "09",
+    "v": 4.7
+   },
+   {
+    "t": "10",
+    "v": -1.3
+   },
+   {
+    "t": "11",
+    "v": -7.5
+   },
+   {
+    "t": "12",
+    "v": -12.1
+   }
+  ]
+ },
+ {
+  "id": "normals-calgary-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "calgary",
+  "geo": {
+   "level": "station",
+   "id": "3031093",
+   "name": "CALGARY (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "CALGARY (AIRPORT)",
+   "normalsCode": "C",
+   "year": "445.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 10.0
+   },
+   {
+    "t": "02",
+    "v": 11.8
+   },
+   {
+    "t": "03",
+    "v": 17.7
+   },
+   {
+    "t": "04",
+    "v": 29.6
+   },
+   {
+    "t": "05",
+    "v": 61.1
+   },
+   {
+    "t": "06",
+    "v": 112.7
+   },
+   {
+    "t": "07",
+    "v": 65.7
+   },
+   {
+    "t": "08",
+    "v": 53.8
+   },
+   {
+    "t": "09",
+    "v": 37.1
+   },
+   {
+    "t": "10",
+    "v": 17.1
+   },
+   {
+    "t": "11",
+    "v": 16.3
+   },
+   {
+    "t": "12",
+    "v": 12.5
+   }
+  ]
+ },
+ {
+  "id": "normals-calgary-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "calgary",
+  "geo": {
+   "level": "station",
+   "id": "3031093",
+   "name": "CALGARY (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "CALGARY (AIRPORT)",
+   "normalsCode": "C",
+   "year": "138.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 16.6
+   },
+   {
+    "t": "02",
+    "v": 16.9
+   },
+   {
+    "t": "03",
+    "v": 23.8
+   },
+   {
+    "t": "04",
+    "v": 22.9
+   },
+   {
+    "t": "05",
+    "v": 9.6
+   },
+   {
+    "t": "06",
+    "v": 0.2
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 2.2
+   },
+   {
+    "t": "10",
+    "v": 11.5
+   },
+   {
+    "t": "11",
+    "v": 18.8
+   },
+   {
+    "t": "12",
+    "v": 16.3
+   }
+  ]
+ },
+ {
+  "id": "normals-edmonton-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "edmonton",
+  "geo": {
+   "level": "station",
+   "id": "3012205",
+   "name": "EDMONTON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "EDMONTON (AIRPORT)",
+   "normalsCode": "A",
+   "year": "2.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -12.3
+   },
+   {
+    "t": "02",
+    "v": -10.4
+   },
+   {
+    "t": "03",
+    "v": -5.3
+   },
+   {
+    "t": "04",
+    "v": 3.5
+   },
+   {
+    "t": "05",
+    "v": 10.1
+   },
+   {
+    "t": "06",
+    "v": 14.1
+   },
+   {
+    "t": "07",
+    "v": 16.2
+   },
+   {
+    "t": "08",
+    "v": 15.1
+   },
+   {
+    "t": "09",
+    "v": 10.3
+   },
+   {
+    "t": "10",
+    "v": 3.4
+   },
+   {
+    "t": "11",
+    "v": -5.2
+   },
+   {
+    "t": "12",
+    "v": -11.0
+   }
+  ]
+ },
+ {
+  "id": "normals-edmonton-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "edmonton",
+  "geo": {
+   "level": "station",
+   "id": "3012205",
+   "name": "EDMONTON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "EDMONTON (AIRPORT)",
+   "normalsCode": "A",
+   "year": "8.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -6.5
+   },
+   {
+    "t": "02",
+    "v": -4.1
+   },
+   {
+    "t": "03",
+    "v": 0.5
+   },
+   {
+    "t": "04",
+    "v": 10.1
+   },
+   {
+    "t": "05",
+    "v": 17.6
+   },
+   {
+    "t": "06",
+    "v": 20.7
+   },
+   {
+    "t": "07",
+    "v": 23.0
+   },
+   {
+    "t": "08",
+    "v": 22.4
+   },
+   {
+    "t": "09",
+    "v": 17.8
+   },
+   {
+    "t": "10",
+    "v": 10.0
+   },
+   {
+    "t": "11",
+    "v": 0.2
+   },
+   {
+    "t": "12",
+    "v": -5.3
+   }
+  ]
+ },
+ {
+  "id": "normals-edmonton-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "edmonton",
+  "geo": {
+   "level": "station",
+   "id": "3012205",
+   "name": "EDMONTON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "EDMONTON (AIRPORT)",
+   "normalsCode": "A",
+   "year": "-4.1"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -18.1
+   },
+   {
+    "t": "02",
+    "v": -16.6
+   },
+   {
+    "t": "03",
+    "v": -11.2
+   },
+   {
+    "t": "04",
+    "v": -3.2
+   },
+   {
+    "t": "05",
+    "v": 2.7
+   },
+   {
+    "t": "06",
+    "v": 7.5
+   },
+   {
+    "t": "07",
+    "v": 9.4
+   },
+   {
+    "t": "08",
+    "v": 7.8
+   },
+   {
+    "t": "09",
+    "v": 2.8
+   },
+   {
+    "t": "10",
+    "v": -3.3
+   },
+   {
+    "t": "11",
+    "v": -10.6
+   },
+   {
+    "t": "12",
+    "v": -16.7
+   }
+  ]
+ },
+ {
+  "id": "normals-edmonton-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "edmonton",
+  "geo": {
+   "level": "station",
+   "id": "3012205",
+   "name": "EDMONTON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "EDMONTON (AIRPORT)",
+   "normalsCode": "B",
+   "year": "434.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 21.5
+   },
+   {
+    "t": "02",
+    "v": 12.4
+   },
+   {
+    "t": "03",
+    "v": 17.3
+   },
+   {
+    "t": "04",
+    "v": 29.8
+   },
+   {
+    "t": "05",
+    "v": 47.0
+   },
+   {
+    "t": "06",
+    "v": 74.7
+   },
+   {
+    "t": "07",
+    "v": 87.2
+   },
+   {
+    "t": "08",
+    "v": 52.6
+   },
+   {
+    "t": "09",
+    "v": 34.7
+   },
+   {
+    "t": "10",
+    "v": 22.3
+   },
+   {
+    "t": "11",
+    "v": 20.0
+   },
+   {
+    "t": "12",
+    "v": 14.6
+   }
+  ]
+ },
+ {
+  "id": "normals-edmonton-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "edmonton",
+  "geo": {
+   "level": "station",
+   "id": "3012205",
+   "name": "EDMONTON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "EDMONTON (AIRPORT)",
+   "normalsCode": "C",
+   "year": "126.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 24.2
+   },
+   {
+    "t": "02",
+    "v": 14.4
+   },
+   {
+    "t": "03",
+    "v": 19.2
+   },
+   {
+    "t": "04",
+    "v": 16.3
+   },
+   {
+    "t": "05",
+    "v": 6.4
+   },
+   {
+    "t": "06",
+    "v": 0.1
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.1
+   },
+   {
+    "t": "09",
+    "v": 0.6
+   },
+   {
+    "t": "10",
+    "v": 10.1
+   },
+   {
+    "t": "11",
+    "v": 19.1
+   },
+   {
+    "t": "12",
+    "v": 16.3
+   }
+  ]
+ },
+ {
+  "id": "normals-ottawa-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "ottawa",
+  "geo": {
+   "level": "station",
+   "id": "6106001",
+   "name": "OTTAWA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "OTTAWA (AIRPORT)",
+   "normalsCode": "B",
+   "year": "6.5"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -10.0
+   },
+   {
+    "t": "02",
+    "v": -8.5
+   },
+   {
+    "t": "03",
+    "v": -2.4
+   },
+   {
+    "t": "04",
+    "v": 5.9
+   },
+   {
+    "t": "05",
+    "v": 13.6
+   },
+   {
+    "t": "06",
+    "v": 18.7
+   },
+   {
+    "t": "07",
+    "v": 21.2
+   },
+   {
+    "t": "08",
+    "v": 20.1
+   },
+   {
+    "t": "09",
+    "v": 15.3
+   },
+   {
+    "t": "10",
+    "v": 8.2
+   },
+   {
+    "t": "11",
+    "v": 1.7
+   },
+   {
+    "t": "12",
+    "v": -5.8
+   }
+  ]
+ },
+ {
+  "id": "normals-ottawa-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "ottawa",
+  "geo": {
+   "level": "station",
+   "id": "6106001",
+   "name": "OTTAWA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "OTTAWA (AIRPORT)",
+   "normalsCode": "B",
+   "year": "11.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -5.5
+   },
+   {
+    "t": "02",
+    "v": -3.6
+   },
+   {
+    "t": "03",
+    "v": 2.4
+   },
+   {
+    "t": "04",
+    "v": 11.3
+   },
+   {
+    "t": "05",
+    "v": 19.6
+   },
+   {
+    "t": "06",
+    "v": 24.4
+   },
+   {
+    "t": "07",
+    "v": 27.0
+   },
+   {
+    "t": "08",
+    "v": 25.8
+   },
+   {
+    "t": "09",
+    "v": 21.0
+   },
+   {
+    "t": "10",
+    "v": 13.0
+   },
+   {
+    "t": "11",
+    "v": 5.8
+   },
+   {
+    "t": "12",
+    "v": -1.9
+   }
+  ]
+ },
+ {
+  "id": "normals-ottawa-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "ottawa",
+  "geo": {
+   "level": "station",
+   "id": "6106001",
+   "name": "OTTAWA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "OTTAWA (AIRPORT)",
+   "normalsCode": "B",
+   "year": "1.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -14.3
+   },
+   {
+    "t": "02",
+    "v": -13.2
+   },
+   {
+    "t": "03",
+    "v": -7.1
+   },
+   {
+    "t": "04",
+    "v": 0.5
+   },
+   {
+    "t": "05",
+    "v": 7.5
+   },
+   {
+    "t": "06",
+    "v": 12.9
+   },
+   {
+    "t": "07",
+    "v": 15.4
+   },
+   {
+    "t": "08",
+    "v": 14.3
+   },
+   {
+    "t": "09",
+    "v": 9.6
+   },
+   {
+    "t": "10",
+    "v": 3.4
+   },
+   {
+    "t": "11",
+    "v": -2.4
+   },
+   {
+    "t": "12",
+    "v": -9.6
+   }
+  ]
+ },
+ {
+  "id": "normals-ottawa-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "ottawa",
+  "geo": {
+   "level": "station",
+   "id": "6106001",
+   "name": "OTTAWA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "OTTAWA (AIRPORT)",
+   "normalsCode": "C",
+   "year": "929.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 70.4
+   },
+   {
+    "t": "02",
+    "v": 49.5
+   },
+   {
+    "t": "03",
+    "v": 66.3
+   },
+   {
+    "t": "04",
+    "v": 81.3
+   },
+   {
+    "t": "05",
+    "v": 74.8
+   },
+   {
+    "t": "06",
+    "v": 96.8
+   },
+   {
+    "t": "07",
+    "v": 88.5
+   },
+   {
+    "t": "08",
+    "v": 79.0
+   },
+   {
+    "t": "09",
+    "v": 89.6
+   },
+   {
+    "t": "10",
+    "v": 87.4
+   },
+   {
+    "t": "11",
+    "v": 73.9
+   },
+   {
+    "t": "12",
+    "v": 72.4
+   }
+  ]
+ },
+ {
+  "id": "normals-ottawa-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "ottawa",
+  "geo": {
+   "level": "station",
+   "id": "6106001",
+   "name": "OTTAWA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "OTTAWA (AIRPORT)",
+   "normalsCode": "C",
+   "year": "231.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 59.2
+   },
+   {
+    "t": "02",
+    "v": 48.5
+   },
+   {
+    "t": "03",
+    "v": 38.8
+   },
+   {
+    "t": "04",
+    "v": 12.2
+   },
+   {
+    "t": "05",
+    "v": 0.2
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 2.7
+   },
+   {
+    "t": "11",
+    "v": 20.7
+   },
+   {
+    "t": "12",
+    "v": 49.6
+   }
+  ]
+ },
+ {
+  "id": "normals-gatineau-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "gatineau",
+  "geo": {
+   "level": "station",
+   "id": "6106001",
+   "name": "OTTAWA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "OTTAWA (AIRPORT)",
+   "normalsCode": "B",
+   "year": "6.5"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -10.0
+   },
+   {
+    "t": "02",
+    "v": -8.5
+   },
+   {
+    "t": "03",
+    "v": -2.4
+   },
+   {
+    "t": "04",
+    "v": 5.9
+   },
+   {
+    "t": "05",
+    "v": 13.6
+   },
+   {
+    "t": "06",
+    "v": 18.7
+   },
+   {
+    "t": "07",
+    "v": 21.2
+   },
+   {
+    "t": "08",
+    "v": 20.1
+   },
+   {
+    "t": "09",
+    "v": 15.3
+   },
+   {
+    "t": "10",
+    "v": 8.2
+   },
+   {
+    "t": "11",
+    "v": 1.7
+   },
+   {
+    "t": "12",
+    "v": -5.8
+   }
+  ]
+ },
+ {
+  "id": "normals-gatineau-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "gatineau",
+  "geo": {
+   "level": "station",
+   "id": "6106001",
+   "name": "OTTAWA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "OTTAWA (AIRPORT)",
+   "normalsCode": "B",
+   "year": "11.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -5.5
+   },
+   {
+    "t": "02",
+    "v": -3.6
+   },
+   {
+    "t": "03",
+    "v": 2.4
+   },
+   {
+    "t": "04",
+    "v": 11.3
+   },
+   {
+    "t": "05",
+    "v": 19.6
+   },
+   {
+    "t": "06",
+    "v": 24.4
+   },
+   {
+    "t": "07",
+    "v": 27.0
+   },
+   {
+    "t": "08",
+    "v": 25.8
+   },
+   {
+    "t": "09",
+    "v": 21.0
+   },
+   {
+    "t": "10",
+    "v": 13.0
+   },
+   {
+    "t": "11",
+    "v": 5.8
+   },
+   {
+    "t": "12",
+    "v": -1.9
+   }
+  ]
+ },
+ {
+  "id": "normals-gatineau-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "gatineau",
+  "geo": {
+   "level": "station",
+   "id": "6106001",
+   "name": "OTTAWA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "OTTAWA (AIRPORT)",
+   "normalsCode": "B",
+   "year": "1.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -14.3
+   },
+   {
+    "t": "02",
+    "v": -13.2
+   },
+   {
+    "t": "03",
+    "v": -7.1
+   },
+   {
+    "t": "04",
+    "v": 0.5
+   },
+   {
+    "t": "05",
+    "v": 7.5
+   },
+   {
+    "t": "06",
+    "v": 12.9
+   },
+   {
+    "t": "07",
+    "v": 15.4
+   },
+   {
+    "t": "08",
+    "v": 14.3
+   },
+   {
+    "t": "09",
+    "v": 9.6
+   },
+   {
+    "t": "10",
+    "v": 3.4
+   },
+   {
+    "t": "11",
+    "v": -2.4
+   },
+   {
+    "t": "12",
+    "v": -9.6
+   }
+  ]
+ },
+ {
+  "id": "normals-gatineau-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "gatineau",
+  "geo": {
+   "level": "station",
+   "id": "6106001",
+   "name": "OTTAWA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "OTTAWA (AIRPORT)",
+   "normalsCode": "C",
+   "year": "929.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 70.4
+   },
+   {
+    "t": "02",
+    "v": 49.5
+   },
+   {
+    "t": "03",
+    "v": 66.3
+   },
+   {
+    "t": "04",
+    "v": 81.3
+   },
+   {
+    "t": "05",
+    "v": 74.8
+   },
+   {
+    "t": "06",
+    "v": 96.8
+   },
+   {
+    "t": "07",
+    "v": 88.5
+   },
+   {
+    "t": "08",
+    "v": 79.0
+   },
+   {
+    "t": "09",
+    "v": 89.6
+   },
+   {
+    "t": "10",
+    "v": 87.4
+   },
+   {
+    "t": "11",
+    "v": 73.9
+   },
+   {
+    "t": "12",
+    "v": 72.4
+   }
+  ]
+ },
+ {
+  "id": "normals-gatineau-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "gatineau",
+  "geo": {
+   "level": "station",
+   "id": "6106001",
+   "name": "OTTAWA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "OTTAWA (AIRPORT)",
+   "normalsCode": "C",
+   "year": "231.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 59.2
+   },
+   {
+    "t": "02",
+    "v": 48.5
+   },
+   {
+    "t": "03",
+    "v": 38.8
+   },
+   {
+    "t": "04",
+    "v": 12.2
+   },
+   {
+    "t": "05",
+    "v": 0.2
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 2.7
+   },
+   {
+    "t": "11",
+    "v": 20.7
+   },
+   {
+    "t": "12",
+    "v": 49.6
+   }
+  ]
+ },
+ {
+  "id": "normals-winnipeg-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "winnipeg",
+  "geo": {
+   "level": "station",
+   "id": "5023227",
+   "name": "WINNIPEG RICHARDSON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "WINNIPEG RICHARDSON (AIRPORT)",
+   "normalsCode": "A",
+   "year": "2.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -16.3
+   },
+   {
+    "t": "02",
+    "v": -14.1
+   },
+   {
+    "t": "03",
+    "v": -6.1
+   },
+   {
+    "t": "04",
+    "v": 3.8
+   },
+   {
+    "t": "05",
+    "v": 11.1
+   },
+   {
+    "t": "06",
+    "v": 17.1
+   },
+   {
+    "t": "07",
+    "v": 19.5
+   },
+   {
+    "t": "08",
+    "v": 18.7
+   },
+   {
+    "t": "09",
+    "v": 13.3
+   },
+   {
+    "t": "10",
+    "v": 5.1
+   },
+   {
+    "t": "11",
+    "v": -4.4
+   },
+   {
+    "t": "12",
+    "v": -12.7
+   }
+  ]
+ },
+ {
+  "id": "normals-winnipeg-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "winnipeg",
+  "geo": {
+   "level": "station",
+   "id": "5023227",
+   "name": "WINNIPEG RICHARDSON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "WINNIPEG RICHARDSON (AIRPORT)",
+   "normalsCode": "A",
+   "year": "8.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -11.4
+   },
+   {
+    "t": "02",
+    "v": -8.8
+   },
+   {
+    "t": "03",
+    "v": -0.9
+   },
+   {
+    "t": "04",
+    "v": 10.0
+   },
+   {
+    "t": "05",
+    "v": 18.1
+   },
+   {
+    "t": "06",
+    "v": 23.3
+   },
+   {
+    "t": "07",
+    "v": 25.8
+   },
+   {
+    "t": "08",
+    "v": 25.4
+   },
+   {
+    "t": "09",
+    "v": 19.6
+   },
+   {
+    "t": "10",
+    "v": 10.4
+   },
+   {
+    "t": "11",
+    "v": 0.1
+   },
+   {
+    "t": "12",
+    "v": -8.2
+   }
+  ]
+ },
+ {
+  "id": "normals-winnipeg-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "winnipeg",
+  "geo": {
+   "level": "station",
+   "id": "5023227",
+   "name": "WINNIPEG RICHARDSON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "WINNIPEG RICHARDSON (AIRPORT)",
+   "normalsCode": "A",
+   "year": "-2.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -21.2
+   },
+   {
+    "t": "02",
+    "v": -19.3
+   },
+   {
+    "t": "03",
+    "v": -11.2
+   },
+   {
+    "t": "04",
+    "v": -2.5
+   },
+   {
+    "t": "05",
+    "v": 4.2
+   },
+   {
+    "t": "06",
+    "v": 10.9
+   },
+   {
+    "t": "07",
+    "v": 13.2
+   },
+   {
+    "t": "08",
+    "v": 11.9
+   },
+   {
+    "t": "09",
+    "v": 6.9
+   },
+   {
+    "t": "10",
+    "v": -0.2
+   },
+   {
+    "t": "11",
+    "v": -8.8
+   },
+   {
+    "t": "12",
+    "v": -17.3
+   }
+  ]
+ },
+ {
+  "id": "normals-winnipeg-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "winnipeg",
+  "geo": {
+   "level": "station",
+   "id": "5023227",
+   "name": "WINNIPEG RICHARDSON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "WINNIPEG RICHARDSON (AIRPORT)",
+   "normalsCode": "C",
+   "year": "519.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 18.0
+   },
+   {
+    "t": "02",
+    "v": 13.3
+   },
+   {
+    "t": "03",
+    "v": 25.5
+   },
+   {
+    "t": "04",
+    "v": 32.5
+   },
+   {
+    "t": "05",
+    "v": 69.5
+   },
+   {
+    "t": "06",
+    "v": 74.3
+   },
+   {
+    "t": "07",
+    "v": 76.6
+   },
+   {
+    "t": "08",
+    "v": 74.3
+   },
+   {
+    "t": "09",
+    "v": 53.2
+   },
+   {
+    "t": "10",
+    "v": 38.1
+   },
+   {
+    "t": "11",
+    "v": 24.7
+   },
+   {
+    "t": "12",
+    "v": 19.4
+   }
+  ]
+ },
+ {
+  "id": "normals-winnipeg-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "winnipeg",
+  "geo": {
+   "level": "station",
+   "id": "5023227",
+   "name": "WINNIPEG RICHARDSON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "WINNIPEG RICHARDSON (AIRPORT)",
+   "normalsCode": "D",
+   "year": "126.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 25.0
+   },
+   {
+    "t": "02",
+    "v": 11.8
+   },
+   {
+    "t": "03",
+    "v": 19.2
+   },
+   {
+    "t": "04",
+    "v": 13.6
+   },
+   {
+    "t": "05",
+    "v": 4.1
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 4.2
+   },
+   {
+    "t": "11",
+    "v": 21.1
+   },
+   {
+    "t": "12",
+    "v": 27.2
+   }
+  ]
+ },
+ {
+  "id": "normals-quebec-city-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "quebec-city",
+  "geo": {
+   "level": "station",
+   "id": "701S001",
+   "name": "QUEBEC JEAN LESAGE (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "QUEBEC JEAN LESAGE (AIRPORT)",
+   "normalsCode": "A",
+   "year": "4.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -11.9
+   },
+   {
+    "t": "02",
+    "v": -10.4
+   },
+   {
+    "t": "03",
+    "v": -4.5
+   },
+   {
+    "t": "04",
+    "v": 3.5
+   },
+   {
+    "t": "05",
+    "v": 11.6
+   },
+   {
+    "t": "06",
+    "v": 16.7
+   },
+   {
+    "t": "07",
+    "v": 19.5
+   },
+   {
+    "t": "08",
+    "v": 18.4
+   },
+   {
+    "t": "09",
+    "v": 13.7
+   },
+   {
+    "t": "10",
+    "v": 6.8
+   },
+   {
+    "t": "11",
+    "v": -0.1
+   },
+   {
+    "t": "12",
+    "v": -7.3
+   }
+  ]
+ },
+ {
+  "id": "normals-quebec-city-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "quebec-city",
+  "geo": {
+   "level": "station",
+   "id": "701S001",
+   "name": "QUEBEC JEAN LESAGE (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "QUEBEC JEAN LESAGE (AIRPORT)",
+   "normalsCode": "A",
+   "year": "9.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -7.1
+   },
+   {
+    "t": "02",
+    "v": -5.0
+   },
+   {
+    "t": "03",
+    "v": 0.4
+   },
+   {
+    "t": "04",
+    "v": 8.3
+   },
+   {
+    "t": "05",
+    "v": 17.5
+   },
+   {
+    "t": "06",
+    "v": 22.5
+   },
+   {
+    "t": "07",
+    "v": 25.0
+   },
+   {
+    "t": "08",
+    "v": 24.0
+   },
+   {
+    "t": "09",
+    "v": 19.1
+   },
+   {
+    "t": "10",
+    "v": 11.3
+   },
+   {
+    "t": "11",
+    "v": 3.6
+   },
+   {
+    "t": "12",
+    "v": -3.3
+   }
+  ]
+ },
+ {
+  "id": "normals-quebec-city-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "quebec-city",
+  "geo": {
+   "level": "station",
+   "id": "701S001",
+   "name": "QUEBEC JEAN LESAGE (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "QUEBEC JEAN LESAGE (AIRPORT)",
+   "normalsCode": "A",
+   "year": "-0.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -16.7
+   },
+   {
+    "t": "02",
+    "v": -15.7
+   },
+   {
+    "t": "03",
+    "v": -9.3
+   },
+   {
+    "t": "04",
+    "v": -1.2
+   },
+   {
+    "t": "05",
+    "v": 5.6
+   },
+   {
+    "t": "06",
+    "v": 10.8
+   },
+   {
+    "t": "07",
+    "v": 13.9
+   },
+   {
+    "t": "08",
+    "v": 12.8
+   },
+   {
+    "t": "09",
+    "v": 8.3
+   },
+   {
+    "t": "10",
+    "v": 2.4
+   },
+   {
+    "t": "11",
+    "v": -3.8
+   },
+   {
+    "t": "12",
+    "v": -11.4
+   }
+  ]
+ },
+ {
+  "id": "normals-quebec-city-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "quebec-city",
+  "geo": {
+   "level": "station",
+   "id": "701S001",
+   "name": "QUEBEC JEAN LESAGE (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "QUEBEC JEAN LESAGE (AIRPORT)",
+   "normalsCode": "C",
+   "year": "1,172.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 86.7
+   },
+   {
+    "t": "02",
+    "v": 65.7
+   },
+   {
+    "t": "03",
+    "v": 77.7
+   },
+   {
+    "t": "04",
+    "v": 94.4
+   },
+   {
+    "t": "05",
+    "v": 91.8
+   },
+   {
+    "t": "06",
+    "v": 114.7
+   },
+   {
+    "t": "07",
+    "v": 118.7
+   },
+   {
+    "t": "08",
+    "v": 108.7
+   },
+   {
+    "t": "09",
+    "v": 111.3
+   },
+   {
+    "t": "10",
+    "v": 115.8
+   },
+   {
+    "t": "11",
+    "v": 90.9
+   },
+   {
+    "t": "12",
+    "v": 96.2
+   }
+  ]
+ },
+ {
+  "id": "normals-hamilton-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "hamilton",
+  "geo": {
+   "level": "station",
+   "id": "6153194",
+   "name": "HAMILTON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "HAMILTON",
+   "normalsCode": "C",
+   "year": "8.1"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -5.3
+   },
+   {
+    "t": "02",
+    "v": -5.0
+   },
+   {
+    "t": "03",
+    "v": 0.2
+   },
+   {
+    "t": "04",
+    "v": 6.5
+   },
+   {
+    "t": "05",
+    "v": 13.1
+   },
+   {
+    "t": "06",
+    "v": 18.5
+   },
+   {
+    "t": "07",
+    "v": 20.9
+   },
+   {
+    "t": "08",
+    "v": 20.1
+   },
+   {
+    "t": "09",
+    "v": 16.1
+   },
+   {
+    "t": "10",
+    "v": 9.7
+   },
+   {
+    "t": "11",
+    "v": 3.8
+   },
+   {
+    "t": "12",
+    "v": -1.9
+   }
+  ]
+ },
+ {
+  "id": "normals-hamilton-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "hamilton",
+  "geo": {
+   "level": "station",
+   "id": "6153194",
+   "name": "HAMILTON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "HAMILTON",
+   "normalsCode": "C",
+   "year": "12.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -1.4
+   },
+   {
+    "t": "02",
+    "v": -0.9
+   },
+   {
+    "t": "03",
+    "v": 4.7
+   },
+   {
+    "t": "04",
+    "v": 11.8
+   },
+   {
+    "t": "05",
+    "v": 18.9
+   },
+   {
+    "t": "06",
+    "v": 24.2
+   },
+   {
+    "t": "07",
+    "v": 26.6
+   },
+   {
+    "t": "08",
+    "v": 25.6
+   },
+   {
+    "t": "09",
+    "v": 21.7
+   },
+   {
+    "t": "10",
+    "v": 14.5
+   },
+   {
+    "t": "11",
+    "v": 7.7
+   },
+   {
+    "t": "12",
+    "v": 1.5
+   }
+  ]
+ },
+ {
+  "id": "normals-hamilton-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "hamilton",
+  "geo": {
+   "level": "station",
+   "id": "6153194",
+   "name": "HAMILTON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "HAMILTON",
+   "normalsCode": "C",
+   "year": "3.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -9.1
+   },
+   {
+    "t": "02",
+    "v": -9.2
+   },
+   {
+    "t": "03",
+    "v": -4.4
+   },
+   {
+    "t": "04",
+    "v": 1.3
+   },
+   {
+    "t": "05",
+    "v": 7.3
+   },
+   {
+    "t": "06",
+    "v": 12.8
+   },
+   {
+    "t": "07",
+    "v": 15.2
+   },
+   {
+    "t": "08",
+    "v": 14.5
+   },
+   {
+    "t": "09",
+    "v": 10.5
+   },
+   {
+    "t": "10",
+    "v": 4.8
+   },
+   {
+    "t": "11",
+    "v": -0.2
+   },
+   {
+    "t": "12",
+    "v": -5.4
+   }
+  ]
+ },
+ {
+  "id": "normals-hamilton-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "hamilton",
+  "geo": {
+   "level": "station",
+   "id": "6153194",
+   "name": "HAMILTON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "HAMILTON",
+   "normalsCode": "C",
+   "year": "902.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 72.9
+   },
+   {
+    "t": "02",
+    "v": 53.4
+   },
+   {
+    "t": "03",
+    "v": 68.7
+   },
+   {
+    "t": "04",
+    "v": 81.3
+   },
+   {
+    "t": "05",
+    "v": 81.0
+   },
+   {
+    "t": "06",
+    "v": 77.6
+   },
+   {
+    "t": "07",
+    "v": 97.5
+   },
+   {
+    "t": "08",
+    "v": 66.8
+   },
+   {
+    "t": "09",
+    "v": 73.5
+   },
+   {
+    "t": "10",
+    "v": 84.2
+   },
+   {
+    "t": "11",
+    "v": 78.1
+   },
+   {
+    "t": "12",
+    "v": 67.3
+   }
+  ]
+ },
+ {
+  "id": "normals-kitchener-waterloo-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "kitchener-waterloo",
+  "geo": {
+   "level": "station",
+   "id": "6144239",
+   "name": "KITCHENER/WATERLOO",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "KITCHENER/WATERLOO",
+   "normalsCode": "A",
+   "year": "7.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -6.3
+   },
+   {
+    "t": "02",
+    "v": -5.9
+   },
+   {
+    "t": "03",
+    "v": -0.8
+   },
+   {
+    "t": "04",
+    "v": 5.9
+   },
+   {
+    "t": "05",
+    "v": 12.6
+   },
+   {
+    "t": "06",
+    "v": 17.8
+   },
+   {
+    "t": "07",
+    "v": 20.2
+   },
+   {
+    "t": "08",
+    "v": 19.1
+   },
+   {
+    "t": "09",
+    "v": 15.2
+   },
+   {
+    "t": "10",
+    "v": 8.8
+   },
+   {
+    "t": "11",
+    "v": 2.6
+   },
+   {
+    "t": "12",
+    "v": -2.8
+   }
+  ]
+ },
+ {
+  "id": "normals-kitchener-waterloo-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "kitchener-waterloo",
+  "geo": {
+   "level": "station",
+   "id": "6144239",
+   "name": "KITCHENER/WATERLOO",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "KITCHENER/WATERLOO",
+   "normalsCode": "A",
+   "year": "12.5"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -2.3
+   },
+   {
+    "t": "02",
+    "v": -1.4
+   },
+   {
+    "t": "03",
+    "v": 4.1
+   },
+   {
+    "t": "04",
+    "v": 11.6
+   },
+   {
+    "t": "05",
+    "v": 19.0
+   },
+   {
+    "t": "06",
+    "v": 24.1
+   },
+   {
+    "t": "07",
+    "v": 26.6
+   },
+   {
+    "t": "08",
+    "v": 25.5
+   },
+   {
+    "t": "09",
+    "v": 21.6
+   },
+   {
+    "t": "10",
+    "v": 14.1
+   },
+   {
+    "t": "11",
+    "v": 6.8
+   },
+   {
+    "t": "12",
+    "v": 0.7
+   }
+  ]
+ },
+ {
+  "id": "normals-kitchener-waterloo-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "kitchener-waterloo",
+  "geo": {
+   "level": "station",
+   "id": "6144239",
+   "name": "KITCHENER/WATERLOO",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "KITCHENER/WATERLOO",
+   "normalsCode": "A",
+   "year": "1.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -10.3
+   },
+   {
+    "t": "02",
+    "v": -10.3
+   },
+   {
+    "t": "03",
+    "v": -5.6
+   },
+   {
+    "t": "04",
+    "v": 0.1
+   },
+   {
+    "t": "05",
+    "v": 6.2
+   },
+   {
+    "t": "06",
+    "v": 11.5
+   },
+   {
+    "t": "07",
+    "v": 13.7
+   },
+   {
+    "t": "08",
+    "v": 12.7
+   },
+   {
+    "t": "09",
+    "v": 8.7
+   },
+   {
+    "t": "10",
+    "v": 3.4
+   },
+   {
+    "t": "11",
+    "v": -1.6
+   },
+   {
+    "t": "12",
+    "v": -6.3
+   }
+  ]
+ },
+ {
+  "id": "normals-kitchener-waterloo-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "kitchener-waterloo",
+  "geo": {
+   "level": "station",
+   "id": "6144239",
+   "name": "KITCHENER/WATERLOO",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "KITCHENER/WATERLOO",
+   "normalsCode": "D",
+   "year": "850.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 66.3
+   },
+   {
+    "t": "02",
+    "v": 46.1
+   },
+   {
+    "t": "03",
+    "v": 57.0
+   },
+   {
+    "t": "04",
+    "v": 81.2
+   },
+   {
+    "t": "05",
+    "v": 80.2
+   },
+   {
+    "t": "06",
+    "v": 80.5
+   },
+   {
+    "t": "07",
+    "v": 96.2
+   },
+   {
+    "t": "08",
+    "v": 67.2
+   },
+   {
+    "t": "09",
+    "v": 75.2
+   },
+   {
+    "t": "10",
+    "v": 71.0
+   },
+   {
+    "t": "11",
+    "v": 74.9
+   },
+   {
+    "t": "12",
+    "v": 54.9
+   }
+  ]
+ },
+ {
+  "id": "normals-london-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "london",
+  "geo": {
+   "level": "station",
+   "id": "6144473",
+   "name": "LONDON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "LONDON",
+   "normalsCode": "A",
+   "year": "8.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -5.4
+   },
+   {
+    "t": "02",
+    "v": -4.8
+   },
+   {
+    "t": "03",
+    "v": 0.1
+   },
+   {
+    "t": "04",
+    "v": 6.8
+   },
+   {
+    "t": "05",
+    "v": 13.5
+   },
+   {
+    "t": "06",
+    "v": 18.8
+   },
+   {
+    "t": "07",
+    "v": 21.0
+   },
+   {
+    "t": "08",
+    "v": 20.1
+   },
+   {
+    "t": "09",
+    "v": 16.3
+   },
+   {
+    "t": "10",
+    "v": 9.9
+   },
+   {
+    "t": "11",
+    "v": 3.6
+   },
+   {
+    "t": "12",
+    "v": -2.0
+   }
+  ]
+ },
+ {
+  "id": "normals-london-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "london",
+  "geo": {
+   "level": "station",
+   "id": "6144473",
+   "name": "LONDON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "LONDON",
+   "normalsCode": "A",
+   "year": "13.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -1.6
+   },
+   {
+    "t": "02",
+    "v": -0.6
+   },
+   {
+    "t": "03",
+    "v": 4.6
+   },
+   {
+    "t": "04",
+    "v": 12.2
+   },
+   {
+    "t": "05",
+    "v": 19.3
+   },
+   {
+    "t": "06",
+    "v": 24.4
+   },
+   {
+    "t": "07",
+    "v": 26.6
+   },
+   {
+    "t": "08",
+    "v": 25.7
+   },
+   {
+    "t": "09",
+    "v": 22.1
+   },
+   {
+    "t": "10",
+    "v": 14.7
+   },
+   {
+    "t": "11",
+    "v": 7.5
+   },
+   {
+    "t": "12",
+    "v": 1.4
+   }
+  ]
+ },
+ {
+  "id": "normals-london-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "london",
+  "geo": {
+   "level": "station",
+   "id": "6144473",
+   "name": "LONDON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "LONDON",
+   "normalsCode": "A",
+   "year": "3.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -9.1
+   },
+   {
+    "t": "02",
+    "v": -9.0
+   },
+   {
+    "t": "03",
+    "v": -4.5
+   },
+   {
+    "t": "04",
+    "v": 1.4
+   },
+   {
+    "t": "05",
+    "v": 7.7
+   },
+   {
+    "t": "06",
+    "v": 13.2
+   },
+   {
+    "t": "07",
+    "v": 15.3
+   },
+   {
+    "t": "08",
+    "v": 14.4
+   },
+   {
+    "t": "09",
+    "v": 10.5
+   },
+   {
+    "t": "10",
+    "v": 5.0
+   },
+   {
+    "t": "11",
+    "v": -0.3
+   },
+   {
+    "t": "12",
+    "v": -5.2
+   }
+  ]
+ },
+ {
+  "id": "normals-london-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "london",
+  "geo": {
+   "level": "station",
+   "id": "6144473",
+   "name": "LONDON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "LONDON",
+   "normalsCode": "C",
+   "year": "961.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 78.6
+   },
+   {
+    "t": "02",
+    "v": 62.8
+   },
+   {
+    "t": "03",
+    "v": 67.4
+   },
+   {
+    "t": "04",
+    "v": 88.5
+   },
+   {
+    "t": "05",
+    "v": 88.8
+   },
+   {
+    "t": "06",
+    "v": 85.9
+   },
+   {
+    "t": "07",
+    "v": 80.5
+   },
+   {
+    "t": "08",
+    "v": 66.9
+   },
+   {
+    "t": "09",
+    "v": 92.7
+   },
+   {
+    "t": "10",
+    "v": 82.6
+   },
+   {
+    "t": "11",
+    "v": 87.7
+   },
+   {
+    "t": "12",
+    "v": 79.2
+   }
+  ]
+ },
+ {
+  "id": "normals-halifax-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "halifax",
+  "geo": {
+   "level": "station",
+   "id": "8202251",
+   "name": "HALIFAX STANFIELD (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "HALIFAX STANFIELD (AIRPORT)",
+   "normalsCode": "B",
+   "year": "6.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -5.7
+   },
+   {
+    "t": "02",
+    "v": -5.2
+   },
+   {
+    "t": "03",
+    "v": -0.9
+   },
+   {
+    "t": "04",
+    "v": 4.5
+   },
+   {
+    "t": "05",
+    "v": 10.1
+   },
+   {
+    "t": "06",
+    "v": 15.2
+   },
+   {
+    "t": "07",
+    "v": 19.2
+   },
+   {
+    "t": "08",
+    "v": 19.2
+   },
+   {
+    "t": "09",
+    "v": 15.2
+   },
+   {
+    "t": "10",
+    "v": 9.2
+   },
+   {
+    "t": "11",
+    "v": 3.8
+   },
+   {
+    "t": "12",
+    "v": -1.9
+   }
+  ]
+ },
+ {
+  "id": "normals-halifax-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "halifax",
+  "geo": {
+   "level": "station",
+   "id": "8202251",
+   "name": "HALIFAX STANFIELD (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "HALIFAX STANFIELD (AIRPORT)",
+   "normalsCode": "B",
+   "year": "11.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -1.2
+   },
+   {
+    "t": "02",
+    "v": -0.6
+   },
+   {
+    "t": "03",
+    "v": 3.5
+   },
+   {
+    "t": "04",
+    "v": 9.2
+   },
+   {
+    "t": "05",
+    "v": 15.5
+   },
+   {
+    "t": "06",
+    "v": 20.5
+   },
+   {
+    "t": "07",
+    "v": 24.2
+   },
+   {
+    "t": "08",
+    "v": 24.2
+   },
+   {
+    "t": "09",
+    "v": 20.0
+   },
+   {
+    "t": "10",
+    "v": 13.7
+   },
+   {
+    "t": "11",
+    "v": 7.6
+   },
+   {
+    "t": "12",
+    "v": 2.1
+   }
+  ]
+ },
+ {
+  "id": "normals-halifax-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "halifax",
+  "geo": {
+   "level": "station",
+   "id": "8202251",
+   "name": "HALIFAX STANFIELD (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "HALIFAX STANFIELD (AIRPORT)",
+   "normalsCode": "B",
+   "year": "2.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -10.1
+   },
+   {
+    "t": "02",
+    "v": -9.7
+   },
+   {
+    "t": "03",
+    "v": -5.4
+   },
+   {
+    "t": "04",
+    "v": -0.3
+   },
+   {
+    "t": "05",
+    "v": 4.6
+   },
+   {
+    "t": "06",
+    "v": 9.8
+   },
+   {
+    "t": "07",
+    "v": 14.2
+   },
+   {
+    "t": "08",
+    "v": 14.1
+   },
+   {
+    "t": "09",
+    "v": 10.2
+   },
+   {
+    "t": "10",
+    "v": 4.7
+   },
+   {
+    "t": "11",
+    "v": 0.0
+   },
+   {
+    "t": "12",
+    "v": -5.8
+   }
+  ]
+ },
+ {
+  "id": "normals-halifax-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "halifax",
+  "geo": {
+   "level": "station",
+   "id": "8202251",
+   "name": "HALIFAX STANFIELD (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "HALIFAX STANFIELD (AIRPORT)",
+   "normalsCode": "C",
+   "year": "1,393.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 125.9
+   },
+   {
+    "t": "02",
+    "v": 111.0
+   },
+   {
+    "t": "03",
+    "v": 120.2
+   },
+   {
+    "t": "04",
+    "v": 106.4
+   },
+   {
+    "t": "05",
+    "v": 109.7
+   },
+   {
+    "t": "06",
+    "v": 89.8
+   },
+   {
+    "t": "07",
+    "v": 86.7
+   },
+   {
+    "t": "08",
+    "v": 90.5
+   },
+   {
+    "t": "09",
+    "v": 107.3
+   },
+   {
+    "t": "10",
+    "v": 139.8
+   },
+   {
+    "t": "11",
+    "v": 159.1
+   },
+   {
+    "t": "12",
+    "v": 146.9
+   }
+  ]
+ },
+ {
+  "id": "normals-halifax-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "halifax",
+  "geo": {
+   "level": "station",
+   "id": "8202251",
+   "name": "HALIFAX STANFIELD (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "HALIFAX STANFIELD (AIRPORT)",
+   "normalsCode": "C",
+   "year": "215.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 53.9
+   },
+   {
+    "t": "02",
+    "v": 44.3
+   },
+   {
+    "t": "03",
+    "v": 34.4
+   },
+   {
+    "t": "04",
+    "v": 16.6
+   },
+   {
+    "t": "05",
+    "v": 2.1
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 0.6
+   },
+   {
+    "t": "11",
+    "v": 19.4
+   },
+   {
+    "t": "12",
+    "v": 44.1
+   }
+  ]
+ },
+ {
+  "id": "normals-victoria-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "victoria",
+  "geo": {
+   "level": "station",
+   "id": "1018620",
+   "name": "VICTORIA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "VICTORIA (AIRPORT)",
+   "normalsCode": "A",
+   "year": "10.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 4.6
+   },
+   {
+    "t": "02",
+    "v": 5.0
+   },
+   {
+    "t": "03",
+    "v": 6.8
+   },
+   {
+    "t": "04",
+    "v": 9.1
+   },
+   {
+    "t": "05",
+    "v": 12.6
+   },
+   {
+    "t": "06",
+    "v": 15.2
+   },
+   {
+    "t": "07",
+    "v": 17.2
+   },
+   {
+    "t": "08",
+    "v": 17.1
+   },
+   {
+    "t": "09",
+    "v": 14.5
+   },
+   {
+    "t": "10",
+    "v": 10.2
+   },
+   {
+    "t": "11",
+    "v": 6.5
+   },
+   {
+    "t": "12",
+    "v": 4.4
+   }
+  ]
+ },
+ {
+  "id": "normals-victoria-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "victoria",
+  "geo": {
+   "level": "station",
+   "id": "1018620",
+   "name": "VICTORIA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "VICTORIA (AIRPORT)",
+   "normalsCode": "A",
+   "year": "14.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 7.5
+   },
+   {
+    "t": "02",
+    "v": 8.7
+   },
+   {
+    "t": "03",
+    "v": 10.8
+   },
+   {
+    "t": "04",
+    "v": 13.7
+   },
+   {
+    "t": "05",
+    "v": 17.5
+   },
+   {
+    "t": "06",
+    "v": 20.2
+   },
+   {
+    "t": "07",
+    "v": 22.7
+   },
+   {
+    "t": "08",
+    "v": 22.6
+   },
+   {
+    "t": "09",
+    "v": 19.7
+   },
+   {
+    "t": "10",
+    "v": 14.3
+   },
+   {
+    "t": "11",
+    "v": 9.9
+   },
+   {
+    "t": "12",
+    "v": 7.3
+   }
+  ]
+ },
+ {
+  "id": "normals-victoria-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "victoria",
+  "geo": {
+   "level": "station",
+   "id": "1018620",
+   "name": "VICTORIA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "VICTORIA (AIRPORT)",
+   "normalsCode": "A",
+   "year": "5.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 1.6
+   },
+   {
+    "t": "02",
+    "v": 1.4
+   },
+   {
+    "t": "03",
+    "v": 2.7
+   },
+   {
+    "t": "04",
+    "v": 4.6
+   },
+   {
+    "t": "05",
+    "v": 7.6
+   },
+   {
+    "t": "06",
+    "v": 10.1
+   },
+   {
+    "t": "07",
+    "v": 11.7
+   },
+   {
+    "t": "08",
+    "v": 11.6
+   },
+   {
+    "t": "09",
+    "v": 9.2
+   },
+   {
+    "t": "10",
+    "v": 6.0
+   },
+   {
+    "t": "11",
+    "v": 3.0
+   },
+   {
+    "t": "12",
+    "v": 1.5
+   }
+  ]
+ },
+ {
+  "id": "normals-victoria-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "victoria",
+  "geo": {
+   "level": "station",
+   "id": "1018620",
+   "name": "VICTORIA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "VICTORIA (AIRPORT)",
+   "normalsCode": "C",
+   "year": "901.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 155.3
+   },
+   {
+    "t": "02",
+    "v": 84.5
+   },
+   {
+    "t": "03",
+    "v": 79.9
+   },
+   {
+    "t": "04",
+    "v": 48.2
+   },
+   {
+    "t": "05",
+    "v": 36.5
+   },
+   {
+    "t": "06",
+    "v": 29.2
+   },
+   {
+    "t": "07",
+    "v": 19.5
+   },
+   {
+    "t": "08",
+    "v": 24.2
+   },
+   {
+    "t": "09",
+    "v": 35.7
+   },
+   {
+    "t": "10",
+    "v": 96.1
+   },
+   {
+    "t": "11",
+    "v": 146.0
+   },
+   {
+    "t": "12",
+    "v": 146.1
+   }
+  ]
+ },
+ {
+  "id": "normals-victoria-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "victoria",
+  "geo": {
+   "level": "station",
+   "id": "1018620",
+   "name": "VICTORIA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "VICTORIA (AIRPORT)",
+   "normalsCode": "C",
+   "year": "38.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 11.2
+   },
+   {
+    "t": "02",
+    "v": 7.1
+   },
+   {
+    "t": "03",
+    "v": 3.7
+   },
+   {
+    "t": "04",
+    "v": 0.5
+   },
+   {
+    "t": "05",
+    "v": 0.0
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 0.2
+   },
+   {
+    "t": "11",
+    "v": 3.6
+   },
+   {
+    "t": "12",
+    "v": 12.4
+   }
+  ]
+ },
+ {
+  "id": "normals-saskatoon-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "saskatoon",
+  "geo": {
+   "level": "station",
+   "id": "4057152",
+   "name": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "normalsCode": "A",
+   "year": "2.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -15.4
+   },
+   {
+    "t": "02",
+    "v": -13.4
+   },
+   {
+    "t": "03",
+    "v": -6.1
+   },
+   {
+    "t": "04",
+    "v": 3.9
+   },
+   {
+    "t": "05",
+    "v": 10.9
+   },
+   {
+    "t": "06",
+    "v": 15.6
+   },
+   {
+    "t": "07",
+    "v": 18.3
+   },
+   {
+    "t": "08",
+    "v": 17.4
+   },
+   {
+    "t": "09",
+    "v": 11.9
+   },
+   {
+    "t": "10",
+    "v": 3.7
+   },
+   {
+    "t": "11",
+    "v": -5.6
+   },
+   {
+    "t": "12",
+    "v": -13.0
+   }
+  ]
+ },
+ {
+  "id": "normals-saskatoon-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "saskatoon",
+  "geo": {
+   "level": "station",
+   "id": "4057152",
+   "name": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "normalsCode": "A",
+   "year": "8.5"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -10.0
+   },
+   {
+    "t": "02",
+    "v": -7.9
+   },
+   {
+    "t": "03",
+    "v": -0.7
+   },
+   {
+    "t": "04",
+    "v": 10.5
+   },
+   {
+    "t": "05",
+    "v": 18.3
+   },
+   {
+    "t": "06",
+    "v": 22.1
+   },
+   {
+    "t": "07",
+    "v": 25.0
+   },
+   {
+    "t": "08",
+    "v": 24.8
+   },
+   {
+    "t": "09",
+    "v": 19.1
+   },
+   {
+    "t": "10",
+    "v": 9.9
+   },
+   {
+    "t": "11",
+    "v": -0.7
+   },
+   {
+    "t": "12",
+    "v": -8.0
+   }
+  ]
+ },
+ {
+  "id": "normals-saskatoon-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "saskatoon",
+  "geo": {
+   "level": "station",
+   "id": "4057152",
+   "name": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "normalsCode": "A",
+   "year": "-3.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -20.7
+   },
+   {
+    "t": "02",
+    "v": -18.9
+   },
+   {
+    "t": "03",
+    "v": -11.4
+   },
+   {
+    "t": "04",
+    "v": -2.6
+   },
+   {
+    "t": "05",
+    "v": 3.4
+   },
+   {
+    "t": "06",
+    "v": 9.0
+   },
+   {
+    "t": "07",
+    "v": 11.5
+   },
+   {
+    "t": "08",
+    "v": 10.0
+   },
+   {
+    "t": "09",
+    "v": 4.7
+   },
+   {
+    "t": "10",
+    "v": -2.4
+   },
+   {
+    "t": "11",
+    "v": -10.4
+   },
+   {
+    "t": "12",
+    "v": -18.0
+   }
+  ]
+ },
+ {
+  "id": "normals-saskatoon-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "saskatoon",
+  "geo": {
+   "level": "station",
+   "id": "4057152",
+   "name": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "normalsCode": "C",
+   "year": "357.1"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 14.2
+   },
+   {
+    "t": "02",
+    "v": 9.1
+   },
+   {
+    "t": "03",
+    "v": 13.6
+   },
+   {
+    "t": "04",
+    "v": 23.0
+   },
+   {
+    "t": "05",
+    "v": 42.3
+   },
+   {
+    "t": "06",
+    "v": 75.0
+   },
+   {
+    "t": "07",
+    "v": 58.8
+   },
+   {
+    "t": "08",
+    "v": 42.5
+   },
+   {
+    "t": "09",
+    "v": 32.2
+   },
+   {
+    "t": "10",
+    "v": 20.8
+   },
+   {
+    "t": "11",
+    "v": 14.2
+   },
+   {
+    "t": "12",
+    "v": 11.6
+   }
+  ]
+ },
+ {
+  "id": "normals-saskatoon-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "saskatoon",
+  "geo": {
+   "level": "station",
+   "id": "4057152",
+   "name": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "SASKATOON DIEFENBAKER (AIRPORT)",
+   "normalsCode": "D",
+   "year": "91.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 19.7
+   },
+   {
+    "t": "02",
+    "v": 11.2
+   },
+   {
+    "t": "03",
+    "v": 13.9
+   },
+   {
+    "t": "04",
+    "v": 7.5
+   },
+   {
+    "t": "05",
+    "v": 1.3
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.3
+   },
+   {
+    "t": "10",
+    "v": 7.4
+   },
+   {
+    "t": "11",
+    "v": 13.0
+   },
+   {
+    "t": "12",
+    "v": 16.7
+   }
+  ]
+ },
+ {
+  "id": "normals-regina-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "regina",
+  "geo": {
+   "level": "station",
+   "id": "4016560",
+   "name": "REGINA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "REGINA (AIRPORT)",
+   "normalsCode": "A",
+   "year": "2.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -14.7
+   },
+   {
+    "t": "02",
+    "v": -12.7
+   },
+   {
+    "t": "03",
+    "v": -5.5
+   },
+   {
+    "t": "04",
+    "v": 3.9
+   },
+   {
+    "t": "05",
+    "v": 11.0
+   },
+   {
+    "t": "06",
+    "v": 15.9
+   },
+   {
+    "t": "07",
+    "v": 18.6
+   },
+   {
+    "t": "08",
+    "v": 17.9
+   },
+   {
+    "t": "09",
+    "v": 12.4
+   },
+   {
+    "t": "10",
+    "v": 4.2
+   },
+   {
+    "t": "11",
+    "v": -5.0
+   },
+   {
+    "t": "12",
+    "v": -12.1
+   }
+  ]
+ },
+ {
+  "id": "normals-regina-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "regina",
+  "geo": {
+   "level": "station",
+   "id": "4016560",
+   "name": "REGINA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "REGINA (AIRPORT)",
+   "normalsCode": "A",
+   "year": "9.1"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -9.3
+   },
+   {
+    "t": "02",
+    "v": -7.3
+   },
+   {
+    "t": "03",
+    "v": -0.2
+   },
+   {
+    "t": "04",
+    "v": 10.6
+   },
+   {
+    "t": "05",
+    "v": 18.5
+   },
+   {
+    "t": "06",
+    "v": 22.5
+   },
+   {
+    "t": "07",
+    "v": 25.6
+   },
+   {
+    "t": "08",
+    "v": 25.4
+   },
+   {
+    "t": "09",
+    "v": 19.8
+   },
+   {
+    "t": "10",
+    "v": 10.6
+   },
+   {
+    "t": "11",
+    "v": 0.4
+   },
+   {
+    "t": "12",
+    "v": -7.0
+   }
+  ]
+ },
+ {
+  "id": "normals-regina-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "regina",
+  "geo": {
+   "level": "station",
+   "id": "4016560",
+   "name": "REGINA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "REGINA (AIRPORT)",
+   "normalsCode": "A",
+   "year": "-3.5"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -20.0
+   },
+   {
+    "t": "02",
+    "v": -18.1
+   },
+   {
+    "t": "03",
+    "v": -10.8
+   },
+   {
+    "t": "04",
+    "v": -2.8
+   },
+   {
+    "t": "05",
+    "v": 3.4
+   },
+   {
+    "t": "06",
+    "v": 9.3
+   },
+   {
+    "t": "07",
+    "v": 11.6
+   },
+   {
+    "t": "08",
+    "v": 10.3
+   },
+   {
+    "t": "09",
+    "v": 4.9
+   },
+   {
+    "t": "10",
+    "v": -2.4
+   },
+   {
+    "t": "11",
+    "v": -10.3
+   },
+   {
+    "t": "12",
+    "v": -17.1
+   }
+  ]
+ },
+ {
+  "id": "normals-regina-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "regina",
+  "geo": {
+   "level": "station",
+   "id": "4016560",
+   "name": "REGINA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "REGINA (AIRPORT)",
+   "normalsCode": "C",
+   "year": "390.1"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 12.8
+   },
+   {
+    "t": "02",
+    "v": 8.6
+   },
+   {
+    "t": "03",
+    "v": 15.4
+   },
+   {
+    "t": "04",
+    "v": 27.1
+   },
+   {
+    "t": "05",
+    "v": 46.5
+   },
+   {
+    "t": "06",
+    "v": 84.6
+   },
+   {
+    "t": "07",
+    "v": 60.0
+   },
+   {
+    "t": "08",
+    "v": 50.1
+   },
+   {
+    "t": "09",
+    "v": 31.6
+   },
+   {
+    "t": "10",
+    "v": 25.0
+   },
+   {
+    "t": "11",
+    "v": 14.7
+   },
+   {
+    "t": "12",
+    "v": 13.7
+   }
+  ]
+ },
+ {
+  "id": "normals-regina-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "regina",
+  "geo": {
+   "level": "station",
+   "id": "4016560",
+   "name": "REGINA (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "REGINA (AIRPORT)",
+   "normalsCode": "D",
+   "year": "104.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 20.1
+   },
+   {
+    "t": "02",
+    "v": 11.4
+   },
+   {
+    "t": "03",
+    "v": 18.8
+   },
+   {
+    "t": "04",
+    "v": 8.9
+   },
+   {
+    "t": "05",
+    "v": 3.9
+   },
+   {
+    "t": "06",
+    "v": 0.1
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.1
+   },
+   {
+    "t": "10",
+    "v": 5.9
+   },
+   {
+    "t": "11",
+    "v": 14.2
+   },
+   {
+    "t": "12",
+    "v": 21.4
+   }
+  ]
+ },
+ {
+  "id": "normals-st-johns-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "st-johns",
+  "geo": {
+   "level": "station",
+   "id": "8403505",
+   "name": "ST. JOHN'S (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "ST. JOHN'S (AIRPORT)",
+   "normalsCode": "C",
+   "year": "5.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -4.2
+   },
+   {
+    "t": "02",
+    "v": -4.7
+   },
+   {
+    "t": "03",
+    "v": -2.2
+   },
+   {
+    "t": "04",
+    "v": 1.8
+   },
+   {
+    "t": "05",
+    "v": 6.3
+   },
+   {
+    "t": "06",
+    "v": 10.8
+   },
+   {
+    "t": "07",
+    "v": 16.0
+   },
+   {
+    "t": "08",
+    "v": 16.5
+   },
+   {
+    "t": "09",
+    "v": 12.8
+   },
+   {
+    "t": "10",
+    "v": 7.8
+   },
+   {
+    "t": "11",
+    "v": 3.4
+   },
+   {
+    "t": "12",
+    "v": -1.0
+   }
+  ]
+ },
+ {
+  "id": "normals-st-johns-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "st-johns",
+  "geo": {
+   "level": "station",
+   "id": "8403505",
+   "name": "ST. JOHN'S (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "ST. JOHN'S (AIRPORT)",
+   "normalsCode": "C",
+   "year": "9.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -0.7
+   },
+   {
+    "t": "02",
+    "v": -1.0
+   },
+   {
+    "t": "03",
+    "v": 1.2
+   },
+   {
+    "t": "04",
+    "v": 5.6
+   },
+   {
+    "t": "05",
+    "v": 11.0
+   },
+   {
+    "t": "06",
+    "v": 15.7
+   },
+   {
+    "t": "07",
+    "v": 20.9
+   },
+   {
+    "t": "08",
+    "v": 20.8
+   },
+   {
+    "t": "09",
+    "v": 17.0
+   },
+   {
+    "t": "10",
+    "v": 11.2
+   },
+   {
+    "t": "11",
+    "v": 6.7
+   },
+   {
+    "t": "12",
+    "v": 2.1
+   }
+  ]
+ },
+ {
+  "id": "normals-st-johns-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "st-johns",
+  "geo": {
+   "level": "station",
+   "id": "8403505",
+   "name": "ST. JOHN'S (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "ST. JOHN'S (AIRPORT)",
+   "normalsCode": "C",
+   "year": "1.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -7.8
+   },
+   {
+    "t": "02",
+    "v": -8.4
+   },
+   {
+    "t": "03",
+    "v": -5.7
+   },
+   {
+    "t": "04",
+    "v": -1.9
+   },
+   {
+    "t": "05",
+    "v": 1.6
+   },
+   {
+    "t": "06",
+    "v": 5.9
+   },
+   {
+    "t": "07",
+    "v": 11.2
+   },
+   {
+    "t": "08",
+    "v": 12.1
+   },
+   {
+    "t": "09",
+    "v": 8.5
+   },
+   {
+    "t": "10",
+    "v": 4.3
+   },
+   {
+    "t": "11",
+    "v": 0.0
+   },
+   {
+    "t": "12",
+    "v": -4.1
+   }
+  ]
+ },
+ {
+  "id": "normals-st-johns-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "st-johns",
+  "geo": {
+   "level": "station",
+   "id": "8403505",
+   "name": "ST. JOHN'S (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "ST. JOHN'S (AIRPORT)",
+   "normalsCode": "C",
+   "year": "1,538.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 153.0
+   },
+   {
+    "t": "02",
+    "v": 122.8
+   },
+   {
+    "t": "03",
+    "v": 140.1
+   },
+   {
+    "t": "04",
+    "v": 121.6
+   },
+   {
+    "t": "05",
+    "v": 98.1
+   },
+   {
+    "t": "06",
+    "v": 88.2
+   },
+   {
+    "t": "07",
+    "v": 100.1
+   },
+   {
+    "t": "08",
+    "v": 99.8
+   },
+   {
+    "t": "09",
+    "v": 125.8
+   },
+   {
+    "t": "10",
+    "v": 158.1
+   },
+   {
+    "t": "11",
+    "v": 157.4
+   },
+   {
+    "t": "12",
+    "v": 173.9
+   }
+  ]
+ },
+ {
+  "id": "normals-st-johns-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "st-johns",
+  "geo": {
+   "level": "station",
+   "id": "8403505",
+   "name": "ST. JOHN'S (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "ST. JOHN'S (AIRPORT)",
+   "normalsCode": "C",
+   "year": "363.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 95.4
+   },
+   {
+    "t": "02",
+    "v": 77.1
+   },
+   {
+    "t": "03",
+    "v": 62.0
+   },
+   {
+    "t": "04",
+    "v": 29.5
+   },
+   {
+    "t": "05",
+    "v": 4.5
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 2.3
+   },
+   {
+    "t": "11",
+    "v": 22.3
+   },
+   {
+    "t": "12",
+    "v": 70.3
+   }
+  ]
+ },
+ {
+  "id": "normals-windsor-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "windsor",
+  "geo": {
+   "level": "station",
+   "id": "6139525",
+   "name": "WINDSOR",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "WINDSOR",
+   "normalsCode": "B",
+   "year": "10.1"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -3.6
+   },
+   {
+    "t": "02",
+    "v": -2.6
+   },
+   {
+    "t": "03",
+    "v": 2.4
+   },
+   {
+    "t": "04",
+    "v": 8.8
+   },
+   {
+    "t": "05",
+    "v": 15.3
+   },
+   {
+    "t": "06",
+    "v": 20.8
+   },
+   {
+    "t": "07",
+    "v": 23.2
+   },
+   {
+    "t": "08",
+    "v": 22.1
+   },
+   {
+    "t": "09",
+    "v": 18.1
+   },
+   {
+    "t": "10",
+    "v": 11.6
+   },
+   {
+    "t": "11",
+    "v": 5.2
+   },
+   {
+    "t": "12",
+    "v": -0.4
+   }
+  ]
+ },
+ {
+  "id": "normals-windsor-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "windsor",
+  "geo": {
+   "level": "station",
+   "id": "6139525",
+   "name": "WINDSOR",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "WINDSOR",
+   "normalsCode": "A",
+   "year": "14.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 0.0
+   },
+   {
+    "t": "02",
+    "v": 1.3
+   },
+   {
+    "t": "03",
+    "v": 6.8
+   },
+   {
+    "t": "04",
+    "v": 14.0
+   },
+   {
+    "t": "05",
+    "v": 20.7
+   },
+   {
+    "t": "06",
+    "v": 26.0
+   },
+   {
+    "t": "07",
+    "v": 28.3
+   },
+   {
+    "t": "08",
+    "v": 27.0
+   },
+   {
+    "t": "09",
+    "v": 23.1
+   },
+   {
+    "t": "10",
+    "v": 16.1
+   },
+   {
+    "t": "11",
+    "v": 8.9
+   },
+   {
+    "t": "12",
+    "v": 2.7
+   }
+  ]
+ },
+ {
+  "id": "normals-windsor-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "windsor",
+  "geo": {
+   "level": "station",
+   "id": "6139525",
+   "name": "WINDSOR",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "WINDSOR",
+   "normalsCode": "B",
+   "year": "5.5"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -7.1
+   },
+   {
+    "t": "02",
+    "v": -6.4
+   },
+   {
+    "t": "03",
+    "v": -2.1
+   },
+   {
+    "t": "04",
+    "v": 3.5
+   },
+   {
+    "t": "05",
+    "v": 9.8
+   },
+   {
+    "t": "06",
+    "v": 15.5
+   },
+   {
+    "t": "07",
+    "v": 18.0
+   },
+   {
+    "t": "08",
+    "v": 17.1
+   },
+   {
+    "t": "09",
+    "v": 13.0
+   },
+   {
+    "t": "10",
+    "v": 6.9
+   },
+   {
+    "t": "11",
+    "v": 1.4
+   },
+   {
+    "t": "12",
+    "v": -3.5
+   }
+  ]
+ },
+ {
+  "id": "normals-windsor-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "windsor",
+  "geo": {
+   "level": "station",
+   "id": "6139525",
+   "name": "WINDSOR",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "WINDSOR",
+   "normalsCode": "C",
+   "year": "953.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 70.8
+   },
+   {
+    "t": "02",
+    "v": 60.0
+   },
+   {
+    "t": "03",
+    "v": 71.0
+   },
+   {
+    "t": "04",
+    "v": 92.2
+   },
+   {
+    "t": "05",
+    "v": 97.3
+   },
+   {
+    "t": "06",
+    "v": 82.9
+   },
+   {
+    "t": "07",
+    "v": 99.3
+   },
+   {
+    "t": "08",
+    "v": 75.7
+   },
+   {
+    "t": "09",
+    "v": 88.3
+   },
+   {
+    "t": "10",
+    "v": 73.9
+   },
+   {
+    "t": "11",
+    "v": 73.2
+   },
+   {
+    "t": "12",
+    "v": 69.2
+   }
+  ]
+ },
+ {
+  "id": "normals-windsor-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "windsor",
+  "geo": {
+   "level": "station",
+   "id": "6139525",
+   "name": "WINDSOR",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "WINDSOR",
+   "normalsCode": "C",
+   "year": "139.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 43.4
+   },
+   {
+    "t": "02",
+    "v": 33.2
+   },
+   {
+    "t": "03",
+    "v": 22.5
+   },
+   {
+    "t": "04",
+    "v": 5.6
+   },
+   {
+    "t": "05",
+    "v": 0.0
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 0.2
+   },
+   {
+    "t": "11",
+    "v": 5.0
+   },
+   {
+    "t": "12",
+    "v": 29.9
+   }
+  ]
+ },
+ {
+  "id": "normals-kelowna-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "kelowna",
+  "geo": {
+   "level": "station",
+   "id": "1123939",
+   "name": "KELOWNA",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "KELOWNA",
+   "normalsCode": "A",
+   "year": "8.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -2.6
+   },
+   {
+    "t": "02",
+    "v": -1.0
+   },
+   {
+    "t": "03",
+    "v": 3.8
+   },
+   {
+    "t": "04",
+    "v": 8.2
+   },
+   {
+    "t": "05",
+    "v": 13.0
+   },
+   {
+    "t": "06",
+    "v": 16.6
+   },
+   {
+    "t": "07",
+    "v": 20.0
+   },
+   {
+    "t": "08",
+    "v": 19.3
+   },
+   {
+    "t": "09",
+    "v": 14.3
+   },
+   {
+    "t": "10",
+    "v": 7.3
+   },
+   {
+    "t": "11",
+    "v": 1.8
+   },
+   {
+    "t": "12",
+    "v": -2.3
+   }
+  ]
+ },
+ {
+  "id": "normals-kelowna-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "kelowna",
+  "geo": {
+   "level": "station",
+   "id": "1123939",
+   "name": "KELOWNA",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "KELOWNA",
+   "normalsCode": "A",
+   "year": "14.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 0.7
+   },
+   {
+    "t": "02",
+    "v": 3.5
+   },
+   {
+    "t": "03",
+    "v": 9.8
+   },
+   {
+    "t": "04",
+    "v": 15.4
+   },
+   {
+    "t": "05",
+    "v": 20.6
+   },
+   {
+    "t": "06",
+    "v": 24.0
+   },
+   {
+    "t": "07",
+    "v": 28.5
+   },
+   {
+    "t": "08",
+    "v": 28.2
+   },
+   {
+    "t": "09",
+    "v": 22.2
+   },
+   {
+    "t": "10",
+    "v": 13.2
+   },
+   {
+    "t": "11",
+    "v": 5.8
+   },
+   {
+    "t": "12",
+    "v": 1.1
+   }
+  ]
+ },
+ {
+  "id": "normals-kelowna-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "kelowna",
+  "geo": {
+   "level": "station",
+   "id": "1123939",
+   "name": "KELOWNA",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "KELOWNA",
+   "normalsCode": "A",
+   "year": "1.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -5.9
+   },
+   {
+    "t": "02",
+    "v": -5.4
+   },
+   {
+    "t": "03",
+    "v": -2.2
+   },
+   {
+    "t": "04",
+    "v": 0.9
+   },
+   {
+    "t": "05",
+    "v": 5.3
+   },
+   {
+    "t": "06",
+    "v": 9.1
+   },
+   {
+    "t": "07",
+    "v": 11.4
+   },
+   {
+    "t": "08",
+    "v": 10.5
+   },
+   {
+    "t": "09",
+    "v": 6.3
+   },
+   {
+    "t": "10",
+    "v": 1.4
+   },
+   {
+    "t": "11",
+    "v": -2.4
+   },
+   {
+    "t": "12",
+    "v": -5.6
+   }
+  ]
+ },
+ {
+  "id": "normals-abbotsford-mission-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "abbotsford-mission",
+  "geo": {
+   "level": "station",
+   "id": "1100030",
+   "name": "ABBOTSFORD",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "ABBOTSFORD",
+   "normalsCode": "A",
+   "year": "10.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 3.7
+   },
+   {
+    "t": "02",
+    "v": 5.1
+   },
+   {
+    "t": "03",
+    "v": 7.2
+   },
+   {
+    "t": "04",
+    "v": 10.0
+   },
+   {
+    "t": "05",
+    "v": 13.6
+   },
+   {
+    "t": "06",
+    "v": 16.0
+   },
+   {
+    "t": "07",
+    "v": 18.5
+   },
+   {
+    "t": "08",
+    "v": 18.7
+   },
+   {
+    "t": "09",
+    "v": 15.7
+   },
+   {
+    "t": "10",
+    "v": 10.7
+   },
+   {
+    "t": "11",
+    "v": 6.2
+   },
+   {
+    "t": "12",
+    "v": 3.5
+   }
+  ]
+ },
+ {
+  "id": "normals-abbotsford-mission-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "abbotsford-mission",
+  "geo": {
+   "level": "station",
+   "id": "1100030",
+   "name": "ABBOTSFORD",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "ABBOTSFORD",
+   "normalsCode": "A",
+   "year": "15.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 6.7
+   },
+   {
+    "t": "02",
+    "v": 8.9
+   },
+   {
+    "t": "03",
+    "v": 11.4
+   },
+   {
+    "t": "04",
+    "v": 14.8
+   },
+   {
+    "t": "05",
+    "v": 18.8
+   },
+   {
+    "t": "06",
+    "v": 21.0
+   },
+   {
+    "t": "07",
+    "v": 24.4
+   },
+   {
+    "t": "08",
+    "v": 24.8
+   },
+   {
+    "t": "09",
+    "v": 21.4
+   },
+   {
+    "t": "10",
+    "v": 15.0
+   },
+   {
+    "t": "11",
+    "v": 9.5
+   },
+   {
+    "t": "12",
+    "v": 6.3
+   }
+  ]
+ },
+ {
+  "id": "normals-abbotsford-mission-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "abbotsford-mission",
+  "geo": {
+   "level": "station",
+   "id": "1100030",
+   "name": "ABBOTSFORD",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "ABBOTSFORD",
+   "normalsCode": "A",
+   "year": "6.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 0.6
+   },
+   {
+    "t": "02",
+    "v": 1.3
+   },
+   {
+    "t": "03",
+    "v": 2.9
+   },
+   {
+    "t": "04",
+    "v": 5.2
+   },
+   {
+    "t": "05",
+    "v": 8.4
+   },
+   {
+    "t": "06",
+    "v": 10.9
+   },
+   {
+    "t": "07",
+    "v": 12.7
+   },
+   {
+    "t": "08",
+    "v": 12.6
+   },
+   {
+    "t": "09",
+    "v": 9.9
+   },
+   {
+    "t": "10",
+    "v": 6.4
+   },
+   {
+    "t": "11",
+    "v": 2.7
+   },
+   {
+    "t": "12",
+    "v": 0.6
+   }
+  ]
+ },
+ {
+  "id": "normals-abbotsford-mission-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "abbotsford-mission",
+  "geo": {
+   "level": "station",
+   "id": "1100030",
+   "name": "ABBOTSFORD",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "ABBOTSFORD",
+   "normalsCode": "C",
+   "year": "1,504.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 225.6
+   },
+   {
+    "t": "02",
+    "v": 117.1
+   },
+   {
+    "t": "03",
+    "v": 145.5
+   },
+   {
+    "t": "04",
+    "v": 114.4
+   },
+   {
+    "t": "05",
+    "v": 94.0
+   },
+   {
+    "t": "06",
+    "v": 69.6
+   },
+   {
+    "t": "07",
+    "v": 39.2
+   },
+   {
+    "t": "08",
+    "v": 47.1
+   },
+   {
+    "t": "09",
+    "v": 77.6
+   },
+   {
+    "t": "10",
+    "v": 144.4
+   },
+   {
+    "t": "11",
+    "v": 233.1
+   },
+   {
+    "t": "12",
+    "v": 197.3
+   }
+  ]
+ },
+ {
+  "id": "normals-abbotsford-mission-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "abbotsford-mission",
+  "geo": {
+   "level": "station",
+   "id": "1100030",
+   "name": "ABBOTSFORD",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "ABBOTSFORD",
+   "normalsCode": "C",
+   "year": "56.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 22.1
+   },
+   {
+    "t": "02",
+    "v": 7.2
+   },
+   {
+    "t": "03",
+    "v": 5.2
+   },
+   {
+    "t": "04",
+    "v": 0.8
+   },
+   {
+    "t": "05",
+    "v": 0.0
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 0.0
+   },
+   {
+    "t": "11",
+    "v": 7.1
+   },
+   {
+    "t": "12",
+    "v": 14.0
+   }
+  ]
+ },
+ {
+  "id": "normals-moncton-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "moncton",
+  "geo": {
+   "level": "station",
+   "id": "8103200",
+   "name": "MONCTON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "MONCTON",
+   "normalsCode": "C",
+   "year": "5.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -8.4
+   },
+   {
+    "t": "02",
+    "v": -7.6
+   },
+   {
+    "t": "03",
+    "v": -2.6
+   },
+   {
+    "t": "04",
+    "v": 3.6
+   },
+   {
+    "t": "05",
+    "v": 10.0
+   },
+   {
+    "t": "06",
+    "v": 15.3
+   },
+   {
+    "t": "07",
+    "v": 19.3
+   },
+   {
+    "t": "08",
+    "v": 18.7
+   },
+   {
+    "t": "09",
+    "v": 14.2
+   },
+   {
+    "t": "10",
+    "v": 8.1
+   },
+   {
+    "t": "11",
+    "v": 2.1
+   },
+   {
+    "t": "12",
+    "v": -4.4
+   }
+  ]
+ },
+ {
+  "id": "normals-moncton-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "moncton",
+  "geo": {
+   "level": "station",
+   "id": "8103200",
+   "name": "MONCTON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "MONCTON",
+   "normalsCode": "C",
+   "year": "11.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -3.5
+   },
+   {
+    "t": "02",
+    "v": -2.5
+   },
+   {
+    "t": "03",
+    "v": 2.2
+   },
+   {
+    "t": "04",
+    "v": 8.6
+   },
+   {
+    "t": "05",
+    "v": 16.1
+   },
+   {
+    "t": "06",
+    "v": 21.3
+   },
+   {
+    "t": "07",
+    "v": 25.1
+   },
+   {
+    "t": "08",
+    "v": 24.7
+   },
+   {
+    "t": "09",
+    "v": 20.2
+   },
+   {
+    "t": "10",
+    "v": 13.2
+   },
+   {
+    "t": "11",
+    "v": 6.3
+   },
+   {
+    "t": "12",
+    "v": 0.0
+   }
+  ]
+ },
+ {
+  "id": "normals-moncton-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "moncton",
+  "geo": {
+   "level": "station",
+   "id": "8103200",
+   "name": "MONCTON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "MONCTON",
+   "normalsCode": "C",
+   "year": "0.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -13.3
+   },
+   {
+    "t": "02",
+    "v": -12.7
+   },
+   {
+    "t": "03",
+    "v": -7.4
+   },
+   {
+    "t": "04",
+    "v": -1.5
+   },
+   {
+    "t": "05",
+    "v": 3.9
+   },
+   {
+    "t": "06",
+    "v": 9.2
+   },
+   {
+    "t": "07",
+    "v": 13.4
+   },
+   {
+    "t": "08",
+    "v": 12.7
+   },
+   {
+    "t": "09",
+    "v": 8.1
+   },
+   {
+    "t": "10",
+    "v": 2.9
+   },
+   {
+    "t": "11",
+    "v": -2.2
+   },
+   {
+    "t": "12",
+    "v": -8.7
+   }
+  ]
+ },
+ {
+  "id": "normals-moncton-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "moncton",
+  "geo": {
+   "level": "station",
+   "id": "8103200",
+   "name": "MONCTON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "MONCTON",
+   "normalsCode": "C",
+   "year": "1,203.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 102.4
+   },
+   {
+    "t": "02",
+    "v": 87.7
+   },
+   {
+    "t": "03",
+    "v": 110.8
+   },
+   {
+    "t": "04",
+    "v": 94.2
+   },
+   {
+    "t": "05",
+    "v": 98.4
+   },
+   {
+    "t": "06",
+    "v": 95.4
+   },
+   {
+    "t": "07",
+    "v": 87.1
+   },
+   {
+    "t": "08",
+    "v": 77.2
+   },
+   {
+    "t": "09",
+    "v": 102.9
+   },
+   {
+    "t": "10",
+    "v": 123.5
+   },
+   {
+    "t": "11",
+    "v": 108.5
+   },
+   {
+    "t": "12",
+    "v": 115.2
+   }
+  ]
+ },
+ {
+  "id": "normals-moncton-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "moncton",
+  "geo": {
+   "level": "station",
+   "id": "8103200",
+   "name": "MONCTON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "MONCTON",
+   "normalsCode": "C",
+   "year": "309.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 73.9
+   },
+   {
+    "t": "02",
+    "v": 65.0
+   },
+   {
+    "t": "03",
+    "v": 60.3
+   },
+   {
+    "t": "04",
+    "v": 29.2
+   },
+   {
+    "t": "05",
+    "v": 2.3
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 1.6
+   },
+   {
+    "t": "11",
+    "v": 18.7
+   },
+   {
+    "t": "12",
+    "v": 59.0
+   }
+  ]
+ },
+ {
+  "id": "normals-saint-john-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "saint-john",
+  "geo": {
+   "level": "station",
+   "id": "8104900",
+   "name": "SAINT JOHN",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "SAINT JOHN",
+   "normalsCode": "C",
+   "year": "5.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -7.9
+   },
+   {
+    "t": "02",
+    "v": -7.1
+   },
+   {
+    "t": "03",
+    "v": -2.6
+   },
+   {
+    "t": "04",
+    "v": 3.7
+   },
+   {
+    "t": "05",
+    "v": 9.4
+   },
+   {
+    "t": "06",
+    "v": 14.1
+   },
+   {
+    "t": "07",
+    "v": 17.3
+   },
+   {
+    "t": "08",
+    "v": 17.1
+   },
+   {
+    "t": "09",
+    "v": 13.1
+   },
+   {
+    "t": "10",
+    "v": 7.9
+   },
+   {
+    "t": "11",
+    "v": 2.4
+   },
+   {
+    "t": "12",
+    "v": -3.5
+   }
+  ]
+ },
+ {
+  "id": "normals-saint-john-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "saint-john",
+  "geo": {
+   "level": "station",
+   "id": "8104900",
+   "name": "SAINT JOHN",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "SAINT JOHN",
+   "normalsCode": "C",
+   "year": "10.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -2.5
+   },
+   {
+    "t": "02",
+    "v": -1.6
+   },
+   {
+    "t": "03",
+    "v": 2.6
+   },
+   {
+    "t": "04",
+    "v": 8.8
+   },
+   {
+    "t": "05",
+    "v": 15.3
+   },
+   {
+    "t": "06",
+    "v": 20.0
+   },
+   {
+    "t": "07",
+    "v": 23.0
+   },
+   {
+    "t": "08",
+    "v": 23.0
+   },
+   {
+    "t": "09",
+    "v": 18.8
+   },
+   {
+    "t": "10",
+    "v": 13.0
+   },
+   {
+    "t": "11",
+    "v": 6.9
+   },
+   {
+    "t": "12",
+    "v": 1.3
+   }
+  ]
+ },
+ {
+  "id": "normals-saint-john-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "saint-john",
+  "geo": {
+   "level": "station",
+   "id": "8104900",
+   "name": "SAINT JOHN",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "SAINT JOHN",
+   "normalsCode": "C",
+   "year": "-0.1"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -13.2
+   },
+   {
+    "t": "02",
+    "v": -12.6
+   },
+   {
+    "t": "03",
+    "v": -7.7
+   },
+   {
+    "t": "04",
+    "v": -1.6
+   },
+   {
+    "t": "05",
+    "v": 3.5
+   },
+   {
+    "t": "06",
+    "v": 8.1
+   },
+   {
+    "t": "07",
+    "v": 11.6
+   },
+   {
+    "t": "08",
+    "v": 11.2
+   },
+   {
+    "t": "09",
+    "v": 7.4
+   },
+   {
+    "t": "10",
+    "v": 2.6
+   },
+   {
+    "t": "11",
+    "v": -2.0
+   },
+   {
+    "t": "12",
+    "v": -8.3
+   }
+  ]
+ },
+ {
+  "id": "normals-saint-john-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "saint-john",
+  "geo": {
+   "level": "station",
+   "id": "8104900",
+   "name": "SAINT JOHN",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "SAINT JOHN",
+   "normalsCode": "C",
+   "year": "1,271.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 116.1
+   },
+   {
+    "t": "02",
+    "v": 91.9
+   },
+   {
+    "t": "03",
+    "v": 107.3
+   },
+   {
+    "t": "04",
+    "v": 100.2
+   },
+   {
+    "t": "05",
+    "v": 93.9
+   },
+   {
+    "t": "06",
+    "v": 86.8
+   },
+   {
+    "t": "07",
+    "v": 89.5
+   },
+   {
+    "t": "08",
+    "v": 73.0
+   },
+   {
+    "t": "09",
+    "v": 108.8
+   },
+   {
+    "t": "10",
+    "v": 138.0
+   },
+   {
+    "t": "11",
+    "v": 138.2
+   },
+   {
+    "t": "12",
+    "v": 127.6
+   }
+  ]
+ },
+ {
+  "id": "normals-saint-john-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "saint-john",
+  "geo": {
+   "level": "station",
+   "id": "8104900",
+   "name": "SAINT JOHN",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "SAINT JOHN",
+   "normalsCode": "C",
+   "year": "214.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 59.8
+   },
+   {
+    "t": "02",
+    "v": 45.5
+   },
+   {
+    "t": "03",
+    "v": 36.8
+   },
+   {
+    "t": "04",
+    "v": 16.3
+   },
+   {
+    "t": "05",
+    "v": 0.8
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 0.9
+   },
+   {
+    "t": "11",
+    "v": 12.5
+   },
+   {
+    "t": "12",
+    "v": 42.2
+   }
+  ]
+ },
+ {
+  "id": "normals-fredericton-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "fredericton",
+  "geo": {
+   "level": "station",
+   "id": "8101505",
+   "name": "FREDERICTON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "FREDERICTON (AIRPORT)",
+   "normalsCode": "A",
+   "year": "5.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -9.2
+   },
+   {
+    "t": "02",
+    "v": -8.1
+   },
+   {
+    "t": "03",
+    "v": -2.1
+   },
+   {
+    "t": "04",
+    "v": 4.6
+   },
+   {
+    "t": "05",
+    "v": 11.2
+   },
+   {
+    "t": "06",
+    "v": 16.4
+   },
+   {
+    "t": "07",
+    "v": 19.7
+   },
+   {
+    "t": "08",
+    "v": 18.9
+   },
+   {
+    "t": "09",
+    "v": 14.2
+   },
+   {
+    "t": "10",
+    "v": 7.7
+   },
+   {
+    "t": "11",
+    "v": 1.7
+   },
+   {
+    "t": "12",
+    "v": -5.0
+   }
+  ]
+ },
+ {
+  "id": "normals-fredericton-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "fredericton",
+  "geo": {
+   "level": "station",
+   "id": "8101505",
+   "name": "FREDERICTON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "FREDERICTON (AIRPORT)",
+   "normalsCode": "A",
+   "year": "11.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -3.8
+   },
+   {
+    "t": "02",
+    "v": -2.3
+   },
+   {
+    "t": "03",
+    "v": 3.3
+   },
+   {
+    "t": "04",
+    "v": 10.2
+   },
+   {
+    "t": "05",
+    "v": 17.6
+   },
+   {
+    "t": "06",
+    "v": 22.8
+   },
+   {
+    "t": "07",
+    "v": 25.9
+   },
+   {
+    "t": "08",
+    "v": 25.3
+   },
+   {
+    "t": "09",
+    "v": 20.7
+   },
+   {
+    "t": "10",
+    "v": 13.5
+   },
+   {
+    "t": "11",
+    "v": 6.3
+   },
+   {
+    "t": "12",
+    "v": -0.3
+   }
+  ]
+ },
+ {
+  "id": "normals-fredericton-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "fredericton",
+  "geo": {
+   "level": "station",
+   "id": "8101505",
+   "name": "FREDERICTON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "FREDERICTON (AIRPORT)",
+   "normalsCode": "A",
+   "year": "0.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -14.6
+   },
+   {
+    "t": "02",
+    "v": -13.9
+   },
+   {
+    "t": "03",
+    "v": -7.8
+   },
+   {
+    "t": "04",
+    "v": -1.1
+   },
+   {
+    "t": "05",
+    "v": 4.7
+   },
+   {
+    "t": "06",
+    "v": 9.9
+   },
+   {
+    "t": "07",
+    "v": 13.4
+   },
+   {
+    "t": "08",
+    "v": 12.3
+   },
+   {
+    "t": "09",
+    "v": 7.6
+   },
+   {
+    "t": "10",
+    "v": 1.9
+   },
+   {
+    "t": "11",
+    "v": -2.9
+   },
+   {
+    "t": "12",
+    "v": -9.6
+   }
+  ]
+ },
+ {
+  "id": "normals-fredericton-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "fredericton",
+  "geo": {
+   "level": "station",
+   "id": "8101505",
+   "name": "FREDERICTON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "FREDERICTON (AIRPORT)",
+   "normalsCode": "C",
+   "year": "1,022.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 85.8
+   },
+   {
+    "t": "02",
+    "v": 63.2
+   },
+   {
+    "t": "03",
+    "v": 87.9
+   },
+   {
+    "t": "04",
+    "v": 77.3
+   },
+   {
+    "t": "05",
+    "v": 79.3
+   },
+   {
+    "t": "06",
+    "v": 83.1
+   },
+   {
+    "t": "07",
+    "v": 93.9
+   },
+   {
+    "t": "08",
+    "v": 66.4
+   },
+   {
+    "t": "09",
+    "v": 89.6
+   },
+   {
+    "t": "10",
+    "v": 106.3
+   },
+   {
+    "t": "11",
+    "v": 96.8
+   },
+   {
+    "t": "12",
+    "v": 92.9
+   }
+  ]
+ },
+ {
+  "id": "normals-fredericton-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "fredericton",
+  "geo": {
+   "level": "station",
+   "id": "8101505",
+   "name": "FREDERICTON (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "FREDERICTON (AIRPORT)",
+   "normalsCode": "D",
+   "year": "241.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 63.8
+   },
+   {
+    "t": "02",
+    "v": 48.6
+   },
+   {
+    "t": "03",
+    "v": 46.4
+   },
+   {
+    "t": "04",
+    "v": 16.7
+   },
+   {
+    "t": "05",
+    "v": 0.6
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 0.7
+   },
+   {
+    "t": "11",
+    "v": 12.8
+   },
+   {
+    "t": "12",
+    "v": 51.7
+   }
+  ]
+ },
+ {
+  "id": "normals-sherbrooke-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "sherbrooke",
+  "geo": {
+   "level": "station",
+   "id": "7024280",
+   "name": "LENNOXVILLE",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "LENNOXVILLE",
+   "normalsCode": "A",
+   "year": "5.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -9.5
+   },
+   {
+    "t": "02",
+    "v": -8.3
+   },
+   {
+    "t": "03",
+    "v": -2.6
+   },
+   {
+    "t": "04",
+    "v": 5.1
+   },
+   {
+    "t": "05",
+    "v": 12.2
+   },
+   {
+    "t": "06",
+    "v": 17.2
+   },
+   {
+    "t": "07",
+    "v": 19.7
+   },
+   {
+    "t": "08",
+    "v": 18.7
+   },
+   {
+    "t": "09",
+    "v": 14.5
+   },
+   {
+    "t": "10",
+    "v": 7.7
+   },
+   {
+    "t": "11",
+    "v": 1.7
+   },
+   {
+    "t": "12",
+    "v": -5.2
+   }
+  ]
+ },
+ {
+  "id": "normals-sherbrooke-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "sherbrooke",
+  "geo": {
+   "level": "station",
+   "id": "7024280",
+   "name": "LENNOXVILLE",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "LENNOXVILLE",
+   "normalsCode": "A",
+   "year": "11.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -4.1
+   },
+   {
+    "t": "02",
+    "v": -2.3
+   },
+   {
+    "t": "03",
+    "v": 3.1
+   },
+   {
+    "t": "04",
+    "v": 10.8
+   },
+   {
+    "t": "05",
+    "v": 18.6
+   },
+   {
+    "t": "06",
+    "v": 23.3
+   },
+   {
+    "t": "07",
+    "v": 25.7
+   },
+   {
+    "t": "08",
+    "v": 24.8
+   },
+   {
+    "t": "09",
+    "v": 20.7
+   },
+   {
+    "t": "10",
+    "v": 13.0
+   },
+   {
+    "t": "11",
+    "v": 6.2
+   },
+   {
+    "t": "12",
+    "v": -0.7
+   }
+  ]
+ },
+ {
+  "id": "normals-sherbrooke-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "sherbrooke",
+  "geo": {
+   "level": "station",
+   "id": "7024280",
+   "name": "LENNOXVILLE",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "LENNOXVILLE",
+   "normalsCode": "A",
+   "year": "0.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -14.9
+   },
+   {
+    "t": "02",
+    "v": -14.3
+   },
+   {
+    "t": "03",
+    "v": -8.3
+   },
+   {
+    "t": "04",
+    "v": -0.6
+   },
+   {
+    "t": "05",
+    "v": 5.7
+   },
+   {
+    "t": "06",
+    "v": 11.0
+   },
+   {
+    "t": "07",
+    "v": 13.6
+   },
+   {
+    "t": "08",
+    "v": 12.7
+   },
+   {
+    "t": "09",
+    "v": 8.2
+   },
+   {
+    "t": "10",
+    "v": 2.5
+   },
+   {
+    "t": "11",
+    "v": -2.8
+   },
+   {
+    "t": "12",
+    "v": -9.6
+   }
+  ]
+ },
+ {
+  "id": "normals-sherbrooke-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "sherbrooke",
+  "geo": {
+   "level": "station",
+   "id": "7024280",
+   "name": "LENNOXVILLE",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "LENNOXVILLE",
+   "normalsCode": "D",
+   "year": "1,014.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 75.8
+   },
+   {
+    "t": "02",
+    "v": 65.8
+   },
+   {
+    "t": "03",
+    "v": 68.2
+   },
+   {
+    "t": "04",
+    "v": 81.9
+   },
+   {
+    "t": "05",
+    "v": 85.3
+   },
+   {
+    "t": "06",
+    "v": 101.5
+   },
+   {
+    "t": "07",
+    "v": 99.2
+   },
+   {
+    "t": "08",
+    "v": 103.9
+   },
+   {
+    "t": "09",
+    "v": 96.3
+   },
+   {
+    "t": "10",
+    "v": 91.3
+   },
+   {
+    "t": "11",
+    "v": 70.2
+   },
+   {
+    "t": "12",
+    "v": 75.4
+   }
+  ]
+ },
+ {
+  "id": "normals-sudbury-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "sudbury",
+  "geo": {
+   "level": "station",
+   "id": "6068150",
+   "name": "SUDBURY",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "SUDBURY",
+   "normalsCode": "B",
+   "year": "4.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -12.7
+   },
+   {
+    "t": "02",
+    "v": -11.1
+   },
+   {
+    "t": "03",
+    "v": -4.9
+   },
+   {
+    "t": "04",
+    "v": 3.3
+   },
+   {
+    "t": "05",
+    "v": 11.4
+   },
+   {
+    "t": "06",
+    "v": 16.8
+   },
+   {
+    "t": "07",
+    "v": 19.1
+   },
+   {
+    "t": "08",
+    "v": 18.0
+   },
+   {
+    "t": "09",
+    "v": 13.3
+   },
+   {
+    "t": "10",
+    "v": 6.2
+   },
+   {
+    "t": "11",
+    "v": -0.8
+   },
+   {
+    "t": "12",
+    "v": -7.8
+   }
+  ]
+ },
+ {
+  "id": "normals-sudbury-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "sudbury",
+  "geo": {
+   "level": "station",
+   "id": "6068150",
+   "name": "SUDBURY",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "SUDBURY",
+   "normalsCode": "B",
+   "year": "9.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -7.8
+   },
+   {
+    "t": "02",
+    "v": -5.9
+   },
+   {
+    "t": "03",
+    "v": 0.5
+   },
+   {
+    "t": "04",
+    "v": 8.6
+   },
+   {
+    "t": "05",
+    "v": 17.4
+   },
+   {
+    "t": "06",
+    "v": 22.6
+   },
+   {
+    "t": "07",
+    "v": 25.0
+   },
+   {
+    "t": "08",
+    "v": 23.5
+   },
+   {
+    "t": "09",
+    "v": 18.6
+   },
+   {
+    "t": "10",
+    "v": 10.6
+   },
+   {
+    "t": "11",
+    "v": 2.9
+   },
+   {
+    "t": "12",
+    "v": -3.9
+   }
+  ]
+ },
+ {
+  "id": "normals-sudbury-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "sudbury",
+  "geo": {
+   "level": "station",
+   "id": "6068150",
+   "name": "SUDBURY",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "SUDBURY",
+   "normalsCode": "B",
+   "year": "-0.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -17.5
+   },
+   {
+    "t": "02",
+    "v": -16.3
+   },
+   {
+    "t": "03",
+    "v": -10.2
+   },
+   {
+    "t": "04",
+    "v": -2.0
+   },
+   {
+    "t": "05",
+    "v": 5.3
+   },
+   {
+    "t": "06",
+    "v": 11.0
+   },
+   {
+    "t": "07",
+    "v": 13.4
+   },
+   {
+    "t": "08",
+    "v": 12.5
+   },
+   {
+    "t": "09",
+    "v": 8.1
+   },
+   {
+    "t": "10",
+    "v": 1.9
+   },
+   {
+    "t": "11",
+    "v": -4.4
+   },
+   {
+    "t": "12",
+    "v": -11.7
+   }
+  ]
+ },
+ {
+  "id": "normals-sudbury-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "sudbury",
+  "geo": {
+   "level": "station",
+   "id": "6068150",
+   "name": "SUDBURY",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "SUDBURY",
+   "normalsCode": "C",
+   "year": "911.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 66.8
+   },
+   {
+    "t": "02",
+    "v": 51.1
+   },
+   {
+    "t": "03",
+    "v": 58.3
+   },
+   {
+    "t": "04",
+    "v": 67.8
+   },
+   {
+    "t": "05",
+    "v": 79.2
+   },
+   {
+    "t": "06",
+    "v": 77.4
+   },
+   {
+    "t": "07",
+    "v": 84.0
+   },
+   {
+    "t": "08",
+    "v": 89.9
+   },
+   {
+    "t": "09",
+    "v": 103.2
+   },
+   {
+    "t": "10",
+    "v": 93.8
+   },
+   {
+    "t": "11",
+    "v": 74.5
+   },
+   {
+    "t": "12",
+    "v": 65.9
+   }
+  ]
+ },
+ {
+  "id": "normals-sudbury-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "sudbury",
+  "geo": {
+   "level": "station",
+   "id": "6068150",
+   "name": "SUDBURY",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "SUDBURY",
+   "normalsCode": "C",
+   "year": "263.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 63.6
+   },
+   {
+    "t": "02",
+    "v": 51.9
+   },
+   {
+    "t": "03",
+    "v": 33.1
+   },
+   {
+    "t": "04",
+    "v": 16.1
+   },
+   {
+    "t": "05",
+    "v": 2.3
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.1
+   },
+   {
+    "t": "10",
+    "v": 6.5
+   },
+   {
+    "t": "11",
+    "v": 30.2
+   },
+   {
+    "t": "12",
+    "v": 59.6
+   }
+  ]
+ },
+ {
+  "id": "normals-thunder-bay-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "thunder-bay",
+  "geo": {
+   "level": "station",
+   "id": "6048260",
+   "name": "THUNDER BAY",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "THUNDER BAY",
+   "normalsCode": "C",
+   "year": "3.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -13.4
+   },
+   {
+    "t": "02",
+    "v": -11.8
+   },
+   {
+    "t": "03",
+    "v": -5.4
+   },
+   {
+    "t": "04",
+    "v": 2.4
+   },
+   {
+    "t": "05",
+    "v": 8.9
+   },
+   {
+    "t": "06",
+    "v": 14.8
+   },
+   {
+    "t": "07",
+    "v": 18.0
+   },
+   {
+    "t": "08",
+    "v": 17.1
+   },
+   {
+    "t": "09",
+    "v": 12.4
+   },
+   {
+    "t": "10",
+    "v": 5.3
+   },
+   {
+    "t": "11",
+    "v": -2.1
+   },
+   {
+    "t": "12",
+    "v": -9.6
+   }
+  ]
+ },
+ {
+  "id": "normals-thunder-bay-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "thunder-bay",
+  "geo": {
+   "level": "station",
+   "id": "6048260",
+   "name": "THUNDER BAY",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "THUNDER BAY",
+   "normalsCode": "C",
+   "year": "9.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -7.6
+   },
+   {
+    "t": "02",
+    "v": -5.2
+   },
+   {
+    "t": "03",
+    "v": 1.0
+   },
+   {
+    "t": "04",
+    "v": 8.9
+   },
+   {
+    "t": "05",
+    "v": 15.9
+   },
+   {
+    "t": "06",
+    "v": 21.6
+   },
+   {
+    "t": "07",
+    "v": 24.9
+   },
+   {
+    "t": "08",
+    "v": 24.2
+   },
+   {
+    "t": "09",
+    "v": 19.2
+   },
+   {
+    "t": "10",
+    "v": 10.9
+   },
+   {
+    "t": "11",
+    "v": 2.6
+   },
+   {
+    "t": "12",
+    "v": -4.5
+   }
+  ]
+ },
+ {
+  "id": "normals-thunder-bay-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "thunder-bay",
+  "geo": {
+   "level": "station",
+   "id": "6048260",
+   "name": "THUNDER BAY",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "THUNDER BAY",
+   "normalsCode": "C",
+   "year": "-3.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -19.2
+   },
+   {
+    "t": "02",
+    "v": -18.3
+   },
+   {
+    "t": "03",
+    "v": -11.8
+   },
+   {
+    "t": "04",
+    "v": -4.2
+   },
+   {
+    "t": "05",
+    "v": 1.9
+   },
+   {
+    "t": "06",
+    "v": 7.8
+   },
+   {
+    "t": "07",
+    "v": 11.0
+   },
+   {
+    "t": "08",
+    "v": 10.0
+   },
+   {
+    "t": "09",
+    "v": 5.5
+   },
+   {
+    "t": "10",
+    "v": -0.3
+   },
+   {
+    "t": "11",
+    "v": -6.7
+   },
+   {
+    "t": "12",
+    "v": -14.6
+   }
+  ]
+ },
+ {
+  "id": "normals-charlottetown-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "charlottetown",
+  "geo": {
+   "level": "station",
+   "id": "8300300",
+   "name": "CHARLOTTETOWN (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "CHARLOTTETOWN (AIRPORT)",
+   "normalsCode": "C",
+   "year": "5.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -7.3
+   },
+   {
+    "t": "02",
+    "v": -7.3
+   },
+   {
+    "t": "03",
+    "v": -2.6
+   },
+   {
+    "t": "04",
+    "v": 3.0
+   },
+   {
+    "t": "05",
+    "v": 9.1
+   },
+   {
+    "t": "06",
+    "v": 14.6
+   },
+   {
+    "t": "07",
+    "v": 19.0
+   },
+   {
+    "t": "08",
+    "v": 18.8
+   },
+   {
+    "t": "09",
+    "v": 14.6
+   },
+   {
+    "t": "10",
+    "v": 8.6
+   },
+   {
+    "t": "11",
+    "v": 3.2
+   },
+   {
+    "t": "12",
+    "v": -2.7
+   }
+  ]
+ },
+ {
+  "id": "normals-charlottetown-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "charlottetown",
+  "geo": {
+   "level": "station",
+   "id": "8300300",
+   "name": "CHARLOTTETOWN (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "CHARLOTTETOWN (AIRPORT)",
+   "normalsCode": "C",
+   "year": "10.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -3.0
+   },
+   {
+    "t": "02",
+    "v": -2.9
+   },
+   {
+    "t": "03",
+    "v": 1.4
+   },
+   {
+    "t": "04",
+    "v": 7.3
+   },
+   {
+    "t": "05",
+    "v": 14.2
+   },
+   {
+    "t": "06",
+    "v": 19.5
+   },
+   {
+    "t": "07",
+    "v": 23.6
+   },
+   {
+    "t": "08",
+    "v": 23.3
+   },
+   {
+    "t": "09",
+    "v": 19.1
+   },
+   {
+    "t": "10",
+    "v": 12.6
+   },
+   {
+    "t": "11",
+    "v": 6.7
+   },
+   {
+    "t": "12",
+    "v": 0.9
+   }
+  ]
+ },
+ {
+  "id": "normals-charlottetown-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "charlottetown",
+  "geo": {
+   "level": "station",
+   "id": "8300300",
+   "name": "CHARLOTTETOWN (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "CHARLOTTETOWN (AIRPORT)",
+   "normalsCode": "C",
+   "year": "1.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -11.5
+   },
+   {
+    "t": "02",
+    "v": -11.6
+   },
+   {
+    "t": "03",
+    "v": -6.5
+   },
+   {
+    "t": "04",
+    "v": -1.4
+   },
+   {
+    "t": "05",
+    "v": 3.9
+   },
+   {
+    "t": "06",
+    "v": 9.6
+   },
+   {
+    "t": "07",
+    "v": 14.4
+   },
+   {
+    "t": "08",
+    "v": 14.1
+   },
+   {
+    "t": "09",
+    "v": 10.0
+   },
+   {
+    "t": "10",
+    "v": 4.6
+   },
+   {
+    "t": "11",
+    "v": -0.2
+   },
+   {
+    "t": "12",
+    "v": -6.3
+   }
+  ]
+ },
+ {
+  "id": "normals-charlottetown-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "charlottetown",
+  "geo": {
+   "level": "station",
+   "id": "8300300",
+   "name": "CHARLOTTETOWN (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "CHARLOTTETOWN (AIRPORT)",
+   "normalsCode": "C",
+   "year": "1,135.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 101.4
+   },
+   {
+    "t": "02",
+    "v": 85.4
+   },
+   {
+    "t": "03",
+    "v": 83.9
+   },
+   {
+    "t": "04",
+    "v": 74.8
+   },
+   {
+    "t": "05",
+    "v": 78.3
+   },
+   {
+    "t": "06",
+    "v": 90.7
+   },
+   {
+    "t": "07",
+    "v": 82.3
+   },
+   {
+    "t": "08",
+    "v": 96.3
+   },
+   {
+    "t": "09",
+    "v": 95.3
+   },
+   {
+    "t": "10",
+    "v": 121.8
+   },
+   {
+    "t": "11",
+    "v": 110.3
+   },
+   {
+    "t": "12",
+    "v": 115.2
+   }
+  ]
+ },
+ {
+  "id": "normals-charlottetown-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "charlottetown",
+  "geo": {
+   "level": "station",
+   "id": "8300300",
+   "name": "CHARLOTTETOWN (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "CHARLOTTETOWN (AIRPORT)",
+   "normalsCode": "C",
+   "year": "284.8"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 73.2
+   },
+   {
+    "t": "02",
+    "v": 61.7
+   },
+   {
+    "t": "03",
+    "v": 41.9
+   },
+   {
+    "t": "04",
+    "v": 21.4
+   },
+   {
+    "t": "05",
+    "v": 2.2
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.0
+   },
+   {
+    "t": "10",
+    "v": 1.5
+   },
+   {
+    "t": "11",
+    "v": 20.5
+   },
+   {
+    "t": "12",
+    "v": 62.5
+   }
+  ]
+ },
+ {
+  "id": "normals-brandon-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "brandon",
+  "geo": {
+   "level": "station",
+   "id": "5010480",
+   "name": "BRANDON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "BRANDON",
+   "normalsCode": "A",
+   "year": "2.1"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -16.7
+   },
+   {
+    "t": "02",
+    "v": -14.1
+   },
+   {
+    "t": "03",
+    "v": -7.0
+   },
+   {
+    "t": "04",
+    "v": 3.1
+   },
+   {
+    "t": "05",
+    "v": 10.3
+   },
+   {
+    "t": "06",
+    "v": 16.2
+   },
+   {
+    "t": "07",
+    "v": 18.4
+   },
+   {
+    "t": "08",
+    "v": 17.7
+   },
+   {
+    "t": "09",
+    "v": 12.2
+   },
+   {
+    "t": "10",
+    "v": 4.0
+   },
+   {
+    "t": "11",
+    "v": -5.3
+   },
+   {
+    "t": "12",
+    "v": -13.6
+   }
+  ]
+ },
+ {
+  "id": "normals-brandon-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "brandon",
+  "geo": {
+   "level": "station",
+   "id": "5010480",
+   "name": "BRANDON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "BRANDON",
+   "normalsCode": "A",
+   "year": "8.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -11.4
+   },
+   {
+    "t": "02",
+    "v": -8.5
+   },
+   {
+    "t": "03",
+    "v": -1.6
+   },
+   {
+    "t": "04",
+    "v": 9.6
+   },
+   {
+    "t": "05",
+    "v": 17.4
+   },
+   {
+    "t": "06",
+    "v": 22.6
+   },
+   {
+    "t": "07",
+    "v": 24.9
+   },
+   {
+    "t": "08",
+    "v": 25.1
+   },
+   {
+    "t": "09",
+    "v": 19.5
+   },
+   {
+    "t": "10",
+    "v": 10.1
+   },
+   {
+    "t": "11",
+    "v": -0.3
+   },
+   {
+    "t": "12",
+    "v": -8.6
+   }
+  ]
+ },
+ {
+  "id": "normals-brandon-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "brandon",
+  "geo": {
+   "level": "station",
+   "id": "5010480",
+   "name": "BRANDON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "BRANDON",
+   "normalsCode": "A",
+   "year": "-4.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -21.9
+   },
+   {
+    "t": "02",
+    "v": -19.7
+   },
+   {
+    "t": "03",
+    "v": -12.5
+   },
+   {
+    "t": "04",
+    "v": -3.3
+   },
+   {
+    "t": "05",
+    "v": 3.2
+   },
+   {
+    "t": "06",
+    "v": 9.7
+   },
+   {
+    "t": "07",
+    "v": 11.8
+   },
+   {
+    "t": "08",
+    "v": 10.2
+   },
+   {
+    "t": "09",
+    "v": 4.9
+   },
+   {
+    "t": "10",
+    "v": -2.2
+   },
+   {
+    "t": "11",
+    "v": -10.3
+   },
+   {
+    "t": "12",
+    "v": -18.5
+   }
+  ]
+ },
+ {
+  "id": "normals-brandon-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "brandon",
+  "geo": {
+   "level": "station",
+   "id": "5010480",
+   "name": "BRANDON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "BRANDON",
+   "normalsCode": "C",
+   "year": "489.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 18.3
+   },
+   {
+    "t": "02",
+    "v": 13.9
+   },
+   {
+    "t": "03",
+    "v": 23.9
+   },
+   {
+    "t": "04",
+    "v": 26.6
+   },
+   {
+    "t": "05",
+    "v": 64.5
+   },
+   {
+    "t": "06",
+    "v": 97.7
+   },
+   {
+    "t": "07",
+    "v": 71.8
+   },
+   {
+    "t": "08",
+    "v": 56.2
+   },
+   {
+    "t": "09",
+    "v": 43.0
+   },
+   {
+    "t": "10",
+    "v": 32.1
+   },
+   {
+    "t": "11",
+    "v": 20.0
+   },
+   {
+    "t": "12",
+    "v": 21.5
+   }
+  ]
+ },
+ {
+  "id": "normals-brandon-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "brandon",
+  "geo": {
+   "level": "station",
+   "id": "5010480",
+   "name": "BRANDON",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "BRANDON",
+   "normalsCode": "C",
+   "year": "128.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 24.7
+   },
+   {
+    "t": "02",
+    "v": 16.6
+   },
+   {
+    "t": "03",
+    "v": 19.2
+   },
+   {
+    "t": "04",
+    "v": 8.4
+   },
+   {
+    "t": "05",
+    "v": 4.1
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 0.1
+   },
+   {
+    "t": "10",
+    "v": 6.0
+   },
+   {
+    "t": "11",
+    "v": 20.5
+   },
+   {
+    "t": "12",
+    "v": 28.7
+   }
+  ]
+ },
+ {
+  "id": "normals-whitehorse-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "whitehorse",
+  "geo": {
+   "level": "station",
+   "id": "2101310",
+   "name": "WHITEHORSE",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "WHITEHORSE",
+   "normalsCode": "A",
+   "year": "0.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -15.0
+   },
+   {
+    "t": "02",
+    "v": -11.9
+   },
+   {
+    "t": "03",
+    "v": -6.7
+   },
+   {
+    "t": "04",
+    "v": 1.6
+   },
+   {
+    "t": "05",
+    "v": 7.9
+   },
+   {
+    "t": "06",
+    "v": 12.8
+   },
+   {
+    "t": "07",
+    "v": 14.5
+   },
+   {
+    "t": "08",
+    "v": 12.9
+   },
+   {
+    "t": "09",
+    "v": 7.5
+   },
+   {
+    "t": "10",
+    "v": 0.8
+   },
+   {
+    "t": "11",
+    "v": -8.6
+   },
+   {
+    "t": "12",
+    "v": -12.8
+   }
+  ]
+ },
+ {
+  "id": "normals-whitehorse-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "whitehorse",
+  "geo": {
+   "level": "station",
+   "id": "2101310",
+   "name": "WHITEHORSE",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "WHITEHORSE",
+   "normalsCode": "A",
+   "year": "5.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -11.1
+   },
+   {
+    "t": "02",
+    "v": -7.1
+   },
+   {
+    "t": "03",
+    "v": -1.1
+   },
+   {
+    "t": "04",
+    "v": 7.1
+   },
+   {
+    "t": "05",
+    "v": 14.2
+   },
+   {
+    "t": "06",
+    "v": 19.3
+   },
+   {
+    "t": "07",
+    "v": 20.5
+   },
+   {
+    "t": "08",
+    "v": 18.5
+   },
+   {
+    "t": "09",
+    "v": 12.3
+   },
+   {
+    "t": "10",
+    "v": 4.3
+   },
+   {
+    "t": "11",
+    "v": -5.4
+   },
+   {
+    "t": "12",
+    "v": -9.1
+   }
+  ]
+ },
+ {
+  "id": "normals-whitehorse-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "whitehorse",
+  "geo": {
+   "level": "station",
+   "id": "2101310",
+   "name": "WHITEHORSE",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "WHITEHORSE",
+   "normalsCode": "A",
+   "year": "-4.7"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -18.9
+   },
+   {
+    "t": "02",
+    "v": -16.6
+   },
+   {
+    "t": "03",
+    "v": -12.4
+   },
+   {
+    "t": "04",
+    "v": -4.0
+   },
+   {
+    "t": "05",
+    "v": 1.6
+   },
+   {
+    "t": "06",
+    "v": 6.2
+   },
+   {
+    "t": "07",
+    "v": 8.5
+   },
+   {
+    "t": "08",
+    "v": 7.2
+   },
+   {
+    "t": "09",
+    "v": 2.7
+   },
+   {
+    "t": "10",
+    "v": -2.8
+   },
+   {
+    "t": "11",
+    "v": -11.8
+   },
+   {
+    "t": "12",
+    "v": -16.5
+   }
+  ]
+ },
+ {
+  "id": "normals-whitehorse-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "whitehorse",
+  "geo": {
+   "level": "station",
+   "id": "2101310",
+   "name": "WHITEHORSE",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "WHITEHORSE",
+   "normalsCode": "C",
+   "year": "279.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 22.3
+   },
+   {
+    "t": "02",
+    "v": 14.7
+   },
+   {
+    "t": "03",
+    "v": 11.5
+   },
+   {
+    "t": "04",
+    "v": 8.4
+   },
+   {
+    "t": "05",
+    "v": 15.4
+   },
+   {
+    "t": "06",
+    "v": 35.2
+   },
+   {
+    "t": "07",
+    "v": 39.2
+   },
+   {
+    "t": "08",
+    "v": 39.0
+   },
+   {
+    "t": "09",
+    "v": 30.9
+   },
+   {
+    "t": "10",
+    "v": 23.1
+   },
+   {
+    "t": "11",
+    "v": 23.5
+   },
+   {
+    "t": "12",
+    "v": 16.4
+   }
+  ]
+ },
+ {
+  "id": "normals-whitehorse-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "whitehorse",
+  "geo": {
+   "level": "station",
+   "id": "2101310",
+   "name": "WHITEHORSE",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "WHITEHORSE",
+   "normalsCode": "D",
+   "year": "147.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 28.8
+   },
+   {
+    "t": "02",
+    "v": 18.3
+   },
+   {
+    "t": "03",
+    "v": 16.1
+   },
+   {
+    "t": "04",
+    "v": 7.0
+   },
+   {
+    "t": "05",
+    "v": 2.8
+   },
+   {
+    "t": "06",
+    "v": 0.2
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 3.6
+   },
+   {
+    "t": "10",
+    "v": 17.2
+   },
+   {
+    "t": "11",
+    "v": 28.4
+   },
+   {
+    "t": "12",
+    "v": 25.3
+   }
+  ]
+ },
+ {
+  "id": "normals-yellowknife-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "yellowknife",
+  "geo": {
+   "level": "station",
+   "id": "2204100",
+   "name": "YELLOWKNIFE (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "YELLOWKNIFE (AIRPORT)",
+   "normalsCode": "B",
+   "year": "-4.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -25.5
+   },
+   {
+    "t": "02",
+    "v": -22.7
+   },
+   {
+    "t": "03",
+    "v": -16.6
+   },
+   {
+    "t": "04",
+    "v": -5.5
+   },
+   {
+    "t": "05",
+    "v": 5.3
+   },
+   {
+    "t": "06",
+    "v": 13.8
+   },
+   {
+    "t": "07",
+    "v": 17.1
+   },
+   {
+    "t": "08",
+    "v": 14.5
+   },
+   {
+    "t": "09",
+    "v": 7.6
+   },
+   {
+    "t": "10",
+    "v": -1.0
+   },
+   {
+    "t": "11",
+    "v": -12.6
+   },
+   {
+    "t": "12",
+    "v": -21.8
+   }
+  ]
+ },
+ {
+  "id": "normals-yellowknife-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "yellowknife",
+  "geo": {
+   "level": "station",
+   "id": "2204100",
+   "name": "YELLOWKNIFE (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "YELLOWKNIFE (AIRPORT)",
+   "normalsCode": "B",
+   "year": "0.4"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -21.6
+   },
+   {
+    "t": "02",
+    "v": -18.0
+   },
+   {
+    "t": "03",
+    "v": -10.6
+   },
+   {
+    "t": "04",
+    "v": 0.3
+   },
+   {
+    "t": "05",
+    "v": 10.4
+   },
+   {
+    "t": "06",
+    "v": 18.6
+   },
+   {
+    "t": "07",
+    "v": 21.5
+   },
+   {
+    "t": "08",
+    "v": 18.4
+   },
+   {
+    "t": "09",
+    "v": 10.9
+   },
+   {
+    "t": "10",
+    "v": 1.5
+   },
+   {
+    "t": "11",
+    "v": -9.0
+   },
+   {
+    "t": "12",
+    "v": -18.0
+   }
+  ]
+ },
+ {
+  "id": "normals-yellowknife-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "yellowknife",
+  "geo": {
+   "level": "station",
+   "id": "2204100",
+   "name": "YELLOWKNIFE (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "YELLOWKNIFE (AIRPORT)",
+   "normalsCode": "B",
+   "year": "-8.3"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -29.4
+   },
+   {
+    "t": "02",
+    "v": -27.4
+   },
+   {
+    "t": "03",
+    "v": -22.5
+   },
+   {
+    "t": "04",
+    "v": -11.3
+   },
+   {
+    "t": "05",
+    "v": 0.1
+   },
+   {
+    "t": "06",
+    "v": 9.0
+   },
+   {
+    "t": "07",
+    "v": 12.6
+   },
+   {
+    "t": "08",
+    "v": 10.5
+   },
+   {
+    "t": "09",
+    "v": 4.2
+   },
+   {
+    "t": "10",
+    "v": -3.6
+   },
+   {
+    "t": "11",
+    "v": -16.2
+   },
+   {
+    "t": "12",
+    "v": -25.6
+   }
+  ]
+ },
+ {
+  "id": "normals-yellowknife-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "yellowknife",
+  "geo": {
+   "level": "station",
+   "id": "2204100",
+   "name": "YELLOWKNIFE (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "YELLOWKNIFE (AIRPORT)",
+   "normalsCode": "C",
+   "year": "293.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 15.0
+   },
+   {
+    "t": "02",
+    "v": 11.0
+   },
+   {
+    "t": "03",
+    "v": 14.1
+   },
+   {
+    "t": "04",
+    "v": 11.6
+   },
+   {
+    "t": "05",
+    "v": 16.3
+   },
+   {
+    "t": "06",
+    "v": 28.9
+   },
+   {
+    "t": "07",
+    "v": 40.4
+   },
+   {
+    "t": "08",
+    "v": 44.0
+   },
+   {
+    "t": "09",
+    "v": 43.0
+   },
+   {
+    "t": "10",
+    "v": 28.8
+   },
+   {
+    "t": "11",
+    "v": 25.8
+   },
+   {
+    "t": "12",
+    "v": 15.1
+   }
+  ]
+ },
+ {
+  "id": "normals-yellowknife-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "yellowknife",
+  "geo": {
+   "level": "station",
+   "id": "2204100",
+   "name": "YELLOWKNIFE (AIRPORT)",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "YELLOWKNIFE (AIRPORT)",
+   "normalsCode": "C",
+   "year": "155.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 21.7
+   },
+   {
+    "t": "02",
+    "v": 16.1
+   },
+   {
+    "t": "03",
+    "v": 19.2
+   },
+   {
+    "t": "04",
+    "v": 9.9
+   },
+   {
+    "t": "05",
+    "v": 4.5
+   },
+   {
+    "t": "06",
+    "v": 0.0
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.0
+   },
+   {
+    "t": "09",
+    "v": 3.0
+   },
+   {
+    "t": "10",
+    "v": 20.1
+   },
+   {
+    "t": "11",
+    "v": 36.9
+   },
+   {
+    "t": "12",
+    "v": 23.7
+   }
+  ]
+ },
+ {
+  "id": "normals-iqaluit-temp_mean",
+  "label": "Mean daily temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "iqaluit",
+  "geo": {
+   "level": "station",
+   "id": "2402592",
+   "name": "IQALUIT",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_mean",
+   "period": "1991-2020",
+   "station": "IQALUIT",
+   "normalsCode": "A",
+   "year": "-8.6"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -26.0
+   },
+   {
+    "t": "02",
+    "v": -27.0
+   },
+   {
+    "t": "03",
+    "v": -22.4
+   },
+   {
+    "t": "04",
+    "v": -13.5
+   },
+   {
+    "t": "05",
+    "v": -3.2
+   },
+   {
+    "t": "06",
+    "v": 3.9
+   },
+   {
+    "t": "07",
+    "v": 8.1
+   },
+   {
+    "t": "08",
+    "v": 7.5
+   },
+   {
+    "t": "09",
+    "v": 2.9
+   },
+   {
+    "t": "10",
+    "v": -3.2
+   },
+   {
+    "t": "11",
+    "v": -11.1
+   },
+   {
+    "t": "12",
+    "v": -18.9
+   }
+  ]
+ },
+ {
+  "id": "normals-iqaluit-temp_max",
+  "label": "Mean daily maximum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "iqaluit",
+  "geo": {
+   "level": "station",
+   "id": "2402592",
+   "name": "IQALUIT",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_max",
+   "period": "1991-2020",
+   "station": "IQALUIT",
+   "normalsCode": "A",
+   "year": "-4.9"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -22.0
+   },
+   {
+    "t": "02",
+    "v": -22.9
+   },
+   {
+    "t": "03",
+    "v": -17.6
+   },
+   {
+    "t": "04",
+    "v": -8.9
+   },
+   {
+    "t": "05",
+    "v": -0.3
+   },
+   {
+    "t": "06",
+    "v": 7.0
+   },
+   {
+    "t": "07",
+    "v": 12.0
+   },
+   {
+    "t": "08",
+    "v": 11.1
+   },
+   {
+    "t": "09",
+    "v": 5.6
+   },
+   {
+    "t": "10",
+    "v": -0.5
+   },
+   {
+    "t": "11",
+    "v": -7.5
+   },
+   {
+    "t": "12",
+    "v": -14.7
+   }
+  ]
+ },
+ {
+  "id": "normals-iqaluit-temp_min",
+  "label": "Mean daily minimum temperature, 1991–2020 normals",
+  "unit": "degC",
+  "placeId": "iqaluit",
+  "geo": {
+   "level": "station",
+   "id": "2402592",
+   "name": "IQALUIT",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "temp_min",
+   "period": "1991-2020",
+   "station": "IQALUIT",
+   "normalsCode": "A",
+   "year": "-12.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": -29.9
+   },
+   {
+    "t": "02",
+    "v": -31.0
+   },
+   {
+    "t": "03",
+    "v": -27.2
+   },
+   {
+    "t": "04",
+    "v": -18.1
+   },
+   {
+    "t": "05",
+    "v": -6.1
+   },
+   {
+    "t": "06",
+    "v": 0.7
+   },
+   {
+    "t": "07",
+    "v": 4.2
+   },
+   {
+    "t": "08",
+    "v": 3.8
+   },
+   {
+    "t": "09",
+    "v": 0.2
+   },
+   {
+    "t": "10",
+    "v": -5.8
+   },
+   {
+    "t": "11",
+    "v": -14.7
+   },
+   {
+    "t": "12",
+    "v": -23.0
+   }
+  ]
+ },
+ {
+  "id": "normals-iqaluit-precip",
+  "label": "Precipitation (rain + snow water equivalent), 1991–2020 normals",
+  "unit": "mm",
+  "placeId": "iqaluit",
+  "geo": {
+   "level": "station",
+   "id": "2402592",
+   "name": "IQALUIT",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "precip",
+   "period": "1991-2020",
+   "station": "IQALUIT",
+   "normalsCode": "D",
+   "year": "361.2"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 16.3
+   },
+   {
+    "t": "02",
+    "v": 14.0
+   },
+   {
+    "t": "03",
+    "v": 21.4
+   },
+   {
+    "t": "04",
+    "v": 22.7
+   },
+   {
+    "t": "05",
+    "v": 21.0
+   },
+   {
+    "t": "06",
+    "v": 48.7
+   },
+   {
+    "t": "07",
+    "v": 39.8
+   },
+   {
+    "t": "08",
+    "v": 61.7
+   },
+   {
+    "t": "09",
+    "v": 50.8
+   },
+   {
+    "t": "10",
+    "v": 30.2
+   },
+   {
+    "t": "11",
+    "v": 18.5
+   },
+   {
+    "t": "12",
+    "v": 16.2
+   }
+  ]
+ },
+ {
+  "id": "normals-iqaluit-snow",
+  "label": "Snowfall, 1991–2020 normals",
+  "unit": "cm",
+  "placeId": "iqaluit",
+  "geo": {
+   "level": "station",
+   "id": "2402592",
+   "name": "IQALUIT",
+   "vintage": "1991-2020"
+  },
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "dims": {
+   "element": "snow",
+   "period": "1991-2020",
+   "station": "IQALUIT",
+   "normalsCode": "D",
+   "year": "190.0"
+  },
+  "points": [
+   {
+    "t": "01",
+    "v": 19.4
+   },
+   {
+    "t": "02",
+    "v": 15.1
+   },
+   {
+    "t": "03",
+    "v": 20.6
+   },
+   {
+    "t": "04",
+    "v": 23.8
+   },
+   {
+    "t": "05",
+    "v": 23.0
+   },
+   {
+    "t": "06",
+    "v": 3.8
+   },
+   {
+    "t": "07",
+    "v": 0.0
+   },
+   {
+    "t": "08",
+    "v": 0.1
+   },
+   {
+    "t": "09",
+    "v": 8.5
+   },
+   {
+    "t": "10",
+    "v": 21.1
+   },
+   {
+    "t": "11",
+    "v": 25.9
+   },
+   {
+    "t": "12",
+    "v": 28.8
+   }
+  ]
+ }
+]

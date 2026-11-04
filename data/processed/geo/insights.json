@@ -1,0 +1,2207 @@
+[
+ {
+  "id": "language-life",
+  "topic": "language_life",
+  "title": "Language and daily life: French reach, commutes and household size",
+  "question": "Which official language will I need day to day, and how do people get around?",
+  "dek": "2021 Census figures for each place's metropolitan area or agglomeration show where French is the working language, where both languages are common, and how commuting differs.",
+  "findings": [
+   {
+    "id": "french-knowledge",
+    "kind": "calculation",
+    "headline": "French is nearly universal in 4 Quebec places (90–99%), but only 41–65% of residents also speak English",
+    "detail": "Share of residents who can conduct a conversation in French: Montréal 90%, Gatineau 91%, Québec City 99%, Sherbrooke 98%. Share who know both official languages is lower: Québec City 41% to Gatineau 65% (the Quebec part of Ottawa–Gatineau is the most bilingual of the Quebec places).",
+    "stat": {
+     "value": 41.5,
+     "unit": "percent",
+     "label": "Québec City: knows English and French",
+     "period": "2021"
+    },
+    "placeIds": [
+     "montreal",
+     "gatineau",
+     "quebec-city",
+     "sherbrooke"
+    ],
+    "metricId": "lang_bilingual",
+    "sourceIds": [
+     "statcan-98-10-0175-01"
+    ],
+    "calc": "lang_bilingual = 'English and French' / total population in private households (98-10-0175-01, total mother tongue, total age and gender); lang_french_knowledge = ('French only' + 'English and French') / total."
+   },
+   {
+    "id": "bilingual-outside-quebec",
+    "kind": "calculation",
+    "headline": "Outside Quebec, Moncton (46%), Greater Sudbury (37%) and Ottawa (36%) have the most bilingual residents; the lowest is Abbotsford–Mission at 4%",
+    "detail": "Median share knowing both official languages across the 26 places outside Quebec is 8.1%. Ottawa (Ontario part) is 36% and Gatineau (Quebec part) 65% - the two parts of one CMA differ sharply. French knowledge here is self-reported conversational ability for all ages, including children in French-immersion schooling.",
+    "placeIds": [
+     "moncton",
+     "sudbury",
+     "ottawa",
+     "ottawa",
+     "gatineau"
+    ],
+    "metricId": "lang_french_knowledge",
+    "sourceIds": [
+     "statcan-98-10-0175-01"
+    ],
+    "calc": "Same as above, restricted to places whose province is not QC; ranked descending on lang_bilingual."
+   },
+   {
+    "id": "commute-modes",
+    "kind": "calculation",
+    "headline": "Transit carries 15–16% of commuters in Toronto, Montréal and Vancouver; no other place exceeds 10%, and cars carry 73–93% of commuters across the 30 places",
+    "detail": "Among workers with a usual place of work in May 2021 (pandemic conditions), car/truck/van was the main mode for 73% in Yellowknife up to 93% in Windsor. Walking or cycling peaks in Yellowknife (20%), Victoria (15%) and Whitehorse (9%). Toronto has the largest share of commutes of 45 minutes or more (22%), then Abbotsford–Mission (19%) and Vancouver (18%).",
+    "stat": {
+     "value": 15.6,
+     "unit": "percent",
+     "label": "Toronto: commute mainly by transit",
+     "period": "2021"
+    },
+    "placeIds": [
+     "toronto",
+     "montreal",
+     "vancouver",
+     "yellowknife",
+     "toronto"
+    ],
+    "metricId": "commute_transit_share",
+    "sourceIds": [
+     "statcan-98-10-0457-01"
+    ],
+    "calc": "Shares = main-mode count / total commuters with a usual place of work (98-10-0457-01; total time leaving, age, gender; statistic Count). Active = walked + bicycle. 45+ min = (45 to 59 + 60 minutes and over) / total."
+   },
+   {
+    "id": "household-size",
+    "kind": "calculation",
+    "headline": "Average household size ranges from 2.1 persons (Sherbrooke) to 2.8 (Abbotsford–Mission)",
+    "detail": "Larger households cluster in Abbotsford–Mission, Toronto and Yellowknife (population in private dwellings divided by occupied private dwellings, 2021). Household size is a context measure for space and rent-sharing, not a quality ranking.",
+    "placeIds": [
+     "abbotsford-mission",
+     "toronto",
+     "yellowknife",
+     "sherbrooke"
+    ],
+    "metricId": "hh_avg_size",
+    "sourceIds": [
+     "statcan-98-10-0038-01"
+    ],
+    "calc": "hh_avg_size = population in private dwellings / private dwellings occupied by usual residents (98-10-0038-01), CMA/CA or CMA part."
+   }
+  ],
+  "charts": [
+   {
+    "id": "lang-french-ranked",
+    "type": "bar_ranked",
+    "title": "Residents who can speak French",
+    "subtitle": "Share of population in private households, 2021 Census (25% sample)",
+    "unit": "percent",
+    "series": [
+     {
+      "id": "lang_french_knowledge",
+      "label": "Residents who can speak French",
+      "points": [
+       {
+        "x": "Québec City",
+        "y": 99.4,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 97.7,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Gatineau",
+        "y": 90.5,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Montréal",
+        "y": 90.2,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Moncton",
+        "y": 48.9,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Ottawa",
+        "y": 37.8,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 37.6,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Fredericton",
+        "y": 22.9,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 17.1,
+        "placeId": "yellowknife"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 16.1,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Saint John",
+        "y": 15.8,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 13.8,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Halifax",
+        "y": 12.0,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Victoria",
+        "y": 10.1,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 10.1,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Windsor",
+        "y": 9.5,
+        "placeId": "windsor"
+       },
+       {
+        "x": "St. John's",
+        "y": 8.1,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 7.9,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Toronto",
+        "y": 7.5,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Kelowna",
+        "y": 6.9,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "Edmonton",
+        "y": 6.9,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "Calgary",
+        "y": 6.7,
+        "placeId": "calgary"
+       },
+       {
+        "x": "London",
+        "y": 6.6,
+        "placeId": "london"
+       },
+       {
+        "x": "Vancouver",
+        "y": 6.6,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Hamilton",
+        "y": 6.5,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 6.4,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 6.1,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Regina",
+        "y": 6.0,
+        "placeId": "regina"
+       },
+       {
+        "x": "Brandon",
+        "y": 4.9,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 4.3,
+        "placeId": "abbotsford-mission"
+       }
+      ]
+     }
+    ],
+    "sourceIds": [
+     "statcan-98-10-0175-01"
+    ],
+    "notes": "CMA/CA values (Ottawa and Gatineau: Ontario and Quebec parts). Self-reported conversation ability, all ages."
+   },
+   {
+    "id": "lang-french-vs-bilingual",
+    "type": "dot_compare",
+    "title": "French knowledge versus English-and-French bilingualism",
+    "subtitle": "Share of population, 2021 Census (25% sample)",
+    "unit": "percent",
+    "series": [
+     {
+      "id": "lang_french_knowledge",
+      "label": "Can speak French",
+      "points": [
+       {
+        "x": "Québec City",
+        "y": 99.4,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 97.7,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Gatineau",
+        "y": 90.5,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Montréal",
+        "y": 90.2,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Moncton",
+        "y": 48.9,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Ottawa",
+        "y": 37.8,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 37.6,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Fredericton",
+        "y": 22.9,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 17.1,
+        "placeId": "yellowknife"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 16.1,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Saint John",
+        "y": 15.8,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 13.8,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Halifax",
+        "y": 12.0,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Victoria",
+        "y": 10.1,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 10.1,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Windsor",
+        "y": 9.5,
+        "placeId": "windsor"
+       },
+       {
+        "x": "St. John's",
+        "y": 8.1,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 7.9,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Toronto",
+        "y": 7.5,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Kelowna",
+        "y": 6.9,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "Edmonton",
+        "y": 6.9,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "Calgary",
+        "y": 6.7,
+        "placeId": "calgary"
+       },
+       {
+        "x": "London",
+        "y": 6.6,
+        "placeId": "london"
+       },
+       {
+        "x": "Vancouver",
+        "y": 6.6,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Hamilton",
+        "y": 6.5,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 6.4,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 6.1,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Regina",
+        "y": 6.0,
+        "placeId": "regina"
+       },
+       {
+        "x": "Brandon",
+        "y": 4.9,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 4.3,
+        "placeId": "abbotsford-mission"
+       }
+      ]
+     },
+     {
+      "id": "lang_bilingual",
+      "label": "Can speak English and French",
+      "points": [
+       {
+        "x": "Québec City",
+        "y": 41.5,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 46.0,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Gatineau",
+        "y": 64.6,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Montréal",
+        "y": 56.4,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Moncton",
+        "y": 45.9,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Ottawa",
+        "y": 36.4,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 36.7,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Fredericton",
+        "y": 22.5,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 16.7,
+        "placeId": "yellowknife"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 15.8,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Saint John",
+        "y": 15.7,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 13.7,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Halifax",
+        "y": 11.9,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Victoria",
+        "y": 10.1,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 10.0,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Windsor",
+        "y": 9.4,
+        "placeId": "windsor"
+       },
+       {
+        "x": "St. John's",
+        "y": 8.1,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 7.8,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Toronto",
+        "y": 7.4,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Kelowna",
+        "y": 6.9,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "Edmonton",
+        "y": 6.8,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "Calgary",
+        "y": 6.6,
+        "placeId": "calgary"
+       },
+       {
+        "x": "London",
+        "y": 6.6,
+        "placeId": "london"
+       },
+       {
+        "x": "Vancouver",
+        "y": 6.5,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Hamilton",
+        "y": 6.5,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 6.4,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 6.1,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Regina",
+        "y": 5.9,
+        "placeId": "regina"
+       },
+       {
+        "x": "Brandon",
+        "y": 4.8,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 4.3,
+        "placeId": "abbotsford-mission"
+       }
+      ]
+     }
+    ],
+    "sourceIds": [
+     "statcan-98-10-0175-01"
+    ]
+   },
+   {
+    "id": "commute-modes",
+    "type": "dot_compare",
+    "title": "How people commute",
+    "subtitle": "Main mode, % of workers with a usual place of work, May 2021 (25% sample)",
+    "unit": "percent",
+    "series": [
+     {
+      "id": "commute_transit_share",
+      "label": "Public transit",
+      "points": [
+       {
+        "x": "Toronto",
+        "y": 15.6,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Montréal",
+        "y": 15.3,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Vancouver",
+        "y": 14.9,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Ottawa",
+        "y": 9.9,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Gatineau",
+        "y": 9.1,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 8.4,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Calgary",
+        "y": 7.9,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Québec City",
+        "y": 7.8,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Victoria",
+        "y": 7.7,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Halifax",
+        "y": 7.7,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Hamilton",
+        "y": 6.5,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Edmonton",
+        "y": 6.1,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "London",
+        "y": 4.9,
+        "placeId": "london"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 4.6,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 4.0,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 3.9,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 3.4,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Regina",
+        "y": 3.3,
+        "placeId": "regina"
+       },
+       {
+        "x": "Brandon",
+        "y": 3.3,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Kelowna",
+        "y": 3.2,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "St. John's",
+        "y": 3.1,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 3.0,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 2.9,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Saint John",
+        "y": 2.7,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 2.4,
+        "placeId": "abbotsford-mission"
+       },
+       {
+        "x": "Fredericton",
+        "y": 2.3,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 2.3,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Moncton",
+        "y": 2.2,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Windsor",
+        "y": 2.0,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 1.3,
+        "placeId": "yellowknife"
+       }
+      ]
+     },
+     {
+      "id": "commute_active_share",
+      "label": "Walk or bicycle",
+      "points": [
+       {
+        "x": "Toronto",
+        "y": 5.7,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Montréal",
+        "y": 7.5,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Vancouver",
+        "y": 8.2,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Ottawa",
+        "y": 8.1,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Gatineau",
+        "y": 5.1,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 5.7,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Calgary",
+        "y": 4.9,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Québec City",
+        "y": 7.2,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Victoria",
+        "y": 15.3,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Halifax",
+        "y": 7.6,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Hamilton",
+        "y": 5.0,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Edmonton",
+        "y": 4.0,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "London",
+        "y": 5.2,
+        "placeId": "london"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 4.2,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 3.9,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 6.2,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 5.4,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Regina",
+        "y": 4.1,
+        "placeId": "regina"
+       },
+       {
+        "x": "Brandon",
+        "y": 5.4,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Kelowna",
+        "y": 7.4,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "St. John's",
+        "y": 4.7,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 8.7,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 5.0,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Saint John",
+        "y": 4.7,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 3.8,
+        "placeId": "abbotsford-mission"
+       },
+       {
+        "x": "Fredericton",
+        "y": 6.0,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 5.7,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Moncton",
+        "y": 5.6,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Windsor",
+        "y": 3.3,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 19.6,
+        "placeId": "yellowknife"
+       }
+      ]
+     },
+     {
+      "id": "commute_car_share",
+      "label": "Car, truck or van",
+      "points": [
+       {
+        "x": "Toronto",
+        "y": 76.0,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Montréal",
+        "y": 75.6,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Vancouver",
+        "y": 74.7,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Ottawa",
+        "y": 78.8,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Gatineau",
+        "y": 83.6,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 83.9,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Calgary",
+        "y": 84.4,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Québec City",
+        "y": 83.6,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Victoria",
+        "y": 73.9,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Halifax",
+        "y": 82.3,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Hamilton",
+        "y": 86.5,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Edmonton",
+        "y": 87.4,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "London",
+        "y": 87.9,
+        "placeId": "london"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 89.1,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 89.9,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 88.6,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 89.3,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Regina",
+        "y": 90.6,
+        "placeId": "regina"
+       },
+       {
+        "x": "Brandon",
+        "y": 90.2,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Kelowna",
+        "y": 86.6,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "St. John's",
+        "y": 88.7,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 86.7,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 90.1,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Saint John",
+        "y": 90.6,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 92.0,
+        "placeId": "abbotsford-mission"
+       },
+       {
+        "x": "Fredericton",
+        "y": 89.9,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 90.3,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Moncton",
+        "y": 89.9,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Windsor",
+        "y": 93.1,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 73.5,
+        "placeId": "yellowknife"
+       }
+      ]
+     }
+    ],
+    "notes": "Census day was in May 2021, during COVID-19 restrictions; people working from home are excluded from the universe.",
+    "sourceIds": [
+     "statcan-98-10-0457-01"
+    ]
+   }
+  ],
+  "interpretation": [
+   "If you do not speak French, the Quebec places are the hardest to navigate in everyday settings, even though bilingualism is common in Montréal and the Gatineau part of Ottawa-Gatineau; outside Quebec, Moncton, Sudbury and Ottawa are the places where French is most usable in daily life.",
+   "Commute patterns reflect urban form: transit commuting is concentrated in the three largest metros, while in most other places the car dominates and long commutes are uncommon. Use this with rent data to judge whether living near work is affordable.",
+   "These are area-wide shares (metropolitan area or agglomeration). Neighbourhood patterns within a metro, for example downtown versus suburbs, can differ sharply."
+  ],
+  "methodology": [
+   "Statistics Canada 2021 Census tables 98-10-0175-01 (knowledge of official languages), 98-10-0227-01 (language most often at home), 98-10-0457-01 (main mode and duration of commuting), 98-10-0308-01 (immigrant status) and 98-10-0038-01 (household size), each filtered to the place's CMA/CA DGUID (Ottawa and Gatineau: Ontario and Quebec parts).",
+   "Percentages are computed from published counts using the totals for all ages and genders; long-form counts are randomly rounded by Statistics Canada, so small differences (about one percentage point) should not be over-read."
+  ],
+  "limitations": [
+   "Long-form census data come from a 25% sample (household size and population from 100% data).",
+   "Language knowledge is self-reported and covers all ages, including young children; it is not a measure of fluency at work.",
+   "Commuting universe: employed labour force aged 15+ with a usual place of work (excludes those working at home or with no fixed workplace). The census was taken in May 2021 under COVID-19 restrictions, which depressed transit use.",
+   "Iqaluit is a single municipality outside any CMA/CA and has no value for these metrics in this version."
+  ],
+  "sourceIds": [
+   "statcan-98-10-0038-01",
+   "statcan-98-10-0175-01",
+   "statcan-98-10-0227-01",
+   "statcan-98-10-0457-01"
+  ],
+  "relatedPlaceIds": [
+   "toronto",
+   "montreal",
+   "vancouver",
+   "calgary",
+   "edmonton",
+   "ottawa",
+   "gatineau",
+   "winnipeg",
+   "quebec-city",
+   "hamilton",
+   "kitchener-waterloo",
+   "london",
+   "halifax",
+   "victoria",
+   "saskatoon",
+   "regina",
+   "st-johns",
+   "windsor",
+   "kelowna",
+   "abbotsford-mission",
+   "moncton",
+   "saint-john",
+   "fredericton",
+   "sherbrooke",
+   "sudbury",
+   "thunder-bay",
+   "charlottetown",
+   "brandon",
+   "whitehorse",
+   "yellowknife",
+   "iqaluit"
+  ],
+  "computedAt": "2026-11-04"
+ },
+ {
+  "id": "climate",
+  "topic": "climate",
+  "title": "Climate: how cold, how snowy and how hot",
+  "question": "What will the weather be like where I might live, especially in winter?",
+  "dek": "1991–2020 Environment and Climate Change Canada normals at one representative station per place, from the mild Pacific coast to the Arctic.",
+  "findings": [
+   {
+    "id": "winter-severity",
+    "kind": "calculation",
+    "headline": "January means span -26 °C (Iqaluit) to +4.6 °C (Victoria); only 3 places (Victoria, Vancouver, Abbotsford–Mission) average above freezing",
+    "detail": "Among the 28 places south of the territories, days with a minimum below -20 °C run from 0.0 a year in Abbotsford–Mission to 53 in Brandon; Winnipeg (52) and Saskatoon (49) are next. Toronto averages 2.7 such days, Montréal 12.",
+    "stat": {
+     "value": -26.0,
+     "unit": "degC",
+     "label": "Iqaluit: January mean daily temperature",
+     "period": "1991-2020"
+    },
+    "placeIds": [
+     "iqaluit",
+     "victoria",
+     "brandon",
+     "toronto",
+     "montreal"
+    ],
+    "metricId": "clim_days_below_minus20",
+    "sourceIds": [
+     "eccc-climate-normals-1991-2020"
+    ],
+    "calc": "clim_jan_mean_temp = January 'Daily Average' normal (1991-2020); clim_days_below_minus20 = annual 'Days with Minimum Temperature < -20 C' normal; stations listed in each observation note."
+   },
+   {
+    "id": "snow",
+    "kind": "observation",
+    "headline": "Snowfall is heaviest at the St. John's (363 cm), Moncton (310 cm) and Charlottetown (285 cm) stations; Vancouver averages 37 cm",
+    "detail": "Annual snowfall normals are published for 24 of 31 station-place pairs (the rest are not published for those stations in the 1991-2020 normals). Calgary and Edmonton, though cold and dry, get 139 and 127 cm; Toronto 114 cm.",
+    "placeIds": [
+     "st-johns",
+     "moncton",
+     "charlottetown",
+     "vancouver",
+     "toronto"
+    ],
+    "metricId": "clim_annual_snow",
+    "sourceIds": [
+     "eccc-climate-normals-1991-2020"
+    ],
+    "calc": "clim_annual_snow = 'Snowfall (cm)' Year column of the station's 1991-2020 normals; ranked descending."
+   },
+   {
+    "id": "summer-heat",
+    "kind": "observation",
+    "headline": "Kelowna (28), Windsor (24) and Toronto (17) have the most days above 30 °C; Vancouver has 0.2",
+    "detail": "Mean daily July highs run from 12 °C (Iqaluit) to 28 °C (Kelowna). Vancouver, Victoria, St. John's, Halifax, Saint John, Charlottetown and the territorial stations record fewer than 5 days a year.",
+    "placeIds": [
+     "kelowna",
+     "windsor",
+     "toronto",
+     "vancouver"
+    ],
+    "metricId": "clim_days_above_30",
+    "sourceIds": [
+     "eccc-climate-normals-1991-2020"
+    ],
+    "calc": "clim_days_above_30 = annual 'Days with Maximum Temperature > 30 C' normal; clim_jul_max_temp = July 'Daily Maximum' normal."
+   }
+  ],
+  "charts": [
+   {
+    "id": "jan-vs-jul",
+    "type": "scatter",
+    "title": "January versus July mean temperature",
+    "subtitle": "1991–2020 climate normals at each place's representative station",
+    "unit": "degC",
+    "xUnit": "degC",
+    "xLabel": "January mean daily temperature (°C)",
+    "yLabel": "July mean daily temperature (°C)",
+    "series": [
+     {
+      "id": "places",
+      "label": "Places",
+      "points": [
+       {
+        "x": -5.0,
+        "y": 22.1,
+        "label": "Toronto",
+        "placeId": "toronto",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -9.2,
+        "y": 21.7,
+        "label": "Montréal",
+        "placeId": "montreal",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": 4.1,
+        "y": 18.2,
+        "label": "Vancouver",
+        "placeId": "vancouver",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -7.6,
+        "y": 16.9,
+        "label": "Calgary",
+        "placeId": "calgary",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -12.3,
+        "y": 16.2,
+        "label": "Edmonton",
+        "placeId": "edmonton",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -10.0,
+        "y": 21.2,
+        "label": "Ottawa",
+        "placeId": "ottawa",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -10.0,
+        "y": 21.2,
+        "label": "Gatineau",
+        "placeId": "gatineau",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -16.3,
+        "y": 19.5,
+        "label": "Winnipeg",
+        "placeId": "winnipeg",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -11.9,
+        "y": 19.5,
+        "label": "Québec City",
+        "placeId": "quebec-city",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -5.3,
+        "y": 20.9,
+        "label": "Hamilton",
+        "placeId": "hamilton",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -6.3,
+        "y": 20.2,
+        "label": "Kitchener–Waterloo",
+        "placeId": "kitchener-waterloo",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -5.4,
+        "y": 21.0,
+        "label": "London",
+        "placeId": "london",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -5.7,
+        "y": 19.2,
+        "label": "Halifax",
+        "placeId": "halifax",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": 4.6,
+        "y": 17.2,
+        "label": "Victoria",
+        "placeId": "victoria",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -15.4,
+        "y": 18.3,
+        "label": "Saskatoon",
+        "placeId": "saskatoon",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -14.7,
+        "y": 18.6,
+        "label": "Regina",
+        "placeId": "regina",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -4.2,
+        "y": 16.0,
+        "label": "St. John's",
+        "placeId": "st-johns",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -3.6,
+        "y": 23.2,
+        "label": "Windsor",
+        "placeId": "windsor",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -2.6,
+        "y": 20.0,
+        "label": "Kelowna",
+        "placeId": "kelowna",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": 3.7,
+        "y": 18.5,
+        "label": "Abbotsford–Mission",
+        "placeId": "abbotsford-mission",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -8.4,
+        "y": 19.3,
+        "label": "Moncton",
+        "placeId": "moncton",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -7.9,
+        "y": 17.3,
+        "label": "Saint John",
+        "placeId": "saint-john",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -9.2,
+        "y": 19.7,
+        "label": "Fredericton",
+        "placeId": "fredericton",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -9.5,
+        "y": 19.7,
+        "label": "Sherbrooke",
+        "placeId": "sherbrooke",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -12.7,
+        "y": 19.1,
+        "label": "Greater Sudbury",
+        "placeId": "sudbury",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -13.4,
+        "y": 18.0,
+        "label": "Thunder Bay",
+        "placeId": "thunder-bay",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -7.3,
+        "y": 19.0,
+        "label": "Charlottetown",
+        "placeId": "charlottetown",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -16.7,
+        "y": 18.4,
+        "label": "Brandon",
+        "placeId": "brandon",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -15.0,
+        "y": 14.5,
+        "label": "Whitehorse",
+        "placeId": "whitehorse",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -25.5,
+        "y": 17.1,
+        "label": "Yellowknife",
+        "placeId": "yellowknife",
+        "f": [
+         "station_proxy"
+        ]
+       },
+       {
+        "x": -26.0,
+        "y": 8.1,
+        "label": "Iqaluit",
+        "placeId": "iqaluit",
+        "f": [
+         "station_proxy"
+        ]
+       }
+      ]
+     }
+    ],
+    "sourceIds": [
+     "eccc-climate-normals-1991-2020"
+    ],
+    "notes": "Station proxy values; stations are listed in each observation note."
+   },
+   {
+    "id": "days-below-minus20",
+    "type": "bar_ranked",
+    "title": "Days per year with minimum below −20 °C",
+    "subtitle": "1991–2020 normals, representative station",
+    "unit": "days",
+    "series": [
+     {
+      "id": "clim_days_below_minus20",
+      "label": "Days per year with minimum below −20 °C",
+      "points": [
+       {
+        "x": "Iqaluit",
+        "y": 122.2,
+        "placeId": "iqaluit"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 102.6,
+        "placeId": "yellowknife"
+       },
+       {
+        "x": "Brandon",
+        "y": 53.3,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 51.9,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 49.4,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 45.2,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Regina",
+        "y": 44.7,
+        "placeId": "regina"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 42.2,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Edmonton",
+        "y": 38.4,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 27.9,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Québec City",
+        "y": 26.5,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 23.1,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Calgary",
+        "y": 21.6,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Fredericton",
+        "y": 17.3,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Ottawa",
+        "y": 15.6,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Gatineau",
+        "y": 15.6,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Saint John",
+        "y": 13.1,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Montréal",
+        "y": 12.0,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Moncton",
+        "y": 11.7,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 6.5,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 5.8,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "London",
+        "y": 4.5,
+        "placeId": "london"
+       },
+       {
+        "x": "Hamilton",
+        "y": 3.3,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Toronto",
+        "y": 2.7,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Halifax",
+        "y": 2.6,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Kelowna",
+        "y": 2.4,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "Windsor",
+        "y": 0.8,
+        "placeId": "windsor"
+       },
+       {
+        "x": "St. John's",
+        "y": 0.3,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Vancouver",
+        "y": 0.0,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Victoria",
+        "y": 0.0,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 0.0,
+        "placeId": "abbotsford-mission"
+       }
+      ]
+     }
+    ],
+    "sourceIds": [
+     "eccc-climate-normals-1991-2020"
+    ]
+   },
+   {
+    "id": "monthly-temperature",
+    "type": "monthly_climate",
+    "title": "Monthly temperature at six large-metro stations",
+    "subtitle": "Mean daily temperature (line) with mean daily minimum to maximum range, 1991–2020",
+    "unit": "degC",
+    "series": [
+     {
+      "id": "vancouver",
+      "label": "Vancouver",
+      "placeId": "vancouver",
+      "points": [
+       {
+        "x": "01",
+        "y": 4.1,
+        "y0": 1.4,
+        "y1": 6.8
+       },
+       {
+        "x": "02",
+        "y": 4.7,
+        "y0": 1.5,
+        "y1": 7.9
+       },
+       {
+        "x": "03",
+        "y": 6.7,
+        "y0": 3.3,
+        "y1": 10.1
+       },
+       {
+        "x": "04",
+        "y": 9.4,
+        "y0": 5.7,
+        "y1": 13.1
+       },
+       {
+        "x": "05",
+        "y": 13.0,
+        "y0": 9.0,
+        "y1": 16.9
+       },
+       {
+        "x": "06",
+        "y": 15.8,
+        "y0": 11.9,
+        "y1": 19.6
+       },
+       {
+        "x": "07",
+        "y": 18.2,
+        "y0": 13.9,
+        "y1": 22.4
+       },
+       {
+        "x": "08",
+        "y": 18.2,
+        "y0": 14.0,
+        "y1": 22.4
+       },
+       {
+        "x": "09",
+        "y": 15.2,
+        "y0": 11.2,
+        "y1": 19.1
+       },
+       {
+        "x": "10",
+        "y": 10.3,
+        "y0": 7.0,
+        "y1": 13.5
+       },
+       {
+        "x": "11",
+        "y": 6.4,
+        "y0": 3.6,
+        "y1": 9.3
+       },
+       {
+        "x": "12",
+        "y": 3.9,
+        "y0": 1.2,
+        "y1": 6.6
+       }
+      ]
+     },
+     {
+      "id": "calgary",
+      "label": "Calgary",
+      "placeId": "calgary",
+      "points": [
+       {
+        "x": "01",
+        "y": -7.6,
+        "y0": -13.5,
+        "y1": -1.5
+       },
+       {
+        "x": "02",
+        "y": -5.9,
+        "y0": -11.8,
+        "y1": 0.1
+       },
+       {
+        "x": "03",
+        "y": -2.2,
+        "y0": -8.1,
+        "y1": 3.8
+       },
+       {
+        "x": "04",
+        "y": 4.5,
+        "y0": -1.9,
+        "y1": 10.8
+       },
+       {
+        "x": "05",
+        "y": 9.9,
+        "y0": 3.4,
+        "y1": 16.4
+       },
+       {
+        "x": "06",
+        "y": 13.7,
+        "y0": 7.7,
+        "y1": 19.7
+       },
+       {
+        "x": "07",
+        "y": 16.9,
+        "y0": 10.2,
+        "y1": 23.5
+       },
+       {
+        "x": "08",
+        "y": 16.2,
+        "y0": 9.2,
+        "y1": 23.1
+       },
+       {
+        "x": "09",
+        "y": 11.5,
+        "y0": 4.7,
+        "y1": 18.3
+       },
+       {
+        "x": "10",
+        "y": 4.9,
+        "y0": -1.3,
+        "y1": 11.1
+       },
+       {
+        "x": "11",
+        "y": -1.7,
+        "y0": -7.5,
+        "y1": 4.1
+       },
+       {
+        "x": "12",
+        "y": -6.3,
+        "y0": -12.1,
+        "y1": -0.4
+       }
+      ]
+     },
+     {
+      "id": "toronto",
+      "label": "Toronto",
+      "placeId": "toronto",
+      "points": [
+       {
+        "x": "01",
+        "y": -5.0,
+        "y0": -8.9,
+        "y1": -1.2
+       },
+       {
+        "x": "02",
+        "y": -4.4,
+        "y0": -8.5,
+        "y1": -0.3
+       },
+       {
+        "x": "03",
+        "y": 0.6,
+        "y0": -3.8,
+        "y1": 5.0
+       },
+       {
+        "x": "04",
+        "y": 7.0,
+        "y0": 1.9,
+        "y1": 12.0
+       },
+       {
+        "x": "05",
+        "y": 13.7,
+        "y0": 8.2,
+        "y1": 19.2
+       },
+       {
+        "x": "06",
+        "y": 19.2,
+        "y0": 13.9,
+        "y1": 24.5
+       },
+       {
+        "x": "07",
+        "y": 22.1,
+        "y0": 16.6,
+        "y1": 27.4
+       },
+       {
+        "x": "08",
+        "y": 21.1,
+        "y0": 15.8,
+        "y1": 26.3
+       },
+       {
+        "x": "09",
+        "y": 16.9,
+        "y0": 11.6,
+        "y1": 22.3
+       },
+       {
+        "x": "10",
+        "y": 10.0,
+        "y0": 5.3,
+        "y1": 14.6
+       },
+       {
+        "x": "11",
+        "y": 4.1,
+        "y0": 0.2,
+        "y1": 7.9
+       },
+       {
+        "x": "12",
+        "y": -1.6,
+        "y0": -5.0,
+        "y1": 1.9
+       }
+      ]
+     },
+     {
+      "id": "montreal",
+      "label": "Montréal",
+      "placeId": "montreal",
+      "points": [
+       {
+        "x": "01",
+        "y": -9.2,
+        "y0": -13.5,
+        "y1": -5.0
+       },
+       {
+        "x": "02",
+        "y": -8.0,
+        "y0": -12.4,
+        "y1": -3.4
+       },
+       {
+        "x": "03",
+        "y": -2.0,
+        "y0": -6.5,
+        "y1": 2.4
+       },
+       {
+        "x": "04",
+        "y": 6.2,
+        "y0": 1.1,
+        "y1": 11.3
+       },
+       {
+        "x": "05",
+        "y": 13.9,
+        "y0": 8.3,
+        "y1": 19.4
+       },
+       {
+        "x": "06",
+        "y": 19.0,
+        "y0": 13.8,
+        "y1": 24.2
+       },
+       {
+        "x": "07",
+        "y": 21.7,
+        "y0": 16.7,
+        "y1": 26.7
+       },
+       {
+        "x": "08",
+        "y": 20.6,
+        "y0": 15.6,
+        "y1": 25.7
+       },
+       {
+        "x": "09",
+        "y": 16.0,
+        "y0": 10.9,
+        "y1": 21.1
+       },
+       {
+        "x": "10",
+        "y": 8.9,
+        "y0": 4.5,
+        "y1": 13.2
+       },
+       {
+        "x": "11",
+        "y": 2.3,
+        "y0": -1.7,
+        "y1": 6.1
+       },
+       {
+        "x": "12",
+        "y": -5.0,
+        "y0": -8.7,
+        "y1": -1.2
+       }
+      ]
+     },
+     {
+      "id": "halifax",
+      "label": "Halifax",
+      "placeId": "halifax",
+      "points": [
+       {
+        "x": "01",
+        "y": -5.7,
+        "y0": -10.1,
+        "y1": -1.2
+       },
+       {
+        "x": "02",
+        "y": -5.2,
+        "y0": -9.7,
+        "y1": -0.6
+       },
+       {
+        "x": "03",
+        "y": -0.9,
+        "y0": -5.4,
+        "y1": 3.5
+       },
+       {
+        "x": "04",
+        "y": 4.5,
+        "y0": -0.3,
+        "y1": 9.2
+       },
+       {
+        "x": "05",
+        "y": 10.1,
+        "y0": 4.6,
+        "y1": 15.5
+       },
+       {
+        "x": "06",
+        "y": 15.2,
+        "y0": 9.8,
+        "y1": 20.5
+       },
+       {
+        "x": "07",
+        "y": 19.2,
+        "y0": 14.2,
+        "y1": 24.2
+       },
+       {
+        "x": "08",
+        "y": 19.2,
+        "y0": 14.1,
+        "y1": 24.2
+       },
+       {
+        "x": "09",
+        "y": 15.2,
+        "y0": 10.2,
+        "y1": 20.0
+       },
+       {
+        "x": "10",
+        "y": 9.2,
+        "y0": 4.7,
+        "y1": 13.7
+       },
+       {
+        "x": "11",
+        "y": 3.8,
+        "y0": 0.0,
+        "y1": 7.6
+       },
+       {
+        "x": "12",
+        "y": -1.9,
+        "y0": -5.8,
+        "y1": 2.1
+       }
+      ]
+     },
+     {
+      "id": "winnipeg",
+      "label": "Winnipeg",
+      "placeId": "winnipeg",
+      "points": [
+       {
+        "x": "01",
+        "y": -16.3,
+        "y0": -21.2,
+        "y1": -11.4
+       },
+       {
+        "x": "02",
+        "y": -14.1,
+        "y0": -19.3,
+        "y1": -8.8
+       },
+       {
+        "x": "03",
+        "y": -6.1,
+        "y0": -11.2,
+        "y1": -0.9
+       },
+       {
+        "x": "04",
+        "y": 3.8,
+        "y0": -2.5,
+        "y1": 10.0
+       },
+       {
+        "x": "05",
+        "y": 11.1,
+        "y0": 4.2,
+        "y1": 18.1
+       },
+       {
+        "x": "06",
+        "y": 17.1,
+        "y0": 10.9,
+        "y1": 23.3
+       },
+       {
+        "x": "07",
+        "y": 19.5,
+        "y0": 13.2,
+        "y1": 25.8
+       },
+       {
+        "x": "08",
+        "y": 18.7,
+        "y0": 11.9,
+        "y1": 25.4
+       },
+       {
+        "x": "09",
+        "y": 13.3,
+        "y0": 6.9,
+        "y1": 19.6
+       },
+       {
+        "x": "10",
+        "y": 5.1,
+        "y0": -0.2,
+        "y1": 10.4
+       },
+       {
+        "x": "11",
+        "y": -4.4,
+        "y0": -8.8,
+        "y1": 0.1
+       },
+       {
+        "x": "12",
+        "y": -12.7,
+        "y0": -17.3,
+        "y1": -8.2
+       }
+      ]
+     }
+    ],
+    "sourceIds": [
+     "eccc-climate-normals-1991-2020"
+    ]
+   }
+  ],
+  "interpretation": [
+   "Winter severity varies more with location than with latitude alone: Prairie places (Winnipeg, Saskatoon, Regina, Brandon) have 45-53 days a year below -20 °C with moderate snowfall (91-128 cm), while St. John's, Moncton and Charlottetown get 285-363 cm of snow but only 0-12 days below -20 °C.",
+   "The Pacific coast (Vancouver, Victoria, Abbotsford) is the only mild-winter group but has little summer heat; the Okanagan (Kelowna) and Windsor have the hottest summers.",
+   "Pair these with housing and commuting data: heating and winter-clothing costs matter more in the Prairies and the North, while snow-clearing and winter driving matter more in Quebec and the Maritimes."
+  ],
+  "methodology": [
+   "ECCC Canadian Climate Normals 1991-2020, read from the station pages. One composite station per place: composites within 30 km of the place marker that are airports with normals code A-D (best code, then nearest), else the nearest A-D composite within 30 km, then any code, then up to 60 km.",
+   "Observations: January and July means are the 'Daily Average'; January low is 'Daily Minimum'; July high is 'Daily Maximum'; precipitation and snowfall are 'Year' totals; day counts come from the 'Days with Minimum/Maximum Temperature' tables.",
+   "Station choice is recorded on each place (climateStation) with distance to the place marker and every value carries the station_proxy flag. Gatineau shares the Ottawa airport station."
+  ],
+  "limitations": [
+   "A station is a proxy for a whole metropolitan area; elevation, lakes, coasts and urban heat make values differ within the area (for example Vancouver airport versus the North Shore).",
+   "Normals are 30-year averages; individual years, and recent warming, can differ from them.",
+   "Normals codes differ by station (A: WMO '3 and 5' rule; B at least 25 years; C at least 20; D at least 15; E-G fewer) and are kept in each observation note; some stations (for example Kelowna, Thunder Bay) publish no precipitation or snowfall normals, and these cells are left empty rather than filled from another station.",
+   "Snowfall and precipitation are annual totals; they do not describe snow cover duration."
+  ],
+  "sourceIds": [
+   "eccc-climate-normals-1991-2020"
+  ],
+  "relatedPlaceIds": [
+   "toronto",
+   "montreal",
+   "vancouver",
+   "calgary",
+   "edmonton",
+   "ottawa",
+   "gatineau",
+   "winnipeg",
+   "quebec-city",
+   "hamilton",
+   "kitchener-waterloo",
+   "london",
+   "halifax",
+   "victoria",
+   "saskatoon",
+   "regina",
+   "st-johns",
+   "windsor",
+   "kelowna",
+   "abbotsford-mission",
+   "moncton",
+   "saint-john",
+   "fredericton",
+   "sherbrooke",
+   "sudbury",
+   "thunder-bay",
+   "charlottetown",
+   "brandon",
+   "whitehorse",
+   "yellowknife",
+   "iqaluit"
+  ],
+  "computedAt": "2026-11-04"
+ }
+]

@@ -58,7 +58,7 @@ export function BarRankedChart({ spec, width, ctx }: BarRankedProps) {
   const plotL = L.plotL + negW;
   const { scale: x } = valueScale([...values, ...refs.map((r) => r.value)], [plotL, L.plotR], { zero: true, ticks: 4 });
   const x0 = x(0);
-  const barH = Math.min(14, L.rowH - 9);
+  const barH = Math.min(13, L.rowH - 10);
   const height = L.top + rows.length * L.rowH + 4;
   const n = values.length;
 

@@ -15,7 +15,7 @@ import { COMPARE_COLORS } from '../lib/colors';
 
 export const CHART_INK = '#272727';
 /** Single-series marks when nothing is highlighted. */
-export const CHART_BASE = '#3b3834';
+export const CHART_BASE = '#544d46';
 /** De-emphasised bars/areas while other marks are highlighted. */
 export const CHART_CONTEXT = '#cdbfb0';
 /** De-emphasised lines (a step darker than CONTEXT so thin strokes stay visible). */

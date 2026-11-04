@@ -18,7 +18,7 @@ const RE_YEAR = /^\d{4}$/;
 const RE_MOY = /^(0[1-9]|1[0-2])$/;
 
 const MONTH_NAMES = new Set(MONTHS_LONG.flatMap((m) => [m.toLowerCase(), m.slice(0, 3).toLowerCase()]));
-/** '01'..'12', '1'..'12', 'Jan', 'January' (strict: category names never qualify). */
+/** '01'..'12', 'Jan', 'January' (strict: category names never qualify). */
 export const isMonthToken = (x: string | number) => RE_MOY.test(String(x).trim()) || MONTH_NAMES.has(String(x).trim().toLowerCase().replace(/\.$/, ''));
 
 /** Year-to-date / partial-period points (not comparable with full periods). */
@@ -133,9 +133,12 @@ export function xTicks(xs: readonly (string | number)[], kind: XKind, plotWidth:
   }
   const all = xs.map((x) => ({ x, label: tickText(x, kind) }));
   if (fits(all)) return all;
-  // Keep the last tick visible: thin from the end.
-  const rev = thin([...all].reverse());
-  return rev.reverse();
+  // Keep the last tick visible: thin counting back from the end.
+  for (let step = 2; step <= all.length; step++) {
+    const picked = all.filter((_, i) => (all.length - 1 - i) % step === 0);
+    if (fits(picked)) return picked;
+  }
+  return all.slice(-1);
 }
 
 export interface ValueScale {

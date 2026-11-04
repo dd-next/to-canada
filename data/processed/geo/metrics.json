@@ -1,0 +1,386 @@
+[
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": false,
+  "seasonalAdjustment": "not_applicable",
+  "id": "pop_2021",
+  "label": "Population, 2021 Census",
+  "shortLabel": "Population 2021",
+  "unit": "persons",
+  "decimals": 0,
+  "higherIs": "neutral",
+  "description": "Total population counted in the 2021 Census for the place's census metropolitan area / agglomeration (or provincial part of Ottawa–Gatineau; Iqaluit is the city itself).",
+  "basis": "100% data; total population, 2021 boundaries; counts are randomly rounded to a multiple of 5 only for small areas",
+  "sourceIds": [
+   "statcan-98-10-0005-01",
+   "statcan-98-10-0030-01",
+   "statcan-98-10-0002-01"
+  ],
+  "comparabilityNote": "Compares CMA/CA populations (not city-proper populations). Ottawa and Gatineau are the Ontario and Quebec parts of one CMA. Iqaluit is a single municipality, not a CA."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "pop_change_2016_2021",
+  "label": "Population change, 2016 to 2021",
+  "shortLabel": "Pop. change 2016–21",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Percentage change in census population between the 2016 and 2021 censuses, on 2021 geographic boundaries.",
+  "basis": "100% data; (2021 count − 2016 count on 2021 boundaries) ÷ 2016 count; computed from published counts",
+  "sourceIds": [
+   "statcan-98-10-0005-01",
+   "statcan-98-10-0030-01",
+   "statcan-98-10-0002-01"
+  ],
+  "comparabilityNote": "Census counts, not July estimates; undercoverage differs by census year."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "pop_immigrant_share",
+  "label": "Immigrants, share of population",
+  "shortLabel": "Immigrant share",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Share of the population in private households who are or have ever been landed immigrants or permanent residents (immigrant status).",
+  "basis": "25% sample data (long-form census), so values carry sampling variability and random rounding; universe: population in private households; non-permanent residents are in the denominator and not counted as immigrants; computed from counts",
+  "sourceIds": [
+   "statcan-98-10-0308-01"
+  ],
+  "comparabilityNote": "Share of the CMA/CA population, not of the city proper."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "pop_recent_immigrant_share",
+  "label": "Recent immigrants (2016 to 2021), share of population",
+  "shortLabel": "Recent immigrant share",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Share of the population in private households who immigrated between 2016 and 2021 (admitted up to 11 May 2021).",
+  "basis": "25% sample data (long-form census), so values carry sampling variability and random rounding; universe: population in private households; computed from counts",
+  "sourceIds": [
+   "statcan-98-10-0308-01"
+  ],
+  "comparabilityNote": "Immigrants who arrived in 2016–2021 and were still living there in May 2021; not admissions or intended destinations."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "lang_french_knowledge",
+  "label": "Knows French (French only or English and French)",
+  "shortLabel": "Knows French",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Share of the population who can conduct a conversation in French (French only, or English and French), among all ages.",
+  "basis": "25% sample data (long-form census), so values carry sampling variability and random rounding; universe: population in private households, all ages; knowledge of official languages; computed from counts",
+  "sourceIds": [
+   "statcan-98-10-0175-01"
+  ],
+  "comparabilityNote": "Self-reported conversational ability; includes children. Ottawa and Gatineau use provincial-part values."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "lang_bilingual",
+  "label": "Knows both English and French",
+  "shortLabel": "English and French",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Share of the population who can conduct a conversation in both official languages (English-French bilingualism), among all ages.",
+  "basis": "25% sample data (long-form census), so values carry sampling variability and random rounding; universe: population in private households, all ages; computed from counts",
+  "sourceIds": [
+   "statcan-98-10-0175-01"
+  ],
+  "comparabilityNote": "Self-reported; includes children. Ottawa and Gatineau use provincial-part values."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "lang_nonofficial_home",
+  "label": "Non-official language spoken most often at home",
+  "shortLabel": "Non-official language at home",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Share of the population whose language spoken most often at home is a single non-official language (excludes multiple-language answers such as English and a non-official language).",
+  "basis": "25% sample data (long-form census), so values carry sampling variability and random rounding; universe: population in private households, all ages; single-response 'Non-official language'; computed from counts",
+  "sourceIds": [
+   "statcan-98-10-0227-01"
+  ],
+  "comparabilityNote": "Understates use of other languages at home because multiple-language households are counted separately."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "commute_transit_share",
+  "label": "Commute mainly by public transit",
+  "shortLabel": "Commute: transit",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Share of workers whose main mode of commuting is public transit (bus, subway, light rail, commuter train or ferry).",
+  "basis": "25% sample data (long-form census), so values carry sampling variability and random rounding; universe: employed labour force aged 15+ with a usual place of work (excludes those working at home and with no fixed workplace); computed from counts",
+  "sourceIds": [
+   "statcan-98-10-0457-01"
+  ],
+  "comparabilityNote": "Census was taken in May 2021 during COVID-19 restrictions, which lowered transit use and raised work from home; compare with caution to earlier censuses."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "commute_car_share",
+  "label": "Commute mainly by car, truck or van",
+  "shortLabel": "Commute: car",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Share of workers whose main mode of commuting is car, truck or van (as driver or passenger).",
+  "basis": "25% sample data (long-form census), so values carry sampling variability and random rounding; universe: employed labour force aged 15+ with a usual place of work; computed from counts",
+  "sourceIds": [
+   "statcan-98-10-0457-01"
+  ],
+  "comparabilityNote": "May 2021 (pandemic) conditions; excludes people working at home."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "commute_active_share",
+  "label": "Commute mainly walking or cycling",
+  "shortLabel": "Commute: walk/bike",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Share of workers whose main mode of commuting is active transportation (walked or bicycle).",
+  "basis": "25% sample data (long-form census), so values carry sampling variability and random rounding; universe: employed labour force aged 15+ with a usual place of work; walked + bicycle; computed from counts",
+  "sourceIds": [
+   "statcan-98-10-0457-01"
+  ],
+  "comparabilityNote": "May 2021 (pandemic) conditions; excludes people working at home."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "commute_45min_share",
+  "label": "Commute of 45 minutes or more",
+  "shortLabel": "Commute 45+ min",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "worse",
+  "description": "Share of workers whose usual one-way commuting duration is 45 minutes or more.",
+  "basis": "25% sample data (long-form census), so values carry sampling variability and random rounding; universe: employed labour force aged 15+ with a usual place of work; (45–59 + 60+ minutes) ÷ total; computed from counts",
+  "sourceIds": [
+   "statcan-98-10-0457-01"
+  ],
+  "comparabilityNote": "Self-reported usual one-way duration, May 2021."
+ },
+ {
+  "category": "people",
+  "geoLevel": "cma",
+  "periodType": "census",
+  "mapLayer": true,
+  "seasonalAdjustment": "not_applicable",
+  "id": "hh_avg_size",
+  "label": "Average household size",
+  "shortLabel": "Avg household size",
+  "unit": "ratio",
+  "decimals": 2,
+  "higherIs": "neutral",
+  "description": "Average number of persons per private household (population in private dwellings ÷ private dwellings occupied by usual residents), persons per household.",
+  "basis": "100% data; computed from published counts of population in private dwellings and occupied private dwellings",
+  "sourceIds": [
+   "statcan-98-10-0038-01"
+  ],
+  "comparabilityNote": "Computed average (published counts); may differ in the last decimal from StatCan's own rounded average."
+ },
+ {
+  "category": "climate",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "seasonalAdjustment": "not_applicable",
+  "mapLayer": true,
+  "sourceIds": [
+   "eccc-climate-normals-1991-2020"
+  ],
+  "comparabilityNote": "Values are for the climate station chosen to represent the place (flag station_proxy), not for the whole city. Stations differ in elevation, distance to water and urban setting. All use the 1991-2020 normals period.",
+  "id": "clim_jan_mean_temp",
+  "label": "January mean daily temperature (1991–2020 normal)",
+  "shortLabel": "Jan mean temp",
+  "unit": "degC",
+  "decimals": 1,
+  "higherIs": "better",
+  "description": "Average of daily mean temperatures in January, 1991–2020 climate normal at the representative station.",
+  "basis": "ECCC climate normal; monthly mean of daily mean temperature"
+ },
+ {
+  "category": "climate",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "seasonalAdjustment": "not_applicable",
+  "mapLayer": true,
+  "sourceIds": [
+   "eccc-climate-normals-1991-2020"
+  ],
+  "comparabilityNote": "Values are for the climate station chosen to represent the place (flag station_proxy), not for the whole city. Stations differ in elevation, distance to water and urban setting. All use the 1991-2020 normals period.",
+  "id": "clim_jul_mean_temp",
+  "label": "July mean daily temperature (1991–2020 normal)",
+  "shortLabel": "Jul mean temp",
+  "unit": "degC",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Average of daily mean temperatures in July, 1991–2020 climate normal at the representative station.",
+  "basis": "ECCC climate normal; monthly mean of daily mean temperature"
+ },
+ {
+  "category": "climate",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "seasonalAdjustment": "not_applicable",
+  "mapLayer": true,
+  "sourceIds": [
+   "eccc-climate-normals-1991-2020"
+  ],
+  "comparabilityNote": "Values are for the climate station chosen to represent the place (flag station_proxy), not for the whole city. Stations differ in elevation, distance to water and urban setting. All use the 1991-2020 normals period.",
+  "id": "clim_jan_min_temp",
+  "label": "January mean daily minimum temperature (1991–2020 normal)",
+  "shortLabel": "Jan mean low",
+  "unit": "degC",
+  "decimals": 1,
+  "higherIs": "better",
+  "description": "Average of daily minimum temperatures in January (typical overnight low), 1991–2020 normal.",
+  "basis": "ECCC climate normal; monthly mean of daily minimum temperature"
+ },
+ {
+  "category": "climate",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "seasonalAdjustment": "not_applicable",
+  "mapLayer": true,
+  "sourceIds": [
+   "eccc-climate-normals-1991-2020"
+  ],
+  "comparabilityNote": "Values are for the climate station chosen to represent the place (flag station_proxy), not for the whole city. Stations differ in elevation, distance to water and urban setting. All use the 1991-2020 normals period.",
+  "id": "clim_jul_max_temp",
+  "label": "July mean daily maximum temperature (1991–2020 normal)",
+  "shortLabel": "Jul mean high",
+  "unit": "degC",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Average of daily maximum temperatures in July (typical afternoon high), 1991–2020 normal.",
+  "basis": "ECCC climate normal; monthly mean of daily maximum temperature"
+ },
+ {
+  "category": "climate",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "seasonalAdjustment": "not_applicable",
+  "mapLayer": true,
+  "sourceIds": [
+   "eccc-climate-normals-1991-2020"
+  ],
+  "comparabilityNote": "Values are for the climate station chosen to represent the place (flag station_proxy), not for the whole city. Stations differ in elevation, distance to water and urban setting. All use the 1991-2020 normals period.",
+  "id": "clim_annual_precip",
+  "label": "Annual precipitation (1991–2020 normal)",
+  "shortLabel": "Precipitation",
+  "unit": "mm",
+  "decimals": 0,
+  "higherIs": "neutral",
+  "description": "Average yearly total of rain plus the water equivalent of snow, 1991–2020 normal.",
+  "basis": "ECCC climate normal; annual total of daily precipitation"
+ },
+ {
+  "category": "climate",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "seasonalAdjustment": "not_applicable",
+  "mapLayer": true,
+  "sourceIds": [
+   "eccc-climate-normals-1991-2020"
+  ],
+  "comparabilityNote": "Values are for the climate station chosen to represent the place (flag station_proxy), not for the whole city. Stations differ in elevation, distance to water and urban setting. All use the 1991-2020 normals period.",
+  "id": "clim_annual_snow",
+  "label": "Annual snowfall (1991–2020 normal)",
+  "shortLabel": "Snowfall",
+  "unit": "cm",
+  "decimals": 0,
+  "higherIs": "neutral",
+  "description": "Average yearly total snowfall (depth of fresh snow), 1991–2020 normal.",
+  "basis": "ECCC climate normal; annual total snowfall in cm"
+ },
+ {
+  "category": "climate",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "seasonalAdjustment": "not_applicable",
+  "mapLayer": true,
+  "sourceIds": [
+   "eccc-climate-normals-1991-2020"
+  ],
+  "comparabilityNote": "Values are for the climate station chosen to represent the place (flag station_proxy), not for the whole city. Stations differ in elevation, distance to water and urban setting. All use the 1991-2020 normals period.",
+  "id": "clim_days_below_minus20",
+  "label": "Days per year with minimum below −20 °C (1991–2020 normal)",
+  "shortLabel": "Days below −20 °C",
+  "unit": "days",
+  "decimals": 1,
+  "higherIs": "worse",
+  "description": "Average number of days per year when the daily minimum temperature is below −20 °C, 1991–2020 normal.",
+  "basis": "ECCC climate normal; days with minimum temperature < −20 °C"
+ },
+ {
+  "category": "climate",
+  "geoLevel": "station",
+  "periodType": "normals",
+  "seasonalAdjustment": "not_applicable",
+  "mapLayer": true,
+  "sourceIds": [
+   "eccc-climate-normals-1991-2020"
+  ],
+  "comparabilityNote": "Values are for the climate station chosen to represent the place (flag station_proxy), not for the whole city. Stations differ in elevation, distance to water and urban setting. All use the 1991-2020 normals period.",
+  "id": "clim_days_above_30",
+  "label": "Days per year with maximum above 30 °C (1991–2020 normal)",
+  "shortLabel": "Days above 30 °C",
+  "unit": "days",
+  "decimals": 1,
+  "higherIs": "worse",
+  "description": "Average number of days per year when the daily maximum temperature exceeds 30 °C, 1991–2020 normal.",
+  "basis": "ECCC climate normal; days with maximum temperature > 30 °C"
+ }
+]

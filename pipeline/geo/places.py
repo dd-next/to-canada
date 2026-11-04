@@ -262,18 +262,22 @@ def main() -> None:
         {"type": "Feature", "geometry": g, "properties": {"placeId": pid, "cmaId": cid, "name": nm, "level": lv}}
         for pid, cid, pu, lv, nm, g, _ in boundary_cmas]}
     (tmp / "cmas.geojson").write_text(json.dumps(cm))
-    prg = layer_query("PR", offset=0.01)
+    # provinces: fetched one by one with minimal, identical server generalization so shared borders keep the same vertices
+    pfeat = []
+    for u in PRCODE:
+        pfeat += layer_query("PR", f"PRUID='{u}'", offset=0.0005)["features"]
     pr = {"type": "FeatureCollection", "features": [
         {"type": "Feature", "geometry": f["geometry"],
          "properties": {"code": PRCODE[f["properties"]["PRUID"]], "pruid": f["properties"]["PRUID"], "name": f["properties"]["PRENAME"]}}
-        for f in prg["features"]]}
+        for f in pfeat]}
     (tmp / "provinces.geojson").write_text(json.dumps(pr))
     out = GEO_DIR / "canada.topo.json"
     GEO_DIR.mkdir(parents=True, exist_ok=True)
     npx = ["npx", "--no-install", "mapshaper"]
-    subprocess.run(npx + ["-i", str(tmp / "provinces.geojson"), "-simplify", "7%", "weighted", "keep-shapes",
-                          "-o", str(tmp / "prov_s.json"), "format=geojson"], check=True, cwd=ROOT_DIR)
-    subprocess.run(npx + ["-i", str(tmp / "cmas.geojson"), "-simplify", "30%", "weighted", "keep-shapes",
+    subprocess.run(npx + ["-i", str(tmp / "provinces.geojson"), "snap-interval=0.0005", "-clean",
+                          "-simplify", PROV_SIMPLIFY, "weighted", "keep-shapes", "-densify", "interval=0.25", "planar",
+                          "-o", str(tmp / "prov_s.json"), "format=geojson", "force"], check=True, cwd=ROOT_DIR)
+    subprocess.run(npx + ["-i", str(tmp / "cmas.geojson"), "-simplify", "30%", "weighted", "keep-shapes", "-densify", "interval=0.25", "planar",
                           "-o", str(tmp / "cmas_s.json"), "format=geojson"], check=True, cwd=ROOT_DIR)
     subprocess.run(npx + ["-i", str(tmp / "prov_s.json"), str(tmp / "cmas_s.json"), "combine-files", "-rename-layers", "provinces,cmas",
                           "-o", str(out), "format=topojson", "quantization=100000", "force"], check=True, cwd=ROOT_DIR)
@@ -287,6 +291,7 @@ def main() -> None:
 
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
+PROV_SIMPLIFY = "1.2%"
 
 if __name__ == "__main__":
     main()
