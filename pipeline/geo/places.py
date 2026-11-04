@@ -207,7 +207,7 @@ def main() -> None:
             cma_ref = geo(level, cmaid, whole_name, wholed, "2021")
             place["geo"]["cma"] = cma_ref
             if sp["cmaPart"]:
-                pdg = f"2021S0503{pu}"
+                pdg = f"2021S0505{pu}"
                 pname, ppop, p16 = ptab[pdg]
                 pname = re.sub(r"\s*\(CMA\).*$", "", pname)
                 part_ref = geo("cma_part", pu, pname, pdg, "2021")

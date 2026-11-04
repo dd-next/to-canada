@@ -40,21 +40,31 @@ def cube_metadata(table_id: str) -> dict:
     return item["object"]
 
 
-def full_table_csv(table_id: str, max_age_days: float | None = 7) -> tuple[Path, Path, dict]:
-    """Download the full-table CSV zip once; return (data_csv, metadata_csv, fetch_meta)."""
+def table_zip(table_id: str, max_age_days: float | None = 7) -> tuple[Path, dict]:
+    """Download (once) the full-table CSV zip; return (zip_path, fetch_meta)."""
     pid = pid_of(table_id)
     info = fetch_json(f"{WDS}/getFullTableDownloadCSV/{pid}/en", max_age_days=max_age_days)
     if info.get("status") != "SUCCESS":
         raise RuntimeError(f"getFullTableDownloadCSV failed for {table_id}: {info}")
     zpath = fetch(info["object"], max_age_days=max_age_days)
+    m = meta_for(zpath)
+    m["zipUrl"] = info["object"]
+    return zpath, m
+
+
+def full_table_csv(table_id: str, max_age_days: float | None = 7) -> tuple[Path, Path, dict]:
+    """Download the full-table CSV zip once and extract it; return (data_csv, metadata_csv, fetch_meta).
+
+    Prefer read_table() for large tables: it streams from the zip without extracting.
+    """
+    pid = pid_of(table_id)
+    zpath, m = table_zip(table_id, max_age_days)
     out_dir = RAW / "statcan_tables" / pid
     data_csv, meta_csv = out_dir / f"{pid}.csv", out_dir / f"{pid}_MetaData.csv"
     if not data_csv.exists() or data_csv.stat().st_mtime < zpath.stat().st_mtime:
         out_dir.mkdir(parents=True, exist_ok=True)
         with zipfile.ZipFile(zpath) as zf:
             zf.extractall(out_dir)
-    m = meta_for(zpath)
-    m["zipUrl"] = info["object"]
     return data_csv, meta_csv, m
 
 
@@ -65,12 +75,24 @@ def read_table(
     row_filter: Callable[[pd.DataFrame], pd.DataFrame] | None = None,
     chunksize: int = 250_000,
 ) -> pd.DataFrame:
-    """Read a full table CSV with optional chunked filtering (keeps memory small)."""
-    data_csv, _, _ = full_table_csv(table_id)
+    """Read a full table with optional chunked filtering (keeps memory and disk small).
+
+    Uses an already-extracted CSV when present; otherwise streams the CSV member
+    directly out of the cached zip, so multi-GB tables are never extracted.
+    """
+    pid = pid_of(table_id)
+    zpath, _ = table_zip(table_id)
+    data_csv = RAW / "statcan_tables" / pid / f"{pid}.csv"
+    kw = dict(dtype=str, usecols=list(usecols) if usecols else None, chunksize=chunksize,
+              encoding="utf-8-sig", keep_default_na=False)
     parts = []
-    for chunk in pd.read_csv(data_csv, dtype=str, usecols=list(usecols) if usecols else None,
-                             chunksize=chunksize, encoding="utf-8-sig", keep_default_na=False):
-        parts.append(row_filter(chunk) if row_filter else chunk)
+    if data_csv.exists() and data_csv.stat().st_mtime >= zpath.stat().st_mtime:
+        for chunk in pd.read_csv(data_csv, **kw):
+            parts.append(row_filter(chunk) if row_filter else chunk)
+    else:
+        with zipfile.ZipFile(zpath) as zf, zf.open(f"{pid}.csv") as fh:
+            for chunk in pd.read_csv(fh, **kw):
+                parts.append(row_filter(chunk) if row_filter else chunk)
     df = pd.concat(parts, ignore_index=True) if parts else pd.DataFrame()
     if "VALUE" in df.columns:
         df["VALUE_NUM"] = pd.to_numeric(df["VALUE"], errors="coerce")
@@ -121,7 +143,7 @@ def source_record(table_id: str, *, title: str | None = None, reference_period: 
         meta = cube_metadata(table_id)
     except Exception as e:  # metadata is best-effort; data provenance below still holds
         notes = (notes or []) + [f"Cube metadata unavailable at build time: {e}"]
-    _, _, fm = full_table_csv(table_id)
+    _, fm = table_zip(table_id)
     return {
         "id": f"statcan-{table_id}",
         "title": title or meta.get("cubeTitleEn") or table_id,
