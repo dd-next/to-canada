@@ -1,0 +1,962 @@
+{
+ "_note": "Lead-owned seed. Place ids are permanent join keys. Geography codes are best-known values that the geography workstream must verify against official StatCan 2021 files; approxLat/approxLon are placeholders to be replaced by official representative points.",
+ "places": [
+  {
+   "id": "toronto",
+   "name": "Toronto",
+   "province": "ON",
+   "provinceCode": "35",
+   "provinceName": "Ontario",
+   "region": "ontario",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "535",
+    "name": "Toronto",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3530",
+     "name": "Toronto"
+    }
+   ],
+   "approxLat": 43.6532,
+   "approxLon": -79.3832,
+   "municipalities": [
+    "Mississauga",
+    "Brampton",
+    "Markham",
+    "Vaughan",
+    "Richmond Hill",
+    "Oakville",
+    "Ajax",
+    "Pickering",
+    "Milton",
+    "Newmarket"
+   ],
+   "verify": true
+  },
+  {
+   "id": "montreal",
+   "name": "Montréal",
+   "province": "QC",
+   "provinceCode": "24",
+   "provinceName": "Quebec",
+   "region": "quebec",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "462",
+    "name": "Montréal",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2440",
+     "name": "Montréal"
+    },
+    {
+     "level": "economic_region",
+     "id": "2445",
+     "name": "Laval"
+    },
+    {
+     "level": "economic_region",
+     "id": "2435",
+     "name": "Montérégie"
+    },
+    {
+     "level": "economic_region",
+     "id": "2450",
+     "name": "Lanaudière"
+    },
+    {
+     "level": "economic_region",
+     "id": "2455",
+     "name": "Laurentides"
+    }
+   ],
+   "approxLat": 45.5019,
+   "approxLon": -73.5674,
+   "municipalities": [
+    "Laval",
+    "Longueuil",
+    "Terrebonne",
+    "Brossard",
+    "Repentigny"
+   ],
+   "verify": true
+  },
+  {
+   "id": "vancouver",
+   "name": "Vancouver",
+   "province": "BC",
+   "provinceCode": "59",
+   "provinceName": "British Columbia",
+   "region": "west",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "933",
+    "name": "Vancouver",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5920",
+     "name": "Lower Mainland--Southwest"
+    }
+   ],
+   "approxLat": 49.2827,
+   "approxLon": -123.1207,
+   "municipalities": [
+    "Surrey",
+    "Burnaby",
+    "Richmond",
+    "Coquitlam",
+    "Langley",
+    "Delta",
+    "North Vancouver",
+    "New Westminster"
+   ],
+   "verify": true
+  },
+  {
+   "id": "calgary",
+   "name": "Calgary",
+   "province": "AB",
+   "provinceCode": "48",
+   "provinceName": "Alberta",
+   "region": "prairies",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "825",
+    "name": "Calgary",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4830",
+     "name": "Calgary"
+    }
+   ],
+   "approxLat": 51.0447,
+   "approxLon": -114.0719,
+   "municipalities": [
+    "Airdrie",
+    "Chestermere",
+    "Cochrane"
+   ],
+   "verify": true
+  },
+  {
+   "id": "edmonton",
+   "name": "Edmonton",
+   "province": "AB",
+   "provinceCode": "48",
+   "provinceName": "Alberta",
+   "region": "prairies",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "835",
+    "name": "Edmonton",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4860",
+     "name": "Edmonton"
+    }
+   ],
+   "approxLat": 53.5461,
+   "approxLon": -113.4938,
+   "municipalities": [
+    "St. Albert",
+    "Strathcona County",
+    "Spruce Grove",
+    "Leduc",
+    "Fort Saskatchewan"
+   ],
+   "verify": true
+  },
+  {
+   "id": "ottawa",
+   "name": "Ottawa",
+   "province": "ON",
+   "provinceCode": "35",
+   "provinceName": "Ontario",
+   "region": "ontario",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "505",
+    "name": "Ottawa - Gatineau",
+    "vintage": "2021"
+   },
+   "cmaPart": {
+    "level": "cma_part",
+    "id": "35505",
+    "name": "Ottawa - Gatineau (Ontario part)",
+    "vintage": "2021"
+   },
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3510",
+     "name": "Ottawa"
+    }
+   ],
+   "approxLat": 45.4215,
+   "approxLon": -75.6972,
+   "municipalities": [
+    "Clarence-Rockland",
+    "Russell"
+   ],
+   "verify": true
+  },
+  {
+   "id": "gatineau",
+   "name": "Gatineau",
+   "province": "QC",
+   "provinceCode": "24",
+   "provinceName": "Quebec",
+   "region": "quebec",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "505",
+    "name": "Ottawa - Gatineau",
+    "vintage": "2021"
+   },
+   "cmaPart": {
+    "level": "cma_part",
+    "id": "24505",
+    "name": "Ottawa - Gatineau (Quebec part)",
+    "vintage": "2021"
+   },
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2460",
+     "name": "Outaouais"
+    }
+   ],
+   "approxLat": 45.4765,
+   "approxLon": -75.7013,
+   "municipalities": [
+    "Cantley",
+    "Chelsea",
+    "Val-des-Monts"
+   ],
+   "verify": true
+  },
+  {
+   "id": "winnipeg",
+   "name": "Winnipeg",
+   "province": "MB",
+   "provinceCode": "46",
+   "provinceName": "Manitoba",
+   "region": "prairies",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "602",
+    "name": "Winnipeg",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4650",
+     "name": "Winnipeg"
+    }
+   ],
+   "approxLat": 49.8951,
+   "approxLon": -97.1384,
+   "municipalities": [],
+   "verify": true
+  },
+  {
+   "id": "quebec-city",
+   "name": "Québec City",
+   "province": "QC",
+   "provinceCode": "24",
+   "provinceName": "Quebec",
+   "region": "quebec",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "421",
+    "name": "Québec",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2420",
+     "name": "Capitale-Nationale"
+    },
+    {
+     "level": "economic_region",
+     "id": "2425",
+     "name": "Chaudière-Appalaches"
+    }
+   ],
+   "approxLat": 46.8139,
+   "approxLon": -71.208,
+   "municipalities": [
+    "Lévis"
+   ],
+   "verify": true
+  },
+  {
+   "id": "hamilton",
+   "name": "Hamilton",
+   "province": "ON",
+   "provinceCode": "35",
+   "provinceName": "Ontario",
+   "region": "ontario",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "537",
+    "name": "Hamilton",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3550",
+     "name": "Hamilton--Niagara Peninsula"
+    }
+   ],
+   "approxLat": 43.2557,
+   "approxLon": -79.8711,
+   "municipalities": [
+    "Burlington",
+    "Grimsby"
+   ],
+   "verify": true
+  },
+  {
+   "id": "kitchener-waterloo",
+   "name": "Kitchener–Waterloo",
+   "province": "ON",
+   "provinceCode": "35",
+   "provinceName": "Ontario",
+   "region": "ontario",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "541",
+    "name": "Kitchener - Cambridge - Waterloo",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3540",
+     "name": "Kitchener--Waterloo--Barrie"
+    }
+   ],
+   "approxLat": 43.4516,
+   "approxLon": -80.4925,
+   "municipalities": [
+    "Kitchener",
+    "Cambridge",
+    "Waterloo"
+   ],
+   "verify": true
+  },
+  {
+   "id": "london",
+   "name": "London",
+   "province": "ON",
+   "provinceCode": "35",
+   "provinceName": "Ontario",
+   "region": "ontario",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "555",
+    "name": "London",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3560",
+     "name": "London"
+    }
+   ],
+   "approxLat": 42.9849,
+   "approxLon": -81.2453,
+   "municipalities": [
+    "St. Thomas",
+    "Strathroy-Caradoc"
+   ],
+   "verify": true
+  },
+  {
+   "id": "halifax",
+   "name": "Halifax",
+   "province": "NS",
+   "provinceCode": "12",
+   "provinceName": "Nova Scotia",
+   "region": "atlantic",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "205",
+    "name": "Halifax",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1250",
+     "name": "Halifax"
+    }
+   ],
+   "approxLat": 44.6488,
+   "approxLon": -63.5752,
+   "municipalities": [
+    "Dartmouth"
+   ],
+   "verify": true
+  },
+  {
+   "id": "victoria",
+   "name": "Victoria",
+   "province": "BC",
+   "provinceCode": "59",
+   "provinceName": "British Columbia",
+   "region": "west",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "935",
+    "name": "Victoria",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5910",
+     "name": "Vancouver Island and Coast"
+    }
+   ],
+   "approxLat": 48.4284,
+   "approxLon": -123.3656,
+   "municipalities": [
+    "Saanich",
+    "Langford",
+    "Oak Bay",
+    "Esquimalt",
+    "Colwood"
+   ],
+   "verify": true
+  },
+  {
+   "id": "saskatoon",
+   "name": "Saskatoon",
+   "province": "SK",
+   "provinceCode": "47",
+   "provinceName": "Saskatchewan",
+   "region": "prairies",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "725",
+    "name": "Saskatoon",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4730",
+     "name": "Saskatoon--Biggar"
+    }
+   ],
+   "approxLat": 52.1332,
+   "approxLon": -106.67,
+   "municipalities": [],
+   "verify": true
+  },
+  {
+   "id": "regina",
+   "name": "Regina",
+   "province": "SK",
+   "provinceCode": "47",
+   "provinceName": "Saskatchewan",
+   "region": "prairies",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "705",
+    "name": "Regina",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4710",
+     "name": "Regina--Moose Mountain"
+    }
+   ],
+   "approxLat": 50.4452,
+   "approxLon": -104.6189,
+   "municipalities": [],
+   "verify": true
+  },
+  {
+   "id": "st-johns",
+   "name": "St. John's",
+   "province": "NL",
+   "provinceCode": "10",
+   "provinceName": "Newfoundland and Labrador",
+   "region": "atlantic",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "001",
+    "name": "St. John's",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1010",
+     "name": "Avalon Peninsula"
+    }
+   ],
+   "approxLat": 47.5615,
+   "approxLon": -52.7126,
+   "municipalities": [
+    "Mount Pearl",
+    "Conception Bay South",
+    "Paradise"
+   ],
+   "verify": true
+  },
+  {
+   "id": "windsor",
+   "name": "Windsor",
+   "province": "ON",
+   "provinceCode": "35",
+   "provinceName": "Ontario",
+   "region": "ontario",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "559",
+    "name": "Windsor",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3570",
+     "name": "Windsor--Sarnia"
+    }
+   ],
+   "approxLat": 42.3149,
+   "approxLon": -83.0364,
+   "municipalities": [
+    "LaSalle",
+    "Tecumseh",
+    "Lakeshore"
+   ],
+   "verify": true
+  },
+  {
+   "id": "kelowna",
+   "name": "Kelowna",
+   "province": "BC",
+   "provinceCode": "59",
+   "provinceName": "British Columbia",
+   "region": "west",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "915",
+    "name": "Kelowna",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5930",
+     "name": "Thompson--Okanagan"
+    }
+   ],
+   "approxLat": 49.888,
+   "approxLon": -119.496,
+   "municipalities": [
+    "West Kelowna",
+    "Lake Country"
+   ],
+   "verify": true
+  },
+  {
+   "id": "abbotsford-mission",
+   "name": "Abbotsford–Mission",
+   "province": "BC",
+   "provinceCode": "59",
+   "provinceName": "British Columbia",
+   "region": "west",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "932",
+    "name": "Abbotsford - Mission",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "5920",
+     "name": "Lower Mainland--Southwest"
+    }
+   ],
+   "approxLat": 49.0504,
+   "approxLon": -122.3045,
+   "municipalities": [
+    "Abbotsford",
+    "Mission"
+   ],
+   "verify": true
+  },
+  {
+   "id": "moncton",
+   "name": "Moncton",
+   "province": "NB",
+   "provinceCode": "13",
+   "provinceName": "New Brunswick",
+   "region": "atlantic",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "305",
+    "name": "Moncton",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1320",
+     "name": "Moncton--Richibucto"
+    }
+   ],
+   "approxLat": 46.0878,
+   "approxLon": -64.7782,
+   "municipalities": [
+    "Dieppe",
+    "Riverview"
+   ],
+   "verify": true
+  },
+  {
+   "id": "saint-john",
+   "name": "Saint John",
+   "province": "NB",
+   "provinceCode": "13",
+   "provinceName": "New Brunswick",
+   "region": "atlantic",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "310",
+    "name": "Saint John",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1330",
+     "name": "Saint John--St. Stephen"
+    }
+   ],
+   "approxLat": 45.2733,
+   "approxLon": -66.0633,
+   "municipalities": [
+    "Rothesay",
+    "Quispamsis"
+   ],
+   "verify": true
+  },
+  {
+   "id": "fredericton",
+   "name": "Fredericton",
+   "province": "NB",
+   "provinceCode": "13",
+   "provinceName": "New Brunswick",
+   "region": "atlantic",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "320",
+    "name": "Fredericton",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1340",
+     "name": "Fredericton--Oromocto"
+    }
+   ],
+   "approxLat": 45.9636,
+   "approxLon": -66.6431,
+   "municipalities": [
+    "Oromocto"
+   ],
+   "verify": true
+  },
+  {
+   "id": "sherbrooke",
+   "name": "Sherbrooke",
+   "province": "QC",
+   "provinceCode": "24",
+   "provinceName": "Quebec",
+   "region": "quebec",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "433",
+    "name": "Sherbrooke",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "2430",
+     "name": "Estrie"
+    }
+   ],
+   "approxLat": 45.4042,
+   "approxLon": -71.8929,
+   "municipalities": [
+    "Magog"
+   ],
+   "verify": true
+  },
+  {
+   "id": "sudbury",
+   "name": "Greater Sudbury",
+   "province": "ON",
+   "provinceCode": "35",
+   "provinceName": "Ontario",
+   "region": "ontario",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "580",
+    "name": "Greater Sudbury / Grand Sudbury",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3590",
+     "name": "Northeast"
+    }
+   ],
+   "approxLat": 46.4917,
+   "approxLon": -80.993,
+   "municipalities": [],
+   "verify": true
+  },
+  {
+   "id": "thunder-bay",
+   "name": "Thunder Bay",
+   "province": "ON",
+   "provinceCode": "35",
+   "provinceName": "Ontario",
+   "region": "ontario",
+   "tier": "core",
+   "cma": {
+    "level": "cma",
+    "id": "595",
+    "name": "Thunder Bay",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "3595",
+     "name": "Northwest"
+    }
+   ],
+   "approxLat": 48.3809,
+   "approxLon": -89.2477,
+   "municipalities": [],
+   "verify": true
+  },
+  {
+   "id": "charlottetown",
+   "name": "Charlottetown",
+   "province": "PE",
+   "provinceCode": "11",
+   "provinceName": "Prince Edward Island",
+   "region": "atlantic",
+   "tier": "extended",
+   "cma": {
+    "level": "ca",
+    "id": "105",
+    "name": "Charlottetown",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "1110",
+     "name": "Prince Edward Island"
+    }
+   ],
+   "approxLat": 46.2382,
+   "approxLon": -63.1311,
+   "municipalities": [
+    "Stratford",
+    "Cornwall"
+   ],
+   "verify": true
+  },
+  {
+   "id": "brandon",
+   "name": "Brandon",
+   "province": "MB",
+   "provinceCode": "46",
+   "provinceName": "Manitoba",
+   "region": "prairies",
+   "tier": "extended",
+   "cma": {
+    "level": "ca",
+    "id": "610",
+    "name": "Brandon",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "4630",
+     "name": "Southwest"
+    }
+   ],
+   "approxLat": 49.8485,
+   "approxLon": -99.9501,
+   "municipalities": [],
+   "verify": true
+  },
+  {
+   "id": "whitehorse",
+   "name": "Whitehorse",
+   "province": "YT",
+   "provinceCode": "60",
+   "provinceName": "Yukon",
+   "region": "north",
+   "tier": "extended",
+   "cma": {
+    "level": "ca",
+    "id": "990",
+    "name": "Whitehorse",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "6010",
+     "name": "Yukon"
+    }
+   ],
+   "approxLat": 60.7212,
+   "approxLon": -135.0568,
+   "municipalities": [],
+   "verify": true
+  },
+  {
+   "id": "yellowknife",
+   "name": "Yellowknife",
+   "province": "NT",
+   "provinceCode": "61",
+   "provinceName": "Northwest Territories",
+   "region": "north",
+   "tier": "extended",
+   "cma": {
+    "level": "ca",
+    "id": "995",
+    "name": "Yellowknife",
+    "vintage": "2021"
+   },
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "6110",
+     "name": "Northwest Territories"
+    }
+   ],
+   "approxLat": 62.454,
+   "approxLon": -114.3718,
+   "municipalities": [],
+   "verify": true
+  },
+  {
+   "id": "iqaluit",
+   "name": "Iqaluit",
+   "province": "NU",
+   "provinceCode": "62",
+   "provinceName": "Nunavut",
+   "region": "north",
+   "tier": "extended",
+   "cma": null,
+   "cmaPart": null,
+   "economicRegions": [
+    {
+     "level": "economic_region",
+     "id": "6210",
+     "name": "Nunavut"
+    }
+   ],
+   "approxLat": 63.7467,
+   "approxLon": -68.517,
+   "municipalities": [],
+   "verify": true
+  }
+ ]
+}

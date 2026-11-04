@@ -1,0 +1,50 @@
+{
+  "name": "northward",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Canada relocation and city intelligence explorer built on official open data.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && node scripts/spa-fallback.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --pretty",
+    "data:build": "python3 -I pipeline/build_app_data.py",
+    "data:refresh": "python3 -I pipeline/refresh.py",
+    "data:check": "python3 -I pipeline/check_app_data.py"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/newsreader": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "d3-array": "^3.2.5",
+    "d3-format": "^3.1.3",
+    "d3-geo": "^3.1.2",
+    "d3-scale": "^4.0.3",
+    "d3-selection": "^3.0.1",
+    "d3-shape": "^3.2.1",
+    "d3-zoom": "^3.0.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5",
+    "topojson-client": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/d3-array": "^3.2.2",
+    "@types/d3-format": "^3.0.4",
+    "@types/d3-geo": "^3.1.1",
+    "@types/d3-scale": "^4.0.9",
+    "@types/d3-selection": "^3.0.12",
+    "@types/d3-shape": "^3.2.0",
+    "@types/d3-zoom": "^3.0.9",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/topojson-client": "^3.1.5",
+    "@types/topojson-specification": "^1.0.5",
+    "@vitejs/plugin-react": "^5.2.0",
+    "mapshaper": "^0.7.101",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.7",
+    "world-atlas": "^2.0.2"
+  }
+}
