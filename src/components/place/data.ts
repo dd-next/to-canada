@@ -55,7 +55,7 @@ export interface Comparable {
 export function comparable(core: CoreData, placeId: string, metric: MetricDef): Comparable | { metric: MetricDef; own: Observation | undefined; reason: string } {
   const own = core.obsIndex.get(placeId)?.get(metric.id);
   if (!hasValue(own)) return { metric, own, reason: own?.note ?? 'No value for this place' };
-  if (isBroad(own)) return { metric, own, reason: 'Not ranked: this value is for a broader area than the place itself' };
+  if (isBroad(own)) return { metric, own, reason: 'Not ranked: the value covers a broader area than the place' };
   const peers = (core.byMetric.get(metric.id) ?? [])
     .filter((o) => hasValue(o) && o.period === own.period && o.sourceId === own.sourceId && !isBroad(o))
     .map((o) => ({ placeId: o.placeId, value: o.value as number }));

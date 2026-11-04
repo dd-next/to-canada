@@ -11,7 +11,8 @@ export function chartDecimals(unit: Unit, values: (number | null | undefined)[])
   const finite = values.filter(isNum);
   if (finite.every((v) => Number.isInteger(v))) return 0;
   const max = Math.max(...finite.map(Math.abs));
-  return max < 100 ? 1 : 0;
+  // Keep a decimal when small fractional values would otherwise round to 0 or 1.
+  return max < 100 || finite.some((v) => !Number.isInteger(v) && Math.abs(v) < 10) ? 1 : 0;
 }
 
 /** Value with unit for tooltips, labels and tables ("$2,090/mo", "6.9%", "−5.5 °C", "23.3 per 1,000"). */

@@ -60,11 +60,11 @@ export function ScatterChart({ spec, width, ctx, height: hProp }: ScatterProps) 
 
   const top = 22;
   const bottom = 40;
-  const yPre = valueScale([...pts.map((d) => d.y), ...refsY.map((r) => r.value)], [height - bottom, top], { zero: 'auto', ticks: 5, pad: 0.04 });
+  const yPre = valueScale([...pts.map((d) => d.y), ...refsY.map((r) => r.value)], [height - bottom, top], { zero: false, ticks: 5, pad: 0.04 });
   const left = Math.ceil(Math.max(24, ...yPre.ticks.map((t) => textWidth(valueTick(t, yUnit, yPre.ticks), FONT_TICK)))) + 10;
   const right = 16;
   const { scale: y, ticks: yt } = yPre;
-  const { scale: x, ticks: xt } = valueScale([...pts.map((d) => d.x), ...refsX.map((r) => r.value)], [left, width - right], { zero: 'auto', ticks: width < 520 ? 4 : 6, pad: 0.04 });
+  const { scale: x, ticks: xt } = valueScale([...pts.map((d) => d.x), ...refsX.map((r) => r.value)], [left, width - right], { zero: false, ticks: width < 520 ? 4 : 6, pad: 0.04 });
 
   // Direct labels: highlighted points first, then extremes; skip any that would collide.
   const boxes: { x0: number; x1: number; y0: number; y1: number }[] = [];

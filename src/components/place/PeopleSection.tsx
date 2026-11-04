@@ -44,6 +44,8 @@ export function PeopleSection({ core, place }: { core: CoreData; place: Place })
         }
       : null;
   const scope = people.filter((m) => m.basis && byPlace?.has(m.id));
+  const full = scope.filter((m) => /^100% data/i.test(m.basis ?? ''));
+  const sample = scope.filter((m) => /25% sample/i.test(m.basis ?? ''));
 
   return (
     <div className="ppeople">
@@ -62,10 +64,16 @@ export function PeopleSection({ core, place }: { core: CoreData; place: Place })
       {scope.length > 0 && (
         <div className="ppanel ppanel--quiet ppeople__scope">
           <p className="ppanel__title">Census scope</p>
-          <p className="ppanel__text">
-            Counts of people and households are 100% census data; shares about immigrants, language and commuting come from the 25% long-form sample, so they carry
-            sampling variability and random rounding. Each measure has its own universe:
-          </p>
+          {full.length > 0 && (
+            <p className="ppanel__text">
+              <strong>Full count (100% data):</strong> {full.map((m) => m.shortLabel).join(', ')}.
+            </p>
+          )}
+          {sample.length > 0 && (
+            <p className="ppanel__text">
+              <strong>25% long-form sample</strong> — carries sampling variability and random rounding: {sample.map((m) => m.shortLabel).join(', ')}.
+            </p>
+          )}
           <Disclosure summary="Universe and basis of each measure" variant="plain">
             <dl className="pdl ppeople__dl">
               {scope.map((m) => (

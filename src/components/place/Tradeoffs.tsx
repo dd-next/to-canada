@@ -54,7 +54,8 @@ const LABELS: Record<string, string> = {
 export function Tradeoffs({ core, place }: { core: CoreData; place: Place }) {
   const catalog = useMemo(() => buildLayerCatalog(core.metrics), [core.metrics]);
   const rows = useMemo(() => tradeoffMetrics(core).map((m) => comparable(core, place.id, m)), [core, place.id]);
-  const shown = rows.filter((r) => isComparable(r) || r.own);
+  const shown = rows.filter((r) => isComparable(r) || (r.own && r.own.value !== null));
+  const missing = rows.filter((r) => !isComparable(r) && (!r.own || r.own.value === null));
   const ranked = shown.filter(isComparable);
   if (!shown.length)
     return <MissingValue label="Nothing to compare yet" reason="This place has no values for the measures we compare across places." />;
@@ -72,7 +73,10 @@ export function Tradeoffs({ core, place }: { core: CoreData; place: Place }) {
                 <div className="trade__text">
                   <p className="trade__label">{SHORT[m.id] ?? m.shortLabel}</p>
                   <p className="trade__value num">{o && o.value !== null ? formatMetric(o.value, m) : 'No data'}</p>
-                  <p className="trade__sentence">{r.reason}{o && geoQualifier(o) ? ` (${geoQualifier(o)})` : ''}.</p>
+                  <p className="trade__sentence">
+                    {r.reason}
+                    {o && geoQualifier(o) ? ` — ${geoQualifier(o)}` : ''}.
+                  </p>
                 </div>
                 <div className="trade__viz trade__viz--empty" aria-hidden="true">
                   <span>Not ranked</span>
@@ -113,6 +117,15 @@ export function Tradeoffs({ core, place }: { core: CoreData; place: Place }) {
           );
         })}
       </ul>
+      {missing.length > 0 && (
+        <p className="tradeoffs__missing">
+          <span className="missing__mark" aria-hidden="true" />
+          <span>
+            <strong>No value to compare for {place.name}:</strong> {missing.map((r) => SHORT[r.metric.id] ?? r.metric.shortLabel).join(', ')}. The reasons are in the
+            sections below.
+          </span>
+        </p>
+      )}
       <p className="tradeoffs__note">
         Each dot is a place with a comparable value — same measure, same period, same source and geography type; {place.name} is the large dot, the tick
         is the median. Places measured on a broader area (territory-wide, province-wide) are not ranked.{' '}

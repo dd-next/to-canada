@@ -145,7 +145,7 @@ export function MonthlyClimateChart({ spec, width, ctx }: MonthlyClimateProps) {
   const L = layoutFor(width, groups, hasPrecip);
   const temps = all.flatMap((m) => [m.mean, m.max, m.min]).filter(isNum);
   const pre = all.map(precipOf).filter(isNum);
-  const tScale = valueScale(temps.length ? temps : [0, 1], [L.titleH + L.tH, L.titleH], { zero: false, ticks: multi ? 3 : 4 });
+  const tScale = valueScale(temps.length ? temps : [0, 1], [L.titleH + L.tH, L.titleH], { zero: false, ticks: multi ? 4 : 5 });
   const pScale = valueScale(pre.length ? pre : [0, 1], [L.titleH + L.tH + L.precipGap + L.pH, L.titleH + L.tH + L.precipGap], { zero: true, ticks: 2 });
   const tickW = Math.max(
     24,
