@@ -4,63 +4,71 @@ import { compactForUnit, MISSING_LABEL, scaleReading, type ClassScale } from '..
 import { formatPeriod, formatTick, plural, unitLabel } from '../../lib/format';
 import type { LayerData } from '../../lib/layers';
 import { Badge } from '../ui/Badge';
-import { SourceNote } from '../ui/SourceNote';
 import { Icon } from '../ui/Icon';
+import { SourceNote } from '../ui/SourceNote';
 
 export interface MapLegendProps {
   metric: MetricDef;
   layer: LayerData | null;
   scale: ClassScale | null;
-  /** Start collapsed (mobile). */
-  collapsible?: boolean;
+  /** Override the heading (defaults to metric.label). */
+  title?: string;
+  /** Compact: scale + missing line only (e.g. while the detail drawer is open, or on mobile). */
+  compact?: boolean;
   pending?: boolean;
   className?: string;
 }
 
-/** Docked legend: label, unit, periods present, printed thresholds, missing swatch, fixed-scale note, source. */
-export function MapLegend({ metric, layer, scale, collapsible, pending, className }: MapLegendProps) {
-  const [open, setOpen] = useState(!collapsible);
-  const compact = scale ? compactForUnit(metric.unit, scale.domain[1]) : false;
+/**
+ * Docked legend: label, unit and the periods actually present, printed class
+ * thresholds, the missing swatch, a fixed-scale note and the source. Secondary
+ * notes (older periods, marker size, caveats) sit behind a toggle.
+ */
+export function MapLegend({ metric, layer, scale, title, compact, pending, className }: MapLegendProps) {
+  const [notes, setNotes] = useState(false);
+  const compactNum = scale ? compactForUnit(metric.unit, scale.domain[1]) : false;
   const n = scale?.colors.length ?? 0;
   const periods = layer?.periods ?? [];
   const missing = layer ? layer.counts.missing + layer.counts.notComparable : 0;
+  const hasNotes = !!layer && (layer.counts.otherPeriod > 0 || !!layer.caveat || !!metric.comparabilityNote);
   return (
-    <section className={['legend', !open && 'is-collapsed', className].filter(Boolean).join(' ')} aria-label="Map legend">
+    <section className={['legend', compact && 'legend--compact', notes && 'is-open', className].filter(Boolean).join(' ')} aria-label="Map legend">
       <div className="legend__head">
-        <p className="legend__title">{metric.label}</p>
-        {collapsible && (
-          <button type="button" className="legend__toggle" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
-            <span className="sr-only">{open ? 'Hide legend details' : 'Show legend details'}</span>
-            <Icon name={open ? 'chevronDown' : 'chevronUp'} size={14} />
-          </button>
-        )}
+        <p className="legend__title">{title ?? metric.label}</p>
+        <button type="button" className="legend__toggle" aria-expanded={notes} onClick={() => setNotes((o) => !o)}>
+          {notes ? 'Less' : 'Notes'}
+          {hasNotes && !notes && <span className="legend__dot" aria-hidden="true" />}
+          <Icon name={notes ? 'chevronUp' : 'chevronDown'} size={12} />
+        </button>
       </div>
-      {layer?.calculation && (
-        <p className="legend__calc">
-          <Badge variant="estimate">Calculation</Badge> <span>{layer.calculation.replace(/^Calculation · /, '')}</span>
+      {!compact && (
+        <p className="legend__unit">
+          {unitLabel(metric.unit)}
+          {periods.length > 0 && (
+            <>
+              {' · '}
+              {periods.map((p, i) => (
+                <span key={p.period}>
+                  {i > 0 && ', '}
+                  {formatPeriod(p.period, metric.periodType)}
+                  {periods.length > 1 && <span className="legend__count"> ({p.count})</span>}
+                </span>
+              ))}
+            </>
+          )}
         </p>
       )}
-      <p className="legend__unit">
-        {unitLabel(metric.unit)}
-        {periods.length > 0 && (
-          <>
-            {' · '}
-            {periods.length === 1
-              ? formatPeriod(periods[0].period, metric.periodType)
-              : periods.map((p, i) => (
-                  <span key={p.period}>
-                    {i > 0 && ', '}
-                    {formatPeriod(p.period, metric.periodType)} <span className="legend__count">({p.count})</span>
-                  </span>
-                ))}
-          </>
-        )}
-      </p>
+      {layer?.calculation && (
+        <p className="legend__calc">
+          <Badge variant="estimate">Calculation</Badge>
+          {!compact && <span>{layer.calculation.replace(/^Calculation · /, '')}</span>}
+        </p>
+      )}
 
       {pending ? (
         <p className="legend__pending">Loading values…</p>
       ) : scale ? (
-        <div className="legend__scale" role="img" aria-label={legendSummary(metric, scale, compact)}>
+        <div className="legend__scale" role="img" aria-label={legendSummary(metric, scale, compactNum)}>
           <div className="legend__swatches">
             {scale.colors.map((c, i) => (
               <span key={i} className="legend__swatch" style={{ background: c }} />
@@ -69,7 +77,7 @@ export function MapLegend({ metric, layer, scale, collapsible, pending, classNam
           <div className="legend__ticks num" aria-hidden="true">
             {scale.thresholds.map((t, i) => (
               <span key={t} style={{ left: `${((i + 1) / n) * 100}%` }}>
-                {formatTick(t, metric.unit, metric.decimals, compact)}
+                {formatTick(t, metric.unit, metric.decimals, compactNum)}
               </span>
             ))}
           </div>
@@ -78,36 +86,42 @@ export function MapLegend({ metric, layer, scale, collapsible, pending, classNam
         <p className="legend__pending">No comparable values for this layer.</p>
       )}
 
-      {open && (
-        <>
-          <ul className="legend__keys">
+      <p className="legend__summary">
+        <span className="legend__missing" aria-hidden="true" />
+        <span>
+          {MISSING_LABEL}
+          {layer && <span className="legend__count"> ({missing})</span>}
+        </span>
+        <span className="legend__fixed">Scale fixed across all {layer ? plural(layer.counts.total, 'place') : 'places'}</span>
+      </p>
+
+      {notes && (
+        <ul className="legend__notes">
+          {compact && (
             <li>
-              <span className="legend__missing" aria-hidden="true" />
-              {MISSING_LABEL}
-              {layer && <span className="legend__count"> ({missing})</span>}
+              {unitLabel(metric.unit)}
+              {periods.length > 0 && ` · ${periods.map((p) => formatPeriod(p.period, metric.periodType)).join(', ')}`}
             </li>
-            {layer && layer.counts.otherPeriod > 0 && (
-              <li className="legend__note">
-                {plural(layer.counts.otherPeriod, 'place')} {layer.counts.otherPeriod === 1 ? 'reports' : 'report'} an older period — coloured, not ranked
-              </li>
-            )}
+          )}
+          {scale && <li>{scaleReading(metric, scale)}.</li>}
+          {layer && layer.counts.otherPeriod > 0 && (
             <li>
-              <span className="legend__size" aria-hidden="true">
-                <i />
-                <i />
-              </span>
-              Marker area = population
+              {plural(layer.counts.otherPeriod, 'place')} {layer.counts.otherPeriod === 1 ? 'reports' : 'report'} an older period — coloured, not ranked.
             </li>
-          </ul>
-          <p className="legend__fixed">
-            Scale fixed across all {layer ? plural(layer.counts.total, 'place') : 'places'}
-            {scale && <> · {scaleReading(metric, scale)}</>}
-          </p>
-          {layer?.caveat && <p className="legend__caveat">{layer.caveat}</p>}
-          {metric.comparabilityNote && <p className="legend__caveat">{metric.comparabilityNote}</p>}
-          <SourceNote sourceId={layer?.sourceIds ?? metric.sourceIds} period={layer?.primaryPeriod} periodType={metric.periodType} />
-        </>
+          )}
+          <li className="legend__size-note">
+            <span className="legend__size" aria-hidden="true">
+              <i />
+              <i />
+            </span>
+            <span>Marker area shows population (small places keep a minimum size). Crowded markers are nudged apart, with a leader line to the true spot.</span>
+          </li>
+          {layer?.calculation && compact && <li>{layer.calculation}</li>}
+          {layer?.caveat && <li className="legend__caveat">{layer.caveat}</li>}
+          {metric.comparabilityNote && <li className="legend__caveat">{metric.comparabilityNote}</li>}
+        </ul>
       )}
+      {(!compact || notes) && <SourceNote sourceId={layer?.sourceIds ?? metric.sourceIds} period={layer?.primaryPeriod} periodType={metric.periodType} />}
     </section>
   );
 }

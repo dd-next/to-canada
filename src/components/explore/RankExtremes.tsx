@@ -1,7 +1,7 @@
 import type { MetricDef } from '../../types/contract';
 import type { ClassScale } from '../../lib/colors';
 import { formatValue } from '../../lib/format';
-import type { ResultRow } from './ResultsList';
+import { focusVisible, type ResultRow } from './ResultsList';
 
 export interface RankExtremesProps {
   rows: ResultRow[];
@@ -38,9 +38,9 @@ export function RankExtremes({ rows, metric, scale, selectedId, onSelect, onHove
                     type="button"
                     className={['extremes__item', r.place.id === selectedId && 'is-selected'].filter(Boolean).join(' ')}
                     onClick={(e) => onSelect(r.place.id, e.detail === 0 ? 'keyboard' : 'pointer')}
-                    onPointerEnter={() => onHover(r.place.id)}
+                    onPointerEnter={(e) => e.pointerType !== 'touch' && onHover(r.place.id)}
                     onPointerLeave={() => onHover(null)}
-                    onFocus={() => onHover(r.place.id)}
+                    onFocus={(e) => focusVisible(e.currentTarget) && onHover(r.place.id)}
                     onBlur={() => onHover(null)}
                   >
                     <span className="extremes__swatch" style={{ background: scale?.color(d.value) ?? undefined }} aria-hidden="true" />

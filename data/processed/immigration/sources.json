@@ -1,0 +1,567 @@
+[
+ {
+  "id": "ircc-pr-cma",
+  "title": "Permanent Residents - Monthly IRCC Updates: Canada - Admissions of Permanent Residents by Province/Territory and Census Metropolitan Area of Intended Destination",
+  "publisher": "Immigration, Refugees and Citizenship Canada (IRCC)",
+  "tableId": "open.canada.ca dataset f7e5498e-0ad8-4417-85c9-9b8aff9b9eda; resource EN_ODP-PR-CMA.xlsx (81021dfd-c110-42cf-a975-1b9be8b82980)",
+  "url": "https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda",
+  "downloadUrl": "https://www.ircc.canada.ca/opendata-donneesouvertes/data/EN_ODP-PR-CMA.xlsx",
+  "releaseDate": "2026-10-20",
+  "retrievedAt": "2026-11-04T18:01:48+00:00",
+  "referencePeriod": "January 2015 to August 2026 (monthly); annual totals 2015-2025; year-to-date 2026-01 to 2026-08",
+  "licence": "Open Government Licence - Canada",
+  "attribution": "Contains information licensed under the Open Government Licence - Canada. Source: IRCC, Permanent Residents - Monthly IRCC Updates.",
+  "transformations": [
+   "Read the XLSX (not the CSV, which IRCC labels 'rounded - not for calculations'); took each row's calendar-year Total column (annual totals) and the 2026 year-to-date total (January-August).",
+   "IRCC rounds every value to the nearest 5 and shows 0-5 as '--' (kept as null + suppressed flag); all values carry the 'rounded' flag. Calendar-year totals are published values and may not equal the sum of monthly cells.",
+   "Rows are 'CMA' per IRCC, which includes some census agglomerations (Charlottetown, Brandon, Whitehorse, Yellowknife are present). Ottawa - Gatineau is published as Ontario part and Quebec part and used as such.",
+   "Change = (latest-year / previous-year - 1) x 100 on rounded values; per-1,000 = admissions / StatCan July 1 population x 1000."
+  ],
+  "notes": [
+   "Admissions are by intended destination at landing, not current residence.",
+   "Dataset metadata last modified 2026-10-20; file last-modified header Tue, 20 Oct 2026 11:31:40 GMT.",
+   "Iqaluit: IRCC publishes Nunavut only as 'Other - Nunavut', so no Iqaluit value is available."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-17-10-0148-01",
+  "title": "Population estimates, July 1, by census metropolitan area and census agglomeration, 2021 boundaries",
+  "publisher": "Statistics Canada",
+  "tableId": "17-10-0148-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710014801",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/17100148-eng.zip",
+  "releaseDate": "2026-01-14",
+  "retrievedAt": "2026-11-04T18:06:13+00:00",
+  "referencePeriod": "July 1, 2001 to 2025 (annual); 2025 used",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 17-10-0148-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Kept Gender='Total - gender' and Age group='All ages'; matched each place by DGUID suffix to its CMA/CA code (Ottawa and Gatineau by their Ontario/Quebec part).",
+   "Used as the denominator for admissions per 1,000 (same calendar year, July 1 estimate)."
+  ],
+  "notes": [
+   "Population estimates on 2021 boundaries; may be revised."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-43-10-0030-01",
+  "title": "Immigrant taxfilers by economic outcomes and tax year, Canada, provinces and census metropolitan areas, 2023 constant dollars",
+  "publisher": "Statistics Canada",
+  "tableId": "43-10-0030-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=4310003001",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/43100030-eng.zip",
+  "releaseDate": "2025-12-08",
+  "retrievedAt": "2026-11-04T18:03:35+00:00",
+  "referencePeriod": "Tax years 2009-2023; admission years 2008-2022",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 43-10-0030-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Streamed the ~16 GB full-table CSV and kept Sex='Total, sex', Pre-admission experience='Total', Knowledge of official languages='Total' and Statistics in {Total number of residents, Median employment income, Median wages salaries and commissions} for Canada, provinces and our CMAs (data/raw/statcan_tables/43100030/filtered_northward.csv).",
+   "Years since admission = tax year (REF_DATE) minus admission year; the admission-year-equals-tax-year cell is not published.",
+   "imm_median_wages_5y = Median wages, salaries and commissions, admission year 2018, tax year 2023, category total; Charlottetown and Brandon use the provincial value (flagged provincial_value); territories have no data.",
+   "Values rounded by StatCan (flag rounded); '..' -> null + not_available."
+  ],
+  "notes": [
+   "Population: immigrant taxfilers aged 15 and older residing in Canada (IMDB: IRCC landing records linked to tax files). Income in 2023 constant dollars; values zero and one excluded from medians. Geography = postal code on the tax return (may differ from province of taxation).",
+   "Admission year = year of first landing/PR status, which may differ from arrival year."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-43-10-0022-01",
+  "title": "Mobility of immigrant taxfilers by census metropolitan areas and tax year",
+  "publisher": "Statistics Canada",
+  "tableId": "43-10-0022-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=4310002201",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/43100022-eng.zip",
+  "releaseDate": "2025-12-19",
+  "retrievedAt": "2026-11-04T18:06:08+00:00",
+  "referencePeriod": "Tax years 2007-2023; admission years 2007-2023",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 43-10-0022-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Streamed the ~20 GB full-table CSV from the zip (not extracted) and kept Age group='Total, age group', Pre-admission experience='Total', Knowledge of official languages='Total' for Canada, provinces and our CMAs (data/raw/statcan_tables/43100022/filtered_northward.csv).",
+   "Used Statistics='Retention rate' (percent) for admission year 2018 in tax year 2023 (5 years after admission), category total; province values flagged provincial_value on place observations; CMA values as imm_retention_cma_5y.",
+   "Series: retention by years since admission for the 2015 cohort (tax years 2016-2023)."
+  ],
+  "notes": [
+   "'Retention rate represents the percentage of immigrant taxfilers continuing their residence in the geographical area (province or CMA) of intended destination ... This does not take into account immigrants migrating in from another destination.' (table note 11). Retention = stayed / (stayed + out migration).",
+   "Table covers Canada, provinces and CMAs; no territories or census agglomerations."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-hub",
+  "title": "Live in Canada permanently (IRCC immigration programs hub, incl. paused and closed programs)",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-express-entry",
+  "title": "Express Entry: Who can apply",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-pnp",
+  "title": "Immigrate as a provincial nominee",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-pnp-nonee",
+  "title": "Provincial Nominee Program: Non-Express Entry process",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/non-express-entry.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/non-express-entry.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/non-express-entry.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "page dated 2026-06-05"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-aip",
+  "title": "Atlantic Immigration Program (and how-to-immigrate page)",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "page dated 2026-09-01"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-rural-franco",
+  "title": "Rural and Francophone Community Immigration pilots (participating communities)",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "page dated 2026-08-31"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-rcip",
+  "title": "Rural Community Immigration Pilot: overview and Who can apply",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "pages dated 2026-04-30 / 2025-08-13"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-fcip",
+  "title": "Francophone Community Immigration Pilot: overview and Who can apply",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/franco-immigration.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/franco-immigration.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/franco-immigration.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "pages dated 2026-04-30 / 2025-08-13"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-caregivers",
+  "title": "Caregivers (home care workers)",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/caregivers.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/caregivers.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/caregivers.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "page dated 2026-01-27"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-doctors",
+  "title": "Live and work as a medical doctor in Canada",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/medical-doctors.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/medical-doctors.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/medical-doctors.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-closed-pilots",
+  "title": "Closed pilots: Agri-Food Pilot; Rural and Northern Immigration Pilot; TR to PR pathway",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/agri-food-pilot.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/agri-food-pilot.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/agri-food-pilot.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "pages dated 2026-04-27 and later"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-startup-self",
+  "title": "Start-up Visa Program; Self-Employed Persons Program",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/start-visa.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/start-visa.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/start-visa.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-quebec-skilled",
+  "title": "Quebec-selected skilled workers: About the process",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/quebec-skilled-workers.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/quebec-skilled-workers.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/quebec-skilled-workers.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "page dated 2026-03-11"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-pre-arrival",
+  "title": "Pre-arrival services: Get help before you arrive in Canada",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/pre-arrival-services.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/pre-arrival-services.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/pre-arrival-services.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "page dated 2026-03-05"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-newcomer-services",
+  "title": "Find free newcomer services near you",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://ircc.canada.ca/english/newcomers/services/index.asp",
+  "downloadUrl": "https://ircc.canada.ca/english/newcomers/services/index.asp",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://ircc.canada.ca/english/newcomers/services/index.asp",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-settling",
+  "title": "Settling in Canada (incl. Choose a city)",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/prepare-life-canada.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/prepare-life-canada.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/prepare-life-canada.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "prog-ab",
+  "title": "Alberta Advantage Immigration Program (AAIP) and application streams",
+  "publisher": "Government of Alberta",
+  "url": "https://www.alberta.ca/alberta-advantage-immigration-program",
+  "downloadUrl": "https://www.alberta.ca/alberta-advantage-immigration-program",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Government of Alberta, https://www.alberta.ca/alberta-advantage-immigration-program",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "AAIP updates listed up to 2026-08-12"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "prog-bc",
+  "title": "BC Provincial Nominee Program: program, Skills Immigration and invitations to apply",
+  "publisher": "Government of British Columbia (WelcomeBC)",
+  "url": "https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program",
+  "downloadUrl": "https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Government of British Columbia (WelcomeBC), https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "pages updated 2026-05-28 to 2026-10-29"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "prog-mb",
+  "title": "Manitoba Provincial Nominee Program (MPNP) and stream pages",
+  "publisher": "Government of Manitoba (Manitoba Immigration)",
+  "url": "https://immigratemanitoba.com/mpnp/",
+  "downloadUrl": "https://immigratemanitoba.com/mpnp/",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Government of Manitoba (Manitoba Immigration), https://immigratemanitoba.com/mpnp/",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "prog-sk",
+  "title": "Saskatchewan Immigrant Nominee Program (SINP): Browse SINP Programs",
+  "publisher": "Government of Saskatchewan",
+  "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program",
+  "downloadUrl": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Government of Saskatchewan, https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "prog-on",
+  "title": "Ontario Immigrant Nominee Program (OINP) and Ontario Workforce Priority stream",
+  "publisher": "Government of Ontario",
+  "url": "https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp",
+  "downloadUrl": "https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Government of Ontario, https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "prog-nb",
+  "title": "New Brunswick Provincial Nominee Program and Skilled Worker stream",
+  "publisher": "Government of New Brunswick (Immigration New Brunswick)",
+  "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program.html",
+  "downloadUrl": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program.html",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Government of New Brunswick (Immigration New Brunswick), https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "prog-ns",
+  "title": "Nova Scotia Immigration (NSNP news items)",
+  "publisher": "Government of Nova Scotia",
+  "url": "https://novascotiaimmigration.com/move-here/",
+  "downloadUrl": "https://novascotiaimmigration.com/move-here/",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Government of Nova Scotia, https://novascotiaimmigration.com/move-here/",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "prog-nl",
+  "title": "Newfoundland and Labrador Provincial Nominee Program (NLPNP): overview and Skilled Worker category",
+  "publisher": "Government of Newfoundland and Labrador",
+  "url": "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/overview/",
+  "downloadUrl": "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/overview/",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Government of Newfoundland and Labrador, https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/overview/",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "prog-nt",
+  "title": "Northwest Territories Nominee Program: Immigrate Here; Employer-Driven Stream",
+  "publisher": "Government of the Northwest Territories",
+  "url": "https://www.immigratenwt.ca/immigrate-here",
+  "downloadUrl": "https://www.immigratenwt.ca/immigrate-here",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Government of the Northwest Territories, https://www.immigratenwt.ca/immigrate-here",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "prog-qc",
+  "title": "Québec immigration: programs for skilled workers (PSTQ, PRTQ, pilot programs)",
+  "publisher": "Gouvernement du Québec",
+  "url": "https://www.quebec.ca/en/immigration/permanent/skilled-workers",
+  "downloadUrl": "https://www.quebec.ca/en/immigration/permanent/skilled-workers",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Gouvernement du Québec, https://www.quebec.ca/en/immigration/permanent/skilled-workers",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "pages updated 2025-12-22 to 2026-08-31"
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "comm-sudbury",
+  "title": "Greater Sudbury RCIP and FCIP (Invest Sudbury)",
+  "publisher": "City of Greater Sudbury Economic Development",
+  "url": "https://investsudbury.ca/why-sudbury/newcomers/rcipfcip/",
+  "downloadUrl": "https://investsudbury.ca/why-sudbury/newcomers/rcipfcip/",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: City of Greater Sudbury Economic Development, https://investsudbury.ca/why-sudbury/newcomers/rcipfcip/",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ },
+ {
+  "id": "comm-kelowna",
+  "title": "Immigration to Rural and Francophone Communities (FCIP) - Kelowna",
+  "publisher": "Societe de developpement economique de la Colombie-Britannique (SDECB)",
+  "url": "https://www.sdecb.com/en/pilot-program/",
+  "downloadUrl": "https://www.sdecb.com/en/pilot-program/",
+  "retrievedAt": "2026-11-04T18:21:42+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-04",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Societe de developpement economique de la Colombie-Britannique (SDECB), https://www.sdecb.com/en/pilot-program/",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [],
+  "status": "ok"
+ }
+]

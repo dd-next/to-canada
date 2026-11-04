@@ -32,6 +32,15 @@ export function sortRows(rows: ResultRow[], metric: MetricDef | null, mode: Sort
   });
 }
 
+/** True when an element is focused via keyboard (not a click or tap). */
+export function focusVisible(el: Element): boolean {
+  try {
+    return el.matches(':focus-visible');
+  } catch {
+    return true;
+  }
+}
+
 /** Short tag for the geography a value describes (list rows). */
 export function qualifierTag(d: LayerDatum | undefined): string | null {
   if (!d?.obs) return null;
@@ -119,7 +128,7 @@ export function ResultsList({
           value={sort}
           onChange={(v) => onSortChange(v as SortMode)}
           options={[
-            { value: 'auto', label: `${autoLabel} (default)` },
+            { value: 'auto', label: autoLabel },
             { value: asc ? 'high' : 'low', label: asc ? 'Highest first' : 'Lowest first' },
             { value: 'name', label: 'A–Z' },
           ]}
@@ -215,13 +224,13 @@ const ResultItem = memo(function ResultItem({
     .filter(Boolean)
     .join(' ');
   return (
-    <li className={cls} onPointerEnter={() => onHover(id)} onPointerLeave={() => onHover(null)}>
+    <li className={cls} onPointerEnter={(e) => e.pointerType !== 'touch' && onHover(id)} onPointerLeave={() => onHover(null)}>
       <button
         type="button"
         className="result__main"
         aria-pressed={selected}
         onClick={(e) => onSelect(id, e.detail === 0 ? 'keyboard' : 'pointer')}
-        onFocus={() => onHover(id)}
+        onFocus={(e) => focusVisible(e.currentTarget) && onHover(id)}
         onBlur={() => onHover(null)}
       >
         <span className="result__rank mono" title={ranked && layer ? `Rank ${d!.rank} of ${layer.counts.ranked}` : 'Not ranked'}>

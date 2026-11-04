@@ -149,16 +149,18 @@ def main() -> None:
         pgeom = proj(shape(csd[principal_uid]["geometry"]))
 
         # marker: centroid of (largest population centre within principal CSD) clipped to the CSD
-        pcs = layer_query("PC", f"1=1", offset=0.001) if "pc" not in stats else stats["pc"]
-        stats["pc"] = pcs
+        if "pcs" not in stats:
+            stats["pcs"] = [(shape(f_["geometry"]), f_["properties"].get("PCNAME")) for f_ in layer_query("PC", "1=1", offset=0.001)["features"]]
         best, best_a, pcname = None, 0, None
-        for pf_ in pcs["features"]:
-            g = shape(pf_["geometry"])
-            if not g.intersects(shape(csd[principal_uid]["geometry"])):
+        csd4326 = shape(csd[principal_uid]["geometry"])
+        for g, nm in stats["pcs"]:
+            if not g.bounds[0] <= csd4326.bounds[2] or not g.bounds[2] >= csd4326.bounds[0] or not g.bounds[1] <= csd4326.bounds[3] or not g.bounds[3] >= csd4326.bounds[1]:
+                continue
+            if not g.intersects(csd4326):
                 continue
             ig = proj(g).intersection(pgeom)
             if ig.area > best_a:
-                best, best_a, pcname = ig, ig.area, pf_["properties"].get("PCNAME")
+                best, best_a, pcname = ig, ig.area, nm
         if best is not None and not best.is_empty:
             c = best.centroid
             if not best.contains(c):
@@ -243,7 +245,7 @@ def main() -> None:
         {"type": "Feature", "geometry": g, "properties": {"placeId": pid, "cmaId": cid, "name": nm, "level": lv}}
         for pid, cid, pu, lv, nm, g, _ in boundary_cmas]}
     (tmp / "cmas.geojson").write_text(json.dumps(cm))
-    prg = layer_query("PR", offset=0.0)
+    prg = layer_query("PR", offset=0.01)
     pr = {"type": "FeatureCollection", "features": [
         {"type": "Feature", "geometry": f["geometry"],
          "properties": {"code": PRCODE[f["properties"]["PRUID"]], "pruid": f["properties"]["PRUID"], "name": f["properties"]["PRENAME"]}}
@@ -252,9 +254,9 @@ def main() -> None:
     out = GEO_DIR / "canada.topo.json"
     GEO_DIR.mkdir(parents=True, exist_ok=True)
     npx = ["npx", "--no-install", "mapshaper"]
-    subprocess.run(npx + ["-i", str(tmp / "provinces.geojson"), "-simplify", "visvalingam", "weighted", "percent=1.5", "keep-shapes",
+    subprocess.run(npx + ["-i", str(tmp / "provinces.geojson"), "-simplify", "1.5%", "weighted", "keep-shapes",
                           "-o", str(tmp / "prov_s.json"), "format=geojson"], check=True, cwd=ROOT_DIR)
-    subprocess.run(npx + ["-i", str(tmp / "cmas.geojson"), "-simplify", "visvalingam", "weighted", "percent=12", "keep-shapes",
+    subprocess.run(npx + ["-i", str(tmp / "cmas.geojson"), "-simplify", "12%", "weighted", "keep-shapes",
                           "-o", str(tmp / "cmas_s.json"), "format=geojson"], check=True, cwd=ROOT_DIR)
     subprocess.run(npx + ["-i", str(tmp / "prov_s.json"), str(tmp / "cmas_s.json"), "combine-files", "-rename-layers", "provinces,cmas",
                           "-o", str(out), "format=topojson", "quantization=100000", "force"], check=True, cwd=ROOT_DIR)

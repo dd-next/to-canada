@@ -79,6 +79,8 @@ export interface PlaceDetailProps {
   headingId?: string;
   /** Hide the heading block (when the container already shows it). */
   hideHeader?: boolean;
+  /** Hide the action row (when the container already shows it, e.g. the sheet peek). */
+  hideActions?: boolean;
 }
 
 function ActiveStat({ metric, datum, layer, scale, pending }: { metric: MetricDef; datum: LayerDatum | undefined; layer: LayerData | null; scale: ClassScale | null; pending?: boolean }) {
@@ -89,7 +91,7 @@ function ActiveStat({ metric, datum, layer, scale, pending }: { metric: MetricDe
       {swatch && <span className="detail__swatch" style={{ background: swatch }} aria-hidden="true" />}
       <Stat
         size="lg"
-        label={metric.label}
+        label={metric.dims?.noc ? metric.shortLabel : metric.label}
         value={pending ? null : (datum?.shown ?? null)}
         unit={datum?.shownUnit ?? metric.unit}
         decimals={datum && datum.shownUnit !== metric.unit ? undefined : metric.decimals}
@@ -137,6 +139,7 @@ export function PlaceDetail({
   onCompareFull,
   headingId,
   hideHeader,
+  hideActions,
 }: PlaceDetailProps) {
   const wageDatum = wageLayer?.data.get(place.id);
   return (
@@ -198,7 +201,7 @@ export function PlaceDetail({
         {keyObs.length ? <ObservationList items={keyObs} /> : <MissingValue label="No other observations" reason="This snapshot has no further values for this place." />}
       </section>
 
-      <PlaceActions place={place} compare={compare} favourites={favourites} onCompareFull={onCompareFull} />
+      {!hideActions && <PlaceActions place={place} compare={compare} favourites={favourites} onCompareFull={onCompareFull} />}
     </div>
   );
 }

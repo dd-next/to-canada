@@ -38,6 +38,27 @@ def dump(rel: str, data, files: dict, records: int | None = None) -> None:
     files[rel] = {"bytes": len(text.encode()), "records": records if records is not None else (len(data) if isinstance(data, (list, dict)) else 1)}
 
 
+def provisional_places() -> list[dict]:
+    """Development-only stand-in for the verified places file (approximate coordinates)."""
+    out = []
+    for p in load_places():
+        cma = p.get("cma")
+        level = (cma or {}).get("level", "csd")
+        stat = f"{p['name']} {'CMA' if level == 'cma' else 'CA'}" if cma else f"{p['name']} (city)"
+        if p.get("cmaPart"):
+            stat = f"Ottawa–Gatineau CMA ({'Ontario' if p['province'] == 'ON' else 'Quebec'} part)"
+        geo = {"economicRegions": p["economicRegions"],
+               "province": {"level": "province", "id": p["provinceCode"], "name": p["provinceName"]}}
+        if cma:
+            geo["cma"] = cma
+        if p.get("cmaPart"):
+            geo["cmaPart"] = p["cmaPart"]
+        out.append({"id": p["id"], "name": p["name"], "statLabel": stat, "province": p["province"],
+                    "region": p["region"], "lat": p["approxLat"], "lon": p["approxLon"], "tier": p["tier"],
+                    "geo": geo, "municipalities": p.get("municipalities", [])})
+    return out
+
+
 def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
@@ -48,9 +69,16 @@ def main() -> int:
 
     # ---------------------------------------------------------------- places
     places = read("geo", "places")
+    provisional = False
     if places is None:
-        print("ERROR: data/processed/geo/places.json missing (geography workstream output).")
-        return 1
+        if "--provisional" not in sys.argv:
+            print("ERROR: data/processed/geo/places.json missing (geography workstream output). "
+                  "Use --provisional for a development build from the seed.")
+            return 1
+        provisional = True
+        places = provisional_places()
+        warnings.append("PROVISIONAL BUILD: places from pipeline/places_seed.json with approximate coordinates; "
+                        "dev outline geometry. Do not ship.")
     place_ids = {p["id"] for p in places}
     seed_ids = {p["id"] for p in load_places()} if (PROCESSED / "geo" / "places.json").exists() else place_ids
     if seed_ids - place_ids:
@@ -153,6 +181,8 @@ def main() -> int:
             if bad:
                 errors.append(f"program {pr['id']} unknown places {bad}")
     topo = PROCESSED / "geo" / "canada.topo.json"
+    if not topo.exists() and provisional:
+        topo = ROOT / "dev" / "fixtures" / "geo" / "canada.topo.json"
     if topo.exists():
         (OUT / "geo").mkdir(parents=True, exist_ok=True)
         shutil.copy(topo, OUT / "geo" / "canada.topo.json")
@@ -173,7 +203,7 @@ def main() -> int:
             by_place[o["placeId"]].add(o["metricId"])
     for p in places:
         cov.append({"placeId": p["id"], "metrics": len(by_place[p["id"]]), "core": p.get("tier") == "core"})
-    manifest = {"product": PRODUCT, "builtAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+    manifest = {"product": PRODUCT, "provisional": provisional, "builtAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
                 "files": files, "coverage": cov}
     dump("manifest.json", manifest, files)
 

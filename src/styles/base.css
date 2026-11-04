@@ -179,6 +179,14 @@ a:hover {
 .prose a {
   color: var(--accent);
 }
+.prose a.btn {
+  color: var(--ink);
+  text-decoration: none;
+}
+.prose a.btn--primary,
+.prose a.btn--outline:hover {
+  color: var(--paper);
+}
 .prose ul,
 .prose ol {
   padding-left: 1.2em;

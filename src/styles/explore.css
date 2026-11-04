@@ -63,13 +63,14 @@
   color: var(--ink-2);
 }
 
-/* category grid: visible structural grid via 1.5px gaps on ink */
+/* category grid: a visible structural grid (cells carry the rules, so partial rows stay open) */
 .cat-grid.seg {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5px;
-  background: var(--ink);
-  border: var(--rule);
+  border: 0;
+  border-top: var(--rule);
+  border-left: var(--rule);
+  background: transparent;
   width: 100%;
 }
 .cat-grid .seg__opt {
@@ -77,6 +78,8 @@
   justify-content: space-between;
   padding: 0 9px;
   border: 0;
+  border-right: var(--rule);
+  border-bottom: var(--rule);
   background: var(--paper-hi);
   color: var(--ink);
 }
@@ -539,6 +542,12 @@
   .has-selection .map__legend {
     right: calc(var(--drawer-w) + var(--s-4));
   }
+  .has-selection .map-title {
+    max-width: calc((100% - var(--drawer-w)) - 248px - 48px);
+  }
+  .has-selection .map-title__h {
+    font-size: clamp(1.5rem, 0.9rem + 1.5vw, 2.4rem);
+  }
 }
 
 /* ---- place detail (drawer + sheet) */
@@ -862,15 +871,20 @@
   }
   .legend,
   .map.has-banner .map__legend {
-    top: auto;
+    top: var(--s-2);
     right: auto;
     left: var(--s-2);
-    bottom: var(--s-2);
-    width: min(300px, calc(100% - 64px));
+    bottom: auto;
+    width: calc(100% - 68px);
+    max-width: 340px;
     padding: 8px 10px;
   }
-  .has-selection .map__legend {
-    display: none;
+  .map.has-banner .map__legend {
+    top: calc(var(--s-2) + 44px);
+  }
+  .legend.is-open {
+    max-height: calc(100% - 16px);
+    overflow-y: auto;
   }
   .toast {
     bottom: calc(var(--s-4) + env(safe-area-inset-bottom));

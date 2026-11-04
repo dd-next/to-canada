@@ -170,3 +170,45 @@ def sum_months(rec, y, last_m):
     used because each month is rounded separately. Returns (value, flags)."""
     v, f = rec["annual"].get(y, (None, ["not_available"]))
     return v, f
+
+
+def per_1000(obs_list: list[dict], latest: int):
+    """imm_pr_admissions_per_1000 = admissions (IRCC, rounded) / July-1 population (StatCan 17-10-0148-01) x 1000."""
+    import pop as popmod
+    df = popmod.read_filtered()
+    df = df[df["REF_DATE"] == str(latest)]
+    by_dguid_suffix = {}
+    for _, r in df.iterrows():
+        by_dguid_suffix[r["DGUID"]] = r
+    out, gaps, pops = [], [], {}
+    for o in obs_list:
+        if o["metricId"] != "imm_pr_admissions":
+            continue
+        g = o["geo"]
+        row = None
+        for d, r in by_dguid_suffix.items():
+            if d.startswith("2021S05") and d.endswith(g["id"]) and len(d) == 7 + (len(g["id"]) + 2 if len(g["id"]) == 3 else len(g["id"])):
+                row = r
+        if row is None:
+            for d, r in by_dguid_suffix.items():
+                if d.startswith("2021S05") and d.endswith(g["id"]):
+                    row = r
+        if row is None or pd_isnan(row["VALUE_NUM"]):
+            gaps.append((o["placeId"], "population denominator not found"))
+            out.append(obs(o["placeId"], "imm_pr_admissions_per_1000", None, o["period"], g, SID, ["not_available"],
+                           "No July-1 population estimate matched this geography."))
+            continue
+        p = float(row["VALUE_NUM"])
+        pops[o["placeId"]] = (p, row["GEO"], row["DGUID"])
+        if o["value"] is None:
+            out.append(obs(o["placeId"], "imm_pr_admissions_per_1000", None, o["period"], g, SID, ["suppressed"],
+                           "Admissions suppressed by IRCC (0-5)."))
+            continue
+        out.append(obs(o["placeId"], "imm_pr_admissions_per_1000", round(o["value"] / p * 1000, 2), o["period"], g, SID,
+                       ["rounded"],
+                       f"{o['value']:g} admissions (IRCC, rounded to 5) / {p:,.0f} residents (StatCan 17-10-0148-01, July 1 {o['period']}, {row['GEO']}) x 1,000."))
+    return out, gaps, pops
+
+
+def pd_isnan(x):
+    return x != x

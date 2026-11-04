@@ -334,6 +334,7 @@
 .footer {
   flex: none;
   padding: var(--s-7) var(--gutter) var(--s-6);
+  border-top: 1px solid var(--hair-dark);
 }
 .footer__inner {
   max-width: var(--page-max);

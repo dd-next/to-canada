@@ -1,0 +1,116 @@
+[
+ {
+  "id": "imm_pr_admissions",
+  "label": "New permanent residents by intended destination, 2025",
+  "shortLabel": "PR admissions",
+  "category": "immigration",
+  "unit": "persons",
+  "decimals": 0,
+  "higherIs": "neutral",
+  "description": "Number of people granted permanent resident status in the calendar year whose intended destination at landing was this CMA/CA (or Ottawa-Gatineau part). Rounded to the nearest 5 by IRCC; counts of 0-5 are suppressed. Not current residence.",
+  "basis": "IRCC admissions, calendar year, CMA/CA of intended destination",
+  "geoLevel": "cma",
+  "periodType": "year",
+  "sourceIds": [
+   "ircc-pr-cma"
+  ],
+  "mapLayer": true,
+  "comparabilityNote": "Ottawa and Gatineau are the Ontario and Quebec parts of the CMA. IRCC publishes Nunavut only as 'Other - Nunavut', so Iqaluit has no value.",
+  "dims": {
+   "family": "imm_pr_admissions"
+  }
+ },
+ {
+  "id": "imm_pr_admissions_change",
+  "label": "Change in new permanent residents vs previous year",
+  "shortLabel": "PR admissions, 1-yr change",
+  "category": "immigration",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Percent change in calendar-year permanent resident admissions (intended destination) from the previous calendar year; computed from IRCC values rounded to the nearest 5.",
+  "basis": "(admissions this year / previous year - 1) x 100",
+  "geoLevel": "cma",
+  "periodType": "year",
+  "sourceIds": [
+   "ircc-pr-cma"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "Imprecise for small places because of rounding and suppression."
+ },
+ {
+  "id": "imm_pr_admissions_per_1000",
+  "label": "New permanent residents per 1,000 residents",
+  "shortLabel": "PR admissions per 1,000",
+  "category": "immigration",
+  "unit": "per_1000",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Calendar-year permanent resident admissions by intended destination per 1,000 residents (StatCan July 1 population estimate for the same year and geography; persons per 1,000 residents).",
+  "basis": "IRCC admissions / StatCan 17-10-0148-01 July 1 population x 1000",
+  "geoLevel": "cma",
+  "periodType": "year",
+  "sourceIds": [
+   "ircc-pr-cma",
+   "statcan-17-10-0148-01"
+  ],
+  "mapLayer": true,
+  "comparabilityNote": "Numerator is intended destination at landing, denominator is all residents; not a measure of immigrant share."
+ },
+ {
+  "id": "imm_retention_5y",
+  "label": "Immigrant retention in intended province, 5 years after admission",
+  "shortLabel": "5-year retention (province)",
+  "category": "immigration",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Of immigrant taxfilers admitted in 2018 whose intended destination was this province, the share still filing tax there in 2023: stayed / (stayed + out-migrated). Province value shown for each place in the province (flagged provincial_value).",
+  "basis": "IMDB tax-record residence (postal code), taxfilers aged 15+, all admission categories, both sexes, 2018 cohort",
+  "geoLevel": "province",
+  "periodType": "year",
+  "sourceIds": [
+   "statcan-43-10-0022-01"
+  ],
+  "mapLayer": true,
+  "comparabilityNote": "Province-level; does not count people who moved in from elsewhere. No values for territories."
+ },
+ {
+  "id": "imm_retention_cma_5y",
+  "label": "Immigrant retention in intended CMA, 5 years after admission",
+  "shortLabel": "5-year retention (CMA)",
+  "category": "immigration",
+  "unit": "percent",
+  "decimals": 1,
+  "higherIs": "neutral",
+  "description": "Of immigrant taxfilers admitted in 2018 whose intended destination was this CMA, the share still filing tax in the same CMA in 2023: stayed / (stayed + out-migrated).",
+  "basis": "IMDB tax-record residence, taxfilers aged 15+, all admission categories, 2018 cohort",
+  "geoLevel": "cma",
+  "periodType": "year",
+  "sourceIds": [
+   "statcan-43-10-0022-01"
+  ],
+  "mapLayer": false,
+  "comparabilityNote": "CMAs only; no census agglomerations or territories. Fredericton has no value because the CMA is new in the 2021 geography."
+ },
+ {
+  "id": "imm_median_wages_5y",
+  "label": "Median wages of immigrants five years after admission (2018 cohort)",
+  "shortLabel": "Immigrant median wages, year 5",
+  "category": "immigration",
+  "unit": "CAD_year",
+  "decimals": 0,
+  "higherIs": "better",
+  "description": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, in the 2023 tax year (5 years after admission), all admission categories, both sexes. Values of 0 and 1 dollars excluded from medians.",
+  "basis": "2023 constant dollars; geography is residence (postal code) when filing; provincial value (provincial_value) where no CMA value exists",
+  "geoLevel": "cma",
+  "periodType": "year",
+  "sourceIds": [
+   "statcan-43-10-0030-01"
+  ],
+  "mapLayer": true,
+  "priceBasis": "constant_dollars",
+  "priceBaseYear": "2023",
+  "comparabilityNote": "Composition of the cohort differs by place (admission category, age, occupations). Not a forecast for a new arrival. No territories in the table."
+ }
+]

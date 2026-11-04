@@ -89,6 +89,10 @@ export function unitSuffix(unit: Unit): string {
       return 'index';
     case 'ratio':
       return '×';
+    case 'per_1000':
+      return 'per 1,000';
+    case 'months':
+      return 'months';
     default:
       return '';
   }
@@ -115,6 +119,10 @@ export function unitLabel(unit: Unit): string {
       return 'people';
     case 'count':
       return 'count';
+    case 'per_1000':
+      return 'per 1,000 residents';
+    case 'months':
+      return 'months';
     default:
       return unitSuffix(unit);
   }
@@ -225,6 +233,9 @@ export function formatPeriod(period: string | null | undefined, periodType?: Met
     return `${m[1]}–${m[2]}${normals ? ' normals' : ''}`;
   }
   if (/^\d{4}$/.test(p) && periodType === 'census') return `${p} Census`;
+  // Descriptive strings, e.g. Job Bank's "2023-2024 (LFS and EI survey data; …)": keep the leading period.
+  const lead = /^(\d{4}(?:-Q[1-4]|-\d{2}|[-/]\d{4})?)(?=[\s(;,])/.exec(p);
+  if (lead && lead[1] !== p) return formatPeriod(lead[1], periodType);
   return p;
 }
 

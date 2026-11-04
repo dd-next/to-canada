@@ -47,6 +47,8 @@ export interface CanadaMapProps {
   frameKey?: string;
   /** Screen space covered by overlays (e.g. the detail drawer); framing and auto-pan avoid it. */
   insets?: Partial<Insets>;
+  /** Extra padding for the whole-country fit (e.g. room for a legend docked at the top on phones). */
+  fitPadding?: Partial<Insets>;
   /** Accessible name of the map. */
   label: string;
   /** Fill for CMA polygons (drawn when zoomed in, if the geometry has `cmas`). */
@@ -56,7 +58,7 @@ export interface CanadaMapProps {
   className?: string;
 }
 
-const SCALE_EXTENT: [number, number] = [0.7, 48];
+const SCALE_EXTENT: [number, number] = [0.5, 48];
 const CMA_ZOOM = 2.4;
 const PAD: Insets = { top: 28, right: 28, bottom: 28, left: 28 };
 
@@ -84,6 +86,7 @@ export function CanadaMap({
   frame = null,
   frameKey,
   insets: insetsProp,
+  fitPadding,
   label,
   cmaFill,
   children,
@@ -103,7 +106,17 @@ export function CanadaMap({
   const hintId = useId();
   const insets = useMemo(() => ({ ...noInsets, ...insetsProp }), [insetsProp]);
 
-  const projection = useMemo(() => (width && height ? makeProjection(width, height, CANADA_FRAME, PAD) : null), [width, height]);
+  const padTop = fitPadding?.top ?? PAD.top;
+  const padRight = fitPadding?.right ?? PAD.right;
+  const padBottom = fitPadding?.bottom ?? PAD.bottom;
+  const padLeft = fitPadding?.left ?? PAD.left;
+  const projection = useMemo(
+    () => (width && height ? makeProjection(width, height, CANADA_FRAME, { top: padTop, right: padRight, bottom: padBottom, left: padLeft }) : null),
+    [width, height, padTop, padRight, padBottom, padLeft],
+  );
+  const hoverIn = useCallback((e: { pointerType: string }, id: string) => {
+    if (e.pointerType !== 'touch') onHover?.(id);
+  }, [onHover]);
   const path = useMemo(() => (projection ? geoPath(projection) : null), [projection]);
 
   // ---------------------------------------------------------------- static geometry (memoised: hover never re-renders it)
@@ -203,7 +216,7 @@ export function CanadaMap({
     (box: MapFrame | null) => {
       if (!projection) return zoomIdentity;
       if (!box && !insets.right && !insets.left) return zoomIdentity;
-      return frameTransform(projection, box ?? CANADA_FRAME, width, height, { ...insets, top: insets.top + 8, bottom: insets.bottom + 8 }, SCALE_EXTENT, box ? 0.92 : 1);
+      return frameTransform(projection, box ?? CANADA_FRAME, width, height, { ...insets, top: insets.top + 8, bottom: insets.bottom + 8 }, SCALE_EXTENT, box ? 0.92 : 0.96);
     },
     [projection, width, height, insets],
   );
@@ -306,7 +319,7 @@ export function CanadaMap({
     const cur = zoomTransform(svg);
     const sx = cur.applyX(n.px);
     const sy = cur.applyY(n.py);
-    const m = 56;
+    const m = Math.max(16, n.m.r + 6);
     const left = insets.left + m;
     const right = width - insets.right - m;
     const top = insets.top + m;
@@ -420,8 +433,24 @@ export function CanadaMap({
   const tipId = hoveredId ?? kbFocusId;
   const tipNode = tipId ? nodeById.get(tipId) : undefined;
   const tipVisible = !!(tipNode && renderTooltip && tipNode.x > -20 && tipNode.x < width + 20 && tipNode.y > -20 && tipNode.y < height + 20);
-  const tipLeft = tipNode ? tipNode.x > width - insets.right - 300 : false;
-  const tipBelow = tipNode ? tipNode.y < 150 : false;
+  // Tooltip placement: right of the marker, else left, else centred above/below (narrow maps).
+  const TIP_W = 272;
+  const visRight = width - insets.right;
+  const tipMode: 'right' | 'left' | 'center' = !tipNode
+    ? 'right'
+    : tipNode.x + tipNode.r + 14 + TIP_W <= visRight - 8
+      ? 'right'
+      : tipNode.x - tipNode.r - 14 - TIP_W >= 8
+        ? 'left'
+        : 'center';
+  const tipBelow = tipNode ? (tipMode === 'center' ? tipNode.y < height / 2 : tipNode.y < 150) : false;
+  const tipStyle = tipNode
+    ? {
+        left: tipMode === 'center' ? Math.max(8, Math.min(tipNode.x - TIP_W / 2, visRight - TIP_W - 8)) : tipNode.x,
+        top: tipNode.y,
+        ['--tip-offset' as string]: `${tipNode.r + 12}px`,
+      }
+    : undefined;
 
   const showCmas = cmaPaths.length > 0 && t.k >= CMA_ZOOM;
 
@@ -452,7 +481,7 @@ export function CanadaMap({
                     d={c.d}
                     className={['map__cma', !fill && 'is-missing', c.id === selectedId && 'is-selected', dimmedIds?.has(c.id) && 'is-filtered'].filter(Boolean).join(' ')}
                     style={fill ? { fill } : undefined}
-                    onPointerEnter={() => onHover?.(c.id)}
+                    onPointerEnter={(e) => hoverIn(e, c.id)}
                     onPointerLeave={() => onHover?.(null)}
                     onClick={() => onSelect?.(c.id, 'pointer')}
                   />
@@ -498,11 +527,18 @@ export function CanadaMap({
                 tabIndex={m.id === roving ? 0 : -1}
                 aria-label={m.ariaLabel}
                 aria-pressed={sel}
-                onPointerEnter={() => onHover?.(m.id)}
+                onPointerEnter={(e) => hoverIn(e, m.id)}
                 onPointerLeave={() => onHover?.(null)}
-                onFocus={() => {
+                onFocus={(e) => {
                   setRovingId(m.id);
-                  setKbFocusId(m.id);
+                  // Tooltip on keyboard focus only (taps and clicks also focus the marker).
+                  let visible = true;
+                  try {
+                    visible = e.currentTarget.matches(':focus-visible');
+                  } catch {
+                    /* older engines */
+                  }
+                  if (visible) setKbFocusId(m.id);
                 }}
                 onBlur={() => setKbFocusId(null)}
                 onClick={(e) => {
@@ -535,7 +571,7 @@ export function CanadaMap({
                 .filter(Boolean)
                 .join(' ')}
               style={{ fontSize: l.size, fontWeight: l.weight }}
-              onPointerEnter={() => onHover?.(l.id)}
+              onPointerEnter={(e) => hoverIn(e, l.id)}
               onPointerLeave={() => onHover?.(null)}
               onClick={(e) => {
                 e.stopPropagation();
@@ -570,8 +606,8 @@ export function CanadaMap({
 
       {tipVisible && tipNode && (
         <div
-          className={['map-tip', tipLeft && 'map-tip--left', tipBelow && 'map-tip--below'].filter(Boolean).join(' ')}
-          style={{ left: tipNode.x, top: tipNode.y, ['--tip-offset' as string]: `${tipNode.r + 12}px` }}
+          className={['map-tip', `map-tip--${tipMode}`, tipBelow && 'map-tip--below'].filter(Boolean).join(' ')}
+          style={tipStyle}
           role="tooltip"
         >
           {renderTooltip!(tipId!)}

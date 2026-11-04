@@ -91,3 +91,11 @@ report; the lead applies it.
 * **Chart-ready insights.** `ChartSpec` points use `x` (category or period),
   `y` (value), optional `y0`/`y1` (ranges), `placeId` (enables highlighting and
   links). Periods sort lexicographically ('2024-Q4' < '2025-Q1').
+
+## Explorer URL parameters
+
+`/?metric=<metricId>|noc_wage|rent_share&unit=Studio|1 bedroom|2 bedroom|3 bedroom+&noc=<NOC>&month=01..12&region=<RegionCode>&province=<code>&place=<placeId>&compare=a,b,c&highlight=a,b,c&from=<finding headline>`
+
+* `noc_wage` — virtual layer: Job Bank median wage for `noc` in each place's primary economic region.
+* `rent_share` — virtual layer: asking rent for `unit` ÷ gross monthly pay for `noc` (37.5 h/week assumption, before tax).
+* `month` — month selector for metric families that carry `dims.month`.

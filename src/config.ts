@@ -16,4 +16,5 @@ export const STORAGE = {
   favourites: 'nw:favourites:v1',
   budget: 'nw:budget:v1',
   prefs: 'nw:prefs:v1',
+  compare: 'nw:compare:v1',
 } as const;

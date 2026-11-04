@@ -96,7 +96,8 @@ export function buildLayerCatalog(metrics: MetricDef[]): LayerCatalog {
   const families = new Map<string, LayerEntry>();
   for (const m of metrics) {
     if (!m.mapLayer) continue;
-    const fam = m.dims?.family;
+    // Families switch dims.unitType (housing type) or dims.month; other dimensions stay separate layers.
+    const fam = m.dims?.family && (m.dims.unitType || monthIndex(m.dims.month) !== null) ? m.dims.family : undefined;
     if (fam) {
       let e = families.get(fam);
       if (!e) {
@@ -341,7 +342,14 @@ export function wageMetric(occupation: Pick<Occupation, 'noc' | 'title'>, table:
 }
 
 /** Build the virtual "Median wage: <occupation>" layer. */
+/** Job Bank reference periods can be descriptive; data carry the leading period token. */
+function periodToken(p: string): string {
+  const m = /^(\d{4}(?:[-/]\d{4})?)/.exec(p.trim());
+  return m ? m[1] : p;
+}
+
 export function buildWageLayer(table: WageTable, occupation: Pick<Occupation, 'noc' | 'title'>, places: Place[]): LayerData {
+  const period = periodToken(table.referencePeriod);
   const cells = new Map<string, WageCell | null>();
   let annualCount = 0;
   let hourlyCount = 0;
@@ -362,7 +370,7 @@ export function buildWageLayer(table: WageTable, occupation: Pick<Occupation, 'n
         placeId: p.id,
         metricId: WAGE_LAYER_KEY,
         value: null,
-        period: table.referencePeriod,
+        period: period,
         geo: er ?? p.geo.province,
         sourceId: table.sourceId,
         flags: ['not_available'],
@@ -374,7 +382,7 @@ export function buildWageLayer(table: WageTable, occupation: Pick<Occupation, 'n
         shown: null,
         shownUnit: metric.unit,
         status: 'missing',
-        period: table.referencePeriod,
+        period: period,
         qualifier: er ? `Economic region: ${cleanGeoName(er.name)}` : null,
         reason: `Job Bank publishes no median wage for this occupation in ${er ? cleanGeoName(er.name) : 'this economic region'} or ${p.geo.province.name}`,
         flags: ['not_available'],
@@ -383,7 +391,7 @@ export function buildWageLayer(table: WageTable, occupation: Pick<Occupation, 'n
     }
     const flags: Flag[] = [c.fallback === 'province' ? 'provincial_value' : 'regional_value'];
     if (c.annual) flags.push('annual_wage');
-    const o: Observation = { placeId: p.id, metricId: WAGE_LAYER_KEY, value: c.median, period: table.referencePeriod, geo: c.geo, sourceId: table.sourceId, flags };
+    const o: Observation = { placeId: p.id, metricId: WAGE_LAYER_KEY, value: c.median, period: period, geo: c.geo, sourceId: table.sourceId, flags };
     const comparable = c.annual === annualLayer;
     if (!comparable) mixed++;
     data.set(p.id, {
@@ -393,7 +401,7 @@ export function buildWageLayer(table: WageTable, occupation: Pick<Occupation, 'n
       shown: c.median,
       shownUnit: c.annual ? 'CAD_year' : 'CAD_hour',
       status: comparable ? 'ok' : 'not_comparable',
-      period: table.referencePeriod,
+      period: period,
       qualifier:
         c.fallback === 'province'
           ? `Province-wide value (${cleanGeoName(c.geo.name)}) — no economic-region wage`
@@ -403,9 +411,10 @@ export function buildWageLayer(table: WageTable, occupation: Pick<Occupation, 'n
       range: [c.low, c.high],
     });
   }
-  const caveat = mixed
-    ? `${mixed} ${mixed === 1 ? 'place is' : 'places are'} published on a different wage basis and not coloured.`
-    : undefined;
+  const notes: string[] = [];
+  if (mixed) notes.push(`${mixed} ${mixed === 1 ? 'place is' : 'places are'} published on a different wage basis and not coloured.`);
+  if (period !== table.referencePeriod.trim()) notes.push(`Reference period: ${table.referencePeriod}.`);
+  const caveat = notes.length ? notes.join(' ') : undefined;
   return finalize(metric, data, caveat);
 }
 

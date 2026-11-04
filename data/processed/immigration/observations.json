@@ -1,0 +1,3177 @@
+[
+ {
+  "placeId": "toronto",
+  "metricId": "imm_pr_admissions",
+  "value": 97690.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "imm_pr_admissions_change",
+  "value": -21.7,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (97690 vs 124755)."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "imm_pr_admissions",
+  "value": 37210.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "imm_pr_admissions_change",
+  "value": -3.9,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (37210 vs 38710)."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "imm_pr_admissions",
+  "value": 36360.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "imm_pr_admissions_change",
+  "value": -23.6,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (36360 vs 47590)."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "imm_pr_admissions",
+  "value": 23560.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "imm_pr_admissions_change",
+  "value": -24.4,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (23560 vs 31160)."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "imm_pr_admissions",
+  "value": 18980.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "imm_pr_admissions_change",
+  "value": -21.2,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (18980 vs 24075)."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "imm_pr_admissions",
+  "value": 24185.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed). IRCC publishes the Ontario and Quebec parts of Ottawa - Gatineau separately; this is the provincial part."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "imm_pr_admissions_change",
+  "value": -11.5,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (24185 vs 27335)."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "imm_pr_admissions",
+  "value": 2140.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed). IRCC publishes the Ontario and Quebec parts of Ottawa - Gatineau separately; this is the provincial part."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "imm_pr_admissions_change",
+  "value": -10.3,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (2140 vs 2385)."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "imm_pr_admissions",
+  "value": 14245.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "imm_pr_admissions_change",
+  "value": -22.6,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (14245 vs 18410)."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "imm_pr_admissions",
+  "value": 8695.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "imm_pr_admissions_change",
+  "value": 4.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (8695 vs 8360)."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "imm_pr_admissions",
+  "value": 5950.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "imm_pr_admissions_change",
+  "value": -15.2,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (5950 vs 7020)."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "imm_pr_admissions",
+  "value": 8960.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "imm_pr_admissions_change",
+  "value": -12.3,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (8960 vs 10220)."
+ },
+ {
+  "placeId": "london",
+  "metricId": "imm_pr_admissions",
+  "value": 6550.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "london",
+  "metricId": "imm_pr_admissions_change",
+  "value": -12.4,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (6550 vs 7480)."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "imm_pr_admissions",
+  "value": 6845.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "imm_pr_admissions_change",
+  "value": -35.1,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (6845 vs 10545)."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "imm_pr_admissions",
+  "value": 3205.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "imm_pr_admissions_change",
+  "value": -10.6,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (3205 vs 3585)."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "imm_pr_admissions",
+  "value": 4890.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "imm_pr_admissions_change",
+  "value": -42.6,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4890 vs 8515)."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "imm_pr_admissions",
+  "value": 4825.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "imm_pr_admissions_change",
+  "value": -40.4,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4825 vs 8090)."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "imm_pr_admissions",
+  "value": 3530.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "imm_pr_admissions_change",
+  "value": -11.4,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (3530 vs 3985)."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "imm_pr_admissions",
+  "value": 4250.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "imm_pr_admissions_change",
+  "value": -19.3,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4250 vs 5265)."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "imm_pr_admissions",
+  "value": 1710.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "imm_pr_admissions_change",
+  "value": -0.9,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1710 vs 1725)."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "imm_pr_admissions",
+  "value": 2025.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "imm_pr_admissions_change",
+  "value": -19.8,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (2025 vs 2525)."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "imm_pr_admissions",
+  "value": 4575.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "imm_pr_admissions_change",
+  "value": -36.1,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4575 vs 7165)."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "imm_pr_admissions",
+  "value": 1580.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "imm_pr_admissions_change",
+  "value": -32.5,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1580 vs 2340)."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "imm_pr_admissions",
+  "value": 1700.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "imm_pr_admissions_change",
+  "value": -22.7,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1700 vs 2200)."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "imm_pr_admissions",
+  "value": 1430.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "imm_pr_admissions_change",
+  "value": 15.8,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1430 vs 1235)."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "imm_pr_admissions",
+  "value": 1835.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "imm_pr_admissions_change",
+  "value": 14.7,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1835 vs 1600)."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "imm_pr_admissions",
+  "value": 1050.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "imm_pr_admissions_change",
+  "value": -6.7,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1050 vs 1125)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "imm_pr_admissions",
+  "value": 1560.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "imm_pr_admissions_change",
+  "value": -39.3,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1560 vs 2570)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "imm_pr_admissions",
+  "value": 1355.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "imm_pr_admissions_change",
+  "value": -35.2,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1355 vs 2090)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "imm_pr_admissions",
+  "value": 660.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "imm_pr_admissions_change",
+  "value": -21.9,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (660 vs 845)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "imm_pr_admissions",
+  "value": 370.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "imm_pr_admissions_change",
+  "value": 0.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (370 vs 370)."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 13.74,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "97690 admissions (IRCC, rounded to 5) / 7,108,874 residents (StatCan 17-10-0148-01, July 1 2025, Toronto (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 8.09,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "37210 admissions (IRCC, rounded to 5) / 4,597,837 residents (StatCan 17-10-0148-01, July 1 2025, Montréal (CMA), Quebec) x 1,000."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 11.77,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "36360 admissions (IRCC, rounded to 5) / 3,088,036 residents (StatCan 17-10-0148-01, July 1 2025, Vancouver (CMA), British Columbia) x 1,000."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 12.83,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "23560 admissions (IRCC, rounded to 5) / 1,836,012 residents (StatCan 17-10-0148-01, July 1 2025, Calgary (CMA), Alberta) x 1,000."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 11.21,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "18980 admissions (IRCC, rounded to 5) / 1,692,385 residents (StatCan 17-10-0148-01, July 1 2025, Edmonton (CMA), Alberta) x 1,000."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 18.24,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "24185 admissions (IRCC, rounded to 5) / 1,325,788 residents (StatCan 17-10-0148-01, July 1 2025, Ottawa - Gatineau (CMA), Ontario part, Ontario) x 1,000."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 5.72,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "2140 admissions (IRCC, rounded to 5) / 374,226 residents (StatCan 17-10-0148-01, July 1 2025, Ottawa - Gatineau (CMA), Quebec part, Quebec) x 1,000."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 14.97,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "14245 admissions (IRCC, rounded to 5) / 951,758 residents (StatCan 17-10-0148-01, July 1 2025, Winnipeg (CMA), Manitoba) x 1,000."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 9.62,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "8695 admissions (IRCC, rounded to 5) / 903,607 residents (StatCan 17-10-0148-01, July 1 2025, Québec (CMA), Quebec) x 1,000."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 6.83,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "5950 admissions (IRCC, rounded to 5) / 871,143 residents (StatCan 17-10-0148-01, July 1 2025, Hamilton (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 12.77,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "8960 admissions (IRCC, rounded to 5) / 701,568 residents (StatCan 17-10-0148-01, July 1 2025, Kitchener - Cambridge - Waterloo (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "london",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 10.35,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "6550 admissions (IRCC, rounded to 5) / 633,002 residents (StatCan 17-10-0148-01, July 1 2025, London (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 12.56,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "6845 admissions (IRCC, rounded to 5) / 544,834 residents (StatCan 17-10-0148-01, July 1 2025, Halifax (CMA), Nova Scotia) x 1,000."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 7.2,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "3205 admissions (IRCC, rounded to 5) / 445,090 residents (StatCan 17-10-0148-01, July 1 2025, Victoria (CMA), British Columbia) x 1,000."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 12.92,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "4890 admissions (IRCC, rounded to 5) / 378,475 residents (StatCan 17-10-0148-01, July 1 2025, Saskatoon (CMA), Saskatchewan) x 1,000."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 16.57,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "4825 admissions (IRCC, rounded to 5) / 291,187 residents (StatCan 17-10-0148-01, July 1 2025, Regina (CMA), Saskatchewan) x 1,000."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 14.5,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "3530 admissions (IRCC, rounded to 5) / 243,478 residents (StatCan 17-10-0148-01, July 1 2025, St. John's (CMA), Newfoundland and Labrador) x 1,000."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 8.7,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "4250 admissions (IRCC, rounded to 5) / 488,738 residents (StatCan 17-10-0148-01, July 1 2025, Windsor (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 6.72,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1710 admissions (IRCC, rounded to 5) / 254,605 residents (StatCan 17-10-0148-01, July 1 2025, Kelowna (CMA), British Columbia) x 1,000."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 9.05,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "2025 admissions (IRCC, rounded to 5) / 223,828 residents (StatCan 17-10-0148-01, July 1 2025, Abbotsford - Mission (CMA), British Columbia) x 1,000."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 23.32,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "4575 admissions (IRCC, rounded to 5) / 196,143 residents (StatCan 17-10-0148-01, July 1 2025, Moncton (CMA), New Brunswick) x 1,000."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 10.93,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1580 admissions (IRCC, rounded to 5) / 144,543 residents (StatCan 17-10-0148-01, July 1 2025, Saint John (CMA), New Brunswick) x 1,000."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 13.57,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1700 admissions (IRCC, rounded to 5) / 125,303 residents (StatCan 17-10-0148-01, July 1 2025, Fredericton (CMA), New Brunswick) x 1,000."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 5.86,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1430 admissions (IRCC, rounded to 5) / 243,911 residents (StatCan 17-10-0148-01, July 1 2025, Sherbrooke (CMA), Quebec) x 1,000."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 9.45,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1835 admissions (IRCC, rounded to 5) / 194,278 residents (StatCan 17-10-0148-01, July 1 2025, Greater Sudbury (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 7.85,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1050 admissions (IRCC, rounded to 5) / 133,765 residents (StatCan 17-10-0148-01, July 1 2025, Thunder Bay (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 16.16,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1560 admissions (IRCC, rounded to 5) / 96,516 residents (StatCan 17-10-0148-01, July 1 2025, Charlottetown (CA), Prince Edward Island) x 1,000."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 21.6,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1355 admissions (IRCC, rounded to 5) / 62,723 residents (StatCan 17-10-0148-01, July 1 2025, Brandon (CA), Manitoba) x 1,000."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 16.67,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "660 admissions (IRCC, rounded to 5) / 39,584 residents (StatCan 17-10-0148-01, July 1 2025, Whitehorse (CA), Yukon) x 1,000."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 15.53,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "370 admissions (IRCC, rounded to 5) / 23,826 residents (StatCan 17-10-0148-01, July 1 2025, Yellowknife (CA), Northwest Territories) x 1,000."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "imm_median_wages_5y",
+  "value": 55300.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 70,335 taxfilers."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "imm_median_wages_5y",
+  "value": 44600.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 26,005 taxfilers."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "imm_median_wages_5y",
+  "value": 53700.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 28,955 taxfilers."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "imm_median_wages_5y",
+  "value": 46700.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 18,200 taxfilers."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "imm_median_wages_5y",
+  "value": 43300.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 13,915 taxfilers."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "imm_median_wages_5y",
+  "value": 56000.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 8,710 taxfilers. Ottawa - Gatineau part published separately."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "imm_median_wages_5y",
+  "value": 51200.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 1,630 taxfilers. Ottawa - Gatineau part published separately."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "imm_median_wages_5y",
+  "value": 40900.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 5,795 taxfilers."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "imm_median_wages_5y",
+  "value": 46000.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 2,130 taxfilers."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "imm_median_wages_5y",
+  "value": 59200.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 5,410 taxfilers."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "imm_median_wages_5y",
+  "value": 57100.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 5,610 taxfilers."
+ },
+ {
+  "placeId": "london",
+  "metricId": "imm_median_wages_5y",
+  "value": 47700.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 3,595 taxfilers."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "imm_median_wages_5y",
+  "value": 54500.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 2,730 taxfilers."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "imm_median_wages_5y",
+  "value": 56900.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 1,825 taxfilers."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "imm_median_wages_5y",
+  "value": 43300.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 2,375 taxfilers."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "imm_median_wages_5y",
+  "value": 46600.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 1,975 taxfilers."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "imm_median_wages_5y",
+  "value": 46500.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 470 taxfilers."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "imm_median_wages_5y",
+  "value": 38700.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 2,560 taxfilers."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "imm_median_wages_5y",
+  "value": 52600.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 835 taxfilers."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "imm_median_wages_5y",
+  "value": 45000.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 1,450 taxfilers."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "imm_median_wages_5y",
+  "value": 50600.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 965 taxfilers."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "imm_median_wages_5y",
+  "value": 48200.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 375 taxfilers."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "imm_median_wages_5y",
+  "value": 46800.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 475 taxfilers."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "imm_median_wages_5y",
+  "value": 35600.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 660 taxfilers."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "imm_median_wages_5y",
+  "value": 47500.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 285 taxfilers."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "imm_median_wages_5y",
+  "value": 46200.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Cohort size in 2023: 190 taxfilers."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "imm_median_wages_5y",
+  "value": 40100.0,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "11",
+   "name": "Prince Edward Island",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Table has no value for the Charlottetown census agglomeration; this is the provincial value (Prince Edward Island)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "imm_median_wages_5y",
+  "value": 41800.0,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "46",
+   "name": "Manitoba",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, observed in the 2023 tax year (5 years after admission), all admission categories, both sexes, 2023 constant dollars. Geography is the postal code of residence when filing (current residence, not intended destination). Values with 0 or 1 dollars excluded from the median. Table has no value for the Brandon census agglomeration; this is the provincial value (Manitoba)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "imm_median_wages_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Table 43-10-0030-01 covers Canada, the ten provinces and CMAs only; no territories."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "imm_median_wages_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Table 43-10-0030-01 covers Canada, the ten provinces and CMAs only; no territories."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "imm_median_wages_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "62",
+   "name": "Nunavut"
+  },
+  "sourceId": "statcan-43-10-0030-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Table 43-10-0030-01 covers Canada, the ten provinces and CMAs only; no territories."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "imm_retention_5y",
+  "value": 90.8,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2021A000235",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 91,980 stayed, 9,295 out-migrated."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "imm_retention_cma_5y",
+  "value": 72.8,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 57,300 stayed, 21,385 out-migrated."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "imm_retention_5y",
+  "value": 79.6,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "24",
+   "name": "Quebec",
+   "dguid": "2021A000224",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 29,430 stayed, 7,540 out-migrated."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "imm_retention_cma_5y",
+  "value": 71.3,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 22,620 stayed, 9,110 out-migrated."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "imm_retention_5y",
+  "value": 84.9,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "59",
+   "name": "British Columbia",
+   "dguid": "2021A000259",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 29,065 stayed, 5,175 out-migrated."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "imm_retention_cma_5y",
+  "value": 79.8,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 21,485 stayed, 5,440 out-migrated."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "imm_retention_5y",
+  "value": 86.2,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "48",
+   "name": "Alberta",
+   "dguid": "2021A000248",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 27,770 stayed, 4,445 out-migrated."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "imm_retention_cma_5y",
+  "value": 79.4,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 11,385 stayed, 2,955 out-migrated."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "imm_retention_5y",
+  "value": 86.2,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "48",
+   "name": "Alberta",
+   "dguid": "2021A000248",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 27,770 stayed, 4,445 out-migrated."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "imm_retention_cma_5y",
+  "value": 78.1,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 9,570 stayed, 2,690 out-migrated."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "imm_retention_5y",
+  "value": 90.8,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2021A000235",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 91,980 stayed, 9,295 out-migrated."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "imm_retention_cma_5y",
+  "value": 69.9,
+  "period": "2023",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 5,025 stayed, 2,165 out-migrated. Ottawa - Gatineau part published separately."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "imm_retention_5y",
+  "value": 79.6,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "24",
+   "name": "Quebec",
+   "dguid": "2021A000224",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 29,430 stayed, 7,540 out-migrated."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "imm_retention_cma_5y",
+  "value": 61.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 500 stayed, 320 out-migrated. Ottawa - Gatineau part published separately."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "imm_retention_5y",
+  "value": 61.2,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "46",
+   "name": "Manitoba",
+   "dguid": "2021A000246",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 6,745 stayed, 4,270 out-migrated."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "imm_retention_cma_5y",
+  "value": 57.2,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 5,055 stayed, 3,775 out-migrated."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "imm_retention_5y",
+  "value": 79.6,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "24",
+   "name": "Quebec",
+   "dguid": "2021A000224",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 29,430 stayed, 7,540 out-migrated."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "imm_retention_cma_5y",
+  "value": 58.8,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,185 stayed, 830 out-migrated."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "imm_retention_5y",
+  "value": 90.8,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2021A000235",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 91,980 stayed, 9,295 out-migrated."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "imm_retention_cma_5y",
+  "value": 61.6,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,835 stayed, 1,145 out-migrated."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "imm_retention_5y",
+  "value": 90.8,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2021A000235",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 91,980 stayed, 9,295 out-migrated."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "imm_retention_cma_5y",
+  "value": 66.8,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,975 stayed, 980 out-migrated."
+ },
+ {
+  "placeId": "london",
+  "metricId": "imm_retention_5y",
+  "value": 90.8,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2021A000235",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 91,980 stayed, 9,295 out-migrated."
+ },
+ {
+  "placeId": "london",
+  "metricId": "imm_retention_cma_5y",
+  "value": 68.5,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,405 stayed, 645 out-migrated."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "imm_retention_5y",
+  "value": 60.1,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "12",
+   "name": "Nova Scotia",
+   "dguid": "2021A000212",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 2,520 stayed, 1,675 out-migrated."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "imm_retention_cma_5y",
+  "value": 57.3,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 2,010 stayed, 1,500 out-migrated."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "imm_retention_5y",
+  "value": 84.9,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "59",
+   "name": "British Columbia",
+   "dguid": "2021A000259",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 29,065 stayed, 5,175 out-migrated."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "imm_retention_cma_5y",
+  "value": 71.5,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,115 stayed, 445 out-migrated."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "imm_retention_5y",
+  "value": 47.7,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "47",
+   "name": "Saskatchewan",
+   "dguid": "2021A000247",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 5,250 stayed, 5,755 out-migrated."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "imm_retention_cma_5y",
+  "value": 42.9,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,720 stayed, 2,285 out-migrated."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "imm_retention_5y",
+  "value": 47.7,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "47",
+   "name": "Saskatchewan",
+   "dguid": "2021A000247",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 5,250 stayed, 5,755 out-migrated."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "imm_retention_cma_5y",
+  "value": 34.7,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,465 stayed, 2,755 out-migrated."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "imm_retention_5y",
+  "value": 46.5,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "10",
+   "name": "Newfoundland and Labrador",
+   "dguid": "2021A000210",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 530 stayed, 610 out-migrated."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "imm_retention_cma_5y",
+  "value": 50.7,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 370 stayed, 360 out-migrated."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "imm_retention_5y",
+  "value": 90.8,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2021A000235",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 91,980 stayed, 9,295 out-migrated."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "imm_retention_cma_5y",
+  "value": 71.3,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,240 stayed, 500 out-migrated."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "imm_retention_5y",
+  "value": 84.9,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "59",
+   "name": "British Columbia",
+   "dguid": "2021A000259",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 29,065 stayed, 5,175 out-migrated."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "imm_retention_cma_5y",
+  "value": 64.8,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 415 stayed, 225 out-migrated."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "imm_retention_5y",
+  "value": 84.9,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "59",
+   "name": "British Columbia",
+   "dguid": "2021A000259",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 29,065 stayed, 5,175 out-migrated."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "imm_retention_cma_5y",
+  "value": 62.9,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 660 stayed, 390 out-migrated."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "imm_retention_5y",
+  "value": 58.5,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "13",
+   "name": "New Brunswick",
+   "dguid": "2021A000213",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,850 stayed, 1,315 out-migrated."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "imm_retention_cma_5y",
+  "value": 51.5,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 510 stayed, 480 out-migrated."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "imm_retention_5y",
+  "value": 58.5,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "13",
+   "name": "New Brunswick",
+   "dguid": "2021A000213",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,850 stayed, 1,315 out-migrated."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "imm_retention_cma_5y",
+  "value": 41.4,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 240 stayed, 340 out-migrated."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "imm_retention_5y",
+  "value": 58.5,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "13",
+   "name": "New Brunswick",
+   "dguid": "2021A000213",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 1,850 stayed, 1,315 out-migrated."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "imm_retention_cma_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 0 stayed, 0 out-migrated. StatCan shows no immigrants with this CMA as intended destination (CMA created with 2021 boundaries), so no rate exists."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "imm_retention_5y",
+  "value": 79.6,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "24",
+   "name": "Quebec",
+   "dguid": "2021A000224",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 29,430 stayed, 7,540 out-migrated."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "imm_retention_cma_5y",
+  "value": 51.8,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 430 stayed, 395 out-migrated."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "imm_retention_5y",
+  "value": 90.8,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2021A000235",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 91,980 stayed, 9,295 out-migrated."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "imm_retention_cma_5y",
+  "value": 59.4,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 95 stayed, 65 out-migrated."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "imm_retention_5y",
+  "value": 90.8,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "35",
+   "name": "Ontario",
+   "dguid": "2021A000235",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 91,980 stayed, 9,295 out-migrated."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "imm_retention_cma_5y",
+  "value": 50.0,
+  "period": "2023",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the census metropolitan area (CMA) of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 110 stayed, 110 out-migrated."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "imm_retention_5y",
+  "value": 34.4,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "11",
+   "name": "Prince Edward Island",
+   "dguid": "2021A000211",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 540 stayed, 1,030 out-migrated."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "imm_retention_cma_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Table 43-10-0022-01 publishes CMAs (and provinces) only; this census agglomeration or territory has no value."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "imm_retention_5y",
+  "value": 61.2,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "46",
+   "name": "Manitoba",
+   "dguid": "2021A000246",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "provincial_value",
+   "rounded"
+  ],
+  "note": "Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in the province or territory of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. Residence = postal code on the tax return. Counts (rounded): 6,745 stayed, 4,270 out-migrated."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "imm_retention_cma_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Table 43-10-0022-01 publishes CMAs (and provinces) only; this census agglomeration or territory has no value."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "imm_retention_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "60",
+   "name": "Yukon",
+   "dguid": "2021A000260",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "not_available",
+   "provincial_value"
+  ],
+  "note": "Table 43-10-0022-01 covers Canada, the ten provinces and CMAs only; no value for Yukon."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "imm_retention_cma_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Table 43-10-0022-01 publishes CMAs (and provinces) only; this census agglomeration or territory has no value."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "imm_retention_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "61",
+   "name": "Northwest Territories",
+   "dguid": "2021A000261",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "not_available",
+   "provincial_value"
+  ],
+  "note": "Table 43-10-0022-01 covers Canada, the ten provinces and CMAs only; no value for Northwest Territories."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "imm_retention_cma_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Table 43-10-0022-01 publishes CMAs (and provinces) only; this census agglomeration or territory has no value."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "imm_retention_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "62",
+   "name": "Nunavut",
+   "dguid": "2021A000262",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "not_available",
+   "provincial_value"
+  ],
+  "note": "Table 43-10-0022-01 covers Canada, the ten provinces and CMAs only; no value for Nunavut."
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "imm_retention_cma_5y",
+  "value": null,
+  "period": "2023",
+  "geo": {
+   "level": "province",
+   "id": "62",
+   "name": "Nunavut",
+   "dguid": "2021A000262",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-43-10-0022-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "Table 43-10-0022-01 publishes CMAs (and provinces) only; this census agglomeration or territory has no value."
+ }
+]

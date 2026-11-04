@@ -50,6 +50,8 @@ import { parseIdList, useCompareTray, useFavourites, useUrlState, type ParamPatc
 const PENDING_FILL = '#d9cbbb';
 const DRAWER_W = 380;
 const SHEET_PEEK = 196;
+/** Height reserved for the legend docked at the top of the map on phones. */
+const MOBILE_LEGEND_H = 124;
 const PLACEHOLDER_TABLE: WageTable = { sourceId: '', referencePeriod: '', geos: {}, byNoc: {} };
 
 const isRegion = (v: string | null): v is RegionCode => !!v && REGION_BY_CODE.has(v as RegionCode);
@@ -280,7 +282,10 @@ export default function ExplorePage() {
         : [],
     [placeId, core.metrics, core.obsIndex, virtualActive, shareActive, rentMetric, resolved.entry, resolved.unitType],
   );
-  const insets = useMemo(() => (place ? (isMobile ? { bottom: SHEET_PEEK } : { right: DRAWER_W }) : undefined), [place, isMobile]);
+  const insets = useMemo(
+    () => (isMobile ? { top: MOBILE_LEGEND_H, bottom: place ? SHEET_PEEK : 0 } : place ? { right: DRAWER_W } : undefined),
+    [place, isMobile],
+  );
   const rows = useMemo(() => filtered.map((p) => ({ place: p, datum: layer?.data.get(p.id) })), [filtered, layer]);
 
   // ---------------------------------------------------------------- copy
@@ -452,6 +457,7 @@ export default function ExplorePage() {
           frame={frame}
           frameKey={frameKey}
           insets={insets}
+          fitPadding={isMobile ? { top: MOBILE_LEGEND_H, bottom: 20, left: 16, right: 16 } : undefined}
           label={`Map of Canada: ${metric?.label ?? 'places'}`}
           cmaFill={cmaFill}
           className={highlightIds ? 'has-banner' : undefined}
@@ -462,7 +468,7 @@ export default function ExplorePage() {
             </p>
             <h1 className="map-title__h">
               {entryTitle}
-              {entrySub && <span className="map-title__sub">{entrySub}</span>}
+              {entrySub && <span className={['map-title__sub', entrySub.length > 34 && 'map-title__sub--long'].filter(Boolean).join(' ')}>{entrySub}</span>}
             </h1>
             {periodText && <p className="map-title__period mono">{periodText}</p>}
           </div>
@@ -484,7 +490,23 @@ export default function ExplorePage() {
             </div>
           )}
 
-          {metric && <MapLegend metric={metric} layer={layer} scale={scale} pending={pending} collapsible={isMobile} className="map__legend" />}
+          {metric && (
+            <MapLegend
+              metric={metric}
+              layer={layer}
+              scale={scale}
+              pending={pending}
+              title={
+                wageActive
+                  ? `${metric.shortLabel} · NOC ${noc}`
+                  : shareActive
+                    ? `${metric.shortLabel}${rentMetric?.dims?.unitType ? ` · ${unitTypeShort(rentMetric.dims.unitType)}` : ''}`
+                    : undefined
+              }
+              compact={isMobile || !!place}
+              className="map__legend"
+            />
+          )}
 
           {!isMobile && detailProps && (
             <Drawer open label={`${detailProps.place.name} details`} onClose={() => selectPlace(null)} focusKey={focusKey} closeLabel="Close details">
@@ -504,7 +526,7 @@ export default function ExplorePage() {
           focusKey={focusKey}
           peek={<PlacePeek {...detailProps} />}
         >
-          <PlaceDetail {...detailProps} hideHeader />
+          <PlaceDetail {...detailProps} hideHeader hideActions />
         </Sheet>
       )}
 
