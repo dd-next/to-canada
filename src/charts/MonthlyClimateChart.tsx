@@ -145,7 +145,7 @@ export function MonthlyClimateChart({ spec, width, ctx }: MonthlyClimateProps) {
   const L = layoutFor(width, groups, hasPrecip);
   const temps = all.flatMap((m) => [m.mean, m.max, m.min]).filter(isNum);
   const pre = all.map(precipOf).filter(isNum);
-  const tScale = valueScale(temps.length ? temps : [0, 1], [L.titleH + L.tH, L.titleH], { zero: false, ticks: multi ? 3 : 4, pad: 0.04 });
+  const tScale = valueScale(temps.length ? temps : [0, 1], [L.titleH + L.tH, L.titleH], { zero: false, ticks: multi ? 3 : 4 });
   const pScale = valueScale(pre.length ? pre : [0, 1], [L.titleH + L.tH + L.precipGap + L.pH, L.titleH + L.tH + L.precipGap], { zero: true, ticks: 2 });
   const tickW = Math.max(
     24,
@@ -153,7 +153,7 @@ export function MonthlyClimateChart({ spec, width, ctx }: MonthlyClimateProps) {
     ...(hasPrecip ? pScale.ticks.map((t) => textWidth(valueTick(t, 'mm', pScale.ticks), FONT_TICK)) : []),
   );
   const left = Math.ceil(tickW) + 8;
-  const right = multi ? 6 : Math.ceil(textWidth('Daily high', FONT_LABEL)) + 16;
+  const right = multi ? 6 : Math.ceil(textWidth('Mean', FONT_LABEL)) + 16;
   const band = (L.panelW - left - right) / 12;
   const origin = (gi: number) => ({ x: (gi % L.cols) * (L.panelW + L.gapX), y: Math.floor(gi / L.cols) * (L.panelH + L.gapY) });
 
@@ -301,23 +301,9 @@ function Panel({
   const colW = Math.min(16, band * 0.56);
   const am = activeMonth ? months[activeMonth - 1] : null;
 
-  // right-edge labels for the single-place chart (December values, relaxed apart)
-  const edge = multi
-    ? []
-    : (
-        [
-          ['max', 'Daily high'],
-          ['mean', 'Mean'],
-          ['min', 'Daily low'],
-        ] as const
-      )
-        .map(([k, text]) => {
-          const m = [...months].reverse().find((x) => isNum(x[k]));
-          return m ? { k, text, ty: yt(m[k] as number), ly: yt(m[k] as number) } : null;
-        })
-        .filter((e): e is NonNullable<typeof e> => !!e)
-        .sort((a, b) => a.ty - b.ty);
-  for (let i = 1; i < edge.length; i++) edge[i].ly = Math.max(edge[i].ly, edge[i - 1].ly + 13);
+  // Direct labels (single place): the mean at the right end; daily high and low above and below the band at the warmest month.
+  const lastMean = [...months].reverse().find((x) => isNum(x.mean));
+  const peak = months.filter((m) => isNum(m.max) && isNum(m.min)).reduce<ClimateMonth | null>((a, b) => (!a || (b.max as number) > (a.max as number) ? b : a), null);
   const annualMean = months.filter((m) => isNum(m.mean));
   const jan = months[0];
   const jul = months[6];
@@ -356,11 +342,21 @@ function Panel({
       {!hasBand && months.some((m) => isNum(m.min)) && <path d={lineOf('min')} fill="none" stroke={CLIMATE.bandStroke} strokeWidth={1.5} />}
       {hasMean && <path d={lineOf('mean')} fill="none" stroke={accent ?? CLIMATE.mean} strokeWidth={2.25} strokeLinecap="round" />}
       {am && isNum(am.mean) && <circle cx={xm(am.m)} cy={yt(am.mean)} r={4} fill={accent ?? CLIMATE.mean} stroke="var(--paper)" strokeWidth={2} />}
-      {edge.map((e) => (
-        <text key={e.k} className={e.k === 'mean' ? 'ct-label ct-label--strong' : 'ct-label ct-label--soft'} x={plotR + 8} y={e.ly} dy="0.32em">
-          {e.text}
+      {!multi && lastMean && (
+        <text className="ct-label ct-label--strong" x={plotR + 8} y={yt(lastMean.mean as number)} dy="0.32em">
+          Mean
         </text>
-      ))}
+      )}
+      {!multi && peak && (
+        <>
+          <text className="ct-label ct-label--soft" x={xm(peak.m)} y={yt(peak.max as number) - 8} textAnchor="middle">
+            Average daily high
+          </text>
+          <text className="ct-label ct-label--soft" x={xm(peak.m)} y={yt(peak.min as number) + 18} textAnchor="middle">
+            Average daily low
+          </text>
+        </>
+      )}
       {hasPrecip && (
         <>
           <text className="ct-axis-title" x={0} y={pTop - (multi ? 8 : 10)}>

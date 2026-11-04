@@ -280,6 +280,14 @@ function JobsPanel({ place, occupation, noc, jobs }: { place: Place; occupation:
   const links = jobSearchLinks({ noc: noc ?? undefined, occupationTitle: occupation?.title, place }, config);
   const hasCity = !!config?.placeLocations?.[place.id]?.jbCityId;
   const feed = config?.feedStatus;
+  // Template labels carry the same placeholders as the URLs ({query}, {city}, {noc}).
+  const city = config?.placeLocations?.[place.id]?.label?.replace(/\s*\([A-Z]{2}\)$/, '') ?? place.name;
+  const fillLabel = (t: string) =>
+    t
+      .replace(/\{query\}/g, occupation?.title ?? 'your occupation')
+      .replace(/\{city\}/g, city)
+      .replace(/\{noc\}/g, noc ?? 'NOC')
+      .replace(/\{province\}/g, place.province);
   return (
     <div className="ppanel">
       <p className="ppanel__title">Look for openings</p>
@@ -292,7 +300,7 @@ function JobsPanel({ place, occupation, noc, jobs }: { place: Place; occupation:
         {links.map((l) => (
           <li key={l.url}>
             <a href={l.url} target="_blank" rel="noreferrer noopener" className="pjobs__link">
-              <span className="pjobs__label">{l.label}</span>
+              <span className="pjobs__label">{fillLabel(l.label)}</span>
               <Icon name="external" size={16} />
             </a>
             <p className="pjobs__desc">{l.description}</p>

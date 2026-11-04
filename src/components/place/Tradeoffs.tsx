@@ -16,7 +16,6 @@ function tradeoffMetrics(core: CoreData): MetricDef[] {
     findMetric(core, ['rent_vacancy_rate']),
     findMetric(core, ['cost_mbm_total']),
     findMetric(core, ['lfs_unemployment_rate']),
-    findMetric(core, ['lfs_employment_rate']),
     climateMetric(core, 1, 'mean'),
     climateMetric(core, 7, 'mean'),
     findMetric(core, ['commute_transit_share']),
@@ -33,6 +32,10 @@ const SHORT: Record<string, string> = {
   lfs_unemployment_rate: 'Unemployment rate',
   lfs_employment_rate: 'Employment rate',
   imm_pr_admissions_per_1000: 'New permanent residents per 1,000',
+  clim_jan_mean_temp: 'January mean temperature',
+  clim_jul_mean_temp: 'July mean temperature',
+  commute_transit_share: 'Commuting by transit',
+  lang_french_knowledge: 'Can speak French',
 };
 
 const LABELS: Record<string, string> = {
@@ -44,6 +47,8 @@ const LABELS: Record<string, string> = {
   imm_pr_admissions_per_1000: 'New permanent residents per 1,000 residents',
   commute_transit_share: 'The share commuting by public transit',
   lang_french_knowledge: 'The share who can speak French',
+  clim_jan_mean_temp: 'The January mean temperature',
+  clim_jul_mean_temp: 'The July mean temperature',
 };
 
 export function Tradeoffs({ core, place }: { core: CoreData; place: Place }) {

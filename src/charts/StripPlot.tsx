@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import type { Unit } from '../types/contract';
 import { useElementSize } from '../lib/hooks';
-import { formatValue } from '../lib/format';
+import { formatTick } from '../lib/format';
 import { FONT_TICK, textWidth } from './measure';
 import { CHART_CONTEXT_LINE } from './palette';
 import { isNum } from './text';
@@ -42,7 +42,7 @@ export function StripPlot({ items, highlightId, unit, decimals, label, color = '
   const pad = 7;
   const x = (v: number) => (max === min ? width / 2 : pad + ((v - min) / (max - min)) * (width - pad * 2));
   const hi = items.find((i) => i.id === highlightId);
-  const fmtTick = (v: number) => formatValue(v, unit, decimals, { compact: Math.abs(v) >= 100_000 });
+  const fmtTick = (v: number) => formatTick(v, unit, decimals ?? 0, Math.abs(v) >= 100_000);
   const minT = fmtTick(min);
   const maxT = fmtTick(max);
   return (

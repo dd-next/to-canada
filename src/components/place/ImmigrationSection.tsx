@@ -12,6 +12,7 @@ import { MissingValue } from '../ui/EmptyState';
 import { Icon } from '../ui/Icon';
 import { GroupSource, ObsStat } from './KeyFacts';
 import { findMetric, findSeries, geoName, lineSpec, toChartSeries } from './data';
+import { ListSource } from './ClimateSection';
 
 const CATEGORY: Record<ProgramRecord['category'], string> = {
   federal_economic: 'Federal',
@@ -84,7 +85,8 @@ export function ImmigrationSection({ core, place, series, programs }: { core: Co
         {outcomes.length > 0 && (
           <div className="ppanel">
             <p className="ppanel__title">Five years after landing</p>
-            <ObservationList items={outcomes} />
+            <ObservationList items={outcomes} showSource={false} />
+            <ListSource items={outcomes} />
           </div>
         )}
       </div>

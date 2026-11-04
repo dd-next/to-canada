@@ -1,4 +1,4 @@
-import type { ChartSpec, MetricDef, Place, Series } from '../../types/contract';
+import type { ChartSpec, MetricDef, Observation, Place, Series } from '../../types/contract';
 import type { CoreData } from '../../data/core';
 import { formatNumber } from '../../lib/format';
 import { ChartRenderer } from '../../charts';
@@ -6,6 +6,13 @@ import { ObservationList } from '../data/ObservationList';
 import { MissingValue } from '../ui/EmptyState';
 import { SourceNote } from '../ui/SourceNote';
 import { climateMetric, climateSeries, findMetric, toChartSeries } from './data';
+
+/** One source line for a list of observations that share sources. */
+export function ListSource({ items }: { items: { metric: MetricDef; obs: Observation | undefined }[] }) {
+  const ids = [...new Set(items.map((i) => i.obs?.sourceId).filter((x): x is string => !!x))];
+  const periods = [...new Set(items.map((i) => i.obs?.period).filter((x): x is string => !!x))];
+  return ids.length ? <SourceNote sourceId={ids} period={periods.length === 1 ? periods[0] : null} periodType={items[0]?.metric.periodType} /> : null;
+}
 
 /** True when the snapshot carries any climate data at all (metrics or monthly normals). */
 export const hasClimateData = (core: CoreData, series: Series[] | undefined) => core.metrics.some((m) => m.category === 'climate') || climateSeries(series).length > 0;
@@ -81,13 +88,15 @@ export function ClimateSection({ core, place, series }: { core: CoreData; place:
         {winterItems.length > 0 && (
           <div className="ppanel">
             <p className="ppanel__title">Winter</p>
-            <ObservationList items={winterItems} />
+            <ObservationList items={winterItems} showSource={false} />
+            <ListSource items={winterItems} />
           </div>
         )}
         {summerItems.length > 0 && (
           <div className="ppanel">
             <p className="ppanel__title">Summer and the year</p>
-            <ObservationList items={summerItems} />
+            <ObservationList items={summerItems} showSource={false} />
+            <ListSource items={summerItems} />
           </div>
         )}
       </div>

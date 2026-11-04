@@ -5,6 +5,7 @@ import { ChartRenderer } from '../../charts';
 import { ObservationList } from '../data/ObservationList';
 import { MissingValue } from '../ui/EmptyState';
 import { hasValue } from './data';
+import { ListSource } from './ClimateSection';
 
 const GROUPS: { id: string; title: string; test: (m: MetricDef) => boolean }[] = [
   { id: 'pop', title: 'Population and immigrants', test: (m) => m.id.startsWith('pop_') },
@@ -35,7 +36,7 @@ export function PeopleSection({ core, place }: { core: CoreData; place: Place })
           title: 'Main way to get to work',
           subtitle: `Share of commuters · ${formatPeriod(modeObs[0].o!.period, 'census')}`,
           unit: 'percent',
-          series: [{ id: 'modes', label: 'Share of commuters', points: modeObs.map((x) => ({ x: x.m.shortLabel, y: x.o!.value, f: x.o!.flags })).sort((a, b) => (b.y ?? 0) - (a.y ?? 0)) }],
+          series: [{ id: 'modes', label: 'Share of commuters', points: modeObs.map((x) => ({ x: x.m.shortLabel.replace(/^commute:\s*/i, ''), y: x.o!.value, f: x.o!.flags })).sort((a, b) => (b.y ?? 0) - (a.y ?? 0)) }],
           sourceIds: [...new Set(modeObs.map((x) => x.o!.sourceId))],
           notes: modes[0]?.basis ?? modes[0]?.description,
         }
@@ -46,9 +47,14 @@ export function PeopleSection({ core, place }: { core: CoreData; place: Place })
     <div className="ppeople">
       {groups.map((g) => (
         <div key={g.id} className="ppanel">
-          <p className="ppanel__title">{g.title}</p>
-          {g.id === 'commute' && modeSpec ? <ChartRenderer spec={modeSpec} titleLevel={4} linkPlaces={false} /> : null}
-          <ObservationList items={g.items} />
+          <p className="ppanel__title">{g.id === 'commute' && modeSpec ? 'Main way to get to work' : g.title}</p>
+          {g.id === 'commute' && modeSpec && <p className="ppanel__note">{modeSpec.subtitle}</p>}
+          {g.id === 'commute' && modeSpec ? <ChartRenderer spec={modeSpec} hideTitle linkPlaces={false} showSource={false} /> : null}
+          {(() => {
+            const rest = g.id === 'commute' && modeSpec ? g.items.filter((i) => !modeObs.some((x) => x.m.id === i.metric.id)) : g.items;
+            return rest.length ? <ObservationList items={rest} showSource={false} /> : null;
+          })()}
+          <ListSource items={g.items} />
         </div>
       ))}
       {scope.length > 0 && (
