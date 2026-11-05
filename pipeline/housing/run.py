@@ -25,7 +25,7 @@ def main() -> None:
     # ---- StatCan asking / paid rents
     a_obs, a_series, a_cov, a_ctx = asking.build()
     src_asking = source_record(
-        asking.TABLE, reference_period="2019-Q1 to 2026-Q2 (quarterly; REF_DATE is the first month of the quarter)",
+        asking.TABLE, reference_period=f"{min(o['period'] for o in a_obs)} to {max(o['period'] for o in a_obs)} (latest observations; quarterly)",
         transformations=[
             "Kept apartment rows only: Studio = 'Apartment - No bedroom', 3 bedroom+ = 'Apartment - 3 or more bedrooms'; houses and rooms not used.",
             "REF_DATE 'YYYY-MM' (first month of quarter) relabelled 'YYYY-Qn' (2026-04 -> 2026-Q2).",
@@ -39,19 +39,19 @@ def main() -> None:
             "Table covers CMAs only: Charlottetown, Brandon, Whitehorse, Yellowknife and Iqaluit are not in it."])
     # ---- CMHC
     c_obs, c_ctx, c_cov, c_prov = cmhc.build()
-    any_prov = next(iter(c_prov.values()))
     src_cmhc = {
-        "id": cmhc.SID, "title": "Rental Market Survey Data Tables, 2025 edition (October 2025 survey)", "publisher": "Canada Mortgage and Housing Corporation (CMHC)",
-        "tableId": "RMS 2025 tables 1.1.1 (vacancy rate) and 1.1.2 (average rent) by centre", "url": cmhc.LANDING,
-        "downloadUrl": cmhc.BASE.format(slug="{centre}"), "releaseDate": "2025-12-11", "retrievedAt": any_prov["retrievedAt"],
-        "referencePeriod": "October 2025 survey (data collected early October; 2025 edition)",
+        "id": cmhc.SID, "title": f"Rental Market Survey Data Tables, {cmhc.PERIOD[:4]} edition (October survey)", "publisher": "Canada Mortgage and Housing Corporation (CMHC)",
+        "tableId": f"RMS {cmhc.PERIOD[:4]} tables 1.1.1 (vacancy rate) and 1.1.2 (average rent) by centre", "url": cmhc.LANDING,
+        "downloadUrl": cmhc.BASE.format(slug="{centre}"), "releaseDate": cmhc.RELEASE_DATE, "retrievedAt": min(v["retrievedAt"] for v in c_prov.values()),
+        "lastCheckedAt": min((v["lastCheckedAt"] for v in c_prov.values() if v.get("lastCheckedAt")), default=None),
+        "referencePeriod": f"{cmhc.PERIOD} (October survey)",
         "licence": "Open Government Licence – Canada (CMHC Housing Market Information Portal, listed on open.canada.ca); CMHC website terms of use apply to site materials",
-        "attribution": "Source: Canada Mortgage and Housing Corporation, Rental Market Survey, 2025.",
+        "attribution": f"Source: Canada Mortgage and Housing Corporation, Rental Market Survey, {cmhc.PERIOD[:4]}.",
         "transformations": ["Read the whole-centre row of Table 1.1.1 (Total vacancy rate) and Table 1.1.2 (average rent by Studio / 1 / 2 / 3+ bedroom) from each centre's workbook.",
                             "Numbers with thousands separators parsed to numbers; CMHC reliability code a/b/c/d kept in the note (d also flagged use_with_caution); '**' -> null + suppressed.",
                             "Ottawa and Gatineau are separate CMHC centres (Ontario part, Quebec part of CMA 505); Quebec-city value read from the 'Québec CMA' row of the Québec workbook."],
         "notes": ["Universe: privately initiated apartment structures of three units and over (purpose-built rentals); rents are those charged for all units in the stock (sitting tenants and new leases), not asking rents.",
-                  "CMHC publishes the next (October 2026) survey in December 2026; this is the latest available on 2026-11-04.",
+                  "Edition and release date discovered from the official CMHC catalog; an unrecognized catalog or workbook fails with an explicit manual-review error.",
                   "Brandon, Whitehorse and Iqaluit have no CMHC Rental Market Survey data table; Charlottetown and Yellowknife are covered as CAs.",
                   "Per-centre workbooks: " + "; ".join(f"{k}: {v['url']}" for k, v in sorted(c_prov.items()))[:4000]],
         "status": "ok"}
@@ -73,8 +73,8 @@ def main() -> None:
         notes=["Reference family: 2 adults + 2 children (Nunavut: 2 adults + 3 children). Dollars are annual, as published.",
                "Total threshold = sum of components (Communication services is its own component in the 2023-base MBM); Nunavut totals also include Inuusiqattiarniq."])
     src_sizes = source_record(
-        mbm.TABLE_SIZES, reference_period="2025 (annual)", transformations=["Used only to verify the square-root equivalence scale (not ingested as observations)."],
-        notes=["Total MBM threshold by family size 1..10 persons; matches reference-family total x sqrt(n/4)."])
+        mbm.TABLE_SIZES, reference_period=f"{m_ctx['latest']} (annual)", transformations=["Used only to verify the square-root equivalence scale (not ingested as observations)."],
+        notes=["Total MBM threshold by family size; scale by sqrt(n/referenceHouseholdSize), where the reference family has 5 people in Nunavut and 4 elsewhere."])
     chk = mbm.size_check()
     # ---- insights
     ins, ins_extra = insights.build(a_ctx, c_ctx, p_ctx, m_ctx, today)

@@ -107,17 +107,15 @@ export function computeBudget(inputs: BudgetInputs): BudgetResult {
   };
 }
 
-/**
- * Market Basket Measure scaling. MBM thresholds are published for a reference
- * family of four; Statistics Canada derives other sizes with the square-root
- * equivalence scale: threshold(n) = threshold(4) × √n / √4.
+/** Square-root equivalence scale from the source's reference household.
+ * Most baskets use four people; the Nunavut methodology uses five.
  */
-export function mbmScale(annualForFour: number, householdSize: number): number {
+export function mbmScale(annualReference: number, householdSize: number, referenceHouseholdSize = 4): number {
+  if (!Number.isFinite(referenceHouseholdSize) || referenceHouseholdSize <= 0) throw new Error('Invalid MBM reference household size');
   const n = Math.max(1, Math.round(householdSize));
-  return (annualForFour * Math.sqrt(n)) / 2;
+  return annualReference * Math.sqrt(n / referenceHouseholdSize);
 }
 
-/** Monthly MBM component for a household, from the published annual reference-family value. */
-export function mbmMonthly(annualForFour: number | null, householdSize: number): number | null {
-  return annualForFour === null ? null : mbmScale(annualForFour, householdSize) / 12;
+export function mbmMonthly(annualReference: number | null, householdSize: number, referenceHouseholdSize = 4): number | null {
+  return annualReference === null ? null : mbmScale(annualReference, householdSize, referenceHouseholdSize) / 12;
 }

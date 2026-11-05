@@ -6402,474 +6402,6 @@
  },
  {
   "placeId": "toronto",
-  "metricId": "pop_estimate",
-  "value": 7108874.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "535",
-   "name": "Toronto",
-   "dguid": "2021S0503535",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Toronto (CMA), Ontario"
- },
- {
-  "placeId": "montreal",
-  "metricId": "pop_estimate",
-  "value": 4597837.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "462",
-   "name": "Montréal",
-   "dguid": "2021S0503462",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Montréal (CMA), Quebec"
- },
- {
-  "placeId": "vancouver",
-  "metricId": "pop_estimate",
-  "value": 3088036.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "933",
-   "name": "Vancouver",
-   "dguid": "2021S0503933",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Vancouver (CMA), British Columbia"
- },
- {
-  "placeId": "calgary",
-  "metricId": "pop_estimate",
-  "value": 1836012.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "825",
-   "name": "Calgary",
-   "dguid": "2021S0503825",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Calgary (CMA), Alberta"
- },
- {
-  "placeId": "edmonton",
-  "metricId": "pop_estimate",
-  "value": 1692385.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "835",
-   "name": "Edmonton",
-   "dguid": "2021S0503835",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Edmonton (CMA), Alberta"
- },
- {
-  "placeId": "ottawa",
-  "metricId": "pop_estimate",
-  "value": 1325788.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma_part",
-   "id": "35505",
-   "name": "Ottawa - Gatineau (Ontario part)",
-   "dguid": "2021S050535505",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Ottawa - Gatineau (CMA), Ontario part, Ontario"
- },
- {
-  "placeId": "gatineau",
-  "metricId": "pop_estimate",
-  "value": 374226.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma_part",
-   "id": "24505",
-   "name": "Ottawa - Gatineau (Quebec part)",
-   "dguid": "2021S050524505",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Ottawa - Gatineau (CMA), Quebec part, Quebec"
- },
- {
-  "placeId": "winnipeg",
-  "metricId": "pop_estimate",
-  "value": 951758.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "602",
-   "name": "Winnipeg",
-   "dguid": "2021S0503602",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Winnipeg (CMA), Manitoba"
- },
- {
-  "placeId": "quebec-city",
-  "metricId": "pop_estimate",
-  "value": 903607.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "421",
-   "name": "Québec",
-   "dguid": "2021S0503421",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Québec (CMA), Quebec"
- },
- {
-  "placeId": "hamilton",
-  "metricId": "pop_estimate",
-  "value": 871143.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "537",
-   "name": "Hamilton",
-   "dguid": "2021S0503537",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Hamilton (CMA), Ontario"
- },
- {
-  "placeId": "kitchener-waterloo",
-  "metricId": "pop_estimate",
-  "value": 701568.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "541",
-   "name": "Kitchener - Cambridge - Waterloo",
-   "dguid": "2021S0503541",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Kitchener - Cambridge - Waterloo (CMA), Ontario"
- },
- {
-  "placeId": "london",
-  "metricId": "pop_estimate",
-  "value": 633002.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "555",
-   "name": "London",
-   "dguid": "2021S0503555",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, London (CMA), Ontario"
- },
- {
-  "placeId": "halifax",
-  "metricId": "pop_estimate",
-  "value": 544834.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "205",
-   "name": "Halifax",
-   "dguid": "2021S0503205",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Halifax (CMA), Nova Scotia"
- },
- {
-  "placeId": "victoria",
-  "metricId": "pop_estimate",
-  "value": 445090.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "935",
-   "name": "Victoria",
-   "dguid": "2021S0503935",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Victoria (CMA), British Columbia"
- },
- {
-  "placeId": "saskatoon",
-  "metricId": "pop_estimate",
-  "value": 378475.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "725",
-   "name": "Saskatoon",
-   "dguid": "2021S0503725",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Saskatoon (CMA), Saskatchewan"
- },
- {
-  "placeId": "regina",
-  "metricId": "pop_estimate",
-  "value": 291187.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "705",
-   "name": "Regina",
-   "dguid": "2021S0503705",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Regina (CMA), Saskatchewan"
- },
- {
-  "placeId": "st-johns",
-  "metricId": "pop_estimate",
-  "value": 243478.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "001",
-   "name": "St. John's",
-   "dguid": "2021S0503001",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, St. John's (CMA), Newfoundland and Labrador"
- },
- {
-  "placeId": "windsor",
-  "metricId": "pop_estimate",
-  "value": 488738.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "559",
-   "name": "Windsor",
-   "dguid": "2021S0503559",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Windsor (CMA), Ontario"
- },
- {
-  "placeId": "kelowna",
-  "metricId": "pop_estimate",
-  "value": 254605.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "915",
-   "name": "Kelowna",
-   "dguid": "2021S0503915",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Kelowna (CMA), British Columbia"
- },
- {
-  "placeId": "abbotsford-mission",
-  "metricId": "pop_estimate",
-  "value": 223828.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "932",
-   "name": "Abbotsford - Mission",
-   "dguid": "2021S0503932",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Abbotsford - Mission (CMA), British Columbia"
- },
- {
-  "placeId": "moncton",
-  "metricId": "pop_estimate",
-  "value": 196143.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "305",
-   "name": "Moncton",
-   "dguid": "2021S0503305",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Moncton (CMA), New Brunswick"
- },
- {
-  "placeId": "saint-john",
-  "metricId": "pop_estimate",
-  "value": 144543.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "310",
-   "name": "Saint John",
-   "dguid": "2021S0503310",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Saint John (CMA), New Brunswick"
- },
- {
-  "placeId": "fredericton",
-  "metricId": "pop_estimate",
-  "value": 125303.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "320",
-   "name": "Fredericton",
-   "dguid": "2021S0503320",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Fredericton (CMA), New Brunswick"
- },
- {
-  "placeId": "sherbrooke",
-  "metricId": "pop_estimate",
-  "value": 243911.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "433",
-   "name": "Sherbrooke",
-   "dguid": "2021S0503433",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Sherbrooke (CMA), Quebec"
- },
- {
-  "placeId": "sudbury",
-  "metricId": "pop_estimate",
-  "value": 194278.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "580",
-   "name": "Greater Sudbury / Grand Sudbury",
-   "dguid": "2021S0503580",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Greater Sudbury (CMA), Ontario"
- },
- {
-  "placeId": "thunder-bay",
-  "metricId": "pop_estimate",
-  "value": 133765.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "595",
-   "name": "Thunder Bay",
-   "dguid": "2021S0503595",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Thunder Bay (CMA), Ontario"
- },
- {
-  "placeId": "charlottetown",
-  "metricId": "pop_estimate",
-  "value": 96516.0,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "105",
-   "name": "Charlottetown",
-   "dguid": "2021S0504105",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Charlottetown (CA), Prince Edward Island"
- },
- {
-  "placeId": "brandon",
-  "metricId": "pop_estimate",
-  "value": 62723.0,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "610",
-   "name": "Brandon",
-   "dguid": "2021S0504610",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Brandon (CA), Manitoba"
- },
- {
-  "placeId": "whitehorse",
-  "metricId": "pop_estimate",
-  "value": 39584.0,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "990",
-   "name": "Whitehorse",
-   "dguid": "2021S0504990",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Whitehorse (CA), Yukon"
- },
- {
-  "placeId": "yellowknife",
-  "metricId": "pop_estimate",
-  "value": 23826.0,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "995",
-   "name": "Yellowknife",
-   "dguid": "2021S0504995",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "note": "July 1, 2025 estimate, Yellowknife (CA), Northwest Territories"
- },
- {
-  "placeId": "iqaluit",
-  "metricId": "pop_estimate",
-  "value": null,
-  "period": "2025",
-  "geo": {
-   "level": "csd",
-   "id": "6204003",
-   "name": "Iqaluit",
-   "dguid": "2021A00056204003",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-17-10-0148-01",
-  "flags": [
-   "not_available"
-  ],
-  "note": "17-10-0148-01 covers CMAs/CAs only; Iqaluit is a single municipality, so the 2021 Census count is used."
- },
- {
-  "placeId": "toronto",
   "metricId": "clim_jan_mean_temp",
   "value": -5.0,
   "period": "1991-2020",
@@ -11092,5 +10624,473 @@
    "station_proxy"
   ],
   "note": "IQALUIT (climate ID 2402592); normals code C"
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "pop_estimate",
+  "value": 7108874.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Toronto (CMA), Ontario"
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "pop_estimate",
+  "value": 4597837.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Montréal (CMA), Quebec"
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "pop_estimate",
+  "value": 3088036.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Vancouver (CMA), British Columbia"
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "pop_estimate",
+  "value": 1836012.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Calgary (CMA), Alberta"
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "pop_estimate",
+  "value": 1692385.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Edmonton (CMA), Alberta"
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "pop_estimate",
+  "value": 1325788.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Ottawa - Gatineau (CMA), Ontario part, Ontario"
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "pop_estimate",
+  "value": 374226.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Ottawa - Gatineau (CMA), Quebec part, Quebec"
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "pop_estimate",
+  "value": 951758.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Winnipeg (CMA), Manitoba"
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "pop_estimate",
+  "value": 903607.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Québec (CMA), Quebec"
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "pop_estimate",
+  "value": 871143.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Hamilton (CMA), Ontario"
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "pop_estimate",
+  "value": 701568.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Kitchener - Cambridge - Waterloo (CMA), Ontario"
+ },
+ {
+  "placeId": "london",
+  "metricId": "pop_estimate",
+  "value": 633002.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, London (CMA), Ontario"
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "pop_estimate",
+  "value": 544834.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Halifax (CMA), Nova Scotia"
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "pop_estimate",
+  "value": 445090.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Victoria (CMA), British Columbia"
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "pop_estimate",
+  "value": 378475.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Saskatoon (CMA), Saskatchewan"
+ },
+ {
+  "placeId": "regina",
+  "metricId": "pop_estimate",
+  "value": 291187.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Regina (CMA), Saskatchewan"
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "pop_estimate",
+  "value": 243478.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, St. John's (CMA), Newfoundland and Labrador"
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "pop_estimate",
+  "value": 488738.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Windsor (CMA), Ontario"
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "pop_estimate",
+  "value": 254605.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Kelowna (CMA), British Columbia"
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "pop_estimate",
+  "value": 223828.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Abbotsford - Mission (CMA), British Columbia"
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "pop_estimate",
+  "value": 196143.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Moncton (CMA), New Brunswick"
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "pop_estimate",
+  "value": 144543.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Saint John (CMA), New Brunswick"
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "pop_estimate",
+  "value": 125303.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Fredericton (CMA), New Brunswick"
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "pop_estimate",
+  "value": 243911.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Sherbrooke (CMA), Quebec"
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "pop_estimate",
+  "value": 194278.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Greater Sudbury (CMA), Ontario"
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "pop_estimate",
+  "value": 133765.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Thunder Bay (CMA), Ontario"
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "pop_estimate",
+  "value": 96516.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Charlottetown (CA), Prince Edward Island"
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "pop_estimate",
+  "value": 62723.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Brandon (CA), Manitoba"
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "pop_estimate",
+  "value": 39584.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Whitehorse (CA), Yukon"
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "pop_estimate",
+  "value": 23826.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "note": "July 1, 2025 estimate, Yellowknife (CA), Northwest Territories"
+ },
+ {
+  "placeId": "iqaluit",
+  "metricId": "pop_estimate",
+  "value": null,
+  "period": "2025",
+  "geo": {
+   "level": "csd",
+   "id": "6204003",
+   "name": "Iqaluit",
+   "dguid": "2021A00056204003",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-17-10-0148-01",
+  "flags": [
+   "not_available"
+  ],
+  "note": "17-10-0148-01 covers CMAs/CAs only; Iqaluit is a single municipality, so the 2021 Census count is used."
  }
 ]

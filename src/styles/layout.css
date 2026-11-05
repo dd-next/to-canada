@@ -258,7 +258,8 @@
   display: none;
 }
 
-@media (max-width: 899.98px) {
+/* Six primary links need the menu before they can overlap the action trays. */
+@media (max-width: 1099.98px) {
   .nav--primary {
     display: none;
   }

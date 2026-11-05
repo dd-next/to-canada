@@ -100,22 +100,21 @@ function WagePanel({ core, place, occupation, noc, wages }: { core: CoreData; pl
   const { primary, rows, territoryNoProvince } = wageRows(table, occupation.noc, place);
   const annual = primary?.annual ?? rows.find((r) => r.cell)?.cell?.annual ?? false;
   const unit = annual ? 'CAD_year' : 'CAD_hour';
-  const sameBasis = rows.filter((r) => r.cell && r.cell.annual === annual && (r.cell.median !== null || r.cell.low !== null));
-  const otherBasis = rows.filter((r) => r.cell && r.cell.annual !== annual);
+  const sameBasis = rows.filter((r) => r.cell && r.cell.annual === annual && r.cell.referencePeriod === primary?.referencePeriod && r.cell.methodology === primary?.methodology && !!r.cell.referencePeriod && !!r.cell.methodology && (r.cell.median !== null || r.cell.low !== null));
+  const otherBasis = rows.filter((r) => r.cell && !sameBasis.includes(r));
   const primaryKey = primary ? (primary.fallback === 'province' ? 'province' : 'er') : null;
   const spec: ChartSpec = {
     id: `wage-${occupation.noc}`,
     type: 'range',
     title: `${occupation.title}: wages of employed workers`,
-    subtitle: `Low, median and high ${annual ? 'annual' : 'hourly'} wage · Job Bank, ${wagePeriod(table)}`,
+    subtitle: `Low, median and high ${annual ? 'annual' : 'hourly'} wage · Job Bank, ${wagePeriod(primary)}`,
     unit,
     series: [
       {
         id: 'wage',
         label: 'Wage',
         points: rows
-          .filter((r) => r.key === 'er' || r.cell)
-          .filter((r) => !r.cell || r.cell.annual === annual)
+          .filter((r) => sameBasis.includes(r))
           .map((r) => ({
             x: r.key === 'province' && primaryKey === 'province' ? `${r.label} (used for ${place.name})` : r.label,
             y: r.cell?.median ?? null,
@@ -142,7 +141,7 @@ function WagePanel({ core, place, occupation, noc, wages }: { core: CoreData; pl
           label={`Median ${annual ? 'annual' : 'hourly'} wage`}
           value={primary?.median ?? null}
           unit={unit}
-          period={table.referencePeriod}
+          period={primary?.referencePeriod ?? 'Not recorded'}
           periodType="period"
           qualifier={primary ? (primary.fallback === 'province' ? `Province-wide value (${geoName(primary.geo.name)}) — no economic-region wage` : `Economic region: ${geoName(primary.geo.name)}`) : null}
           flags={primary ? [primary.fallback === 'province' ? 'provincial_value' : 'regional_value'] : ['not_available']}
@@ -171,8 +170,7 @@ function WagePanel({ core, place, occupation, noc, wages }: { core: CoreData; pl
       )}
       {otherBasis.length > 0 && (
         <p className="ppanel__note">
-          {otherBasis.map((r) => r.label).join(' and ')} {otherBasis.length === 1 ? 'is' : 'are'} published as {annual ? 'hourly' : 'annual'} wages and left out of the chart
-          (not comparable).
+          {otherBasis.map((r) => `${r.label}: ${wagePeriod(r.cell)}, ${r.cell?.annual ? 'annual' : 'hourly'}, ${r.cell?.methodology ?? 'method not recorded'}`).join('; ')}. Left out of the chart because units, reference periods or methods differ or are unknown.
         </p>
       )}
       {primary?.fallback === 'province' && (
@@ -216,7 +214,8 @@ function WagePanel({ core, place, occupation, noc, wages }: { core: CoreData; pl
           <MissingValue compact reason="Needs a median wage for the occupation." />
         )}
       </div>
-      <SourceNote sourceId={table.sourceId} period={table.referencePeriod} periodType="period" />
+      <p className="ppanel__note">Method: {primary?.methodology ?? 'Not recorded'}</p>
+      <SourceNote sourceId={table.sourceId} period={primary?.referencePeriod ?? 'Not recorded'} periodType="period" />
     </div>
   );
 }

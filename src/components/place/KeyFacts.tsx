@@ -131,14 +131,14 @@ function WageFact({ place, occupation, wages, loading, onPick }: { place: Place;
       label={`Median wage · ${occupation.title}`}
       value={cell?.median ?? null}
       unit={cell?.annual ? 'CAD_year' : 'CAD_hour'}
-      period={wages.referencePeriod}
+      period={cell?.referencePeriod ?? 'Not recorded'}
       periodType="period"
       qualifier={cell ? (cell.fallback === 'province' ? `Province-wide value (${geoName(cell.geo.name)}) — no economic-region wage` : `Economic region: ${geoName(cell.geo.name)}`) : null}
       flags={cell ? [cell.fallback === 'province' ? 'provincial_value' : 'regional_value', ...(cell.annual ? (['annual_wage'] as const) : [])] : ['not_available']}
       missingReason={cell ? null : noWageReason(place)}
       sourceId={wages.sourceId}
     >
-      <p className="pfacts__extra">Employed workers’ wages, not job-ad pay · {wagePeriod(wages)}</p>
+      <p className="pfacts__extra">Employed workers’ wages, not job-ad pay · {wagePeriod(cell)}</p>
     </Stat>
   );
 }

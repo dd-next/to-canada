@@ -40,7 +40,14 @@ def _r(x, n=0):
 def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
     lk, refs = ask_ctx["lk"], sorted(ask_ctx["df"].REF_DATE.unique())
     latest, y1, q1_25 = refs[-1], refs[-5], refs[-6]
-    q2025_4 = refs[-3]  # 2025-10 = 2025-Q4, the quarter containing CMHC's October survey
+    global CM
+    cmhc_sample = next(iter(cmhc_ctx.values()))
+    cmhc_period = cmhc_sample.get("period", "2025-10")
+    cmhc_label = cmhc_sample.get("periodLabel", "Oct-25")
+    CM = cmhc_sample.get("sourceId", CM)
+    q2025_4 = cmhc_period  # October is the first month of Q4; compare matching periods only.
+    if q2025_4 not in refs:
+        raise ValueError("No asking-rent quarter matches the discovered CMHC edition; review the comparison before publishing.")
     y2019 = [r for r in refs if r.startswith("2019")]
     PL = {p["id"]: p for p in places()}
     names = {k: v["raw"]["name"] for k, v in PL.items()}
@@ -50,7 +57,7 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
         v = lk.get((dg, est, APT[ut], rd))
         return None if v is None or v[1] in ("..", "F", "x") else (v[0] if v[0] == v[0] else None)
 
-    covered = [p for p in PL if ask(p, "1br", latest) is not None]
+    covered = [p for p in PL if ask(p, "1br", latest) is not None and statcan_geo_key(PL[p])[1]["level"] == "cma"]
     # ---------------------------------------------------------------- housing-rents
     r1 = sorted(((ask(p, "1br", latest), p) for p in covered))
     low, high = r1[0], r1[-1]
@@ -59,7 +66,7 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
     f1 = {
         "id": "asking-1br-range", "kind": "observation",
         "headline": f"1-bedroom asking rents run from ${low[0]:,.0f} in {names[low[1]]} to ${high[0]:,.0f} in {names[high[1]]}",
-        "detail": (f"Average advertised rent for a 1-bedroom apartment in {quarter_label(latest)} across the {len(r1)} of our 31 places that the table covers: "
+        "detail": (f"Average advertised rent for a 1-bedroom apartment in {quarter_label(latest)} across the {len(r1)} of our 31 places that have a comparable full-CMA geography: "
                    f"median ${med1:,.0f}; the lowest are " + ", ".join(f"{names[p]} (${v:,.0f})" for v, p in _with_ties(r1, 5)) + "; the highest are "
                    + ", ".join(f"{names[p]} (${v:,.0f})" for v, p in _with_ties(r1[::-1], 5)) + ". Asking rent applies to units currently advertised, so it is the price a new arrival "
                    "would see on listing sites, not what long-term tenants pay. Charlottetown, Brandon, Whitehorse, Yellowknife and Iqaluit are not in this table (CMAs only)."),
@@ -109,7 +116,7 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
     for p in covered:
         if p not in cmhc_ctx:
             continue
-        row = cmhc_ctx[p]["rent"]["2br"]["Oct-25"]
+        row = cmhc_ctx[p]["rent"]["2br"][cmhc_label]
         cm = _num(row[0])
         a = ask(p, "2br", q2025_4)
         if cm and a:
@@ -119,14 +126,14 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
     f4 = {
         "id": "asking-vs-cmhc-2br", "kind": "calculation",
         "headline": f"Advertised 2-bedroom rents sit a median {med_gap:.0f}% above CMHC's average rent; the gap ranges from {gaps[0][3]:+.0f}% to {gaps[-1][3]:+.0f}%",
-        "detail": (f"Asking rent for 2-bedroom apartments in {quarter_label(q2025_4)} (StatCan) vs CMHC's October 2025 average rent for purpose-built apartments, {len(gaps)} places. "
+        "detail": (f"Asking rent for 2-bedroom apartments in {quarter_label(q2025_4)} (StatCan) vs CMHC's {cmhc_label} average rent for purpose-built apartments, {len(gaps)} places. "
                    "Largest gaps: " + ", ".join(f"{names[x[0]]} {x[3]:+.0f}% (asking ${x[1]:,.0f} vs ${x[2]:,.0f})" for x in gaps[::-1][:4])
                    + "; smallest: " + ", ".join(f"{names[x[0]]} {x[3]:+.0f}%" for x in gaps[:3]) + ". The gap is not 'overpricing': the two measure different things - "
                      "units advertised for rent during a quarter on listing platforms (new leases, any building type) vs a survey of the average rent across all "
                      "units in purpose-built rental structures of 3+ units, including long-standing tenancies. For a newcomer, the asking rent is the better guide to what a new lease costs."),
-        "stat": {"value": _r(med_gap, 1), "unit": "percent", "label": "median asking vs CMHC average rent gap, 2-bedroom", "period": "2025-Q4 vs Oct 2025"},
+        "stat": {"value": _r(med_gap, 1), "unit": "percent", "label": "median asking vs CMHC average rent gap, 2-bedroom", "period": f"{quarter_label(q2025_4)} vs {cmhc_label}"},
         "placeIds": [x[0] for x in gaps[::-1][:3]] + [x[0] for x in gaps[:2]], "metricId": "rent_cmhc_avg_2br", "sourceIds": [AS, CM],
-        "calc": f"(asking 2-bedroom apartment rent, REF_DATE {q2025_4} / CMHC table 1.1.2 average rent 2-bedroom Oct-25 - 1) x 100; Ottawa/Gatineau use provincial parts; places in both sources.",
+        "calc": f"(asking 2-bedroom apartment rent, REF_DATE {q2025_4} / CMHC table 1.1.2 average rent 2-bedroom {cmhc_label} - 1) x 100; Ottawa/Gatineau use provincial parts; places in both sources.",
     }
     # CPI rent vs asking change: only places with a city-level rented-accommodation CPI
     idx, cl = cpi_ctx["idx"], cpi_ctx["latest"]
@@ -162,9 +169,9 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
             "unit": "CAD_month", "series": lines,
             "notes": "Nominal dollars. 2025-Q2 and Q3 estimates are flagged by StatCan as modelled (a listing platform was unavailable). Early-2019 quarters come from a young experimental series.", "sourceIds": [AS]}
     dot = {"id": "asking-vs-cmhc-dots", "type": "dot_compare", "title": "2-bedroom: advertised (asking) vs CMHC average rent",
-           "subtitle": "Asking rent 2025-Q4 vs CMHC October 2025 survey average, sorted by gap", "unit": "CAD_month",
-           "series": [{"id": "asking", "label": "Asking rent (StatCan, 2025-Q4)", "points": [{"x": names[x[0]], "y": x[1], "placeId": x[0]} for x in gaps]},
-                      {"id": "cmhc", "label": "CMHC average rent (Oct 2025)", "points": [{"x": names[x[0]], "y": x[2], "placeId": x[0], **({"f": ["use_with_caution"]} if x[4] == "d" else {})} for x in gaps]}],
+           "subtitle": f"Asking rent {quarter_label(q2025_4)} vs CMHC {cmhc_label} survey average, sorted by gap", "unit": "CAD_month",
+           "series": [{"id": "asking", "label": f"Asking rent (StatCan, {quarter_label(q2025_4)})", "points": [{"x": names[x[0]], "y": x[1], "placeId": x[0]} for x in gaps]},
+                      {"id": "cmhc", "label": f"CMHC average rent ({cmhc_label})", "points": [{"x": names[x[0]], "y": x[2], "placeId": x[0], **({"f": ["use_with_caution"]} if x[4] == "d" else {})} for x in gaps]}],
            "notes": "Different populations: listings of units for rent in a quarter (all rental dwelling types in CMA) vs the stock average of purpose-built rental apartments (3+ units).", "sourceIds": [AS, CM]}
     q19 = y2019[0]
     sl_cmas = sorted(((names[p], ask(p, "1br", q19), ask(p, "1br", latest), p) for p in covered if ask(p, "1br", q19) is not None), key=lambda t: -t[2])
@@ -186,7 +193,7 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
         "methodology": [
             "Asking rents: StatCan table 46-10-0092-01 (experimental Quarterly Rent Statistics), average asking rent for apartments by bedroom count in each CMA, rounded to $10 by StatCan; Ottawa and Gatineau use the Ontario and Quebec parts of the CMA.",
             "Change since 2019 compares the latest quarter with the mean of the four 2019 quarters; 1-year change compares with the same quarter a year earlier.",
-            "CMHC: Rental Market Survey, October 2025, average rent by bedroom type for private apartments in structures of 3+ units, per centre (CMA/CA); the asking-vs-CMHC comparison uses asking rent for 2025-Q4 (the quarter containing the October survey) to match timing.",
+            f"CMHC: Rental Market Survey, {cmhc_label}, average rent by bedroom type for private apartments in structures of 3+ units, per centre (CMA/CA); the asking-vs-CMHC comparison uses asking rent for {quarter_label(q2025_4)} (the quarter containing the October survey) to match timing.",
             "CPI: 12-month change in 'rented accommodation' (the rent sub-index published at city level), table 18-10-0004-01, latest month.",
         ],
         "limitations": [
@@ -212,7 +219,7 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
             rent = ask(p, s["ut"], latest)
             if rent is None or tot is None:
                 continue
-            nonshelter_m = (tot - shel) * (s["n"] / 4) ** 0.5 / 12
+            nonshelter_m = (tot - shel) * (s["n"] / mbm_ctx["referenceHouseholdSizes"][p]) ** 0.5 / 12
             monthly = rent + nonshelter_m
             res[k].append({"p": p, "rent": rent, "non": nonshelter_m, "monthly": monthly, "months": s["buffer"] / monthly})
     for k in res:
@@ -222,23 +229,23 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
         "id": "runway-single", "kind": "calculation",
         "headline": f"A single adult with $15,000 and no income lasts about {s1[0]['months']:.1f} months in {names[s1[0]['p']]} but {s1[-1]['months']:.1f} in {names[s1[-1]['p']]}",
         "detail": (f"Scenario, not a prediction: monthly cost = {quarter_label(latest)} average asking rent for a 1-bedroom apartment + the MBM non-shelter basket (food, clothing, transportation, communication, other) "
-                   "for one person (reference-family cost x sqrt(1/4) = 50%, divided by 12). Longest runway: " + ", ".join(f"{names[x['p']]} {x['months']:.1f}" for x in s1[:4])
+                   "for one person (reference cost x sqrt(1/reference household size), divided by 12). Longest runway: " + ", ".join(f"{names[x['p']]} {x['months']:.1f}" for x in s1[:4])
                    + "; shortest: " + ", ".join(f"{names[x['p']]} {x['months']:.1f}" for x in s1[::-1][:4]) + f" months. Median {st.median(x['months'] for x in s1):.1f} months. "
                      "Excluded: one-off costs (flights, deposits, furniture), taxes, benefits, income, health costs and any shelter cost beyond rent."),
         "stat": {"value": _r(st.median(x["months"] for x in s1), 1), "unit": "months", "label": "median months of runway, single adult, $15,000", "period": quarter_label(latest)},
         "placeIds": [s1[0]["p"], s1[1]["p"], s1[-1]["p"], s1[-2]["p"]], "metricId": "rent_asking_1br", "sourceIds": [AS, MB],
-        "calc": "months = 15,000 / (asking rent 1BR + (MBM total - MBM shelter) x sqrt(1/4) / 12); MBM = 2025 current dollars, 2023 base, reference family of four; rent = REF_DATE %s." % latest,
+        "calc": "months = 15,000 / (asking rent 1BR + (MBM total - MBM shelter) x sqrt(1/referenceHouseholdSize) / 12); MBM = observation-year current dollars, 2023 base, reference household of four (five in Nunavut); rent = REF_DATE %s." % latest,
     }
     g3 = {
         "id": "runway-family", "kind": "calculation",
         "headline": f"A couple with a child and $25,000 lasts about {s3[0]['months']:.1f} months in {names[s3[0]['p']]} but {s3[-1]['months']:.1f} in {names[s3[-1]['p']]}",
-        "detail": ("Scenario: 2-bedroom asking rent + MBM non-shelter costs scaled to 3 persons (x sqrt(3/4) = 87%). Longest runway: " + ", ".join(f"{names[x['p']]} {x['months']:.1f}" for x in s3[:4])
+        "detail": ("Scenario: 2-bedroom asking rent + MBM non-shelter costs scaled to 3 persons (x sqrt(3/referenceHouseholdSize) = 87%). Longest runway: " + ", ".join(f"{names[x['p']]} {x['months']:.1f}" for x in s3[:4])
                    + "; shortest: " + ", ".join(f"{names[x['p']]} {x['months']:.1f}" for x in s3[::-1][:4]) + f" months (median {st.median(x['months'] for x in s3):.1f}). "
                    "Rent is "
                    f"{100 * st.median(x['rent'] / x['monthly'] for x in s3):.0f}% of the median monthly outlay, so rent differences between cities drive most of the spread."),
         "stat": {"value": _r(st.median(x["months"] for x in s3), 1), "unit": "months", "label": "median months of runway, couple + child, $25,000", "period": quarter_label(latest)},
         "placeIds": [s3[0]["p"], s3[1]["p"], s3[-1]["p"], s3[-2]["p"]], "metricId": "rent_asking_2br", "sourceIds": [AS, MB],
-        "calc": "months = 25,000 / (asking rent 2BR + (MBM total - MBM shelter) x sqrt(3/4) / 12).",
+        "calc": "months = 25,000 / (asking rent 2BR + (MBM total - MBM shelter) x sqrt(3/referenceHouseholdSize) / 12).",
     }
     # share of non-shelter that is basket vs rent difference
     rent_share = [x["rent"] / x["monthly"] for x in s1]
@@ -251,12 +258,12 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
         "stat": {"value": _r(100 * st.median(rent_share), 0), "unit": "percent", "label": "median share of monthly outlay that is rent (single adult)", "period": quarter_label(latest)},
         "placeIds": [min(s1, key=lambda x: x["rent"] / x["monthly"])["p"], max(s1, key=lambda x: x["rent"] / x["monthly"])["p"]],
         "metricId": "cost_mbm_total", "sourceIds": [AS, MB],
-        "calc": "rent / (rent + (MBM total - MBM shelter) x 0.5 / 12) for each place; non-shelter = total - shelter (includes food, clothing, transportation, communication, other).",
+        "calc": "rent / (rent + (MBM total - MBM shelter) x sqrt(1/referenceHouseholdSize) / 12) for each place; non-shelter = total - shelter (includes food, clothing, transportation, communication, other).",
     }
-    b1 = {"id": "runway-single-ranked", "type": "bar_ranked", "title": "Months a $15,000 buffer lasts - single adult, 1-bedroom",
+    b1 = {"id": "runway-single-ranked", "type": "bar_ranked", "title": "Modeled runway with $15,000 — regional basket assumptions",
           "subtitle": "Scenario: no income; asking rent + MBM non-shelter basket for one person", "unit": "months", "yLabel": "months",
           "series": [{"id": "runway_single", "label": "Months of runway", "points": [{"x": names[x["p"]], "y": round(x["months"], 1), "placeId": x["p"]} for x in s1]}],
-          "notes": "Excludes one-off arrival costs, taxes, benefits and income. MBM 2025 current dollars; rent 2026-Q2.", "sourceIds": [AS, MB]}
+          "notes": f"Modeled scenario using regional MBM baskets, not a ranking of measured city living costs. Excludes one-off costs, tax, benefits and income. MBM {mbm_ctx['latest']}; rent {quarter_label(latest)}.", "sourceIds": [AS, MB]}
     b2 = {"id": "runway-both", "type": "dot_compare", "title": "Months of runway by household type",
           "subtitle": "Single adult ($15,000, 1BR) vs couple + 1 child ($25,000, 2BR)", "unit": "months", "yLabel": "months",
           "series": [{"id": "single", "label": "Single adult, $15,000", "points": [{"x": names[x["p"]], "y": round(x["months"], 1), "placeId": x["p"]} for x in s1]},
@@ -274,13 +281,13 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
         ],
         "methodology": [
             "Monthly cost = latest average asking rent for the stated apartment size (StatCan 46-10-0092-01) + non-shelter MBM costs / 12.",
-            "Non-shelter MBM = Total threshold - Shelter component (Food, Clothing, Transportation, Communication services, Other expenses) from StatCan 11-10-0066-01, 2023-base MBM, 2025 current dollars, for the MBM region mapped to each place; this is the reference family of four.",
-            "Household scaling uses StatCan's square-root equivalence scale: cost for n persons = reference-family cost x sqrt(n/4) (1 person 50%, 3 persons 87%). We verified it reproduces the published family-size totals in table 11-10-0104-01 (Toronto 2025: 1 person 31,440; 2 persons 44,463; 3 persons 54,456).",
+            "Non-shelter MBM = Total threshold - Shelter component (Food, Clothing, Transportation, Communication services, Other expenses) from StatCan 11-10-0066-01, 2023-base MBM, observation-year current dollars, for the MBM region mapped to each place; this is the reference household of four (five in Nunavut).",
+            "Household scaling uses StatCan's square-root equivalence scale: cost for n persons = reference-family cost x sqrt(n/referenceHouseholdSize) (1 person 50%, 3 persons 87%). We verified it reproduces the published family-size totals in table 11-10-0104-01 (Toronto 2025: 1 person 31,440; 2 persons 44,463; 3 persons 54,456).",
             "Months of runway = stated savings / monthly cost. Stated savings are $15,000 (single) and $25,000 (couple + 1 child). No income, no taxes, no benefits, no one-off costs, no inflation between 2025 (MBM) and the rent quarter.",
         ],
         "limitations": [
             "MBM regions differ from the CMAs and several places share one regional value (e.g. Victoria, Kelowna and Abbotsford-Mission all use 'British Columbia, population 100,000 to 499,999'); Gatineau's mapping to the Quebec 100,000-499,999 class is an assumption.",
-            "The MBM is a modest-basket benchmark for a reference family, scaled by an equivalence scale; it is not a measure of what an individual newcomer spends, and it covers 2025 prices while rents are 2026-Q2.",
+            "The MBM is a modest-basket benchmark for a reference family, scaled by an equivalence scale; it is not a measure of what an individual newcomer spends, and it uses the basket observation year while rent uses its stated quarter.",
             "Asking rents are averages of advertised apartments; the cheapest listings may be smaller or in less central areas.",
             "Coverage: places not in the StatCan rent table (Charlottetown, Brandon, Whitehorse, Yellowknife, Iqaluit) are excluded.",
         ],

@@ -31,6 +31,7 @@ export default function ImmigrationPage() {
   const juris = params.get('jurisdiction') ?? '';
   const category = params.get('category') ?? '';
   const job = params.get('job') ?? '';
+  const programId = params.get('program') ?? '';
   const q = params.get('q') ?? '';
   const placeId = params.get('place') && core.placeById.has(params.get('place')!) ? params.get('place')! : '';
   const place = placeId ? core.placeById.get(placeId)! : null;
@@ -42,6 +43,7 @@ export default function ImmigrationPage() {
   const filtered = useMemo(
     () =>
       all.filter((p) => {
+        if (programId && p.id !== programId) return false;
         if (juris && p.jurisdiction !== juris) return false;
         if (category && p.category !== category) return false;
         if (job && p.jobOfferRequired !== job) return false;
@@ -52,13 +54,13 @@ export default function ImmigrationPage() {
         }
         return !nq || matchesText(p, nq);
       }),
-    [all, juris, category, job, place, nq],
+    [all, juris, category, job, place, nq, programId],
   );
 
   const support = filtered.filter((p) => SUPPORT.includes(p.category));
   const main = filtered.filter((p) => !SUPPORT.includes(p.category));
   const groups = JURIS_ORDER.map((j) => ({ j, items: main.filter((p) => p.jurisdiction === j) })).filter((g) => g.items.length);
-  const filtering = !!(juris || category || job || placeId || q);
+  const filtering = !!(juris || category || job || placeId || q || programId);
 
   const jurisOptions = useMemo(() => {
     const present = new Set(all.map((p) => p.jurisdiction as string));
@@ -103,6 +105,7 @@ export default function ImmigrationPage() {
       </aside>
 
       <section className="imm__filters" aria-label="Filter programs">
+        {programId && <p>Linked program: {byId.get(programId)?.name ?? programId}. <Button variant="ghost" size="sm" onClick={() => update({ program: null })}>Show all programs</Button></p>}
         <div className="field imm__search">
           <label htmlFor="imm-q" className="field__label label">
             Search programs
@@ -122,6 +125,7 @@ export default function ImmigrationPage() {
             { value: '', label: 'Any' },
             { value: 'yes', label: 'Job offer required' },
             { value: 'no', label: 'No job offer required' },
+            { value: 'conditional', label: 'Job offer or qualifying alternative' },
             { value: 'varies', label: 'Depends on stream' },
           ]}
         />
@@ -140,7 +144,7 @@ export default function ImmigrationPage() {
       <div className="imm__count" role="status">
         {programs.loading ? 'Loading programs…' : `${plural(filtered.length, 'program')}${filtering ? ' match your filters' : ''}`}
         {filtering && (
-          <Button variant="ghost" size="sm" onClick={() => update({ jurisdiction: null, category: null, job: null, place: null, q: null })}>
+            <Button variant="ghost" size="sm" onClick={() => update({ jurisdiction: null, category: null, job: null, place: null, q: null, program: null })}>
             Clear filters
           </Button>
         )}
@@ -160,7 +164,7 @@ export default function ImmigrationPage() {
         </EmptyState>
       )}
       {programs.data && all.length > 0 && filtered.length === 0 && (
-        <EmptyState title="No programs match" action={<Button onClick={() => update({ jurisdiction: null, category: null, job: null, place: null, q: null })}>Clear filters</Button>}>
+        <EmptyState title="No programs match" action={<Button onClick={() => update({ jurisdiction: null, category: null, job: null, place: null, q: null, program: null })}>Clear filters</Button>}>
           <p>Try fewer filters or a broader word.</p>
         </EmptyState>
       )}

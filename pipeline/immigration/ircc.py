@@ -8,11 +8,12 @@ import openpyxl
 
 from common_i import IRCC_ROW, PROV_NAME, PROV_CODE, place_geo, places, province_geo, geo, TODAY
 from common.contract import obs
-from common.fetch import fetch, meta_for, now_iso
+from common.fetch import fetch, fetch_json, meta_for, now_iso
 
 SID = "ircc-pr-cma"
 URL = "https://www.ircc.canada.ca/opendata-donneesouvertes/data/EN_ODP-PR-CMA.xlsx"
-LANDING = "https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda"
+DATASET = "f7e5498e-0ad8-4417-85c9-9b8aff9b9eda"
+LANDING = f"https://open.canada.ca/data/en/dataset/{DATASET}"
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 PROV_BY_TOTAL = {f"{n} Total": c for c, n in PROV_NAME.items()}
 
@@ -51,7 +52,7 @@ def load():
     for i, c in enumerate(mon_row):
         if c in MONTHS and year_of.get(i):
             month_col[(year_of[i], MONTHS.index(c) + 1)] = i
-    # 2026 annual total column sits in the subheader row ('2026 Total') -> partial year; check months present.
+    # A yearly total can be partial; the published monthly cells determine completeness.
     data = {}   # (kind,name,prov) -> {"annual":{y:(v,flags)}, "month":{(y,m):(v,flags)}}
     prov = None
     for r in rows[5:]:
@@ -92,13 +93,26 @@ def load():
         else:
             out[(kind, name, None)] = rec
     last_month = max(k for k, v in month_col.items() if v is not None and out[("country", "Canada", None)]["month"].get(k, (None, []))[0] is not None)
-    return out, {"title": title, "meta": meta, "last_month": last_month, "annual_years": sorted(annual_col), "path": str(path)}
+    first_month = min(k for k in month_col if out[("country", "Canada", None)]["month"].get(k, (None, []))[0] is not None)
+    pkg = fetch_json("https://open.canada.ca/data/api/3/action/package_show", params={"id": DATASET}, max_age_days=1, retries=1, timeout=30)
+    if not pkg.get("success") or not isinstance(pkg.get("result"), dict):
+        raise ValueError("Official IRCC catalog format changed; cannot verify release metadata")
+    catalog = pkg["result"]
+    resource = next((r for r in catalog.get("resources", []) if "EN_ODP-PR-CMA.xlsx" in r.get("url", "")), {})
+    updated = resource.get("last_modified") or catalog.get("metadata_modified")
+    if not updated:
+        raise ValueError("Official IRCC catalog lacks source update date; manual review required")
+    meta["releaseDate"] = updated[:10]
+    meta["publisherUpdatedAt"] = updated
+    return out, {"title": title, "meta": meta, "first_month": first_month, "last_month": last_month, "annual_years": sorted(annual_col), "path": str(path)}
 
 
 def build():
     data, info = load()
-    ly, lm = info["last_month"]          # last published month (2026, 8)
-    full_years = [y for y in info["annual_years"] if y < ly]
+    ly, lm = info["last_month"]          # last published month from the workbook
+    full_years = [y for y in info["annual_years"] if y < ly or (y == ly and lm == 12)]
+    if len(full_years) < 2:
+        raise ValueError("IRCC workbook needs two complete years for year-on-year comparisons")
     latest, prev = full_years[-1], full_years[-2]
     ytd_label = f"{ly}-01 to {ly}-{lm:02d}"
     obs_out, series_out, gaps = [], [], []
@@ -138,10 +152,10 @@ def build():
             obs_out.append(obs(pid, "imm_pr_admissions_change", None, str(latest), rec_geo, SID,
                                ["suppressed"] if (v is None or pv is None) else ["not_available"],
                                f"{latest} or {prev} admissions suppressed by IRCC (0-5), so the change cannot be computed."))
-        # series: annual since 2015 + YTD
+        # Series of complete years and the current partial year, if any.
         pts = []
         for y in info["annual_years"]:
-            if y >= ly:
+            if y not in full_years:
                 continue
             val, fl = rec["annual"][y]
             p_ = {"t": str(y), "v": val}
@@ -149,7 +163,8 @@ def build():
                 p_["f"] = fl
             pts.append(p_)
         ytd = sum_months(rec, ly, lm)
-        pts.append({"t": f"{ly} YTD (Jan-{MONTHS[lm-1]})", "v": ytd[0], "f": ytd[1]})
+        if lm < 12:
+            pts.append({"t": f"{ly} YTD (Jan-{MONTHS[lm-1]})", "v": ytd[0], "f": ytd[1]})
         ytd_vals[pid] = ytd
         series_out.append({
             "id": f"imm_pr_admissions_{pid}", "label": f"Permanent resident admissions by intended destination - {pi['name']}",

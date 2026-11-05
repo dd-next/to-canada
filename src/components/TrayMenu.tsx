@@ -1,6 +1,7 @@
 import { useId, useRef, useState, type ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useCoreState } from '../data/core';
+import { withNavigationContext } from '../lib/navigation';
 import { compareColor } from '../lib/colors';
 import { useDismiss } from '../lib/hooks';
 import { compareHref, useCompareTray, useFavourites } from '../lib/state';
@@ -42,6 +43,7 @@ function Popover({ label, count, icon, children, align = 'right' }: { label: str
 
 /** "Compare (n)" header tray: up to three places, link to the comparison page. */
 export function CompareTrayMenu() {
+  const context = new URLSearchParams(useLocation().search);
   const tray = useCompareTray();
   const name = usePlaceName();
   return (
@@ -65,7 +67,7 @@ export function CompareTrayMenu() {
             </ul>
           )}
           <div className="tray__actions">
-            <ButtonLink to={compareHref(tray.ids)} variant="primary" size="sm" iconRight="arrowRight" onClick={close}>
+            <ButtonLink to={withNavigationContext(compareHref(tray.ids), context)} variant="primary" size="sm" iconRight="arrowRight" onClick={close}>
               Open comparison
             </ButtonLink>
             {tray.ids.length > 0 && (

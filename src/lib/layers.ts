@@ -7,6 +7,7 @@
  * legend and tooltips all read the same, honest view of the data.
  */
 import type { Flag, GeoRef, MetricCategory, MetricDef, Observation, Occupation, Place, Unit, WageTable } from '../types/contract';
+import { cityRankingReason, comparisonKey } from './comparability';
 import { cleanGeoName, formatPeriod, geoQualifier, missingReason } from './format';
 
 export const CATEGORY_ORDER: MetricCategory[] = ['housing', 'work', 'cost', 'immigration', 'climate', 'people'];
@@ -211,6 +212,7 @@ export interface LayerDatum {
   calc?: string;
   /** National rank among comparable values for the layer's main period (1 = first in the default order). */
   rank?: number;
+  comparisonKey?: string;
 }
 
 export interface LayerData {
@@ -231,12 +233,22 @@ export interface LayerData {
 export const defaultAscending = (m: Pick<MetricDef, 'higherIs'>) => m.higherIs === 'worse';
 
 function finalize(metric: MetricDef, data: Map<string, LayerDatum>, caveat?: string, calculation?: string): LayerData {
+  const cohorts = new Map<string, number>();
+  for (const d of data.values()) if (d.status === 'ok' && d.value !== null && d.comparisonKey)
+    cohorts.set(d.comparisonKey, (cohorts.get(d.comparisonKey) ?? 0) + 1);
+  const mainCohort = [...cohorts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0]?.[0];
+  for (const d of data.values()) if (d.status === 'ok' && d.comparisonKey !== mainCohort) {
+    d.status = 'not_comparable';
+    d.value = null;
+    d.reason = 'Different geography or methodology — shown but not ranked';
+  }
   const periodCount = new Map<string, number>();
   for (const d of data.values()) if (d.value !== null && d.period) periodCount.set(d.period, (periodCount.get(d.period) ?? 0) + 1);
   const periods = [...periodCount.entries()].map(([period, count]) => ({ period, count })).sort((a, b) => b.count - a.count || (a.period < b.period ? 1 : -1));
   const primaryPeriod = periods[0]?.period ?? null;
   for (const d of data.values()) if (d.status === 'ok' && d.period !== primaryPeriod) {
     d.status = 'other_period';
+    d.value = null;
     d.reason = `Different period (${formatPeriod(d.period, metric.periodType)}) — shown but not ranked`;
   }
   const ranked = [...data.values()].filter((d) => d.status === 'ok' && d.value !== null);
@@ -268,16 +280,18 @@ export function buildMetricLayer(metric: MetricDef, places: Place[], obsIndex: M
     const o = obsIndex.get(p.id)?.get(metric.id) ?? null;
     const flags = o?.flags ?? [];
     const hasValue = o !== null && o.value !== null && !flags.includes('too_unreliable');
+    const reason = hasValue ? cityRankingReason(o!, p) : null;
     data.set(p.id, {
+      comparisonKey: o ? comparisonKey(metric, o) : undefined,
       placeId: p.id,
       obs: o,
-      value: hasValue ? o!.value : null,
+      value: hasValue && !reason ? o!.value : null,
       shown: hasValue ? o!.value : null,
       shownUnit: metric.unit,
-      status: hasValue ? 'ok' : 'missing',
+      status: hasValue ? reason ? 'not_comparable' : 'ok' : 'missing',
       period: o?.period ?? null,
       qualifier: geoQualifier(o),
-      reason: hasValue ? null : o ? missingReason(flags, o.note) : 'No observation for this place in the current snapshot',
+      reason: hasValue ? reason : o ? missingReason(flags, o.note) : 'No observation for this place in the current snapshot',
       flags,
     });
   }
@@ -301,6 +315,8 @@ export interface WageCell {
   high: number | null;
   annual: boolean;
   fallback: 'province' | null;
+  referencePeriod: string | null;
+  methodology: string | null;
 }
 
 /** Wage cell for a place: primary economic region, else the province (flagged). */
@@ -311,12 +327,12 @@ export function lookupWage(table: WageTable, noc: string, place: Place): WageCel
   const erKey = er ? pickKey(table, cells, 'economic_region', [er.id]) : null;
   const erCell = erKey ? cells[erKey] : undefined;
   if (erKey && erCell && erCell[1] !== null) {
-    return { key: erKey, geo: table.geos[erKey] ?? er, low: erCell[0], median: erCell[1], high: erCell[2], annual: erCell[3] === 1, fallback: null };
+    return { key: erKey, geo: table.geos[erKey] ?? er, low: erCell[0], median: erCell[1], high: erCell[2], annual: erCell[3] === 1, fallback: null, referencePeriod: table.metadata?.[noc]?.[erKey]?.referencePeriod ?? null, methodology: table.metadata?.[noc]?.[erKey]?.methodology ?? null };
   }
   const prKey = pickKey(table, cells, 'province', [place.province, place.geo.province.id]);
   const prCell = prKey ? cells[prKey] : undefined;
   if (prKey && prCell && prCell[1] !== null) {
-    return { key: prKey, geo: table.geos[prKey] ?? place.geo.province, low: prCell[0], median: prCell[1], high: prCell[2], annual: prCell[3] === 1, fallback: 'province' };
+    return { key: prKey, geo: table.geos[prKey] ?? place.geo.province, low: prCell[0], median: prCell[1], high: prCell[2], annual: prCell[3] === 1, fallback: 'province', referencePeriod: table.metadata?.[noc]?.[prKey]?.referencePeriod ?? null, methodology: table.metadata?.[noc]?.[prKey]?.methodology ?? null };
   }
   return null;
 }
@@ -341,15 +357,8 @@ export function wageMetric(occupation: Pick<Occupation, 'noc' | 'title'>, table:
   };
 }
 
-/** Build the virtual "Median wage: <occupation>" layer. */
-/** Job Bank reference periods can be descriptive; data carry the leading period token. */
-function periodToken(p: string): string {
-  const m = /^(\d{4}(?:[-/]\d{4})?)/.exec(p.trim());
-  return m ? m[1] : p;
-}
-
 export function buildWageLayer(table: WageTable, occupation: Pick<Occupation, 'noc' | 'title'>, places: Place[]): LayerData {
-  const period = periodToken(table.referencePeriod);
+  const period = 'Not recorded';
   const cells = new Map<string, WageCell | null>();
   let annualCount = 0;
   let hourlyCount = 0;
@@ -391,9 +400,9 @@ export function buildWageLayer(table: WageTable, occupation: Pick<Occupation, 'n
     }
     const flags: Flag[] = [c.fallback === 'province' ? 'provincial_value' : 'regional_value'];
     if (c.annual) flags.push('annual_wage');
-    const o: Observation = { placeId: p.id, metricId: WAGE_LAYER_KEY, value: c.median, period: period, geo: c.geo, sourceId: table.sourceId, flags };
-    const comparable = c.annual === annualLayer;
-    if (!comparable) mixed++;
+    const o: Observation = { placeId: p.id, metricId: WAGE_LAYER_KEY, value: c.median, period: c.referencePeriod ?? 'Not recorded', geo: c.geo, sourceId: table.sourceId, flags, methodology: c.methodology ?? undefined };
+    const comparable = false; // ER/province wages are context, never city rankings.
+    if (c.annual !== annualLayer) mixed++;
     data.set(p.id, {
       placeId: p.id,
       obs: o,
@@ -401,19 +410,20 @@ export function buildWageLayer(table: WageTable, occupation: Pick<Occupation, 'n
       shown: c.median,
       shownUnit: c.annual ? 'CAD_year' : 'CAD_hour',
       status: comparable ? 'ok' : 'not_comparable',
-      period: period,
+      period: c.referencePeriod,
+      comparisonKey: comparisonKey(metric, o),
       qualifier:
         c.fallback === 'province'
-          ? `Province-wide value (${cleanGeoName(c.geo.name)}) — no economic-region wage`
-          : `Economic region: ${cleanGeoName(c.geo.name)}`,
-      reason: comparable ? null : c.annual ? 'Published as an annual wage — not comparable with the hourly values on this layer' : 'Published as an hourly wage — not comparable with the annual values on this layer',
+          ? `Province-wide value (${cleanGeoName(c.geo.name)}) — no economic-region wage · ${c.methodology ?? 'Method not recorded'}`
+          : `Economic region: ${cleanGeoName(c.geo.name)} · ${c.methodology ?? 'Method not recorded'}`,
+      reason: !c.referencePeriod || !c.methodology ? 'Per-record reference period or methodology is not recorded — not ranked' : 'Regional wage context — not ranked as a city value',
       flags,
       range: [c.low, c.high],
     });
   }
   const notes: string[] = [];
   if (mixed) notes.push(`${mixed} ${mixed === 1 ? 'place is' : 'places are'} published on a different wage basis and not coloured.`);
-  if (period !== table.referencePeriod.trim()) notes.push(`Reference period: ${table.referencePeriod}.`);
+  notes.push('Regional wages are shown as context, not city ranks. Reference periods and methods vary by record.');
   const caveat = notes.length ? notes.join(' ') : undefined;
   return finalize(metric, data, caveat);
 }
@@ -507,7 +517,7 @@ export function buildRentShareLayer(rent: LayerData, wage: LayerData, occupation
   for (const p of places) {
     const r = rent.data.get(p.id);
     const w = wage.data.get(p.id);
-    const rentVal = r && (r.status === 'ok' || r.status === 'other_period') ? r.value : null;
+    const rentVal = r?.shown ?? null;
     const wageVal = w?.shown ?? null;
     const flags = [...new Set([...(r?.flags ?? []), ...(w?.flags ?? [])])].filter((f) => f !== 'not_available' && f !== 'annual_wage') as Flag[];
     if (rentVal === null || wageVal === null || !r?.obs || !w) {
@@ -536,13 +546,14 @@ export function buildRentShareLayer(rent: LayerData, wage: LayerData, occupation
     data.set(p.id, {
       placeId: p.id,
       obs: { ...r.obs, metricId: RENT_SHARE_KEY, value: share, flags, note: calc },
-      value: share,
+      comparisonKey: `${r.comparisonKey}|${w.comparisonKey}|${w.period}|${w.shownUnit}`,
+      value: null,
       shown: share,
       shownUnit: 'percent',
-      status: 'ok',
+      status: 'not_comparable',
       period: r.period,
       qualifier: w.qualifier ? `Wage — ${w.qualifier}` : null,
-      reason: null,
+      reason: `Calculation uses regional wages (${w.period ?? 'period not recorded'}) with city rent (${r.period}) — context, not a city ranking`,
       flags,
       calc,
     });

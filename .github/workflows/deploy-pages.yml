@@ -8,6 +8,11 @@ on:
   workflow_dispatch:
   # Called by refresh-data.yml: pushes made with GITHUB_TOKEN do not trigger the push event.
   workflow_call:
+    inputs:
+      ref:
+        description: Commit containing the validated snapshot to publish
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -23,6 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref || github.sha }}
       - uses: actions/setup-node@v5
         with:
           node-version: 22

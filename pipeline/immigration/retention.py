@@ -7,9 +7,10 @@ from common.statcan import flags_for, clean_value
 from common_i import TAX_GEO, PROV_NAME, PROV_CODE, place_geo, places, geo
 
 SID = "statcan-43-10-0022-01"
-COHORT, TAXYEAR = 2018, 2023     # 5 years after admission in the latest tax year
+COHORT = TAXYEAR = None
+CONTEXT = {}
 TOT = "Total, immigrant admission category"
-NOTE = ("Share of immigrant taxfilers (aged 15+, admitted in 2018, all admission categories, both sexes) who file tax in 2023 (5 years after admission) in "
+NOTE = ("Share of immigrant taxfilers (aged 15+, admitted in {cohort}, all admission categories, both sexes) who file tax in {taxyear} (5 years after admission) in "
         "the {what} of their intended destination at landing: stayed / (stayed + out-migrated). Does not count people who moved in from elsewhere. "
         "Residence = postal code on the tax return.")
 
@@ -33,7 +34,13 @@ def cell(idx, g, stat, adm, tax):
 
 
 def build():
+    global COHORT, TAXYEAR, CONTEXT
     df = mobility.read_filtered()
+    TAXYEAR = int(max(df.REF_DATE))
+    COHORT = TAXYEAR - 5
+    CONTEXT = {"firstTaxYear": min(df.REF_DATE), "lastTaxYear": str(TAXYEAR), "cohort": COHORT}
+    if not df["Admission year"].eq(f"{COHORT}, admission year").any():
+        raise ValueError("Latest five-year retention cohort is absent; manual review required")
     idx = index(df)
     have = {k[0] for k in idx}
     out, series, gaps = [], [], []
@@ -46,7 +53,7 @@ def build():
             v, fl, r = cell(idx, pname, "Retention rate", COHORT, TAXYEAR)
             st, _, _ = cell(idx, pname, "Stayed in intended geography", COHORT, TAXYEAR)
             ot, _, _ = cell(idx, pname, "Out migration", COHORT, TAXYEAR)
-            note = NOTE.format(what="province or territory") + (f" Counts (rounded): {st:,.0f} stayed, {ot:,.0f} out-migrated." if st is not None and ot is not None else "")
+            note = NOTE.format(cohort=COHORT, taxyear=TAXYEAR, what="province or territory") + (f" Counts (rounded): {st:,.0f} stayed, {ot:,.0f} out-migrated." if st is not None and ot is not None else "")
             out.append(obs(pid, "imm_retention_5y", v, str(TAXYEAR), pgeo, SID, fl + ["provincial_value"], note))
         else:
             gaps.append((pid, f"43-10-0022-01 has no {pname} (territories are not in the table)"))
@@ -58,7 +65,7 @@ def build():
             v, fl, r = cell(idx, name, "Retention rate", COHORT, TAXYEAR)
             st, _, _ = cell(idx, name, "Stayed in intended geography", COHORT, TAXYEAR)
             ot, _, _ = cell(idx, name, "Out migration", COHORT, TAXYEAR)
-            note = NOTE.format(what="census metropolitan area (CMA)")
+            note = NOTE.format(cohort=COHORT, taxyear=TAXYEAR, what="census metropolitan area (CMA)")
             if st is not None and ot is not None:
                 note += f" Counts (rounded): {st:,.0f} stayed, {ot:,.0f} out-migrated."
             if v is None and st == 0 and ot == 0:
@@ -72,7 +79,7 @@ def build():
     # series: retention by years since admission per province, 2015 cohort; Canada too
     for g, code in [("Canada", None)] + [(n, p) for p, n in PROV_NAME.items() if n in have]:
         pts = []
-        for tax in range(2016, 2024):
+        for tax in range(2016, TAXYEAR + 1):
             v, fl, r = cell(idx, g, "Retention rate", 2015, tax)
             p = {"t": str(tax - 2015), "v": v}
             if fl:

@@ -6,6 +6,7 @@ import zipfile
 
 import pandas as pd
 
+from common.derived_cache import current, mark, signature
 from common.fetch import RAW, fetch
 from taxfilers import wanted_geos
 
@@ -14,9 +15,8 @@ OUT_DIR = RAW / "statcan_tables" / "43100022"
 FILTERED = OUT_DIR / "filtered_northward.csv"
 
 
-def build_filtered():
+def build_filtered(zpath):
     geos = wanted_geos()
-    zpath = fetch(URL, max_age_days=7)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     tmp = FILTERED.with_suffix(".part")
     first = True
@@ -33,8 +33,11 @@ def build_filtered():
 
 
 def read_filtered() -> pd.DataFrame:
-    if not FILTERED.exists():
-        build_filtered()
+    source = fetch(URL, max_age_days=7)
+    expected = signature(source, {"version": 2, "geos": sorted(wanted_geos())})
+    if not current(FILTERED, expected):
+        build_filtered(source)
+        mark(FILTERED, expected)
     df = pd.read_csv(FILTERED, dtype=str, keep_default_na=False)
     df["VALUE_NUM"] = pd.to_numeric(df["VALUE"], errors="coerce")
     return df

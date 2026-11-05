@@ -2,7 +2,7 @@
 import type { ChartSeries, ChartSpec, Flag, MetricDef, Observation, Place, Series, WageTable } from '../../types/contract';
 import type { CoreData } from '../../data/core';
 import { cleanGeoName, formatPeriod, ordinal } from '../../lib/format';
-import { defaultAscending, lookupWage, monthIndex, monthSlug, unitTypeSlug, UNIT_TYPE_ORDER, type LayerCatalog, type WageCell } from '../../lib/layers';
+import { defaultAscending, buildMetricLayer, lookupWage, monthIndex, monthSlug, unitTypeSlug, UNIT_TYPE_ORDER, type LayerCatalog, type WageCell } from '../../lib/layers';
 import { serializeParams } from '../../lib/state';
 import { provinceName } from '../../lib/places';
 import { isMonthToken } from '../../charts/axes';
@@ -55,10 +55,12 @@ export interface Comparable {
 export function comparable(core: CoreData, placeId: string, metric: MetricDef): Comparable | { metric: MetricDef; own: Observation | undefined; reason: string } {
   const own = core.obsIndex.get(placeId)?.get(metric.id);
   if (!hasValue(own)) return { metric, own, reason: own?.note ?? 'No value for this place' };
-  if (isBroad(own)) return { metric, own, reason: 'Not ranked: the value covers a broader area than the place' };
-  const peers = (core.byMetric.get(metric.id) ?? [])
-    .filter((o) => hasValue(o) && o.period === own.period && o.sourceId === own.sourceId && !isBroad(o))
-    .map((o) => ({ placeId: o.placeId, value: o.value as number }));
+  const layer = buildMetricLayer(metric, core.places, core.obsIndex);
+  const datum = layer.data.get(placeId);
+  if (datum?.status !== 'ok') return { metric, own, reason: datum?.reason ?? 'Not comparable' };
+  const peers = [...layer.data.values()]
+    .filter((d) => d.status === 'ok' && d.value !== null)
+    .map((d) => ({ placeId: d.placeId, value: d.value! }));
   if (peers.length < 3) return { metric, own, reason: 'Too few places with a comparable value to rank' };
   const v = own.value;
   const higher = peers.filter((p) => p.value > v).length;
@@ -145,7 +147,7 @@ export function rentGrid(core: CoreData, placeId: string) {
 export interface WageRow {
   key: 'er' | 'province' | 'canada';
   label: string;
-  cell: { low: number | null; median: number | null; high: number | null; annual: boolean } | null;
+  cell: { low: number | null; median: number | null; high: number | null; annual: boolean; referencePeriod: string | null; methodology: string | null } | null;
   flags: Flag[];
 }
 
@@ -155,15 +157,15 @@ export function wageRows(table: WageTable, noc: string, place: Place): { primary
   const primary = lookupWage(table, noc, place);
   const provKey = Object.keys(table.geos).find((k) => table.geos[k].level === 'province' && (k === place.province || table.geos[k].id === place.geo.province.id));
   const caKey = Object.keys(table.geos).find((k) => table.geos[k].level === 'country') ?? (cells.CA ? 'CA' : undefined);
-  const pack = (c: (typeof cells)[string] | undefined) => (c ? { low: c[0], median: c[1], high: c[2], annual: c[3] === 1 } : null);
+  const pack = (key: string) => { const c = cells[key]; const meta = table.metadata?.[noc]?.[key]; return c ? { low: c[0], median: c[1], high: c[2], annual: c[3] === 1, referencePeriod: meta?.referencePeriod ?? null, methodology: meta?.methodology ?? null } : null; };
   const rows: WageRow[] = [];
   const er = place.geo.economicRegions[0];
   if (primary && primary.fallback === null)
     rows.push({ key: 'er', label: `ER: ${geoName(primary.geo.name)}`, cell: primary, flags: ['regional_value'] });
   else
     rows.push({ key: 'er', label: `ER: ${er ? geoName(er.name) : '—'}`, cell: null, flags: ['not_available'] });
-  rows.push({ key: 'province', label: provinceName(place.province), cell: provKey ? pack(cells[provKey]) : null, flags: ['provincial_value'] });
-  rows.push({ key: 'canada', label: 'Canada', cell: caKey ? pack(cells[caKey]) : null, flags: ['national_value'] });
+  rows.push({ key: 'province', label: provinceName(place.province), cell: provKey ? pack(provKey) : null, flags: ['provincial_value'] });
+  rows.push({ key: 'canada', label: 'Canada', cell: caKey ? pack(caKey) : null, flags: ['national_value'] });
   return { primary, rows, territoryNoProvince: !provKey };
 }
 
@@ -177,4 +179,4 @@ export function noWageReason(place: Place): string {
 }
 
 /** Job Bank's reference period token ('2023-2024 (LFS…)' → '2023–2024'). */
-export const wagePeriod = (table: WageTable) => formatPeriod(table.referencePeriod, 'period');
+export const wagePeriod = (cell: { referencePeriod: string | null } | null) => cell?.referencePeriod ? formatPeriod(cell.referencePeriod, 'period') : 'Reference period not recorded';

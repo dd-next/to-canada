@@ -13,6 +13,7 @@ import json
 import os
 import re
 import time
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
@@ -20,11 +21,22 @@ from urllib.parse import urlparse
 import requests
 
 ROOT = Path(__file__).resolve().parents[2]
-RAW = ROOT / "data" / "raw"
+RAW = Path(os.environ.get("NORTHWARD_RAW", ROOT / "data" / "raw"))
+# Inherited by child processes: a forced refresh downloads each URL once per run.
+RUN_ID = os.environ.setdefault("NORTHWARD_RUN_ID", uuid.uuid4().hex)
 UA = "Northward-data-pipeline/0.1 (open-data research; contact via repository)"
-CA_BUNDLE = os.environ.get("REQUESTS_CA_BUNDLE") or (
-    "/root/.ccr/ca-bundle.crt" if Path("/root/.ccr/ca-bundle.crt").exists() else True
-)
+def ca_bundle() -> str | bool:
+    """Use configured trust, or verified Requests defaults on ordinary runners."""
+    configured = os.environ.get("REQUESTS_CA_BUNDLE")
+    if configured:
+        return configured
+    legacy_bundle = "/root/.ccr/ca-bundle.crt"
+    # GitHub's unprivileged runner cannot stat files under /root. os.access
+    # returns false for inaccessible paths without breaking module imports.
+    return legacy_bundle if os.access(legacy_bundle, os.R_OK) else True
+
+
+CA_BUNDLE = ca_bundle()
 
 
 class FetchError(RuntimeError):
@@ -78,7 +90,11 @@ def fetch(
     with open(lock_path, "w") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         try:
-            if path.exists() and not force:
+            cached_meta = meta_for(path) if path.exists() else {}
+            intact = path.exists() and ("mtimeNs" not in cached_meta or cached_meta["mtimeNs"] == path.stat().st_mtime_ns)
+            if intact and cached_meta.get("runId") == RUN_ID:
+                return path
+            if intact and not force:
                 age_days = (time.time() - path.stat().st_mtime) / 86400
                 if max_age_days is None or age_days < max_age_days:
                     return path
@@ -98,31 +114,43 @@ def fetch(
                         # Client errors are not retried.
                         raise FetchError(f"HTTP {r.status_code} for {full_url}")
                     tmp = Path(str(path) + ".part")
+                    digest = hashlib.sha256()
                     with open(tmp, "wb") as fh:
                         for chunk in r.iter_content(1 << 16):
                             fh.write(chunk)
+                            digest.update(chunk)
                     tmp.replace(path)
                     meta = {
                         "url": full_url,
                         "method": "POST" if json_payload is not None else "GET",
                         "payload": json_payload,
                         "retrievedAt": now_iso(),
+                        "lastCheckedAt": now_iso(),
+                        "sha256": digest.hexdigest(),
+                        "runId": RUN_ID,
                         "status": r.status_code,
                         "contentType": r.headers.get("Content-Type"),
                         "lastModified": r.headers.get("Last-Modified"),
                         "bytes": path.stat().st_size,
+                        "mtimeNs": path.stat().st_mtime_ns,
                     }
-                    Path(str(path) + ".meta.json").write_text(json.dumps(meta, indent=1))
+                    mp = Path(str(path) + ".meta.json")
+                    mt = Path(str(mp) + ".part")
+                    mt.write_text(json.dumps(meta, indent=1))
+                    mt.replace(mp)
+                    r.close()
+                    Path(str(path) + ".error.json").unlink(missing_ok=True)
                     return path
                 except (requests.RequestException, FetchError) as e:  # bounded retry
                     last_err = e
                     if isinstance(e, FetchError) and "HTTP 4" in str(e) and "HTTP 429" not in str(e):
                         break
-                    time.sleep(2 ** (attempt + 1))
-            if path.exists():
-                # Keep the previously retrieved snapshot rather than failing hard.
-                print(f"[fetch] WARNING refresh failed, using cached snapshot: {full_url} ({last_err})")
-                return path
+                    if attempt + 1 < retries:
+                        time.sleep(2 ** (attempt + 1))
+            # An expired/forced check must not claim the previous download is fresh.
+            # Leave bytes and retrieval metadata intact; the orchestrator keeps the last snapshot.
+            error_path = Path(str(path) + ".error.json")
+            error_path.write_text(json.dumps({"lastCheckedAt": now_iso(), "error": str(last_err)}, indent=1))
             raise FetchError(f"Failed to fetch {full_url}: {last_err}")
         finally:
             fcntl.flock(lock, fcntl.LOCK_UN)

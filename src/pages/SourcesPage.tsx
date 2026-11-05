@@ -1,16 +1,20 @@
 import { useCore } from '../data/core';
 import { CoverageMatrix } from '../components/sources/CoverageMatrix';
-import { FreshnessTable } from '../components/sources/FreshnessTable';
+import { FreshnessTable, SourceChecks } from '../components/sources/FreshnessTable';
 import { SourceRegistry } from '../components/sources/SourceRegistry';
 import { Badge } from '../components/ui/Badge';
 import { SectionHeader } from '../components/ui/SectionHeader';
 import { CalcBadge } from '../components/budget/Provenance';
 import { formatDate } from '../lib/format';
 import '../styles/sources.css';
+import { useJSON } from '../data/useJSON';
+import type { SourceCheck, RefreshStatus } from '../types/contract';
 
 export default function SourcesPage() {
   const core = useCore();
   const built = core.manifest.builtAt;
+  const checks = useJSON<SourceCheck[]>('freshness-checks.json');
+  const refresh = useJSON<RefreshStatus>('refresh-status.json');
   return (
     <div className="page srcpage">
       <SectionHeader
@@ -39,6 +43,9 @@ export default function SourcesPage() {
             The newest period in this snapshot for each kind of data, the date its publisher released it, and when we retrieved it. Publishers update on their own schedules (monthly, quarterly or yearly); the data is checked against the official sources every week.
           </p>
           <FreshnessTable entries={core.manifest.freshness} />
+          {checks.loading && <p role="status">Loading publisher checks…</p>}
+          {checks.error && <p role="status">Publisher check results are unavailable; snapshot dates above remain unchanged.</p>}
+          {checks.data && <SourceChecks entries={checks.data} refresh={refresh.data} />}
         </section>
       )}
 
@@ -85,7 +92,7 @@ export default function SourcesPage() {
           </p>
           <h3>Cost benchmark (MBM)</h3>
           <p>
-            The Market Basket Measure is Statistics Canada’s cost of a modest basket of food, clothing, transportation, shelter and other necessities, published for a reference family of four in each region. For the Budget page we exclude the shelter component, because rent is entered separately, and scale the others to your household with the square-root equivalence scale (cost for n people = cost for four × √n ÷ 2). It is a benchmark, not a forecast of what you would spend.
+            The Market Basket Measure is Statistics Canada’s cost of a modest basket of food, clothing, transportation, shelter and other necessities, published for a reference household of four people, or five in Nunavut. For the Budget page we exclude the shelter component, because rent is entered separately, and scale the others to your household with the square-root equivalence scale (cost for n people = reference cost × √(n ÷ reference household size)). It is a benchmark, not a forecast of what you would spend.
           </p>
           <h3>Immigration statistics and programs</h3>
           <p>
@@ -125,7 +132,7 @@ npm run data:build     # rebuild the snapshot from data/processed/ only
 npm run data:check     # validate the snapshot against the data contract
 npm run data:freshness # compare each source with the publisher's latest release`}</pre>
           <p>
-            If a source fails to download, its previously retrieved data is kept with its original retrieval date — a broken upstream never replaces good data with blanks. Set <code>NORTHWARD_REFRESH=1</code> to force fresh downloads instead of using cached files.
+            If any selected pipeline or validation fails, the complete previous validated statistical snapshot is kept with its original retrieval dates — a broken upstream never replaces good data with blanks. Set <code>NORTHWARD_REFRESH=1</code> to force fresh downloads instead of using cached files.
           </p>
         </div>
       </section>

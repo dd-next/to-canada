@@ -28,7 +28,7 @@ function tradeoffMetrics(core: CoreData): MetricDef[] {
 const SHORT: Record<string, string> = {
   rent_asking_1br: 'Asking rent, 1 bed',
   rent_vacancy_rate: 'Rental vacancy rate',
-  cost_mbm_total: 'Basic basket, family of four',
+  cost_mbm_total: 'Basic basket, reference household',
   lfs_unemployment_rate: 'Unemployment rate',
   lfs_employment_rate: 'Employment rate',
   imm_pr_admissions_per_1000: 'New permanent residents per 1,000',
@@ -41,7 +41,7 @@ const SHORT: Record<string, string> = {
 const LABELS: Record<string, string> = {
   rent_asking_1br: 'Asking rent for a 1 bedroom',
   rent_vacancy_rate: 'The rental vacancy rate',
-  cost_mbm_total: 'The basic-basket cost (family of four)',
+  cost_mbm_total: 'The basic-basket cost (reference household)',
   lfs_unemployment_rate: 'The unemployment rate',
   lfs_employment_rate: 'The employment rate',
   imm_pr_admissions_per_1000: 'New permanent residents per 1,000 residents',

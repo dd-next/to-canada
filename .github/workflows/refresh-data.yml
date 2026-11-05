@@ -1,10 +1,9 @@
-# Weekly check of the official sources. If anything is newer (or on a manual run) the pipelines are re-run,
-# the snapshot in public/data is rebuilt and validated, the result is committed to main, and the site is redeployed.
+# Refresh a staged statistical generation weekly. Failures publish diagnostics while keeping last valid data.
 name: Refresh data
 
 on:
   schedule:
-    - cron: '23 10 * * 1' # Mondays 10:23 UTC
+    - cron: '23 10 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -12,8 +11,9 @@ permissions:
   pages: write
   id-token: write
 
+# Shared with the lightweight IRCC workflow: serialize data commits and Pages publication.
 concurrency:
-  group: refresh-data
+  group: northward-data-publication
   cancel-in-progress: false
 
 jobs:
@@ -22,8 +22,11 @@ jobs:
     timeout-minutes: 180
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
+      commit_sha: ${{ steps.commit.outputs.commit_sha }}
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: main
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -35,56 +38,28 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci --ignore-scripts
-
-      - name: Check official sources for newer data
-        id: fresh
-        run: |
-          set +e
-          python3 -I pipeline/freshness.py --strict
-          code=$?
-          if [ "$code" = "0" ]; then echo "newer=false" >> "$GITHUB_OUTPUT"; else echo "newer=true" >> "$GITHUB_OUTPUT"; fi
-          # exit 1 means "something is newer"; anything else is a real failure
-          [ "$code" = "0" ] || [ "$code" = "1" ]
-
-      # A domain that fails to download keeps its previously committed outputs (same rule as pipeline/refresh.py).
-      - name: Refresh housing
-        if: steps.fresh.outputs.newer == 'true' || github.event_name == 'workflow_dispatch'
-        continue-on-error: true
-        env: { NORTHWARD_REFRESH: '1' }
-        run: python3 -I pipeline/housing/run.py
-      - name: Refresh work
-        if: steps.fresh.outputs.newer == 'true' || github.event_name == 'workflow_dispatch'
-        continue-on-error: true
-        env: { NORTHWARD_REFRESH: '1' }
-        run: python3 -I pipeline/work/run.py
-      - name: Refresh immigration
-        if: steps.fresh.outputs.newer == 'true' || github.event_name == 'workflow_dispatch'
-        continue-on-error: true
-        env: { NORTHWARD_REFRESH: '1' }
-        run: python3 -I pipeline/immigration/run.py
-      - name: Refresh geo population estimates
-        if: steps.fresh.outputs.newer == 'true' || github.event_name == 'workflow_dispatch'
-        continue-on-error: true
-        env: { NORTHWARD_REFRESH: '1' }
-        run: python3 -I pipeline/geo/run.py --pop-only
-
-      - name: Rebuild and validate the snapshot
-        if: steps.fresh.outputs.newer == 'true' || github.event_name == 'workflow_dispatch'
+      - name: Refresh and validate a staged snapshot
+        id: refresh
         env:
           NORTHWARD_REFRESH: '1'
         run: |
-          python3 -I pipeline/freshness.py   # re-record freshness after the refresh
-          python3 -I pipeline/build_app_data.py
+          set +e
+          python3 -I pipeline/refresh.py
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          # Continue to publish diagnostics; a final step marks this run failed.
+          exit 0
+      - name: Validate the retained or updated application snapshot
+        run: |
           python3 -I pipeline/check_app_data.py
           npm run build
-
-      - name: Commit refreshed data
+      - name: Commit data and check reports
         id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A data/processed public/data
-          if [ -n "$(git status --porcelain)" ]; then
+          if ! git diff --cached --quiet; then
             git commit -m "Data refresh $(date -u +%F)"
             git pull --rebase origin main
             git push origin HEAD:main
@@ -92,12 +67,21 @@ jobs:
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
+          echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Report incomplete refresh
+        if: steps.refresh.outputs.code != '0'
+        run: |
+          echo "Refresh or source checks failed. Last valid statistics and diagnostic reports were retained."
+          exit 1
 
   deploy:
     needs: refresh
-    if: needs.refresh.outputs.changed == 'true'
+    # A failed refresh can still publish its error report with the unchanged valid snapshot.
+    if: always() && needs.refresh.outputs.changed == 'true'
     permissions:
       contents: read
       pages: write
       id-token: write
     uses: ./.github/workflows/deploy-pages.yml
+    with:
+      ref: ${{ needs.refresh.outputs.commit_sha }}

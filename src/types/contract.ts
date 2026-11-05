@@ -160,6 +160,10 @@ export interface Observation {
   sourceId: string;
   flags?: Flag[];
   note?: string;
+  /** Source reference household for MBM thresholds (Nunavut: 5; elsewhere: 4). */
+  referenceHouseholdSize?: number;
+  /** Source methodology used to determine comparability. */
+  methodology?: string;
 }
 
 /** A time series for charts and history. */
@@ -213,6 +217,8 @@ export interface WageTable {
   geos: Record<string, GeoRef>;
   /** byNoc[noc][geoKey] = [low, median, high, isAnnual(0|1)] */
   byNoc: Record<string, Record<string, [number | null, number | null, number | null, 0 | 1]>>;
+  /** Per-cell provenance; absent metadata is unknown, not the table-wide edition. */
+  metadata?: Record<string, Record<string, { referencePeriod: string; methodology: string; source?: string }>>;
 }
 
 // ---------------------------------------------------------------- Immigration programs
@@ -243,7 +249,9 @@ export interface ProgramRecord {
   /** Places this applies to (community pilots, regional streams). Empty = province-wide. */
   placeIds?: string[];
   majorConditions: string[];
-  jobOfferRequired: 'yes' | 'no' | 'varies' | 'not_applicable' | 'unknown';
+  jobOfferRequired: 'yes' | 'no' | 'conditional' | 'varies' | 'not_applicable' | 'unknown';
+  /** Explicit alternatives to a job offer, when the official source states them. */
+  jobOfferNote?: string;
   /** Only present when verified on an official page on lastChecked. */
   status?: {
     value: 'open' | 'paused' | 'closed' | 'intake_rounds';
@@ -405,6 +413,30 @@ export interface InsightSummary {
 }
 
 // ---------------------------------------------------------------- App bundle manifest
+
+/** A publisher check is separate from retrieval of the statistical snapshot. */
+export interface SourceCheck {
+  sourceId: string;
+  title?: string;
+  ourPeriod: string | null;
+  latestPeriod: string | null;
+  latestRelease: string | null;
+  status: 'current' | 'newer_available' | 'static' | 'unknown' | 'manual_update_required';
+  note: string;
+  checkedAt: string;
+  lastSuccessfulCheckAt: string | null;
+}
+
+export interface RefreshStatus {
+  status: 'updated' | 'no_changes' | 'error';
+  startedAt: string;
+  finishedAt: string;
+  lastSuccessfulUpdateAt: string | null;
+  domains: string[];
+  errors: { step: string; exitCode?: number; error?: string }[];
+  note?: string;
+  freshnessCheckFailed?: boolean;
+}
 
 /** One family of data (e.g. asking rents, LFS) with the newest period in the snapshot. */
 export interface FreshnessEntry {

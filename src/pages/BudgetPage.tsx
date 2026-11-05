@@ -31,13 +31,13 @@ import { SegmentedControl } from '../components/ui/SegmentedControl';
 import { SourceNote } from '../components/ui/SourceNote';
 import { Badge } from '../components/ui/Badge';
 import { formatPeriod } from '../lib/format';
-import { unitTypeButton } from '../lib/layers';
+import { unitTypeButton, unitTypeSlug } from '../lib/layers';
 import { describeMatch, provinceName, searchPlaces } from '../lib/places';
 import { useUrlState } from '../lib/state';
 import type { Place } from '../types/contract';
 import '../styles/budget.css';
 
-const SHARE_PATCH = { hh: null, unit: null, income: null, savings: null, rent: null, noc: null } as const;
+const SHARE_PATCH = { scenario: null, hh: null, income: null, savings: null, rent: null } as const;
 
 export default function BudgetPage() {
   const core = useCore();
@@ -47,8 +47,8 @@ export default function BudgetPage() {
 
   // URL -> scenario, once on arrival: a shared link carries numbers; ?place= alone only picks the place.
   useEffect(() => {
+    setScenario((s) => decodeScenario(params, s));
     if (hasSharedNumbers(params)) {
-      setScenario((s) => decodeScenario(params, s));
       setFromLink(true);
       const patch: Record<string, null> = { ...SHARE_PATCH };
       const probe = new URLSearchParams(params);
@@ -100,6 +100,7 @@ export default function BudgetPage() {
   const clearAll = () => {
     setScenario(() => ({ ...DEFAULT_SCENARIO, placeId }));
     setFromLink(false);
+    updateUrl({ noc: null, unit: null }, { replace: true });
   };
 
   return (
@@ -112,7 +113,7 @@ export default function BudgetPage() {
           dek="How far could your savings go in a new city? Start from official rent and cost-of-living benchmarks, change anything that does not match your life, and see the runway."
         />
         <p className="budget__privacy">
-          <strong>Your numbers stay in this browser.</strong> They are saved on this device only and are not sent anywhere or added to the page address. The address contains them only if you press “Share these numbers”.
+          <strong>Your numbers are stored in this browser by default.</strong> They are added to a link when you choose “Share these numbers” or “Edit on Budget” from Compare. Those links carry the complete scenario so another browser can reproduce it.
         </p>
         {fromLink && (
           <p className="budget__notice" role="status">
@@ -155,7 +156,7 @@ export default function BudgetPage() {
                 label="Housing type by bedrooms"
                 options={UNIT_TYPES.map((u) => ({ value: u, label: unitTypeButton(u), title: u }))}
                 value={s.unit}
-                onChange={(v) => patch({ unit: v as UnitType })}
+                onChange={(v) => { patch({ unit: v as UnitType }); updateUrl({ unit: unitTypeSlug(v) }, { replace: true }); }}
                 block
               />
               <p className="field__hint">{s.unit === 'Studio' ? 'Studio / bachelor' : s.unit}</p>
@@ -189,7 +190,7 @@ export default function BudgetPage() {
           <div className="budget__sub">
             <h3 className="label">Everyday costs, estimated</h3>
             <p className="budget__assume">
-              <Badge variant="estimate" /> {mbmAssumption(region, s.household)}{' '}
+              <Badge variant="estimate" /> {mbmAssumption(region, s.household, mbm.find((m) => m.obs)?.obs?.referenceHouseholdSize ?? (place?.province === 'NU' ? 5 : 4), mbmPeriod)}{' '}
               {mbmPeriod && <>Basket year: {formatPeriod(mbmPeriod)}. </>}It is a benchmark for a modest basket of goods and services, not a forecast of what you will spend — change any line.
             </p>
             {!place && <p className="field__hint">Choose a place to load estimates, or type your own amounts.</p>}
@@ -275,7 +276,7 @@ export default function BudgetPage() {
         </section>
 
         <div className="budget__bench">
-          <GrossBenchmark place={place} noc={s.noc} onNoc={(noc) => patch({ noc })} rent={rent.value} />
+          <GrossBenchmark place={place} noc={s.noc} onNoc={(noc) => { patch({ noc }); updateUrl({ noc }, { replace: true }); }} rent={rent.value} />
         </div>
       </div>
     </div>

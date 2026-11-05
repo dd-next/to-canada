@@ -1,1626 +1,6 @@
 [
  {
   "placeId": "toronto",
-  "metricId": "imm_pr_admissions",
-  "value": 97690.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "535",
-   "name": "Toronto",
-   "dguid": "2021S0503535",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "toronto",
-  "metricId": "imm_pr_admissions_change",
-  "value": -21.7,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "535",
-   "name": "Toronto",
-   "dguid": "2021S0503535",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (97690 vs 124755)."
- },
- {
-  "placeId": "montreal",
-  "metricId": "imm_pr_admissions",
-  "value": 37210.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "462",
-   "name": "Montréal",
-   "dguid": "2021S0503462",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "montreal",
-  "metricId": "imm_pr_admissions_change",
-  "value": -3.9,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "462",
-   "name": "Montréal",
-   "dguid": "2021S0503462",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (37210 vs 38710)."
- },
- {
-  "placeId": "vancouver",
-  "metricId": "imm_pr_admissions",
-  "value": 36360.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "933",
-   "name": "Vancouver",
-   "dguid": "2021S0503933",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "vancouver",
-  "metricId": "imm_pr_admissions_change",
-  "value": -23.6,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "933",
-   "name": "Vancouver",
-   "dguid": "2021S0503933",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (36360 vs 47590)."
- },
- {
-  "placeId": "calgary",
-  "metricId": "imm_pr_admissions",
-  "value": 23560.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "825",
-   "name": "Calgary",
-   "dguid": "2021S0503825",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "calgary",
-  "metricId": "imm_pr_admissions_change",
-  "value": -24.4,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "825",
-   "name": "Calgary",
-   "dguid": "2021S0503825",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (23560 vs 31160)."
- },
- {
-  "placeId": "edmonton",
-  "metricId": "imm_pr_admissions",
-  "value": 18980.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "835",
-   "name": "Edmonton",
-   "dguid": "2021S0503835",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "edmonton",
-  "metricId": "imm_pr_admissions_change",
-  "value": -21.2,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "835",
-   "name": "Edmonton",
-   "dguid": "2021S0503835",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (18980 vs 24075)."
- },
- {
-  "placeId": "ottawa",
-  "metricId": "imm_pr_admissions",
-  "value": 24185.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma_part",
-   "id": "35505",
-   "name": "Ottawa - Gatineau (Ontario part)",
-   "dguid": "2021S050535505",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed). IRCC publishes the Ontario and Quebec parts of Ottawa - Gatineau separately; this is the provincial part."
- },
- {
-  "placeId": "ottawa",
-  "metricId": "imm_pr_admissions_change",
-  "value": -11.5,
-  "period": "2025",
-  "geo": {
-   "level": "cma_part",
-   "id": "35505",
-   "name": "Ottawa - Gatineau (Ontario part)",
-   "dguid": "2021S050535505",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (24185 vs 27335)."
- },
- {
-  "placeId": "gatineau",
-  "metricId": "imm_pr_admissions",
-  "value": 2140.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma_part",
-   "id": "24505",
-   "name": "Ottawa - Gatineau (Quebec part)",
-   "dguid": "2021S050524505",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed). IRCC publishes the Ontario and Quebec parts of Ottawa - Gatineau separately; this is the provincial part."
- },
- {
-  "placeId": "gatineau",
-  "metricId": "imm_pr_admissions_change",
-  "value": -10.3,
-  "period": "2025",
-  "geo": {
-   "level": "cma_part",
-   "id": "24505",
-   "name": "Ottawa - Gatineau (Quebec part)",
-   "dguid": "2021S050524505",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (2140 vs 2385)."
- },
- {
-  "placeId": "winnipeg",
-  "metricId": "imm_pr_admissions",
-  "value": 14245.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "602",
-   "name": "Winnipeg",
-   "dguid": "2021S0503602",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "winnipeg",
-  "metricId": "imm_pr_admissions_change",
-  "value": -22.6,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "602",
-   "name": "Winnipeg",
-   "dguid": "2021S0503602",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (14245 vs 18410)."
- },
- {
-  "placeId": "quebec-city",
-  "metricId": "imm_pr_admissions",
-  "value": 8695.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "421",
-   "name": "Québec",
-   "dguid": "2021S0503421",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "quebec-city",
-  "metricId": "imm_pr_admissions_change",
-  "value": 4.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "421",
-   "name": "Québec",
-   "dguid": "2021S0503421",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (8695 vs 8360)."
- },
- {
-  "placeId": "hamilton",
-  "metricId": "imm_pr_admissions",
-  "value": 5950.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "537",
-   "name": "Hamilton",
-   "dguid": "2021S0503537",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "hamilton",
-  "metricId": "imm_pr_admissions_change",
-  "value": -15.2,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "537",
-   "name": "Hamilton",
-   "dguid": "2021S0503537",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (5950 vs 7020)."
- },
- {
-  "placeId": "kitchener-waterloo",
-  "metricId": "imm_pr_admissions",
-  "value": 8960.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "541",
-   "name": "Kitchener - Cambridge - Waterloo",
-   "dguid": "2021S0503541",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "kitchener-waterloo",
-  "metricId": "imm_pr_admissions_change",
-  "value": -12.3,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "541",
-   "name": "Kitchener - Cambridge - Waterloo",
-   "dguid": "2021S0503541",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (8960 vs 10220)."
- },
- {
-  "placeId": "london",
-  "metricId": "imm_pr_admissions",
-  "value": 6550.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "555",
-   "name": "London",
-   "dguid": "2021S0503555",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "london",
-  "metricId": "imm_pr_admissions_change",
-  "value": -12.4,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "555",
-   "name": "London",
-   "dguid": "2021S0503555",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (6550 vs 7480)."
- },
- {
-  "placeId": "halifax",
-  "metricId": "imm_pr_admissions",
-  "value": 6845.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "205",
-   "name": "Halifax",
-   "dguid": "2021S0503205",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "halifax",
-  "metricId": "imm_pr_admissions_change",
-  "value": -35.1,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "205",
-   "name": "Halifax",
-   "dguid": "2021S0503205",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (6845 vs 10545)."
- },
- {
-  "placeId": "victoria",
-  "metricId": "imm_pr_admissions",
-  "value": 3205.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "935",
-   "name": "Victoria",
-   "dguid": "2021S0503935",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "victoria",
-  "metricId": "imm_pr_admissions_change",
-  "value": -10.6,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "935",
-   "name": "Victoria",
-   "dguid": "2021S0503935",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (3205 vs 3585)."
- },
- {
-  "placeId": "saskatoon",
-  "metricId": "imm_pr_admissions",
-  "value": 4890.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "725",
-   "name": "Saskatoon",
-   "dguid": "2021S0503725",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "saskatoon",
-  "metricId": "imm_pr_admissions_change",
-  "value": -42.6,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "725",
-   "name": "Saskatoon",
-   "dguid": "2021S0503725",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4890 vs 8515)."
- },
- {
-  "placeId": "regina",
-  "metricId": "imm_pr_admissions",
-  "value": 4825.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "705",
-   "name": "Regina",
-   "dguid": "2021S0503705",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "regina",
-  "metricId": "imm_pr_admissions_change",
-  "value": -40.4,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "705",
-   "name": "Regina",
-   "dguid": "2021S0503705",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4825 vs 8090)."
- },
- {
-  "placeId": "st-johns",
-  "metricId": "imm_pr_admissions",
-  "value": 3530.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "001",
-   "name": "St. John's",
-   "dguid": "2021S0503001",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "st-johns",
-  "metricId": "imm_pr_admissions_change",
-  "value": -11.4,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "001",
-   "name": "St. John's",
-   "dguid": "2021S0503001",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (3530 vs 3985)."
- },
- {
-  "placeId": "windsor",
-  "metricId": "imm_pr_admissions",
-  "value": 4250.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "559",
-   "name": "Windsor",
-   "dguid": "2021S0503559",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "windsor",
-  "metricId": "imm_pr_admissions_change",
-  "value": -19.3,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "559",
-   "name": "Windsor",
-   "dguid": "2021S0503559",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4250 vs 5265)."
- },
- {
-  "placeId": "kelowna",
-  "metricId": "imm_pr_admissions",
-  "value": 1710.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "915",
-   "name": "Kelowna",
-   "dguid": "2021S0503915",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "kelowna",
-  "metricId": "imm_pr_admissions_change",
-  "value": -0.9,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "915",
-   "name": "Kelowna",
-   "dguid": "2021S0503915",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1710 vs 1725)."
- },
- {
-  "placeId": "abbotsford-mission",
-  "metricId": "imm_pr_admissions",
-  "value": 2025.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "932",
-   "name": "Abbotsford - Mission",
-   "dguid": "2021S0503932",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "abbotsford-mission",
-  "metricId": "imm_pr_admissions_change",
-  "value": -19.8,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "932",
-   "name": "Abbotsford - Mission",
-   "dguid": "2021S0503932",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (2025 vs 2525)."
- },
- {
-  "placeId": "moncton",
-  "metricId": "imm_pr_admissions",
-  "value": 4575.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "305",
-   "name": "Moncton",
-   "dguid": "2021S0503305",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "moncton",
-  "metricId": "imm_pr_admissions_change",
-  "value": -36.1,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "305",
-   "name": "Moncton",
-   "dguid": "2021S0503305",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4575 vs 7165)."
- },
- {
-  "placeId": "saint-john",
-  "metricId": "imm_pr_admissions",
-  "value": 1580.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "310",
-   "name": "Saint John",
-   "dguid": "2021S0503310",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "saint-john",
-  "metricId": "imm_pr_admissions_change",
-  "value": -32.5,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "310",
-   "name": "Saint John",
-   "dguid": "2021S0503310",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1580 vs 2340)."
- },
- {
-  "placeId": "fredericton",
-  "metricId": "imm_pr_admissions",
-  "value": 1700.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "320",
-   "name": "Fredericton",
-   "dguid": "2021S0503320",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "fredericton",
-  "metricId": "imm_pr_admissions_change",
-  "value": -22.7,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "320",
-   "name": "Fredericton",
-   "dguid": "2021S0503320",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1700 vs 2200)."
- },
- {
-  "placeId": "sherbrooke",
-  "metricId": "imm_pr_admissions",
-  "value": 1430.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "433",
-   "name": "Sherbrooke",
-   "dguid": "2021S0503433",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "sherbrooke",
-  "metricId": "imm_pr_admissions_change",
-  "value": 15.8,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "433",
-   "name": "Sherbrooke",
-   "dguid": "2021S0503433",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1430 vs 1235)."
- },
- {
-  "placeId": "sudbury",
-  "metricId": "imm_pr_admissions",
-  "value": 1835.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "580",
-   "name": "Greater Sudbury / Grand Sudbury",
-   "dguid": "2021S0503580",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "sudbury",
-  "metricId": "imm_pr_admissions_change",
-  "value": 14.7,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "580",
-   "name": "Greater Sudbury / Grand Sudbury",
-   "dguid": "2021S0503580",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1835 vs 1600)."
- },
- {
-  "placeId": "thunder-bay",
-  "metricId": "imm_pr_admissions",
-  "value": 1050.0,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "595",
-   "name": "Thunder Bay",
-   "dguid": "2021S0503595",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "thunder-bay",
-  "metricId": "imm_pr_admissions_change",
-  "value": -6.7,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "595",
-   "name": "Thunder Bay",
-   "dguid": "2021S0503595",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1050 vs 1125)."
- },
- {
-  "placeId": "charlottetown",
-  "metricId": "imm_pr_admissions",
-  "value": 1560.0,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "105",
-   "name": "Charlottetown",
-   "dguid": "2021S0504105",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "charlottetown",
-  "metricId": "imm_pr_admissions_change",
-  "value": -39.3,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "105",
-   "name": "Charlottetown",
-   "dguid": "2021S0504105",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1560 vs 2570)."
- },
- {
-  "placeId": "brandon",
-  "metricId": "imm_pr_admissions",
-  "value": 1355.0,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "610",
-   "name": "Brandon",
-   "dguid": "2021S0504610",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "brandon",
-  "metricId": "imm_pr_admissions_change",
-  "value": -35.2,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "610",
-   "name": "Brandon",
-   "dguid": "2021S0504610",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1355 vs 2090)."
- },
- {
-  "placeId": "whitehorse",
-  "metricId": "imm_pr_admissions",
-  "value": 660.0,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "990",
-   "name": "Whitehorse",
-   "dguid": "2021S0504990",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "whitehorse",
-  "metricId": "imm_pr_admissions_change",
-  "value": -21.9,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "990",
-   "name": "Whitehorse",
-   "dguid": "2021S0504990",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (660 vs 845)."
- },
- {
-  "placeId": "yellowknife",
-  "metricId": "imm_pr_admissions",
-  "value": 370.0,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "995",
-   "name": "Yellowknife",
-   "dguid": "2021S0504995",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
- },
- {
-  "placeId": "yellowknife",
-  "metricId": "imm_pr_admissions_change",
-  "value": 0.0,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "995",
-   "name": "Yellowknife",
-   "dguid": "2021S0504995",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (370 vs 370)."
- },
- {
-  "placeId": "toronto",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 13.74,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "535",
-   "name": "Toronto",
-   "dguid": "2021S0503535",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "97690 admissions (IRCC, rounded to 5) / 7,108,874 residents (StatCan 17-10-0148-01, July 1 2025, Toronto (CMA), Ontario) x 1,000."
- },
- {
-  "placeId": "montreal",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 8.09,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "462",
-   "name": "Montréal",
-   "dguid": "2021S0503462",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "37210 admissions (IRCC, rounded to 5) / 4,597,837 residents (StatCan 17-10-0148-01, July 1 2025, Montréal (CMA), Quebec) x 1,000."
- },
- {
-  "placeId": "vancouver",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 11.77,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "933",
-   "name": "Vancouver",
-   "dguid": "2021S0503933",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "36360 admissions (IRCC, rounded to 5) / 3,088,036 residents (StatCan 17-10-0148-01, July 1 2025, Vancouver (CMA), British Columbia) x 1,000."
- },
- {
-  "placeId": "calgary",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 12.83,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "825",
-   "name": "Calgary",
-   "dguid": "2021S0503825",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "23560 admissions (IRCC, rounded to 5) / 1,836,012 residents (StatCan 17-10-0148-01, July 1 2025, Calgary (CMA), Alberta) x 1,000."
- },
- {
-  "placeId": "edmonton",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 11.21,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "835",
-   "name": "Edmonton",
-   "dguid": "2021S0503835",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "18980 admissions (IRCC, rounded to 5) / 1,692,385 residents (StatCan 17-10-0148-01, July 1 2025, Edmonton (CMA), Alberta) x 1,000."
- },
- {
-  "placeId": "ottawa",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 18.24,
-  "period": "2025",
-  "geo": {
-   "level": "cma_part",
-   "id": "35505",
-   "name": "Ottawa - Gatineau (Ontario part)",
-   "dguid": "2021S050535505",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "24185 admissions (IRCC, rounded to 5) / 1,325,788 residents (StatCan 17-10-0148-01, July 1 2025, Ottawa - Gatineau (CMA), Ontario part, Ontario) x 1,000."
- },
- {
-  "placeId": "gatineau",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 5.72,
-  "period": "2025",
-  "geo": {
-   "level": "cma_part",
-   "id": "24505",
-   "name": "Ottawa - Gatineau (Quebec part)",
-   "dguid": "2021S050524505",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "2140 admissions (IRCC, rounded to 5) / 374,226 residents (StatCan 17-10-0148-01, July 1 2025, Ottawa - Gatineau (CMA), Quebec part, Quebec) x 1,000."
- },
- {
-  "placeId": "winnipeg",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 14.97,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "602",
-   "name": "Winnipeg",
-   "dguid": "2021S0503602",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "14245 admissions (IRCC, rounded to 5) / 951,758 residents (StatCan 17-10-0148-01, July 1 2025, Winnipeg (CMA), Manitoba) x 1,000."
- },
- {
-  "placeId": "quebec-city",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 9.62,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "421",
-   "name": "Québec",
-   "dguid": "2021S0503421",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "8695 admissions (IRCC, rounded to 5) / 903,607 residents (StatCan 17-10-0148-01, July 1 2025, Québec (CMA), Quebec) x 1,000."
- },
- {
-  "placeId": "hamilton",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 6.83,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "537",
-   "name": "Hamilton",
-   "dguid": "2021S0503537",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "5950 admissions (IRCC, rounded to 5) / 871,143 residents (StatCan 17-10-0148-01, July 1 2025, Hamilton (CMA), Ontario) x 1,000."
- },
- {
-  "placeId": "kitchener-waterloo",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 12.77,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "541",
-   "name": "Kitchener - Cambridge - Waterloo",
-   "dguid": "2021S0503541",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "8960 admissions (IRCC, rounded to 5) / 701,568 residents (StatCan 17-10-0148-01, July 1 2025, Kitchener - Cambridge - Waterloo (CMA), Ontario) x 1,000."
- },
- {
-  "placeId": "london",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 10.35,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "555",
-   "name": "London",
-   "dguid": "2021S0503555",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "6550 admissions (IRCC, rounded to 5) / 633,002 residents (StatCan 17-10-0148-01, July 1 2025, London (CMA), Ontario) x 1,000."
- },
- {
-  "placeId": "halifax",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 12.56,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "205",
-   "name": "Halifax",
-   "dguid": "2021S0503205",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "6845 admissions (IRCC, rounded to 5) / 544,834 residents (StatCan 17-10-0148-01, July 1 2025, Halifax (CMA), Nova Scotia) x 1,000."
- },
- {
-  "placeId": "victoria",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 7.2,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "935",
-   "name": "Victoria",
-   "dguid": "2021S0503935",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "3205 admissions (IRCC, rounded to 5) / 445,090 residents (StatCan 17-10-0148-01, July 1 2025, Victoria (CMA), British Columbia) x 1,000."
- },
- {
-  "placeId": "saskatoon",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 12.92,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "725",
-   "name": "Saskatoon",
-   "dguid": "2021S0503725",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "4890 admissions (IRCC, rounded to 5) / 378,475 residents (StatCan 17-10-0148-01, July 1 2025, Saskatoon (CMA), Saskatchewan) x 1,000."
- },
- {
-  "placeId": "regina",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 16.57,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "705",
-   "name": "Regina",
-   "dguid": "2021S0503705",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "4825 admissions (IRCC, rounded to 5) / 291,187 residents (StatCan 17-10-0148-01, July 1 2025, Regina (CMA), Saskatchewan) x 1,000."
- },
- {
-  "placeId": "st-johns",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 14.5,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "001",
-   "name": "St. John's",
-   "dguid": "2021S0503001",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "3530 admissions (IRCC, rounded to 5) / 243,478 residents (StatCan 17-10-0148-01, July 1 2025, St. John's (CMA), Newfoundland and Labrador) x 1,000."
- },
- {
-  "placeId": "windsor",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 8.7,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "559",
-   "name": "Windsor",
-   "dguid": "2021S0503559",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "4250 admissions (IRCC, rounded to 5) / 488,738 residents (StatCan 17-10-0148-01, July 1 2025, Windsor (CMA), Ontario) x 1,000."
- },
- {
-  "placeId": "kelowna",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 6.72,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "915",
-   "name": "Kelowna",
-   "dguid": "2021S0503915",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "1710 admissions (IRCC, rounded to 5) / 254,605 residents (StatCan 17-10-0148-01, July 1 2025, Kelowna (CMA), British Columbia) x 1,000."
- },
- {
-  "placeId": "abbotsford-mission",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 9.05,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "932",
-   "name": "Abbotsford - Mission",
-   "dguid": "2021S0503932",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "2025 admissions (IRCC, rounded to 5) / 223,828 residents (StatCan 17-10-0148-01, July 1 2025, Abbotsford - Mission (CMA), British Columbia) x 1,000."
- },
- {
-  "placeId": "moncton",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 23.32,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "305",
-   "name": "Moncton",
-   "dguid": "2021S0503305",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "4575 admissions (IRCC, rounded to 5) / 196,143 residents (StatCan 17-10-0148-01, July 1 2025, Moncton (CMA), New Brunswick) x 1,000."
- },
- {
-  "placeId": "saint-john",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 10.93,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "310",
-   "name": "Saint John",
-   "dguid": "2021S0503310",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "1580 admissions (IRCC, rounded to 5) / 144,543 residents (StatCan 17-10-0148-01, July 1 2025, Saint John (CMA), New Brunswick) x 1,000."
- },
- {
-  "placeId": "fredericton",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 13.57,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "320",
-   "name": "Fredericton",
-   "dguid": "2021S0503320",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "1700 admissions (IRCC, rounded to 5) / 125,303 residents (StatCan 17-10-0148-01, July 1 2025, Fredericton (CMA), New Brunswick) x 1,000."
- },
- {
-  "placeId": "sherbrooke",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 5.86,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "433",
-   "name": "Sherbrooke",
-   "dguid": "2021S0503433",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "1430 admissions (IRCC, rounded to 5) / 243,911 residents (StatCan 17-10-0148-01, July 1 2025, Sherbrooke (CMA), Quebec) x 1,000."
- },
- {
-  "placeId": "sudbury",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 9.45,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "580",
-   "name": "Greater Sudbury / Grand Sudbury",
-   "dguid": "2021S0503580",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "1835 admissions (IRCC, rounded to 5) / 194,278 residents (StatCan 17-10-0148-01, July 1 2025, Greater Sudbury (CMA), Ontario) x 1,000."
- },
- {
-  "placeId": "thunder-bay",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 7.85,
-  "period": "2025",
-  "geo": {
-   "level": "cma",
-   "id": "595",
-   "name": "Thunder Bay",
-   "dguid": "2021S0503595",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "1050 admissions (IRCC, rounded to 5) / 133,765 residents (StatCan 17-10-0148-01, July 1 2025, Thunder Bay (CMA), Ontario) x 1,000."
- },
- {
-  "placeId": "charlottetown",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 16.16,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "105",
-   "name": "Charlottetown",
-   "dguid": "2021S0504105",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "1560 admissions (IRCC, rounded to 5) / 96,516 residents (StatCan 17-10-0148-01, July 1 2025, Charlottetown (CA), Prince Edward Island) x 1,000."
- },
- {
-  "placeId": "brandon",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 21.6,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "610",
-   "name": "Brandon",
-   "dguid": "2021S0504610",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "1355 admissions (IRCC, rounded to 5) / 62,723 residents (StatCan 17-10-0148-01, July 1 2025, Brandon (CA), Manitoba) x 1,000."
- },
- {
-  "placeId": "whitehorse",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 16.67,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "990",
-   "name": "Whitehorse",
-   "dguid": "2021S0504990",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "660 admissions (IRCC, rounded to 5) / 39,584 residents (StatCan 17-10-0148-01, July 1 2025, Whitehorse (CA), Yukon) x 1,000."
- },
- {
-  "placeId": "yellowknife",
-  "metricId": "imm_pr_admissions_per_1000",
-  "value": 15.53,
-  "period": "2025",
-  "geo": {
-   "level": "ca",
-   "id": "995",
-   "name": "Yellowknife",
-   "dguid": "2021S0504995",
-   "vintage": "2021"
-  },
-  "sourceId": "ircc-pr-cma",
-  "flags": [
-   "rounded"
-  ],
-  "note": "370 admissions (IRCC, rounded to 5) / 23,826 residents (StatCan 17-10-0148-01, July 1 2025, Yellowknife (CA), Northwest Territories) x 1,000."
- },
- {
-  "placeId": "toronto",
   "metricId": "imm_median_wages_5y",
   "value": 55300.0,
   "period": "2023",
@@ -3321,5 +1701,1625 @@
    "not_available"
   ],
   "note": "Table 43-10-0022-01 publishes CMAs (and provinces) only; this census agglomeration or territory has no value."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "imm_pr_admissions",
+  "value": 97690.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "imm_pr_admissions_change",
+  "value": -21.7,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (97690 vs 124755)."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "imm_pr_admissions",
+  "value": 37210.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "imm_pr_admissions_change",
+  "value": -3.9,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (37210 vs 38710)."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "imm_pr_admissions",
+  "value": 36360.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "imm_pr_admissions_change",
+  "value": -23.6,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (36360 vs 47590)."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "imm_pr_admissions",
+  "value": 23560.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "imm_pr_admissions_change",
+  "value": -24.4,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (23560 vs 31160)."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "imm_pr_admissions",
+  "value": 18980.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "imm_pr_admissions_change",
+  "value": -21.2,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (18980 vs 24075)."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "imm_pr_admissions",
+  "value": 24185.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed). IRCC publishes the Ontario and Quebec parts of Ottawa - Gatineau separately; this is the provincial part."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "imm_pr_admissions_change",
+  "value": -11.5,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (24185 vs 27335)."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "imm_pr_admissions",
+  "value": 2140.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed). IRCC publishes the Ontario and Quebec parts of Ottawa - Gatineau separately; this is the provincial part."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "imm_pr_admissions_change",
+  "value": -10.3,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (2140 vs 2385)."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "imm_pr_admissions",
+  "value": 14245.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "imm_pr_admissions_change",
+  "value": -22.6,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (14245 vs 18410)."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "imm_pr_admissions",
+  "value": 8695.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "imm_pr_admissions_change",
+  "value": 4.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (8695 vs 8360)."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "imm_pr_admissions",
+  "value": 5950.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "imm_pr_admissions_change",
+  "value": -15.2,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (5950 vs 7020)."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "imm_pr_admissions",
+  "value": 8960.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "imm_pr_admissions_change",
+  "value": -12.3,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (8960 vs 10220)."
+ },
+ {
+  "placeId": "london",
+  "metricId": "imm_pr_admissions",
+  "value": 6550.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "london",
+  "metricId": "imm_pr_admissions_change",
+  "value": -12.4,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (6550 vs 7480)."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "imm_pr_admissions",
+  "value": 6845.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "imm_pr_admissions_change",
+  "value": -35.1,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (6845 vs 10545)."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "imm_pr_admissions",
+  "value": 3205.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "imm_pr_admissions_change",
+  "value": -10.6,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (3205 vs 3585)."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "imm_pr_admissions",
+  "value": 4890.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "imm_pr_admissions_change",
+  "value": -42.6,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4890 vs 8515)."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "imm_pr_admissions",
+  "value": 4825.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "imm_pr_admissions_change",
+  "value": -40.4,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4825 vs 8090)."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "imm_pr_admissions",
+  "value": 3530.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "imm_pr_admissions_change",
+  "value": -11.4,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (3530 vs 3985)."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "imm_pr_admissions",
+  "value": 4250.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "imm_pr_admissions_change",
+  "value": -19.3,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4250 vs 5265)."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "imm_pr_admissions",
+  "value": 1710.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "imm_pr_admissions_change",
+  "value": -0.9,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1710 vs 1725)."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "imm_pr_admissions",
+  "value": 2025.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "imm_pr_admissions_change",
+  "value": -19.8,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (2025 vs 2525)."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "imm_pr_admissions",
+  "value": 4575.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "imm_pr_admissions_change",
+  "value": -36.1,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (4575 vs 7165)."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "imm_pr_admissions",
+  "value": 1580.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "imm_pr_admissions_change",
+  "value": -32.5,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1580 vs 2340)."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "imm_pr_admissions",
+  "value": 1700.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "imm_pr_admissions_change",
+  "value": -22.7,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1700 vs 2200)."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "imm_pr_admissions",
+  "value": 1430.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "imm_pr_admissions_change",
+  "value": 15.8,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1430 vs 1235)."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "imm_pr_admissions",
+  "value": 1835.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "imm_pr_admissions_change",
+  "value": 14.7,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1835 vs 1600)."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "imm_pr_admissions",
+  "value": 1050.0,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "imm_pr_admissions_change",
+  "value": -6.7,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1050 vs 1125)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "imm_pr_admissions",
+  "value": 1560.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "imm_pr_admissions_change",
+  "value": -39.3,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1560 vs 2570)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "imm_pr_admissions",
+  "value": 1355.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "imm_pr_admissions_change",
+  "value": -35.2,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (1355 vs 2090)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "imm_pr_admissions",
+  "value": 660.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "imm_pr_admissions_change",
+  "value": -21.9,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (660 vs 845)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "imm_pr_admissions",
+  "value": 370.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "IRCC permanent-resident admissions by CMA/CA of intended destination at landing (not current residence). Values are rounded to the nearest 5; 0-5 shown as '--' (suppressed)."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "imm_pr_admissions_change",
+  "value": 0.0,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (370 vs 370)."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 13.74,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "97690 admissions (IRCC, rounded to 5) / 7,108,874 residents (StatCan 17-10-0148-01, July 1 2025, Toronto (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 8.09,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "37210 admissions (IRCC, rounded to 5) / 4,597,837 residents (StatCan 17-10-0148-01, July 1 2025, Montréal (CMA), Quebec) x 1,000."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 11.77,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver",
+   "dguid": "2021S0503933",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "36360 admissions (IRCC, rounded to 5) / 3,088,036 residents (StatCan 17-10-0148-01, July 1 2025, Vancouver (CMA), British Columbia) x 1,000."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 12.83,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "825",
+   "name": "Calgary",
+   "dguid": "2021S0503825",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "23560 admissions (IRCC, rounded to 5) / 1,836,012 residents (StatCan 17-10-0148-01, July 1 2025, Calgary (CMA), Alberta) x 1,000."
+ },
+ {
+  "placeId": "edmonton",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 11.21,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton",
+   "dguid": "2021S0503835",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "18980 admissions (IRCC, rounded to 5) / 1,692,385 residents (StatCan 17-10-0148-01, July 1 2025, Edmonton (CMA), Alberta) x 1,000."
+ },
+ {
+  "placeId": "ottawa",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 18.24,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "24185 admissions (IRCC, rounded to 5) / 1,325,788 residents (StatCan 17-10-0148-01, July 1 2025, Ottawa - Gatineau (CMA), Ontario part, Ontario) x 1,000."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 5.72,
+  "period": "2025",
+  "geo": {
+   "level": "cma_part",
+   "id": "24505",
+   "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "2140 admissions (IRCC, rounded to 5) / 374,226 residents (StatCan 17-10-0148-01, July 1 2025, Ottawa - Gatineau (CMA), Quebec part, Quebec) x 1,000."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 14.97,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg",
+   "dguid": "2021S0503602",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "14245 admissions (IRCC, rounded to 5) / 951,758 residents (StatCan 17-10-0148-01, July 1 2025, Winnipeg (CMA), Manitoba) x 1,000."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 9.62,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec",
+   "dguid": "2021S0503421",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "8695 admissions (IRCC, rounded to 5) / 903,607 residents (StatCan 17-10-0148-01, July 1 2025, Québec (CMA), Quebec) x 1,000."
+ },
+ {
+  "placeId": "hamilton",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 6.83,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "537",
+   "name": "Hamilton",
+   "dguid": "2021S0503537",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "5950 admissions (IRCC, rounded to 5) / 871,143 residents (StatCan 17-10-0148-01, July 1 2025, Hamilton (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "kitchener-waterloo",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 12.77,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "541",
+   "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "8960 admissions (IRCC, rounded to 5) / 701,568 residents (StatCan 17-10-0148-01, July 1 2025, Kitchener - Cambridge - Waterloo (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "london",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 10.35,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "555",
+   "name": "London",
+   "dguid": "2021S0503555",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "6550 admissions (IRCC, rounded to 5) / 633,002 residents (StatCan 17-10-0148-01, July 1 2025, London (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "halifax",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 12.56,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "205",
+   "name": "Halifax",
+   "dguid": "2021S0503205",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "6845 admissions (IRCC, rounded to 5) / 544,834 residents (StatCan 17-10-0148-01, July 1 2025, Halifax (CMA), Nova Scotia) x 1,000."
+ },
+ {
+  "placeId": "victoria",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 7.2,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "935",
+   "name": "Victoria",
+   "dguid": "2021S0503935",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "3205 admissions (IRCC, rounded to 5) / 445,090 residents (StatCan 17-10-0148-01, July 1 2025, Victoria (CMA), British Columbia) x 1,000."
+ },
+ {
+  "placeId": "saskatoon",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 12.92,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "725",
+   "name": "Saskatoon",
+   "dguid": "2021S0503725",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "4890 admissions (IRCC, rounded to 5) / 378,475 residents (StatCan 17-10-0148-01, July 1 2025, Saskatoon (CMA), Saskatchewan) x 1,000."
+ },
+ {
+  "placeId": "regina",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 16.57,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "705",
+   "name": "Regina",
+   "dguid": "2021S0503705",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "4825 admissions (IRCC, rounded to 5) / 291,187 residents (StatCan 17-10-0148-01, July 1 2025, Regina (CMA), Saskatchewan) x 1,000."
+ },
+ {
+  "placeId": "st-johns",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 14.5,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "001",
+   "name": "St. John's",
+   "dguid": "2021S0503001",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "3530 admissions (IRCC, rounded to 5) / 243,478 residents (StatCan 17-10-0148-01, July 1 2025, St. John's (CMA), Newfoundland and Labrador) x 1,000."
+ },
+ {
+  "placeId": "windsor",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 8.7,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "559",
+   "name": "Windsor",
+   "dguid": "2021S0503559",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "4250 admissions (IRCC, rounded to 5) / 488,738 residents (StatCan 17-10-0148-01, July 1 2025, Windsor (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "kelowna",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 6.72,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "915",
+   "name": "Kelowna",
+   "dguid": "2021S0503915",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1710 admissions (IRCC, rounded to 5) / 254,605 residents (StatCan 17-10-0148-01, July 1 2025, Kelowna (CMA), British Columbia) x 1,000."
+ },
+ {
+  "placeId": "abbotsford-mission",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 9.05,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "932",
+   "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "2025 admissions (IRCC, rounded to 5) / 223,828 residents (StatCan 17-10-0148-01, July 1 2025, Abbotsford - Mission (CMA), British Columbia) x 1,000."
+ },
+ {
+  "placeId": "moncton",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 23.32,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "4575 admissions (IRCC, rounded to 5) / 196,143 residents (StatCan 17-10-0148-01, July 1 2025, Moncton (CMA), New Brunswick) x 1,000."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 10.93,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1580 admissions (IRCC, rounded to 5) / 144,543 residents (StatCan 17-10-0148-01, July 1 2025, Saint John (CMA), New Brunswick) x 1,000."
+ },
+ {
+  "placeId": "fredericton",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 13.57,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1700 admissions (IRCC, rounded to 5) / 125,303 residents (StatCan 17-10-0148-01, July 1 2025, Fredericton (CMA), New Brunswick) x 1,000."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 5.86,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1430 admissions (IRCC, rounded to 5) / 243,911 residents (StatCan 17-10-0148-01, July 1 2025, Sherbrooke (CMA), Quebec) x 1,000."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 9.45,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1835 admissions (IRCC, rounded to 5) / 194,278 residents (StatCan 17-10-0148-01, July 1 2025, Greater Sudbury (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 7.85,
+  "period": "2025",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1050 admissions (IRCC, rounded to 5) / 133,765 residents (StatCan 17-10-0148-01, July 1 2025, Thunder Bay (CMA), Ontario) x 1,000."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 16.16,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "105",
+   "name": "Charlottetown",
+   "dguid": "2021S0504105",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1560 admissions (IRCC, rounded to 5) / 96,516 residents (StatCan 17-10-0148-01, July 1 2025, Charlottetown (CA), Prince Edward Island) x 1,000."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 21.6,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "610",
+   "name": "Brandon",
+   "dguid": "2021S0504610",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "1355 admissions (IRCC, rounded to 5) / 62,723 residents (StatCan 17-10-0148-01, July 1 2025, Brandon (CA), Manitoba) x 1,000."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 16.67,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "990",
+   "name": "Whitehorse",
+   "dguid": "2021S0504990",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "660 admissions (IRCC, rounded to 5) / 39,584 residents (StatCan 17-10-0148-01, July 1 2025, Whitehorse (CA), Yukon) x 1,000."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "imm_pr_admissions_per_1000",
+  "value": 15.53,
+  "period": "2025",
+  "geo": {
+   "level": "ca",
+   "id": "995",
+   "name": "Yellowknife",
+   "dguid": "2021S0504995",
+   "vintage": "2021"
+  },
+  "sourceId": "ircc-pr-cma",
+  "flags": [
+   "rounded"
+  ],
+  "note": "370 admissions (IRCC, rounded to 5) / 23,826 residents (StatCan 17-10-0148-01, July 1 2025, Yellowknife (CA), Northwest Territories) x 1,000."
  }
 ]

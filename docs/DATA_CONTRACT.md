@@ -54,10 +54,59 @@ immigration → `programs.json` (`ProgramRecord[]`).
   constant dollars, hourly vs annual, individual vs household, gross vs net,
   employed-worker wages vs advertised pay.
 * **Rank only comparable values** (same metric, same period, same method).
+  The app uses `src/lib/comparability.ts`: only observations matching a place's
+  CMA, CA, CMA part or municipality can enter a city ranking. Broader regional,
+  provincial, station-proxy and MBM-region values remain labelled context.
+  Geography levels, units, periods and methodology/source cohorts are not mixed.
 * **Findings are computed, not written from memory.** Each `Finding` cites
   `sourceIds`, `placeIds`, and a `calc` string precise enough to reproduce.
 * **Never invent fallback statistics.** If a source fails, keep the previously
   retrieved snapshot (with its date) or leave the gap.
+
+## Wage and MBM provenance
+
+`WageTable.byNoc[noc][geoKey]` retains the compact `[low, median, high, annualFlag]`
+tuple. `metadata[noc][geoKey]` records the cell's `referencePeriod`, `methodology`
+and optional source label. The table-wide `referencePeriod` summarizes the
+available periods; it must not replace a record's own period. Absent per-cell metadata means
+unknown provenance. Annual and hourly values are labelled separately; regional
+wages are not ranked as city measurements.
+
+MBM observations carry `referenceHouseholdSize`. Scaling uses
+`threshold × sqrt(householdSize / referenceHouseholdSize)` before dividing an
+annual amount by 12. The reference is four people for the general basket and
+five for Nunavut. Keep the MBM geography, year and methodology with the value;
+exclude its shelter component when separately adding rent to a budget.
+
+`ProgramRecord.jobOfferRequired = 'conditional'` means that the source states
+an alternative, explained by `jobOfferNote`. FSTP accepts a qualifying job offer
+or a certificate of qualification; this must never render as an unconditional
+job-offer requirement. `/immigration?program=<id>` opens a specific record.
+
+## Complete scenarios and navigation
+
+New complete scenario links carry `scenario=1`. All omitted personal fields
+are reset to defaults, including custom MBM, monthly and one-time expenses.
+Legacy links containing household/personal fields are treated the same way.
+Plain city, occupation and housing navigation is not a complete scenario and
+can retain this browser's budget. Compatible public context is carried between
+Explore, Compare and Budget. Ordinary navigation does not copy private amounts
+into the URL; explicit sharing and Compare's “Edit on Budget” action do.
+
+## IRCC publication feed
+
+`src/types/updates.ts` defines `public/data/updates.json`, an independent feed
+that statistical snapshot builds preserve. Each entry has a stable ID, canonical
+official URL, source ID, publication date, optional explicitly published update
+or effective date, first-seen/check times, and a hash of meaningful content.
+Express Entry records retain their round, category, invitation count and CRS
+cutoff; unlike draws are not combined into an overall trend.
+
+Source status records distinguish attempted checks from the last successful
+check and expose actual captured coverage. A source failure preserves its old
+entries. Reprocessing the same publication updates its record rather than
+adding duplicates. Footer changes are not news. No LLM service or credentials
+are required.
 
 ## Ownership (avoid concurrent edits)
 

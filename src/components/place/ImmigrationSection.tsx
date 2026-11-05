@@ -115,7 +115,7 @@ export function ImmigrationSection({ core, place, series, programs }: { core: Co
                 </a>
                 <p className="pprog__purpose">{p.purpose}</p>
                 <p className="pprog__meta mono">
-                  {p.operator} · Job offer: {p.jobOfferRequired.replace('_', ' ')} · checked {formatDate(p.lastChecked)}
+                  {p.operator} · {JOB_LABEL[p.jobOfferRequired]} · checked {formatDate(p.lastChecked)}
                 </p>
               </li>
             ))}
@@ -136,3 +136,4 @@ export function ImmigrationSection({ core, place, series, programs }: { core: Co
     </div>
   );
 }
+import { JOB_LABEL } from '../immigration/ProgramCard';

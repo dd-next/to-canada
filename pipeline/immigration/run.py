@@ -38,7 +38,7 @@ def metric(id, label, short, unit, decimals, higher, desc, basis, geolvl, ptype,
 
 
 def metrics(latest: int) -> list[dict]:
-    return [
+    result = [
         metric("imm_pr_admissions", f"New permanent residents by intended destination, {latest}", "PR admissions", "persons", 0, "neutral",
                f"Number of people granted permanent resident status in the calendar year whose intended destination at landing was this CMA/CA (or Ottawa-Gatineau part). Rounded to the nearest 5 by IRCC; counts of 0-5 are suppressed. Not current residence.",
                "IRCC admissions, calendar year, CMA/CA of intended destination", "cma", "year", ["ircc-pr-cma"], map_layer=True,
@@ -51,18 +51,19 @@ def metrics(latest: int) -> list[dict]:
                "IRCC admissions / StatCan 17-10-0148-01 July 1 population x 1000", "cma", "year", ["ircc-pr-cma", "statcan-17-10-0148-01"], map_layer=True,
                note="Numerator is intended destination at landing, denominator is all residents; not a measure of immigrant share."),
         metric("imm_retention_5y", "Immigrant retention in intended province, 5 years after admission", "5-year retention (province)", "percent", 1, "neutral",
-               "Of immigrant taxfilers admitted in 2018 whose intended destination was this province, the share still filing tax there in 2023: stayed / (stayed + out-migrated). Province value shown for each place in the province (flagged provincial_value).",
-               "IMDB tax-record residence (postal code), taxfilers aged 15+, all admission categories, both sexes, 2018 cohort", "province", "year", ["statcan-43-10-0022-01"], map_layer=True,
+               f"Of immigrant taxfilers admitted in {retention.COHORT} whose intended destination was this province, the share still filing tax there in {retention.TAXYEAR}: stayed / (stayed + out-migrated). Province value shown for each place in the province (flagged provincial_value).",
+               f"IMDB tax-record residence (postal code), taxfilers aged 15+, all admission categories, both sexes, {retention.COHORT} cohort", "province", "year", ["statcan-43-10-0022-01"], map_layer=True,
                note="Province-level; does not count people who moved in from elsewhere. No values for territories."),
         metric("imm_retention_cma_5y", "Immigrant retention in intended CMA, 5 years after admission", "5-year retention (CMA)", "percent", 1, "neutral",
-               "Of immigrant taxfilers admitted in 2018 whose intended destination was this CMA, the share still filing tax in the same CMA in 2023: stayed / (stayed + out-migrated).",
-               "IMDB tax-record residence, taxfilers aged 15+, all admission categories, 2018 cohort", "cma", "year", ["statcan-43-10-0022-01"],
+               f"Of immigrant taxfilers admitted in {retention.COHORT} whose intended destination was this CMA, the share still filing tax in the same CMA in {retention.TAXYEAR}: stayed / (stayed + out-migrated).",
+               f"IMDB tax-record residence, taxfilers aged 15+, all admission categories, {retention.COHORT} cohort", "cma", "year", ["statcan-43-10-0022-01"],
                note="CMAs only; no census agglomerations or territories. Fredericton has no value because the CMA is new in the 2021 geography."),
-        metric("imm_median_wages_5y", "Median wages of immigrants five years after admission (2018 cohort)", "Immigrant median wages, year 5", "CAD_year", 0, "better",
-               "Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in 2018, in the 2023 tax year (5 years after admission), all admission categories, both sexes. Values of 0 and 1 dollars excluded from medians.",
-               "2023 constant dollars; geography is residence (postal code) when filing; provincial value (provincial_value) where no CMA value exists", "cma", "year", ["statcan-43-10-0030-01"], price="2023", map_layer=True,
+        metric("imm_median_wages_5y", f"Median wages of immigrants five years after admission ({income.WAGE_COHORT} cohort)", "Immigrant median wages, year 5", "CAD_year", 0, "better",
+               f"Median wages, salaries and commissions of immigrant taxfilers aged 15+ admitted in {income.WAGE_COHORT}, in the {income.WAGE_TAXYEAR} tax year (5 years after admission), all admission categories, both sexes. Values of 0 and 1 dollars excluded from medians.",
+               f"{income.PRICE_BASE_YEAR} constant dollars; geography is residence (postal code) when filing; provincial value (provincial_value) where no CMA value exists", "cma", "year", ["statcan-43-10-0030-01"], price=income.PRICE_BASE_YEAR, map_layer=True,
                note="Composition of the cohort differs by place (admission category, age, occupations). Not a forecast for a new arrival. No territories in the table."),
     ]
+    return result
 
 
 def main() -> None:
@@ -81,34 +82,38 @@ def main() -> None:
     # ---------------- sources
     info = ctx["info"]
     meta = info["meta"]
+    first_y, first_m = info["first_month"]
+    last_y, last_m = info["last_month"]
+    first_label = f"{ircc.MONTHS[first_m-1]} {first_y}"
+    last_label = f"{ircc.MONTHS[last_m-1]} {last_y}"
     src_ircc = {
         "id": "ircc-pr-cma", "title": "Permanent Residents - Monthly IRCC Updates: Canada - Admissions of Permanent Residents by Province/Territory and Census Metropolitan Area of Intended Destination",
         "publisher": "Immigration, Refugees and Citizenship Canada (IRCC)", "tableId": "open.canada.ca dataset f7e5498e-0ad8-4417-85c9-9b8aff9b9eda; resource EN_ODP-PR-CMA.xlsx (81021dfd-c110-42cf-a975-1b9be8b82980)",
-        "url": ircc.LANDING, "downloadUrl": ircc.URL, "releaseDate": "2026-10-20", "retrievedAt": meta.get("retrievedAt") or now_iso(),
-        "referencePeriod": f"January 2015 to August 2026 (monthly); annual totals 2015-{latest}; year-to-date {ctx['ytd']}",
+        "url": ircc.LANDING, "downloadUrl": ircc.URL, "releaseDate": meta["releaseDate"], "retrievedAt": meta["retrievedAt"],
+        "referencePeriod": f"{first_label} to {last_label} (monthly); annual totals {min(info['annual_years'])}-{latest}; year-to-date {ctx['ytd']}",
         "licence": "Open Government Licence - Canada", "attribution": "Contains information licensed under the Open Government Licence - Canada. Source: IRCC, Permanent Residents - Monthly IRCC Updates.",
-        "transformations": [f"Read the XLSX (not the CSV, which IRCC labels 'rounded - not for calculations'); took each row's calendar-year Total column (annual totals) and the 2026 year-to-date total (January-August).",
+        "transformations": [f"Read the XLSX (not the CSV, which IRCC labels 'rounded - not for calculations'); took each row's calendar-year Total column (annual totals) and the {ctx['ytd']} year-to-date total.",
                             "IRCC rounds every value to the nearest 5 and shows 0-5 as '--' (kept as null + suppressed flag); all values carry the 'rounded' flag. Calendar-year totals are published values and may not equal the sum of monthly cells.",
                             "Rows are 'CMA' per IRCC, which includes some census agglomerations (Charlottetown, Brandon, Whitehorse, Yellowknife are present). Ottawa - Gatineau is published as Ontario part and Quebec part and used as such.",
                             f"Change = (latest-year / previous-year - 1) x 100 on rounded values; per-1,000 = admissions / StatCan July 1 population x 1000."],
-        "notes": ["Admissions are by intended destination at landing, not current residence.", "Dataset metadata last modified 2026-10-20; file last-modified header " + str(meta.get("lastModified")) + ".",
+        "notes": ["Admissions are by intended destination at landing, not current residence.", "Publisher catalog update " + str(meta["publisherUpdatedAt"]) + "; file last-modified header " + str(meta.get("lastModified")) + ".",
                   "Iqaluit: IRCC publishes Nunavut only as 'Other - Nunavut', so no Iqaluit value is available."], "status": "ok"}
     srcs = [src_ircc]
-    srcs.append(source_record("17-10-0148-01", reference_period="July 1, 2001 to 2025 (annual); 2025 used", transformations=[
+    srcs.append(source_record("17-10-0148-01", reference_period=f"July 1, {min(pdf.REF_DATE)} to {max(pdf.REF_DATE)} (annual); {latest} used", transformations=[
         "Kept Gender='Total - gender' and Age group='All ages'; matched each place by DGUID suffix to its CMA/CA code (Ottawa and Gatineau by their Ontario/Quebec part).",
         "Used as the denominator for admissions per 1,000 (same calendar year, July 1 estimate)."],
         notes=["Population estimates on 2021 boundaries; may be revised."]))
-    srcs.append(source_record("43-10-0030-01", reference_period="Tax years 2009-2023; admission years 2008-2022", transformations=[
+    srcs.append(source_record("43-10-0030-01", reference_period=f"Tax years {income.CONTEXT['firstTaxYear']}-{income.CONTEXT['lastTaxYear']}; five-year cohort {income.WAGE_COHORT}", transformations=[
         "Streamed the ~16 GB full-table CSV and kept Sex='Total, sex', Pre-admission experience='Total', Knowledge of official languages='Total' and Statistics in {Total number of residents, Median employment income, Median wages salaries and commissions} for Canada, provinces and our CMAs (data/raw/statcan_tables/43100030/filtered_northward.csv).",
         "Years since admission = tax year (REF_DATE) minus admission year; the admission-year-equals-tax-year cell is not published.",
-        "imm_median_wages_5y = Median wages, salaries and commissions, admission year 2018, tax year 2023, category total; Charlottetown and Brandon use the provincial value (flagged provincial_value); territories have no data.",
+        f"imm_median_wages_5y = Median wages, salaries and commissions, admission year {income.WAGE_COHORT}, tax year {income.WAGE_TAXYEAR}, category total; Charlottetown and Brandon use the provincial value (flagged provincial_value); territories have no data.",
         "Values rounded by StatCan (flag rounded); '..' -> null + not_available."],
-        notes=["Population: immigrant taxfilers aged 15 and older residing in Canada (IMDB: IRCC landing records linked to tax files). Income in 2023 constant dollars; values zero and one excluded from medians. Geography = postal code on the tax return (may differ from province of taxation).",
+        notes=[f"Population: immigrant taxfilers aged 15 and older residing in Canada (IMDB: IRCC landing records linked to tax files). Income in {income.PRICE_BASE_YEAR} constant dollars; values zero and one excluded from medians. Geography = postal code on the tax return (may differ from province of taxation).",
                "Admission year = year of first landing/PR status, which may differ from arrival year."]))
-    srcs.append(source_record("43-10-0022-01", reference_period="Tax years 2007-2023; admission years 2007-2023", transformations=[
+    srcs.append(source_record("43-10-0022-01", reference_period=f"Tax years {retention.CONTEXT['firstTaxYear']}-{retention.CONTEXT['lastTaxYear']}; five-year cohort {retention.COHORT}", transformations=[
         "Streamed the ~20 GB full-table CSV from the zip (not extracted) and kept Age group='Total, age group', Pre-admission experience='Total', Knowledge of official languages='Total' for Canada, provinces and our CMAs (data/raw/statcan_tables/43100022/filtered_northward.csv).",
-        "Used Statistics='Retention rate' (percent) for admission year 2018 in tax year 2023 (5 years after admission), category total; province values flagged provincial_value on place observations; CMA values as imm_retention_cma_5y.",
-        "Series: retention by years since admission for the 2015 cohort (tax years 2016-2023)."],
+        f"Used Statistics='Retention rate' (percent) for admission year {retention.COHORT} in tax year {retention.TAXYEAR} (5 years after admission), category total; province values flagged provincial_value on place observations; CMA values as imm_retention_cma_5y.",
+        f"Series: retention by years since admission for the 2015 historical cohort (tax years 2016-{retention.TAXYEAR})."],
         notes=["'Retention rate represents the percentage of immigrant taxfilers continuing their residence in the geographical area (province or CMA) of intended destination ... This does not take into account immigrants migrating in from another destination.' (table note 11). Retention = stayed / (stayed + out migration).",
                "Table covers Canada, provinces and CMAs; no territories or census agglomerations."]))
     srcs += programs.sources(now_iso())

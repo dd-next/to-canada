@@ -253,3 +253,9 @@
     font-size: var(--fs-xs);
   }
 }
+
+.source-checks { margin-top: var(--s-6); }
+.source-checks summary { cursor: pointer; font-weight: 600; padding-block: var(--s-3); }
+.source-checks__list { list-style: none; padding: 0; }
+.source-checks__list li { padding-block: var(--s-3); border-bottom: var(--rule-hair); overflow-wrap: anywhere; }
+.source-checks__list p { margin: var(--s-1) 0; font-size: var(--fs-sm); color: var(--ink-2); }

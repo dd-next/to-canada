@@ -9,6 +9,9 @@ errors. Missing values stay null. Nothing here invents or fills data.
 from __future__ import annotations
 
 import json
+import fcntl
+import os
+import tempfile
 import re
 import shutil
 import sys
@@ -19,7 +22,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common.contract import FLAGS, PROCESSED, ROOT, UNITS, load_places  # noqa: E402
 
-OUT = ROOT / "public" / "data"
+OUT = Path(os.environ.get("NORTHWARD_APP_DATA", ROOT / "public" / "data"))
 DOMAINS = ["geo", "housing", "work", "immigration", "cost"]
 PRODUCT = "Northward"
 
@@ -60,12 +63,11 @@ def provisional_places() -> list[dict]:
     return out
 
 
-def main() -> int:
+def build() -> int:
     errors: list[str] = []
     warnings: list[str] = []
     files: dict = {}
-    # Overwrite in place (deleting the directory confuses dev servers watching public/);
-    # stale files are pruned at the end.
+    # Build into a staging directory; publish only after all validation succeeds.
     OUT.mkdir(parents=True, exist_ok=True)
 
     # ---------------------------------------------------------------- places
@@ -257,6 +259,11 @@ def main() -> int:
         if tags[p["id"]]:
             p["programTags"] = sorted(tags[p["id"]])
 
+    for name in ("freshness", "refresh-status"):
+        path = PROCESSED / f"{name}.json"
+        if path.exists():
+            dump("freshness-checks.json" if name == "freshness" else f"{name}.json", json.loads(path.read_text()), files)
+
     # ---------------------------------------------------------------- core files + manifest
     dump("places.json", places, files)
     dump("metrics.json", list(metrics.values()), files)
@@ -277,14 +284,16 @@ def main() -> int:
 
     MONTH_NUM = {n: f"{i + 1:02d}" for i, n in enumerate(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])}
     pe = latest_obs_period(["statcan-17-10-0148-01"], "pop_estimate")
+    cmhc_sids = sorted(s for s in sources if s.startswith("cmhc-rms-"))
+    wage_sids = sorted(s for s in sources if s.startswith("jobbank-wages-"))
     FAMILIES = [  # id, label, short label, source ids (first is primary), latest period, periodType
         ("asking-rents", "Asking rents (StatCan, quarterly)", "rents", ["statcan-46-10-0092-01"], latest_obs_period(["statcan-46-10-0092-01"]), None),
-        ("cmhc-rents", "CMHC rents and vacancy (October survey)", "CMHC", ["cmhc-rms-2025"], latest_obs_period(["cmhc-rms-2025"]), None),
+        ("cmhc-rents", "CMHC rents and vacancy (October survey)", "CMHC", cmhc_sids, latest_obs_period(cmhc_sids), None),
         ("lfs", "Labour Force Survey (3-month average)", "LFS", ["statcan-14-10-0459-01", "statcan-14-10-0292-01", "statcan-14-10-0462-01"],
          latest_obs_period(["statcan-14-10-0459-01", "statcan-14-10-0292-01", "statcan-14-10-0462-01"]), None),
         ("cpi", "Consumer Price Index", "CPI", ["statcan-18-10-0004-01"], latest_obs_period(["statcan-18-10-0004-01"]), None),
-        ("jobbank-wages", "Job Bank wages (annual edition)", "wages", ["jobbank-wages-2025"],
-         (re.search(r"(\d{4})", sources.get("jobbank-wages-2025", {}).get("title", "")) or [None, None])[1], None),
+        ("jobbank-wages", "Job Bank wages (annual edition)", "wages", wage_sids,
+         (wages or {}).get("edition", (wages or {}).get("referencePeriod")), None),
         ("ircc-admissions", "IRCC permanent-resident admissions (monthly update)", "IRCC", ["ircc-pr-cma"], ref_end_month("ircc-pr-cma"), None),
         ("mbm", "Market Basket Measure thresholds", "MBM", ["statcan-11-10-0066-01"], latest_obs_period(["statcan-11-10-0066-01"]), None),
         ("population-estimates", "Population estimates (July 1)", "population", ["statcan-17-10-0148-01"], f"{pe}-07-01" if pe and len(pe) == 4 else pe, None),
@@ -316,7 +325,7 @@ def main() -> int:
     dump("manifest.json", manifest, files)
 
     for f in sorted(OUT.rglob("*")):
-        if f.is_file() and f.relative_to(OUT).as_posix() not in files:
+        if f.is_file() and f.relative_to(OUT).as_posix() not in files and f.name not in ("updates.json", "freshness-checks.json", "refresh-status.json"):
             f.unlink()
     for d in sorted((d for d in OUT.rglob("*") if d.is_dir()), key=lambda d: len(d.parts), reverse=True):
         if not any(d.iterdir()):
@@ -330,6 +339,40 @@ def main() -> int:
     print(f"public/data: {len(files)} files, {total/1024:.0f} KiB; places={len(places)} metrics={len(metrics)} "
           f"observations={len(observations)} sources={len(sources)} insights={len(insights)}")
     return 1 if errors else 0
+
+
+def main() -> int:
+    global OUT
+    target = OUT
+    lock = None
+    if os.environ.get("NORTHWARD_PUBLICATION_LOCK_HELD") != "1":
+        lock_path = ROOT / "data" / "raw" / ".publication.lock"
+        lock_path.parent.mkdir(parents=True, exist_ok=True)
+        lock = lock_path.open("w")
+        fcntl.flock(lock, fcntl.LOCK_EX)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    stage = Path(tempfile.mkdtemp(prefix=".app-stage-", dir=target.parent))
+    try:
+        for name in ("updates.json", "freshness-checks.json", "refresh-status.json"):
+            if (target / name).exists():
+                shutil.copy2(target / name, stage / name)
+        OUT = stage
+        code = build()
+        if code:
+            return code
+        if (target / "updates.json").exists():
+            shutil.copy2(target / "updates.json", stage / "updates.json")
+        if target.exists():
+            from refresh import exchange
+            exchange(stage, target)
+        else:
+            stage.rename(target)
+        return 0
+    finally:
+        OUT = target
+        shutil.rmtree(stage, ignore_errors=True)
+        if lock is not None:
+            lock.close()
 
 
 if __name__ == "__main__":
