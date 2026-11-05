@@ -1,0 +1,50 @@
+# Builds the static site from the committed data snapshot and publishes it to GitHub Pages.
+# One-time setup in the repository: Settings → Pages → Source: "GitHub Actions".
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      # --ignore-scripts skips native builds of pipeline-only tools (mapshaper → better-sqlite3);
+      # esbuild and Rollup use their prebuilt platform packages.
+      - run: npm ci --ignore-scripts
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Build (type-check + Vite)
+        run: npm run build
+        env:
+          # '/to-canada' for a project site, '' with a custom domain.
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

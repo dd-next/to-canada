@@ -55,6 +55,16 @@ npm run preview    # serve dist/ on http://localhost:4173
 Serve `dist/` from any static host (a `404.html` SPA fallback is generated; set
 `BASE_PATH=/sub/path/` at build time for a sub-path deployment).
 
+### GitHub Pages
+
+`.github/workflows/deploy-pages.yml` builds and publishes the site on every push
+to `main` (or manually via *Actions → Deploy to GitHub Pages → Run workflow*).
+One-time repository setup: *Settings → Pages → Source: GitHub Actions*, and keep
+`main` as the default branch (the `github-pages` environment only accepts
+deployments from it by default). The project site is served at
+`https://<owner>.github.io/<repo>/`; the base path is taken from the Pages
+configuration automatically.
+
 ## Data
 
 ```bash
