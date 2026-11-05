@@ -25,9 +25,18 @@ RAW = Path(os.environ.get("NORTHWARD_RAW", ROOT / "data" / "raw"))
 # Inherited by child processes: a forced refresh downloads each URL once per run.
 RUN_ID = os.environ.setdefault("NORTHWARD_RUN_ID", uuid.uuid4().hex)
 UA = "Northward-data-pipeline/0.1 (open-data research; contact via repository)"
-CA_BUNDLE = os.environ.get("REQUESTS_CA_BUNDLE") or (
-    "/root/.ccr/ca-bundle.crt" if Path("/root/.ccr/ca-bundle.crt").exists() else True
-)
+def ca_bundle() -> str | bool:
+    """Use configured trust, or verified Requests defaults on ordinary runners."""
+    configured = os.environ.get("REQUESTS_CA_BUNDLE")
+    if configured:
+        return configured
+    legacy_bundle = "/root/.ccr/ca-bundle.crt"
+    # GitHub's unprivileged runner cannot stat files under /root. os.access
+    # returns false for inaccessible paths without breaking module imports.
+    return legacy_bundle if os.access(legacy_bundle, os.R_OK) else True
+
+
+CA_BUNDLE = ca_bundle()
 
 
 class FetchError(RuntimeError):

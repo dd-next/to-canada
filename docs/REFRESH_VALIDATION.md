@@ -48,7 +48,7 @@ recommendations are added.
 - Production TypeScript/Vite build with `BASE_PATH=/to-canada/`; 46 static route entries plus the SPA fallback.
 - Existing model checks: 8 passed; scenario/comparability regressions: 7 passed.
 - Snapshot validation: 10 passed; raw-source integration verification: 17 passed.
-- Cache/refresh/rollback regressions: 8 passed; annual edition/provenance: 3 passed; immigration periods: 4 passed; malformed freshness metadata: 4 passed.
+- Cache/refresh/rollback and runner trust regressions: 9 passed; annual edition/provenance: 3 passed; immigration periods: 4 passed; malformed freshness metadata: 4 passed.
 - IRCC parsers, deduplication, failure retention and interprocess publication locking: 14 passed; saved feed contract validation passed.
 - Chromium desktop/mobile: complete and legacy scenario links with dirty recipient storage, Explore → Compare → Budget context, Toronto profile, IRCC search/type/topic filters, draw details, empty results and retained entries after a simulated source failure.
 - Header layouts checked from 390 to 1440 pixels; the intermediate-width navigation overlap was corrected. Long update titles wrap without horizontal overflow.

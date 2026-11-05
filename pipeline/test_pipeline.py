@@ -30,6 +30,12 @@ class Response:
 
 
 class RefreshTests(unittest.TestCase):
+    def test_unreadable_legacy_ca_uses_verified_defaults(self):
+        with patch.dict(os.environ, {}, clear=True), patch.object(fetch_module.os, 'access', return_value=False):
+            self.assertIs(fetch_module.ca_bundle(), True)
+        with patch.dict(os.environ, {'REQUESTS_CA_BUNDLE': '/configured/trust.pem'}):
+            self.assertEqual(fetch_module.ca_bundle(), '/configured/trust.pem')
+
     def test_forced_fetch_downloads_once_per_run_and_preserves_cache_on_failure(self):
         with tempfile.TemporaryDirectory() as temp, patch.object(fetch_module, 'RAW', Path(temp)), patch.dict(os.environ, {'NORTHWARD_REFRESH': '1'}):
             with patch.object(fetch_module, 'RUN_ID', 'first'), patch.object(fetch_module.requests, 'get', return_value=Response()) as get:
