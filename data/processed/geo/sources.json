@@ -20,7 +20,7 @@
    "Cartographic (shoreline-clipped) boundaries are generalized for display; not for area measurement."
   ],
   "status": "ok",
-  "retrievedAt": "2026-11-05T06:13:05+00:00"
+  "retrievedAt": "2026-11-05T06:49:39+00:00"
  },
  {
   "id": "statcan-98-10-0003-01",
@@ -223,7 +223,7 @@
   "tableId": "Canadian Climate Normals 1991-2020",
   "url": "https://climate.weather.gc.ca/climate_normals/index_e.html",
   "downloadUrl": "https://climate.weather.gc.ca/climate_normals/station_inventory_e.html?yr=1991",
-  "retrievedAt": "2026-11-05T06:13:04+00:00",
+  "retrievedAt": "2026-11-05T06:49:38+00:00",
   "referencePeriod": "1991-2020 (30-year climate normals)",
   "licence": "Environment and Climate Change Canada data servers end-use licence / Open Government Licence – Canada",
   "attribution": "Source: Environment and Climate Change Canada, Canadian Climate Normals 1991-2020.",
@@ -235,6 +235,25 @@
    "The MSC GeoMet OGC API (climate-normals collection) and the dd.weather.gc.ca datamart only hold the 1981-2010 normals, so the 1991-2020 station pages were used.",
    "ECCC normals codes: A = WMO '3 and 5' rule met; B = at least 25 years; C = at least 20 years; D = at least 15 years; E-G = fewer years (kept with use_with_caution)."
   ],
+  "status": "ok"
+ },
+ {
+  "id": "statcan-17-10-0148-01",
+  "title": "Population estimates, July 1, by census metropolitan area and census agglomeration, 2021 boundaries",
+  "publisher": "Statistics Canada",
+  "tableId": "17-10-0148-01",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710014801",
+  "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/17100148-eng.zip",
+  "releaseDate": "2026-01-14",
+  "retrievedAt": "2026-11-05T06:51:35+00:00",
+  "referencePeriod": "July 1, 2001 to 2025 (annual); 2025 used",
+  "licence": "Statistics Canada Open Licence",
+  "attribution": "Source: Statistics Canada, Table 17-10-0148-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
+  "transformations": [
+   "Kept Gender='Total - gender' and Age group='All ages'; matched each place by DGUID to its CMA/CA (Ottawa and Gatineau by their Ontario/Quebec part).",
+   "Latest reference year in the table (2025, July 1) shown as the place's headline population; the 2021 Census count stays available as pop_2021."
+  ],
+  "notes": [],
   "status": "ok"
  }
 ]

@@ -250,6 +250,16 @@ export function formatPeriod(period: string | null | undefined, periodType?: Met
   return p;
 }
 
+const MONTHS_LONG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+/** Headline population period: '2025-07-01' -> 'July 1, 2025 estimate'; '2021' -> '2021 Census'. */
+export function formatPopulationPeriod(period: string | null | undefined): string {
+  if (!period) return DASH;
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(period.trim());
+  if (m) return `${MONTHS_LONG[Number(m[2]) - 1]} ${Number(m[3])}, ${m[1]} estimate`;
+  return formatPeriod(period, 'census');
+}
+
 /** '2026-10-12' or ISO timestamp -> 'Oct 12, 2026'. */
 export function formatDate(iso: string | null | undefined): string {
   if (!iso) return DASH;

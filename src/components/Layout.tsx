@@ -3,6 +3,8 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { PRODUCT } from '../config';
 import { FOOTER_NAV, NAV } from '../nav';
 import { useDismiss } from '../lib/hooks';
+import { useCoreState } from '../data/core';
+import { formatDate, formatPeriod } from '../lib/format';
 import { CompareTrayMenu, SavedTrayMenu } from './TrayMenu';
 import { Icon } from './ui/Icon';
 import { Wordmark } from './Wordmark';
@@ -18,6 +20,24 @@ function PrimaryNav({ id, onNavigate }: { id?: string; onNavigate?: () => void }
         </li>
       ))}
     </ul>
+  );
+}
+
+/** "Data snapshot Nov 5, 2026 · newest: LFS Sep 2026 · rents Q2 2026 · CPI Sep 2026 · IRCC Aug 2026" */
+function FreshnessLine() {
+  const core = useCoreState();
+  if (core.status !== 'ready') return null;
+  const m = core.data.manifest;
+  const byId = new Map((m.freshness ?? []).map((f) => [f.id, f]));
+  const newest = ['lfs', 'asking-rents', 'cpi', 'ircc-admissions']
+    .map((id) => byId.get(id))
+    .filter((f): f is NonNullable<typeof f> => !!f)
+    .map((f) => `${f.short} ${formatPeriod(f.latestPeriod, f.periodType)}`);
+  return (
+    <p className="footer__fresh mono">
+      Data snapshot {formatDate(m.builtAt)}
+      {newest.length > 0 && <> · newest: {newest.join(' · ')}</>} · <Link to="/sources#freshness">All data dates</Link>
+    </p>
   );
 }
 
@@ -98,6 +118,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <p>
               Data: Statistics Canada, CMHC, ESDC Job Bank, IRCC, ECCC — see <Link to="/sources">Sources</Link>.
             </p>
+            <FreshnessLine />
             <p className="footer__privacy">Your saved places, comparisons and budget stay in this browser.</p>
           </div>
         </div>

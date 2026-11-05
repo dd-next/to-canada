@@ -382,5 +382,24 @@
   "higherIs": "worse",
   "description": "Average number of days per year when the daily maximum temperature exceeds 30 °C, 1991–2020 normal.",
   "basis": "ECCC climate normal; days with maximum temperature > 30 °C"
+ },
+ {
+  "id": "pop_estimate",
+  "label": "Population estimate, July 1",
+  "shortLabel": "Population (July 1 est.)",
+  "category": "people",
+  "unit": "persons",
+  "decimals": 0,
+  "higherIs": "neutral",
+  "description": "Statistics Canada's annual postcensal population estimate for July 1 for the place's census metropolitan area / agglomeration (provincial part for Ottawa and Gatineau), on 2021 boundaries.",
+  "basis": "Postcensal estimate based on the 2021 Census adjusted for net undercoverage, plus births, deaths and migration; all ages, both genders",
+  "geoLevel": "cma",
+  "periodType": "year",
+  "mapLayer": false,
+  "seasonalAdjustment": "not_applicable",
+  "sourceIds": [
+   "statcan-17-10-0148-01"
+  ],
+  "comparabilityNote": "Compares CMA/CA populations (not city-proper). Estimates are adjusted for census undercoverage, so they are higher than the 2021 Census counts. Iqaluit is not a CMA/CA and is not covered."
  }
 ]

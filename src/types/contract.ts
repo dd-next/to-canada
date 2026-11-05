@@ -406,9 +406,25 @@ export interface InsightSummary {
 
 // ---------------------------------------------------------------- App bundle manifest
 
+/** One family of data (e.g. asking rents, LFS) with the newest period in the snapshot. */
+export interface FreshnessEntry {
+  id: string;
+  label: string;
+  /** Short name for the footer line ("LFS", "rents"). */
+  short: string;
+  /** Newest period in the snapshot ('2026-09', '2026-Q2', '2025-07-01', '2021', '1991-2020'). */
+  latestPeriod: string;
+  periodType?: MetricDef['periodType'];
+  /** Publisher's release date of the source table (null when the publisher gives none). */
+  releaseDate: string | null;
+  retrievedAt: string | null;
+  sourceId: string;
+}
+
 export interface DataManifest {
   product: string;
   builtAt: string;
   files: Record<string, { bytes: number; records: number }>;
   coverage: { placeId: string; metrics: number; core: boolean }[];
+  freshness?: FreshnessEntry[];
 }

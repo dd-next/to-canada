@@ -1,0 +1,488 @@
+[
+ {
+  "sourceId": "cmhc-rms-2025",
+  "title": "Rental Market Survey Data Tables, 2025 edition (October 2025 survey)",
+  "ourPeriod": "October 2025 survey",
+  "latestPeriod": "October 2025 survey",
+  "latestRelease": "2025-12-11",
+  "status": "current",
+  "note": "The 2026 edition workbook does not exist yet (HTTP 404); CMHC normally publishes in December."
+ },
+ {
+  "sourceId": "comm-kelowna",
+  "title": "Immigration to Rural and Francophone Communities (FCIP) - Kelowna",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "comm-sudbury",
+  "title": "Greater Sudbury RCIP and FCIP (Invest Sudbury)",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "eccc-climate-normals-1991-2020",
+  "title": "Canadian Climate Normals 1991–2020 (station pages and composite station inventory)",
+  "ourPeriod": "1991-2020 (30-year climate normals)",
+  "latestPeriod": "1991-2020 (30-year climate normals)",
+  "latestRelease": null,
+  "status": "static",
+  "note": "Climate normals 1991-2020: fixed 30-year period; the next set is not yet published."
+ },
+ {
+  "sourceId": "ircc-aip",
+  "title": "Atlantic Immigration Program (and how-to-immigrate page)",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-caregivers",
+  "title": "Caregivers (home care workers)",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-closed-pilots",
+  "title": "Closed pilots: Agri-Food Pilot; Rural and Northern Immigration Pilot; TR to PR pathway",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-doctors",
+  "title": "Live and work as a medical doctor in Canada",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-express-entry",
+  "title": "Express Entry: Who can apply",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-fcip",
+  "title": "Francophone Community Immigration Pilot: overview and Who can apply",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-hub",
+  "title": "Live in Canada permanently (IRCC immigration programs hub, incl. paused and closed programs)",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-newcomer-services",
+  "title": "Find free newcomer services near you",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-pnp",
+  "title": "Immigrate as a provincial nominee",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-pnp-nonee",
+  "title": "Provincial Nominee Program: Non-Express Entry process",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-pr-cma",
+  "title": "Permanent Residents - Monthly IRCC Updates: Canada - Admissions of Permanent Residents by Province/Territory and Census Metropolitan Area of Intended Destination",
+  "ourPeriod": "January 2015 to August 2026 (monthly); annual totals 2015-2025; year-to-date 2026-01 to 2026-08",
+  "latestPeriod": "2026-08",
+  "latestRelease": "2026-10-20",
+  "status": "current",
+  "note": "Dataset last modified 2026-10-20, same as our 2026-10-20 update; IRCC publishes monthly (about the 20th)."
+ },
+ {
+  "sourceId": "ircc-pre-arrival",
+  "title": "Pre-arrival services: Get help before you arrive in Canada",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-quebec-skilled",
+  "title": "Quebec-selected skilled workers: About the process",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-rcip",
+  "title": "Rural Community Immigration Pilot: overview and Who can apply",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-rural-franco",
+  "title": "Rural and Francophone Community Immigration pilots (participating communities)",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-settling",
+  "title": "Settling in Canada (incl. Choose a city)",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "ircc-startup-self",
+  "title": "Start-up Visa Program; Self-Employed Persons Program",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "jobbank-wages-2025",
+  "title": "Wages (Job Bank), 2025 edition",
+  "ourPeriod": "2025 edition",
+  "latestPeriod": "2025 edition",
+  "latestRelease": "2025-11-19",
+  "status": "current",
+  "note": "2025 is the newest edition listed on open.canada.ca (dataset modified 2025-11-19). Editions are annual, usually Nov-Dec."
+ },
+ {
+  "sourceId": "prog-ab",
+  "title": "Alberta Advantage Immigration Program (AAIP) and application streams",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "prog-bc",
+  "title": "BC Provincial Nominee Program: program, Skills Immigration and invitations to apply",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "prog-mb",
+  "title": "Manitoba Provincial Nominee Program (MPNP) and stream pages",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "prog-nb",
+  "title": "New Brunswick Provincial Nominee Program and Skilled Worker stream",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "prog-nl",
+  "title": "Newfoundland and Labrador Provincial Nominee Program (NLPNP): overview and Skilled Worker category",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "prog-ns",
+  "title": "Nova Scotia Immigration (NSNP news items)",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "prog-nt",
+  "title": "Northwest Territories Nominee Program: Immigrate Here; Employer-Driven Stream",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "prog-on",
+  "title": "Ontario Immigrant Nominee Program (OINP) and Ontario Workforce Priority stream",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "prog-peq",
+  "title": "Programme de l'experience quebecoise (PEQ) (French-language page; no English page found)",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "prog-qc",
+  "title": "Québec immigration: programs for skilled workers (PSTQ, PRTQ, pilot programs)",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "prog-sk",
+  "title": "Saskatchewan Immigrant Nominee Program (SINP): Browse SINP Programs",
+  "ourPeriod": "Page(s) read on 2026-11-04",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "unknown",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+ },
+ {
+  "sourceId": "statcan-11-10-0066-01",
+  "title": "Market Basket Measure (MBM) thresholds for the reference family by Market Basket Measure region, component and base year",
+  "ourPeriod": "2025 (annual), 2023-base MBM, current dollars",
+  "latestPeriod": "2025-01-01",
+  "latestRelease": "2026-04-29",
+  "status": "current",
+  "note": "Matches StatCan's latest release (2026-04-29); cube ends 2025-01-01."
+ },
+ {
+  "sourceId": "statcan-11-10-0104-01",
+  "title": "Market Basket Measure thresholds by Market Basket Measure region and family size, in current dollars",
+  "ourPeriod": "2025 (annual)",
+  "latestPeriod": "2025-01-01",
+  "latestRelease": "2026-04-29",
+  "status": "current",
+  "note": "Matches StatCan's latest release (2026-04-29); cube ends 2025-01-01."
+ },
+ {
+  "sourceId": "statcan-14-10-0292-01",
+  "title": "Labour force characteristics by territory, three-month moving average, seasonally adjusted and unadjusted",
+  "ourPeriod": "1992-03-01 to 2026-09-01",
+  "latestPeriod": "2026-09-01",
+  "latestRelease": "2026-10-09",
+  "status": "current",
+  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01."
+ },
+ {
+  "sourceId": "statcan-14-10-0459-01",
+  "title": "Labour force characteristics by census metropolitan area, three-month moving average, seasonally adjusted",
+  "ourPeriod": "2011-01-01 to 2026-09-01",
+  "latestPeriod": "2026-09-01",
+  "latestRelease": "2026-10-09",
+  "status": "current",
+  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01."
+ },
+ {
+  "sourceId": "statcan-14-10-0462-01",
+  "title": "Labour force characteristics by economic region, three-month moving average, unadjusted for seasonality",
+  "ourPeriod": "2011-03-01 to 2026-09-01",
+  "latestPeriod": "2026-09-01",
+  "latestRelease": "2026-10-09",
+  "status": "current",
+  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01."
+ },
+ {
+  "sourceId": "statcan-17-10-0148-01",
+  "title": "Population estimates, July 1, by census metropolitan area and census agglomeration, 2021 boundaries",
+  "ourPeriod": "July 1, 2001 to 2025 (annual); 2025 used",
+  "latestPeriod": "2025-01-01",
+  "latestRelease": "2026-01-14",
+  "status": "current",
+  "note": "Matches StatCan's latest release (2026-01-14); cube ends 2025-01-01."
+ },
+ {
+  "sourceId": "statcan-18-10-0004-01",
+  "title": "Consumer Price Index, monthly, not seasonally adjusted",
+  "ourPeriod": "2019-01 to 2026-09 (monthly; 12-month changes computed from 2018-01)",
+  "latestPeriod": "2026-09-01",
+  "latestRelease": "2026-10-19",
+  "status": "current",
+  "note": "Matches StatCan's latest release (2026-10-19); cube ends 2026-09-01."
+ },
+ {
+  "sourceId": "statcan-43-10-0022-01",
+  "title": "Mobility of immigrant taxfilers by census metropolitan areas and tax year",
+  "ourPeriod": "Tax years 2007-2023; admission years 2007-2023",
+  "latestPeriod": "2023-01-01",
+  "latestRelease": "2025-12-19",
+  "status": "current",
+  "note": "Matches StatCan's latest release (2025-12-19); cube ends 2023-01-01."
+ },
+ {
+  "sourceId": "statcan-43-10-0030-01",
+  "title": "Immigrant taxfilers by economic outcomes and tax year, Canada, provinces and census metropolitan areas, 2023 constant dollars",
+  "ourPeriod": "Tax years 2009-2023; admission years 2008-2022",
+  "latestPeriod": "2023-01-01",
+  "latestRelease": "2025-12-08",
+  "status": "current",
+  "note": "Matches StatCan's latest release (2025-12-08); cube ends 2023-01-01."
+ },
+ {
+  "sourceId": "statcan-46-10-0092-01",
+  "title": "Asking rent and paid rent prices, by rental unit type and number of bedrooms, experimental estimates",
+  "ourPeriod": "2019-Q1 to 2026-Q2 (quarterly; REF_DATE is the first month of the quarter)",
+  "latestPeriod": "2026-04-01",
+  "latestRelease": "2026-09-09",
+  "status": "current",
+  "note": "Matches StatCan's latest release (2026-09-09); cube ends 2026-04-01."
+ },
+ {
+  "sourceId": "statcan-98-10-0002-01",
+  "title": "Population and dwelling counts: Canada and census subdivisions (municipalities)",
+  "ourPeriod": "2021 Census (May 2021)",
+  "latestPeriod": "2021 Census (May 2021)",
+  "latestRelease": null,
+  "status": "static",
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+ },
+ {
+  "sourceId": "statcan-98-10-0003-01",
+  "title": "Population and dwelling counts: Census metropolitan areas, census agglomerations and census subdivisions (municipalities)",
+  "ourPeriod": "2021 Census",
+  "latestPeriod": "2021 Census",
+  "latestRelease": null,
+  "status": "static",
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+ },
+ {
+  "sourceId": "statcan-98-10-0005-01",
+  "title": "Population and dwelling counts: Canada, provinces and territories, census metropolitan areas and census agglomerations",
+  "ourPeriod": "2021 Census (May 2021)",
+  "latestPeriod": "2021 Census (May 2021)",
+  "latestRelease": null,
+  "status": "static",
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+ },
+ {
+  "sourceId": "statcan-98-10-0030-01",
+  "title": "Broad age groups, gender and census year: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "ourPeriod": "2021 Census (May 2021)",
+  "latestPeriod": "2021 Census (May 2021)",
+  "latestRelease": null,
+  "status": "static",
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+ },
+ {
+  "sourceId": "statcan-98-10-0038-01",
+  "title": "Dwellings occupied by usual residents and population in dwellings: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "ourPeriod": "2021 Census (May 2021)",
+  "latestPeriod": "2021 Census (May 2021)",
+  "latestRelease": null,
+  "status": "static",
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+ },
+ {
+  "sourceId": "statcan-98-10-0175-01",
+  "title": "Mother tongue by knowledge of official languages: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "ourPeriod": "2021 Census (May 2021)",
+  "latestPeriod": "2021 Census (May 2021)",
+  "latestRelease": null,
+  "status": "static",
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+ },
+ {
+  "sourceId": "statcan-98-10-0227-01",
+  "title": "Language spoken most often at home by age: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "ourPeriod": "2021 Census (May 2021)",
+  "latestPeriod": "2021 Census (May 2021)",
+  "latestRelease": null,
+  "status": "static",
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+ },
+ {
+  "sourceId": "statcan-98-10-0308-01",
+  "title": "Visible minority by immigrant status and period of immigration: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "ourPeriod": "2021 Census (May 2021)",
+  "latestPeriod": "2021 Census (May 2021)",
+  "latestRelease": null,
+  "status": "static",
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+ },
+ {
+  "sourceId": "statcan-98-10-0457-01",
+  "title": "Main mode of commuting by commuting duration, time leaving for work, age and gender: Canada, provinces and territories, census metropolitan areas and census agglomerations with parts",
+  "ourPeriod": "2021 Census (May 2021)",
+  "latestPeriod": "2021 Census (May 2021)",
+  "latestRelease": null,
+  "status": "static",
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+ },
+ {
+  "sourceId": "statcan-cbf-2021",
+  "title": "2021 Census Cartographic Boundary Files (provinces/territories, economic regions, CMAs/CAs, census subdivisions, population centres)",
+  "ourPeriod": "2021 Census geography",
+  "latestPeriod": "2021 Census geography",
+  "latestRelease": null,
+  "status": "static",
+  "note": "2021 Census boundary files: fixed vintage until the 2026 Census geography."
+ },
+ {
+  "sourceId": "statcan-noc-2021-v1.0",
+  "title": "National Occupational Classification (NOC) 2021 Version 1.0: classification structure and elements",
+  "ourPeriod": null,
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "static",
+  "note": "NOC 2021 Version 1.0 classification: fixed until a new NOC version is published."
+ }
+]

@@ -386,6 +386,10 @@
 .footer__fine a {
   color: var(--accent-on-dark);
 }
+.footer__fresh {
+  font-size: var(--fs-xs);
+  color: var(--on-dark-2);
+}
 .footer__privacy {
   font-size: var(--fs-xs);
 }

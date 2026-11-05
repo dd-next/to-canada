@@ -1,5 +1,6 @@
 import { useCore } from '../data/core';
 import { CoverageMatrix } from '../components/sources/CoverageMatrix';
+import { FreshnessTable } from '../components/sources/FreshnessTable';
 import { SourceRegistry } from '../components/sources/SourceRegistry';
 import { Badge } from '../components/ui/Badge';
 import { SectionHeader } from '../components/ui/SectionHeader';
@@ -19,6 +20,7 @@ export default function SourcesPage() {
         dek="Every figure in Northward is read from an official open dataset and keeps its source, period and geography. This page lists the sources, shows what is covered, and explains the rules we follow."
       />
       <nav className="srcpage__toc" aria-label="On this page">
+        <a href="#freshness">Data freshness</a>
         <a href="#registry">Source registry</a>
         <a href="#coverage">Coverage</a>
         <a href="#methods">Methods</a>
@@ -27,6 +29,18 @@ export default function SourcesPage() {
       <p className="srcpage__built">
         Snapshot built {formatDate(built)} · {core.sources.length} sources · {core.places.length} places · {core.observations.length.toLocaleString('en-CA')} observations
       </p>
+
+      {core.manifest.freshness && core.manifest.freshness.length > 0 && (
+        <section id="freshness" className="srcpage__sec" aria-labelledby="freshness-h">
+          <h2 id="freshness-h" className="h2">
+            Data freshness
+          </h2>
+          <p className="srcpage__lede">
+            The newest period in this snapshot for each kind of data, the date its publisher released it, and when we retrieved it. Publishers update on their own schedules (monthly, quarterly or yearly); the data is checked against the official sources every week.
+          </p>
+          <FreshnessTable entries={core.manifest.freshness} />
+        </section>
+      )}
 
       <section id="registry" className="srcpage__sec" aria-labelledby="registry-h">
         <h2 id="registry-h" className="h2">
@@ -108,7 +122,8 @@ export default function SourcesPage() {
           </p>
           <pre className="srcpage__code">{`npm run data:refresh   # re-run every source pipeline, then rebuild the snapshot
 npm run data:build     # rebuild the snapshot from data/processed/ only
-npm run data:check     # validate the snapshot against the data contract`}</pre>
+npm run data:check     # validate the snapshot against the data contract
+npm run data:freshness # compare each source with the publisher's latest release`}</pre>
           <p>
             If a source fails to download, its previously retrieved data is kept with its original retrieval date — a broken upstream never replaces good data with blanks. Set <code>NORTHWARD_REFRESH=1</code> to force fresh downloads instead of using cached files.
           </p>

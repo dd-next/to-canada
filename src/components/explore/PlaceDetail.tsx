@@ -1,6 +1,6 @@
 import type { MetricDef, Observation, Occupation, Place } from '../../types/contract';
 import type { ClassScale } from '../../lib/colors';
-import { formatNumber, formatPeriod, formatValue, ordinal } from '../../lib/format';
+import { formatNumber, formatPeriod, formatPopulationPeriod, formatValue, ordinal } from '../../lib/format';
 import { defaultAscending, type LayerData, type LayerDatum } from '../../lib/layers';
 import { provinceName, regionLabel } from '../../lib/places';
 import type { CompareTray, Favourites } from '../../lib/state';
@@ -157,7 +157,7 @@ export function PlaceDetail({
             {place.population && (
               <>
                 {' · '}
-                <span className="num">pop. {formatNumber(place.population.value, 0, { compact: true })}</span> ({formatPeriod(place.population.period, 'census')})
+                <span className="num">pop. {formatNumber(place.population.value, 0, { compact: true })}</span> ({formatPopulationPeriod(place.population.period)})
               </>
             )}
           </p>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Place } from '../../types/contract';
-import { formatNumber, formatPeriod } from '../../lib/format';
+import { formatNumber, formatPopulationPeriod } from '../../lib/format';
 import { provinceName, regionLabel } from '../../lib/places';
 import { useCompareTray, useFavourites } from '../../lib/state';
 import { Button, ButtonLink } from '../ui/Button';
@@ -55,7 +55,7 @@ export function PlaceHero({ place, places }: { place: Place; places: Place[] }) 
             <>
               {' · '}
               <span className="num">Population {formatNumber(place.population.value)}</span>
-              <span className="phero__period mono"> {formatPeriod(place.population.period, 'census')}</span>
+              <span className="phero__period mono"> · {formatPopulationPeriod(place.population.period)}</span>
             </>
           )}
         </p>

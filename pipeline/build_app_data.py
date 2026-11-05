@@ -9,6 +9,7 @@ errors. Missing values stay null. Nothing here invents or fills data.
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import sys
 from collections import Counter, defaultdict
@@ -128,6 +129,16 @@ def main() -> int:
                 errors.append(f"observation {k} non-numeric value {v!r}")
             observations.append(o)
     errors += [f"duplicate observation {k}" for k, n in keys.items() if n > 1]
+
+    # ---------------------------------------------------------------- headline population
+    # Latest official July 1 estimate (StatCan 17-10-0148-01) replaces the 2021 Census count as the headline
+    # population; the census count stays available as metric pop_2021. Places without an estimate keep the census value.
+    est = {o["placeId"]: o for o in observations if o["metricId"] == "pop_estimate" and o.get("value") is not None}
+    for p in places:
+        o = est.get(p["id"])
+        if o:
+            p["population"] = {"value": o["value"], "period": f"{o['period']}-07-01" if len(o["period"]) == 4 else o["period"],
+                               "geo": o["geo"], "sourceId": o["sourceId"]}
 
     # ---------------------------------------------------------------- derived monthly climate layers
     # Monthly 1991-2020 normals arrive as per-place Series (t='01'..'12'). The map's month selector
@@ -252,6 +263,47 @@ def main() -> int:
     dump("observations.json", observations, files)
     dump("sources.json", sorted(sources.values(), key=lambda s: s["id"]), files)
 
+    # ---------------------------------------------------------------- data freshness (shown in the footer and on Sources)
+    def latest_obs_period(sids: list[str], prefix: str | None = None) -> str | None:
+        ps = [o["period"] for o in observations if o["sourceId"] in sids and o.get("value") is not None
+              and (prefix is None or o["metricId"].startswith(prefix))]
+        ps += [pt["t"] for arr in per_place.values() for sr in arr if sr.get("sourceId") in sids for pt in sr.get("points", [])
+               if isinstance(pt.get("t"), str) and re.fullmatch(r"\d{4}(-\d{2}|-Q\d)?", pt["t"])]
+        return max(ps) if ps else None
+
+    def ref_end_month(sid: str) -> str | None:
+        m = re.search(r"to ([A-Z][a-z]+) (\d{4})", sources.get(sid, {}).get("referencePeriod") or "")
+        return f"{m.group(2)}-{MONTH_NUM[m.group(1)[:3]]}" if m and m.group(1)[:3] in MONTH_NUM else None
+
+    MONTH_NUM = {n: f"{i + 1:02d}" for i, n in enumerate(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])}
+    pe = latest_obs_period(["statcan-17-10-0148-01"], "pop_estimate")
+    FAMILIES = [  # id, label, short label, source ids (first is primary), latest period, periodType
+        ("asking-rents", "Asking rents (StatCan, quarterly)", "rents", ["statcan-46-10-0092-01"], latest_obs_period(["statcan-46-10-0092-01"]), None),
+        ("cmhc-rents", "CMHC rents and vacancy (October survey)", "CMHC", ["cmhc-rms-2025"], latest_obs_period(["cmhc-rms-2025"]), None),
+        ("lfs", "Labour Force Survey (3-month average)", "LFS", ["statcan-14-10-0459-01", "statcan-14-10-0292-01", "statcan-14-10-0462-01"],
+         latest_obs_period(["statcan-14-10-0459-01", "statcan-14-10-0292-01", "statcan-14-10-0462-01"]), None),
+        ("cpi", "Consumer Price Index", "CPI", ["statcan-18-10-0004-01"], latest_obs_period(["statcan-18-10-0004-01"]), None),
+        ("jobbank-wages", "Job Bank wages (annual edition)", "wages", ["jobbank-wages-2025"],
+         (re.search(r"(\d{4})", sources.get("jobbank-wages-2025", {}).get("title", "")) or [None, None])[1], None),
+        ("ircc-admissions", "IRCC permanent-resident admissions (monthly update)", "IRCC", ["ircc-pr-cma"], ref_end_month("ircc-pr-cma"), None),
+        ("mbm", "Market Basket Measure thresholds", "MBM", ["statcan-11-10-0066-01"], latest_obs_period(["statcan-11-10-0066-01"]), None),
+        ("population-estimates", "Population estimates (July 1)", "population", ["statcan-17-10-0148-01"], f"{pe}-07-01" if pe and len(pe) == 4 else pe, None),
+        ("census-2021", "Census of Population 2021", "census", ["statcan-98-10-0005-01"], "2021", "census"),
+        ("climate-normals", "Climate normals", "climate", ["eccc-climate-normals-1991-2020"], "1991-2020", "normals"),
+    ]
+    freshness = []
+    for fid, label, short, sids, period, ptype in FAMILIES:
+        recs = [sources[x] for x in sids if x in sources]
+        if not recs or not period:
+            warnings.append(f"freshness family {fid}: no source/period found; omitted")
+            continue
+        entry = {"id": fid, "label": label, "short": short, "latestPeriod": period,
+                 "releaseDate": max((r.get("releaseDate") or "" for r in recs), default="") or None,
+                 "retrievedAt": max((r.get("retrievedAt") or "" for r in recs), default="") or None, "sourceId": sids[0]}
+        if ptype:
+            entry["periodType"] = ptype
+        freshness.append(entry)
+
     cov = []
     by_place = defaultdict(set)
     for o in observations:
@@ -260,7 +312,7 @@ def main() -> int:
     for p in places:
         cov.append({"placeId": p["id"], "metrics": len(by_place[p["id"]]), "core": p.get("tier") == "core"})
     manifest = {"product": PRODUCT, "provisional": provisional, "builtAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-                "files": files, "coverage": cov}
+                "files": files, "coverage": cov, "freshness": freshness}
     dump("manifest.json", manifest, files)
 
     for f in sorted(OUT.rglob("*")):

@@ -6,6 +6,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Called by refresh-data.yml: pushes made with GITHUB_TOKEN do not trigger the push event.
+  workflow_call:
 
 permissions:
   contents: read

@@ -1,6 +1,6 @@
-"""Rebuild all geography / everyday-life outputs: python3 -I pipeline/geo/run.py [--skip-places]
+"""Rebuild all geography / everyday-life outputs: python3 -I pipeline/geo/run.py [--skip-places | --pop-only]
 
-Steps: places.json + canada.topo.json -> Census 2021 metrics -> climate normals -> insights -> sources/metrics/observations/series.
+Steps: places.json + canada.topo.json -> Census 2021 metrics -> July 1 population estimates (popest) -> climate normals -> insights -> sources/metrics/observations/series.
 Downloads go through common.fetch (cached in data/raw/); delete the cache or set NORTHWARD_REFRESH=1 to refresh.
 """
 from __future__ import annotations
@@ -17,6 +17,7 @@ from common.statcan import source_record  # noqa: E402
 
 import places as places_step  # noqa: E402
 import census  # noqa: E402
+import popest  # noqa: E402
 import climate  # noqa: E402
 import insights  # noqa: E402
 
@@ -38,13 +39,29 @@ CBF_SRC = {
     "status": "ok"}
 
 
+def pop_only() -> None:
+    """Refresh only the July 1 population estimates (pop_estimate + its source); geometry, census and climate stay as written."""
+    places = json.loads((PROCESSED / "geo" / "places.json").read_text(encoding="utf-8"))
+    p_metrics, p_obs, p_sources = popest.main(places)
+    ids = {m["id"] for m in p_metrics}
+    src_ids = {x["id"] for x in p_sources}
+    for name, new, key in (("metrics", p_metrics, "id"), ("observations", p_obs, "metricId"), ("sources", p_sources, "id")):
+        cur = json.loads((PROCESSED / "geo" / f"{name}.json").read_text(encoding="utf-8"))
+        cur = [r for r in cur if r[key] not in (ids if name != "sources" else src_ids)]
+        write_processed("geo", name, cur + new)
+    print("geo population estimates refreshed:", len(p_obs), "observations")
+
+
 def main() -> None:
+    if "--pop-only" in sys.argv:
+        return pop_only()
     if "--skip-places" not in sys.argv or not (PROCESSED / "geo" / "places.json").exists():
         places_step.main()
     places = json.loads((PROCESSED / "geo" / "places.json").read_text(encoding="utf-8"))
     for p in places:
         p.pop("climateStation", None)
     c_metrics, c_obs, c_sources = census.main(places)
+    p_metrics, p_obs, p_sources = popest.main(places)   # latest July 1 estimates; no geometry refetch
     k_metrics, k_obs, k_series, stations, k_sources, gaps = climate.main(places)
     for p in places:
         if p["id"] in stations:
@@ -54,9 +71,9 @@ def main() -> None:
     cbf = {**CBF_SRC, "retrievedAt": now_iso()}
     hier = source_record("98-10-0003-01", reference_period="2021 Census",
                          transformations=["CMA/CA -> CSD hierarchy and 2021 CSD populations; used to list the ten largest municipalities and to weight economic regions."])
-    sources = [cbf, hier] + c_sources + k_sources
-    metrics = c_metrics + k_metrics
-    observations = c_obs + k_obs
+    sources = [cbf, hier] + c_sources + p_sources + k_sources
+    metrics = c_metrics + p_metrics + k_metrics
+    observations = c_obs + p_obs + k_obs
     write_processed("geo", "sources", sources)
     write_processed("geo", "metrics", metrics)
     write_processed("geo", "observations", observations)

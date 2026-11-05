@@ -73,8 +73,22 @@ npm run data:refresh   # re-run every pipeline (uses cached downloads in data/ra
 NORTHWARD_REFRESH=1 npm run data:refresh   # force re-download from the official sources
 npm run data:build     # only rebuild public/data from data/processed/
 npm run data:check     # unit/scale, missing-vs-zero, geography-flag and raw re-read checks
+npm run data:freshness # compare every source with the publisher's latest release (add -- --strict to exit 1 when newer data exists)
 node scripts/check-model.mjs   # budget and pay arithmetic checks
 ```
+
+**Freshness.** `npm run data:freshness` (`pipeline/freshness.py`) asks each publisher what is newest
+(StatCan WDS `getCubeMetadata`, open.canada.ca CKAN `package_show` for Job Bank and IRCC, and a probe for the next CMHC
+Rental Market Survey workbook) and writes `data/processed/freshness.json` with `current`, `newer_available`, `static`
+(Census 2021, climate normals, NOC, boundaries) or `unknown` per source. The snapshot's `manifest.freshness` feeds the
+footer line and the "Data freshness" section on the Sources page.
+
+**Weekly refresh.** `.github/workflows/refresh-data.yml` runs every Monday (10:23 UTC) and on manual dispatch. It runs the
+freshness check; when something is newer (always on a manual run) it re-runs the housing, work, immigration and
+geo-population steps with `NORTHWARD_REFRESH=1`, rebuilds and validates `public/data`, builds the site, commits
+"Data refresh YYYY-MM-DD" to `main` as `github-actions[bot]` if anything changed, and then calls the Pages deploy workflow
+(`GITHUB_TOKEN` pushes do not trigger the push-based deploy on their own). A domain whose download fails keeps its previous
+outputs. `python3 -I pipeline/geo/run.py --pop-only` refreshes only the July 1 population estimates.
 
 Flow: `pipeline/<domain>/run.py` downloads into `data/raw/` (git-ignored cache,
 per-URL locks, bounded retries) and writes contract-shaped files to

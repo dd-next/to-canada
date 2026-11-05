@@ -211,3 +211,45 @@
 .cov td {
   position: relative;
 }
+
+/* ---- data freshness */
+.fresh {
+  display: grid;
+  font-size: var(--fs-sm);
+}
+.fresh__row {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
+  gap: var(--s-1) var(--s-4);
+  padding: var(--s-3) 0;
+  border-bottom: var(--rule-hair);
+  align-items: baseline;
+}
+.fresh__row--head {
+  font-family: var(--font-label);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  border-bottom: var(--rule);
+}
+.fresh__label {
+  font-weight: 700;
+}
+@media (max-width: 719.98px) {
+  .fresh__row--head {
+    display: none;
+  }
+  .fresh__row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .fresh__label {
+    grid-column: 1 / -1;
+  }
+  .fresh__row > [data-label]::before {
+    content: attr(data-label);
+    display: block;
+    color: var(--ink-3);
+    font-size: var(--fs-xs);
+  }
+}

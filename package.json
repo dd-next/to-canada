@@ -11,7 +11,8 @@
     "typecheck": "tsc -b --pretty",
     "data:build": "python3 -I pipeline/build_app_data.py",
     "data:refresh": "python3 -I pipeline/refresh.py",
-    "data:check": "python3 -I pipeline/check_app_data.py"
+    "data:check": "python3 -I pipeline/check_app_data.py",
+    "data:freshness": "python3 -I pipeline/freshness.py"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",
