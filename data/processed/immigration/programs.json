@@ -22,7 +22,7 @@
   "links": [
    {
     "label": "Who can apply",
-    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html"
+    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html"
    },
    {
     "label": "Immigrate as a provincial nominee",
@@ -45,7 +45,7 @@
    "Education not required."
   ],
   "jobOfferRequired": "no",
-  "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html",
+  "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html",
   "lastChecked": "2026-11-04",
   "sourceId": "ircc-express-entry",
   "shortName": "CEC",
@@ -68,7 +68,7 @@
    "Job offer not required, but a valid job offer earns selection criteria points."
   ],
   "jobOfferRequired": "no",
-  "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html",
+  "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html",
   "lastChecked": "2026-11-04",
   "sourceId": "ircc-express-entry",
   "shortName": "FSWP",
@@ -91,7 +91,7 @@
    "Education not required."
   ],
   "jobOfferRequired": "yes",
-  "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html",
+  "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html",
   "lastChecked": "2026-11-04",
   "sourceId": "ircc-express-entry",
   "shortName": "FSTP",
@@ -114,7 +114,7 @@
   ],
   "jobOfferRequired": "varies",
   "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "ircc-pnp",
   "shortName": "PNP",
   "placeIds": [],
@@ -151,7 +151,7 @@
   ],
   "jobOfferRequired": "yes",
   "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "ircc-aip",
   "shortName": "AIP",
   "placeIds": [],
@@ -188,7 +188,7 @@
   ],
   "jobOfferRequired": "yes",
   "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration.html",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "ircc-rcip",
   "shortName": "RCIP",
   "placeIds": [],
@@ -225,7 +225,7 @@
   ],
   "jobOfferRequired": "yes",
   "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/franco-immigration.html",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "ircc-fcip",
   "shortName": "FCIP",
   "placeIds": [],
@@ -364,16 +364,17 @@
   "audience": "Entrepreneurs.",
   "geography": "Canada outside Quebec.",
   "majorConditions": [
-   "IRCC describes the targeted businesses as innovative, able to create jobs for Canadians and able to compete globally."
+   "IRCC describes the targeted businesses as innovative, able to create jobs for Canadians and able to compete globally.",
+   "IRCC (re-read 2026-11-05): applying requires a valid 2025 commitment certificate and applying by June 30, 2026 (that date has passed); the program is closed to all other applications."
   ],
   "jobOfferRequired": "not_applicable",
   "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/start-visa.html",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "ircc-startup-self",
   "placeIds": [],
   "status": {
    "value": "paused",
-   "note": "IRCC page: 'Status: Paused'.",
+   "note": "IRCC page (re-read 2026-11-05): 'Status: Paused'; only holders of a valid 2025 commitment certificate could apply, by June 30, 2026 (passed); closed to all other applications.",
    "sourceUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/start-visa.html"
   }
  },
@@ -391,7 +392,7 @@
   ],
   "jobOfferRequired": "not_applicable",
   "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/self-employed.html",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "ircc-startup-self",
   "placeIds": [],
   "status": {
@@ -656,7 +657,7 @@
   ],
   "jobOfferRequired": "varies",
   "officialUrl": "https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program/the-bc-provincial-nominee-program",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "prog-bc",
   "shortName": "BC PNP",
   "placeIds": [],
@@ -672,7 +673,7 @@
    },
    {
     "label": "Workers: Skills Immigration",
-    "url": "https://www.welcomebc.ca/immigrate-to-b-c/skills-immigration"
+    "url": "https://www.welcomebc.ca/immigrate-to-b-c/for-workers"
    }
   ]
  },
@@ -692,7 +693,7 @@
    "Certain occupations (e.g. administrative assistants, retail sales supervisors) are listed as ineligible."
   ],
   "jobOfferRequired": "yes",
-  "officialUrl": "https://www.welcomebc.ca/immigrate-to-b-c/skills-immigration",
+  "officialUrl": "https://www.welcomebc.ca/immigrate-to-b-c/for-workers",
   "lastChecked": "2026-11-04",
   "sourceId": "prog-bc",
   "parentId": "bc-pnp",
@@ -712,7 +713,7 @@
    "Meet work experience and education required by the BC PNP and the health authority; CLB level 4."
   ],
   "jobOfferRequired": "yes",
-  "officialUrl": "https://www.welcomebc.ca/immigrate-to-b-c/skills-immigration",
+  "officialUrl": "https://www.welcomebc.ca/immigrate-to-b-c/for-workers",
   "lastChecked": "2026-11-04",
   "sourceId": "prog-bc",
   "parentId": "bc-pnp",
@@ -850,7 +851,7 @@
    },
    {
     "label": "Previous invitations to apply",
-    "url": "https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp-invitations-apply"
+    "url": "https://www.ontario.ca/page/invitations-apply-oinp"
    }
   ]
  },
@@ -868,7 +869,7 @@
   ],
   "jobOfferRequired": "unknown",
   "officialUrl": "https://www.ontario.ca/page/ontario-immigrant-nominee-program-streams",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "prog-on",
   "parentId": "on-oinp",
   "placeIds": [],
@@ -894,7 +895,7 @@
   ],
   "jobOfferRequired": "yes",
   "officialUrl": "https://www.ontario.ca/page/ontario-workforce-priority-stream",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "prog-on",
   "parentId": "on-oinp",
   "placeIds": [],
@@ -920,7 +921,7 @@
   ],
   "jobOfferRequired": "varies",
   "officialUrl": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program.html",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "prog-nb",
   "shortName": "NBPNP",
   "placeIds": [],
@@ -980,17 +981,24 @@
   "audience": "Workers and others selected by Nova Scotia.",
   "geography": "Nova Scotia.",
   "majorConditions": [
-   "Nova Scotia's site news (read 2026-11-05): 'Effective September 1, 2026, Nova Scotia will introduce application fees for the Nova Scotia Nominee Program' (posted August 6, 2026).",
-   "News item of July 14, 2026: Nova Scotia is implementing a one-time expansion of its immigration selection priorities for 2026 to align with labour market needs and available nomination spaces (the item itself could not be read).",
-   "Express Entry candidates who receive a Notice of Interest are directed to the Critical Vacancies page.",
-   "Stream pages could not be read: novascotiaimmigration.com serves only its home page to plain HTTP requests (content is rendered with JavaScript) and no other official readable page was found, so stream conditions are not recorded."
+   "Candidates submit an expression of interest (EOI) to a stream; Nova Scotia periodically selects from the EOI pool by provincial priorities and capacity (re-read 2026-11-05 at liveinnovascotia.com, which novascotiaimmigration.com now redirects to).",
+   "EOIs have a 12-month validity period effective May 1, 2026 (transition measures apply).",
+   "Application fees from September 1, 2026, charged only once an EOI is selected: $1,000 for worker streams, $2,000 for the entrepreneur stream; no fee to submit an EOI.",
+   "July 14, 2026: one-time expansion of 2026 selection priorities for active EOIs submitted on or before June 30, 2026, covering candidates already working in Nova Scotia whose work permit expires in 2026 or earlier.",
+   "Per the EOI Selection page (updated October 23, 2026), 946 candidates were selected in September 2026; October 2026 not yet reported.",
+   "Stream-by-stream eligibility conditions were not read."
   ],
   "jobOfferRequired": "unknown",
-  "officialUrl": "https://novascotiaimmigration.com/move-here/",
+  "officialUrl": "https://liveinnovascotia.com/nova-scotia-nominee-program",
   "lastChecked": "2026-11-05",
   "sourceId": "prog-ns",
   "shortName": "NSNP",
-  "placeIds": []
+  "placeIds": [],
+  "status": {
+   "value": "intake_rounds",
+   "note": "NSNP page (re-read 2026-11-05): candidates submit an EOI and Nova Scotia 'periodically selects' from the pool.",
+   "sourceUrl": "https://liveinnovascotia.com/nova-scotia-nominee-program"
+  }
  },
  {
   "id": "pe-pnp",
@@ -1108,7 +1116,7 @@
    "Community-specific requirements are published on the community's own website."
   ],
   "jobOfferRequired": "yes",
-  "officialUrl": "https://pictoucountypartnership.com/rcip/",
+  "officialUrl": "https://pictoucountypartnership.com/program/rural-community-immigration-pilot-rcip/",
   "lastChecked": "2026-11-04",
   "sourceId": "ircc-rural-franco",
   "parentId": "rcip",
@@ -1241,7 +1249,7 @@
    "Community-specific requirements are published on the community's own website."
   ],
   "jobOfferRequired": "yes",
-  "officialUrl": "https://gotothunderbay.ca/why-thunder-bay/immigration/",
+  "officialUrl": "https://gotothunderbay.ca/immigration/",
   "lastChecked": "2026-11-04",
   "sourceId": "ircc-rural-franco",
   "parentId": "rcip",
@@ -1402,7 +1410,7 @@
    "Community-specific requirements are published on the community's own website."
   ],
   "jobOfferRequired": "yes",
-  "officialUrl": "https://wk-rnip.ca/",
+  "officialUrl": "https://westkootenayimmigration.ca/",
   "lastChecked": "2026-11-04",
   "sourceId": "ircc-rural-franco",
   "parentId": "rcip",
@@ -1561,7 +1569,7 @@
    "Community-specific requirements are published on the community's own website."
   ],
   "jobOfferRequired": "yes",
-  "officialUrl": "https://superioreastcfdc.ca/superioreastcfdc.ca/index.php/en-ca/fcip",
+  "officialUrl": "https://superioreastcfdc.ca/superioreastcfdc.ca/index.php/fcip",
   "lastChecked": "2026-11-04",
   "sourceId": "ircc-rural-franco",
   "parentId": "fcip",
@@ -1686,7 +1694,7 @@
    "Includes a 'Choose a city' page on city size, community diversity and francophone communities."
   ],
   "jobOfferRequired": "not_applicable",
-  "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/prepare-life-canada.html",
+  "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada.html",
   "lastChecked": "2026-11-04",
   "sourceId": "ircc-settling",
   "placeIds": [],

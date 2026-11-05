@@ -11,7 +11,7 @@ IC = C + "/immigrate-canada"
 # source id -> (title, publisher, url, page date / note)
 SOURCES = {
     "ircc-hub": ("Live in Canada permanently (IRCC immigration programs hub, incl. paused and closed programs)", "Immigration, Refugees and Citizenship Canada", IC + ".html", None),
-    "ircc-express-entry": ("Express Entry: Who can apply", "Immigration, Refugees and Citizenship Canada", IC + "/express-entry/eligibility.html", None),
+    "ircc-express-entry": ("Express Entry: Who can apply", "Immigration, Refugees and Citizenship Canada", IC + "/express-entry/who-can-apply.html", None),
     "ircc-pnp": ("Immigrate as a provincial nominee", "Immigration, Refugees and Citizenship Canada", IC + "/provincial-nominees.html", None),
     "ircc-pnp-nonee": ("Provincial Nominee Program: Non-Express Entry process", "Immigration, Refugees and Citizenship Canada", IC + "/provincial-nominees/non-express-entry.html", "page dated 2026-06-05"),
     "ircc-aip": ("Atlantic Immigration Program (and how-to-immigrate page)", "Immigration, Refugees and Citizenship Canada", IC + "/atlantic-immigration.html", "page dated 2026-09-01"),
@@ -25,14 +25,14 @@ SOURCES = {
     "ircc-quebec-skilled": ("Quebec-selected skilled workers: About the process", "Immigration, Refugees and Citizenship Canada", IC + "/quebec-skilled-workers.html", "page dated 2026-03-11"),
     "ircc-pre-arrival": ("Pre-arrival services: Get help before you arrive in Canada", "Immigration, Refugees and Citizenship Canada", C + "/settle-canada/pre-arrival-services.html", "page dated 2026-03-05"),
     "ircc-newcomer-services": ("Find free newcomer services near you", "Immigration, Refugees and Citizenship Canada", "https://ircc.canada.ca/english/newcomers/services/index.asp", None),
-    "ircc-settling": ("Settling in Canada (incl. Choose a city)", "Immigration, Refugees and Citizenship Canada", C + "/new-immigrants/prepare-life-canada.html", None),
+    "ircc-settling": ("Settling in Canada (incl. Choose a city)", "Immigration, Refugees and Citizenship Canada", C + "/settle-canada.html", None),
     "prog-ab": ("Alberta Advantage Immigration Program (AAIP) and application streams", "Government of Alberta", "https://www.alberta.ca/alberta-advantage-immigration-program", "AAIP updates listed up to 2026-08-12"),
     "prog-bc": ("BC Provincial Nominee Program: program, Skills Immigration and invitations to apply", "Government of British Columbia (WelcomeBC)", "https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program", "pages updated 2026-05-28 to 2026-10-29"),
     "prog-mb": ("Manitoba Provincial Nominee Program (MPNP) and stream pages", "Government of Manitoba (Manitoba Immigration)", "https://immigratemanitoba.com/mpnp/", None),
     "prog-sk": ("Saskatchewan Immigrant Nominee Program (SINP): Browse SINP Programs", "Government of Saskatchewan", "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program", None),
     "prog-on": ("Ontario Immigrant Nominee Program (OINP) and Ontario Workforce Priority stream", "Government of Ontario", "https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp", None),
     "prog-nb": ("New Brunswick Provincial Nominee Program and Skilled Worker stream", "Government of New Brunswick (Immigration New Brunswick)", "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program.html", None),
-    "prog-ns": ("Nova Scotia Immigration (NSNP news items)", "Government of Nova Scotia", "https://novascotiaimmigration.com/move-here/", None),
+    "prog-ns": ("Nova Scotia Immigration (NSNP news items)", "Government of Nova Scotia", "https://liveinnovascotia.com/nova-scotia-nominee-program", None),
     "prog-nl": ("Newfoundland and Labrador Provincial Nominee Program (NLPNP): overview and Skilled Worker category", "Government of Newfoundland and Labrador", "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/overview/", None),
     "prog-nt": ("Northwest Territories Nominee Program: Immigrate Here; Employer-Driven Stream", "Government of the Northwest Territories", "https://www.immigratenwt.ca/immigrate-here", None),
     "prog-qc": ("Québec immigration: programs for skilled workers (PSTQ, PRTQ, pilot programs)", "Gouvernement du Québec", "https://www.quebec.ca/en/immigration/permanent/skilled-workers", "pages updated 2025-12-22 to 2026-08-31"),
@@ -88,22 +88,22 @@ def build() -> list[dict]:
            "Candidates create a profile and enter the pool; IRCC invites the candidates with the most points in rounds.",
            "A provincial nomination adds 600 points to an Express Entry profile (per IRCC's PNP page)."],
           "varies", IC + "/express-entry.html", "ircc-express-entry", short="Express Entry",
-          links=[("Who can apply", IC + "/express-entry/eligibility.html"), ("Immigrate as a provincial nominee", IC + "/provincial-nominees.html")]))
+          links=[("Who can apply", IC + "/express-entry/who-can-apply.html"), ("Immigrate as a provincial nominee", IC + "/provincial-nominees.html")]))
     A(rec("express-entry-cec", "Canadian Experience Class (Express Entry)", "federal", I, "federal_economic",
           "Express Entry program for skilled workers with eligible Canadian work experience.", "Workers with Canadian skilled work experience (NOC TEER 0-3).", "Canada outside Quebec.",
           ["Language: CLB 7 for TEER 0 or 1 occupations; CLB 5 for TEER 2 or 3 occupations.",
            "Work experience: 1 year in Canada within the last 3 years (full-time or part-time combination), in TEER 0, 1, 2 or 3.",
-           "Education not required."], "no", IC + "/express-entry/eligibility.html", "ircc-express-entry", parent="express-entry", short="CEC"))
+           "Education not required."], "no", IC + "/express-entry/who-can-apply.html", "ircc-express-entry", parent="express-entry", short="CEC"))
     A(rec("express-entry-fswp", "Federal Skilled Worker Program (Express Entry)", "federal", I, "federal_economic",
           "Express Entry program for skilled workers with eligible foreign or Canadian work experience.", "Skilled workers (NOC TEER 0-3), in Canada or abroad.", "Canada outside Quebec.",
           ["Language: CLB 7.", "Work experience: 1 year continuous within the last 10 years in the primary occupation (TEER 0-3).",
            "Secondary education required; more selection points for post-secondary education.",
-           "Job offer not required, but a valid job offer earns selection criteria points."], "no", IC + "/express-entry/eligibility.html", "ircc-express-entry", parent="express-entry", short="FSWP"))
+           "Job offer not required, but a valid job offer earns selection criteria points."], "no", IC + "/express-entry/who-can-apply.html", "ircc-express-entry", parent="express-entry", short="FSWP"))
     A(rec("express-entry-fstp", "Federal Skilled Trades Program (Express Entry)", "federal", I, "federal_economic",
           "Express Entry program for skilled workers who are qualified in a skilled trade.", "Tradespeople in eligible skilled-trade occupations (TEER 2 or 3 key groups).", "Canada outside Quebec.",
           ["Language: CLB 5 for speaking and listening, CLB 4 for reading and writing.", "Work experience: 2 years within the last 5 years in a skilled trade.",
            "Requires a valid full-time job offer of at least 1 year, or a certificate of qualification in the trade from a Canadian authority.", "Education not required."],
-          "yes", IC + "/express-entry/eligibility.html", "ircc-express-entry", parent="express-entry", short="FSTP"))
+          "yes", IC + "/express-entry/who-can-apply.html", "ircc-express-entry", parent="express-entry", short="FSTP"))
     A(rec("pnp-overview", "Provincial Nominee Program (PNP) - federal overview", "federal", I, "provincial_nominee",
           "Lets provinces and territories nominate people with the skills, education and work experience to contribute to their economy who want to live there and become permanent residents.",
           "Workers, business people and others who want to live in a specific province or territory.", "All provinces and territories except Quebec and Nunavut (which have no PNP per IRCC).",
@@ -163,8 +163,8 @@ def build() -> list[dict]:
           "Temporary residents in essential or health occupations and recent graduates (2021).", "Canada.", ["IRCC: the pathway closed on November 5, 2021."], "unknown", IC + "/tr-pr-pathway.html", "ircc-closed-pilots",
           status=st("closed", "'This pathway closed on November 5, 2021.'", IC + "/tr-pr-pathway.html")))
     A(rec("start-up-visa", "Start-up Visa Program", "federal", I, "federal_economic", "Program for immigrant entrepreneurs with skills and potential to build innovative businesses in Canada (outside Quebec).",
-          "Entrepreneurs.", "Canada outside Quebec.", ["IRCC describes the targeted businesses as innovative, able to create jobs for Canadians and able to compete globally."], "not_applicable", IC + "/start-visa.html", "ircc-startup-self",
-          status=st("paused", "IRCC page: 'Status: Paused'.", IC + "/start-visa.html")))
+          "Entrepreneurs.", "Canada outside Quebec.", ["IRCC describes the targeted businesses as innovative, able to create jobs for Canadians and able to compete globally.", "IRCC (re-read 2026-11-05): applying requires a valid 2025 commitment certificate and applying by June 30, 2026 (that date has passed); the program is closed to all other applications."], "not_applicable", IC + "/start-visa.html", "ircc-startup-self",
+          status=st("paused", "IRCC page (re-read 2026-11-05): 'Status: Paused'; only holders of a valid 2025 commitment certificate could apply, by June 30, 2026 (passed); closed to all other applications.", IC + "/start-visa.html")))
     A(rec("self-employed-persons", "Self-Employed Persons Program", "federal", I, "federal_economic", "Permanent residence program for people with relevant experience in cultural activities or athletics.",
           "Self-employed people in cultural activities or athletics.", "Canada outside Quebec.", ["IRCC: for people who will make a significant contribution to the cultural or athletic life of Canada."], "not_applicable", IC + "/self-employed.html", "ircc-startup-self",
           status=st("paused", "IRCC page: 'Status Paused'.", IC + "/self-employed.html")))
@@ -222,8 +222,8 @@ def build() -> list[dict]:
           ["Two main pathways: Skills Immigration (workers) and Entrepreneur Immigration.", "Candidates register and are invited to apply in periodic rounds; invitation targets include priority groups such as health care and childcare.",
            "Application fee for workers: $1,750 CAD (registration has no fee), per the BC PNP page."], "varies", BC + "/the-bc-provincial-nominee-program", "prog-bc", short="BC PNP",
           status=st("intake_rounds", "BC PNP 'Invitations to apply' page (last updated October 29, 2026): 'Periodically, the BC PNP invites candidates in its registration pool to apply to the program.'", BC + "/invitations-to-apply"),
-          links=[("Invitations to apply", BC + "/invitations-to-apply"), ("Workers: Skills Immigration", "https://www.welcomebc.ca/immigrate-to-b-c/skills-immigration")]))
-    SK_ = "https://www.welcomebc.ca/immigrate-to-b-c/skills-immigration"
+          links=[("Invitations to apply", BC + "/invitations-to-apply"), ("Workers: Skills Immigration", "https://www.welcomebc.ca/immigrate-to-b-c/for-workers")]))
+    SK_ = "https://www.welcomebc.ca/immigrate-to-b-c/for-workers"
     A(rec("bc-pnp-skilled-worker", "BC PNP Skills Immigration: Skilled Worker stream", "BC", "BC PNP", "provincial_nominee", "Nomination for workers with a job offer in B.C.", "Workers with a B.C. job offer in a NOC TEER 0-3 occupation.", "British Columbia.",
           ["Full-time, indeterminate job offer from an eligible B.C. employer, supported by an Employer Declaration Form.", "Minimum two years full-time-equivalent work experience; meet occupation education and licensing credentials.",
            "Canadian Language Benchmark level 4; meet minimum wage and income requirements.", "Certain occupations (e.g. administrative assistants, retail sales supervisors) are listed as ineligible."], "yes", SK_, "prog-bc", parent="bc-pnp"))
@@ -248,7 +248,7 @@ def build() -> list[dict]:
     ON = "https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp"
     A(rec("on-oinp", "Ontario Immigrant Nominee Program (OINP)", "ON", "Government of Ontario (OINP)", "provincial_nominee", "Ontario's economic immigration program; nominates people with skills and experience the Ontario economy needs.", "Foreign workers with a job offer; self-employed physicians.", "Ontario.",
           ["Ontario's page: the new Ontario Workforce Priority stream has launched and all other streams are closed; further changes are signalled.", "IRCC makes the final permanent residence decision."], "varies", ON, "prog-on", short="OINP",
-          links=[("Closed streams", "https://www.ontario.ca/page/ontario-immigrant-nominee-program-streams"), ("Previous invitations to apply", "https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp-invitations-apply")]))
+          links=[("Closed streams", "https://www.ontario.ca/page/ontario-immigrant-nominee-program-streams"), ("Previous invitations to apply", "https://www.ontario.ca/page/invitations-apply-oinp")]))
     A(rec("on-oinp-previous-streams", "OINP previous streams (closed)", "ON", "OINP", "provincial_nominee", "Ontario's earlier OINP streams, replaced by the Ontario Workforce Priority stream.", "Previous OINP applicants.", "Ontario.",
           ["OINP page: 'all other streams are now closed'; the Closed streams page lists Ontario's previous immigration streams."], "unknown", "https://www.ontario.ca/page/ontario-immigrant-nominee-program-streams", "prog-on", parent="on-oinp",
           status=st("closed", "OINP page: 'The new Ontario Workforce Priority stream has now launched, and all other streams are now closed.'", ON)))
@@ -267,7 +267,8 @@ def build() -> list[dict]:
     A(rec("nb-express-entry", "NB Express Entry stream", "NB", "Immigration New Brunswick", "provincial_nominee", "Provincial stream linked to Express Entry candidates.", "Express Entry candidates.", "New Brunswick.", ["Details not read; see the official page."], "unknown", NB + "/express-entry-stream.html", "prog-nb", parent="nb-pnp"))
     # ------------------------------------------------------------ Nova Scotia / PEI / NL / Yukon / NWT
     A(rec("ns-nsnp", "Nova Scotia Nominee Program (NSNP)", "NS", "Nova Scotia Office of Immigration and Population Growth", "provincial_nominee", "Nova Scotia's provincial nominee program.", "Workers and others selected by Nova Scotia.", "Nova Scotia.",
-          ["Nova Scotia's site news (read 2026-11-05): 'Effective September 1, 2026, Nova Scotia will introduce application fees for the Nova Scotia Nominee Program' (posted August 6, 2026).", "News item of July 14, 2026: Nova Scotia is implementing a one-time expansion of its immigration selection priorities for 2026 to align with labour market needs and available nomination spaces (the item itself could not be read).", "Express Entry candidates who receive a Notice of Interest are directed to the Critical Vacancies page.", "Stream pages could not be read: novascotiaimmigration.com serves only its home page to plain HTTP requests (content is rendered with JavaScript) and no other official readable page was found, so stream conditions are not recorded."], "unknown", "https://novascotiaimmigration.com/move-here/", "prog-ns", short="NSNP"))
+          ["Candidates submit an expression of interest (EOI) to a stream; Nova Scotia periodically selects from the EOI pool by provincial priorities and capacity (re-read 2026-11-05 at liveinnovascotia.com, which novascotiaimmigration.com now redirects to).", "EOIs have a 12-month validity period effective May 1, 2026 (transition measures apply).", "Application fees from September 1, 2026, charged only once an EOI is selected: $1,000 for worker streams, $2,000 for the entrepreneur stream; no fee to submit an EOI.", "July 14, 2026: one-time expansion of 2026 selection priorities for active EOIs submitted on or before June 30, 2026, covering candidates already working in Nova Scotia whose work permit expires in 2026 or earlier.", "Per the EOI Selection page (updated October 23, 2026), 946 candidates were selected in September 2026; October 2026 not yet reported.", "Stream-by-stream eligibility conditions were not read."], "unknown", "https://liveinnovascotia.com/nova-scotia-nominee-program", "prog-ns", short="NSNP",
+          status=st("intake_rounds", "NSNP page (re-read 2026-11-05): candidates submit an EOI and Nova Scotia 'periodically selects' from the pool.", "https://liveinnovascotia.com/nova-scotia-nominee-program")))
     A(rec("pe-pnp", "PEI Provincial Nominee Program", "PE", "Government of Prince Edward Island", "provincial_nominee", "Prince Edward Island's provincial nominee program (IRCC links to the 'Immigrate to PEI as a worker' page).", "Workers.", "Prince Edward Island.",
           ["The province's page could not be read (HTTP 403 from the host), so no conditions are recorded."], "unknown", "https://www.princeedwardisland.ca/en/topic/immigrate-to-pei-as-a-worker", "ircc-pnp", short="PEI PNP"))
     NL = "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program"
@@ -282,12 +283,12 @@ def build() -> list[dict]:
           ["Streams: Employer-Driven Stream, Business Stream, Francophone Stream.", "Employer-Driven Stream: job offer from an NWT employer, who applies on the worker's behalf."], "varies", NT + "/immigrate-here", "prog-nt", short="NWTNP",
           status=st("closed", "NWT page: 'The Northwest Territories Nominee Program has closed its 2025 intake. The program has received enough applications to fill its nomination cap of 300.' (page re-read 2026-11-05; wording unchanged; the page does not say whether or when intake will reopen)", NT + "/immigrate-here")))
     # ------------------------------------------------------------ RCIP/FCIP communities
-    R_COMM = [("pictou", "Pictou County", "NS", [], "https://pictoucountypartnership.com/rcip/"), ("north-bay", "North Bay and Area", "ON", [], "https://nbrcip.ca/"),
+    R_COMM = [("pictou", "Pictou County", "NS", [], "https://pictoucountypartnership.com/program/rural-community-immigration-pilot-rcip/"), ("north-bay", "North Bay and Area", "ON", [], "https://nbrcip.ca/"),
               ("sudbury", "Greater Sudbury", "ON", ["sudbury"], "https://investsudbury.ca/why-sudbury/newcomers/rcipfcip/"), ("timmins", "Timmins", "ON", [], "https://timminsedc.com/immigration/"),
-              ("sault-ste-marie", "Sault Ste. Marie", "ON", [], "https://welcometossm.com/rcip/"), ("thunder-bay", "Thunder Bay", "ON", ["thunder-bay"], "https://gotothunderbay.ca/why-thunder-bay/immigration/"),
+              ("sault-ste-marie", "Sault Ste. Marie", "ON", [], "https://welcometossm.com/rcip/"), ("thunder-bay", "Thunder Bay", "ON", ["thunder-bay"], "https://gotothunderbay.ca/immigration/"),
               ("steinbach", "Steinbach", "MB", [], "https://steinbachedc.com/rcip/"), ("altona-rhineland", "Altona/Rhineland", "MB", [], "https://ared-rpga.com/immigration/rcip/"),
               ("brandon", "Brandon", "MB", ["brandon"], "https://economicdevelopmentbrandon.com/rcip/rcip"), ("moose-jaw", "Moose Jaw", "SK", [], "https://rcip.mjchamber.com/"),
-              ("claresholm", "Claresholm", "AB", [], "https://claresholm-rcip.ca/"), ("west-kootenay", "West Kootenay", "BC", [], "https://wk-rnip.ca/"),
+              ("claresholm", "Claresholm", "AB", [], "https://claresholm-rcip.ca/"), ("west-kootenay", "West Kootenay", "BC", [], "https://westkootenayimmigration.ca/"),
               ("north-okanagan-shuswap", "North Okanagan Shuswap", "BC", [], "https://rcipnorthokanaganshuswap.com/"), ("peace-liard", "Peace Liard", "BC", [], "https://www.nebcimmigration.ca/")]
     for cid, nm, pr, pl, url in R_COMM:
         src, extra = "ircc-rural-franco", []
@@ -301,7 +302,7 @@ def build() -> list[dict]:
               "yes", url, src, parent="rcip", placeIds=pl, links=[("IRCC participating communities", IC + "/rural-franco-pilots.html")]))
     F_COMM = [("acadian-peninsula", "Acadian Peninsula", "NB", [], "https://inspirepeninsuleacadienne.ca/programme-pilote-immigration-communautes-francophones/"),
               ("sudbury", "Greater Sudbury", "ON", ["sudbury"], "https://investsudbury.ca/why-sudbury/newcomers/rcipfcip/"), ("timmins", "Timmins", "ON", [], "https://timminsedc.com/immigration/"),
-              ("superior-east", "Superior East Region", "ON", [], "https://superioreastcfdc.ca/superioreastcfdc.ca/index.php/en-ca/fcip"),
+              ("superior-east", "Superior East Region", "ON", [], "https://superioreastcfdc.ca/superioreastcfdc.ca/index.php/fcip"),
               ("st-pierre-jolys", "St. Pierre Jolys", "MB", [], "https://villagestpierrejolys.ca/p/francophone-communities-immigration-pilot-program"), ("kelowna", "Kelowna", "BC", ["kelowna"], "https://www.sdecb.com/en/pilot-program/")]
     for cid, nm, pr, pl, url in F_COMM:
         src, extra = "ircc-rural-franco", []
@@ -322,10 +323,10 @@ def build() -> list[dict]:
            "IRCC notice: starting April 1, 2026, economic class permanent residents can access newcomer services for a limited time.", "In Quebec, use Quebec's integration support services instead."], "not_applicable", "https://ircc.canada.ca/english/newcomers/services/index.asp", "ircc-newcomer-services",
           links=[("Integration support in Quebec", "https://www.quebec.ca/en/immigration/settle-and-integrate-in-quebec")]))
     A(rec("ircc-settling-in-canada", "Settling in Canada (IRCC guide, incl. Choose a city)", "federal", I, "settlement_support", "IRCC information hub for newcomers: choosing a city, preparing financially, provinces and territories, credentials, job search, language and driving.", "Newcomers and prospective newcomers.", "Canada.",
-          ["Includes a 'Choose a city' page on city size, community diversity and francophone communities."], "not_applicable", C + "/new-immigrants/prepare-life-canada.html", "ircc-settling",
+          ["Includes a 'Choose a city' page on city size, community diversity and francophone communities."], "not_applicable", C + "/settle-canada.html", "ircc-settling",
           links=[("Choose a city", C + "/settle-canada/choose-city.html")]))
     for r in R:
-        if r["id"] in ("qc-peq", "nt-nwtnp", "ns-nsnp"):
+        if r["id"] in ("qc-peq", "nt-nwtnp", "ns-nsnp", "start-up-visa", "self-employed-persons", "pnp-overview", "aip", "rcip", "fcip", "bc-pnp", "on-oinp-workforce-priority", "on-oinp-previous-streams", "nb-pnp"):
             r["lastChecked"] = "2026-11-05"
             if r.get("status"):
                 pass
