@@ -40,15 +40,15 @@ The full 43-10-0030-01 CSV is ~16 GB and 43-10-0022-01 ~20 GB uncompressed. The 
 * Fredericton: no CMA retention (new 2021 CMA; no immigrants with that intended destination in the 2018 cohort data).
 * No per-category or province-level IRCC detail beyond what the CMA table carries.
 
-## Program directory (`programs.json`, 67 records)
+## Program directory (`programs.json`, 68 records)
 Federal (Express Entry + 3 programs, PNP overview, AIP, RCIP, FCIP, physicians pathways, closed/paused programs), Quebec (PSTQ, closed PRTQ and food-processing pilot, other pilots), provincial nominee programs and major streams for AB, BC, MB, SK, ON, NB, NS, PE, NL, YT, NT, RCIP (14) and FCIP (6) communities (placeIds for Sudbury, Thunder Bay, Brandon, Kelowna), and IRCC pre-arrival/settlement links. `status` is set only where a page stated it (see `status.note`).
 
 **Pages that could not be read or were thin** (records are minimal and say so):
-* princeedwardisland.ca (HTTP 403) -> PEI PNP record has URL only; yukon.ca (HTTP 403) -> Yukon record URL only.
-* novascotiaimmigration.com renders streams with JavaScript -> NSNP record is minimal.
-* gotothunderbay.ca returned a bot-verification page and economicdevelopmentbrandon.com failed to connect: not bypassed; Thunder Bay and Brandon records use IRCC's pilot-wide conditions and link to the community URLs listed by IRCC. Other community sites (e.g. nbrcip.ca) were not read; their records carry pilot-wide conditions only.
-* Quebec's PEQ page and the PSTQ's four stream definitions were not read (PEQ omitted); SK program categories and NL categories are listed from overview pages without per-category conditions; Alberta/BC entrepreneur streams and Quebec orderlies/AI pilots are mentioned only briefly.
-* The NWT page states "has closed its 2025 intake"; recorded as read, with that caveat in the note.
+* princeedwardisland.ca (HTTP 403, also for the alternative program page tried 2026-11-05) -> PEI PNP record has URL only; yukon.ca (HTTP 403, also for the alternative nominee-program URL tried 2026-11-05) -> Yukon record URL only. Not retried further.
+* novascotiaimmigration.com serves only its JavaScript home page for every path (stream pages, news items, `/nova-scotia-nominee-program`); no readable official alternative found -> NSNP record keeps only what the home-page news teasers state (fees from 2026-09-01; one-time 2026 priorities expansion), no stream conditions.
+* gotothunderbay.ca returned a bot-verification page (alternative city URL tried 2026-11-05 returned 404; not bypassed). economicdevelopmentbrandon.com (also www.) fails TLS certificate verification from our fetcher (certificate chain not verifiable; not bypassed) -> Thunder Bay and Brandon records use IRCC's pilot-wide conditions and link to the community URLs listed by IRCC. Other community sites (e.g. nbrcip.ca) were not read; their records carry pilot-wide conditions only.
+* Quebec PEQ: no English quebec.ca page exists (HTTP 410/404); the French page and its selection-conditions page were read 2026-11-05 (`qc-peq`, status closed as stated); the stream-specific condition pages were not read. The PSTQ's four stream definitions were not read; SK program categories and NL categories are listed from overview pages without per-category conditions; Alberta/BC entrepreneur streams and Quebec orderlies/AI pilots are mentioned only briefly.
+* The NWT page states "has closed its 2025 intake"; re-read 2026-11-05, wording unchanged; recorded as read, with that caveat in the note.
 
 ## Limitations
 * Admissions are intended destination, rounded to 5; year-over-year changes for small places are imprecise.

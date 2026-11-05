@@ -433,6 +433,39 @@
   ]
  },
  {
+  "id": "qc-peq",
+  "name": "Quebec Experience Program (PEQ)",
+  "jurisdiction": "QC",
+  "operator": "Ministere de l'Immigration, de la Francisation et de l'Integration (Quebec)",
+  "category": "quebec",
+  "purpose": "Quebec program (Programme de l'experience quebecoise) for temporary foreign workers and foreign graduates of Quebec institutions who want to settle permanently in Quebec.",
+  "audience": "Temporary foreign workers and foreign students who graduated in Quebec.",
+  "geography": "Quebec.",
+  "majorConditions": [
+   "Two streams: Temporary Foreign Workers and Quebec Graduates; general conditions plus stream-specific conditions (details on the stream pages, not read in full).",
+   "Quebec's page (in French): the intake period, open since July 2, 2026, closed on October 31, 2026, so applications can no longer be submitted; no decision has been made about a possible new intake period.",
+   "After October 31, 2026, requests to add or remove family members are still possible for files without a decision or with a selection certificate (CSQ) issued.",
+   "Quebec's page points people who want to immigrate permanently to declare interest in Arrima for a possible invitation to the PSTQ."
+  ],
+  "jobOfferRequired": "varies",
+  "officialUrl": "https://www.quebec.ca/immigration/permanente/travailleurs-qualifies/programme-experience-quebecoise",
+  "lastChecked": "2026-11-05",
+  "sourceId": "prog-peq",
+  "shortName": "PEQ",
+  "placeIds": [],
+  "status": {
+   "value": "closed",
+   "note": "Quebec page (French, updated 2026-10-29): 'La periode de reception des demandes au Programme de l'experience quebecoise, qui etait ouverte depuis le 2 juillet 2026, est fermee depuis le 31 octobre 2026. Il n'est donc plus possible de presenter une demande dans ce programme. Il n'y a pas de decision prise quant a une possible nouvelle periode de reception des demandes.' (the English quebec.ca PEQ page was not available: HTTP 410/404)",
+   "sourceUrl": "https://www.quebec.ca/immigration/permanente/travailleurs-qualifies/programme-experience-quebecoise"
+  },
+  "links": [
+   {
+    "label": "Selection conditions (French)",
+    "url": "https://www.quebec.ca/immigration/permanente/travailleurs-qualifies/programme-experience-quebecoise/conditions-selection"
+   }
+  ]
+ },
+ {
   "id": "qc-prtq",
   "name": "Regular Skilled Worker Program (PRTQ)",
   "jurisdiction": "QC",
@@ -947,13 +980,14 @@
   "audience": "Workers and others selected by Nova Scotia.",
   "geography": "Nova Scotia.",
   "majorConditions": [
-   "Nova Scotia's site notes that application fees for the NSNP apply from September 1, 2026.",
+   "Nova Scotia's site news (read 2026-11-05): 'Effective September 1, 2026, Nova Scotia will introduce application fees for the Nova Scotia Nominee Program' (posted August 6, 2026).",
+   "News item of July 14, 2026: Nova Scotia is implementing a one-time expansion of its immigration selection priorities for 2026 to align with labour market needs and available nomination spaces (the item itself could not be read).",
    "Express Entry candidates who receive a Notice of Interest are directed to the Critical Vacancies page.",
-   "Stream details could not be read (the site renders its content with JavaScript)."
+   "Stream pages could not be read: novascotiaimmigration.com serves only its home page to plain HTTP requests (content is rendered with JavaScript) and no other official readable page was found, so stream conditions are not recorded."
   ],
   "jobOfferRequired": "unknown",
   "officialUrl": "https://novascotiaimmigration.com/move-here/",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "prog-ns",
   "shortName": "NSNP",
   "placeIds": []
@@ -1050,13 +1084,13 @@
   ],
   "jobOfferRequired": "varies",
   "officialUrl": "https://www.immigratenwt.ca/immigrate-here",
-  "lastChecked": "2026-11-04",
+  "lastChecked": "2026-11-05",
   "sourceId": "prog-nt",
   "shortName": "NWTNP",
   "placeIds": [],
   "status": {
    "value": "closed",
-   "note": "NWT page: 'The Northwest Territories Nominee Program has closed its 2025 intake. The program has received enough applications to fill its nomination cap of 300.' (wording as read on 2026-11-04; the page may not have been updated for later intake)",
+   "note": "NWT page: 'The Northwest Territories Nominee Program has closed its 2025 intake. The program has received enough applications to fill its nomination cap of 300.' (page re-read 2026-11-05; wording unchanged; the page does not say whether or when intake will reopen)",
    "sourceUrl": "https://www.immigratenwt.ca/immigrate-here"
   }
  },
@@ -1284,6 +1318,7 @@
   "geography": "Brandon and area (boundary map on IRCC's page).",
   "majorConditions": [
    "Pilot-wide conditions apply (see RCIP record): designated-employer job offer, 1,560 hours related experience in 3 years, language test, education, funds.",
+   "Brandon's own RCIP page (economicdevelopmentbrandon.com) could not be read: its TLS certificate chain could not be verified from our fetcher (re-tried 2026-11-05; verification not bypassed). Only IRCC's pilot-wide conditions and its listing of Brandon are recorded here.",
    "Community-specific requirements are published on the community's own website."
   ],
   "jobOfferRequired": "yes",

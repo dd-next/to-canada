@@ -36,6 +36,7 @@ SOURCES = {
     "prog-nl": ("Newfoundland and Labrador Provincial Nominee Program (NLPNP): overview and Skilled Worker category", "Government of Newfoundland and Labrador", "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/overview/", None),
     "prog-nt": ("Northwest Territories Nominee Program: Immigrate Here; Employer-Driven Stream", "Government of the Northwest Territories", "https://www.immigratenwt.ca/immigrate-here", None),
     "prog-qc": ("Québec immigration: programs for skilled workers (PSTQ, PRTQ, pilot programs)", "Gouvernement du Québec", "https://www.quebec.ca/en/immigration/permanent/skilled-workers", "pages updated 2025-12-22 to 2026-08-31"),
+    "prog-peq": ("Programme de l'experience quebecoise (PEQ) (French-language page; no English page found)", "Gouvernement du Québec", "https://www.quebec.ca/immigration/permanente/travailleurs-qualifies/programme-experience-quebecoise", "page dated 2026-10-29 (Derniere mise a jour)"),
     "comm-sudbury": ("Greater Sudbury RCIP and FCIP (Invest Sudbury)", "City of Greater Sudbury Economic Development", "https://investsudbury.ca/why-sudbury/newcomers/rcipfcip/", None),
     "comm-kelowna": ("Immigration to Rural and Francophone Communities (FCIP) - Kelowna", "Societe de developpement economique de la Colombie-Britannique (SDECB)", "https://www.sdecb.com/en/pilot-program/", None),
 }
@@ -177,6 +178,16 @@ def build() -> list[dict]:
            "Quebec selects first; IRCC then processes the federal permanent residence application."],
           "varies", Q + "/skilled-worker-selection-program", "prog-qc", short="PSTQ",
           links=[("Requirements", Q + "/skilled-worker-selection-program/requirements"), ("IRCC: Quebec-selected skilled workers", IC + "/quebec-skilled-workers.html")]))
+    PEQ = "https://www.quebec.ca/immigration/permanente/travailleurs-qualifies/programme-experience-quebecoise"
+    A(rec("qc-peq", "Quebec Experience Program (PEQ)", "QC", "Ministere de l'Immigration, de la Francisation et de l'Integration (Quebec)", "quebec",
+          "Quebec program (Programme de l'experience quebecoise) for temporary foreign workers and foreign graduates of Quebec institutions who want to settle permanently in Quebec.", "Temporary foreign workers and foreign students who graduated in Quebec.", "Quebec.",
+          ["Two streams: Temporary Foreign Workers and Quebec Graduates; general conditions plus stream-specific conditions (details on the stream pages, not read in full).",
+           "Quebec's page (in French): the intake period, open since July 2, 2026, closed on October 31, 2026, so applications can no longer be submitted; no decision has been made about a possible new intake period.",
+           "After October 31, 2026, requests to add or remove family members are still possible for files without a decision or with a selection certificate (CSQ) issued.",
+           "Quebec's page points people who want to immigrate permanently to declare interest in Arrima for a possible invitation to the PSTQ."],
+          "varies", PEQ, "prog-peq", short="PEQ",
+          status=st("closed", "Quebec page (French, updated 2026-10-29): 'La periode de reception des demandes au Programme de l'experience quebecoise, qui etait ouverte depuis le 2 juillet 2026, est fermee depuis le 31 octobre 2026. Il n'est donc plus possible de presenter une demande dans ce programme. Il n'y a pas de decision prise quant a une possible nouvelle periode de reception des demandes.' (the English quebec.ca PEQ page was not available: HTTP 410/404)", PEQ),
+          links=[("Selection conditions (French)", PEQ + "/conditions-selection")]))
     A(rec("qc-prtq", "Regular Skilled Worker Program (PRTQ)", "QC", "Ministere de l'Immigration, de la Francisation et de l'Integration (Quebec)", "quebec", "Former Quebec skilled worker program, replaced by the PSTQ.", "Skilled workers invited before 29 November 2024.", "Quebec.",
           ["Quebec's page: you must have received an invitation before November 29, 2024 to apply for selection under the PRTQ."], "unknown", Q + "/regular-skilled-worker-program", "prog-qc", parent=None,
           status=st("closed", "'The PRTQ has been replaced by the Programme de selection des travailleurs qualifies (PSTQ).' Invitations only before November 29, 2024.", Q + "/regular-skilled-worker-program")))
@@ -256,7 +267,7 @@ def build() -> list[dict]:
     A(rec("nb-express-entry", "NB Express Entry stream", "NB", "Immigration New Brunswick", "provincial_nominee", "Provincial stream linked to Express Entry candidates.", "Express Entry candidates.", "New Brunswick.", ["Details not read; see the official page."], "unknown", NB + "/express-entry-stream.html", "prog-nb", parent="nb-pnp"))
     # ------------------------------------------------------------ Nova Scotia / PEI / NL / Yukon / NWT
     A(rec("ns-nsnp", "Nova Scotia Nominee Program (NSNP)", "NS", "Nova Scotia Office of Immigration and Population Growth", "provincial_nominee", "Nova Scotia's provincial nominee program.", "Workers and others selected by Nova Scotia.", "Nova Scotia.",
-          ["Nova Scotia's site notes that application fees for the NSNP apply from September 1, 2026.", "Express Entry candidates who receive a Notice of Interest are directed to the Critical Vacancies page.", "Stream details could not be read (the site renders its content with JavaScript)."], "unknown", "https://novascotiaimmigration.com/move-here/", "prog-ns", short="NSNP"))
+          ["Nova Scotia's site news (read 2026-11-05): 'Effective September 1, 2026, Nova Scotia will introduce application fees for the Nova Scotia Nominee Program' (posted August 6, 2026).", "News item of July 14, 2026: Nova Scotia is implementing a one-time expansion of its immigration selection priorities for 2026 to align with labour market needs and available nomination spaces (the item itself could not be read).", "Express Entry candidates who receive a Notice of Interest are directed to the Critical Vacancies page.", "Stream pages could not be read: novascotiaimmigration.com serves only its home page to plain HTTP requests (content is rendered with JavaScript) and no other official readable page was found, so stream conditions are not recorded."], "unknown", "https://novascotiaimmigration.com/move-here/", "prog-ns", short="NSNP"))
     A(rec("pe-pnp", "PEI Provincial Nominee Program", "PE", "Government of Prince Edward Island", "provincial_nominee", "Prince Edward Island's provincial nominee program (IRCC links to the 'Immigrate to PEI as a worker' page).", "Workers.", "Prince Edward Island.",
           ["The province's page could not be read (HTTP 403 from the host), so no conditions are recorded."], "unknown", "https://www.princeedwardisland.ca/en/topic/immigrate-to-pei-as-a-worker", "ircc-pnp", short="PEI PNP"))
     NL = "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program"
@@ -269,7 +280,7 @@ def build() -> list[dict]:
     NT = "https://www.immigratenwt.ca"
     A(rec("nt-nwtnp", "Northwest Territories Nominee Program (NTNP)", "NT", "Government of the Northwest Territories", "provincial_nominee", "Nominates people to move to the NWT for employer-supported jobs or to open, purchase or invest in a business.", "Workers with an NWT job offer; business people; Francophone applicants.", "Northwest Territories.",
           ["Streams: Employer-Driven Stream, Business Stream, Francophone Stream.", "Employer-Driven Stream: job offer from an NWT employer, who applies on the worker's behalf."], "varies", NT + "/immigrate-here", "prog-nt", short="NWTNP",
-          status=st("closed", "NWT page: 'The Northwest Territories Nominee Program has closed its 2025 intake. The program has received enough applications to fill its nomination cap of 300.' (wording as read on 2026-11-04; the page may not have been updated for later intake)", NT + "/immigrate-here")))
+          status=st("closed", "NWT page: 'The Northwest Territories Nominee Program has closed its 2025 intake. The program has received enough applications to fill its nomination cap of 300.' (page re-read 2026-11-05; wording unchanged; the page does not say whether or when intake will reopen)", NT + "/immigrate-here")))
     # ------------------------------------------------------------ RCIP/FCIP communities
     R_COMM = [("pictou", "Pictou County", "NS", [], "https://pictoucountypartnership.com/rcip/"), ("north-bay", "North Bay and Area", "ON", [], "https://nbrcip.ca/"),
               ("sudbury", "Greater Sudbury", "ON", ["sudbury"], "https://investsudbury.ca/why-sudbury/newcomers/rcipfcip/"), ("timmins", "Timmins", "ON", [], "https://timminsedc.com/immigration/"),
@@ -280,6 +291,8 @@ def build() -> list[dict]:
               ("north-okanagan-shuswap", "North Okanagan Shuswap", "BC", [], "https://rcipnorthokanaganshuswap.com/"), ("peace-liard", "Peace Liard", "BC", [], "https://www.nebcimmigration.ca/")]
     for cid, nm, pr, pl, url in R_COMM:
         src, extra = "ircc-rural-franco", []
+        if cid == "brandon":
+            extra = ["Brandon's own RCIP page (economicdevelopmentbrandon.com) could not be read: its TLS certificate chain could not be verified from our fetcher (re-tried 2026-11-05; verification not bypassed). Only IRCC's pilot-wide conditions and its listing of Brandon are recorded here."]
         if cid == "sudbury":
             src = "comm-sudbury"
             extra = ["Sudbury's page: delivered by the City of Greater Sudbury Economic Development; employers are expected to look locally before recruiting foreign nationals; approved candidates can apply for PR and an LMIA-exempt work permit."]
@@ -311,4 +324,9 @@ def build() -> list[dict]:
     A(rec("ircc-settling-in-canada", "Settling in Canada (IRCC guide, incl. Choose a city)", "federal", I, "settlement_support", "IRCC information hub for newcomers: choosing a city, preparing financially, provinces and territories, credentials, job search, language and driving.", "Newcomers and prospective newcomers.", "Canada.",
           ["Includes a 'Choose a city' page on city size, community diversity and francophone communities."], "not_applicable", C + "/new-immigrants/prepare-life-canada.html", "ircc-settling",
           links=[("Choose a city", C + "/settle-canada/choose-city.html")]))
+    for r in R:
+        if r["id"] in ("qc-peq", "nt-nwtnp", "ns-nsnp"):
+            r["lastChecked"] = "2026-11-05"
+            if r.get("status"):
+                pass
     return R

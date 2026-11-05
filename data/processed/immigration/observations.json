@@ -8,6 +8,7 @@
    "level": "cma",
    "id": "535",
    "name": "Toronto",
+   "dguid": "2021S0503535",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -25,6 +26,7 @@
    "level": "cma",
    "id": "535",
    "name": "Toronto",
+   "dguid": "2021S0503535",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -42,6 +44,7 @@
    "level": "cma",
    "id": "462",
    "name": "Montréal",
+   "dguid": "2021S0503462",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -59,6 +62,7 @@
    "level": "cma",
    "id": "462",
    "name": "Montréal",
+   "dguid": "2021S0503462",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -76,6 +80,7 @@
    "level": "cma",
    "id": "933",
    "name": "Vancouver",
+   "dguid": "2021S0503933",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -93,6 +98,7 @@
    "level": "cma",
    "id": "933",
    "name": "Vancouver",
+   "dguid": "2021S0503933",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -110,6 +116,7 @@
    "level": "cma",
    "id": "825",
    "name": "Calgary",
+   "dguid": "2021S0503825",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -127,6 +134,7 @@
    "level": "cma",
    "id": "825",
    "name": "Calgary",
+   "dguid": "2021S0503825",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -144,6 +152,7 @@
    "level": "cma",
    "id": "835",
    "name": "Edmonton",
+   "dguid": "2021S0503835",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -161,6 +170,7 @@
    "level": "cma",
    "id": "835",
    "name": "Edmonton",
+   "dguid": "2021S0503835",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -178,6 +188,7 @@
    "level": "cma_part",
    "id": "35505",
    "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -195,6 +206,7 @@
    "level": "cma_part",
    "id": "35505",
    "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -212,6 +224,7 @@
    "level": "cma_part",
    "id": "24505",
    "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -229,6 +242,7 @@
    "level": "cma_part",
    "id": "24505",
    "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -246,6 +260,7 @@
    "level": "cma",
    "id": "602",
    "name": "Winnipeg",
+   "dguid": "2021S0503602",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -263,6 +278,7 @@
    "level": "cma",
    "id": "602",
    "name": "Winnipeg",
+   "dguid": "2021S0503602",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -280,6 +296,7 @@
    "level": "cma",
    "id": "421",
    "name": "Québec",
+   "dguid": "2021S0503421",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -297,6 +314,7 @@
    "level": "cma",
    "id": "421",
    "name": "Québec",
+   "dguid": "2021S0503421",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -314,6 +332,7 @@
    "level": "cma",
    "id": "537",
    "name": "Hamilton",
+   "dguid": "2021S0503537",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -331,6 +350,7 @@
    "level": "cma",
    "id": "537",
    "name": "Hamilton",
+   "dguid": "2021S0503537",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -348,6 +368,7 @@
    "level": "cma",
    "id": "541",
    "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -365,6 +386,7 @@
    "level": "cma",
    "id": "541",
    "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -382,6 +404,7 @@
    "level": "cma",
    "id": "555",
    "name": "London",
+   "dguid": "2021S0503555",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -399,6 +422,7 @@
    "level": "cma",
    "id": "555",
    "name": "London",
+   "dguid": "2021S0503555",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -416,6 +440,7 @@
    "level": "cma",
    "id": "205",
    "name": "Halifax",
+   "dguid": "2021S0503205",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -433,6 +458,7 @@
    "level": "cma",
    "id": "205",
    "name": "Halifax",
+   "dguid": "2021S0503205",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -450,6 +476,7 @@
    "level": "cma",
    "id": "935",
    "name": "Victoria",
+   "dguid": "2021S0503935",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -467,6 +494,7 @@
    "level": "cma",
    "id": "935",
    "name": "Victoria",
+   "dguid": "2021S0503935",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -484,6 +512,7 @@
    "level": "cma",
    "id": "725",
    "name": "Saskatoon",
+   "dguid": "2021S0503725",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -501,6 +530,7 @@
    "level": "cma",
    "id": "725",
    "name": "Saskatoon",
+   "dguid": "2021S0503725",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -518,6 +548,7 @@
    "level": "cma",
    "id": "705",
    "name": "Regina",
+   "dguid": "2021S0503705",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -535,6 +566,7 @@
    "level": "cma",
    "id": "705",
    "name": "Regina",
+   "dguid": "2021S0503705",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -552,6 +584,7 @@
    "level": "cma",
    "id": "001",
    "name": "St. John's",
+   "dguid": "2021S0503001",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -569,6 +602,7 @@
    "level": "cma",
    "id": "001",
    "name": "St. John's",
+   "dguid": "2021S0503001",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -586,6 +620,7 @@
    "level": "cma",
    "id": "559",
    "name": "Windsor",
+   "dguid": "2021S0503559",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -603,6 +638,7 @@
    "level": "cma",
    "id": "559",
    "name": "Windsor",
+   "dguid": "2021S0503559",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -620,6 +656,7 @@
    "level": "cma",
    "id": "915",
    "name": "Kelowna",
+   "dguid": "2021S0503915",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -637,6 +674,7 @@
    "level": "cma",
    "id": "915",
    "name": "Kelowna",
+   "dguid": "2021S0503915",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -654,6 +692,7 @@
    "level": "cma",
    "id": "932",
    "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -671,6 +710,7 @@
    "level": "cma",
    "id": "932",
    "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -688,6 +728,7 @@
    "level": "cma",
    "id": "305",
    "name": "Moncton",
+   "dguid": "2021S0503305",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -705,6 +746,7 @@
    "level": "cma",
    "id": "305",
    "name": "Moncton",
+   "dguid": "2021S0503305",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -722,6 +764,7 @@
    "level": "cma",
    "id": "310",
    "name": "Saint John",
+   "dguid": "2021S0503310",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -739,6 +782,7 @@
    "level": "cma",
    "id": "310",
    "name": "Saint John",
+   "dguid": "2021S0503310",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -756,6 +800,7 @@
    "level": "cma",
    "id": "320",
    "name": "Fredericton",
+   "dguid": "2021S0503320",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -773,6 +818,7 @@
    "level": "cma",
    "id": "320",
    "name": "Fredericton",
+   "dguid": "2021S0503320",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -790,6 +836,7 @@
    "level": "cma",
    "id": "433",
    "name": "Sherbrooke",
+   "dguid": "2021S0503433",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -807,6 +854,7 @@
    "level": "cma",
    "id": "433",
    "name": "Sherbrooke",
+   "dguid": "2021S0503433",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -824,6 +872,7 @@
    "level": "cma",
    "id": "580",
    "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -841,6 +890,7 @@
    "level": "cma",
    "id": "580",
    "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -858,6 +908,7 @@
    "level": "cma",
    "id": "595",
    "name": "Thunder Bay",
+   "dguid": "2021S0503595",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -875,6 +926,7 @@
    "level": "cma",
    "id": "595",
    "name": "Thunder Bay",
+   "dguid": "2021S0503595",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -892,6 +944,7 @@
    "level": "ca",
    "id": "105",
    "name": "Charlottetown",
+   "dguid": "2021S0504105",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -909,6 +962,7 @@
    "level": "ca",
    "id": "105",
    "name": "Charlottetown",
+   "dguid": "2021S0504105",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -926,6 +980,7 @@
    "level": "ca",
    "id": "610",
    "name": "Brandon",
+   "dguid": "2021S0504610",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -943,6 +998,7 @@
    "level": "ca",
    "id": "610",
    "name": "Brandon",
+   "dguid": "2021S0504610",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -960,6 +1016,7 @@
    "level": "ca",
    "id": "990",
    "name": "Whitehorse",
+   "dguid": "2021S0504990",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -977,6 +1034,7 @@
    "level": "ca",
    "id": "990",
    "name": "Whitehorse",
+   "dguid": "2021S0504990",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -994,6 +1052,7 @@
    "level": "ca",
    "id": "995",
    "name": "Yellowknife",
+   "dguid": "2021S0504995",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1011,6 +1070,7 @@
    "level": "ca",
    "id": "995",
    "name": "Yellowknife",
+   "dguid": "2021S0504995",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1028,6 +1088,7 @@
    "level": "cma",
    "id": "535",
    "name": "Toronto",
+   "dguid": "2021S0503535",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1045,6 +1106,7 @@
    "level": "cma",
    "id": "462",
    "name": "Montréal",
+   "dguid": "2021S0503462",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1062,6 +1124,7 @@
    "level": "cma",
    "id": "933",
    "name": "Vancouver",
+   "dguid": "2021S0503933",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1079,6 +1142,7 @@
    "level": "cma",
    "id": "825",
    "name": "Calgary",
+   "dguid": "2021S0503825",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1096,6 +1160,7 @@
    "level": "cma",
    "id": "835",
    "name": "Edmonton",
+   "dguid": "2021S0503835",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1113,6 +1178,7 @@
    "level": "cma_part",
    "id": "35505",
    "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1130,6 +1196,7 @@
    "level": "cma_part",
    "id": "24505",
    "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1147,6 +1214,7 @@
    "level": "cma",
    "id": "602",
    "name": "Winnipeg",
+   "dguid": "2021S0503602",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1164,6 +1232,7 @@
    "level": "cma",
    "id": "421",
    "name": "Québec",
+   "dguid": "2021S0503421",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1181,6 +1250,7 @@
    "level": "cma",
    "id": "537",
    "name": "Hamilton",
+   "dguid": "2021S0503537",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1198,6 +1268,7 @@
    "level": "cma",
    "id": "541",
    "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1215,6 +1286,7 @@
    "level": "cma",
    "id": "555",
    "name": "London",
+   "dguid": "2021S0503555",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1232,6 +1304,7 @@
    "level": "cma",
    "id": "205",
    "name": "Halifax",
+   "dguid": "2021S0503205",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1249,6 +1322,7 @@
    "level": "cma",
    "id": "935",
    "name": "Victoria",
+   "dguid": "2021S0503935",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1266,6 +1340,7 @@
    "level": "cma",
    "id": "725",
    "name": "Saskatoon",
+   "dguid": "2021S0503725",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1283,6 +1358,7 @@
    "level": "cma",
    "id": "705",
    "name": "Regina",
+   "dguid": "2021S0503705",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1300,6 +1376,7 @@
    "level": "cma",
    "id": "001",
    "name": "St. John's",
+   "dguid": "2021S0503001",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1317,6 +1394,7 @@
    "level": "cma",
    "id": "559",
    "name": "Windsor",
+   "dguid": "2021S0503559",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1334,6 +1412,7 @@
    "level": "cma",
    "id": "915",
    "name": "Kelowna",
+   "dguid": "2021S0503915",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1351,6 +1430,7 @@
    "level": "cma",
    "id": "932",
    "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1368,6 +1448,7 @@
    "level": "cma",
    "id": "305",
    "name": "Moncton",
+   "dguid": "2021S0503305",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1385,6 +1466,7 @@
    "level": "cma",
    "id": "310",
    "name": "Saint John",
+   "dguid": "2021S0503310",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1402,6 +1484,7 @@
    "level": "cma",
    "id": "320",
    "name": "Fredericton",
+   "dguid": "2021S0503320",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1419,6 +1502,7 @@
    "level": "cma",
    "id": "433",
    "name": "Sherbrooke",
+   "dguid": "2021S0503433",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1436,6 +1520,7 @@
    "level": "cma",
    "id": "580",
    "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1453,6 +1538,7 @@
    "level": "cma",
    "id": "595",
    "name": "Thunder Bay",
+   "dguid": "2021S0503595",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1470,6 +1556,7 @@
    "level": "ca",
    "id": "105",
    "name": "Charlottetown",
+   "dguid": "2021S0504105",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1487,6 +1574,7 @@
    "level": "ca",
    "id": "610",
    "name": "Brandon",
+   "dguid": "2021S0504610",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1504,6 +1592,7 @@
    "level": "ca",
    "id": "990",
    "name": "Whitehorse",
+   "dguid": "2021S0504990",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1521,6 +1610,7 @@
    "level": "ca",
    "id": "995",
    "name": "Yellowknife",
+   "dguid": "2021S0504995",
    "vintage": "2021"
   },
   "sourceId": "ircc-pr-cma",
@@ -1538,6 +1628,7 @@
    "level": "cma",
    "id": "535",
    "name": "Toronto",
+   "dguid": "2021S0503535",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1555,6 +1646,7 @@
    "level": "cma",
    "id": "462",
    "name": "Montréal",
+   "dguid": "2021S0503462",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1572,6 +1664,7 @@
    "level": "cma",
    "id": "933",
    "name": "Vancouver",
+   "dguid": "2021S0503933",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1589,6 +1682,7 @@
    "level": "cma",
    "id": "825",
    "name": "Calgary",
+   "dguid": "2021S0503825",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1606,6 +1700,7 @@
    "level": "cma",
    "id": "835",
    "name": "Edmonton",
+   "dguid": "2021S0503835",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1623,6 +1718,7 @@
    "level": "cma_part",
    "id": "35505",
    "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1640,6 +1736,7 @@
    "level": "cma_part",
    "id": "24505",
    "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1657,6 +1754,7 @@
    "level": "cma",
    "id": "602",
    "name": "Winnipeg",
+   "dguid": "2021S0503602",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1674,6 +1772,7 @@
    "level": "cma",
    "id": "421",
    "name": "Québec",
+   "dguid": "2021S0503421",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1691,6 +1790,7 @@
    "level": "cma",
    "id": "537",
    "name": "Hamilton",
+   "dguid": "2021S0503537",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1708,6 +1808,7 @@
    "level": "cma",
    "id": "541",
    "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1725,6 +1826,7 @@
    "level": "cma",
    "id": "555",
    "name": "London",
+   "dguid": "2021S0503555",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1742,6 +1844,7 @@
    "level": "cma",
    "id": "205",
    "name": "Halifax",
+   "dguid": "2021S0503205",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1759,6 +1862,7 @@
    "level": "cma",
    "id": "935",
    "name": "Victoria",
+   "dguid": "2021S0503935",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1776,6 +1880,7 @@
    "level": "cma",
    "id": "725",
    "name": "Saskatoon",
+   "dguid": "2021S0503725",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1793,6 +1898,7 @@
    "level": "cma",
    "id": "705",
    "name": "Regina",
+   "dguid": "2021S0503705",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1810,6 +1916,7 @@
    "level": "cma",
    "id": "001",
    "name": "St. John's",
+   "dguid": "2021S0503001",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1827,6 +1934,7 @@
    "level": "cma",
    "id": "559",
    "name": "Windsor",
+   "dguid": "2021S0503559",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1844,6 +1952,7 @@
    "level": "cma",
    "id": "915",
    "name": "Kelowna",
+   "dguid": "2021S0503915",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1861,6 +1970,7 @@
    "level": "cma",
    "id": "932",
    "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1878,6 +1988,7 @@
    "level": "cma",
    "id": "305",
    "name": "Moncton",
+   "dguid": "2021S0503305",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1895,6 +2006,7 @@
    "level": "cma",
    "id": "310",
    "name": "Saint John",
+   "dguid": "2021S0503310",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1912,6 +2024,7 @@
    "level": "cma",
    "id": "320",
    "name": "Fredericton",
+   "dguid": "2021S0503320",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1929,6 +2042,7 @@
    "level": "cma",
    "id": "433",
    "name": "Sherbrooke",
+   "dguid": "2021S0503433",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1946,6 +2060,7 @@
    "level": "cma",
    "id": "580",
    "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -1963,6 +2078,7 @@
    "level": "cma",
    "id": "595",
    "name": "Thunder Bay",
+   "dguid": "2021S0503595",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -2016,6 +2132,7 @@
    "level": "ca",
    "id": "990",
    "name": "Whitehorse",
+   "dguid": "2021S0504990",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -2033,6 +2150,7 @@
    "level": "ca",
    "id": "995",
    "name": "Yellowknife",
+   "dguid": "2021S0504995",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0030-01",
@@ -2085,6 +2203,7 @@
    "level": "cma",
    "id": "535",
    "name": "Toronto",
+   "dguid": "2021S0503535",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2121,6 +2240,7 @@
    "level": "cma",
    "id": "462",
    "name": "Montréal",
+   "dguid": "2021S0503462",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2157,6 +2277,7 @@
    "level": "cma",
    "id": "933",
    "name": "Vancouver",
+   "dguid": "2021S0503933",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2193,6 +2314,7 @@
    "level": "cma",
    "id": "825",
    "name": "Calgary",
+   "dguid": "2021S0503825",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2229,6 +2351,7 @@
    "level": "cma",
    "id": "835",
    "name": "Edmonton",
+   "dguid": "2021S0503835",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2265,6 +2388,7 @@
    "level": "cma_part",
    "id": "35505",
    "name": "Ottawa - Gatineau (Ontario part)",
+   "dguid": "2021S050535505",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2301,6 +2425,7 @@
    "level": "cma_part",
    "id": "24505",
    "name": "Ottawa - Gatineau (Quebec part)",
+   "dguid": "2021S050524505",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2337,6 +2462,7 @@
    "level": "cma",
    "id": "602",
    "name": "Winnipeg",
+   "dguid": "2021S0503602",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2373,6 +2499,7 @@
    "level": "cma",
    "id": "421",
    "name": "Québec",
+   "dguid": "2021S0503421",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2409,6 +2536,7 @@
    "level": "cma",
    "id": "537",
    "name": "Hamilton",
+   "dguid": "2021S0503537",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2445,6 +2573,7 @@
    "level": "cma",
    "id": "541",
    "name": "Kitchener - Cambridge - Waterloo",
+   "dguid": "2021S0503541",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2481,6 +2610,7 @@
    "level": "cma",
    "id": "555",
    "name": "London",
+   "dguid": "2021S0503555",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2517,6 +2647,7 @@
    "level": "cma",
    "id": "205",
    "name": "Halifax",
+   "dguid": "2021S0503205",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2553,6 +2684,7 @@
    "level": "cma",
    "id": "935",
    "name": "Victoria",
+   "dguid": "2021S0503935",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2589,6 +2721,7 @@
    "level": "cma",
    "id": "725",
    "name": "Saskatoon",
+   "dguid": "2021S0503725",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2625,6 +2758,7 @@
    "level": "cma",
    "id": "705",
    "name": "Regina",
+   "dguid": "2021S0503705",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2661,6 +2795,7 @@
    "level": "cma",
    "id": "001",
    "name": "St. John's",
+   "dguid": "2021S0503001",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2697,6 +2832,7 @@
    "level": "cma",
    "id": "559",
    "name": "Windsor",
+   "dguid": "2021S0503559",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2733,6 +2869,7 @@
    "level": "cma",
    "id": "915",
    "name": "Kelowna",
+   "dguid": "2021S0503915",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2769,6 +2906,7 @@
    "level": "cma",
    "id": "932",
    "name": "Abbotsford - Mission",
+   "dguid": "2021S0503932",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2805,6 +2943,7 @@
    "level": "cma",
    "id": "305",
    "name": "Moncton",
+   "dguid": "2021S0503305",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2841,6 +2980,7 @@
    "level": "cma",
    "id": "310",
    "name": "Saint John",
+   "dguid": "2021S0503310",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2877,6 +3017,7 @@
    "level": "cma",
    "id": "320",
    "name": "Fredericton",
+   "dguid": "2021S0503320",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2913,6 +3054,7 @@
    "level": "cma",
    "id": "433",
    "name": "Sherbrooke",
+   "dguid": "2021S0503433",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2949,6 +3091,7 @@
    "level": "cma",
    "id": "580",
    "name": "Greater Sudbury / Grand Sudbury",
+   "dguid": "2021S0503580",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -2985,6 +3128,7 @@
    "level": "cma",
    "id": "595",
    "name": "Thunder Bay",
+   "dguid": "2021S0503595",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -3021,6 +3165,7 @@
    "level": "ca",
    "id": "105",
    "name": "Charlottetown",
+   "dguid": "2021S0504105",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -3057,6 +3202,7 @@
    "level": "ca",
    "id": "610",
    "name": "Brandon",
+   "dguid": "2021S0504610",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -3093,6 +3239,7 @@
    "level": "ca",
    "id": "990",
    "name": "Whitehorse",
+   "dguid": "2021S0504990",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
@@ -3129,6 +3276,7 @@
    "level": "ca",
    "id": "995",
    "name": "Yellowknife",
+   "dguid": "2021S0504995",
    "vintage": "2021"
   },
   "sourceId": "statcan-43-10-0022-01",
