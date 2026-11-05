@@ -10,7 +10,7 @@
     "id": "asking-1br-range",
     "kind": "observation",
     "headline": "1-bedroom asking rents run from $1,040 in Sherbrooke to $2,280 in Vancouver",
-    "detail": "Average advertised rent for a 1-bedroom apartment in 2026-Q2 across the 26 of our 31 places that the table covers: median $1,500; the five lowest are Sherbrooke ($1,040), Québec City ($1,210), Saint John ($1,230), Regina ($1,250), Edmonton ($1,260); the five highest are Vancouver ($2,280), Toronto ($2,090), Victoria ($2,040), Ottawa ($1,900), Kelowna ($1,880). Asking rent applies to units currently advertised, so it is the price a new arrival would see on listing sites, not what long-term tenants pay. Charlottetown, Brandon, Whitehorse, Yellowknife and Iqaluit are not in this table (CMAs only).",
+    "detail": "Average advertised rent for a 1-bedroom apartment in 2026-Q2 across the 26 of our 31 places that the table covers: median $1,500; the lowest are Sherbrooke ($1,040), Québec City ($1,210), Saint John ($1,230), Regina ($1,250), Edmonton ($1,260); the highest are Vancouver ($2,280), Toronto ($2,090), Victoria ($2,040), Ottawa ($1,900), Kelowna ($1,880), Halifax ($1,880). Asking rent applies to units currently advertised, so it is the price a new arrival would see on listing sites, not what long-term tenants pay. Charlottetown, Brandon, Whitehorse, Yellowknife and Iqaluit are not in this table (CMAs only).",
     "stat": {
      "value": 1040.0,
      "unit": "CAD_month",
@@ -2151,7 +2151,7 @@
     "id": "basket-vs-rent",
     "kind": "calculation",
     "headline": "Rent is 41% to 60% of the single-adult monthly outlay; the non-rent basket is far more similar between cities",
-    "detail": "Non-shelter MBM costs for one person range from $1,446 to $1,573 a month across these places (London lowest, Fredericton highest), whereas 1-bedroom asking rent spans $1,040 to $2,280. The MBM is a modest-basket benchmark, not an individual's actual spending.",
+    "detail": "Non-shelter MBM costs for one person range from $1,446 to $1,573 a month across these places (London and Kitchener–Waterloo lowest, Fredericton highest), whereas 1-bedroom asking rent spans $1,040 to $2,280. The MBM is a modest-basket benchmark, not an individual's actual spending.",
     "stat": {
      "value": 50.0,
      "unit": "percent",

@@ -12,6 +12,20 @@ MB = "statcan-11-10-0066-01"
 APT = {"1br": "Apartment - 1 bedroom", "2br": "Apartment - 2 bedrooms"}
 
 
+
+def _with_ties(ranked_pairs, n):
+    """First n (value, id) pairs plus any further pairs tied with the n-th value."""
+    out = list(ranked_pairs[:n])
+    if len(ranked_pairs) > n:
+        out += [x for x in ranked_pairs[n:] if round(x[0]) == round(out[-1][0])]
+    return out
+
+
+def _tied_names(rows, key, fn, names):
+    """Names of every row sharing the min/max value (rounded to dollars), joined with 'and'."""
+    best = round(fn(r[key] for r in rows))
+    return " and ".join(names[r["p"]] for r in rows if round(r[key]) == best)
+
 def _num(s):
     try:
         return float(str(s).replace(",", ""))
@@ -46,8 +60,8 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
         "id": "asking-1br-range", "kind": "observation",
         "headline": f"1-bedroom asking rents run from ${low[0]:,.0f} in {names[low[1]]} to ${high[0]:,.0f} in {names[high[1]]}",
         "detail": (f"Average advertised rent for a 1-bedroom apartment in {quarter_label(latest)} across the {len(r1)} of our 31 places that the table covers: "
-                   f"median ${med1:,.0f}; the five lowest are " + ", ".join(f"{names[p]} (${v:,.0f})" for v, p in r1[:5]) + "; the five highest are "
-                   + ", ".join(f"{names[p]} (${v:,.0f})" for v, p in r1[::-1][:5]) + ". Asking rent applies to units currently advertised, so it is the price a new arrival "
+                   f"median ${med1:,.0f}; the lowest are " + ", ".join(f"{names[p]} (${v:,.0f})" for v, p in _with_ties(r1, 5)) + "; the highest are "
+                   + ", ".join(f"{names[p]} (${v:,.0f})" for v, p in _with_ties(r1[::-1], 5)) + ". Asking rent applies to units currently advertised, so it is the price a new arrival "
                    "would see on listing sites, not what long-term tenants pay. Charlottetown, Brandon, Whitehorse, Yellowknife and Iqaluit are not in this table (CMAs only)."),
         "stat": {"value": low[0], "unit": "CAD_month", "label": f"lowest 1-bedroom asking rent ({names[low[1]]})", "period": quarter_label(latest)},
         "placeIds": [low[1], high[1]], "metricId": "rent_asking_1br", "sourceIds": [AS],
@@ -232,7 +246,7 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
         "id": "basket-vs-rent", "kind": "calculation",
         "headline": f"Rent is {100 * min(rent_share):.0f}% to {100 * max(rent_share):.0f}% of the single-adult monthly outlay; the non-rent basket is far more similar between cities",
         "detail": (f"Non-shelter MBM costs for one person range from ${min(x['non'] for x in s1):,.0f} to ${max(x['non'] for x in s1):,.0f} a month across these places "
-                   f"({names[min(s1, key=lambda x: x['non'])['p']]} lowest, {names[max(s1, key=lambda x: x['non'])['p']]} highest), whereas 1-bedroom asking rent spans "
+                   f"({_tied_names(s1, 'non', min, names)} lowest, {_tied_names(s1, 'non', max, names)} highest), whereas 1-bedroom asking rent spans "
                    f"${min(x['rent'] for x in s1):,.0f} to ${max(x['rent'] for x in s1):,.0f}. The MBM is a modest-basket benchmark, not an individual's actual spending."),
         "stat": {"value": _r(100 * st.median(rent_share), 0), "unit": "percent", "label": "median share of monthly outlay that is rent (single adult)", "period": quarter_label(latest)},
         "placeIds": [min(s1, key=lambda x: x["rent"] / x["monthly"])["p"], max(s1, key=lambda x: x["rent"] / x["monthly"])["p"]],

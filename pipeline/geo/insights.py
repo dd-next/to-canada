@@ -52,7 +52,7 @@ def main(places: list[dict], observations: list[dict], series: list[dict]) -> li
     f2 = {"id": "bilingual-outside-quebec", "kind": "calculation",
           "headline": f"Outside Quebec, {short[top_out[0][0]]} ({top_out[0][1]:.0f}%), {short[top_out[1][0]]} ({top_out[1][1]:.0f}%) and {short[top_out[2][0]]} ({top_out[2][1]:.0f}%) have the most bilingual residents; the lowest is {short[low_out[0][0]]} at {low_out[0][1]:.0f}%",
           "detail": (f"Median share knowing both official languages across the {len(outside)} places outside Quebec is "
-                     f"{sorted(x for _, x in ranked('lang_bilingual', outside))[len(outside)//2]:.1f}%. Ottawa (Ontario part) is {v('ottawa', 'lang_bilingual'):.0f}% and Gatineau (Quebec part) {v('gatineau', 'lang_bilingual'):.0f}% - the two parts of one CMA differ sharply. "
+                     f"{__import__('statistics').median(x for _, x in ranked('lang_bilingual', outside)):.1f}%. Ottawa (Ontario part) is {v('ottawa', 'lang_bilingual'):.0f}% and Gatineau (Quebec part) {v('gatineau', 'lang_bilingual'):.0f}% - the two parts of one CMA differ sharply. "
                      "French knowledge here is self-reported conversational ability for all ages, including children in French-immersion schooling."),
           "placeIds": [i for i, _ in top_out] + ["ottawa", "gatineau"], "metricId": "lang_french_knowledge", "sourceIds": CENSUS_SRC,
           "calc": "Same as above, restricted to places whose province is not QC; ranked descending on lang_bilingual."}
