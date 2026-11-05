@@ -1063,6 +1063,643 @@
     "sourceIds": [
      "statcan-98-10-0457-01"
     ]
+   },
+   {
+    "id": "commute-modes-stacked",
+    "type": "stacked_bar",
+    "title": "How people get to work",
+    "subtitle": "Main commuting mode, % of workers with a usual place of work, May 2021 (25% sample)",
+    "unit": "percent",
+    "series": [
+     {
+      "id": "commute_car_share",
+      "label": "Car, truck or van",
+      "points": [
+       {
+        "x": "Toronto",
+        "y": 76.0,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Montréal",
+        "y": 75.6,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Vancouver",
+        "y": 74.7,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Ottawa",
+        "y": 78.8,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Gatineau",
+        "y": 83.6,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 83.9,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Calgary",
+        "y": 84.4,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Québec City",
+        "y": 83.6,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Victoria",
+        "y": 73.9,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Halifax",
+        "y": 82.3,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Hamilton",
+        "y": 86.5,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Edmonton",
+        "y": 87.4,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "London",
+        "y": 87.9,
+        "placeId": "london"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 89.1,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 89.9,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 88.6,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 89.3,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Regina",
+        "y": 90.6,
+        "placeId": "regina"
+       },
+       {
+        "x": "Brandon",
+        "y": 90.2,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Kelowna",
+        "y": 86.6,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "St. John's",
+        "y": 88.7,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 86.7,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 90.1,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Saint John",
+        "y": 90.6,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 92.0,
+        "placeId": "abbotsford-mission"
+       },
+       {
+        "x": "Fredericton",
+        "y": 89.9,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 90.3,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Moncton",
+        "y": 89.9,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Windsor",
+        "y": 93.1,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 73.5,
+        "placeId": "yellowknife"
+       }
+      ]
+     },
+     {
+      "id": "commute_transit_share",
+      "label": "Public transit",
+      "points": [
+       {
+        "x": "Toronto",
+        "y": 15.6,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Montréal",
+        "y": 15.3,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Vancouver",
+        "y": 14.9,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Ottawa",
+        "y": 9.9,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Gatineau",
+        "y": 9.1,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 8.4,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Calgary",
+        "y": 7.9,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Québec City",
+        "y": 7.8,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Victoria",
+        "y": 7.7,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Halifax",
+        "y": 7.7,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Hamilton",
+        "y": 6.5,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Edmonton",
+        "y": 6.1,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "London",
+        "y": 4.9,
+        "placeId": "london"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 4.6,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 4.0,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 3.9,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 3.4,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Regina",
+        "y": 3.3,
+        "placeId": "regina"
+       },
+       {
+        "x": "Brandon",
+        "y": 3.3,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Kelowna",
+        "y": 3.2,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "St. John's",
+        "y": 3.1,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 3.0,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 2.9,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Saint John",
+        "y": 2.7,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 2.4,
+        "placeId": "abbotsford-mission"
+       },
+       {
+        "x": "Fredericton",
+        "y": 2.3,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 2.3,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Moncton",
+        "y": 2.2,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Windsor",
+        "y": 2.0,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 1.3,
+        "placeId": "yellowknife"
+       }
+      ]
+     },
+     {
+      "id": "commute_active_share",
+      "label": "Walk or bicycle",
+      "points": [
+       {
+        "x": "Toronto",
+        "y": 5.7,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Montréal",
+        "y": 7.5,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Vancouver",
+        "y": 8.2,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Ottawa",
+        "y": 8.1,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Gatineau",
+        "y": 5.1,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 5.7,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Calgary",
+        "y": 4.9,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Québec City",
+        "y": 7.2,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Victoria",
+        "y": 15.3,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Halifax",
+        "y": 7.6,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Hamilton",
+        "y": 5.0,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Edmonton",
+        "y": 4.0,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "London",
+        "y": 5.2,
+        "placeId": "london"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 4.2,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 3.9,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 6.2,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 5.4,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Regina",
+        "y": 4.1,
+        "placeId": "regina"
+       },
+       {
+        "x": "Brandon",
+        "y": 5.4,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Kelowna",
+        "y": 7.4,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "St. John's",
+        "y": 4.7,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 8.7,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 5.0,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Saint John",
+        "y": 4.7,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 3.8,
+        "placeId": "abbotsford-mission"
+       },
+       {
+        "x": "Fredericton",
+        "y": 6.0,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 5.7,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Moncton",
+        "y": 5.6,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Windsor",
+        "y": 3.3,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 19.6,
+        "placeId": "yellowknife"
+       }
+      ]
+     },
+     {
+      "id": "commute_other",
+      "label": "Other",
+      "points": [
+       {
+        "x": "Toronto",
+        "y": 2.7,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Montréal",
+        "y": 1.6,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Vancouver",
+        "y": 2.1,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Ottawa",
+        "y": 3.2,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Gatineau",
+        "y": 2.2,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 2.0,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Calgary",
+        "y": 2.9,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Québec City",
+        "y": 1.5,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Victoria",
+        "y": 3.1,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Halifax",
+        "y": 2.4,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Hamilton",
+        "y": 2.1,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Edmonton",
+        "y": 2.4,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "London",
+        "y": 2.0,
+        "placeId": "london"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 2.0,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "Greater Sudbury",
+        "y": 2.2,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": 1.4,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 1.9,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Regina",
+        "y": 2.0,
+        "placeId": "regina"
+       },
+       {
+        "x": "Brandon",
+        "y": 1.1,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Kelowna",
+        "y": 2.8,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "St. John's",
+        "y": 3.4,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Whitehorse",
+        "y": 1.6,
+        "placeId": "whitehorse"
+       },
+       {
+        "x": "Saskatoon",
+        "y": 2.1,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Saint John",
+        "y": 1.9,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": 1.8,
+        "placeId": "abbotsford-mission"
+       },
+       {
+        "x": "Fredericton",
+        "y": 1.8,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Charlottetown",
+        "y": 1.8,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Moncton",
+        "y": 2.3,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Windsor",
+        "y": 1.6,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Yellowknife",
+        "y": 5.6,
+        "placeId": "yellowknife"
+       }
+      ]
+     }
+    ],
+    "notes": "Universe: employed labour force aged 15+ with a usual place of work (excludes people working at home or with no fixed workplace). Census day was in May 2021, during COVID-19 restrictions. Other = 100% minus car, transit and walk/bicycle (motorcycle, taxi and other methods). Places ordered by transit share; places missing any share are omitted.",
+    "sourceIds": [
+     "statcan-98-10-0457-01"
+    ]
    }
   ],
   "interpretation": [
@@ -1119,7 +1756,7 @@
    "yellowknife",
    "iqaluit"
   ],
-  "computedAt": "2026-11-04"
+  "computedAt": "2026-11-05"
  },
  {
   "id": "climate",
@@ -2202,6 +2839,6 @@
    "yellowknife",
    "iqaluit"
   ],
-  "computedAt": "2026-11-04"
+  "computedAt": "2026-11-05"
  }
 ]

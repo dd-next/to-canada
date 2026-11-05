@@ -102,9 +102,12 @@ export function ChartRenderer({
   const toggleable = (spec.type === 'line' || spec.type === 'slope') && spec.series.length >= 2 && placeSeries.every(Boolean);
   const seed = useMemo(() => {
     const s: (string | null)[] = [null, null, null];
-    (highlightIds ?? []).slice(0, MAX_HI).forEach((h, i) => (s[i] = h));
+    let hi = highlightIds ?? [];
+    // Crowded line charts: default to the first series in spec order (agents order by relevance).
+    if (!hi.length && toggleable && spec.type === 'line' && spec.series.length > 4) hi = placeSeries.filter((x): x is string => !!x);
+    hi.slice(0, MAX_HI).forEach((h, i) => (s[i] = h));
     return s;
-  }, [highlightIds]);
+  }, [highlightIds, toggleable, spec.type, spec.series.length, placeSeries]);
   const [local, setLocal] = useState<{ slots: (string | null)[]; order: string[] } | null>(null);
   const slots = local?.slots ?? seed;
   const toggle = useCallback(

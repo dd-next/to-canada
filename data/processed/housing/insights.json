@@ -1307,6 +1307,461 @@
     ]
    },
    {
+    "id": "asking-1br-slope",
+    "type": "slope",
+    "title": "1-bedroom asking rent: 2019-Q1 to 2026-Q2",
+    "subtitle": "Average asking rent by CMA, nominal dollars per month",
+    "unit": "CAD_month",
+    "series": [
+     {
+      "id": "asking_1br_slope_vancouver",
+      "label": "Vancouver",
+      "placeId": "vancouver",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1870.0,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 2280.0,
+        "placeId": "vancouver"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_toronto",
+      "label": "Toronto",
+      "placeId": "toronto",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1990.0,
+        "placeId": "toronto"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 2090.0,
+        "placeId": "toronto"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_victoria",
+      "label": "Victoria",
+      "placeId": "victoria",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1440.0,
+        "placeId": "victoria"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 2040.0,
+        "placeId": "victoria"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_ottawa",
+      "label": "Ottawa",
+      "placeId": "ottawa",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1360.0,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1900.0,
+        "placeId": "ottawa"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_halifax",
+      "label": "Halifax",
+      "placeId": "halifax",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1040.0,
+        "placeId": "halifax"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1880.0,
+        "placeId": "halifax"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_kelowna",
+      "label": "Kelowna",
+      "placeId": "kelowna",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1320.0,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1880.0,
+        "placeId": "kelowna"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_kitchener-waterloo",
+      "label": "Kitchener–Waterloo",
+      "placeId": "kitchener-waterloo",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1200.0,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1740.0,
+        "placeId": "kitchener-waterloo"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_hamilton",
+      "label": "Hamilton",
+      "placeId": "hamilton",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1320.0,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1720.0,
+        "placeId": "hamilton"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_sudbury",
+      "label": "Greater Sudbury",
+      "placeId": "sudbury",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 880.0,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1630.0,
+        "placeId": "sudbury"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_london",
+      "label": "London",
+      "placeId": "london",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1030.0,
+        "placeId": "london"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1560.0,
+        "placeId": "london"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_abbotsford-mission",
+      "label": "Abbotsford–Mission",
+      "placeId": "abbotsford-mission",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1040.0,
+        "placeId": "abbotsford-mission"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1560.0,
+        "placeId": "abbotsford-mission"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_calgary",
+      "label": "Calgary",
+      "placeId": "calgary",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1150.0,
+        "placeId": "calgary"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1550.0,
+        "placeId": "calgary"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_windsor",
+      "label": "Windsor",
+      "placeId": "windsor",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 930.0,
+        "placeId": "windsor"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1520.0,
+        "placeId": "windsor"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_montreal",
+      "label": "Montréal",
+      "placeId": "montreal",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 980.0,
+        "placeId": "montreal"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1480.0,
+        "placeId": "montreal"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_thunder-bay",
+      "label": "Thunder Bay",
+      "placeId": "thunder-bay",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 910.0,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1470.0,
+        "placeId": "thunder-bay"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_gatineau",
+      "label": "Gatineau",
+      "placeId": "gatineau",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 830.0,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1440.0,
+        "placeId": "gatineau"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_fredericton",
+      "label": "Fredericton",
+      "placeId": "fredericton",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 750.0,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1430.0,
+        "placeId": "fredericton"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_saskatoon",
+      "label": "Saskatoon",
+      "placeId": "saskatoon",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 910.0,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1340.0,
+        "placeId": "saskatoon"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_winnipeg",
+      "label": "Winnipeg",
+      "placeId": "winnipeg",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 960.0,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1320.0,
+        "placeId": "winnipeg"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_moncton",
+      "label": "Moncton",
+      "placeId": "moncton",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 750.0,
+        "placeId": "moncton"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1290.0,
+        "placeId": "moncton"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_st-johns",
+      "label": "St. John's",
+      "placeId": "st-johns",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 800.0,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1270.0,
+        "placeId": "st-johns"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_edmonton",
+      "label": "Edmonton",
+      "placeId": "edmonton",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 1030.0,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1260.0,
+        "placeId": "edmonton"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_regina",
+      "label": "Regina",
+      "placeId": "regina",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 890.0,
+        "placeId": "regina"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1250.0,
+        "placeId": "regina"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_saint-john",
+      "label": "Saint John",
+      "placeId": "saint-john",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 720.0,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1230.0,
+        "placeId": "saint-john"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_quebec-city",
+      "label": "Québec City",
+      "placeId": "quebec-city",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 710.0,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1210.0,
+        "placeId": "quebec-city"
+       }
+      ]
+     },
+     {
+      "id": "asking_1br_slope_sherbrooke",
+      "label": "Sherbrooke",
+      "placeId": "sherbrooke",
+      "points": [
+       {
+        "x": "2019-Q1",
+        "y": 540.0,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "2026-Q2",
+        "y": 1040.0,
+        "placeId": "sherbrooke"
+       }
+      ]
+     }
+    ],
+    "notes": "CMAs with an estimate in both quarters. Nominal dollars, rounded to $10 by StatCan; 2019-Q1 comes from a young experimental series and 2025-Q2 and Q3 estimates are modelled, so read the slopes as indicative.",
+    "sourceIds": [
+     "statcan-46-10-0092-01"
+    ]
+   },
+   {
     "id": "asking-vs-cmhc-dots",
     "type": "dot_compare",
     "title": "2-bedroom: advertised (asking) vs CMHC average rent",
@@ -1635,7 +2090,7 @@
    "victoria",
    "winnipeg"
   ],
-  "computedAt": "2026-11-04"
+  "computedAt": "2026-11-05"
  },
  {
   "id": "arrival-budget",
@@ -2181,6 +2636,6 @@
    "toronto",
    "vancouver"
   ],
-  "computedAt": "2026-11-04"
+  "computedAt": "2026-11-05"
  }
 ]

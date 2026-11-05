@@ -152,12 +152,18 @@ def build(ask_ctx, cmhc_ctx, cpi_ctx, mbm_ctx, today: str):
            "series": [{"id": "asking", "label": "Asking rent (StatCan, 2025-Q4)", "points": [{"x": names[x[0]], "y": x[1], "placeId": x[0]} for x in gaps]},
                       {"id": "cmhc", "label": "CMHC average rent (Oct 2025)", "points": [{"x": names[x[0]], "y": x[2], "placeId": x[0], **({"f": ["use_with_caution"]} if x[4] == "d" else {})} for x in gaps]}],
            "notes": "Different populations: listings of units for rent in a quarter (all rental dwelling types in CMA) vs the stock average of purpose-built rental apartments (3+ units).", "sourceIds": [AS, CM]}
+    q19 = y2019[0]
+    sl_cmas = sorted(((names[p], ask(p, "1br", q19), ask(p, "1br", latest), p) for p in covered if ask(p, "1br", q19) is not None), key=lambda t: -t[2])
+    slope = {"id": "asking-1br-slope", "type": "slope", "title": f"1-bedroom asking rent: {quarter_label(q19)} to {quarter_label(latest)}",
+             "subtitle": "Average asking rent by CMA, nominal dollars per month", "unit": "CAD_month",
+             "series": [{"id": f"asking_1br_slope_{p}", "label": n, "placeId": p, "points": [{"x": quarter_label(q19), "y": a, "placeId": p}, {"x": quarter_label(latest), "y": b, "placeId": p}]} for n, a, b, p in sl_cmas],
+             "notes": f"CMAs with an estimate in both quarters. Nominal dollars, rounded to $10 by StatCan; {quarter_label(q19)} comes from a young experimental series and 2025-Q2 and Q3 estimates are modelled, so read the slopes as indicative.", "sourceIds": [AS]}
     ins1 = {
         "id": "housing-rents", "topic": "housing",
         "title": f"Asking rents range from about ${low[0]:,.0f} to ${high[0]:,.0f} for a 1-bedroom, and advertised rents are usually above what the CMHC survey finds tenants pay",
         "question": "Where are rents lower, how have they changed, and how do advertised rents compare with what existing tenants pay?",
         "dek": f"What a new lease costs on listing sites in {quarter_label(latest)}, how it moved in the past year and since 2019, and how it compares with CMHC's survey of rents actually charged.",
-        "findings": [f1, f2, f3, f4, f5], "charts": [bar1, line, dot],
+        "findings": [f1, f2, f3, f4, f5], "charts": [bar1, line, slope, dot],
         "interpretation": [
             "For a first apartment, the asking rent is the number to budget with: it reflects units a newcomer can actually apply for today. The lowest asking rents here are in Quebec (Sherbrooke, Québec City), parts of the Prairies (Regina, Edmonton) and some Atlantic cities (Saint John), while Halifax is among the higher-rent places; the ranking is only about price, not wages, job availability or vacancy.",
             "The CMHC average covers all units in purpose-built rental buildings, including long-standing tenancies whose rent only changes at renewal (and, in some provinces, within increase limits), so it describes a different, slower-moving part of the market than new listings; the CPI rent index likewise tracks rents of the existing rental stock.",

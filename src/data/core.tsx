@@ -23,6 +23,17 @@ type CoreState = { status: 'loading' } | { status: 'error'; error: Error } | { s
 
 const CoreContext = createContext<CoreState>({ status: 'loading' });
 
+/** Comparable key for mixed period formats (period end month). */
+export function periodSortKey(p: string): string {
+  let m = /^(\d{4})-Q([1-4])$/.exec(p);
+  if (m) return `${m[1]}-${String(Number(m[2]) * 3).padStart(2, '0')}`;
+  if (/^\d{4}-\d{2}$/.test(p)) return p;
+  if (/^\d{4}$/.test(p)) return `${p}-12`;
+  m = /^\d{4}[/-](\d{4})$/.exec(p);
+  if (m) return `${m[1]}-12`;
+  return p;
+}
+
 export function index(
   manifest: DataManifest,
   places: Place[],
@@ -37,7 +48,7 @@ export function index(
     if (!m) obsIndex.set(o.placeId, (m = new Map()));
     const prev = m.get(o.metricId);
     // Keep the latest period when a metric has several observations per place.
-    if (!prev || o.period > prev.period) m.set(o.metricId, o);
+    if (!prev || periodSortKey(o.period) > periodSortKey(prev.period)) m.set(o.metricId, o);
   }
   for (const m of obsIndex.values())
     for (const o of m.values()) {

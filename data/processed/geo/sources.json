@@ -20,7 +20,7 @@
    "Cartographic (shoreline-clipped) boundaries are generalized for display; not for area measurement."
   ],
   "status": "ok",
-  "retrievedAt": "2026-11-04T18:58:11+00:00"
+  "retrievedAt": "2026-11-05T06:13:05+00:00"
  },
  {
   "id": "statcan-98-10-0003-01",
@@ -223,7 +223,7 @@
   "tableId": "Canadian Climate Normals 1991-2020",
   "url": "https://climate.weather.gc.ca/climate_normals/index_e.html",
   "downloadUrl": "https://climate.weather.gc.ca/climate_normals/station_inventory_e.html?yr=1991",
-  "retrievedAt": "2026-11-04T18:58:11+00:00",
+  "retrievedAt": "2026-11-05T06:13:04+00:00",
   "referencePeriod": "1991-2020 (30-year climate normals)",
   "licence": "Environment and Climate Change Canada data servers end-use licence / Open Government Licence – Canada",
   "attribution": "Source: Environment and Climate Change Canada, Canadian Climate Normals 1991-2020.",

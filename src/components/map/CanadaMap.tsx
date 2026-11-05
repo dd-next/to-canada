@@ -310,6 +310,25 @@ export function CanadaMap({
   }, [projected, t]);
   const nodeById = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
 
+  // Remember the framing from before a selection and restore it when the selection is cleared.
+  const preSelect = useRef<ZoomTransform | null>(null);
+  const prevSelected = useRef<string | null>(null);
+  useEffect(() => {
+    const was = prevSelected.current;
+    prevSelected.current = selectedId;
+    const svg = svgRef.current;
+    if (!svg || !projection) return;
+    if (selectedId && !was) preSelect.current = zoomTransform(svg);
+    else if (!selectedId && was && preSelect.current) {
+      apply(preSelect.current, true);
+      preSelect.current = null;
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedId]);
+  useEffect(() => {
+    preSelect.current = null; // a new region framing supersedes the saved view
+  }, [frameKey]);
+
   // Keep the selected place visible (not under the drawer).
   useEffect(() => {
     if (!selectedId || !projection || !width) return;

@@ -86,12 +86,21 @@ def main(places: list[dict], observations: list[dict], series: list[dict]) -> li
     chart_com = {"id": "commute-modes", "type": "dot_compare", "title": "How people commute", "subtitle": "Main mode, % of workers with a usual place of work, May 2021 (25% sample)", "unit": "percent",
                  "series": [dots("commute_transit_share", "Public transit"), dots("commute_active_share", "Walk or bicycle"), dots("commute_car_share", "Car, truck or van")],
                  "notes": "Census day was in May 2021, during COVID-19 restrictions; people working from home are excluded from the universe.", "sourceIds": ["statcan-98-10-0457-01"]}
+    mode_ids = [p for p in order if all(v(p, m) is not None for m in ("commute_car_share", "commute_transit_share", "commute_active_share"))]
+    seg = lambda sid, label, f: {"id": sid, "label": label, "points": [{"x": short[p], "y": round(f(p), 1), "placeId": p} for p in mode_ids]}
+    chart_stack = {"id": "commute-modes-stacked", "type": "stacked_bar", "title": "How people get to work", "subtitle": "Main commuting mode, % of workers with a usual place of work, May 2021 (25% sample)", "unit": "percent",
+                   "series": [seg("commute_car_share", "Car, truck or van", lambda p: v(p, "commute_car_share")),
+                              seg("commute_transit_share", "Public transit", lambda p: v(p, "commute_transit_share")),
+                              seg("commute_active_share", "Walk or bicycle", lambda p: v(p, "commute_active_share")),
+                              seg("commute_other", "Other", lambda p: max(0.0, 100 - v(p, "commute_car_share") - v(p, "commute_transit_share") - v(p, "commute_active_share")))],
+                   "notes": "Universe: employed labour force aged 15+ with a usual place of work (excludes people working at home or with no fixed workplace). Census day was in May 2021, during COVID-19 restrictions. Other = 100% minus car, transit and walk/bicycle (motorcycle, taxi and other methods). Places ordered by transit share; places missing any share are omitted.",
+                   "sourceIds": ["statcan-98-10-0457-01"]}
     insights.append({
         "id": "language-life", "topic": "language_life",
         "title": "Language and daily life: French reach, commutes and household size",
         "question": "Which official language will I need day to day, and how do people get around?",
         "dek": "2021 Census figures for each place's metropolitan area or agglomeration show where French is the working language, where both languages are common, and how commuting differs.",
-        "findings": [f1, f2, f3, f4], "charts": [chart_lang, chart_bi, chart_com],
+        "findings": [f1, f2, f3, f4], "charts": [chart_lang, chart_bi, chart_com, chart_stack],
         "interpretation": [
             "If you do not speak French, the Quebec places are the hardest to navigate in everyday settings, even though bilingualism is common in Montréal and the Gatineau part of Ottawa-Gatineau; outside Quebec, Moncton, Sudbury and Ottawa are the places where French is most usable in daily life.",
             "Commute patterns reflect urban form: transit commuting is concentrated in the three largest metros, while in most other places the car dominates and long commutes are uncommon. Use this with rent data to judge whether living near work is affordable.",
