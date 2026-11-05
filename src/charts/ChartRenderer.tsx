@@ -103,8 +103,8 @@ export function ChartRenderer({
   const seed = useMemo(() => {
     const s: (string | null)[] = [null, null, null];
     let hi = highlightIds ?? [];
-    // Crowded line charts: default to the first series in spec order (agents order by relevance).
-    if (!hi.length && toggleable && spec.type === 'line' && spec.series.length > 4) hi = placeSeries.filter((x): x is string => !!x);
+    // Crowded line and slope charts: default to the first series in spec order (agents order by relevance).
+    if (!hi.length && toggleable && spec.series.length > 4) hi = placeSeries.filter((x): x is string => !!x);
     hi.slice(0, MAX_HI).forEach((h, i) => (s[i] = h));
     return s;
   }, [highlightIds, toggleable, spec.type, spec.series.length, placeSeries]);

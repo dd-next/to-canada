@@ -72,7 +72,9 @@ def fetch(
     path = _cache_path(full_url, json_payload, suffix)
     path.parent.mkdir(parents=True, exist_ok=True)
     force = os.environ.get("NORTHWARD_REFRESH") == "1"
-    lock_path = Path(str(path) + ".lock")
+    lock_dir = RAW / ".locks"  # one directory, so cache folders stay clean
+    lock_dir.mkdir(parents=True, exist_ok=True)
+    lock_path = lock_dir / (path.name + ".lock")
     with open(lock_path, "w") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         try:

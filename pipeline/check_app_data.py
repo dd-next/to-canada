@@ -110,7 +110,7 @@ if o:
 wages = json.loads((D / "wages.json").read_text())
 er = places["calgary"]["geo"]["economicRegions"][0]["id"]
 cell = wages["byNoc"].get("31301", {}).get(er)
-jb = next((p for p in (RAW / "open.canada.ca").glob("*") if p.suffix == ".csv"), None) or next(
+jb = next(iter(sorted((RAW / "open.canada.ca").glob("*wage*opendata*.csv"))), None) or next((p for p in (RAW / "open.canada.ca").glob("*") if p.suffix == ".csv"), None) or next(
     (p for p in RAW.rglob("*.csv") if "wage" in p.name.lower()), None)
 if cell and jb:
     import csv
