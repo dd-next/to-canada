@@ -4,12 +4,18 @@ from __future__ import annotations
 
 from common.fetch import now_iso
 from common_i import TODAY
+from common.contract import PROCESSED
+import json
+
+VERIFIED_DATE = "2026-11-04"
+FSTP_VERIFIED_DATE = "2026-11-05"
 
 C = "https://www.canada.ca/en/immigration-refugees-citizenship/services"
 IC = C + "/immigrate-canada"
 
 # source id -> (title, publisher, url, page date / note)
 SOURCES = {
+    "ircc-fstp": ("Federal Skilled Trades Program: job offer or certificate of qualification", "Immigration, Refugees and Citizenship Canada", IC + "/express-entry/who-can-apply/federal-skilled-trades.html", "Job offer OR Canadian certificate of qualification; verified 2026-11-05"),
     "ircc-hub": ("Live in Canada permanently (IRCC immigration programs hub, incl. paused and closed programs)", "Immigration, Refugees and Citizenship Canada", IC + ".html", None),
     "ircc-express-entry": ("Express Entry: Who can apply", "Immigration, Refugees and Citizenship Canada", IC + "/express-entry/who-can-apply.html", None),
     "ircc-pnp": ("Immigrate as a provincial nominee", "Immigration, Refugees and Citizenship Canada", IC + "/provincial-nominees.html", None),
@@ -45,10 +51,12 @@ PNP_PAGE = {  # province -> IRCC-linked owning page (from the IRCC provincial-no
 
 
 def sources(retrieved: str) -> list[dict]:
+    existing_path = PROCESSED / "immigration" / "sources.json"
+    existing = {s["id"]: s for s in json.loads(existing_path.read_text())} if existing_path.exists() else {}
     out = []
     for sid, (title, pub, url, note) in SOURCES.items():
-        d = {"id": sid, "title": title, "publisher": pub, "url": url, "downloadUrl": url, "retrievedAt": retrieved,
-             "referencePeriod": f"Page(s) read on {TODAY}", "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+        d = {"id": sid, "title": title, "publisher": pub, "url": url, "downloadUrl": url, "retrievedAt": existing.get(sid, {}).get("retrievedAt", (FSTP_VERIFIED_DATE if sid == "ircc-fstp" else VERIFIED_DATE)),
+             "referencePeriod": f"Page(s) read on {FSTP_VERIFIED_DATE if sid == 'ircc-fstp' else VERIFIED_DATE}", "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
              "attribution": f"Source: {pub}, {url}", "transformations": ["Text paraphrased factually; no scoring or eligibility judgement added."],
              "notes": [note] if note else [], "status": "ok"}
         out.append(d)
@@ -59,7 +67,10 @@ def rec(id, name, jur, operator, cat, purpose, audience, geography, conds, job, 
         placeIds=None, status=None, links=None):
     r = {"id": id, "name": name, "jurisdiction": jur, "operator": operator, "category": cat, "purpose": purpose,
          "audience": audience, "geography": geography, "majorConditions": conds, "jobOfferRequired": job,
-         "officialUrl": url, "lastChecked": TODAY, "sourceId": src}
+         "officialUrl": url, "lastChecked": VERIFIED_DATE, "sourceId": src}
+    if id == "express-entry-fstp":
+        r["jobOfferNote"] = "A valid full-time job offer for at least one year OR a Canadian certificate of qualification in the skilled trade."
+        r["lastChecked"] = FSTP_VERIFIED_DATE
     if short:
         r["shortName"] = short
     if parent:
@@ -103,7 +114,7 @@ def build() -> list[dict]:
           "Express Entry program for skilled workers who are qualified in a skilled trade.", "Tradespeople in eligible skilled-trade occupations (TEER 2 or 3 key groups).", "Canada outside Quebec.",
           ["Language: CLB 5 for speaking and listening, CLB 4 for reading and writing.", "Work experience: 2 years within the last 5 years in a skilled trade.",
            "Requires a valid full-time job offer of at least 1 year, or a certificate of qualification in the trade from a Canadian authority.", "Education not required."],
-          "yes", IC + "/express-entry/who-can-apply.html", "ircc-express-entry", parent="express-entry", short="FSTP"))
+          "conditional", IC + "/express-entry/who-can-apply/federal-skilled-trades.html", "ircc-fstp", parent="express-entry", short="FSTP"))
     A(rec("pnp-overview", "Provincial Nominee Program (PNP) - federal overview", "federal", I, "provincial_nominee",
           "Lets provinces and territories nominate people with the skills, education and work experience to contribute to their economy who want to live there and become permanent residents.",
           "Workers, business people and others who want to live in a specific province or territory.", "All provinces and territories except Quebec and Nunavut (which have no PNP per IRCC).",

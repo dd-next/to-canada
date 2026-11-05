@@ -9,10 +9,13 @@
     "build": "tsc -b && vite build && node scripts/spa-fallback.mjs",
     "preview": "vite preview",
     "typecheck": "tsc -b --pretty",
+    "check:model": "node scripts/check-model.mjs && node scripts/check-scenarios.mjs",
     "data:build": "python3 -I pipeline/build_app_data.py",
     "data:refresh": "python3 -I pipeline/refresh.py",
     "data:check": "python3 -I pipeline/check_app_data.py",
-    "data:freshness": "python3 -I pipeline/freshness.py"
+    "data:freshness": "python3 -I pipeline/freshness.py",
+    "updates:refresh": "python3 -I pipeline/updates/run.py",
+    "updates:check": "python3 -I pipeline/updates/check.py"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

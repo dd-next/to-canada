@@ -5,6 +5,7 @@ export const NAV = [
   { to: '/budget', label: 'Budget' },
   { to: '/insights', label: 'Insights' },
   { to: '/immigration', label: 'Immigration' },
+  { to: '/updates', label: 'IRCC Updates' },
 ] as const;
 
 export const FOOTER_NAV = [

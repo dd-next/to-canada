@@ -2,22 +2,44 @@
 from __future__ import annotations
 
 import json
+import re
+from html import unescape
 import sys
 from pathlib import Path
 
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common.fetch import fetch, meta_for, now_iso  # noqa: E402
+from common.fetch import fetch, fetch_json, fetch_text, meta_for  # noqa: E402
 from common.contract import geo, load_places, write_processed, PROCESSED  # noqa: E402
 
 DATASET = "adad580f-76b0-4502-bd05-20c125de9116"
-WAGE_URL = ("https://open.canada.ca/data/dataset/adad580f-76b0-4502-bd05-20c125de9116/resource/"
-            "9da94d63-b178-4a64-aeb3-b6a3bd721ad2/download/2a71-das-wage2025opendata-esdc-all-19nov2025-vf.csv")
+CATALOG = "https://open.canada.ca/data/api/3/action/package_show"
+
+
+def discover_resource(package: dict) -> dict:
+    """Choose the latest English wage CSV explicitly advertised by the publisher."""
+    choices = []
+    for resource in package.get("resources", []):
+        name = resource.get("name") or ""
+        url = resource.get("url") or ""
+        match = re.search(r"\b(20\d{2})\s+Wages\b", name, re.I)
+        languages = resource.get("language") or []
+        if isinstance(languages, str):
+            languages = [languages]
+        if not match or not url.startswith("https://") or not url.lower().endswith(".csv"):
+            continue
+        if languages and not any(x in ("en", "eng", "en-ca") for x in languages):
+            continue
+        choices.append((int(match.group(1)), resource.get("last_modified") or resource.get("created") or "", url, resource))
+    if not choices:
+        raise ValueError("Manual update required: official Job Bank catalog has no recognizable English yearly wage CSV")
+    edition, _, _, resource = max(choices, key=lambda x: x[:3])
+    return {**resource, "edition": edition}
+
 NOC_BASE = "https://www.statcan.gc.ca/en/subjects/standard/noc/2021/indexV1/"
 NOC_STRUCT = NOC_BASE + "noc-2021-v1.0-classification-structure.csv"
 NOC_ELEM = NOC_BASE + "noc-2021-v1.0-elements.csv"
-SOURCE_ID = "jobbank-wages-2025"
 NOC_SOURCE_ID = "statcan-noc-2021-v1.0"
 PROV_MAP = {"NL": "NL", "PEI": "PE", "NS": "NS", "NB": "NB", "QC": "QC", "ON": "ON", "MB": "MB", "SK": "SK",
             "AB": "AB", "BC": "BC", "YK": "YT", "NWT": "NT", "NU": "NU"}
@@ -38,10 +60,42 @@ def place_ers(places):
     return out
 
 
+def catalog_from_html(html: str) -> dict:
+    """Fallback to the publisher's machine-readable DataDownload markup."""
+    resources = []
+    for block in re.findall(r'<span property="distribution"[^>]*>(.*?)</span>\s*</span>', html, re.S):
+        def field(name):
+            m = re.search(r'<span property="' + name + r'"[^>]*>([^<]*)', block)
+            return unescape(m.group(1)).strip() if m else ""
+        date = re.search(r'property="datePublished" value="([^"]+)"', block)
+        resources.append({"name": field("name"), "url": field("url"), "format": field("fileFormat"),
+                          "language": ["en"], "last_modified": date.group(1) if date else None})
+    modified = re.search(r'<span property="dateModified">([^<]+)', html)
+    return {"resources": resources, "metadata_modified": modified.group(1) if modified else None}
+
+
+def latest_resource() -> tuple[dict, dict]:
+    try:
+        payload = fetch_json(CATALOG, params={"id": DATASET}, max_age_days=1, retries=1, timeout=30)
+        if not payload.get("success") or not isinstance(payload.get("result"), dict):
+            raise ValueError("Job Bank catalog returned an unexpected format")
+        package = payload["result"]
+    except (ValueError, RuntimeError):
+        package = catalog_from_html(fetch_text(f"https://open.canada.ca/data/en/dataset/{DATASET}", max_age_days=1))
+    return discover_resource(package), package
+
+
 def load_raw() -> tuple[pd.DataFrame, dict]:
-    path = fetch(WAGE_URL)
+    resource, package = latest_resource()
+    path = fetch(resource["url"], max_age_days=7)
     df = pd.read_csv(path, dtype=str, encoding="utf-8-sig", keep_default_na=False)
-    return df, meta_for(path)
+    required = {"NOC_CNP", "ER_Code_Code_RE", "Reference_Period", "Data_Source_E", "Annual_Wage_Flag_Salaire_annuel"}
+    if not required <= set(df.columns):
+        raise ValueError("Job Bank wage CSV schema changed; manual review required")
+    revisions = sorted(v for v in df.get("Revision_Date_Date_revision", []) if re.fullmatch(r"20\d{2}-\d{2}-\d{2}", v))
+    return df, {**meta_for(path), "edition": resource["edition"], "sourceId": f"jobbank-wages-{resource['edition']}",
+                "url": resource["url"], "releaseDate": revisions[-1] if revisions else (resource.get("last_modified") or "")[:10] or None,
+                "catalogModified": package.get("metadata_modified")}
 
 
 def num(s):
@@ -109,6 +163,7 @@ def build(places=None):
     sel = df[df.noc.isin(occ_codes) & (df.er.isin(set(ers)) | df.er.isin(["00", "10", "11", "12", "13", "24", "35", "46", "47", "48", "59"]))]
     by: dict[str, dict] = {}
     ref_counts: dict[str, int] = {}
+    metadata: dict[str, dict] = {}
     for r in sel.itertuples():
         if r.er == "00":
             key = "CA"
@@ -121,14 +176,22 @@ def build(places=None):
             continue
         ann = 1 if r.Annual_Wage_Flag_Salaire_annuel == "1" else 0
         by.setdefault(r.noc, {})[key] = [lo, md, hi, ann]
+        metadata.setdefault(r.noc, {})[key] = {
+            "referencePeriod": r.Reference_Period.strip(),
+            "methodology": r.Data_Source_E.strip(),
+            "source": r.Data_Source_E.strip(),
+        }
+        if not metadata[r.noc][key]["referencePeriod"] or not metadata[r.noc][key]["methodology"]:
+            raise ValueError(f"Missing wage provenance for NOC {r.noc}, geography {key}")
         ref_counts[r.Reference_Period] = ref_counts.get(r.Reference_Period, 0) + 1
     # drop province keys never used
     used = {k for v in by.values() for k in v}
     geos = {k: v for k, v in geos.items() if k in used}
     table = {
-        "sourceId": SOURCE_ID,
-        "referencePeriod": "2023-2024 (LFS and EI survey data; 2024 for Small Area Estimation cells; 2021 Census for a few occupations; per-cell periods in the open file)",
-        "revisionDate": "2025-11-19",
+        "sourceId": meta["sourceId"],
+        "referencePeriod": "; ".join(sorted(ref_counts)),
+        "revisionDate": meta.get("releaseDate"),
+        "metadata": metadata,
         "geos": geos,
         "byNoc": by,
     }
@@ -144,15 +207,16 @@ def write(occ, table):
 
 def sources(meta, ref_counts):
     return [{
-        "id": SOURCE_ID,
-        "title": "Wages (Job Bank), 2025 edition",
+        "id": meta["sourceId"],
+        "title": f"Wages (Job Bank), {meta['edition']} edition",
         "publisher": "Employment and Social Development Canada (Job Bank)",
         "tableId": DATASET,
         "url": "https://open.canada.ca/data/en/dataset/adad580f-76b0-4502-bd05-20c125de9116",
-        "downloadUrl": WAGE_URL,
-        "releaseDate": "2025-11-19",
+        "downloadUrl": meta["url"],
+        "releaseDate": meta.get("releaseDate"),
         "retrievedAt": meta.get("retrievedAt"),
-        "referencePeriod": "2023-2024 (most cells); 2024; 2021 Census (few)",
+        "lastCheckedAt": meta.get("lastCheckedAt"),
+        "referencePeriod": "; ".join(sorted(ref_counts)),
         "licence": "Open Government Licence - Canada",
         "attribution": "Contains information licensed under the Open Government Licence - Canada. Source: Employment and Social Development Canada, Job Bank Wages.",
         "transformations": [
@@ -161,11 +225,11 @@ def sources(meta, ref_counts):
             "Cells with no published wage are omitted (not zero-filled); the Job Bank file refers users to the provincial/national wage in that case.",
         ],
         "notes": [
-            "Wages are of employed workers in the occupation (not advertised pay). Estimates come from the Labour Force Survey (2023-2024), Employment Insurance survey data, Small Area Estimation (2024) and, for a few occupations, the 2021 Census; the source of each cell is in the open file (Data_Source_E).",
+            "Wages describe employed workers, not advertised pay. Each cell retains the publisher's period and Data_Source_E methodology; estimates with different periods or methods must not be pooled into a ranking.",
             "Job Bank's ER_Name differs slightly from StatCan for ER 5920 ('Lower Mainland' vs 'Lower Mainland--Southwest') and ER 6010 ('Yukon Territory' vs 'Yukon').",
             "Territories and PEI have a single economic region equal to the territory/province; no separate provincial key is stored.",
             f"Cells kept by reference period label: {ref_counts}",
-            "Newer edition: the dataset is updated annually (previous editions 2024-12-11, 2023-12-08); re-run to pick up a 2026 edition once published (update WAGE_URL in pipeline/work/wages.py).",
+            "The newest English wage CSV edition is discovered from the official open.canada.ca catalog; each cell retains its own Reference_Period and Data_Source_E.",
         ],
         "status": "ok",
     }, {
@@ -174,7 +238,7 @@ def sources(meta, ref_counts):
         "publisher": "Statistics Canada",
         "url": "https://www.statcan.gc.ca/en/subjects/standard/noc/2021/indexV1",
         "downloadUrl": NOC_STRUCT,
-        "retrievedAt": now_iso(),
+        "retrievedAt": meta_for(fetch(NOC_STRUCT)).get("retrievedAt"),
         "licence": "Statistics Canada Open Licence",
         "attribution": "Source: Statistics Canada, NOC 2021 Version 1.0.",
         "transformations": ["Unit groups (level 5) with TEER = second digit of the code; broad category = first digit; examples = first six 'Illustrative example(s)' elements."],

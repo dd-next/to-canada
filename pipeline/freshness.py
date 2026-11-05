@@ -17,14 +17,15 @@ status: current | newer_available | static | unknown
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common.contract import PROCESSED  # noqa: E402
-from common.fetch import FetchError, fetch, fetch_json  # noqa: E402
+from common.contract import PROCESSED, ROOT  # noqa: E402
+from common.fetch import FetchError, fetch, fetch_json, fetch_text, now_iso  # noqa: E402
 from common.statcan import WDS, pid_of  # noqa: E402
 
 CKAN = "https://open.canada.ca/data/api/3/action/package_show"
@@ -41,7 +42,12 @@ TABLE_RE = re.compile(r"^\d{2}-\d{2}-\d{4}-\d{2}$")
 
 
 def day(s: str | None) -> str:
-    return (s or "")[:10]
+    value = (s or "")[:10]
+    try:
+        datetime.strptime(value, "%Y-%m-%d")
+    except (ValueError, TypeError):
+        return ""
+    return value
 
 
 def load_sources() -> list[dict]:
@@ -62,23 +68,40 @@ def result(s: dict, status: str, latest_period: str | None, latest_release: str 
 
 def check_statcan(s: dict) -> dict:
     tid = s["tableId"]
-    res = fetch_json(f"{WDS}/getCubeMetadata", json_payload=[{"productId": int(pid_of(tid))}], max_age_days=0)
+    res = fetch_json(f"{WDS}/getCubeMetadata", json_payload=[{"productId": int(pid_of(tid))}], max_age_days=0, retries=1, timeout=30)
     item = res[0] if isinstance(res, list) else res
     if item.get("status") != "SUCCESS":
         return result(s, "unknown", None, None, f"getCubeMetadata did not succeed: {str(item)[:120]}")
-    o = item["object"]
+    o = item.get("object")
+    if not isinstance(o, dict):
+        return result(s, "unknown", None, None, "Publisher metadata lacks a valid cube object.")
     latest_rel, our_rel = day(o.get("releaseTime")), day(s.get("releaseDate"))
     end = day(o.get("cubeEndDate"))
+    if not latest_rel or not end:
+        return result(s, "unknown", end or None, latest_rel or None, "Publisher metadata lacks a valid release date or observation end date.")
     if not our_rel:
         return result(s, "unknown", end, latest_rel, "Our record has no releaseDate to compare.")
     if latest_rel > our_rel:
         return result(s, "newer_available", end, latest_rel,
                       f"StatCan released this table on {latest_rel}; we hold the {our_rel} release (cube ends {end}).")
+    if latest_rel < our_rel:
+        return result(s, "unknown", end, latest_rel, "Publisher metadata predates the stored release; freshness cannot be established.")
     return result(s, "current", end, latest_rel, f"Matches StatCan's latest release ({latest_rel}); cube ends {end}.")
 
 
 def ckan(pid: str) -> dict:
-    return fetch_json(CKAN, params={"id": pid}, max_age_days=0)["result"]  # type: ignore[index]
+    try:
+        response = fetch_json(CKAN, params={"id": pid}, max_age_days=0, retries=1, timeout=30)
+        if not response.get("success") or not isinstance(response.get("result"), dict):
+            raise ValueError("Official catalog returned an unexpected format")
+        return response["result"]
+    except (FetchError, ValueError):
+        # Same official catalog exposes semantic DataDownload/dateModified markup.
+        from work.wages import catalog_from_html
+        package = catalog_from_html(fetch_text(f"https://open.canada.ca/data/en/dataset/{pid}", max_age_days=0, retries=1, timeout=30))
+        if not package.get("metadata_modified") or not package.get("resources"):
+            raise ValueError("Official catalog HTML also lacks release metadata; manual review required")
+        return package
 
 
 def check_jobbank(s: dict) -> dict:
@@ -90,11 +113,15 @@ def check_jobbank(s: dict) -> dict:
         m = re.match(r"^\s*(\d{4})\s+Wages", r.get("name") or "")
         if m:
             years.append((int(m.group(1)), day(r.get("last_modified") or r.get("created"))))
-    top = max(years) if years else (edition, "")
+    if not years:
+        return result(s, "manual_update_required", None, None, "Official catalog contained no recognizable wage edition; inspect publisher resources before updating.")
+    top = max(years)
     mod = day(pkg.get("metadata_modified"))
-    if top[0] > edition:
+    if top[0] > edition or (top[1] and top[1] > day(s.get("releaseDate"))):
         return result(s, "newer_available", f"{top[0]} edition", top[1] or mod,
                       f"Job Bank published a {top[0]} wage edition (resource modified {top[1] or mod}); we use {edition}.", f"{edition} edition")
+    if top[0] < edition or not (top[1] or mod) or not day(s.get("releaseDate")):
+        return result(s, "unknown", f"{top[0]} edition", top[1] or mod, "Missing or inconsistent release metadata; freshness cannot be established.")
     return result(s, "current", f"{top[0]} edition", top[1] or mod,
                   f"{edition} is the newest edition listed on open.canada.ca (dataset modified {mod}). Editions are annual, usually Nov-Dec.", f"{edition} edition")
 
@@ -104,6 +131,8 @@ def check_ircc(s: dict) -> dict:
     pkg = ckan(pid)
     mod, ours = day(pkg.get("metadata_modified")), day(s.get("releaseDate"))
     ours_period = (s.get("referencePeriod") or "").split(" to ")[-1].split(";")[0]
+    if not mod or not ours or mod < ours:
+        return result(s, "unknown", None, mod or None, "Missing, invalid or inconsistent catalog update date; freshness cannot be established.")
     if mod > ours:
         return result(s, "newer_available", f"update posted {mod}", mod,
                       f"IRCC dataset on open.canada.ca modified {mod}; we hold the {ours} update ({ours_period}).")
@@ -113,18 +142,14 @@ def check_ircc(s: dict) -> dict:
 
 def check_cmhc(s: dict) -> dict:
     edition = int(re.search(r"(\d{4})", s["id"]).group(1))
-    nxt = edition + 1
-    url = CMHC_BASE.format(year=nxt, slug=CMHC_PROBE_SLUG)
-    ours = f"October {edition} survey"
-    try:
-        fetch(url, max_age_days=0)
-    except FetchError as e:
-        if "HTTP 404" in str(e):
-            return result(s, "current", f"October {edition} survey", s.get("releaseDate"),
-                          f"The {nxt} edition workbook does not exist yet (HTTP 404); CMHC normally publishes in December.", ours)
-        return result(s, "unknown", None, None, f"Could not probe the {nxt} edition: {str(e)[:120]}", ours)
-    return result(s, "newer_available", f"October {nxt} survey", None,
-                  f"CMHC {nxt} Rental Market Survey workbook is online; bump the edition year in pipeline/housing/cmhc.py and re-run.", ours)
+    text = fetch_text(s["url"], max_age_days=0, retries=1, timeout=30)
+    years = [int(y) for y in re.findall(r"rmr-[^\s\"<>]+?-(20\d{2})-en\.xlsx", text)]
+    if not years:
+        return result(s, "manual_update_required", None, None,
+                      "Official CMHC catalog did not expose recognizable edition workbooks. A manual catalog review is required; a guessed URL returning 404 is not proof of freshness.")
+    newest = max(years)
+    return result(s, "newer_available" if newest > edition else "current", f"October {newest}", None,
+                  f"Newest workbook edition linked by the official CMHC catalog: {newest}; stored edition: {edition}.")
 
 
 def check(s: dict) -> dict:
@@ -140,22 +165,36 @@ def check(s: dict) -> dict:
         return check_cmhc(s)
     if TABLE_RE.match(s.get("tableId") or ""):
         return check_statcan(s)
-    return result(s, "unknown", None, None, "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.")
+    return result(s, "manual_update_required", None, None, "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.")
 
 
 def main() -> int:
     strict = "--strict" in sys.argv
+    previous_path = PROCESSED / "freshness.json"
+    previous = {r["sourceId"]: r for r in json.loads(previous_path.read_text())} if previous_path.exists() else {}
     out = []
     for s in sorted(load_sources(), key=lambda x: x["id"]):
         try:
             out.append(check(s))
         except Exception as e:  # a failed probe must not hide the other sources
             out.append(result(s, "unknown", None, None, f"Check failed: {type(e).__name__}: {str(e)[:140]}"))
+    checked_at = now_iso()
+    for row in out:
+        row["checkedAt"] = checked_at
+        old = previous.get(row["sourceId"], {})
+        row["lastSuccessfulCheckAt"] = checked_at if row["status"] in ("current", "newer_available") else old.get("lastSuccessfulCheckAt")
     p = PROCESSED / "freshness.json"
     p.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
+    app = Path(os.environ.get("NORTHWARD_APP_DATA", ROOT / "public" / "data"))
+    if app.exists():
+        target = app / "freshness-checks.json"
+        temp = target.with_suffix(".json.tmp")
+        temp.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        temp.replace(target)
+
     print(f"Data freshness as of {datetime.now(timezone.utc).date()} (wrote data/processed/freshness.json)\n")
-    for status in ("newer_available", "current", "static", "unknown"):
+    for status in ("newer_available", "current", "static", "unknown", "manual_update_required"):
         rows = [r for r in out if r["status"] == status]
         if not rows:
             continue
@@ -171,6 +210,8 @@ def main() -> int:
             print(f"      {r['note']}")
     newer = [r["sourceId"] for r in out if r["status"] == "newer_available"]
     print("\nNewer official data available for:", ", ".join(newer) if newer else "nothing")
+    if any(r["status"] == "unknown" for r in out):
+        return 2
     return 1 if (strict and newer) else 0
 
 

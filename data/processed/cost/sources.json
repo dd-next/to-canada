@@ -7,7 +7,7 @@
   "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110006601",
   "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/11100066-eng.zip",
   "releaseDate": "2026-04-29",
-  "retrievedAt": "2026-11-04T17:56:54+00:00",
+  "retrievedAt": "2026-11-05T13:10:04+00:00",
   "referencePeriod": "2025 (annual), 2023-base MBM, current dollars",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, Table 11-10-0066-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
@@ -29,7 +29,7 @@
   "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110010401",
   "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/11100104-eng.zip",
   "releaseDate": "2026-04-29",
-  "retrievedAt": "2026-11-04T17:56:55+00:00",
+  "retrievedAt": "2026-11-05T13:10:05+00:00",
   "referencePeriod": "2025 (annual)",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, Table 11-10-0104-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
@@ -37,7 +37,7 @@
    "Used only to verify the square-root equivalence scale (not ingested as observations)."
   ],
   "notes": [
-   "Total MBM threshold by family size 1..10 persons; matches reference-family total x sqrt(n/4)."
+   "Total MBM threshold by family size; scale by sqrt(n/referenceHouseholdSize), where the reference family has 5 people in Nunavut and 4 elsewhere."
   ],
   "status": "ok"
  }

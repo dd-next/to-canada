@@ -1,0 +1,11 @@
+{
+ "startedAt": "2026-11-05T13:09:31+00:00",
+ "domains": [
+  "housing",
+  "work"
+ ],
+ "lastSuccessfulUpdateAt": "2026-11-05T13:10:21+00:00",
+ "status": "updated",
+ "errors": [],
+ "finishedAt": "2026-11-05T13:10:21+00:00"
+}

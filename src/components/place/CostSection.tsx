@@ -37,9 +37,10 @@ export function CostSection({ core, place }: { core: CoreData; place: Place }) {
   if (!ref)
     return <MissingValue label="No basket costs for this place" reason="Statistics Canada publishes no Market Basket Measure region for this place in the snapshot." />;
 
-  const monthly = parts.map((p) => ({ ...p, v: hasValue(p.o) ? mbmMonthly(p.o.value, n) : null })).sort((a, b) => (b.v ?? -1) - (a.v ?? -1));
+  const monthly = parts.map((p) => ({ ...p, v: hasValue(p.o) ? mbmMonthly(p.o.value, n, p.o.referenceHouseholdSize ?? (place.province === 'NU' ? 5 : 4)) : null })).sort((a, b) => (b.v ?? -1) - (a.v ?? -1));
   const nonShelter = monthly.every((p) => p.v !== null) ? monthly.reduce((a, p) => a + (p.v ?? 0), 0) : null;
-  const shelterMonthly = hasValue(shelter) ? mbmMonthly(shelter.value, n) : null;
+  const shelterMonthly = hasValue(shelter) ? mbmMonthly(shelter.value, n, shelter.referenceHouseholdSize ?? (place.province === 'NU' ? 5 : 4)) : null;
+  const referenceSize = ref.referenceHouseholdSize ?? (place.province === 'NU' ? 5 : 4);
   const region = geoName(ref.geo.name);
   const spec: ChartSpec = {
     id: 'mbm',
@@ -87,9 +88,9 @@ export function CostSection({ core, place }: { core: CoreData; place: Place }) {
           <p className="ppanel__title">How to read this</p>
           <div className="ppanel__text pcost__explain">
             <p>
-              Statistics Canada prices a modest basket — food, clothing, transport, phone and internet, other necessities and shelter — for a family of four in each
-              basket region. We scale it to {n === 1 ? 'one person' : `${n} people`} with Statistics Canada’s square-root rule: cost × √{n} ÷ 2
-              {n === 4 ? ' (the reference family, unchanged)' : ` = ×${formatNumber(Math.sqrt(n) / 2, 2)}`}, then ÷ 12 for a month.
+              Statistics Canada prices a modest basket — food, clothing, transport, phone and internet, other necessities and shelter — for a reference household of {referenceSize} people in each
+              basket region. We scale it to {n === 1 ? 'one person' : `${n} people`} with Statistics Canada’s square-root rule: cost × √{n} ÷ √{referenceSize}
+              {n === referenceSize ? ' (the reference family, unchanged)' : ` = ×${formatNumber(Math.sqrt(n / referenceSize), 2)}`}, then ÷ 12 for a month.
             </p>
             <p>
               The shelter part is a benchmark for a modest home, not a rent. Budgets on this site use the sourced asking rent instead and leave shelter out, so housing

@@ -15,9 +15,10 @@ export const CATEGORY_LABEL: Record<ProgramCategory, string> = {
   pre_arrival: 'Pre-arrival support',
 };
 
-const JOB_LABEL: Record<ProgramRecord['jobOfferRequired'], string> = {
+export const JOB_LABEL: Record<ProgramRecord['jobOfferRequired'], string> = {
   yes: 'Job offer required',
   no: 'No job offer required',
+  conditional: 'Job offer or qualifying alternative',
   varies: 'Job offer: depends on stream',
   not_applicable: 'Job offer: not applicable',
   unknown: 'Job offer: unclear — check the official page',
@@ -55,6 +56,7 @@ export function ProgramCard({ p, parentName, placeNames }: { p: ProgramRecord; p
         </p>
       )}
       <p className="prog__purpose">{p.purpose}</p>
+      {p.jobOfferNote && <p className="prog__purpose">{p.jobOfferNote}</p>}
       <dl className="prog__dl">
         <div>
           <dt className="label">Who it is for</dt>

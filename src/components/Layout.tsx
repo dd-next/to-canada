@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { withNavigationContext } from '../lib/navigation';
+import { useScenario } from './budget/scenario';
+import { unitTypeSlug } from '../lib/layers';
 import { PRODUCT } from '../config';
 import { FOOTER_NAV, NAV } from '../nav';
 import { useDismiss } from '../lib/hooks';
@@ -10,11 +13,18 @@ import { Icon } from './ui/Icon';
 import { Wordmark } from './Wordmark';
 
 function PrimaryNav({ id, onNavigate }: { id?: string; onNavigate?: () => void }) {
+  const location = useLocation();
+  const [scenario] = useScenario();
+  const context = new URLSearchParams(location.search);
+  if (location.pathname === '/budget') {
+    context.set('unit', unitTypeSlug(scenario.unit));
+    if (scenario.noc) context.set('noc', scenario.noc); else context.delete('noc');
+  }
   return (
     <ul className="nav__list" id={id}>
       {NAV.map((n) => (
         <li key={n.to}>
-          <NavLink to={n.to} end={'end' in n ? n.end : undefined} className="nav__link" onClick={onNavigate}>
+          <NavLink to={withNavigationContext(n.to, context)} end={'end' in n ? n.end : undefined} className="nav__link" onClick={onNavigate}>
             {n.label}
           </NavLink>
         </li>

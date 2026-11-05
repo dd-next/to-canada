@@ -90,10 +90,11 @@
    "Requires a valid full-time job offer of at least 1 year, or a certificate of qualification in the trade from a Canadian authority.",
    "Education not required."
   ],
-  "jobOfferRequired": "yes",
-  "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html",
-  "lastChecked": "2026-11-04",
-  "sourceId": "ircc-express-entry",
+  "jobOfferRequired": "conditional",
+  "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
+  "lastChecked": "2026-11-05",
+  "sourceId": "ircc-fstp",
+  "jobOfferNote": "A valid full-time job offer for at least one year OR a Canadian certificate of qualification in the skilled trade.",
   "shortName": "FSTP",
   "parentId": "express-entry",
   "placeIds": []

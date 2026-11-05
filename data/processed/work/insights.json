@@ -2,195 +2,84 @@
  {
   "id": "work-wages",
   "topic": "work",
-  "title": "Pay depends more on the occupation than the city, but some regions pay a clear premium",
-  "question": "What do people in common newcomer occupations earn, and how much does it differ between places?",
-  "dek": "Job Bank wage estimates for ten occupations: low, median and high hourly wages of employed workers, by economic region.",
+  "title": "Read regional wages with their period and source method",
+  "question": "What do employed workers earn in the economic regions around these places?",
+  "dek": "Job Bank low, median and high wages, grouped by comparable period and methodology.",
   "findings": [
    {
-    "id": "wage-occupation-gap",
-    "kind": "calculation",
-    "headline": "Median hourly pay across 10 common newcomer occupations ranges from $17.31 (retail salespersons) to $48.08 (software developers)",
-    "detail": "Canada-wide medians for employed workers run from $17.31/hour for retail salespersons to $48.08/hour for software developers, a ratio of 2.8x. Within an occupation the low-to-high range is wide: software developers run $30.00-$76.92. These describe people already working in the occupation in Canada, not starting pay for new arrivals.",
-    "stat": {
-     "value": 48.08,
-     "unit": "CAD_hour",
-     "label": "Median, software developers, Canada",
-     "period": "2023-2024"
-    },
-    "placeIds": [],
-    "metricId": null,
+    "id": "wage-region-range-31301",
+    "kind": "observation",
+    "headline": "Registered nurses: comparable regional medians range from $39.38 to $58.00 per hour",
+    "detail": "Among 30 economic regions using Labour Force Survey, reference period 2023-2024: Capitale-Nationale has $39.38/hour and Northwest Territories has $58.00/hour. These are regional wages of employed workers, not city pay or starting salaries.",
+    "placeIds": [
+     "quebec-city",
+     "yellowknife"
+    ],
     "sourceIds": [
      "jobbank-wages-2025"
-    ],
-    "calc": "Job Bank Wages 2025 edition, geography Canada (ER00), median wage for NOC 21232, 31301, 73300, 42202, 11100, 72200, 63200, 64100, 44101, 72106 (all hourly, Annual_Wage_Flag=0); ratio = max median / min median."
-   },
-   {
-    "id": "wage-rn-regional",
-    "kind": "calculation",
-    "headline": "Registered nurses' median hourly wage is $48.01 in Calgary but $39.38 in Québec City (provinces, same occupation)",
-    "detail": "Among the places' economic regions in the ten provinces, the highest published median for registered nurses and registered psychiatric nurses is $48.01 (Calgary economic region) and the lowest $39.38 (Québec City), a gap of $8.63/hour. Territorial medians are higher still (Whitehorse $48.50, Yellowknife $58.00, Iqaluit $57.99). Remote places also tend to have higher living costs; wages here are nominal and not adjusted for prices.",
-    "stat": {
-     "value": 8.63,
-     "unit": "CAD_hour",
-     "label": "Gap between highest and lowest provincial place median",
-     "period": "2023-2024"
-    },
-    "placeIds": [
-     "calgary",
-     "quebec-city",
-     "whitehorse",
-     "yellowknife",
-     "iqaluit"
     ],
     "metricId": "noc_wage",
     "mapParams": {
      "noc": "31301"
     },
-    "sourceIds": [
-     "jobbank-wages-2025"
-    ],
-    "calc": "For each place take the median wage of NOC 31301 in its primary economic region (geo.economicRegions[0]); shared ERs counted once; gap = max - min over the 10 provinces' places, territories reported separately."
+    "calc": "Distinct economic regions; identical hourly unit, observation period and methodology; largest comparable cohort for this occupation."
    },
    {
-    "id": "wage-alberta-trades",
-    "kind": "calculation",
-    "headline": "Welders' median wage in Calgary and Edmonton ($37.72, $39.90) is about 39% above Toronto and Montréal ($28.00, $28.00)",
-    "detail": "The pattern is similar for transport truck drivers: $30.00 (Calgary) and $28.85 (Edmonton) versus $25.10 (Toronto) and $23.68 (Montréal), about 21% higher. For child-care, retail and food-service occupations regional differences are much smaller. Always compare against local rents before treating a wage gap as a gain.",
-    "stat": {
-     "value": 38.6,
-     "unit": "percent",
-     "label": "Welders: Calgary/Edmonton mean median vs Toronto/Montréal mean median",
-     "period": "2023-2024"
-    },
+    "id": "wage-region-range-72106",
+    "kind": "observation",
+    "headline": "Welders: comparable regional medians range from $25.00 to $39.90 per hour",
+    "detail": "Among 19 economic regions using Labour Force Survey, reference period 2023-2024: Prince Edward Island has $25.00/hour and Edmonton has $39.90/hour. These are regional wages of employed workers, not city pay or starting salaries.",
     "placeIds": [
-     "calgary",
-     "edmonton",
-     "toronto",
-     "montreal"
+     "charlottetown",
+     "edmonton"
+    ],
+    "sourceIds": [
+     "jobbank-wages-2025"
     ],
     "metricId": "noc_wage",
     "mapParams": {
      "noc": "72106"
     },
+    "calc": "Distinct economic regions; identical hourly unit, observation period and methodology; largest comparable cohort for this occupation."
+   },
+   {
+    "id": "wage-region-range-73300",
+    "kind": "observation",
+    "headline": "Transport truck drivers: comparable regional medians range from $20.00 to $34.00 per hour",
+    "detail": "Among 28 economic regions using Labour Force Survey, reference period 2023-2024: Fredericton--Oromocto has $20.00/hour and Yukon Territory has $34.00/hour. These are regional wages of employed workers, not city pay or starting salaries.",
+    "placeIds": [
+     "fredericton",
+     "whitehorse"
+    ],
     "sourceIds": [
      "jobbank-wages-2025"
     ],
-    "calc": "Median wage NOC 72106 (welders) and 73300 (truck drivers) in primary ERs of the four places (4830, 4860, 3530, 2440); percent = mean(Calgary, Edmonton) / mean(Toronto, Montréal) - 1."
+    "metricId": "noc_wage",
+    "mapParams": {
+     "noc": "73300"
+    },
+    "calc": "Distinct economic regions; identical hourly unit, observation period and methodology; largest comparable cohort for this occupation."
    }
   ],
   "charts": [
    {
-    "id": "occupation-wage-range",
+    "id": "wage-region-31301",
     "type": "range",
-    "title": "Ten common occupations: hourly wage range, Canada",
-    "subtitle": "Low, median and high wage of employed workers, 2023-2024",
+    "title": "Registered nurses: published economic-region wages",
+    "subtitle": "NOC 31301 · 2023-2024 · Labour Force Survey",
     "unit": "CAD_hour",
     "yLabel": "CAD per hour",
     "series": [
      {
-      "id": "canada",
-      "label": "Canada",
+      "id": "31301",
+      "label": "Registered nurses",
       "points": [
        {
-        "x": "Software developers",
-        "y": 48.08,
-        "y0": 30.0,
-        "y1": 76.92
-       },
-       {
-        "x": "Registered nurses",
-        "y": 43.27,
-        "y0": 30.0,
-        "y1": 54.37
-       },
-       {
-        "x": "Accountants and auditors",
-        "y": 40.36,
-        "y0": 25.0,
-        "y1": 71.43
-       },
-       {
-        "x": "Electricians",
-        "y": 35.0,
-        "y0": 20.0,
-        "y1": 48.0
-       },
-       {
-        "x": "Welders",
-        "y": 30.0,
-        "y0": 22.0,
-        "y1": 47.0
-       },
-       {
-        "x": "Transport truck drivers",
-        "y": 26.42,
-        "y0": 19.45,
-        "y1": 37.0
-       },
-       {
-        "x": "Early childhood educators",
-        "y": 22.3,
-        "y0": 16.95,
-        "y1": 30.03
-       },
-       {
-        "x": "Home support workers",
-        "y": 20.5,
-        "y0": 16.0,
-        "y1": 27.0
-       },
-       {
-        "x": "Cooks",
-        "y": 18.0,
-        "y0": 15.0,
-        "y1": 25.0
-       },
-       {
-        "x": "Retail salespersons",
-        "y": 17.31,
-        "y0": 15.0,
-        "y1": 28.85
-       }
-      ]
-     }
-    ],
-    "notes": "Wages of people currently employed in the occupation; not advertised pay and not an offer you should expect on arrival.",
-    "sourceIds": [
-     "jobbank-wages-2025"
-    ]
-   },
-   {
-    "id": "rn-wage-range",
-    "type": "range",
-    "title": "Registered nurses: hourly wage range by place's economic region",
-    "subtitle": "Low, median and high wage of employed workers, NOC 31301, 2023-2024 reference period",
-    "unit": "CAD_hour",
-    "yLabel": "CAD per hour",
-    "series": [
-     {
-      "id": "rn",
-      "label": "Registered nurses and registered psychiatric nurses",
-      "points": [
-       {
-        "x": "Yellowknife",
-        "y": 58.0,
-        "y0": 45.0,
-        "y1": 69.23,
-        "placeId": "yellowknife"
-       },
-       {
-        "x": "Iqaluit",
-        "y": 57.99,
-        "y0": 45.0,
-        "y1": 71.57,
-        "placeId": "iqaluit"
-       },
-       {
-        "x": "Whitehorse",
-        "y": 48.5,
-        "y0": 33.0,
-        "y1": 60.88,
-        "placeId": "whitehorse"
+        "x": "Avalon Peninsula",
+        "y": 44.0,
+        "y0": 33.11,
+        "y1": 51.66,
+        "placeId": "st-johns"
        },
        {
         "x": "Calgary",
@@ -200,39 +89,11 @@
         "placeId": "calgary"
        },
        {
-        "x": "Saskatoon",
-        "y": 48.0,
-        "y0": 37.8,
-        "y1": 52.0,
-        "placeId": "saskatoon"
-       },
-       {
-        "x": "Kelowna",
-        "y": 48.0,
-        "y0": 40.35,
-        "y1": 56.0,
-        "placeId": "kelowna"
-       },
-       {
-        "x": "Vancouver / Abbotsford–Mission",
-        "y": 47.54,
-        "y0": 34.0,
-        "y1": 57.0,
-        "placeId": "vancouver"
-       },
-       {
-        "x": "Regina",
-        "y": 47.27,
-        "y0": 37.0,
-        "y1": 53.49,
-        "placeId": "regina"
-       },
-       {
-        "x": "Victoria",
-        "y": 47.0,
-        "y0": 36.42,
-        "y1": 55.61,
-        "placeId": "victoria"
+        "x": "Capitale-Nationale",
+        "y": 39.38,
+        "y0": 27.0,
+        "y1": 48.0,
+        "placeId": "quebec-city"
        },
        {
         "x": "Edmonton",
@@ -242,81 +103,18 @@
         "placeId": "edmonton"
        },
        {
-        "x": "Ottawa",
-        "y": 45.0,
-        "y0": 28.85,
-        "y1": 54.38,
-        "placeId": "ottawa"
+        "x": "Estrie",
+        "y": 41.0,
+        "y0": 26.67,
+        "y1": 47.98,
+        "placeId": "sherbrooke"
        },
        {
-        "x": "Winnipeg",
-        "y": 45.0,
-        "y0": 35.0,
-        "y1": 52.4,
-        "placeId": "winnipeg"
-       },
-       {
-        "x": "Moncton",
-        "y": 45.0,
-        "y0": 28.57,
-        "y1": 50.0,
-        "placeId": "moncton"
-       },
-       {
-        "x": "Saint John",
-        "y": 45.0,
-        "y0": 31.0,
-        "y1": 48.0,
-        "placeId": "saint-john"
-       },
-       {
-        "x": "Fredericton",
+        "x": "Fredericton--Oromocto",
         "y": 44.77,
         "y0": 31.0,
         "y1": 49.0,
         "placeId": "fredericton"
-       },
-       {
-        "x": "St. John's",
-        "y": 44.0,
-        "y0": 33.11,
-        "y1": 51.66,
-        "placeId": "st-johns"
-       },
-       {
-        "x": "Windsor",
-        "y": 44.0,
-        "y0": 27.86,
-        "y1": 55.0,
-        "placeId": "windsor"
-       },
-       {
-        "x": "Greater Sudbury",
-        "y": 44.0,
-        "y0": 31.0,
-        "y1": 55.0,
-        "placeId": "sudbury"
-       },
-       {
-        "x": "London",
-        "y": 43.27,
-        "y0": 31.4,
-        "y1": 55.0,
-        "placeId": "london"
-       },
-       {
-        "x": "Hamilton",
-        "y": 43.0,
-        "y0": 29.6,
-        "y1": 56.0,
-        "placeId": "hamilton"
-       },
-       {
-        "x": "Thunder Bay",
-        "y": 42.5,
-        "y0": 31.0,
-        "y1": 56.0,
-        "placeId": "thunder-bay"
        },
        {
         "x": "Halifax",
@@ -326,39 +124,39 @@
         "placeId": "halifax"
        },
        {
-        "x": "Charlottetown",
-        "y": 42.0,
-        "y0": 31.5,
-        "y1": 49.98,
-        "placeId": "charlottetown"
+        "x": "Hamilton--Niagara Peninsula",
+        "y": 43.0,
+        "y0": 29.6,
+        "y1": 56.0,
+        "placeId": "hamilton"
        },
        {
-        "x": "Gatineau",
-        "y": 41.0,
-        "y0": 25.0,
-        "y1": 53.42,
-        "placeId": "gatineau"
-       },
-       {
-        "x": "Kitchener–Waterloo",
+        "x": "Kitchener--Waterloo--Barrie",
         "y": 41.0,
         "y0": 29.73,
         "y1": 55.0,
         "placeId": "kitchener-waterloo"
        },
        {
-        "x": "Sherbrooke",
-        "y": 41.0,
-        "y0": 26.67,
-        "y1": 47.98,
-        "placeId": "sherbrooke"
+        "x": "London",
+        "y": 43.27,
+        "y0": 31.4,
+        "y1": 55.0,
+        "placeId": "london"
        },
        {
-        "x": "Toronto",
-        "y": 40.59,
-        "y0": 28.0,
-        "y1": 55.0,
-        "placeId": "toronto"
+        "x": "Lower Mainland",
+        "y": 47.54,
+        "y0": 34.0,
+        "y1": 57.0,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Moncton--Richibucto",
+        "y": 45.0,
+        "y0": 28.57,
+        "y1": 50.0,
+        "placeId": "moncton"
        },
        {
         "x": "Montréal",
@@ -368,234 +166,564 @@
         "placeId": "montreal"
        },
        {
-        "x": "Brandon",
+        "x": "Northeast",
+        "y": 44.0,
+        "y0": 31.0,
+        "y1": 55.0,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Northwest",
+        "y": 42.5,
+        "y0": 31.0,
+        "y1": 56.0,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Northwest Territories",
+        "y": 58.0,
+        "y0": 45.0,
+        "y1": 69.23,
+        "placeId": "yellowknife"
+       },
+       {
+        "x": "Nunavut",
+        "y": 57.99,
+        "y0": 45.0,
+        "y1": 71.57,
+        "placeId": "iqaluit"
+       },
+       {
+        "x": "Ottawa",
+        "y": 45.0,
+        "y0": 28.85,
+        "y1": 54.38,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Outaouais",
+        "y": 41.0,
+        "y0": 25.0,
+        "y1": 53.42,
+        "placeId": "gatineau"
+       },
+       {
+        "x": "Prince Edward Island",
+        "y": 42.0,
+        "y0": 31.5,
+        "y1": 49.98,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Regina--Moose Mountain",
+        "y": 47.27,
+        "y0": 37.0,
+        "y1": 53.49,
+        "placeId": "regina"
+       },
+       {
+        "x": "Saint John--St. Stephen",
+        "y": 45.0,
+        "y0": 31.0,
+        "y1": 48.0,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Saskatoon--Biggar",
+        "y": 48.0,
+        "y0": 37.8,
+        "y1": 52.0,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Southwest",
         "y": 40.0,
         "y0": 31.52,
         "y1": 50.0,
         "placeId": "brandon"
        },
        {
-        "x": "Québec City",
-        "y": 39.38,
-        "y0": 27.0,
-        "y1": 48.0,
-        "placeId": "quebec-city"
+        "x": "Thompson--Okanagan",
+        "y": 48.0,
+        "y0": 40.35,
+        "y1": 56.0,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "Toronto",
+        "y": 40.59,
+        "y0": 28.0,
+        "y1": 55.0,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Vancouver Island and Coast",
+        "y": 47.0,
+        "y0": 36.42,
+        "y1": 55.61,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Windsor--Sarnia",
+        "y": 44.0,
+        "y0": 27.86,
+        "y1": 55.0,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 45.0,
+        "y0": 35.0,
+        "y1": 52.4,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Yukon Territory",
+        "y": 48.5,
+        "y0": 33.0,
+        "y1": 60.88,
+        "placeId": "whitehorse"
        }
       ]
      }
     ],
-    "notes": "Each point is the place's primary Job Bank economic region, not the city alone. Vancouver and Abbotsford-Mission share one region.",
     "sourceIds": [
      "jobbank-wages-2025"
-    ]
+    ],
+    "notes": "Economic regions, not cities; shared regions appear once. Only hourly cells with the same period and source method are shown. 0 other-method or other-period regions omitted."
    },
    {
-    "id": "welder-wage-ranked",
-    "type": "bar_ranked",
-    "title": "Welders: median hourly wage by place's economic region",
-    "subtitle": "NOC 72106, employed workers, 2023-2024",
+    "id": "wage-region-72106",
+    "type": "range",
+    "title": "Welders: published economic-region wages",
+    "subtitle": "NOC 72106 · 2023-2024 · Labour Force Survey",
     "unit": "CAD_hour",
+    "yLabel": "CAD per hour",
     "series": [
      {
-      "id": "welders",
-      "label": "Median wage, welders and related machine operators",
+      "id": "72106",
+      "label": "Welders",
       "points": [
        {
-        "x": "Yellowknife",
-        "y": 48.29,
-        "placeId": "yellowknife"
+        "x": "Avalon Peninsula",
+        "y": 36.0,
+        "y0": 23.46,
+        "y1": 42.65,
+        "placeId": "st-johns"
        },
        {
         "x": "Edmonton",
         "y": 39.9,
+        "y0": 28.0,
+        "y1": 54.0,
         "placeId": "edmonton"
        },
        {
-        "x": "Calgary",
-        "y": 37.72,
-        "placeId": "calgary"
+        "x": "Fredericton--Oromocto",
+        "y": 27.0,
+        "y0": 22.0,
+        "y1": 46.09,
+        "placeId": "fredericton"
        },
        {
-        "x": "Vancouver / Abbotsford–Mission",
-        "y": 37.5,
-        "placeId": "vancouver"
+        "x": "Hamilton--Niagara Peninsula",
+        "y": 27.0,
+        "y0": 20.0,
+        "y1": 35.0,
+        "placeId": "hamilton"
        },
        {
-        "x": "Whitehorse",
-        "y": 37.47,
-        "placeId": "whitehorse"
-       },
-       {
-        "x": "St. John's",
-        "y": 36.0,
-        "placeId": "st-johns"
-       },
-       {
-        "x": "Thunder Bay",
-        "y": 36.0,
-        "placeId": "thunder-bay"
-       },
-       {
-        "x": "Victoria",
-        "y": 35.0,
-        "placeId": "victoria"
-       },
-       {
-        "x": "Kelowna",
-        "y": 34.87,
-        "placeId": "kelowna"
-       },
-       {
-        "x": "Regina",
-        "y": 32.82,
-        "placeId": "regina"
-       },
-       {
-        "x": "Saskatoon",
-        "y": 32.45,
-        "placeId": "saskatoon"
-       },
-       {
-        "x": "Greater Sudbury",
-        "y": 32.0,
-        "placeId": "sudbury"
-       },
-       {
-        "x": "Halifax",
-        "y": 31.6,
-        "placeId": "halifax"
-       },
-       {
-        "x": "Saint John",
-        "y": 29.0,
-        "placeId": "saint-john"
-       },
-       {
-        "x": "Toronto",
-        "y": 28.0,
-        "placeId": "toronto"
-       },
-       {
-        "x": "Montréal",
-        "y": 28.0,
-        "placeId": "montreal"
-       },
-       {
-        "x": "Ottawa",
-        "y": 28.0,
-        "placeId": "ottawa"
-       },
-       {
-        "x": "Gatineau",
-        "y": 28.0,
-        "placeId": "gatineau"
-       },
-       {
-        "x": "Winnipeg",
-        "y": 28.0,
-        "placeId": "winnipeg"
-       },
-       {
-        "x": "Québec City",
-        "y": 28.0,
-        "placeId": "quebec-city"
+        "x": "Kitchener--Waterloo--Barrie",
+        "y": 27.66,
+        "y0": 21.0,
+        "y1": 37.0,
+        "placeId": "kitchener-waterloo"
        },
        {
         "x": "London",
         "y": 28.0,
+        "y0": 21.0,
+        "y1": 41.28,
         "placeId": "london"
        },
        {
-        "x": "Sherbrooke",
-        "y": 28.0,
-        "placeId": "sherbrooke"
+        "x": "Lower Mainland",
+        "y": 37.5,
+        "y0": 26.0,
+        "y1": 49.5,
+        "placeId": "vancouver"
        },
        {
-        "x": "Kitchener–Waterloo",
-        "y": 27.66,
-        "placeId": "kitchener-waterloo"
-       },
-       {
-        "x": "Hamilton",
+        "x": "Moncton--Richibucto",
         "y": 27.0,
-        "placeId": "hamilton"
-       },
-       {
-        "x": "Moncton",
-        "y": 27.0,
+        "y0": 22.0,
+        "y1": 34.0,
         "placeId": "moncton"
        },
        {
-        "x": "Fredericton",
-        "y": 27.0,
-        "placeId": "fredericton"
+        "x": "Northeast",
+        "y": 32.0,
+        "y0": 17.6,
+        "y1": 45.0,
+        "placeId": "sudbury"
        },
        {
-        "x": "Brandon",
+        "x": "Northwest",
+        "y": 36.0,
+        "y0": 25.75,
+        "y1": 41.5,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Ottawa",
+        "y": 28.0,
+        "y0": 21.0,
+        "y1": 41.28,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Prince Edward Island",
+        "y": 25.0,
+        "y0": 20.0,
+        "y1": 32.5,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Saint John--St. Stephen",
+        "y": 29.0,
+        "y0": 22.0,
+        "y1": 48.0,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Saskatoon--Biggar",
+        "y": 32.45,
+        "y0": 23.0,
+        "y1": 52.0,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Southwest",
         "y": 26.25,
+        "y0": 21.31,
+        "y1": 37.0,
         "placeId": "brandon"
        },
        {
-        "x": "Windsor",
+        "x": "Toronto",
+        "y": 28.0,
+        "y0": 20.0,
+        "y1": 42.0,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Vancouver Island and Coast",
+        "y": 35.0,
+        "y0": 23.0,
+        "y1": 48.0,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Windsor--Sarnia",
         "y": 25.5,
+        "y0": 20.0,
+        "y1": 38.0,
         "placeId": "windsor"
        },
        {
-        "x": "Charlottetown",
-        "y": 25.0,
-        "placeId": "charlottetown"
+        "x": "Winnipeg",
+        "y": 28.0,
+        "y0": 23.0,
+        "y1": 40.16,
+        "placeId": "winnipeg"
        }
       ]
      }
     ],
-    "notes": "Places whose economic region has no published welder wage are omitted.",
     "sourceIds": [
      "jobbank-wages-2025"
-    ]
+    ],
+    "notes": "Economic regions, not cities; shared regions appear once. Only hourly cells with the same period and source method are shown. 10 other-method or other-period regions omitted."
+   },
+   {
+    "id": "wage-region-73300",
+    "type": "range",
+    "title": "Transport truck drivers: published economic-region wages",
+    "subtitle": "NOC 73300 · 2023-2024 · Labour Force Survey",
+    "unit": "CAD_hour",
+    "yLabel": "CAD per hour",
+    "series": [
+     {
+      "id": "73300",
+      "label": "Transport truck drivers",
+      "points": [
+       {
+        "x": "Avalon Peninsula",
+        "y": 24.2,
+        "y0": 17.97,
+        "y1": 32.0,
+        "placeId": "st-johns"
+       },
+       {
+        "x": "Calgary",
+        "y": 30.0,
+        "y0": 21.0,
+        "y1": 42.31,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Capitale-Nationale",
+        "y": 25.25,
+        "y0": 20.0,
+        "y1": 35.0,
+        "placeId": "quebec-city"
+       },
+       {
+        "x": "Edmonton",
+        "y": 28.85,
+        "y0": 21.0,
+        "y1": 40.0,
+        "placeId": "edmonton"
+       },
+       {
+        "x": "Estrie",
+        "y": 25.2,
+        "y0": 19.45,
+        "y1": 34.5,
+        "placeId": "sherbrooke"
+       },
+       {
+        "x": "Fredericton--Oromocto",
+        "y": 20.0,
+        "y0": 15.65,
+        "y1": 28.5,
+        "placeId": "fredericton"
+       },
+       {
+        "x": "Halifax",
+        "y": 25.0,
+        "y0": 19.0,
+        "y1": 28.05,
+        "placeId": "halifax"
+       },
+       {
+        "x": "Hamilton--Niagara Peninsula",
+        "y": 26.0,
+        "y0": 19.23,
+        "y1": 38.0,
+        "placeId": "hamilton"
+       },
+       {
+        "x": "Kitchener--Waterloo--Barrie",
+        "y": 28.0,
+        "y0": 20.0,
+        "y1": 34.75,
+        "placeId": "kitchener-waterloo"
+       },
+       {
+        "x": "London",
+        "y": 25.0,
+        "y0": 19.6,
+        "y1": 34.62,
+        "placeId": "london"
+       },
+       {
+        "x": "Lower Mainland",
+        "y": 29.0,
+        "y0": 21.0,
+        "y1": 40.0,
+        "placeId": "vancouver"
+       },
+       {
+        "x": "Moncton--Richibucto",
+        "y": 23.95,
+        "y0": 17.0,
+        "y1": 34.12,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Montréal",
+        "y": 23.68,
+        "y0": 16.15,
+        "y1": 33.75,
+        "placeId": "montreal"
+       },
+       {
+        "x": "Northeast",
+        "y": 27.0,
+        "y0": 20.0,
+        "y1": 38.49,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Northwest",
+        "y": 27.0,
+        "y0": 20.0,
+        "y1": 33.11,
+        "placeId": "thunder-bay"
+       },
+       {
+        "x": "Northwest Territories",
+        "y": 30.0,
+        "y0": 25.0,
+        "y1": 40.0,
+        "placeId": "yellowknife"
+       },
+       {
+        "x": "Nunavut",
+        "y": 29.0,
+        "y0": 20.0,
+        "y1": 40.0,
+        "placeId": "iqaluit"
+       },
+       {
+        "x": "Ottawa",
+        "y": 26.0,
+        "y0": 20.0,
+        "y1": 32.0,
+        "placeId": "ottawa"
+       },
+       {
+        "x": "Prince Edward Island",
+        "y": 24.0,
+        "y0": 18.0,
+        "y1": 30.29,
+        "placeId": "charlottetown"
+       },
+       {
+        "x": "Regina--Moose Mountain",
+        "y": 26.35,
+        "y0": 20.0,
+        "y1": 38.89,
+        "placeId": "regina"
+       },
+       {
+        "x": "Saint John--St. Stephen",
+        "y": 23.68,
+        "y0": 17.0,
+        "y1": 30.0,
+        "placeId": "saint-john"
+       },
+       {
+        "x": "Saskatoon--Biggar",
+        "y": 27.0,
+        "y0": 19.78,
+        "y1": 35.0,
+        "placeId": "saskatoon"
+       },
+       {
+        "x": "Southwest",
+        "y": 25.5,
+        "y0": 17.4,
+        "y1": 36.0,
+        "placeId": "brandon"
+       },
+       {
+        "x": "Thompson--Okanagan",
+        "y": 32.0,
+        "y0": 22.0,
+        "y1": 41.54,
+        "placeId": "kelowna"
+       },
+       {
+        "x": "Vancouver Island and Coast",
+        "y": 32.45,
+        "y0": 22.0,
+        "y1": 42.5,
+        "placeId": "victoria"
+       },
+       {
+        "x": "Windsor--Sarnia",
+        "y": 26.0,
+        "y0": 17.6,
+        "y1": 33.33,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Winnipeg",
+        "y": 24.0,
+        "y0": 17.0,
+        "y1": 34.72,
+        "placeId": "winnipeg"
+       },
+       {
+        "x": "Yukon Territory",
+        "y": 34.0,
+        "y0": 26.5,
+        "y1": 43.27,
+        "placeId": "whitehorse"
+       }
+      ]
+     }
+    ],
+    "sourceIds": [
+     "jobbank-wages-2025"
+    ],
+    "notes": "Economic regions, not cities; shared regions appear once. Only hourly cells with the same period and source method are shown. 2 other-method or other-period regions omitted."
    }
   ],
   "interpretation": [
-   "Use the occupation first: the spread between occupations is far larger than the spread between most cities for the same occupation. Regional differences matter most for trades, truck driving and health care, where Alberta, British Columbia and the territories sit at the top.",
-   "The low wage in several occupations is identical across occupations within a region (for example $17.60 for cooks, retail and food-service workers in Toronto and Ottawa), which looks like a minimum-wage floor, so low-end figures partly reflect legal floors rather than market pay. Median and high values say more about experienced workers.",
-   "Credential recognition, licensing and Canadian experience can put new arrivals below these medians at first, especially in regulated occupations such as nursing."
+   "Economic-region wages provide context around a city; they are not city-level estimates or an offer a newcomer should expect.",
+   "Compare wages only when the occupation, hourly or annual basis, period and source method agree. Annual cells are kept in the data but excluded from these hourly charts."
   ],
   "methodology": [
-   "Source: Employment and Social Development Canada, Job Bank Wages (open data, 2025 edition, revision date 2025-11-19). Wage estimates are for employed workers by NOC 2021 unit group and economic region; they are not advertised wages.",
-   "Estimates come from the Labour Force Survey (2023-2024), Employment Insurance survey data, Small Area Estimation (2024) and, for a few occupations, the 2021 Census; the source of each cell is in the open file.",
-   "Each place is represented by its primary economic region (the first economic region listed for the place). Values are nominal hourly dollars; all ten occupations are published hourly.",
-   "Occupations were chosen for newcomer relevance (high-demand, large and regulated and trades occupations) and for data availability; occupations with an annual-rate flag were avoided."
+   "The source edition is discovered through the official open.canada.ca catalog. Each wage cell retains Reference_Period and Data_Source_E from the CSV.",
+   "For each chart, keep the largest cohort of distinct economic regions with the same period and methodology. Regions are listed alphabetically; provincial and national fallbacks are not substituted."
   ],
   "limitations": [
-   "Economic regions are not the same as cities: Vancouver and Abbotsford-Mission share one region (Lower Mainland--Southwest), Québec City's primary region is Capitale-Nationale, and Montréal's is the Montréal region only (not Laval or the suburbs).",
-   "Small Area Estimation and LFS-based estimates carry sampling error; cells without enough data are not published and are left empty here (not replaced by provincial values). Missing places per occupation: Software developers: Iqaluit, Thunder Bay, Whitehorse, Yellowknife; Electricians: Whitehorse; Welders: Iqaluit",
-   "Reference period is 2023-2024 (mostly); wages have moved since. Wages are not adjusted for local prices and exclude benefits."
+   "Different methods or periods are not pooled into a single ranking. Published periods in this snapshot: 2021, 2023-2024, 2024",
+   "Wages are nominal earnings of employed workers; they are not adjusted for regional living costs and exclude benefits. Some occupations and regions have no published estimate."
   ],
   "sourceIds": [
    "jobbank-wages-2025",
    "statcan-noc-2021-v1.0"
   ],
   "relatedPlaceIds": [
+   "brandon",
    "calgary",
+   "charlottetown",
    "edmonton",
+   "fredericton",
+   "gatineau",
+   "halifax",
+   "hamilton",
+   "iqaluit",
+   "kelowna",
+   "kitchener-waterloo",
+   "london",
+   "moncton",
    "montreal",
+   "ottawa",
+   "quebec-city",
+   "regina",
+   "saint-john",
+   "saskatoon",
+   "sherbrooke",
+   "st-johns",
+   "sudbury",
+   "thunder-bay",
    "toronto",
    "vancouver",
+   "victoria",
+   "whitehorse",
+   "windsor",
+   "winnipeg",
    "yellowknife"
   ],
-  "computedAt": "2026-11-04T18:23:00+00:00"
+  "computedAt": "2026-11-05T13:10:18+00:00"
  },
  {
   "id": "work-labour",
   "topic": "work",
   "title": "Job markets differ by several points between Canadian cities, and the year-on-year moves are mostly small",
   "question": "Which cities have tighter labour markets, and how are conditions changing?",
-  "dek": "Labour Force Survey rates for 26 metro areas, with the smaller places shown on their published geography.",
+  "dek": "Labour Force Survey rates for comparable whole-CMA areas, with other places shown on their published geography.",
   "findings": [
    {
     "id": "labour-rate-spread",
     "kind": "observation",
     "headline": "Unemployment ranges from 4.0% in Sherbrooke to 9.3% in Kelowna (three months to 2026-09)",
-    "detail": "Across 26 CMAs and CMA parts the seasonally adjusted three-month average unemployment rate runs from 4.0% (Sherbrooke) to 9.3% (Kelowna); the middle is about 6.5%. Employment rates (share of everyone 15+ who is working) range from 57.5% in London to 66.8% in Calgary, which also reflects age structure and who is in the labour force. The Ottawa-Gatineau halves differ: Ontario part 7.2%, Quebec part 6.3%. Differences of one point or less between nearby cities are often within sampling error.",
+    "detail": "Across 23 CMAs the seasonally adjusted three-month average unemployment rate runs from 4.0% (Sherbrooke) to 9.3% (Kelowna); the middle is about 6.4%. Employment rates (share of everyone 15+ who is working) range from 57.5% in London to 66.8% in Calgary, which also reflects age structure and who is in the labour force. Ottawa-Gatineau parts are shown separately from whole-CMA ranks. Differences of one point or less between nearby cities are often within sampling error.",
     "stat": {
      "value": 5.3,
      "unit": "pp",
@@ -614,17 +742,17 @@
     "sourceIds": [
      "statcan-14-10-0459-01"
     ],
-    "calc": "Table 14-10-0459-01, seasonally adjusted, Estimate, REF_DATE 2026-09; unemployment rate and employment rate for the 26 CMA / Ottawa-Gatineau part places; territories, Charlottetown (provincial) and Brandon (regional, unadjusted) excluded from the ranking."
+    "calc": "Table 14-10-0459-01, seasonally adjusted, Estimate, REF_DATE 2026-09; unemployment rate and employment rate for whole-CMA places on the same geography; territories, Charlottetown (provincial) and Brandon (regional, unadjusted) excluded from the ranking."
    },
    {
     "id": "labour-yoy-change",
     "kind": "calculation",
-    "headline": "Compared with a year earlier, unemployment fell in 16 of 26 places and rose in 10, but only 5 changes are clearly larger than sampling noise",
+    "headline": "Compared with a year earlier, unemployment fell in 14 of 23 places and rose in 9, but only 5 changes are clearly larger than sampling noise",
     "detail": "Changes beyond 1.96 standard errors: Windsor -3.1 pp, Toronto -1.9 pp, Calgary -1.8 pp, Winnipeg -1.4 pp, London +2.1 pp. Every other change is small relative to the survey's sampling error and should not be read as a trend. Both values are three-month moving averages, so a one-month swing is dampened and consecutive months overlap.",
     "stat": {
-     "value": 2.1,
-     "unit": "pp",
-     "label": "Largest significant change (London)",
+     "value": 5,
+     "unit": "count",
+     "label": "Changes exceeding 1.96 standard errors",
      "period": "2026-09"
     },
     "placeIds": [
@@ -638,7 +766,7 @@
     "sourceIds": [
      "statcan-14-10-0459-01"
     ],
-    "calc": "change = rate(2026-09) - rate(2025-09) from 14-10-0459-01 (SA, 3-month moving average); significant if |change| > 1.96 x published standard error of year-over-year change; 26 CMA / part places."
+    "calc": "change = rate(2026-09) - rate(2025-09) from 14-10-0459-01 (SA, 3-month moving average); significant if |change| > 1.96 x published standard error of year-over-year change; whole-CMA places."
    }
   ],
   "charts": [
@@ -679,11 +807,6 @@
         "placeId": "windsor"
        },
        {
-        "x": "Ottawa",
-        "y": 7.2,
-        "placeId": "ottawa"
-       },
-       {
         "x": "Toronto",
         "y": 6.9,
         "placeId": "toronto"
@@ -709,11 +832,6 @@
         "placeId": "abbotsford-mission"
        },
        {
-        "x": "St. John's",
-        "y": 6.6,
-        "placeId": "st-johns"
-       },
-       {
         "x": "Vancouver",
         "y": 6.5,
         "placeId": "vancouver"
@@ -722,11 +840,6 @@
         "x": "Regina",
         "y": 6.4,
         "placeId": "regina"
-       },
-       {
-        "x": "Gatineau",
-        "y": 6.3,
-        "placeId": "gatineau"
        },
        {
         "x": "Calgary",
@@ -786,7 +899,7 @@
       ]
      }
     ],
-    "notes": "CMAs and Ottawa-Gatineau provincial parts only; territories, Charlottetown and Brandon are not ranked because the LFS publishes them on a different geography or basis.",
+    "notes": "Whole CMAs only; Ottawa-Gatineau provincial parts, territories, Charlottetown and Brandon are not ranked because the LFS publishes them on a different geography or basis.",
     "sourceIds": [
      "statcan-14-10-0459-01"
     ]
@@ -857,12 +970,6 @@
         "label": "within sampling error"
        },
        {
-        "x": "Ottawa",
-        "y": 0.1,
-        "placeId": "ottawa",
-        "label": "within sampling error"
-       },
-       {
         "x": "Regina",
         "y": -0.1,
         "placeId": "regina",
@@ -872,12 +979,6 @@
         "x": "Hamilton",
         "y": -0.3,
         "placeId": "hamilton",
-        "label": "within sampling error"
-       },
-       {
-        "x": "St. John's",
-        "y": -0.4,
-        "placeId": "st-johns",
         "label": "within sampling error"
        },
        {
@@ -902,12 +1003,6 @@
         "x": "Thunder Bay",
         "y": -0.5,
         "placeId": "thunder-bay",
-        "label": "within sampling error"
-       },
-       {
-        "x": "Gatineau",
-        "y": -0.6,
-        "placeId": "gatineau",
         "label": "within sampling error"
        },
        {
@@ -3260,7 +3355,7 @@
    "For Whitehorse, Yellowknife and Iqaluit the figures are territory-wide; Charlottetown shows Prince Edward Island; Brandon shows the Southwest economic region (unadjusted). They sit in the map and place profiles with that label rather than in the rankings."
   ],
   "methodology": [
-   "Source: Statistics Canada Labour Force Survey, Table 14-10-0459-01 (CMA, three-month moving average, seasonally adjusted), latest period 2026-09 (released 2026-10-09). Territories: Table 14-10-0292-01 (seasonally adjusted series); Brandon: Table 14-10-0462-01 (economic region, unadjusted).",
+   "Source: Statistics Canada Labour Force Survey, Table 14-10-0459-01 (CMA, three-month moving average, seasonally adjusted), latest period 2026-09; release date is shown in Sources. Territories: Table 14-10-0292-01 (seasonally adjusted series); Brandon: Table 14-10-0462-01 (economic region, unadjusted).",
    "Each rate is the three-month moving average ending in the month shown. The one-year change subtracts the same measure twelve months earlier; significance uses Statistics Canada's standard error of the year-over-year change.",
    "Ottawa and Gatineau use the LFS's Ontario and Quebec parts of the Ottawa-Gatineau CMA."
   ],
@@ -3285,6 +3380,6 @@
    "toronto",
    "vancouver"
   ],
-  "computedAt": "2026-11-04T18:23:00+00:00"
+  "computedAt": "2026-11-05T13:10:18+00:00"
  }
 ]

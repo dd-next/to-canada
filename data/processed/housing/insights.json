@@ -10,7 +10,7 @@
     "id": "asking-1br-range",
     "kind": "observation",
     "headline": "1-bedroom asking rents run from $1,040 in Sherbrooke to $2,280 in Vancouver",
-    "detail": "Average advertised rent for a 1-bedroom apartment in 2026-Q2 across the 26 of our 31 places that the table covers: median $1,500; the lowest are Sherbrooke ($1,040), Québec City ($1,210), Saint John ($1,230), Regina ($1,250), Edmonton ($1,260); the highest are Vancouver ($2,280), Toronto ($2,090), Victoria ($2,040), Ottawa ($1,900), Kelowna ($1,880), Halifax ($1,880). Asking rent applies to units currently advertised, so it is the price a new arrival would see on listing sites, not what long-term tenants pay. Charlottetown, Brandon, Whitehorse, Yellowknife and Iqaluit are not in this table (CMAs only).",
+    "detail": "Average advertised rent for a 1-bedroom apartment in 2026-Q2 across the 24 of our 31 places that have a comparable full-CMA geography: median $1,500; the lowest are Sherbrooke ($1,040), Québec City ($1,210), Saint John ($1,230), Regina ($1,250), Edmonton ($1,260); the highest are Vancouver ($2,280), Toronto ($2,090), Victoria ($2,040), Kelowna ($1,880), Halifax ($1,880). Asking rent applies to units currently advertised, so it is the price a new arrival would see on listing sites, not what long-term tenants pay. Charlottetown, Brandon, Whitehorse, Yellowknife and Iqaluit are not in this table (CMAs only).",
     "stat": {
      "value": 1040.0,
      "unit": "CAD_month",
@@ -25,15 +25,15 @@
     "sourceIds": [
      "statcan-46-10-0092-01"
     ],
-    "calc": "Table 46-10-0092-01, 'Apartment - 1 bedroom', 'Average asking rent', REF_DATE 2026-04 (2026-Q2); sorted ascending over places with a published value; median over 26 places."
+    "calc": "Table 46-10-0092-01, 'Apartment - 1 bedroom', 'Average asking rent', REF_DATE 2026-04 (2026-Q2); sorted ascending over places with a published value; median over 24 places."
    },
    {
     "id": "asking-1br-change-1y",
     "kind": "calculation",
-    "headline": "Over the past year 1-bedroom asking rents fell in 14 of 24 places, led by Calgary, Abbotsford–Mission, Kitchener–Waterloo",
-    "detail": "Change in the 1-bedroom average asking rent, 2026-Q2 vs 2025-Q2: median -2.1%. Largest falls: Calgary -6.1%, Abbotsford–Mission -4.9%, Kitchener–Waterloo -4.4%, London -4.3%. Largest rises: Fredericton +5.1%, Halifax +4.4%, Winnipeg +3.9%, Saskatoon +3.9%. Direction agrees with the change vs 2025-Q1 in 23 of 24 places. CAUTION: StatCan marks 2025-Q2 estimates as modelled (one listing platform was unavailable), so treat the year-on-year figure as indicative. These are advertised-price changes, not changes in what sitting tenants pay.",
+    "headline": "Over the past year 1-bedroom asking rents fell in 12 of 22 places, led by Calgary, Abbotsford–Mission, Kitchener–Waterloo",
+    "detail": "Change in the 1-bedroom average asking rent, 2026-Q2 vs 2025-Q2: median -1.3%. Largest falls: Calgary -6.1%, Abbotsford–Mission -4.9%, Kitchener–Waterloo -4.4%, London -4.3%. Largest rises: Fredericton +5.1%, Halifax +4.4%, Winnipeg +3.9%, Saskatoon +3.9%. Direction agrees with the change vs 2025-Q1 in 21 of 22 places. CAUTION: StatCan marks 2025-Q2 estimates as modelled (one listing platform was unavailable), so treat the year-on-year figure as indicative. These are advertised-price changes, not changes in what sitting tenants pay.",
     "stat": {
-     "value": -2.1,
+     "value": -1.3,
      "unit": "percent",
      "label": "median 1-bedroom asking-rent change, 1 year",
      "period": "2026-Q2"
@@ -50,7 +50,7 @@
     "sourceIds": [
      "statcan-46-10-0092-01"
     ],
-    "calc": "(asking 1-bedroom apartment rent 2026-Q2 / 2025-Q2 - 1) x 100 from published rounded values; median across 24 places with both values."
+    "calc": "(asking 1-bedroom apartment rent 2026-Q2 / 2025-Q2 - 1) x 100 from published rounded values; median across 22 places with both values."
    },
    {
     "id": "asking-1br-since-2019",
@@ -81,12 +81,12 @@
     "id": "asking-vs-cmhc-2br",
     "kind": "calculation",
     "headline": "Advertised 2-bedroom rents sit a median 17% above CMHC's average rent; the gap ranges from -1% to +43%",
-    "detail": "Asking rent for 2-bedroom apartments in 2025-Q4 (StatCan) vs CMHC's October 2025 average rent for purpose-built apartments, 26 places. Largest gaps: Montréal +43% (asking $1,920 vs $1,346), Hamilton +32% (asking $2,190 vs $1,656), Vancouver +31% (asking $3,090 vs $2,363), Toronto +30% (asking $2,670 vs $2,046); smallest: Saskatoon -1%, Calgary +1%, Edmonton +1%. The gap is not 'overpricing': the two measure different things - units advertised for rent during a quarter on listing platforms (new leases, any building type) vs a survey of the average rent across all units in purpose-built rental structures of 3+ units, including long-standing tenancies. For a newcomer, the asking rent is the better guide to what a new lease costs.",
+    "detail": "Asking rent for 2-bedroom apartments in 2025-Q4 (StatCan) vs CMHC's Oct-25 average rent for purpose-built apartments, 24 places. Largest gaps: Montréal +43% (asking $1,920 vs $1,346), Hamilton +32% (asking $2,190 vs $1,656), Vancouver +31% (asking $3,090 vs $2,363), Toronto +30% (asking $2,670 vs $2,046); smallest: Saskatoon -1%, Calgary +1%, Edmonton +1%. The gap is not 'overpricing': the two measure different things - units advertised for rent during a quarter on listing platforms (new leases, any building type) vs a survey of the average rent across all units in purpose-built rental structures of 3+ units, including long-standing tenancies. For a newcomer, the asking rent is the better guide to what a new lease costs.",
     "stat": {
      "value": 17.4,
      "unit": "percent",
      "label": "median asking vs CMHC average rent gap, 2-bedroom",
-     "period": "2025-Q4 vs Oct 2025"
+     "period": "2025-Q4 vs Oct-25"
     },
     "placeIds": [
      "montreal",
@@ -190,11 +190,6 @@
         "placeId": "fredericton"
        },
        {
-        "x": "Gatineau",
-        "y": 1440.0,
-        "placeId": "gatineau"
-       },
-       {
         "x": "Thunder Bay",
         "y": 1470.0,
         "placeId": "thunder-bay"
@@ -248,11 +243,6 @@
         "x": "Kelowna",
         "y": 1880.0,
         "placeId": "kelowna"
-       },
-       {
-        "x": "Ottawa",
-        "y": 1900.0,
-        "placeId": "ottawa"
        },
        {
         "x": "Victoria",
@@ -1365,23 +1355,6 @@
       ]
      },
      {
-      "id": "asking_1br_slope_ottawa",
-      "label": "Ottawa",
-      "placeId": "ottawa",
-      "points": [
-       {
-        "x": "2019-Q1",
-        "y": 1360.0,
-        "placeId": "ottawa"
-       },
-       {
-        "x": "2026-Q2",
-        "y": 1900.0,
-        "placeId": "ottawa"
-       }
-      ]
-     },
-     {
       "id": "asking_1br_slope_halifax",
       "label": "Halifax",
       "placeId": "halifax",
@@ -1569,23 +1542,6 @@
       ]
      },
      {
-      "id": "asking_1br_slope_gatineau",
-      "label": "Gatineau",
-      "placeId": "gatineau",
-      "points": [
-       {
-        "x": "2019-Q1",
-        "y": 830.0,
-        "placeId": "gatineau"
-       },
-       {
-        "x": "2026-Q2",
-        "y": 1440.0,
-        "placeId": "gatineau"
-       }
-      ]
-     },
-     {
       "id": "asking_1br_slope_fredericton",
       "label": "Fredericton",
       "placeId": "fredericton",
@@ -1765,7 +1721,7 @@
     "id": "asking-vs-cmhc-dots",
     "type": "dot_compare",
     "title": "2-bedroom: advertised (asking) vs CMHC average rent",
-    "subtitle": "Asking rent 2025-Q4 vs CMHC October 2025 survey average, sorted by gap",
+    "subtitle": "Asking rent 2025-Q4 vs CMHC Oct-25 survey average, sorted by gap",
     "unit": "CAD_month",
     "series": [
      {
@@ -1806,11 +1762,6 @@
         "x": "Kelowna",
         "y": 2370.0,
         "placeId": "kelowna"
-       },
-       {
-        "x": "Gatineau",
-        "y": 1660.0,
-        "placeId": "gatineau"
        },
        {
         "x": "Québec City",
@@ -1858,11 +1809,6 @@
         "placeId": "halifax"
        },
        {
-        "x": "Ottawa",
-        "y": 2390.0,
-        "placeId": "ottawa"
-       },
-       {
         "x": "Victoria",
         "y": 2650.0,
         "placeId": "victoria"
@@ -1906,7 +1852,7 @@
      },
      {
       "id": "cmhc",
-      "label": "CMHC average rent (Oct 2025)",
+      "label": "CMHC average rent (Oct-25)",
       "points": [
        {
         "x": "Saskatoon",
@@ -1942,11 +1888,6 @@
         "x": "Kelowna",
         "y": 2118.0,
         "placeId": "kelowna"
-       },
-       {
-        "x": "Gatineau",
-        "y": 1460.0,
-        "placeId": "gatineau"
        },
        {
         "x": "Québec City",
@@ -1992,11 +1933,6 @@
         "x": "Halifax",
         "y": 1826.0,
         "placeId": "halifax"
-       },
-       {
-        "x": "Ottawa",
-        "y": 1926.0,
-        "placeId": "ottawa"
        },
        {
         "x": "Victoria",
@@ -2056,7 +1992,7 @@
   "methodology": [
    "Asking rents: StatCan table 46-10-0092-01 (experimental Quarterly Rent Statistics), average asking rent for apartments by bedroom count in each CMA, rounded to $10 by StatCan; Ottawa and Gatineau use the Ontario and Quebec parts of the CMA.",
    "Change since 2019 compares the latest quarter with the mean of the four 2019 quarters; 1-year change compares with the same quarter a year earlier.",
-   "CMHC: Rental Market Survey, October 2025, average rent by bedroom type for private apartments in structures of 3+ units, per centre (CMA/CA); the asking-vs-CMHC comparison uses asking rent for 2025-Q4 (the quarter containing the October survey) to match timing.",
+   "CMHC: Rental Market Survey, Oct-25, average rent by bedroom type for private apartments in structures of 3+ units, per centre (CMA/CA); the asking-vs-CMHC comparison uses asking rent for 2025-Q4 (the quarter containing the October survey) to match timing.",
    "CPI: 12-month change in 'rented accommodation' (the rent sub-index published at city level), table 18-10-0004-01, latest month."
   ],
   "limitations": [
@@ -2103,7 +2039,7 @@
     "id": "runway-single",
     "kind": "calculation",
     "headline": "A single adult with $15,000 and no income lasts about 5.9 months in Sherbrooke but 4.0 in Vancouver",
-    "detail": "Scenario, not a prediction: monthly cost = 2026-Q2 average asking rent for a 1-bedroom apartment + the MBM non-shelter basket (food, clothing, transportation, communication, other) for one person (reference-family cost x sqrt(1/4) = 50%, divided by 12). Longest runway: Sherbrooke 5.9, Québec City 5.5, Regina 5.5, Saint John 5.4; shortest: Vancouver 4.0, Toronto 4.2, Victoria 4.2, Halifax 4.4 months. Median 5.0 months. Excluded: one-off costs (flights, deposits, furniture), taxes, benefits, income, health costs and any shelter cost beyond rent.",
+    "detail": "Scenario, not a prediction: monthly cost = 2026-Q2 average asking rent for a 1-bedroom apartment + the MBM non-shelter basket (food, clothing, transportation, communication, other) for one person (reference cost x sqrt(1/reference household size), divided by 12). Longest runway: Sherbrooke 5.9, Québec City 5.5, Regina 5.5, Saint John 5.4; shortest: Vancouver 4.0, Toronto 4.2, Victoria 4.2, Halifax 4.4 months. Median 5.0 months. Excluded: one-off costs (flights, deposits, furniture), taxes, benefits, income, health costs and any shelter cost beyond rent.",
     "stat": {
      "value": 5.0,
      "unit": "months",
@@ -2121,13 +2057,13 @@
      "statcan-46-10-0092-01",
      "statcan-11-10-0066-01"
     ],
-    "calc": "months = 15,000 / (asking rent 1BR + (MBM total - MBM shelter) x sqrt(1/4) / 12); MBM = 2025 current dollars, 2023 base, reference family of four; rent = REF_DATE 2026-04."
+    "calc": "months = 15,000 / (asking rent 1BR + (MBM total - MBM shelter) x sqrt(1/referenceHouseholdSize) / 12); MBM = observation-year current dollars, 2023 base, reference household of four (five in Nunavut); rent = REF_DATE 2026-04."
    },
    {
     "id": "runway-family",
     "kind": "calculation",
     "headline": "A couple with a child and $25,000 lasts about 6.4 months in Sherbrooke but 4.4 in Vancouver",
-    "detail": "Scenario: 2-bedroom asking rent + MBM non-shelter costs scaled to 3 persons (x sqrt(3/4) = 87%). Longest runway: Sherbrooke 6.4, Québec City 6.2, Regina 6.1, Moncton 6.0; shortest: Vancouver 4.4, Toronto 4.8, Victoria 4.8, Halifax 5.0 months (median 5.6). Rent is 42% of the median monthly outlay, so rent differences between cities drive most of the spread.",
+    "detail": "Scenario: 2-bedroom asking rent + MBM non-shelter costs scaled to 3 persons (x sqrt(3/referenceHouseholdSize) = 87%). Longest runway: Sherbrooke 6.4, Québec City 6.2, Regina 6.1, Moncton 6.0; shortest: Vancouver 4.4, Toronto 4.8, Victoria 4.8, Halifax 5.0 months (median 5.6). Rent is 42% of the median monthly outlay, so rent differences between cities drive most of the spread.",
     "stat": {
      "value": 5.6,
      "unit": "months",
@@ -2145,7 +2081,7 @@
      "statcan-46-10-0092-01",
      "statcan-11-10-0066-01"
     ],
-    "calc": "months = 25,000 / (asking rent 2BR + (MBM total - MBM shelter) x sqrt(3/4) / 12)."
+    "calc": "months = 25,000 / (asking rent 2BR + (MBM total - MBM shelter) x sqrt(3/referenceHouseholdSize) / 12)."
    },
    {
     "id": "basket-vs-rent",
@@ -2167,14 +2103,14 @@
      "statcan-46-10-0092-01",
      "statcan-11-10-0066-01"
     ],
-    "calc": "rent / (rent + (MBM total - MBM shelter) x 0.5 / 12) for each place; non-shelter = total - shelter (includes food, clothing, transportation, communication, other)."
+    "calc": "rent / (rent + (MBM total - MBM shelter) x sqrt(1/referenceHouseholdSize) / 12) for each place; non-shelter = total - shelter (includes food, clothing, transportation, communication, other)."
    }
   ],
   "charts": [
    {
     "id": "runway-single-ranked",
     "type": "bar_ranked",
-    "title": "Months a $15,000 buffer lasts - single adult, 1-bedroom",
+    "title": "Modeled runway with $15,000 — regional basket assumptions",
     "subtitle": "Scenario: no income; asking rent + MBM non-shelter basket for one person",
     "unit": "months",
     "yLabel": "months",
@@ -2234,11 +2170,6 @@
         "placeId": "thunder-bay"
        },
        {
-        "x": "Gatineau",
-        "y": 5.1,
-        "placeId": "gatineau"
-       },
-       {
         "x": "Windsor",
         "y": 5.1,
         "placeId": "windsor"
@@ -2289,11 +2220,6 @@
         "placeId": "kelowna"
        },
        {
-        "x": "Ottawa",
-        "y": 4.4,
-        "placeId": "ottawa"
-       },
-       {
         "x": "Halifax",
         "y": 4.4,
         "placeId": "halifax"
@@ -2316,7 +2242,7 @@
       ]
      }
     ],
-    "notes": "Excludes one-off arrival costs, taxes, benefits and income. MBM 2025 current dollars; rent 2026-Q2.",
+    "notes": "Modeled scenario using regional MBM baskets, not a ranking of measured city living costs. Excludes one-off costs, tax, benefits and income. MBM 2025; rent 2026-Q2.",
     "sourceIds": [
      "statcan-46-10-0092-01",
      "statcan-11-10-0066-01"
@@ -2385,11 +2311,6 @@
         "placeId": "thunder-bay"
        },
        {
-        "x": "Gatineau",
-        "y": 5.1,
-        "placeId": "gatineau"
-       },
-       {
         "x": "Windsor",
         "y": 5.1,
         "placeId": "windsor"
@@ -2438,11 +2359,6 @@
         "x": "Kelowna",
         "y": 4.4,
         "placeId": "kelowna"
-       },
-       {
-        "x": "Ottawa",
-        "y": 4.4,
-        "placeId": "ottawa"
        },
        {
         "x": "Halifax",
@@ -2521,11 +2437,6 @@
         "placeId": "thunder-bay"
        },
        {
-        "x": "Gatineau",
-        "y": 5.8,
-        "placeId": "gatineau"
-       },
-       {
         "x": "Windsor",
         "y": 5.7,
         "placeId": "windsor"
@@ -2576,11 +2487,6 @@
         "placeId": "kelowna"
        },
        {
-        "x": "Ottawa",
-        "y": 5.1,
-        "placeId": "ottawa"
-       },
-       {
         "x": "Halifax",
         "y": 5.0,
         "placeId": "halifax"
@@ -2616,13 +2522,13 @@
   ],
   "methodology": [
    "Monthly cost = latest average asking rent for the stated apartment size (StatCan 46-10-0092-01) + non-shelter MBM costs / 12.",
-   "Non-shelter MBM = Total threshold - Shelter component (Food, Clothing, Transportation, Communication services, Other expenses) from StatCan 11-10-0066-01, 2023-base MBM, 2025 current dollars, for the MBM region mapped to each place; this is the reference family of four.",
-   "Household scaling uses StatCan's square-root equivalence scale: cost for n persons = reference-family cost x sqrt(n/4) (1 person 50%, 3 persons 87%). We verified it reproduces the published family-size totals in table 11-10-0104-01 (Toronto 2025: 1 person 31,440; 2 persons 44,463; 3 persons 54,456).",
+   "Non-shelter MBM = Total threshold - Shelter component (Food, Clothing, Transportation, Communication services, Other expenses) from StatCan 11-10-0066-01, 2023-base MBM, observation-year current dollars, for the MBM region mapped to each place; this is the reference household of four (five in Nunavut).",
+   "Household scaling uses StatCan's square-root equivalence scale: cost for n persons = reference-family cost x sqrt(n/referenceHouseholdSize) (1 person 50%, 3 persons 87%). We verified it reproduces the published family-size totals in table 11-10-0104-01 (Toronto 2025: 1 person 31,440; 2 persons 44,463; 3 persons 54,456).",
    "Months of runway = stated savings / monthly cost. Stated savings are $15,000 (single) and $25,000 (couple + 1 child). No income, no taxes, no benefits, no one-off costs, no inflation between 2025 (MBM) and the rent quarter."
   ],
   "limitations": [
    "MBM regions differ from the CMAs and several places share one regional value (e.g. Victoria, Kelowna and Abbotsford-Mission all use 'British Columbia, population 100,000 to 499,999'); Gatineau's mapping to the Quebec 100,000-499,999 class is an assumption.",
-   "The MBM is a modest-basket benchmark for a reference family, scaled by an equivalence scale; it is not a measure of what an individual newcomer spends, and it covers 2025 prices while rents are 2026-Q2.",
+   "The MBM is a modest-basket benchmark for a reference family, scaled by an equivalence scale; it is not a measure of what an individual newcomer spends, and it uses the basket observation year while rent uses its stated quarter.",
    "Asking rents are averages of advertised apartments; the cheapest listings may be smaller or in less central areas.",
    "Coverage: places not in the StatCan rent table (Charlottetown, Brandon, Whitehorse, Yellowknife, Iqaluit) are excluded."
   ],

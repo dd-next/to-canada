@@ -4,10 +4,10 @@
  * dot strips read the same honest data.
  */
 import type { CoreData } from '../../data/core';
-import type { Flag, MetricCategory, MetricDef, Occupation, Place, Unit, WageTable } from '../../types/contract';
+import type { MetricCategory, MetricDef, Occupation, Unit, WageTable } from '../../types/contract';
 import { formatPeriod } from '../../lib/format';
-import { buildMetricLayer, buildWageLayer, monthIndex, WAGE_LAYER_KEY, type LayerDatum } from '../../lib/layers';
-import { FULL_TIME_HOURS_PER_WEEK, grossMonthly, rentShareOfPay } from '../../model/pay';
+import { buildMetricLayer, buildWageLayer, buildRentShareLayer, monthIndex, WAGE_LAYER_KEY, type LayerDatum } from '../../lib/layers';
+import { FULL_TIME_HOURS_PER_WEEK } from '../../model/pay';
 
 export interface Measure {
   id: string;
@@ -72,8 +72,7 @@ export function buildMeasures(core: CoreData, unitType: string, occupation: Pick
     });
     if (rentMetric) {
       const rl = buildMetricLayer(rentMetric, places, core.obsIndex);
-      const data = new Map<string, LayerDatum>();
-      for (const p of places) data.set(p.id, rentShareDatum(p, rl.data.get(p.id), wl.data.get(p.id)));
+      const data = buildRentShareLayer(rl, wl, occupation, places).data;
       out.push({
         id: 'rent_share',
         label: `Rent as share of gross pay: ${occupation.title}`,
@@ -93,38 +92,6 @@ export function buildMeasures(core: CoreData, unitType: string, occupation: Pick
   return out;
 }
 
-function rentShareDatum(p: Place, rent: LayerDatum | undefined, wage: LayerDatum | undefined): LayerDatum {
-  const rentVal = rent && rent.value !== null ? rent.value : null;
-  const annual = wage?.shownUnit === 'CAD_year';
-  const monthly = wage?.shown != null ? grossMonthly(wage.shown, annual) : null;
-  const share = rentShareOfPay(rentVal, monthly);
-  if (share === null || !rent?.obs || !wage) {
-    const why = rentVal === null ? (rent?.reason ?? 'no asking rent') : (wage?.reason ?? 'no wage');
-    return { placeId: p.id, obs: null, value: null, shown: null, shownUnit: 'percent', status: 'missing', period: rent?.period ?? null, qualifier: null, reason: `Needs both inputs — ${why.replace(/\.$/, '')}`, flags: ['not_available'] };
-  }
-  const flags = [...new Set([...(rent.flags ?? []), ...(wage.flags ?? [])])].filter((f) => f !== 'not_available' && f !== 'annual_wage') as Flag[];
-  const pct = share * 100;
-  const calc = `$${Math.round(rentVal!).toLocaleString('en-CA')}/mo rent ÷ $${Math.round(monthly!).toLocaleString('en-CA')}/mo gross pay = ${pct.toFixed(1)}%`;
-  return {
-    placeId: p.id,
-    obs: { ...rent.obs, metricId: 'rent_share', value: pct, flags, note: calc },
-    value: pct,
-    shown: pct,
-    shownUnit: 'percent',
-    status: 'ok',
-    period: rent.period,
-    qualifier: wage.qualifier ? `Wage — ${wage.qualifier}` : null,
-    reason: null,
-    flags,
-    calc,
-  };
-}
-
-// ------------------------------------------------------------------ highlight rules
-
-const GEO_KINDS: Flag[] = ['provincial_value', 'national_value', 'cma_wide', 'regional_value', 'station_proxy'];
-const geoKind = (d: LayerDatum) => GEO_KINDS.find((f) => d.flags.includes(f)) ?? 'own';
-
 /**
  * Best and worst place ids — only when EVERY compared value exists and is comparable:
  * same unit, same period, same kind of geography (no regional/provincial mix).
@@ -132,10 +99,11 @@ const geoKind = (d: LayerDatum) => GEO_KINDS.find((f) => d.flags.includes(f)) ??
 export function bestWorst(higherIs: MetricDef['higherIs'], cells: LayerDatum[]): { best: Set<string>; worst: Set<string>; reason: string | null } {
   const none = (reason: string | null) => ({ best: new Set<string>(), worst: new Set<string>(), reason });
   if (higherIs === 'neutral' || cells.length < 2) return none(null);
+  if (cells.some((c) => c.status !== 'ok')) return none('Not ranked: geography, period or methodology is not comparable');
+  if (new Set(cells.map((c) => c.comparisonKey)).size > 1) return none('Not ranked: different measurement methods or geography');
   if (cells.some((c) => c.value === null)) return none('Not ranked: a value is missing');
   if (new Set(cells.map((c) => c.period)).size > 1) return none('Not ranked: different periods');
   if (new Set(cells.map((c) => c.shownUnit)).size > 1) return none('Not ranked: different units');
-  if (new Set(cells.map(geoKind)).size > 1) return none('Not ranked: mixes regional or provincial values with local ones');
   const vals = cells.map((c) => c.value!);
   const hi = Math.max(...vals);
   const lo = Math.min(...vals);

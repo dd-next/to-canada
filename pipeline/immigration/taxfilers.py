@@ -10,6 +10,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from common.derived_cache import current, mark, signature
 from common.fetch import RAW, fetch, fetch_json
 from common.statcan import WDS
 from common_i import TAX_GEO, PROV_NAME
@@ -25,10 +26,8 @@ def wanted_geos() -> set[str]:
     return {"Canada", *PROV_NAME.values(), *TAX_GEO.values()}
 
 
-def build_filtered(src_csv: Path | None = None) -> Path:
+def build_filtered(zpath: Path) -> Path:
     geos = wanted_geos()
-    info = fetch_json(f"{WDS}/getFullTableDownloadCSV/43100030/en", max_age_days=7)
-    zpath = fetch(info["object"], max_age_days=7)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     first = True
     tmp = FILTERED.with_suffix(".part")
@@ -42,19 +41,20 @@ def build_filtered(src_csv: Path | None = None) -> Path:
             ch[m].to_csv(tmp, mode="w" if first else "a", header=first, index=False)
             first = False
 
-    if src_csv is not None and src_csv.exists():
-        run(src_csv)
-    else:
-        with zipfile.ZipFile(zpath) as zf:
-            with zf.open("43100030.csv") as fh:
-                run(fh)
+    with zipfile.ZipFile(zpath) as zf:
+        with zf.open("43100030.csv") as fh:
+            run(fh)
     tmp.replace(FILTERED)
     return FILTERED
 
 
 def read_filtered() -> pd.DataFrame:
-    if not FILTERED.exists():
-        build_filtered(OUT_DIR / "43100030.csv")
+    info = fetch_json(f"{WDS}/getFullTableDownloadCSV/43100030/en", max_age_days=7)
+    source = fetch(info["object"], max_age_days=7)
+    expected = signature(source, {"version": 2, "geos": sorted(wanted_geos()), "columns": COLS, "statistics": KEEP_STATS})
+    if not current(FILTERED, expected):
+        build_filtered(source)
+        mark(FILTERED, expected)
     df = pd.read_csv(FILTERED, dtype=str, keep_default_na=False)
     df["VALUE_NUM"] = pd.to_numeric(df["VALUE"], errors="coerce")
     return df

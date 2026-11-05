@@ -7,8 +7,8 @@
   "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=4610009201",
   "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/46100092-eng.zip",
   "releaseDate": "2026-09-09",
-  "retrievedAt": "2026-11-04T17:51:39+00:00",
-  "referencePeriod": "2019-Q1 to 2026-Q2 (quarterly; REF_DATE is the first month of the quarter)",
+  "retrievedAt": "2026-11-05T13:09:32+00:00",
+  "referencePeriod": "2026-Q2 to 2026-Q2 (latest observations; quarterly)",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, Table 46-10-0092-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
   "transformations": [
@@ -28,14 +28,15 @@
  },
  {
   "id": "cmhc-rms-2025",
-  "title": "Rental Market Survey Data Tables, 2025 edition (October 2025 survey)",
+  "title": "Rental Market Survey Data Tables, 2025 edition (October survey)",
   "publisher": "Canada Mortgage and Housing Corporation (CMHC)",
   "tableId": "RMS 2025 tables 1.1.1 (vacancy rate) and 1.1.2 (average rent) by centre",
   "url": "https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research/housing-data/data-tables/rental-market/rental-market-report-data-tables",
   "downloadUrl": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-{centre}-2025-en.xlsx",
   "releaseDate": "2025-12-11",
-  "retrievedAt": "2026-11-04T17:53:41+00:00",
-  "referencePeriod": "October 2025 survey (data collected early October; 2025 edition)",
+  "retrievedAt": "2026-11-05T13:09:35+00:00",
+  "lastCheckedAt": "2026-11-05T13:09:35+00:00",
+  "referencePeriod": "2025-10 (October survey)",
   "licence": "Open Government Licence – Canada (CMHC Housing Market Information Portal, listed on open.canada.ca); CMHC website terms of use apply to site materials",
   "attribution": "Source: Canada Mortgage and Housing Corporation, Rental Market Survey, 2025.",
   "transformations": [
@@ -45,7 +46,7 @@
   ],
   "notes": [
    "Universe: privately initiated apartment structures of three units and over (purpose-built rentals); rents are those charged for all units in the stock (sitting tenants and new leases), not asking rents.",
-   "CMHC publishes the next (October 2026) survey in December 2026; this is the latest available on 2026-11-04.",
+   "Edition and release date discovered from the official CMHC catalog; an unrecognized catalog or workbook fails with an explicit manual-review error.",
    "Brandon, Whitehorse and Iqaluit have no CMHC Rental Market Survey data table; Charlottetown and Yellowknife are covered as CAs.",
    "Per-centre workbooks: abbotsford-mission: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-abbotsford-mission-2025-en.xlsx; calgary: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-calgary-2025-en.xlsx; charlottetown: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-charlottetown-2025-en.xlsx; edmonton: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-edmonton-2025-en.xlsx; fredericton: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-fredericton-2025-en.xlsx; gatineau: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-gatineau-2025-en.xlsx; halifax: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-halifax-2025-en.xlsx; hamilton: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-hamilton-2025-en.xlsx; kelowna: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-kelowna-2025-en.xlsx; kitchener-waterloo: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-kitchener-cambridge-waterloo-2025-en.xlsx; london: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-london-2025-en.xlsx; moncton: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-moncton-2025-en.xlsx; montreal: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-montreal-2025-en.xlsx; ottawa: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-ottawa-2025-en.xlsx; quebec-city: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-quebec-2025-en.xlsx; regina: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-regina-2025-en.xlsx; saint-john: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-saint-john-2025-en.xlsx; saskatoon: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-saskatoon-2025-en.xlsx; sherbrooke: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-sherbrooke-2025-en.xlsx; st-johns: https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-st-joh"
   ],
@@ -59,7 +60,7 @@
   "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810000401",
   "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/18100004-eng.zip",
   "releaseDate": "2026-10-19",
-  "retrievedAt": "2026-11-04T17:55:51+00:00",
+  "retrievedAt": "2026-11-05T13:10:02+00:00",
   "referencePeriod": "2019-01 to 2026-09 (monthly; 12-month changes computed from 2018-01)",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, Table 18-10-0004-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",

@@ -7,8 +7,9 @@
   "url": "https://open.canada.ca/data/en/dataset/adad580f-76b0-4502-bd05-20c125de9116",
   "downloadUrl": "https://open.canada.ca/data/dataset/adad580f-76b0-4502-bd05-20c125de9116/resource/9da94d63-b178-4a64-aeb3-b6a3bd721ad2/download/2a71-das-wage2025opendata-esdc-all-19nov2025-vf.csv",
   "releaseDate": "2025-11-19",
-  "retrievedAt": "2026-11-04T17:51:49+00:00",
-  "referencePeriod": "2023-2024 (most cells); 2024; 2021 Census (few)",
+  "retrievedAt": "2026-11-05T13:10:09+00:00",
+  "lastCheckedAt": "2026-11-05T13:10:09+00:00",
+  "referencePeriod": "2021; 2023-2024; 2024",
   "licence": "Open Government Licence - Canada",
   "attribution": "Contains information licensed under the Open Government Licence - Canada. Source: Employment and Social Development Canada, Job Bank Wages.",
   "transformations": [
@@ -17,12 +18,12 @@
    "Cells with no published wage are omitted (not zero-filled); the Job Bank file refers users to the provincial/national wage in that case."
   ],
   "notes": [
-   "Wages are of employed workers in the occupation (not advertised pay). Estimates come from the Labour Force Survey (2023-2024), Employment Insurance survey data, Small Area Estimation (2024) and, for a few occupations, the 2021 Census; the source of each cell is in the open file (Data_Source_E).",
+   "Wages describe employed workers, not advertised pay. Each cell retains the publisher's period and Data_Source_E methodology; estimates with different periods or methods must not be pooled into a ranking.",
    "Job Bank's ER_Name differs slightly from StatCan for ER 5920 ('Lower Mainland' vs 'Lower Mainland--Southwest') and ER 6010 ('Yukon Territory' vs 'Yukon').",
    "Territories and PEI have a single economic region equal to the territory/province; no separate provincial key is stored.",
-   "Cells kept by reference period label: {'2021': 356, '2023-2024': 10265, '2024': 5997}",
-   "Newer edition: the dataset is updated annually (previous editions 2024-12-11, 2023-12-08); re-run to pick up a 2026 edition once published (update WAGE_URL in pipeline/work/wages.py).",
-   "ER verification against our places: ER 5920: place list says 'Lower Mainland--Southwest', Job Bank says 'Lower Mainland'; ER 6010: place list says 'Yukon', Job Bank says 'Yukon Territory'"
+   "Cells kept by reference period label: {'2021': 361, '2023-2024': 10495, '2024': 6375}",
+   "The newest English wage CSV edition is discovered from the official open.canada.ca catalog; each cell retains its own Reference_Period and Data_Source_E.",
+   "ER verification against our places: ER 1110: place list says 'Prince Edward Island / Île-du-Prince-Édouard', Job Bank says 'Prince Edward Island'; ER 3590: place list says 'Northeast / Nord-est', Job Bank says 'Northeast'; ER 3595: place list says 'Northwest / Nord-ouest', Job Bank says 'Northwest'; ER 4610: place list says 'Southeast / Sud-est', Job Bank says 'Southeast'; ER 4630: place list says 'Southwest / Sud-ouest', Job Bank says 'Southwest'; ER 5910: place list says 'Vancouver Island and Coast / Île de Vancouver et la côte', Job Bank says 'Vancouver Island and Coast'; ER 5920: place list says 'Lower Mainland--Southwest / Lower Mainland--Sud-ouest', Job Bank says 'Lower Mainland'; ER 6010: place list says 'Yukon', Job Bank says 'Yukon Territory'; ER 6110: place list says 'Northwest Territories / Territoires du Nord-Ouest', Job Bank says 'Northwest Territories'"
   ],
   "status": "ok"
  },
@@ -32,7 +33,7 @@
   "publisher": "Statistics Canada",
   "url": "https://www.statcan.gc.ca/en/subjects/standard/noc/2021/indexV1",
   "downloadUrl": "https://www.statcan.gc.ca/en/subjects/standard/noc/2021/indexV1/noc-2021-v1.0-classification-structure.csv",
-  "retrievedAt": "2026-11-04T18:23:00+00:00",
+  "retrievedAt": "2026-11-05T13:10:10+00:00",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, NOC 2021 Version 1.0.",
   "transformations": [
@@ -48,7 +49,7 @@
   "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410045901",
   "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/14100459-eng.zip",
   "releaseDate": "2026-10-09",
-  "retrievedAt": "2026-11-04T17:53:16+00:00",
+  "retrievedAt": "2026-11-05T13:10:13+00:00",
   "referencePeriod": "2011-01-01 to 2026-09-01",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, Table 14-10-0459-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
@@ -69,7 +70,7 @@
   "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410029201",
   "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/14100292-eng.zip",
   "releaseDate": "2026-10-09",
-  "retrievedAt": "2026-11-04T17:53:19+00:00",
+  "retrievedAt": "2026-11-05T13:10:14+00:00",
   "referencePeriod": "1992-03-01 to 2026-09-01",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, Table 14-10-0292-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
@@ -90,7 +91,7 @@
   "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410046201",
   "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/14100462-eng.zip",
   "releaseDate": "2026-10-09",
-  "retrievedAt": "2026-11-04T17:53:22+00:00",
+  "retrievedAt": "2026-11-05T13:10:16+00:00",
   "referencePeriod": "2011-03-01 to 2026-09-01",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, Table 14-10-0462-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",

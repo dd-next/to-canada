@@ -6,11 +6,12 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-PROCESSED = ROOT / "data" / "processed"
+PROCESSED = Path(os.environ.get("NORTHWARD_PROCESSED", ROOT / "data" / "processed"))
 SEED = ROOT / "pipeline" / "places_seed.json"
 
 UNITS = {"CAD", "CAD_hour", "CAD_month", "CAD_year", "percent", "pp", "degC", "mm", "cm", "days", "hours",

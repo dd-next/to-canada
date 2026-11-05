@@ -57,6 +57,10 @@ LABEL = {"food": "Food", "clothing": "Clothing", "transport": "Transportation", 
          "communication": "Communication services", "other": "Other expenses", "total": "Total"}
 
 
+def reference_household_size(region: str) -> int:
+    return 5 if region.startswith("Nunavut,") else 4
+
+
 def build():
     df = read_table(TABLE, row_filter=lambda c: c[(c["Base year"] == BASE) & (c["Dollar concept"] == DOLLARS)])
     latest = sorted(df.REF_DATE.unique())[-1]
@@ -81,12 +85,17 @@ def build():
             v, _ = lk.get((region, "Inuusiqattiarniq (Nunavut only)"), (None, None))
             out_obs.append(obs("iqaluit", "cost_mbm_inuusiqattiarniq", v, latest, gref, SID, [],
                                "Nunavut-only component, applicable to Indigenous families; included in the total threshold."))
-    return out_obs, {"latest": latest, "values": values, "cov": cov}
+    for observation in out_obs:
+        observation["referenceHouseholdSize"] = reference_household_size(observation["geo"]["name"])
+        observation["methodology"] = f"MBM {BASE}; {DOLLARS}; reference household {observation['referenceHouseholdSize']}"
+    return out_obs, {"latest": latest, "values": values, "cov": cov,
+                     "referenceHouseholdSizes": {p["id"]: reference_household_size(MBM[p["id"]][0]) for p in places()}}
 
 
 def size_check():
     """Check the sqrt equivalence scale against 11-10-0104-01 (Toronto, 2023 base, latest year)."""
-    d = read_table(TABLE_SIZES, row_filter=lambda c: c[(c["Market Basket Measure (MBM) base year"] == BASE) & c.GEO.str.startswith("Toronto") & (c.REF_DATE == "2025")])
+    d = read_table(TABLE_SIZES, row_filter=lambda c: c[(c["Market Basket Measure (MBM) base year"] == BASE) & c.GEO.str.startswith("Toronto")])
+    d = d[d.REF_DATE == max(d.REF_DATE)]
     vals = {r["Total threshold by family size"]: r.VALUE_NUM for _, r in d.iterrows()}
     ref = vals["4 persons"]
     return [{"persons": n, "published": vals[f"{n} person{'s' if n > 1 else ''}"], "sqrt_scale": round(ref * (n / 4) ** 0.5)} for n in (1, 2, 3, 5)]
@@ -96,9 +105,9 @@ def metric_defs():
     base = dict(category="cost", unit="CAD_year", decimals=0, higherIs="worse", geoLevel="mbm_region", periodType="year",
                 seasonalAdjustment="not_applicable", priceBasis="current_dollars", sourceIds=[SID], mapLayer=False,
                 comparabilityNote="MBM regions differ from CMAs (named cities, or population classes such as 'Ontario, population 100,000 to 499,999'); "
-                                  "several places share one regional value. Annual dollars for a reference family of four, not per person.")
+                                  "several places share one regional value. Annual reference-household dollars (four people; five in Nunavut), not per-person costs or directly comparable city ranks.")
     scale = ("To approximate other household sizes, StatCan's MBM uses a square-root equivalence scale: the cost for a household of n persons "
-             "is the reference-family (4 persons) cost x sqrt(n/4); e.g. 1 person = 50%, 2 persons = 71%, 3 persons = 87%, 5 persons = 112%. "
+             "is the reference-family cost x sqrt(n/referenceHouseholdSize), where the reference is 4 people, or 5 in Nunavut; e.g. 1 person = 50%, 2 persons = 71%, 3 persons = 87%, 5 persons = 112%. "
              "Published family-size totals in table 11-10-0104-01 follow this scale.")
     desc = {
         "food": "Food: the cost of a nutritious diet (per the National Nutritious Food Basket) prepared at home.",
@@ -114,8 +123,8 @@ def metric_defs():
         out.append({**base, "id": f"cost_mbm_{key}", "label": f"MBM basket - {LABEL[key].lower()} (reference family, per year)",
                     "shortLabel": f"MBM {LABEL[key].lower()}",
                     "description": f"{text} Annual cost for the MBM reference family (2 adults + 2 children; Nunavut: 2 adults + 3 children), "
-                                   f"2025 current dollars, 2023-base MBM. {scale}",
-                    "basis": "Market Basket Measure (2023 base), reference family of four, current dollars, annual",
+                                   f"current dollars for the observation year, 2023-base MBM. {scale}",
+                    "basis": "Market Basket Measure (2023 base), reference household of four (five in Nunavut), current dollars, annual",
                     "dims": {"family": "cost_mbm", "component": LABEL[key]}})
     out.append({**base, "id": "cost_mbm_inuusiqattiarniq", "label": "MBM basket - Inuusiqattiarniq (Nunavut only)", "shortLabel": "MBM Inuusiqattiarniq",
                 "description": "Nunavut-only component, applicable to Indigenous families; included in Nunavut total thresholds.",

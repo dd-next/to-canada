@@ -302,7 +302,7 @@ export default function ExplorePage() {
   const wageSummary =
     occupation && wageLayer ? (
       <>
-        Wages of people employed in this occupation, by <strong>economic region (ER value)</strong> — Job Bank {formatPeriod(wages.data?.referencePeriod, 'period')}.{' '}
+        Wages of people employed in this occupation, by <strong>economic region (ER value)</strong> — Job Bank. Each value keeps its own reference period and methodology; regional values are not city ranks.{' '}
         {coverageLine(wageLayer)}
       </>
     ) : occupation && wages.loading ? (
@@ -539,10 +539,10 @@ export default function ExplorePage() {
 
 function coverageLine(layer: LayerData) {
   let province = 0;
-  for (const d of layer.data.values()) if (d.value !== null && d.flags.includes('provincial_value')) province++;
-  const withValue = layer.counts.ok + layer.counts.otherPeriod;
+  for (const d of layer.data.values()) if (d.shown !== null && d.flags.includes('provincial_value')) province++;
+  const withValue = [...layer.data.values()].filter((d) => d.shown !== null).length;
   const parts = [`Values for ${withValue} of ${layer.counts.total} places`];
   if (province) parts.push(`${province} use a province-wide value (no ER cell)`);
-  if (layer.counts.notComparable) parts.push(`${layer.counts.notComparable} on a different wage basis`);
+  if (layer.counts.notComparable) parts.push(`${layer.counts.notComparable} shown as context, outside city rankings`);
   return parts.join('; ') + '.';
 }

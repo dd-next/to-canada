@@ -42,6 +42,7 @@ function Cell({ m, d, mark }: { m: Measure; d: LayerDatum | undefined; mark: 'be
       <div className="cmp__sub">
         {period}
         {d.qualifier && <> · {d.qualifier}</>}
+        {d.obs.methodology && <> · {d.obs.methodology}</>}
       </div>
       {d.value === null && d.reason && <div className="cmp__sub">{d.reason}</div>}
       {flagWords(d).length > 0 && <div className="cmp__sub cmp__caution">{flagWords(d).join(' · ')}</div>}
@@ -68,22 +69,10 @@ function ScenarioRows({ places, scenario }: { places: Place[]; scenario: NonNull
   const { models, hasIncome } = scenario;
   const spend = models.map((m) => (m.rent.value === null ? null : m.result.monthlySpending));
   const bal = models.map((m, i) => (spend[i] === null ? null : m.result.monthlyBalance));
-  const hi = (vals: (number | null)[], goodHigh: boolean): { best: Set<number>; worst: Set<number> } => {
-    const best = new Set<number>();
-    const worst = new Set<number>();
-    if (vals.length < 2 || vals.some((v) => v === null)) return { best, worst };
-    const nums = vals as number[];
-    const mx = Math.max(...nums);
-    const mn = Math.min(...nums);
-    if (mx === mn) return { best, worst };
-    nums.forEach((v, i) => {
-      if (v === (goodHigh ? mx : mn)) best.add(i);
-      if (v === (goodHigh ? mn : mx)) worst.add(i);
-    });
-    return { best, worst };
-  };
-  const sH = hi(spend, false);
-  const bH = hi(bal, true);
+  // Scenario totals combine rent and basket vintages/methods. Display the results
+  // without a city ranking; underlying observations retain their own provenance.
+  const sH = { best: new Set<number>(), worst: new Set<number>() };
+  const bH = sH;
   const rowHead = (title: string, sub: string) => (
     <th scope="row" className="cmp__rowhead">
       <span className="cmp__rowtitle">{title}</span>
@@ -110,7 +99,7 @@ function ScenarioRows({ places, scenario }: { places: Place[]; scenario: NonNull
                 {formatCAD(spend[i])}/mo
                 {mk(sH, i) && <span className="cmp__mark">{mk(sH, i) === 'best' ? 'Lowest' : 'Highest'}</span>}
               </div>
-              <div className="cmp__sub">Sourced rent + MBM estimate</div>
+              <div className="cmp__sub">Scenario inputs; mixed sources and reference periods, not ranked</div>
             </td>
           ),
         )}

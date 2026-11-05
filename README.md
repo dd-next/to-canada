@@ -15,7 +15,7 @@ organisation whose data it uses.
   Statistics Canada Lambert projection) with 31 places, metric layers (rents,
   vacancy, CPI rent, MBM, unemployment, wages by occupation, rent as a share of
   gross pay, PR admissions, census language/commuting, monthly climate normals),
-  a profession lens over 515 NOC 2021 occupations, housing-type and month
+  a profession lens over 516 NOC 2021 occupations, housing-type and month
   switches, region/province filters, city search (including municipalities
   inside a CMA), a synchronised ranked list, question presets, and a detail
   drawer / mobile sheet that keeps the map in view.
@@ -29,7 +29,8 @@ organisation whose data it uses.
 * **Budget** (`/budget`) — arrival budget: take-home income, savings, household
   size, housing choice, sourced asking rent as an editable start, MBM-based
   estimates, user lines, one-time arrival costs, runway with and without income.
-  Inputs stay in the browser (localStorage) unless you press "Share these numbers".
+  Inputs stay in the browser (localStorage) unless you explicitly share a complete
+  scenario link or use Compare's "Edit on Budget" action to pass that scenario.
 * **Insights** (`/insights`) — eight data explorations (housing, arrival budget,
   wages, labour markets, immigrant income, settlement, language and daily life,
   climate) with computed findings that jump to the map.
@@ -37,6 +38,9 @@ organisation whose data it uses.
   federal, provincial, Quebec and community program records from official pages
   (status shown only where the page states it), plus newcomer support links.
   Reference only: no eligibility scoring.
+* **IRCC Updates** (`/updates`) — searchable official news, program delivery
+  updates and Express Entry rounds. Filter by type and topic; follow each item
+  to its official publication. Source coverage and failed checks remain visible.
 * **Sources & methods** (`/sources`) — the source registry, a coverage matrix and
   methodology notes.
 
@@ -46,7 +50,7 @@ Requires Node 20+ (tested with Node 22). No keys or live upstream calls are
 needed: the app runs from the committed snapshot in `public/data/`.
 
 ```bash
-npm install
+npm ci --ignore-scripts
 npm run dev        # http://localhost:5173
 npm run build      # type-check + production build into dist/
 npm run preview    # serve dist/ on http://localhost:4173
@@ -72,33 +76,74 @@ pip install -r pipeline/requirements.txt
 npm run data:refresh   # re-run every pipeline (uses cached downloads in data/raw/), then rebuild public/data
 NORTHWARD_REFRESH=1 npm run data:refresh   # force re-download from the official sources
 npm run data:build     # only rebuild public/data from data/processed/
-npm run data:check     # unit/scale, missing-vs-zero, geography-flag and raw re-read checks
+npm run data:check     # self-contained validation of the committed app snapshot
+npm run data:check -- --sources # strict integration verification against raw source files
 npm run data:freshness # compare every source with the publisher's latest release (add -- --strict to exit 1 when newer data exists)
 node scripts/check-model.mjs   # budget and pay arithmetic checks
+npm run updates:refresh # lightweight IRCC-only refresh, independent of statistical downloads
+npm run updates:check   # validate the saved IRCC feed
 ```
 
-**Freshness.** `npm run data:freshness` (`pipeline/freshness.py`) asks each publisher what is newest
-(StatCan WDS `getCubeMetadata`, open.canada.ca CKAN `package_show` for Job Bank and IRCC, and a probe for the next CMHC
-Rental Market Survey workbook) and writes `data/processed/freshness.json` with `current`, `newer_available`, `static`
-(Census 2021, climate normals, NOC, boundaries) or `unknown` per source. The snapshot's `manifest.freshness` feeds the
-footer line and the "Data freshness" section on the Sources page.
+**Freshness.** Publisher checks distinguish `current`, `newer_available`,
+`static`, `unknown` and `manual_update_required`. An inaccessible or changed
+source cannot be reported as current. `data/processed/freshness.json` and
+`public/data/freshness-checks.json` record check results independently from
+observation periods, publisher release dates and actual retrieval times.
+The Sources page shows both snapshot dates and publisher/check failures.
+`data:freshness` exits 2 for failed checks; `--strict` also exits 1 when a newer
+edition is available. Manual-only sources are explicitly labelled.
 
-**Weekly refresh.** `.github/workflows/refresh-data.yml` runs every Monday (10:23 UTC) and on manual dispatch. It runs the
-freshness check; when something is newer (always on a manual run) it re-runs the housing, work, immigration and
-geo-population steps with `NORTHWARD_REFRESH=1`, rebuilds and validates `public/data`, builds the site, commits
-"Data refresh YYYY-MM-DD" to `main` as `github-actions[bot]` if anything changed, and then calls the Pages deploy workflow
-(`GITHUB_TOKEN` pushes do not trigger the push-based deploy on their own). A domain whose download fails keeps its previous
-outputs. `python3 -I pipeline/geo/run.py --pop-only` refreshes only the July 1 population estimates.
+**Weekly statistics.** `.github/workflows/refresh-data.yml` runs Mondays at
+10:23 UTC and on manual dispatch. It stages housing, work, immigration and
+population outputs with `NORTHWARD_REFRESH=1`, validates the complete result,
+then promotes it as one app generation. Census/boundaries/climate are fixed
+references; use `--full-geo` for their expensive refresh. For a scoped update:
+`NORTHWARD_REFRESH=1 npm run data:refresh -- --domains geo`.
 
-Flow: `pipeline/<domain>/run.py` downloads into `data/raw/` (git-ignored cache,
-per-URL locks, bounded retries) and writes contract-shaped files to
-`data/processed/<domain>/` (committed). `pipeline/build_app_data.py` validates
-and merges them into `public/data/`. A failing domain keeps its previous
-outputs — nothing is zero-filled or invented. See `docs/DATA_CONTRACT.md` for
-the schema and rules, and each `pipeline/<domain>/README.md` for sources,
-spot-checks and limitations.
+Source downloads have per-URL locks and checksums. A forced download is reused
+within one refresh run. Derived CSV caches are invalidated when source bytes or
+the transformation version changes. Wage editions come from the official
+catalog; CMHC workbook candidates come from the official download page. A
+source that cannot be discovered requires manual attention, not a guessed URL.
 
-### Sources actually ingested (snapshot of 2026-11-04)
+Failures retain the last valid statistics and write a separate
+`public/data/refresh-status.json` report. Staged output is never published after
+a failed domain or validation step. Promotion uses Linux atomic directory
+exchange, with rollback if the app swap fails. The GitHub Pages deployment uses
+a complete built artifact. Both scheduled jobs share a concurrency group and
+pass the exact post-refresh commit to the existing Pages workflow.
+
+**IRCC publications.** `.github/workflows/refresh-ircc-updates.yml` checks the
+official newsroom, program delivery updates and Express Entry draw data every
+six hours (minute 17 UTC), with a manual trigger. It only updates `updates.json`;
+it does not redownload statistical tables. Failed sources retain their entries
+and last successful check time. See [IRCC ingestion documentation](pipeline/updates/README.md)
+for endpoints, coverage, identity rules and parser tests.
+
+**Recovery.** Inspect Sources → publisher checks, the refresh status JSON and
+the failed Actions log. Correct access, a parser or an edition mapping, run the
+focused checks below, and rerun the relevant workflow. Do not erase the old
+snapshot or change retrieval timestamps to hide failure. Missing ignored raw
+files cause strict `--sources` verification to fail explicitly; the default
+snapshot check reports those integration checks as skipped.
+
+```bash
+npm run check:model
+npm run data:check
+python3 -I pipeline/test_pipeline.py
+python3 -I pipeline/tests/test_wage_editions.py
+python3 -I pipeline/tests/test_freshness.py
+python3 -I pipeline/immigration/test_periods.py
+npm run updates:check
+python3 -I pipeline/updates/test_updates.py
+npm run build
+```
+
+These self-contained checks run on pull requests in `validate.yml`; live source
+downloads are kept out of PR validation. See `docs/DATA_CONTRACT.md` and each
+pipeline directory's README for field meanings and coverage limitations.
+
+### Sources actually ingested (snapshot of 2026-11-05)
 
 * **Statistics Canada** (Web Data Service full-table CSVs): asking and paid rents
   46-10-0092-01 (to 2026-Q2); CPI 18-10-0004-01 (to 2026-09); MBM thresholds

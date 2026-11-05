@@ -68,10 +68,10 @@ export function GrossBenchmark({ place, noc, onNoc, rent }: Props) {
           </dl>
           <p className="bench__note">
             {cell.fallback === 'province' ? `Province-wide value (${cleanGeoName(cell.geo.name)}) — no economic-region wage published. ` : `Economic region: ${cleanGeoName(cell.geo.name)}. `}
-            Wages of employed workers, {formatPeriod(wages.data.referencePeriod)}, not advertised pay.{' '}
+            Wages of employed workers, {cell.referencePeriod ? formatPeriod(cell.referencePeriod) : 'reference period not recorded'}, not advertised pay. Method: {cell.methodology ?? 'Not recorded'}.{' '}
             {cell.annual ? 'Published as an annual wage; monthly = annual ÷ 12.' : `Monthly = hourly × ${FULL_TIME_HOURS_PER_WEEK} hours a week × 52 weeks ÷ 12.`} Gross pay is before income tax and deductions, so your take-home will be lower.
           </p>
-          <SourceNote sourceId={wages.data.sourceId} period={wages.data.referencePeriod} />
+          <SourceNote sourceId={wages.data.sourceId} period={cell.referencePeriod ?? 'Not recorded'} />
         </div>
       )}
     </section>

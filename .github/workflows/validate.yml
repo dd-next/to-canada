@@ -1,0 +1,37 @@
+name: Validate application and data contracts
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - run: npm ci --ignore-scripts
+      - run: pip install -r pipeline/requirements.txt
+      - name: Check calculations, snapshots and failure handling
+        run: |
+          npm run check:model
+          npm run data:check
+          python3 -I pipeline/test_pipeline.py
+          python3 -I pipeline/tests/test_wage_editions.py
+          python3 -I pipeline/tests/test_freshness.py
+          python3 -I pipeline/immigration/test_periods.py
+          npm run updates:check
+          python3 -I pipeline/updates/test_updates.py
+      - run: npm run build

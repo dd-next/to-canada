@@ -2,8 +2,8 @@
  * The user's arrival-budget scenario: what they typed on the Budget page.
  *
  * Privacy: the scenario lives ONLY in this browser's localStorage (STORAGE.budget).
- * It is written into a URL only when the person presses "Share these numbers"
- * (see encodeScenario), and read from a URL only when such a link is opened.
+ * Personal amounts enter a URL only through explicit scenario sharing or
+ * Compare's "Edit on Budget" action (see encodeScenario).
  */
 import { useCallback, useSyncExternalStore } from 'react';
 import { STORAGE } from '../../config';
@@ -172,7 +172,7 @@ export function useScenario(): [Scenario, (fn: (s: Scenario) => Scenario) => voi
 
 // ------------------------------------------------------------------ share links
 
-const SHARE_KEYS = ['hh', 'unit', 'income', 'savings', 'rent', 'noc'];
+const SHARE_KEYS = ['scenario', 'hh', 'income', 'savings', 'rent'];
 export const hasSharedNumbers = (p: URLSearchParams) => SHARE_KEYS.some((k) => p.has(k)) || [...p.keys()].some((k) => /^(m|u|o)_/.test(k));
 
 /** Remove every personal-number key (used after a shared link has been read). */
@@ -183,6 +183,7 @@ export const stripSharedNumbers = (p: URLSearchParams) => {
 /** Explicitly encode the scenario into URL search params (only used when the person asks to share). */
 export function encodeScenario(s: Scenario, opts: { lines?: boolean } = { lines: true }): URLSearchParams {
   const p = new URLSearchParams();
+  p.set('scenario', '1');
   if (s.placeId) p.set('place', s.placeId);
   p.set('hh', String(s.household));
   p.set('unit', unitTypeSlug(s.unit));
@@ -200,8 +201,11 @@ export function encodeScenario(s: Scenario, opts: { lines?: boolean } = { lines:
 
 const slugToUnit = (slug: string | null): UnitType | null => UNIT_TYPES.find((u) => unitTypeSlug(u) === slug) ?? null;
 
-/** Fields found in a shared URL, layered over a base scenario. */
+/** Complete links (including legacy links carrying personal fields) start from
+ * defaults. Ordinary place/unit/NOC navigation keeps this browser's scenario.
+ */
 export function decodeScenario(p: URLSearchParams, base: Scenario): Scenario {
+  if (hasSharedNumbers(p)) base = DEFAULT_SCENARIO;
   const n = (k: string) => {
     const v = p.get(k);
     return v === null || v.trim() === '' ? null : num(Number(v));
@@ -283,7 +287,7 @@ export interface MbmInfo {
 export function mbmInfo(core: CoreData, place: Place | null, household: number): MbmInfo[] {
   return MBM_LINES.map((l) => {
     const o = place ? (core.obsIndex.get(place.id)?.get(l.metricId) ?? null) : null;
-    return { id: l.id, label: l.label, obs: o, estimate: hasValue(o) ? mbmMonthly(o.value, household) : null };
+    return { id: l.id, label: l.label, obs: o, estimate: hasValue(o) ? mbmMonthly(o.value, household, o.referenceHouseholdSize ?? (place?.province === 'NU' ? 5 : 4)) : null };
   });
 }
 
@@ -292,8 +296,8 @@ export function mbmRegionName(infos: MbmInfo[]): string | null {
   return g ? cleanGeoName(g.name) : null;
 }
 
-export function mbmAssumption(region: string | null, household: number): string {
-  return `MBM 2025 basket for ${region ?? 'the place’s basket region'}, scaled to ${household} ${household === 1 ? 'person' : 'people'} with the square-root scale; MBM shelter excluded because rent is entered separately.`;
+export function mbmAssumption(region: string | null, household: number, referenceSize: number, period?: string): string {
+  return `MBM ${period ?? ''} basket for ${region ?? 'the place’s basket region'}, from a ${referenceSize}-person reference household, scaled to ${household} ${household === 1 ? 'person' : 'people'} with the square-root scale; MBM shelter excluded because rent is entered separately.`;
 }
 
 export interface ScenarioModel {

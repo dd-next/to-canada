@@ -7,7 +7,7 @@ import { CompareTable } from '../components/compare/CompareTable';
 import { DotStrips } from '../components/compare/DotStrips';
 import { buildMeasures, type Measure } from '../components/compare/measures';
 import { ProfessionPicker } from '../components/explore/ProfessionPicker';
-import { buildModel, MAX_HOUSEHOLD, UNIT_TYPES, useScenario, type Scenario, type UnitType } from '../components/budget/scenario';
+import { buildModel, decodeScenario, encodeScenario, hasSharedNumbers, stripSharedNumbers, UNIT_TYPES, useScenario, type Scenario, type UnitType } from '../components/budget/scenario';
 import { ButtonLink } from '../components/ui/Button';
 import { Combobox, type ComboOption } from '../components/ui/Combobox';
 import { EmptyState } from '../components/ui/EmptyState';
@@ -50,35 +50,18 @@ export default function ComparePage() {
 
   const selected = useMemo(() => tray.ids.map((id) => core.placeById.get(id)!).filter(Boolean), [tray.ids, core.placeById]);
 
-  // ---- shared controls (URL)
-  const unitSlug = params.get('unit');
-  const unit: UnitType = UNIT_TYPES.find((u) => unitTypeSlug(u) === unitSlug) ?? stored.unit;
-  const noc = params.get('noc');
+  // Complete shared links are independent of the recipient's local budget.
+  const urlScenario = hasSharedNumbers(params);
+  const scenario: Scenario = useMemo(() => decodeScenario(params, stored), [params, stored]);
+  const unit: UnitType = scenario.unit;
+  const noc = scenario.noc;
   const occupations = useJSON<Occupation[]>('occupations.json');
   const occupation = noc ? (occupations.data?.find((o) => o.noc === noc) ?? null) : null;
   const wages = useJSON<WageTable>(noc ? 'wages.json' : null);
 
-  // ---- scenario: local Budget numbers, unless a shared link carries its own
-  const urlScenario = params.has('hh') || params.has('income') || params.has('savings');
-  const scenario: Scenario = useMemo(() => {
-    const hh = Number(params.get('hh'));
-    const n = (k: string) => {
-      const v = params.get(k);
-      const x = v === null ? NaN : Number(v);
-      return Number.isFinite(x) && x >= 0 && x <= 1e9 ? x : null;
-    };
-    return {
-      ...stored,
-      unit,
-      household: Number.isInteger(hh) && hh >= 1 && hh <= MAX_HOUSEHOLD ? hh : stored.household,
-      income: params.has('income') ? n('income') : urlScenario ? null : stored.income,
-      savings: params.has('savings') ? n('savings') : urlScenario ? null : stored.savings,
-    };
-  }, [stored, unit, params, urlScenario]);
-
   const measures = useMemo(() => buildMeasures(core, unit, noc ? (occupation ?? { noc, title: `NOC ${noc}` }) : null, wages.data), [core, unit, noc, occupation, wages.data]);
   const strips = useMemo(() => pickStripMeasures(measures, unit), [measures, unit]);
-  const models = useMemo(() => selected.map((p) => buildModel(core, p, scenario, { overrides: false })), [core, selected, scenario]);
+  const models = useMemo(() => selected.map((p) => buildModel(core, p, scenario)), [core, selected, scenario]);
 
   // ---- add places
   const search = useCallback(
@@ -92,9 +75,17 @@ export default function ComparePage() {
   );
   const favs = favourites.ids.filter((id) => validIds.has(id) && !tray.ids.includes(id));
 
-  const shareScenario = params.has('hh');
-  const toggleShare = (on: boolean) =>
-    updateUrl(on ? { hh: scenario.household, income: scenario.income, savings: scenario.savings } : { hh: null, income: null, savings: null });
+  const shareScenario = hasSharedNumbers(params);
+  const toggleShare = (on: boolean) => {
+    const patch: Record<string, string | null> = {};
+    const clean = new URLSearchParams(params);
+    stripSharedNumbers(clean);
+    for (const k of params.keys()) if (!clean.has(k)) patch[k] = null;
+    if (on) for (const [k, v] of encodeScenario(scenario)) patch[k] = v;
+    updateUrl(patch);
+  };
+  const budgetScenario = { ...scenario, placeId: selected[0]?.id ?? scenario.placeId };
+  const budgetHref = `/budget?${encodeScenario(budgetScenario)}`;
 
   const suggestions = SUGGESTIONS.filter((s) => s.ids.every((id) => validIds.has(id)));
   const ready = selected.length > 0;
@@ -171,14 +162,14 @@ export default function ComparePage() {
           <strong>Budget scenario:</strong> {scenario.household} {scenario.household === 1 ? 'person' : 'people'} · take-home {scenario.income === null ? 'not entered' : `${formatCAD(scenario.income)}/mo`} · savings{' '}
           {scenario.savings === null ? 'not entered' : formatCAD(scenario.savings)}.{' '}
           {urlScenario ? 'These numbers came from the link you opened.' : 'Taken from your Budget page; they stay in this browser.'}{' '}
-          <Link to={selected[0] ? `/budget?place=${selected[0].id}` : '/budget'} className="link">
+          <Link to={budgetHref} className="link">
             Edit on Budget
           </Link>
         </p>
         <label className="cmp-share">
           <input type="checkbox" checked={shareScenario} onChange={(e) => toggleShare(e.target.checked)} />
           <span>
-            Include household size, income and savings in this page’s link. <em>Off by default — your numbers are only added to the address if you tick this.</em>
+            Include the complete budget scenario in this page’s link. <em>Off by default. “Edit on Budget” also passes the complete scenario to that page.</em>
           </span>
         </label>
       </section>
@@ -210,7 +201,7 @@ export default function ComparePage() {
               Where they sit among all {core.places.length} places
             </h2>
             <p className="cmp-lede">
-              Faint dots are every place in the snapshot on one fixed scale; your places are the large coloured, labelled markers. Only values for the same period are placed on the scale.
+              Faint dots are every place in the snapshot on one fixed scale; your places are the large coloured, labelled markers. Only matching local geographies, periods, units and methods are placed on the scale.
             </p>
             <DotStrips measures={strips} selected={selected} />
           </section>

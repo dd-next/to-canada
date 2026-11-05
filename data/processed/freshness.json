@@ -1,12 +1,14 @@
 [
  {
   "sourceId": "cmhc-rms-2025",
-  "title": "Rental Market Survey Data Tables, 2025 edition (October 2025 survey)",
-  "ourPeriod": "October 2025 survey",
-  "latestPeriod": "October 2025 survey",
-  "latestRelease": "2025-12-11",
+  "title": "Rental Market Survey Data Tables, 2025 edition (October survey)",
+  "ourPeriod": "2025-10 (October survey)",
+  "latestPeriod": "October 2025",
+  "latestRelease": null,
   "status": "current",
-  "note": "The 2026 edition workbook does not exist yet (HTTP 404); CMHC normally publishes in December."
+  "note": "Newest workbook edition linked by the official CMHC catalog: 2025; stored edition: 2025.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "comm-kelowna",
@@ -14,8 +16,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "comm-sudbury",
@@ -23,8 +27,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "eccc-climate-normals-1991-2020",
@@ -33,7 +39,9 @@
   "latestPeriod": "1991-2020 (30-year climate normals)",
   "latestRelease": null,
   "status": "static",
-  "note": "Climate normals 1991-2020: fixed 30-year period; the next set is not yet published."
+  "note": "Climate normals 1991-2020: fixed 30-year period; the next set is not yet published.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-aip",
@@ -41,8 +49,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-caregivers",
@@ -50,8 +60,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-closed-pilots",
@@ -59,8 +71,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-doctors",
@@ -68,8 +82,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-express-entry",
@@ -77,8 +93,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-fcip",
@@ -86,8 +104,21 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
+ },
+ {
+  "sourceId": "ircc-fstp",
+  "title": "Federal Skilled Trades Program: job offer or certificate of qualification",
+  "ourPeriod": "Page(s) read on 2026-11-05",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-hub",
@@ -95,8 +126,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-newcomer-services",
@@ -104,8 +137,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-pnp",
@@ -113,8 +148,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-pnp-nonee",
@@ -122,8 +159,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-pr-cma",
@@ -132,7 +171,9 @@
   "latestPeriod": "2026-08",
   "latestRelease": "2026-10-20",
   "status": "current",
-  "note": "Dataset last modified 2026-10-20, same as our 2026-10-20 update; IRCC publishes monthly (about the 20th)."
+  "note": "Dataset last modified 2026-10-20, same as our 2026-10-20 update; IRCC publishes monthly (about the 20th).",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "ircc-pre-arrival",
@@ -140,8 +181,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-quebec-skilled",
@@ -149,8 +192,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-rcip",
@@ -158,8 +203,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-rural-franco",
@@ -167,8 +214,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-settling",
@@ -176,8 +225,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-startup-self",
@@ -185,8 +236,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "jobbank-wages-2025",
@@ -195,7 +248,9 @@
   "latestPeriod": "2025 edition",
   "latestRelease": "2025-11-19",
   "status": "current",
-  "note": "2025 is the newest edition listed on open.canada.ca (dataset modified 2025-11-19). Editions are annual, usually Nov-Dec."
+  "note": "2025 is the newest edition listed on open.canada.ca (dataset modified 2025-11-19). Editions are annual, usually Nov-Dec.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "prog-ab",
@@ -203,8 +258,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "prog-bc",
@@ -212,8 +269,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "prog-mb",
@@ -221,8 +280,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "prog-nb",
@@ -230,8 +291,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "prog-nl",
@@ -239,8 +302,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "prog-ns",
@@ -248,8 +313,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "prog-nt",
@@ -257,8 +324,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "prog-on",
@@ -266,8 +335,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "prog-peq",
@@ -275,8 +346,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "prog-qc",
@@ -284,8 +357,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "prog-sk",
@@ -293,8 +368,10 @@
   "ourPeriod": "Page(s) read on 2026-11-04",
   "latestPeriod": null,
   "latestRelease": null,
-  "status": "unknown",
-  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs."
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-11-10-0066-01",
@@ -303,7 +380,9 @@
   "latestPeriod": "2025-01-01",
   "latestRelease": "2026-04-29",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-04-29); cube ends 2025-01-01."
+  "note": "Matches StatCan's latest release (2026-04-29); cube ends 2025-01-01.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "statcan-11-10-0104-01",
@@ -312,7 +391,9 @@
   "latestPeriod": "2025-01-01",
   "latestRelease": "2026-04-29",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-04-29); cube ends 2025-01-01."
+  "note": "Matches StatCan's latest release (2026-04-29); cube ends 2025-01-01.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "statcan-14-10-0292-01",
@@ -321,7 +402,9 @@
   "latestPeriod": "2026-09-01",
   "latestRelease": "2026-10-09",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01."
+  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "statcan-14-10-0459-01",
@@ -330,7 +413,9 @@
   "latestPeriod": "2026-09-01",
   "latestRelease": "2026-10-09",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01."
+  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "statcan-14-10-0462-01",
@@ -339,7 +424,9 @@
   "latestPeriod": "2026-09-01",
   "latestRelease": "2026-10-09",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01."
+  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "statcan-17-10-0148-01",
@@ -348,7 +435,9 @@
   "latestPeriod": "2025-01-01",
   "latestRelease": "2026-01-14",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-01-14); cube ends 2025-01-01."
+  "note": "Matches StatCan's latest release (2026-01-14); cube ends 2025-01-01.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "statcan-18-10-0004-01",
@@ -357,7 +446,9 @@
   "latestPeriod": "2026-09-01",
   "latestRelease": "2026-10-19",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-10-19); cube ends 2026-09-01."
+  "note": "Matches StatCan's latest release (2026-10-19); cube ends 2026-09-01.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "statcan-43-10-0022-01",
@@ -366,7 +457,9 @@
   "latestPeriod": "2023-01-01",
   "latestRelease": "2025-12-19",
   "status": "current",
-  "note": "Matches StatCan's latest release (2025-12-19); cube ends 2023-01-01."
+  "note": "Matches StatCan's latest release (2025-12-19); cube ends 2023-01-01.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "statcan-43-10-0030-01",
@@ -375,16 +468,20 @@
   "latestPeriod": "2023-01-01",
   "latestRelease": "2025-12-08",
   "status": "current",
-  "note": "Matches StatCan's latest release (2025-12-08); cube ends 2023-01-01."
+  "note": "Matches StatCan's latest release (2025-12-08); cube ends 2023-01-01.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "statcan-46-10-0092-01",
   "title": "Asking rent and paid rent prices, by rental unit type and number of bedrooms, experimental estimates",
-  "ourPeriod": "2019-Q1 to 2026-Q2 (quarterly; REF_DATE is the first month of the quarter)",
+  "ourPeriod": "2026-Q2 to 2026-Q2 (latest observations; quarterly)",
   "latestPeriod": "2026-04-01",
   "latestRelease": "2026-09-09",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-09-09); cube ends 2026-04-01."
+  "note": "Matches StatCan's latest release (2026-09-09); cube ends 2026-04-01.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
  },
  {
   "sourceId": "statcan-98-10-0002-01",
@@ -393,7 +490,9 @@
   "latestPeriod": "2021 Census (May 2021)",
   "latestRelease": null,
   "status": "static",
-  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-98-10-0003-01",
@@ -402,7 +501,9 @@
   "latestPeriod": "2021 Census",
   "latestRelease": null,
   "status": "static",
-  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-98-10-0005-01",
@@ -411,7 +512,9 @@
   "latestPeriod": "2021 Census (May 2021)",
   "latestRelease": null,
   "status": "static",
-  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-98-10-0030-01",
@@ -420,7 +523,9 @@
   "latestPeriod": "2021 Census (May 2021)",
   "latestRelease": null,
   "status": "static",
-  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-98-10-0038-01",
@@ -429,7 +534,9 @@
   "latestPeriod": "2021 Census (May 2021)",
   "latestRelease": null,
   "status": "static",
-  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-98-10-0175-01",
@@ -438,7 +545,9 @@
   "latestPeriod": "2021 Census (May 2021)",
   "latestRelease": null,
   "status": "static",
-  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-98-10-0227-01",
@@ -447,7 +556,9 @@
   "latestPeriod": "2021 Census (May 2021)",
   "latestRelease": null,
   "status": "static",
-  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-98-10-0308-01",
@@ -456,7 +567,9 @@
   "latestPeriod": "2021 Census (May 2021)",
   "latestRelease": null,
   "status": "static",
-  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-98-10-0457-01",
@@ -465,7 +578,9 @@
   "latestPeriod": "2021 Census (May 2021)",
   "latestRelease": null,
   "status": "static",
-  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027)."
+  "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-cbf-2021",
@@ -474,7 +589,9 @@
   "latestPeriod": "2021 Census geography",
   "latestRelease": null,
   "status": "static",
-  "note": "2021 Census boundary files: fixed vintage until the 2026 Census geography."
+  "note": "2021 Census boundary files: fixed vintage until the 2026 Census geography.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "statcan-noc-2021-v1.0",
@@ -483,6 +600,8 @@
   "latestPeriod": null,
   "latestRelease": null,
   "status": "static",
-  "note": "NOC 2021 Version 1.0 classification: fixed until a new NOC version is published."
+  "note": "NOC 2021 Version 1.0 classification: fixed until a new NOC version is published.",
+  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "lastSuccessfulCheckAt": null
  }
 ]
