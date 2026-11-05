@@ -88,6 +88,8 @@ def fetch(
                         r = requests.post(full_url, json=json_payload, headers=h, timeout=timeout, verify=CA_BUNDLE)
                     else:
                         r = requests.get(full_url, headers=h, timeout=timeout, verify=CA_BUNDLE, stream=True)
+                    if r.status_code >= 400:
+                        r.close()
                     if r.status_code in (429, 500, 502, 503, 504):
                         raise FetchError(f"HTTP {r.status_code}")
                     if r.status_code >= 400:

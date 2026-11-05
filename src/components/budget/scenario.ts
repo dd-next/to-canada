@@ -204,7 +204,7 @@ const slugToUnit = (slug: string | null): UnitType | null => UNIT_TYPES.find((u)
 export function decodeScenario(p: URLSearchParams, base: Scenario): Scenario {
   const n = (k: string) => {
     const v = p.get(k);
-    return v === null ? null : num(Number(v));
+    return v === null || v.trim() === '' ? null : num(Number(v));
   };
   const hh = Number(p.get('hh'));
   const unit = slugToUnit(p.get('unit')) ?? base.unit;
@@ -213,7 +213,7 @@ export function decodeScenario(p: URLSearchParams, base: Scenario): Scenario {
     const out: Record<string, number> = {};
     for (const [k, v] of p.entries()) {
       if (!k.startsWith(prefix)) continue;
-      const x = num(Number(v));
+      const x = v.trim() === '' ? null : num(Number(v));
       if (x !== null) out[k.slice(prefix.length)] = x;
     }
     return out;

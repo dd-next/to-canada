@@ -80,7 +80,7 @@ def main() -> int:
         warnings.append("PROVISIONAL BUILD: places from pipeline/places_seed.json with approximate coordinates; "
                         "dev outline geometry. Do not ship.")
     place_ids = {p["id"] for p in places}
-    seed_ids = {p["id"] for p in load_places()} if (PROCESSED / "geo" / "places.json").exists() else place_ids
+    seed_ids = {p["id"] for p in json.loads((ROOT / "pipeline" / "places_seed.json").read_text(encoding="utf-8"))["places"]}
     if seed_ids - place_ids:
         warnings.append(f"places in seed but not in verified places: {sorted(seed_ids - place_ids)}")
 
