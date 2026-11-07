@@ -3,7 +3,7 @@ import { useCore } from '../data/core';
 import { useJSON } from '../data/useJSON';
 import type { ProgramRecord } from '../types/contract';
 import { jurisdictionName, ProgramCard, CATEGORY_LABEL } from '../components/immigration/ProgramCard';
-import { Button } from '../components/ui/Button';
+import { Button, ButtonLink } from '../components/ui/Button';
 import { Combobox, type ComboOption } from '../components/ui/Combobox';
 import { EmptyState } from '../components/ui/EmptyState';
 import { Icon } from '../components/ui/Icon';
@@ -96,6 +96,11 @@ export default function ImmigrationPage() {
         title="Immigration programs"
         dek="A reference directory of the main federal, provincial and community pathways to live in Canada, with links to the official page for each."
       />
+
+      <section className="imm__calculator" aria-labelledby="imm-calculator-title">
+        <div><h2 id="imm-calculator-title" className="h3">Your Express Entry score</h2><p>Calculate CRS points under the November 2026 rules, with a full breakdown.</p></div>
+        <ButtonLink to="/express-entry" iconRight="arrowRight">Open EE calculator</ButtonLink>
+      </section>
 
       <aside className="imm__disclaimer" aria-label="Important">
         <Icon name="info" size={18} />

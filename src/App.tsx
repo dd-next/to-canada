@@ -10,6 +10,7 @@ const BudgetPage = lazy(() => import('./pages/BudgetPage'));
 const InsightsPage = lazy(() => import('./pages/InsightsPage'));
 const InsightPage = lazy(() => import('./pages/InsightPage'));
 const ImmigrationPage = lazy(() => import('./pages/ImmigrationPage'));
+const ExpressEntryPage = lazy(() => import('./pages/ExpressEntryPage'));
 const UpdatesPage = lazy(() => import('./pages/UpdatesPage'));
 const SourcesPage = lazy(() => import('./pages/SourcesPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -41,6 +42,7 @@ export default function App() {
               <Route path="/insights" element={<InsightsPage />} />
               <Route path="/insights/:insightId" element={<InsightPage />} />
               <Route path="/immigration" element={<ImmigrationPage />} />
+              <Route path="/express-entry" element={<ExpressEntryPage />} />
               <Route path="/updates" element={<UpdatesPage />} />
               <Route path="/sources" element={<SourcesPage />} />
               <Route path="/about" element={<AboutPage />} />

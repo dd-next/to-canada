@@ -1,0 +1,5294 @@
+{
+  "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html",
+  "retrieved": "2026-11-07",
+  "effective": "2026-11-03",
+  "pageModified": "2026-11-05",
+  "htmlSha256": "1ac8464984881315143b01492de6bb2d737900d680ef79f9b6a804472b91b803",
+  "scriptSha256": "d1e6d884854540ad3034e3b1e68ce41c14072341ee5c3cf15872a2a0c2b030f3",
+  "criteriaSha256": "1a3bda94bf35359de556bca809eb5d3308c82f051e85d4f21b4bcf059ede2892",
+  "base": {
+    "maritalStatus": "single",
+    "spouseCanadian": null,
+    "spouseAccompanying": null,
+    "age": 30,
+    "education": "bachelors",
+    "canadianEducation": "none",
+    "testsRecent": true,
+    "firstLanguage": {
+      "test": "ielts",
+      "scores": {
+        "speaking": 9,
+        "listening": 9,
+        "reading": 9,
+        "writing": 9
+      }
+    },
+    "secondLanguage": {
+      "test": "none",
+      "scores": {
+        "speaking": null,
+        "listening": null,
+        "reading": null,
+        "writing": null
+      }
+    },
+    "canadianYears": 0,
+    "highWageExperience": null,
+    "foreignYears": 3,
+    "tradeCertificate": false,
+    "jobOffer": "none",
+    "nomination": false,
+    "sibling": false,
+    "spouseEducation": null,
+    "spouseCanadianYears": null,
+    "spouseLanguage": {
+      "test": "",
+      "scores": {
+        "speaking": null,
+        "listening": null,
+        "reading": null,
+        "writing": null
+      }
+    }
+  },
+  "cases": [
+    {
+      "name": "Typical IELTS applicant",
+      "overrides": {},
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 349
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 424
+      }
+    },
+    {
+      "name": "No points",
+      "overrides": {
+        "age": 45,
+        "education": "none",
+        "firstLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 0,
+            "listening": 0,
+            "reading": 0,
+            "writing": 0
+          }
+        },
+        "foreignYears": 0
+      },
+      "official": {
+        "core": {
+          "age": 0,
+          "education": 0,
+          "firstLanguage": 0,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 0
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 0,
+          "educationWork": 0,
+          "educationTotal": 0,
+          "foreignLanguage": 0,
+          "foreignCanadian": 0,
+          "foreignTotal": 0,
+          "certificate": 0,
+          "total": 0
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 0
+      }
+    },
+    {
+      "name": "Younger than 18",
+      "overrides": {
+        "age": 17
+      },
+      "official": {
+        "core": {
+          "age": 0,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 244
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 319
+      }
+    },
+    {
+      "name": "Age 18",
+      "overrides": {
+        "age": 18
+      },
+      "official": {
+        "core": {
+          "age": 99,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 343
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 418
+      }
+    },
+    {
+      "name": "Age 19",
+      "overrides": {
+        "age": 19
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 349
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 424
+      }
+    },
+    {
+      "name": "Age 20",
+      "overrides": {
+        "age": 20
+      },
+      "official": {
+        "core": {
+          "age": 110,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 354
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 429
+      }
+    },
+    {
+      "name": "Age 29",
+      "overrides": {
+        "age": 29
+      },
+      "official": {
+        "core": {
+          "age": 110,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 354
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 429
+      }
+    },
+    {
+      "name": "Age 44",
+      "overrides": {
+        "age": 44
+      },
+      "official": {
+        "core": {
+          "age": 6,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 250
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 325
+      }
+    },
+    {
+      "name": "Age 45",
+      "overrides": {
+        "age": 45
+      },
+      "official": {
+        "core": {
+          "age": 0,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 244
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 319
+      }
+    },
+    {
+      "name": "Accompanying spouse",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 323
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 431
+      }
+    },
+    {
+      "name": "Spouse is Canadian",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": true,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 349
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 424
+      }
+    },
+    {
+      "name": "Spouse not accompanying",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": false,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 349
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 424
+      }
+    },
+    {
+      "name": "Common-law partner",
+      "overrides": {
+        "maritalStatus": "common-law",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 323
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 431
+      }
+    },
+    {
+      "name": "Separated",
+      "overrides": {
+        "maritalStatus": "separated",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 349
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 424
+      }
+    },
+    {
+      "name": "Canadian study short",
+      "overrides": {
+        "canadianEducation": "one-or-two"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 349
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 15,
+          "sibling": 0,
+          "french": 0,
+          "total": 15
+        },
+        "total": 439
+      }
+    },
+    {
+      "name": "Canadian study long",
+      "overrides": {
+        "canadianEducation": "three-or-more"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 349
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 30,
+          "sibling": 0,
+          "french": 0,
+          "total": 30
+        },
+        "total": 454
+      }
+    },
+    {
+      "name": "Canadian secondary",
+      "overrides": {
+        "canadianEducation": "secondary"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 349
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 424
+      }
+    },
+    {
+      "name": "Nomination caps all bonuses",
+      "overrides": {
+        "nomination": true,
+        "sibling": true,
+        "canadianEducation": "three-or-more",
+        "secondLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 24,
+          "labourMarket": 0,
+          "total": 373
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 600,
+          "canadianEducation": 30,
+          "sibling": 15,
+          "french": 50,
+          "total": 600
+        },
+        "total": 1048
+      }
+    },
+    {
+      "name": "French alone",
+      "overrides": {
+        "firstLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 7,
+            "listening": 7,
+            "reading": 7,
+            "writing": 7
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 68,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 293
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 13,
+          "educationWork": 0,
+          "educationTotal": 13,
+          "foreignLanguage": 25,
+          "foreignCanadian": 0,
+          "foreignTotal": 25,
+          "certificate": 0,
+          "total": 38
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 25,
+          "total": 25
+        },
+        "total": 356
+      }
+    },
+    {
+      "name": "French plus English CLB 4",
+      "overrides": {
+        "firstLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 7,
+            "listening": 7,
+            "reading": 7,
+            "writing": 7
+          }
+        },
+        "secondLanguage": {
+          "test": "ielts",
+          "scores": {
+            "speaking": 4,
+            "listening": 4,
+            "reading": 4,
+            "writing": 4
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 68,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 293
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 13,
+          "educationWork": 0,
+          "educationTotal": 13,
+          "foreignLanguage": 25,
+          "foreignCanadian": 0,
+          "foreignTotal": 25,
+          "certificate": 0,
+          "total": 38
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 25,
+          "total": 25
+        },
+        "total": 356
+      }
+    },
+    {
+      "name": "French plus English CLB 5",
+      "overrides": {
+        "firstLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 7,
+            "listening": 7,
+            "reading": 7,
+            "writing": 7
+          }
+        },
+        "secondLanguage": {
+          "test": "ielts",
+          "scores": {
+            "speaking": 5,
+            "listening": 5,
+            "reading": 5,
+            "writing": 5
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 68,
+          "secondLanguage": 4,
+          "labourMarket": 0,
+          "total": 297
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 13,
+          "educationWork": 0,
+          "educationTotal": 13,
+          "foreignLanguage": 25,
+          "foreignCanadian": 0,
+          "foreignTotal": 25,
+          "certificate": 0,
+          "total": 38
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 50,
+          "total": 50
+        },
+        "total": 385
+      }
+    },
+    {
+      "name": "French plus mixed English",
+      "overrides": {
+        "firstLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 7,
+            "listening": 7,
+            "reading": 7,
+            "writing": 7
+          }
+        },
+        "secondLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 4,
+            "reading": 9,
+            "writing": 9
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 68,
+          "secondLanguage": 18,
+          "labourMarket": 0,
+          "total": 311
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 13,
+          "educationWork": 0,
+          "educationTotal": 13,
+          "foreignLanguage": 25,
+          "foreignCanadian": 0,
+          "foreignTotal": 25,
+          "certificate": 0,
+          "total": 38
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 25,
+          "total": 25
+        },
+        "total": 374
+      }
+    },
+    {
+      "name": "One French skill below 7",
+      "overrides": {
+        "secondLanguage": {
+          "test": "tcf",
+          "scores": {
+            "speaking": 7,
+            "listening": 7,
+            "reading": 7,
+            "writing": 6
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 10,
+          "labourMarket": 0,
+          "total": 359
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 434
+      }
+    },
+    {
+      "name": "English then French bonus",
+      "overrides": {
+        "secondLanguage": {
+          "test": "tcf",
+          "scores": {
+            "speaking": 7,
+            "listening": 7,
+            "reading": 7,
+            "writing": 7
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 12,
+          "labourMarket": 0,
+          "total": 361
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 50,
+          "total": 50
+        },
+        "total": 486
+      }
+    },
+    {
+      "name": "Partner second-language cap",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "secondLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 10,
+            "listening": 10,
+            "reading": 10,
+            "writing": 10
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 22,
+          "labourMarket": 0,
+          "total": 345
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 50,
+          "total": 50
+        },
+        "total": 503
+      }
+    },
+    {
+      "name": "All transferability caps",
+      "overrides": {
+        "education": "masters",
+        "canadianYears": 2,
+        "highWageExperience": "none",
+        "tradeCertificate": true
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 135,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 53,
+          "total": 417
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 50,
+          "educationWork": 50,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 50,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 517
+      }
+    },
+    {
+      "name": "Certificate CLB 5",
+      "overrides": {
+        "education": "none",
+        "foreignYears": 0,
+        "firstLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 5,
+            "listening": 5,
+            "reading": 5,
+            "writing": 5
+          }
+        },
+        "tradeCertificate": true
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 0,
+          "firstLanguage": 24,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 129
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 0,
+          "educationWork": 0,
+          "educationTotal": 0,
+          "foreignLanguage": 0,
+          "foreignCanadian": 0,
+          "foreignTotal": 0,
+          "certificate": 25,
+          "total": 25
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 154
+      }
+    },
+    {
+      "name": "Certificate mixed below 5",
+      "overrides": {
+        "education": "none",
+        "foreignYears": 0,
+        "firstLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 5,
+            "listening": 5,
+            "reading": 5,
+            "writing": 4
+          }
+        },
+        "tradeCertificate": true
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 0,
+          "firstLanguage": 24,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 129
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 0,
+          "educationWork": 0,
+          "educationTotal": 0,
+          "foreignLanguage": 0,
+          "foreignCanadian": 0,
+          "foreignTotal": 0,
+          "certificate": 0,
+          "total": 0
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 129
+      }
+    },
+    {
+      "name": "Language transfer mixed below 7",
+      "overrides": {
+        "firstLanguage": {
+          "test": "ielts",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 6,
+            "writing": 9
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 102,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 327
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 0,
+          "educationWork": 0,
+          "educationTotal": 0,
+          "foreignLanguage": 0,
+          "foreignCanadian": 0,
+          "foreignTotal": 0,
+          "certificate": 0,
+          "total": 0
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 327
+      }
+    },
+    {
+      "name": "Language transfer mixed below 9",
+      "overrides": {
+        "firstLanguage": {
+          "test": "ielts",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 8,
+            "writing": 9
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 341
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 13,
+          "educationWork": 0,
+          "educationTotal": 13,
+          "foreignLanguage": 25,
+          "foreignCanadian": 0,
+          "foreignTotal": 25,
+          "certificate": 0,
+          "total": 38
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 379
+      }
+    },
+    {
+      "name": "Maximum single",
+      "overrides": {
+        "age": 29,
+        "education": "doctorate",
+        "firstLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 10,
+            "listening": 10,
+            "reading": 10,
+            "writing": 10
+          }
+        },
+        "secondLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 10,
+            "listening": 10,
+            "reading": 10,
+            "writing": 10
+          }
+        },
+        "canadianYears": 5,
+        "highWageExperience": "2",
+        "jobOffer": "2",
+        "nomination": true,
+        "tradeCertificate": true
+      },
+      "official": {
+        "core": {
+          "age": 110,
+          "education": 150,
+          "firstLanguage": 136,
+          "secondLanguage": 24,
+          "labourMarket": 150,
+          "total": 570
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 50,
+          "educationWork": 50,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 50,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 600,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 50,
+          "total": 600
+        },
+        "total": 1270
+      }
+    },
+    {
+      "name": "Maximum couple",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "doctorate",
+        "spouseCanadianYears": 5,
+        "spouseLanguage": {
+          "test": "pte",
+          "scores": {
+            "speaking": 10,
+            "listening": 10,
+            "reading": 10,
+            "writing": 10
+          }
+        },
+        "age": 29,
+        "education": "doctorate",
+        "firstLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 10,
+            "listening": 10,
+            "reading": 10,
+            "writing": 10
+          }
+        },
+        "secondLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 10,
+            "listening": 10,
+            "reading": 10,
+            "writing": 10
+          }
+        },
+        "canadianYears": 5,
+        "highWageExperience": "2",
+        "jobOffer": "2",
+        "nomination": true,
+        "tradeCertificate": true
+      },
+      "official": {
+        "core": {
+          "age": 100,
+          "education": 140,
+          "firstLanguage": 128,
+          "secondLanguage": 22,
+          "labourMarket": 140,
+          "total": 530
+        },
+        "spouse": {
+          "education": 10,
+          "language": 20,
+          "canadianWork": 10,
+          "total": 40
+        },
+        "transferability": {
+          "educationLanguage": 50,
+          "educationWork": 50,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 50,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 600,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 50,
+          "total": 600
+        },
+        "total": 1270
+      }
+    },
+    {
+      "name": "TCF NCLC 4 discrepancy",
+      "overrides": {
+        "firstLanguage": {
+          "test": "tcf",
+          "scores": {
+            "speaking": 4,
+            "listening": 4,
+            "reading": 4,
+            "writing": 4
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 0,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 225
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 0,
+          "educationWork": 0,
+          "educationTotal": 0,
+          "foreignLanguage": 0,
+          "foreignCanadian": 0,
+          "foreignTotal": 0,
+          "certificate": 0,
+          "total": 0
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 225
+      }
+    },
+    {
+      "name": "French first with PTE discrepancy",
+      "overrides": {
+        "firstLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 7,
+            "listening": 7,
+            "reading": 7,
+            "writing": 7
+          }
+        },
+        "secondLanguage": {
+          "test": "pte",
+          "scores": {
+            "speaking": 5,
+            "listening": 5,
+            "reading": 5,
+            "writing": 5
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 68,
+          "secondLanguage": 4,
+          "labourMarket": 0,
+          "total": 297
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 13,
+          "educationWork": 0,
+          "educationTotal": 13,
+          "foreignLanguage": 25,
+          "foreignCanadian": 0,
+          "foreignTotal": 25,
+          "certificate": 0,
+          "total": 38
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 25,
+          "total": 25
+        },
+        "total": 360
+      }
+    },
+    {
+      "name": "French first with PTE under nomination cap",
+      "overrides": {
+        "firstLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 7,
+            "listening": 7,
+            "reading": 7,
+            "writing": 7
+          }
+        },
+        "secondLanguage": {
+          "test": "pte",
+          "scores": {
+            "speaking": 5,
+            "listening": 5,
+            "reading": 5,
+            "writing": 5
+          }
+        },
+        "nomination": true
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 68,
+          "secondLanguage": 4,
+          "labourMarket": 0,
+          "total": 297
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 13,
+          "educationWork": 0,
+          "educationTotal": 13,
+          "foreignLanguage": 25,
+          "foreignCanadian": 0,
+          "foreignTotal": 25,
+          "certificate": 0,
+          "total": 38
+        },
+        "additional": {
+          "nomination": 600,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 25,
+          "total": 600
+        },
+        "total": 935
+      }
+    },
+    {
+      "name": "LMI single, 0 years, none experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 0,
+        "highWageExperience": null,
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 419
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 494
+      }
+    },
+    {
+      "name": "LMI single, 0 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 0,
+        "highWageExperience": null,
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 419
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 494
+      }
+    },
+    {
+      "name": "LMI single, 0 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 0,
+        "highWageExperience": null,
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 419
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 494
+      }
+    },
+    {
+      "name": "LMI single, 0 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 0,
+        "highWageExperience": null,
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 419
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 494
+      }
+    },
+    {
+      "name": "LMI single, 1 years, none experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 1,
+        "highWageExperience": "none",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 419
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 13,
+          "educationTotal": 38,
+          "foreignLanguage": 50,
+          "foreignCanadian": 25,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 88
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 507
+      }
+    },
+    {
+      "name": "LMI single, 1 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 1,
+        "highWageExperience": "1.3",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 419
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 13,
+          "educationTotal": 38,
+          "foreignLanguage": 50,
+          "foreignCanadian": 25,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 88
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 507
+      }
+    },
+    {
+      "name": "LMI single, 1 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 1,
+        "highWageExperience": "1.5",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 80,
+          "total": 429
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 13,
+          "educationTotal": 38,
+          "foreignLanguage": 50,
+          "foreignCanadian": 25,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 88
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 517
+      }
+    },
+    {
+      "name": "LMI single, 1 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 1,
+        "highWageExperience": "2",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 110,
+          "total": 459
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 13,
+          "educationTotal": 38,
+          "foreignLanguage": 50,
+          "foreignCanadian": 25,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 88
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 547
+      }
+    },
+    {
+      "name": "LMI single, 2 years, none experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 2,
+        "highWageExperience": "none",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 419
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 519
+      }
+    },
+    {
+      "name": "LMI single, 2 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 2,
+        "highWageExperience": "1.3",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 73,
+          "total": 422
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 522
+      }
+    },
+    {
+      "name": "LMI single, 2 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 2,
+        "highWageExperience": "1.5",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 93,
+          "total": 442
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 542
+      }
+    },
+    {
+      "name": "LMI single, 2 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 2,
+        "highWageExperience": "2",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 123,
+          "total": 472
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 572
+      }
+    },
+    {
+      "name": "LMI single, 3 years, none experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 3,
+        "highWageExperience": "none",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 419
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 519
+      }
+    },
+    {
+      "name": "LMI single, 3 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 3,
+        "highWageExperience": "1.3",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 84,
+          "total": 433
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 533
+      }
+    },
+    {
+      "name": "LMI single, 3 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 3,
+        "highWageExperience": "1.5",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 104,
+          "total": 453
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 553
+      }
+    },
+    {
+      "name": "LMI single, 3 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 3,
+        "highWageExperience": "2",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 134,
+          "total": 483
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 583
+      }
+    },
+    {
+      "name": "LMI single, 4 years, none experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 4,
+        "highWageExperience": "none",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 72,
+          "total": 421
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 521
+      }
+    },
+    {
+      "name": "LMI single, 4 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 4,
+        "highWageExperience": "1.3",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 92,
+          "total": 441
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 541
+      }
+    },
+    {
+      "name": "LMI single, 4 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 4,
+        "highWageExperience": "1.5",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 112,
+          "total": 461
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 561
+      }
+    },
+    {
+      "name": "LMI single, 4 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 4,
+        "highWageExperience": "2",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 142,
+          "total": 491
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 591
+      }
+    },
+    {
+      "name": "LMI single, 5 years, none experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 5,
+        "highWageExperience": "none",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 80,
+          "total": 429
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 529
+      }
+    },
+    {
+      "name": "LMI single, 5 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 5,
+        "highWageExperience": "1.3",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 100,
+          "total": 449
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 549
+      }
+    },
+    {
+      "name": "LMI single, 5 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 5,
+        "highWageExperience": "1.5",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 120,
+          "total": 469
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 569
+      }
+    },
+    {
+      "name": "LMI single, 5 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "canadianYears": 5,
+        "highWageExperience": "2",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 150,
+          "total": 499
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 599
+      }
+    },
+    {
+      "name": "LMI couple, 0 years, none experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 0,
+        "highWageExperience": null,
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 501
+      }
+    },
+    {
+      "name": "LMI couple, 0 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 0,
+        "highWageExperience": null,
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 501
+      }
+    },
+    {
+      "name": "LMI couple, 0 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 0,
+        "highWageExperience": null,
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 501
+      }
+    },
+    {
+      "name": "LMI couple, 0 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 0,
+        "highWageExperience": null,
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 501
+      }
+    },
+    {
+      "name": "LMI couple, 1 years, none experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 1,
+        "highWageExperience": "none",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 13,
+          "educationTotal": 38,
+          "foreignLanguage": 50,
+          "foreignCanadian": 25,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 88
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 514
+      }
+    },
+    {
+      "name": "LMI couple, 1 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 1,
+        "highWageExperience": "1.3",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 13,
+          "educationTotal": 38,
+          "foreignLanguage": 50,
+          "foreignCanadian": 25,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 88
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 514
+      }
+    },
+    {
+      "name": "LMI couple, 1 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 1,
+        "highWageExperience": "1.5",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 75,
+          "total": 398
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 13,
+          "educationTotal": 38,
+          "foreignLanguage": 50,
+          "foreignCanadian": 25,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 88
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 519
+      }
+    },
+    {
+      "name": "LMI couple, 1 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 1,
+        "highWageExperience": "2",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 105,
+          "total": 428
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 13,
+          "educationTotal": 38,
+          "foreignLanguage": 50,
+          "foreignCanadian": 25,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 88
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 549
+      }
+    },
+    {
+      "name": "LMI couple, 2 years, none experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 2,
+        "highWageExperience": "none",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 526
+      }
+    },
+    {
+      "name": "LMI couple, 2 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 2,
+        "highWageExperience": "1.3",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 526
+      }
+    },
+    {
+      "name": "LMI couple, 2 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 2,
+        "highWageExperience": "1.5",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 86,
+          "total": 409
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 542
+      }
+    },
+    {
+      "name": "LMI couple, 2 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 2,
+        "highWageExperience": "2",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 116,
+          "total": 439
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 572
+      }
+    },
+    {
+      "name": "LMI couple, 3 years, none experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 3,
+        "highWageExperience": "none",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 526
+      }
+    },
+    {
+      "name": "LMI couple, 3 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 3,
+        "highWageExperience": "1.3",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 76,
+          "total": 399
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 532
+      }
+    },
+    {
+      "name": "LMI couple, 3 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 3,
+        "highWageExperience": "1.5",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 96,
+          "total": 419
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 552
+      }
+    },
+    {
+      "name": "LMI couple, 3 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 3,
+        "highWageExperience": "2",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 126,
+          "total": 449
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 582
+      }
+    },
+    {
+      "name": "LMI couple, 4 years, none experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 4,
+        "highWageExperience": "none",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 526
+      }
+    },
+    {
+      "name": "LMI couple, 4 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 4,
+        "highWageExperience": "1.3",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 83,
+          "total": 406
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 539
+      }
+    },
+    {
+      "name": "LMI couple, 4 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 4,
+        "highWageExperience": "1.5",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 103,
+          "total": 426
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 559
+      }
+    },
+    {
+      "name": "LMI couple, 4 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 4,
+        "highWageExperience": "2",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 133,
+          "total": 456
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 589
+      }
+    },
+    {
+      "name": "LMI couple, 5 years, none experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 5,
+        "highWageExperience": "none",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 393
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 526
+      }
+    },
+    {
+      "name": "LMI couple, 5 years, 1.3 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 5,
+        "highWageExperience": "1.3",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 90,
+          "total": 413
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 546
+      }
+    },
+    {
+      "name": "LMI couple, 5 years, 1.5 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 5,
+        "highWageExperience": "1.5",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 110,
+          "total": 433
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 566
+      }
+    },
+    {
+      "name": "LMI couple, 5 years, 2 experience, 1.5 offer",
+      "overrides": {
+        "maritalStatus": "married",
+        "spouseCanadian": false,
+        "spouseAccompanying": true,
+        "spouseEducation": "bachelors",
+        "spouseCanadianYears": 1,
+        "spouseLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 9,
+            "listening": 9,
+            "reading": 9,
+            "writing": 9
+          }
+        },
+        "canadianYears": 5,
+        "highWageExperience": "2",
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 95,
+          "education": 112,
+          "firstLanguage": 116,
+          "secondLanguage": 0,
+          "labourMarket": 140,
+          "total": 463
+        },
+        "spouse": {
+          "education": 8,
+          "language": 20,
+          "canadianWork": 5,
+          "total": 33
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 25,
+          "educationTotal": 50,
+          "foreignLanguage": 50,
+          "foreignCanadian": 50,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 100
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 596
+      }
+    },
+    {
+      "name": "Job offer only none",
+      "overrides": {
+        "jobOffer": "none"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 349
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 424
+      }
+    },
+    {
+      "name": "Job offer only 1.3",
+      "overrides": {
+        "jobOffer": "1.3"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 50,
+          "total": 399
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 474
+      }
+    },
+    {
+      "name": "Job offer only 1.5",
+      "overrides": {
+        "jobOffer": "1.5"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 70,
+          "total": 419
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 494
+      }
+    },
+    {
+      "name": "Job offer only 2",
+      "overrides": {
+        "jobOffer": "2"
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 124,
+          "secondLanguage": 0,
+          "labourMarket": 100,
+          "total": 449
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 25,
+          "educationWork": 0,
+          "educationTotal": 25,
+          "foreignLanguage": 50,
+          "foreignCanadian": 0,
+          "foreignTotal": 50,
+          "certificate": 0,
+          "total": 75
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 524
+      }
+    },
+    {
+      "name": "celpip mixed abilities",
+      "overrides": {
+        "firstLanguage": {
+          "test": "celpip",
+          "scores": {
+            "speaking": 5,
+            "listening": 7,
+            "reading": 8,
+            "writing": 10
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 80,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 305
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 0,
+          "educationWork": 0,
+          "educationTotal": 0,
+          "foreignLanguage": 0,
+          "foreignCanadian": 0,
+          "foreignTotal": 0,
+          "certificate": 0,
+          "total": 0
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 305
+      }
+    },
+    {
+      "name": "ielts mixed abilities",
+      "overrides": {
+        "firstLanguage": {
+          "test": "ielts",
+          "scores": {
+            "speaking": 5,
+            "listening": 7,
+            "reading": 8,
+            "writing": 10
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 80,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 305
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 0,
+          "educationWork": 0,
+          "educationTotal": 0,
+          "foreignLanguage": 0,
+          "foreignCanadian": 0,
+          "foreignTotal": 0,
+          "certificate": 0,
+          "total": 0
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 305
+      }
+    },
+    {
+      "name": "tef mixed abilities",
+      "overrides": {
+        "firstLanguage": {
+          "test": "tef",
+          "scores": {
+            "speaking": 5,
+            "listening": 7,
+            "reading": 8,
+            "writing": 10
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 80,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 305
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 0,
+          "educationWork": 0,
+          "educationTotal": 0,
+          "foreignLanguage": 0,
+          "foreignCanadian": 0,
+          "foreignTotal": 0,
+          "certificate": 0,
+          "total": 0
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 305
+      }
+    },
+    {
+      "name": "tcf mixed abilities",
+      "overrides": {
+        "firstLanguage": {
+          "test": "tcf",
+          "scores": {
+            "speaking": 5,
+            "listening": 7,
+            "reading": 8,
+            "writing": 10
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 80,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 305
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 0,
+          "educationWork": 0,
+          "educationTotal": 0,
+          "foreignLanguage": 0,
+          "foreignCanadian": 0,
+          "foreignTotal": 0,
+          "certificate": 0,
+          "total": 0
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 305
+      }
+    },
+    {
+      "name": "pte mixed abilities",
+      "overrides": {
+        "firstLanguage": {
+          "test": "pte",
+          "scores": {
+            "speaking": 5,
+            "listening": 7,
+            "reading": 8,
+            "writing": 10
+          }
+        }
+      },
+      "official": {
+        "core": {
+          "age": 105,
+          "education": 120,
+          "firstLanguage": 80,
+          "secondLanguage": 0,
+          "labourMarket": 0,
+          "total": 305
+        },
+        "spouse": {
+          "education": 0,
+          "language": 0,
+          "canadianWork": 0,
+          "total": 0
+        },
+        "transferability": {
+          "educationLanguage": 0,
+          "educationWork": 0,
+          "educationTotal": 0,
+          "foreignLanguage": 0,
+          "foreignCanadian": 0,
+          "foreignTotal": 0,
+          "certificate": 0,
+          "total": 0
+        },
+        "additional": {
+          "nomination": 0,
+          "canadianEducation": 0,
+          "sibling": 0,
+          "french": 0,
+          "total": 0
+        },
+        "total": 305
+      }
+    }
+  ],
+  "tables": {
+    "q3_age": [
+      [
+        "A",
+        "17 years of age or less",
+        "0",
+        "0"
+      ],
+      [
+        "B",
+        "18 years of age",
+        "90",
+        "99"
+      ],
+      [
+        "C",
+        "19 years of age",
+        "95",
+        "105"
+      ],
+      [
+        "D",
+        "20 years of age",
+        "100",
+        "110"
+      ],
+      [
+        "E",
+        "21 years of age",
+        "100",
+        "110"
+      ],
+      [
+        "F",
+        "22 years of age",
+        "100",
+        "110"
+      ],
+      [
+        "G",
+        "23 years of age",
+        "100",
+        "110"
+      ],
+      [
+        "H",
+        "24 years of age",
+        "100",
+        "110"
+      ],
+      [
+        "I",
+        "25 years of age",
+        "100",
+        "110"
+      ],
+      [
+        "J",
+        "26 years of age",
+        "100",
+        "110"
+      ],
+      [
+        "K",
+        "27 years of age",
+        "100",
+        "110"
+      ],
+      [
+        "L",
+        "28 years of age",
+        "100",
+        "110"
+      ],
+      [
+        "M",
+        "29 years of age",
+        "100",
+        "110"
+      ],
+      [
+        "N",
+        "30 years of age",
+        "95",
+        "105"
+      ],
+      [
+        "O",
+        "31 years of age",
+        "90",
+        "99"
+      ],
+      [
+        "P",
+        "32 years of age",
+        "85",
+        "94"
+      ],
+      [
+        "Q",
+        "33 years of age",
+        "80",
+        "88"
+      ],
+      [
+        "R",
+        "34 years of age",
+        "75",
+        "83"
+      ],
+      [
+        "S",
+        "35 years of age",
+        "70",
+        "77"
+      ],
+      [
+        "T",
+        "36 years of age",
+        "65",
+        "72"
+      ],
+      [
+        "U",
+        "37 years of age",
+        "60",
+        "66"
+      ],
+      [
+        "V",
+        "38 years of age",
+        "55",
+        "61"
+      ],
+      [
+        "W",
+        "39 years of age",
+        "50",
+        "55"
+      ],
+      [
+        "X",
+        "40 years of age",
+        "45",
+        "50"
+      ],
+      [
+        "Y",
+        "41 years of age",
+        "35",
+        "39"
+      ],
+      [
+        "Z",
+        "42 years of age",
+        "25",
+        "28"
+      ],
+      [
+        "AA",
+        "43 years of age",
+        "15",
+        "17"
+      ],
+      [
+        "AB",
+        "44 years of age",
+        "5",
+        "6"
+      ],
+      [
+        "AC",
+        "45 years of age or more",
+        "0",
+        "0"
+      ]
+    ],
+    "q4_education": [
+      [
+        "A",
+        "None, or less than secondary (high school)",
+        "0",
+        "0"
+      ],
+      [
+        "B",
+        "Secondary diploma (high school graduation)",
+        "28",
+        "30"
+      ],
+      [
+        "C",
+        "One-year program at a university, college, trade or technical school, or other institute",
+        "84",
+        "90"
+      ],
+      [
+        "D",
+        "Two-year program at a university, college, trade or technical school, or other institute",
+        "91",
+        "98"
+      ],
+      [
+        "E",
+        "Bachelor's degree (three or more year program at a university, college, trade or technical school, or other institute)",
+        "112",
+        "120"
+      ],
+      [
+        "F",
+        "Two or more certificates, diplomas or degrees. One must be for a program of three or more years",
+        "119",
+        "128"
+      ],
+      [
+        "G",
+        "Master's degree, or professional degree needed to practice in a licensed profession (see Help)",
+        "126",
+        "135"
+      ],
+      [
+        "H",
+        "Doctoral level university degree (PhD)",
+        "140",
+        "150"
+      ]
+    ],
+    "celpip": [
+      [
+        "H",
+        "10 - 12",
+        "10 - 12",
+        "10 - 12",
+        "10 - 12",
+        "10",
+        "32",
+        "34",
+        "6",
+        "6",
+        "5"
+      ],
+      [
+        "G",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "29",
+        "31",
+        "6",
+        "6",
+        "5"
+      ],
+      [
+        "F",
+        "8",
+        "8",
+        "8",
+        "8",
+        "8",
+        "22",
+        "23",
+        "3",
+        "3",
+        "3"
+      ],
+      [
+        "E",
+        "7",
+        "7",
+        "7",
+        "7",
+        "7",
+        "16",
+        "17",
+        "3",
+        "3",
+        "3"
+      ],
+      [
+        "D",
+        "6",
+        "6",
+        "6",
+        "6",
+        "6",
+        "8",
+        "9",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "C",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "6",
+        "6",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "B",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "6",
+        "6",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "A",
+        "M, 0 - 3",
+        "M, 0 - 3",
+        "M, 0 - 3",
+        "M, 0 - 3",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "ielts": [
+      [
+        "H",
+        "7.5 - 9.0",
+        "8.5 - 9.0",
+        "8.0 - 9.0",
+        "7.5 - 9.0",
+        "10",
+        "32",
+        "34",
+        "6",
+        "6",
+        "5"
+      ],
+      [
+        "G",
+        "7.0",
+        "8.0",
+        "7.0 - 7.5",
+        "7.0",
+        "9",
+        "29",
+        "31",
+        "6",
+        "6",
+        "5"
+      ],
+      [
+        "F",
+        "6.5",
+        "7.5",
+        "6.5",
+        "6.5",
+        "8",
+        "22",
+        "23",
+        "3",
+        "3",
+        "3"
+      ],
+      [
+        "E",
+        "6.0",
+        "6 .0 - 7.0",
+        "6.0",
+        "6.0",
+        "7",
+        "16",
+        "17",
+        "3",
+        "3",
+        "3"
+      ],
+      [
+        "D",
+        "5.5",
+        "5.5",
+        "5.0 - 5.5",
+        "5.5",
+        "6",
+        "8",
+        "9",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "C",
+        "5.0",
+        "5.0",
+        "4.0 - 4.5",
+        "5.0",
+        "5",
+        "6",
+        "6",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "B",
+        "4.0 - 4.5",
+        "4.5",
+        "3.5",
+        "4.0 - 4.5",
+        "4",
+        "6",
+        "6",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "A",
+        "0 - 3.5",
+        "0 - 4.0",
+        "0 - 3.0",
+        "0 - 3.5",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "pte": [
+      [
+        "H",
+        "89 - 90",
+        "89 - 90",
+        "88 - 90",
+        "90",
+        "10",
+        "32",
+        "34",
+        "6",
+        "6",
+        "5"
+      ],
+      [
+        "G",
+        "84 - 88",
+        "82 - 88",
+        "78 - 87",
+        "88 - 89",
+        "9",
+        "29",
+        "31",
+        "6",
+        "6",
+        "5"
+      ],
+      [
+        "F",
+        "76 - 83",
+        "71 - 81",
+        "69 - 77",
+        "79 - 87",
+        "8",
+        "22",
+        "23",
+        "3",
+        "3",
+        "3"
+      ],
+      [
+        "E",
+        "68 - 75",
+        "60 - 70",
+        "60 - 68",
+        "69 - 78",
+        "7",
+        "16",
+        "17",
+        "3",
+        "3",
+        "3"
+      ],
+      [
+        "D",
+        "59 - 67",
+        "50 - 59",
+        "51 - 59",
+        "60 - 68",
+        "6",
+        "8",
+        "9",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "C",
+        "51 - 58",
+        "39 - 49",
+        "42 - 50",
+        "51 - 59",
+        "5",
+        "6",
+        "6",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "B",
+        "42 - 50",
+        "28 - 38",
+        "33 - 41",
+        "41 - 50",
+        "4",
+        "6",
+        "6",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "A",
+        "0 - 41",
+        "0 - 27",
+        "0 - 32",
+        "0 - 40",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "tef": [
+      [
+        "H",
+        "393-450",
+        "316-360",
+        "263-300",
+        "393-450",
+        "10",
+        "32",
+        "34",
+        "6",
+        "6",
+        "5"
+      ],
+      [
+        "G",
+        "371-392",
+        "298-315",
+        "248-262",
+        "371-392",
+        "9",
+        "29",
+        "31",
+        "6",
+        "6",
+        "5"
+      ],
+      [
+        "F",
+        "349-370",
+        "280-297",
+        "233-247",
+        "349-370",
+        "8",
+        "22",
+        "23",
+        "3",
+        "3",
+        "3"
+      ],
+      [
+        "E",
+        "310-348",
+        "249-279",
+        "207-232",
+        "310-348",
+        "7",
+        "16",
+        "17",
+        "3",
+        "3",
+        "3"
+      ],
+      [
+        "D",
+        "271-309",
+        "217-248",
+        "181-206",
+        "271-309",
+        "6",
+        "8",
+        "9",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "C",
+        "226-270",
+        "181-216",
+        "151-180",
+        "226-270",
+        "5",
+        "6",
+        "6",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "B",
+        "181-225",
+        "145-180",
+        "121-150",
+        "181-225",
+        "4",
+        "6",
+        "6",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "A",
+        "0 - 180",
+        "0 - 144",
+        "0 - 120",
+        "0 - 180",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "tcf": [
+      [
+        "H",
+        "16-20",
+        "549-699",
+        "549-699",
+        "16-20",
+        "10",
+        "32",
+        "34",
+        "6",
+        "6",
+        "5"
+      ],
+      [
+        "G",
+        "14-15",
+        "523-548",
+        "524-548",
+        "14-15",
+        "9",
+        "29",
+        "31",
+        "6",
+        "6",
+        "5"
+      ],
+      [
+        "F",
+        "12-13",
+        "503-522",
+        "499-523",
+        "12-13",
+        "8",
+        "22",
+        "23",
+        "3",
+        "3",
+        "3"
+      ],
+      [
+        "E",
+        "10-11",
+        "458-502",
+        "453-498",
+        "10-11",
+        "7",
+        "16",
+        "17",
+        "3",
+        "3",
+        "3"
+      ],
+      [
+        "D",
+        "7-9",
+        "398-457",
+        "406-452",
+        "7-9",
+        "6",
+        "8",
+        "9",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "C",
+        "6",
+        "369-397",
+        "375-405",
+        "6",
+        "5",
+        "6",
+        "6",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "B",
+        "4-5",
+        "331-368",
+        "342-374",
+        "4-5",
+        "4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "A",
+        "0-3",
+        "0-330",
+        "0-341",
+        "0-3",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  }
+}

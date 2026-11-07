@@ -1,3 +1,5 @@
+.imm__calculator { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s-4); padding: var(--s-5); border: var(--rule); margin-top: var(--s-5); background: var(--paper-hi); }
+.imm__calculator p { margin-top: var(--s-2); color: var(--ink-2); font-size: var(--fs-sm); }
 .imm__disclaimer {
   display: flex;
   gap: var(--s-3);

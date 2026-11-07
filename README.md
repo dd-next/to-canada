@@ -41,6 +41,12 @@ organisation whose data it uses.
 * **IRCC Updates** (`/updates`) — searchable official news, program delivery
   updates and Express Entry rounds. Filter by type and topic; follow each item
   to its official publication. Source coverage and failed checks remain visible.
+* **EE Calculator** (`/express-entry`) — Express Entry CRS estimate under the
+  November 3, 2026 rules, including the labour market integration factor and
+  a 1,270-point maximum. Five approved language tests, accompanying-partner
+  factors and a complete points breakdown. Uses published IRCC criteria and
+  flags known differences from IRCC’s web calculator. This is ranking, not an
+  eligibility assessment. Answers are held only in page memory.
 * **Sources & methods** (`/sources`) — the source registry, a coverage matrix and
   methodology notes.
 
@@ -80,6 +86,7 @@ npm run data:check     # self-contained validation of the committed app snapshot
 npm run data:check -- --sources # strict integration verification against raw source files
 npm run data:freshness # compare every source with the publisher's latest release (add -- --strict to exit 1 when newer data exists)
 node scripts/check-model.mjs   # budget and pay arithmetic checks
+npm run check:crs      # offline IRCC reference cases, score bands and CRS limits
 npm run updates:refresh # lightweight IRCC-only refresh, independent of statistical downloads
 npm run updates:check   # validate the saved IRCC feed
 ```
@@ -142,6 +149,9 @@ npm run build
 These self-contained checks run on pull requests in `validate.yml`; live source
 downloads are kept out of PR validation. See `docs/DATA_CONTRACT.md` and each
 pipeline directory's README for field meanings and coverage limitations.
+The CRS checks are included in `check:model`. See
+[CRS calculation and verification](docs/CRS_CALCULATOR.md) for the rules version,
+source provenance and the two disclosed IRCC calculator discrepancies.
 
 ### Sources actually ingested (snapshot of 2026-11-05)
 

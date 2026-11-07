@@ -16,7 +16,7 @@ if (existsSync(index)) {
       return [];
     }
   };
-  const routes = ['compare', 'budget', 'insights', 'immigration', 'updates', 'sources', 'about'];
+  const routes = ['compare', 'budget', 'insights', 'immigration', 'express-entry', 'updates', 'sources', 'about'];
   for (const p of read('public/data/places.json')) routes.push(`place/${p.id}`);
   for (const i of read('public/data/insights/index.json')) routes.push(`insights/${i.id}`);
   for (const r of routes) {
