@@ -31,6 +31,8 @@
 .hood-results li { border-bottom: var(--rule-hair); }
 .hood-results a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; text-decoration: none; }
 .hood-results a:hover, .hood-results a:focus-visible { background: var(--linen); color: var(--ink); }
+.hood-results__unavailable { padding: 18px 20px; color: var(--ink-2); background: var(--paper-2); }
+.hood-city-links { max-width: 340px; }
 .hood-results strong { font-size: var(--fs-md); }
 .hood-results small { display: block; color: var(--ink-2); font-size: var(--fs-xs); margin-top: 6px; }
 .hood-results__value { font: var(--fs-sm) var(--font-mono); white-space: nowrap; }
@@ -53,6 +55,15 @@
 .hood-place-lists li { border-top: var(--rule-hair); padding: 10px 0; }
 .hood-place-lists small { display: block; color: var(--ink-3); padding-top: 4px; }
 .hood-place-lists summary { cursor: pointer; padding: 12px 0; }
+.hood-description { margin-top: 48px; border-top: var(--rule-strong); padding-top: 28px; }
+.hood-description h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-top: 12px; letter-spacing: -.03em; }
+.hood-description__sections { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; margin-top: 28px; }
+.hood-description__sections article { border-top: var(--rule-hair); padding-top: 18px; min-width: 0; }
+.hood-description__sections h3 { margin: 10px 0 12px; font-size: var(--fs-lg); }
+.hood-description__sections p { line-height: 1.65; }
+.hood-description__kind { font: var(--fs-xs) var(--font-mono); text-transform: uppercase; color: var(--ink-2); }
+.hood-description__citations { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 16px; font-size: var(--fs-xs); }
+.hood-description__citations a { overflow-wrap: anywhere; }
 .hood-perspectives { margin-top: 60px; padding: 32px; background: var(--charcoal); color: var(--paper); display: grid; grid-template-columns: 1fr 1.1fr; gap: 24px 48px; }
 .hood-perspectives h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.05; margin: 18px 0; letter-spacing: -.03em; }
 .hood-perspectives p { line-height: 1.6; }
@@ -89,6 +100,7 @@
   .hood-metrics { grid-template-columns: 1fr 1fr; }
   .hood-metrics > .hood-metric:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .hood-place-lists { grid-template-columns: 1fr; gap: 28px; }
+  .hood-description__sections { grid-template-columns: 1fr; }
   .hood-explorer__map { padding: 14px; }
   .hood-results a { padding: 16px; gap: 10px; }
 }

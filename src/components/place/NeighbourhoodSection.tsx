@@ -8,8 +8,8 @@ export function NeighbourhoodSection({ placeId, name }: { placeId: string; name:
   return (
     <div className="ppanel">
       <h3 className="h3">Find your corner of {name}.</h3>
-      <p className="psec__dek">Explore local households, parkland and nearby LRT stations. Open a neighbourhood for the details and perspectives from residents.</p>
-      <p className="ppanel__note">Within the City of {name}, rather than the whole metropolitan area. Census 2021; park and transit snapshots carry their own dates.</p>
+      <p className="psec__dek">Explore local households, housing, public spaces and transport. Open a neighbourhood for its available data and local context.</p>
+      <p className="ppanel__note">Neighbourhood coverage has its own geographic boundaries and source dates, shown on each profile.</p>
       <ButtonLink to={`/place/${placeId}/neighbourhoods`} variant="primary" icon="map">Explore neighbourhoods</ButtonLink>
     </div>
   );

@@ -1,0 +1,186 @@
+{
+  "95": {
+    "name": "Annex",
+    "parks": [
+      "Jean Sibelius Square",
+      "Ramsden Park",
+      "Village Of Yorkville Park"
+    ],
+    "amenities": [
+      "Spadina Road Library",
+      "Yorkville Library",
+      "William H. Bolton Arena"
+    ],
+    "practical": "The Annex profile combines a substantial apartment stock with many one-person households, but it covers an entire social planning area. The long list of nearby subway stations reflects different parts of that boundary, so it should not be read as thirteen equally convenient choices from one apartment. Use the named parks and branches to compare individual addresses; the overall parkland percentage says little about the nearest usable entrance. The historical shelter-cost median combines established tenancies and dwelling sizes, so a new lease can differ substantially.",
+    "everyday": "The mapped Annex is an apartment-heavy planning area with a spread of small public spaces: Jean Sibelius Square, Taddle Creek Park and the Village of Yorkville Park are all represented in its park inventory. Public-library addresses stretch from Spadina Road Library at 10 Spadina Road to Yorkville Library at 22 Yorkville Avenue. That combination gives several distinct starting points for exploring the area, rather than one central park or one library serving every address. The census describes the housing fabric as predominantly apartment buildings, while the mapped squares and parkettes help locate outdoor space at a finer scale.",
+    "addresses": {
+      "Spadina Road Library": "10 Spadina Road, Toronto, ON, M5R 2S7",
+      "Yorkville Library": "22 Yorkville Avenue, Toronto, ON, M4W 1L4"
+    }
+  },
+  "87": {
+    "name": "High Park-Swansea",
+    "parks": [
+      "High Park",
+      "Rennie Park",
+      "Humber Marshes"
+    ],
+    "amenities": [
+      "High Park Library",
+      "Swansea Memorial Library",
+      "Swansea Community Recreation Centre"
+    ],
+    "practical": "High Park and smaller named park spaces sit within the same planning-area summary, making a large mapped parkland share an unevenly distributed benefit. Check which park entrance and which library would actually serve a candidate address. The census also records both apartment buildings and detached homes here; the area-wide rental median cannot distinguish a small apartment from a larger house. The subway points in this snapshot lie near the boundary rather than deep inside the area, which makes an address-specific route especially useful.",
+    "everyday": "High Park, Humber Marshes and Rennie Park make substantial named green spaces part of this planning area, alongside smaller parkettes. The public facilities also span more than one local setting: High Park Library is at 228 Roncesvalles Avenue, Swansea Memorial Library at 95 Lavinia Avenue, and Swansea Community Recreation Centre at 15 Waller Avenue. Apartment buildings and detached homes both account for meaningful shares of the census housing stock. The resulting picture is an area that combines large park footprints with different residential forms; the experience of a particular street will depend on its position within that larger shape.",
+    "addresses": {
+      "High Park Library": "228 Roncesvalles Avenue, Toronto, ON, M6R 2L7",
+      "Swansea Memorial Library": "95 Lavinia Avenue, Toronto, ON, M6S 3H9",
+      "Swansea Community Recreation Centre": "15 WALLER AVE"
+    }
+  },
+  "63": {
+    "name": "The Beaches",
+    "parks": [
+      "Kew Gardens",
+      "Woodbine Beach Park",
+      "Glen Stewart Park"
+    ],
+    "amenities": [
+      "Beaches Library",
+      "Beaches Recreation Centre"
+    ],
+    "practical": "Kew Gardens, Woodbine Beach Park and Glen Stewart Park give concrete places to investigate when comparing the setting, but the inventory does not measure beach conditions, seasonal crowds or how easy a park entrance is to reach. The transport snapshot identifies streetcar and bus stops while returning no nearby subway station, so test the complete trip rather than treating the subway count as the full transit picture. The mix of apartments and detached homes in the census is another reason to compare a particular dwelling type with similar current listings.",
+    "everyday": "The Beaches planning area brings Woodbine Beach Park, Kew Gardens and Glen Stewart Park into the same map, giving it several different named outdoor destinations. Beaches Library is on Queen Street East at number 2161, while Beaches Recreation Centre is at 6 Williamson Road. The census housing mix includes both apartments and detached homes, so the area is more varied than a single housing type. Those public-space and street-address anchors provide a concrete way to explore the setting, without assuming that proximity to a beach park means every dwelling has a waterfront outlook or the same daily route.",
+    "addresses": {
+      "Beaches Library": "2161 Queen Street East, Toronto, ON, M4L 1J1",
+      "Beaches Recreation Centre": "6 WILLIAMSON RD"
+    }
+  },
+  "113": {
+    "name": "Weston",
+    "parks": [
+      "Cruickshank Park",
+      "Weston Lions Park",
+      "Memorial Park - York"
+    ],
+    "amenities": [
+      "Weston Library",
+      "Weston Lions Recreation Arena"
+    ],
+    "practical": "The profile records a large share of renting households and apartment dwellings, but the relatively low historical shelter-cost median is not evidence that equivalent new listings remain available. The named library, arena and park spaces are useful anchors for an address visit. A zero here means no qualifying TTC subway station near the polygon; GO and UP Express are outside this transport measure, and their absence from the map should not be interpreted as an absence of regional rail service. Check operators and transfers separately when comparing commutes.",
+    "everyday": "Weston Library at 2 King Street and Weston Lions Recreation Arena at 2125 Lawrence Avenue West are two mapped public destinations around which to orient an address visit. The park inventory includes Cruickshank Park, Weston Lions Park and a number of smaller parkettes. Apartment dwellings form the majority of the census housing stock, with detached homes also present, so the resident profile encompasses more than one built form. The mapped facilities and green spaces give specific places to investigate; they do not by themselves establish how busy, quiet or convenient a particular block will feel.",
+    "addresses": {
+      "Weston Library": "2 King Street, Toronto, ON, M9N 1K9",
+      "Weston Lions Recreation Arena": "2125 Lawrence Ave W"
+    }
+  },
+  "55": {
+    "name": "Thorncliffe Park",
+    "parks": [
+      "R.V. Burgess Park",
+      "Leaside Park",
+      "E.T. Seton Park"
+    ],
+    "amenities": [
+      "Thorncliffe Library",
+      "Jenner Jean-Marie Community Recreation Centre"
+    ],
+    "practical": "The census records a predominantly apartment-based housing stock, a high renting share and a substantial share of children. For a household considering this area, check bedrooms, building access and the routes to the named library, recreation centre and parks at the individual-address level. None of those population shares establishes childcare vacancies or school capacity. The bus-stop inventory provides a transport starting point, but its stop count does not say how often a route runs or whether a transfer will be needed.",
+    "everyday": "Thorncliffe Library and the Jenner Jean-Marie Community Recreation Centre share the published address 48 Thorncliffe Park Drive, providing a particularly clear public-service anchor in this area. R.V. Burgess Park, Leaside Park and E.T. Seton Park also appear in the overlapping park inventory. The census housing stock is almost entirely in apartment buildings and includes many renting households, while the household profile records a substantial share of children. Together these facts describe an apartment-based residential setting with named shared facilities; they do not establish the condition or management of any individual building.",
+    "addresses": {
+      "Thorncliffe Library": "48 Thorncliffe Park Drive, Toronto, ON, M4H 1J7",
+      "Jenner Jean-Marie Community Recreation Centre": "48 THORNCLIFFE PARK DR"
+    }
+  },
+  "44": {
+    "name": "Flemingdon Park",
+    "parks": [
+      "Flemingdon Park",
+      "E.T. Seton Park",
+      "Charles Sauriol Conservation Area"
+    ],
+    "amenities": [
+      "Flemingdon Park Library",
+      "Dennis R. Timbrell Resource Centre",
+      "Angela James Arena"
+    ],
+    "practical": "Apartment buildings account for most occupied homes in this census profile, while large park polygons account for a sizeable portion of the planning area. Neither measure describes a building's layout or the route from its door to a usable park entrance. The current scheduled inventory separates streetcar/light-rail stop IDs from subway stations, so a zero subway count does not mean no rail-based TTC service is represented. For a move, verify the specific route and facilities you would use, including opening hours and any program registration requirements.",
+    "everyday": "Flemingdon Park Library and the Dennis R. Timbrell Resource Centre both list 29 St. Dennis Drive, creating a mapped library-and-recreation anchor. Flemingdon Park, E.T. Seton Park and the Charles Sauriol Conservation Area are among the park polygons overlapping this planning area. Most occupied dwellings in the census were in apartment buildings, while a substantial portion of the planning polygon is mapped as City parkland. This gives a useful picture of apartment housing alongside large green-space footprints, although the map does not measure the route between a building entrance and an accessible park entrance.",
+    "addresses": {
+      "Flemingdon Park Library": "29 St. Dennis Drive, Toronto, ON, M3C 3J3",
+      "Dennis R. Timbrell Resource Centre": "29 ST DENNIS DR"
+    }
+  },
+  "129": {
+    "name": "Agincourt North",
+    "parks": [
+      "Alexmuir Park",
+      "Chartwell Park",
+      "Brimley Woods"
+    ],
+    "amenities": [
+      "Woodside Square Library",
+      "Commander Recreation Centre"
+    ],
+    "practical": "The census describes a mix of detached homes and apartment buildings, with larger average households and fewer one-person households than several central areas in this set. That is a description of residents, not a rule about who belongs here or what housing is available now. Woodside Square Library, Commander Recreation Centre and the named parks offer specific destinations to test from a prospective address. The scheduled bus-stop count is useful context, but a route map and an actual travel-time check are needed because this inventory does not place a subway station near the planning-area boundary.",
+    "everyday": "Woodside Square Library is explicitly listed inside Woodside Square Mall at 1571 Sandhurst Circle, while Commander Recreation Centre is at 140 Commander Boulevard. Alexmuir Park, Chartwell Park and Brimley Woods add named outdoor destinations within the planning area. The census records both apartment buildings and detached houses, and an average household size of three people. A useful way to explore this setting is therefore to compare the route from a candidate home to the mall library, recreation centre and individual parks, rather than assuming that all of these facilities form one compact centre.",
+    "addresses": {
+      "Woodside Square Library": "Woodside Square Mall, 1571 Sandhurst Circle, Toronto, ON, M1V 1V2",
+      "Commander Recreation Centre": "140 COMMANDER BLVD"
+    }
+  },
+  "37": {
+    "name": "Willowdale West",
+    "parks": [
+      "Edithvale Park",
+      "Dempsey Park",
+      "Gibson Park"
+    ],
+    "amenities": [
+      "North York Central Library",
+      "Edithvale Community Centre",
+      "Douglas Snow Aquatic Centre"
+    ],
+    "practical": "The area-wide profile brings together apartment dwellings and detached homes; comparing those housing types separately will be more useful than treating the neighbourhood median as a single market. North York Central Library, the aquatic centre and Edithvale Community Centre are mapped public facilities, but their different locations mean an address may be much closer to one than another. Similarly, the station list includes points inside and near different edges of the planning area, so it cannot establish a single walk-to-subway time for Willowdale West.",
+    "everyday": "North York Central Library at 5120 Yonge Street and Douglas Snow Aquatic Centre at 5100 Yonge Street form a pair of mapped public facilities on the same street. Edithvale Community Centre is separately listed at 131 Finch Avenue West. The green-space inventory includes Gibson Park, Dempsey Park and Edithvale Park, while the census records a housing mix led by apartment buildings with a substantial detached-house component. These distinct public-service locations and housing forms make the planning-area average a starting point; locating a particular address relative to Yonge Street, Finch Avenue West and the named parks adds practical detail.",
+    "addresses": {
+      "North York Central Library": "5120 Yonge Street, Toronto, ON, M2N 5N9",
+      "Douglas Snow Aquatic Centre": "5100 YONGE ST",
+      "Edithvale Community Centre": "131 FINCH AVE W"
+    }
+  },
+  "165": {
+    "name": "Harbourfront-CityPlace",
+    "parks": [
+      "Canoe Landing",
+      "Toronto Music Garden",
+      "Roundhouse Park"
+    ],
+    "amenities": [
+      "Fort York Library",
+      "Canoe Landing Community Recreation Centre"
+    ],
+    "practical": "The 2021 profile is overwhelmingly apartment-based, with many one-person households, so compare the size and layout of an actual unit instead of assuming the area median describes it. Canoe Landing, the library and the other named park spaces are concrete public amenities to locate relative to a building. The scheduled feed places streetcar stops inside the boundary and subway points nearby; its zero bus-stop count applies only to bus stops whose points fall inside this polygon. It does not mean no buses can be reached across a boundary or that all homes share the same access to Union.",
+    "everyday": "Fort York Library at 190 Fort York Boulevard and Canoe Landing Community Recreation Centre at 45 Fort York Boulevard provide two named public facilities along the same street. Canoe Landing, Toronto Music Garden and Roundhouse Park are represented among the area’s park polygons. The census housing stock is almost entirely apartment buildings, and the reported average household is small. This is a concrete apartment-based setting with mapped shared outdoor and public facilities; the summary does not establish unit sizes, views, building amenities or the amount of outdoor space immediately beside any one tower.",
+    "addresses": {
+      "Fort York Library": "190 Fort York Boulevard, Toronto, ON M5V 0E7",
+      "Canoe Landing Community Recreation Centre": "45 FORT YORK BLVD"
+    }
+  },
+  "159": {
+    "name": "Etobicoke City Centre",
+    "parks": [
+      "Michael Power Park",
+      "Six Points Park",
+      "Zorra Park"
+    ],
+    "amenities": [
+      "Islington Community School"
+    ],
+    "practical": "This is neighbourhood 159 in the 158-area model, so older articles or tables using the historical 140 neighbourhoods should not be compared without checking their boundaries. The census records many apartment dwellings and an even split between renting and other tenure. Islington and Kipling are mapped subway stations, but their presence inside this large planning polygon is not a guarantee of a short walk from every address. No physical library point falls inside this boundary in the current library inventory; a nearby branch across the boundary may still be useful. The recreation-site category includes the listed community school and does not establish unrestricted public access.",
+    "everyday": "Michael Power Park, Six Points Park and Zorra Park are among the mapped park spaces in Etobicoke City Centre. The recreation inventory lists Islington Community School at 44 Cordova Avenue, while no physical library point falls inside this particular planning boundary. The 2021 housing profile is predominantly apartment buildings, with a smaller detached-house component. These anchors describe a broad planning area whose homes do not all share the same nearest park or public facility; the school’s inclusion is a recreation-inventory classification rather than evidence that all of its spaces are open to the public.",
+    "addresses": {
+      "Islington Community School": "44 CORDOVA AVE"
+    }
+  }
+}

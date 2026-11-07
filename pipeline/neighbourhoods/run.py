@@ -1,11 +1,14 @@
-"""Official neighbourhood snapshots for Edmonton and Calgary; no review scraping.
+"""Official neighbourhood snapshots; no review scraping.
 
 Run through refresh.py --domains neighbourhoods for staged, validated publication.
-Geometry is kept at the census vintage. All spatial calculations use EPSG:32612.
+Geometry is kept at the census vintage. Edmonton/Calgary use EPSG:32612;
+additional city adapters select an appropriate local projection.
 """
 from __future__ import annotations
 
 import json
+import argparse
+import importlib
 import hashlib
 import math
 import sys
@@ -212,17 +215,39 @@ def finish(city, records, defs, boundary_source, parks, park_source, stations, s
 
 def main():
     from neighbourhoods.check import validate
+    out = PROCESSED / "neighbourhoods"
+    existing = {p.stem for p in out.glob("*.json") if p.name != "sources.json"}
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--cities", nargs="+", default=sorted(existing | {"edmonton", "calgary"}))
+    args = parser.parse_args()
     SOURCES.clear()
-    bundles = [edmonton(), calgary()]
+    bundles = []
+    for city in dict.fromkeys(args.cities):
+        if city in {"edmonton", "calgary"}:
+            bundles.append({"edmonton": edmonton, "calgary": calgary}[city]())
+        else:
+            if not city.replace("-", "").isalnum():
+                raise ValueError(f"Invalid city slug: {city}")
+            bundles.append(importlib.import_module(f"neighbourhoods.{city.replace('-', '_')}").build())
+        if bundles[-1]["placeId"] != city:
+            raise ValueError(f"Adapter returned the wrong geography: {city}")
     for bundle in bundles:
         validate(bundle)
-    out = PROCESSED / "neighbourhoods"
     out.mkdir(parents=True, exist_ok=True)
     for bundle in bundles:
         path = out / f"{bundle['placeId']}.json"
         path.write_text(json.dumps(bundle, ensure_ascii=False, separators=(",", ":"), allow_nan=False) + "\n")
         print(f"{bundle['cityName']}: {len(bundle['neighbourhoods'])} neighbourhoods; {path.stat().st_size // 1024} KiB")
-    (out / "sources.json").write_text(json.dumps(SOURCES, ensure_ascii=False, indent=2) + "\n")
+    # A scoped refresh must retain the provenance of every untouched city.
+    all_sources = {}
+    for path in sorted(out.glob("*.json")):
+        if path.name == "sources.json":
+            continue
+        for source in json.loads(path.read_text())["sources"]:
+            previous = all_sources.get(source["id"])
+            if previous is None or source["retrievedAt"] >= previous["retrievedAt"]:
+                all_sources[source["id"]] = source
+    (out / "sources.json").write_text(json.dumps(list(all_sources.values()), ensure_ascii=False, indent=2) + "\n")
 
 
 if __name__ == "__main__":

@@ -23,11 +23,13 @@ organisation whose data it uses.
   chosen occupation (economic region vs province vs Canada), labour-market
   trend, rents (asking vs CMHC vs paid), MBM basket, climate, language and
   commuting, immigration context and programs, job-search links, sources.
-* **Neighbourhoods** (`/place/:id/neighbourhoods`) — Edmonton and Calgary maps,
-  search and individual profiles with census households, parkland and nearby
-  LRT stations; Edmonton also includes housing mix, historical tenant shelter
-  costs and commuting. Dated official sources and external Hoodmaps/Reddit
-  perspectives remain distinct. See [coverage and source options](docs/NEIGHBOURHOODS.md).
+* **Neighbourhoods** (`/place/:id/neighbourhoods`) — Toronto, Vancouver, Edmonton and Calgary maps,
+  search and individual profiles with census households, housing, parkland,
+  transport and available public amenities. Toronto includes ten sourced local
+  guides; Vancouver includes 22. Census periods and geography differ by city
+  (Vancouver uses 2016); historical tenant shelter costs are not asking rents.
+  Measured facts, editorial interpretation and external Hoodmaps/Reddit
+  perspectives remain distinct. See [coverage and sources](docs/NEIGHBOURHOODS.md).
 * **Compare** (`/compare?compare=a,b,c`) — up to three places under the same
   profession, housing type and budget scenario; dot strips on stable scales and
   a provenance-aware table.
@@ -57,7 +59,7 @@ organisation whose data it uses.
   Search, filters, stable entry links and pagination cover the complete snapshot.
   The [update log](https://dd-next.github.io/to-canada/services/updates) distinguishes
   source checks from content changes; Sources & credits preserves attribution.
-* **EE Calculator** (`/express-entry`) — Express Entry CRS estimate under the
+* **Immigration → EE Calculator** (`/immigration/express-entry`) — Express Entry CRS estimate under the
   November 3, 2026 rules, including the labour market integration factor and
   a 1,270-point maximum. Five approved language tests, accompanying-partner
   factors and a complete points breakdown. Uses published IRCC criteria and
@@ -109,7 +111,7 @@ npm run services:refresh # daily/manual Awesome Canada catalogue check
 npm run services:check   # validate catalogue, audit history and full MIT notice
 npm run lmia:refresh     # weekly/manual official LMIA metadata and changed-file check
 npm run lmia:check       # validate periods, resource provenance, partitions and counts
-npm run neighbourhoods:refresh # manual, staged Edmonton/Calgary refresh
+npm run neighbourhoods:refresh # manual, staged refresh of published neighbourhood cities
 npm run neighbourhoods:check   # validate neighbourhood sources and values
 ```
 

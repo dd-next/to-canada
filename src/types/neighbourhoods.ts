@@ -12,6 +12,7 @@ export interface NeighbourhoodDefinition {
   sourceId: string;
   period: string;
   note: string;
+  geographicScope?: string;
 }
 
 export interface NeighbourhoodStation {
@@ -30,6 +31,11 @@ export interface Neighbourhood {
   parks: string[];
   stations: NeighbourhoodStation[];
   quality?: Record<string, string | null>;
+  amenities?: { name: string; category: string; sourceId: string }[];
+  description?: {
+    verifiedAt: string;
+    sections: { heading: string; text: string; kind: 'measured' | 'editorial'; sourceIds: string[] }[];
+  };
 }
 
 export interface NeighbourhoodBundle {
@@ -39,6 +45,8 @@ export interface NeighbourhoodBundle {
   boundarySourceId: string;
   boundaryNote: string;
   boundaryVintage: string;
+  coverageNote?: string;
+  transportLabel?: string;
   definitions: Record<string, NeighbourhoodDefinition>;
   sources: SourceRecord[];
   neighbourhoods: Neighbourhood[];
