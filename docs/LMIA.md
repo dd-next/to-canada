@@ -100,6 +100,14 @@ successful checks.
 Complete output is staged and validated, then atomically exchanged with the
 previous directory. A failed resource retains its prior valid rows and actual
 source revision/hash/retrieval time. Other resources can update independently.
+The last verified canonical catalogue is retained in `catalogue.json` with its
+original retrieval provenance and package digest. During an API outage the
+pipeline can continue processing that verified release list. It reports cached
+catalogue status, preserves the actual catalogue check date and complete-check
+clock, and warns that newer or revised releases may be missing. A malformed or
+corrupt cache is rejected; secondary discovery lists cannot become verified
+catalogue caches. Recovery replaces the cache only after validation under the
+publication lock.
 An annual-to-quarterly replacement is all-or-nothing when any replacement
 fails, preventing an annual file from overlapping newly loaded quarters. An
 empty, malformed or suspiciously incomplete catalogue cannot remove historical

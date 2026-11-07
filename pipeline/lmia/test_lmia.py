@@ -13,8 +13,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lmia.check import validate_directory
-from lmia.ingest import (COLUMNS, DATASET_ID, UNDEFINED_CP1252_BYTES, decode_csv, parse_file, parse_table, period_from_name,
-                         resource_descriptor, select_resources, validate_partition)
+from lmia.ingest import (CATALOGUE_URL, COLUMNS, DATASET_ID, UNDEFINED_CP1252_BYTES, catalogue_cache,
+                         decode_csv, digest, parse_file, parse_table, period_from_name,
+                         resource_descriptor, select_resources, validate_catalogue_cache, validate_partition)
 from lmia.run import dump, empty_metadata, refresh
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -33,6 +34,12 @@ def raw_resource(rid="r-2026q2", name="2026Q2-Positive LMIA employers NOC 2021",
 
 def package(*resources):
     return {"id": DATASET_ID, "resources": list(resources)}
+
+
+def verified_download(pkg, checked_at=STAMP):
+    raw = json.dumps({"success": True, "result": pkg}).encode()
+    return pkg, {"url": CATALOGUE_URL, "method": "GET", "status": 200, "retrievedAt": checked_at,
+                 "lastCheckedAt": checked_at, "sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)}
 
 
 def write_csv(directory, rows=TABLE, name="data.csv", encoding="utf-8-sig"):
@@ -355,6 +362,130 @@ class RefreshPreservation(unittest.TestCase):
         self.assertIsNone(value["lastSuccessfulCheckAt"])
         self.assertEqual(value["catalogue"]["status"], "unavailable")
         self.assertEqual(value["coverage"]["rowCount"], 3)
+        self.assertFalse((self.stage / "catalogue.json").exists())
+
+    def initial_verified(self, pkg=None, read=None):
+        value = refresh(empty_metadata(), self.previous_dir, self.stage,
+                        lambda: verified_download(pkg or self.pkg), read or self.read, STAMP)
+        dump(self.stage / "metadata.json", value)
+        validate_directory(self.stage)
+        shutil.copytree(self.stage, self.previous_dir, dirs_exist_ok=True)
+        return value
+
+    def test_verified_catalogue_cache_persists_real_source_provenance(self):
+        value = self.initial_verified()
+        cached = validate_catalogue_cache(json.loads((self.stage / "catalogue.json").read_text()))
+        self.assertEqual(cached["package"], self.pkg)
+        self.assertEqual(cached["checkedAt"], STAMP)
+        self.assertEqual(cached["provenance"]["sha256"], verified_download(self.pkg)[1]["sha256"])
+        self.assertEqual(cached["packageSha256"], digest(self.pkg))
+        self.assertEqual(value["catalogue"]["cachePath"], "lmia/catalogue.json")
+        self.assertEqual(value["catalogue"]["status"], "ok")
+
+    def test_cached_catalogue_progresses_missing_resource_without_fresh_complete_check(self):
+        pkg = package(raw_resource(), raw_resource("q3", "2026Q3-Employers NOC 2021"))
+        def first_read(resource):
+            if resource["id"] == "q3": raise OSError("temporary resource outage")
+            return self.read(resource)
+        previous = self.initial_verified(pkg, first_read)
+        self.assertEqual(previous["coverage"]["periodCount"], 1)
+        self.assertIsNone(previous["lastSuccessfulCheckAt"])
+        later = "2026-11-08T18:00:00+00:00"
+        result = refresh(previous, self.previous_dir, self.stage,
+                         lambda: (_ for _ in ()).throw(OSError("catalogue timeout")), self.read, later)
+        self.assertEqual(result["status"], "partial")
+        self.assertEqual(result["coverage"]["periodCount"], 2)
+        self.assertEqual(result["coverage"]["rowCount"], 6)
+        self.assertIsNone(result["lastSuccessfulCheckAt"])
+        self.assertEqual(result["lastSuccessfulUpdateAt"], later)
+        self.assertEqual(result["catalogue"]["checkedAt"], STAMP)
+        self.assertEqual(result["catalogue"]["lastSuccessfulCheckAt"], STAMP)
+        self.assertEqual(result["catalogue"]["lastAttemptAt"], later)
+        self.assertEqual(result["catalogue"]["status"], "cached")
+        self.assertIn("catalogue timeout", result["error"])
+        self.assertIn("current catalogue completeness is unverified", result["coverage"]["notes"][0].lower())
+        self.assertEqual(result["resources"][0]["lastSuccessfulCheckAt"], previous["resources"][0]["lastSuccessfulCheckAt"])
+        dump(self.stage / "metadata.json", result)
+        validate_directory(self.stage)
+
+    def test_cached_no_change_preserves_content_and_successful_check_dates(self):
+        previous = self.initial_verified()
+        cached_bytes = (self.stage / "catalogue.json").read_bytes()
+        partition_bytes = (self.stage / "periods/2026-Q2.json").read_bytes()
+        later = "2026-11-08T18:00:00+00:00"
+        result = refresh(previous, self.previous_dir, self.stage,
+                         lambda: (_ for _ in ()).throw(OSError("HTTP 503")), self.read, later)
+        self.assertEqual(result["status"], "partial")
+        self.assertEqual(result["lastAttemptAt"], later)
+        for key in ("lastSuccessfulCheckAt", "lastSuccessfulUpdateAt", "generatedAt"):
+            self.assertEqual(result[key], previous[key])
+        self.assertEqual(result["resources"][0]["lastSuccessfulCheckAt"], STAMP)
+        self.assertEqual(result["resources"][0]["status"], "retained")
+        self.assertEqual((self.stage / "catalogue.json").read_bytes(), cached_bytes)
+        self.assertEqual((self.stage / "periods/2026-Q2.json").read_bytes(), partition_bytes)
+        self.assertEqual(self.calls, 1)
+        dump(self.stage / "metadata.json", result)
+        validate_directory(self.stage)
+        (self.stage / "catalogue.json").unlink()
+        with self.assertRaisesRegex(ValueError, "cached-catalogue metadata"):
+            validate_directory(self.stage)
+
+    def test_fresh_catalogue_recovery_replaces_cache_without_fake_content_update(self):
+        previous = self.initial_verified()
+        outage = refresh(previous, self.previous_dir, self.stage,
+                         lambda: (_ for _ in ()).throw(OSError("HTTP 503")), self.read, "2026-11-08T18:00:00+00:00")
+        later = "2026-11-09T18:00:00+00:00"
+        recovered = refresh(outage, self.previous_dir, self.stage,
+                            lambda: verified_download(self.pkg, later), self.read, later)
+        self.assertEqual(recovered["status"], "ok")
+        self.assertEqual(recovered["catalogue"]["status"], "ok")
+        self.assertEqual(recovered["catalogue"]["checkedAt"], later)
+        self.assertEqual(recovered["lastSuccessfulCheckAt"], later)
+        self.assertEqual(recovered["lastSuccessfulUpdateAt"], previous["lastSuccessfulUpdateAt"])
+        self.assertNotIn("error", recovered)
+        cached = validate_catalogue_cache(json.loads((self.stage / "catalogue.json").read_text()))
+        self.assertEqual(cached["checkedAt"], later)
+
+    def test_corrupt_or_secondary_catalogues_cannot_bootstrap_verified_cache(self):
+        original = catalogue_cache(*verified_download(self.pkg))
+        variants = []
+        changed = copy.deepcopy(original); changed["packageSha256"] = "0" * 64; variants.append(changed)
+        for change in (lambda p: p.update(id="wrong-dataset"),
+                       lambda p: p.update(_discoverySource="https://example.invalid/discovery.csv"),
+                       lambda p: p["resources"][0].update(url="javascript:unsafe"),
+                       lambda p: p["resources"][0].pop("url"),
+                       lambda p: p.update(resources=[])):
+            value = copy.deepcopy(original); change(value["package"])
+            value["packageSha256"] = digest(value["package"]); variants.append(value)
+        for key, value in (("url", "https://example.invalid/not-official"), ("sha256", ""), ("bytes", 0), ("retrievedAt", "2026-11-07")):
+            changed = copy.deepcopy(original); changed["provenance"][key] = value; variants.append(changed)
+        for value in variants:
+            with self.subTest(value=value):
+                with self.assertRaises(ValueError): validate_catalogue_cache(value)
+        previous = self.initial_verified()
+        dump(self.stage / "catalogue.json", variants[0])
+        result = refresh(previous, self.previous_dir, self.stage,
+                         lambda: (_ for _ in ()).throw(OSError("outage")), self.read, "2026-11-08T18:00:00+00:00")
+        self.assertEqual(result["status"], "failed")
+        self.assertEqual(result["periods"], previous["periods"])
+        self.assertEqual(self.calls, 1)
+        with self.assertRaises(ValueError): validate_directory(self.stage)
+        validate_directory(self.previous_dir)
+
+    def test_unsafe_or_incomplete_fresh_catalogue_cannot_replace_valid_cache(self):
+        previous = self.initial_verified()
+        original = (self.stage / "catalogue.json").read_bytes()
+        unsafe = copy.deepcopy(self.pkg); unsafe["resources"][0]["url"] = "javascript:unsafe"
+        result = refresh(previous, self.previous_dir, self.stage,
+                         lambda: verified_download(unsafe), self.read, "2026-11-08T18:00:00+00:00")
+        self.assertEqual(result["catalogue"]["status"], "cached")
+        self.assertEqual((self.stage / "catalogue.json").read_bytes(), original)
+        incomplete = package(raw_resource("q3", "2026Q3-Employers NOC 2021"))
+        result = refresh(previous, self.previous_dir, self.stage,
+                         lambda: verified_download(incomplete), self.read, "2026-11-09T18:00:00+00:00")
+        self.assertEqual(result["status"], "failed")
+        self.assertEqual(result["periods"], previous["periods"])
+        self.assertEqual((self.stage / "catalogue.json").read_bytes(), original)
 
 
 if __name__ == "__main__": unittest.main()

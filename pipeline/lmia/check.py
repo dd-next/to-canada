@@ -7,15 +7,23 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from lmia.ingest import DATASET_ID, safe_url, validate_partition
+from lmia.ingest import DATASET_ID, safe_url, validate_catalogue_cache, validate_partition
 
 
 def validate_directory(directory: Path):
+    cache = directory / "catalogue.json"
+    cached = None
+    if cache.exists():
+        cached = validate_catalogue_cache(json.loads(cache.read_text()))
     metadata = json.loads((directory / "metadata.json").read_text())
     if metadata.get("schemaVersion") != 1 or metadata.get("dataset", {}).get("id") != DATASET_ID:
         raise ValueError("Invalid LMIA metadata")
     if metadata.get("status") not in ("ok", "partial", "failed"):
         raise ValueError("Invalid LMIA refresh status")
+    if metadata.get("catalogue", {}).get("status") == "cached":
+        catalogue = metadata["catalogue"]
+        if not cached or catalogue.get("checkedAt") != cached["checkedAt"] or catalogue.get("sha256") != cached["packageSha256"]:
+            raise ValueError("LMIA cached-catalogue metadata and verified cache disagree")
     resources = {r["id"]: r for r in metadata["resources"]}
     if len(resources) != len(metadata["resources"]):
         raise ValueError("Duplicate LMIA resource metadata")

@@ -21,7 +21,9 @@ from urllib.parse import urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common.fetch import fetch, meta_for
 from lmia.check import validate_directory
-from lmia.ingest import CATALOGUE_URL, DATASET, PROVINCES, TRANSFORM_VERSION, digest, parse_file, select_resources, validate_partition
+from lmia.ingest import (CATALOGUE_URL, DATASET, PROVINCES, TRANSFORM_VERSION, catalogue_cache,
+                         digest, parse_file, select_resources, validate_catalogue_cache,
+                         validate_official_catalogue, validate_partition)
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / "public/data/lmia"
@@ -71,11 +73,35 @@ def refresh(previous, previous_dir, stage, read_catalogue, read_resource, checke
     result = copy.deepcopy(previous)
     result.update(lastAttemptAt=checked_at, runUrl=os.environ.get("NORTHWARD_RUN_URL"))
     result.pop("error", None)
+    cached_catalogue, catalogue_error, new_cache = False, None, None
+    catalogue_checked_at = checked_at
     try:
-        package = read_catalogue()
-        if package.get("success") is False:
-            raise ValueError("Official catalogue returned unsuccessful response")
-        package = package.get("result", package)
+        try:
+            download = read_catalogue()
+            if isinstance(download, tuple):
+                package, provenance = download
+            else:
+                package, provenance = download, None
+            if package.get("success") is False:
+                raise ValueError("Official catalogue returned unsuccessful response")
+            package = package.get("result", package)
+            if not package.get("_discoverySource"):
+                validate_official_catalogue(package)
+                if provenance is not None:
+                    new_cache = catalogue_cache(package, provenance)
+                    catalogue_checked_at = new_cache["checkedAt"]
+            elif (stage / "catalogue.json").exists():
+                # A secondary discovery list must never displace a verified
+                # canonical catalogue during an outage.
+                raise ValueError(package.get("_catalogueError", "Current official catalogue is unavailable"))
+        except Exception as error:
+            cached_path = stage / "catalogue.json"
+            if not cached_path.exists():
+                raise
+            cached = validate_catalogue_cache(json.loads(cached_path.read_text()))
+            package = cached["package"]
+            catalogue_checked_at = cached["checkedAt"]
+            cached_catalogue, catalogue_error, new_cache = True, str(error), None
         selected, excluded = select_resources(package)
         discovery_only = bool(package.get("_discoverySource"))
         previous_periods = {p["id"]: p for p in previous["periods"]}
@@ -99,6 +125,20 @@ def refresh(previous, previous_dir, stage, read_catalogue, read_resource, checke
     except Exception as error:
         result.update(status="failed", error=str(error))
         return result
+    if new_cache is not None:
+        # Selection and prior-coverage checks above must pass before this
+        # validated canonical response replaces the staged cache.
+        dump(stage / "catalogue.json", new_cache)
+    catalogue_state = {"url": CATALOGUE_URL, "publisherModifiedAt": package.get("metadata_modified"),
+                       "checkedAt": None if discovery_only else catalogue_checked_at,
+                       "lastSuccessfulCheckAt": None if discovery_only else catalogue_checked_at,
+                       "lastAttemptAt": checked_at, "resourceCount": len(package["resources"]), "sha256": digest(package),
+                       "status": "cached" if cached_catalogue else "unavailable" if discovery_only else "ok",
+                       "discoverySource": package.get("_discoverySource"), "discoveryNote": package.get("_discoveryNote")}
+    if (stage / "catalogue.json").exists():
+        catalogue_state["cachePath"] = "lmia/catalogue.json"
+    if cached_catalogue:
+        catalogue_state["error"] = catalogue_error
     prior_resources = {r["id"]: r for r in previous["resources"]}
     resources, periods, errors = [], [], []
     changed = False
@@ -114,8 +154,8 @@ def refresh(previous, previous_dir, stage, read_catalogue, read_resource, checke
             reuse = not force and same_source and prior_resource.get("transformVersion") == TRANSFORM_VERSION and target.exists()
             if reuse:
                 partition = json.loads(target.read_text())
-                source_state = {**prior_resource, "status": "retained" if discovery_only else "ok", "lastAttemptAt": checked_at}
-                if not discovery_only:
+                source_state = {**prior_resource, "status": "retained" if discovery_only or cached_catalogue else "ok", "lastAttemptAt": checked_at}
+                if not discovery_only and not cached_catalogue:
                     source_state["lastSuccessfulCheckAt"] = checked_at
                 source_state.pop("error", None)
             else:
@@ -158,8 +198,10 @@ def refresh(previous, previous_dir, stage, read_catalogue, read_resource, checke
         # Repartitioning an annual release into quarters is all-or-nothing;
         # otherwise a retained annual file could overlap successful quarters.
         retained = copy.deepcopy(previous)
-        retained.update(lastAttemptAt=checked_at, status="partial", errors=errors,
+        retained.update(lastAttemptAt=checked_at, status="partial", errors=errors, catalogue=catalogue_state,
                         error="Replacement reporting-period set was incomplete; previous non-overlapping series retained.")
+        if cached_catalogue:
+            retained["coverage"]["notes"].insert(0, f"Official catalogue check failed; using the last verified catalogue from {catalogue_checked_at}. Current catalogue completeness is unverified.")
         for p in retained["periods"]:
             source = previous_dir / p["indexPath"].removeprefix("lmia/")
             target = stage / p["indexPath"].removeprefix("lmia/")
@@ -169,20 +211,20 @@ def refresh(previous, previous_dir, stage, read_catalogue, read_resource, checke
     if not periods:
         status = "failed"
     else:
-        status = "partial" if errors or discovery_only else "ok"
+        status = "partial" if errors or discovery_only or cached_catalogue else "ok"
     result.update(status=status, resources=resources, periods=periods, excludedResources=excluded,
                   coverage=coverage(periods, selected),
                   facets={"provinces": [{"code": code, "label": label} for code, label in sorted(provinces.items())],
                           "nocVersions": sorted(noc_versions), "streams": sorted(streams)},
-                  catalogue={"url": CATALOGUE_URL, "publisherModifiedAt": package.get("metadata_modified"),
-                             "checkedAt": checked_at, "resourceCount": len(package["resources"]), "sha256": digest(package),
-                             "status": "unavailable" if discovery_only else "ok",
-                             "discoverySource": package.get("_discoverySource"), "discoveryNote": package.get("_discoveryNote")},
+                  catalogue=catalogue_state,
                   errors=errors)
     if discovery_only:
         result["error"] = package.get("_catalogueError", "Official catalogue unavailable; source URLs came from a secondary discovery list. Complete current coverage is unverified.")
         result["coverage"]["notes"].insert(0, "Official catalogue unavailable. Only successfully retrieved official workbooks are included. The other listed periods are discovery-only references, and complete current historical coverage is unverified.")
-    if not errors and not discovery_only:
+    if cached_catalogue:
+        result["error"] = f"Official catalogue check failed: {catalogue_error}. Using the last verified catalogue from {catalogue_checked_at}; current catalogue completeness is unverified."
+        result["coverage"]["notes"].insert(0, f"Official catalogue check failed; using the last verified catalogue from {catalogue_checked_at}. Individual resource downloads can progress, but current catalogue completeness is unverified.")
+    if not errors and not discovery_only and not cached_catalogue:
         result["lastSuccessfulCheckAt"] = checked_at
     if changed:
         result["generatedAt"] = checked_at
@@ -209,8 +251,12 @@ def main():
             def read_catalogue():
                 try:
                     path = fetch(CATALOGUE_URL, max_age_days=0, retries=2, timeout=35)
-                    return json.loads(path.read_text(encoding="utf-8-sig"))
+                    return json.loads(path.read_text(encoding="utf-8-sig")), meta_for(path)
                 except Exception as error:
+                    if (stage / "catalogue.json").exists():
+                        # refresh validates the persisted canonical cache and
+                        # records this failed attempt without refreshing its date.
+                        raise
                     # Discovery fallback can bootstrap genuine official workbooks
                     # during an outage, never replace a previously verified catalogue.
                     if previous.get("periods") and not previous.get("catalogue", {}).get("discoverySource"):

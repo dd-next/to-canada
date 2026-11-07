@@ -13,7 +13,7 @@ import json
 import re
 import unicodedata
 from collections import Counter, defaultdict
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -185,6 +185,59 @@ def select_resources(package):
             excluded.append({**r, "reason": "Overlapping reporting period; excluded to prevent double counting"})
     chosen.sort(key=lambda r: r["period"]["start"])
     return chosen, sorted(excluded, key=lambda r: r["id"])
+
+
+def validate_official_catalogue(package):
+    """Validate a complete canonical package before caching it for later outages."""
+    if not isinstance(package, dict) or package.get("id") != DATASET_ID:
+        raise ValueError("Invalid official LMIA catalogue dataset")
+    if any(key in package for key in ("_discoverySource", "_discoveryNote", "_catalogueError")):
+        raise ValueError("Secondary discovery references cannot become a verified catalogue cache")
+    resources = package.get("resources")
+    if not isinstance(resources, list) or not resources:
+        raise ValueError("Official LMIA catalogue resources are missing or empty")
+    for resource in resources:
+        if not isinstance(resource, dict) or not isinstance(resource.get("id"), str) or not resource["id"]:
+            raise ValueError("Invalid official LMIA catalogue resource identity")
+        if not safe_url(resource.get("url")):
+            raise ValueError("Unsafe or missing URL in official LMIA catalogue resource")
+    select_resources(package)
+    return package
+
+
+def catalogue_cache(package, provenance):
+    """Create a cache only from the verified canonical fetch's real provenance."""
+    checked_at = provenance.get("lastCheckedAt") or provenance.get("retrievedAt")
+    allowed = ("url", "method", "status", "retrievedAt", "lastCheckedAt", "sha256", "bytes", "contentType", "lastModified")
+    value = {"schemaVersion": 1, "sourceUrl": CATALOGUE_URL, "checkedAt": checked_at,
+             "packageSha256": digest(package), "package": package,
+             "provenance": {key: provenance[key] for key in allowed if key in provenance}}
+    validate_catalogue_cache(value)
+    return value
+
+
+def validate_catalogue_cache(value):
+    if not isinstance(value, dict) or value.get("schemaVersion") != 1 or value.get("sourceUrl") != CATALOGUE_URL:
+        raise ValueError("Invalid verified LMIA catalogue cache source")
+    package = validate_official_catalogue(value.get("package"))
+    if value.get("packageSha256") != digest(package):
+        raise ValueError("Verified LMIA catalogue cache digest mismatch")
+    provenance = value.get("provenance")
+    if not isinstance(provenance, dict) or provenance.get("url") != CATALOGUE_URL or provenance.get("method") != "GET" or provenance.get("status") != 200:
+        raise ValueError("Verified LMIA catalogue cache lacks canonical fetch provenance")
+    if not re.fullmatch(r"[a-f0-9]{64}", str(provenance.get("sha256", ""))):
+        raise ValueError("Verified LMIA catalogue cache lacks a raw source hash")
+    if not isinstance(provenance.get("bytes"), int) or isinstance(provenance["bytes"], bool) or provenance["bytes"] <= 0:
+        raise ValueError("Invalid verified LMIA catalogue cache source size")
+    try:
+        checked = datetime.fromisoformat(value["checkedAt"].replace("Z", "+00:00"))
+        retrieved = datetime.fromisoformat(provenance["retrievedAt"].replace("Z", "+00:00"))
+        last_checked = datetime.fromisoformat(provenance.get("lastCheckedAt", provenance["retrievedAt"]).replace("Z", "+00:00"))
+        if checked.utcoffset() is None or retrieved.utcoffset() is None or checked != last_checked or checked < retrieved:
+            raise ValueError("Invalid catalogue verification time")
+    except (KeyError, AttributeError, TypeError, ValueError) as error:
+        raise ValueError("Invalid verified LMIA catalogue cache timestamps") from error
+    return value
 
 
 def number(value):
