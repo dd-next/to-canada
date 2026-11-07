@@ -56,7 +56,7 @@ jobs:
       - name: Validate feed and ingestion regressions
         run: |
           python3 -I pipeline/lmia/check.py
-          python3 -I pipeline/lmia/test_lmia.py
+          python3 -I -m unittest discover -s pipeline/lmia -p 'test_*.py'
       - name: Commit only this feed, reconcile main, and validate the exact publication
         id: commit
         run: |

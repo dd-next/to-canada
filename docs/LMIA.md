@@ -79,7 +79,7 @@ erasing previous releases.
 python3 -I pipeline/lmia/run.py
 python3 -I pipeline/lmia/run.py --force  # re-download known selected resources
 python3 -I pipeline/lmia/check.py
-python3 -I pipeline/lmia/test_lmia.py
+python3 -I -m unittest discover -s pipeline/lmia -p 'test_*.py'
 node scripts/check-lmia.mjs --snapshot
 ```
 
@@ -153,6 +153,39 @@ published partition's content changes.
 - Employer/location keys hash the exact cleaned name, address and publisher
   province label. They support exact-spelling history only. Search normalization
   never proves that different names or locations are one legal entity.
+
+### Audited corrections to retained tuples
+
+When the official download host became unavailable again, two corrections were
+recoverable from source fields already preserved in validated partitions:
+4,820 exact French geography labels and 1,572 shortened 2016 occupation codes
+whose original source audit explicitly declares NOC 2011. The maintenance
+command validates each existing record and location identity before changing
+those fields. It keeps original row order and duplicate observations.
+
+```bash
+python3 -I pipeline/lmia/reprocess.py --check  # stage and validate; do not publish
+python3 -I pipeline/lmia/reprocess.py          # locked, atomic normalization
+```
+
+The applied correction affects 6,335 records across 22 periods; 57 records need
+both changes. All 261,651 records, approval counts, names, addresses, original
+province labels, location identities and resource metadata are preserved.
+Occupation corrections change 1,572 record IDs to the parser's correct ordered
+identity; location-history IDs remain stable. An independent before/after audit
+is under `dev/validation/services-immigration/normalization/`.
+
+Each application writes an immutable `normalization-audits/` record with input
+and output partition hashes, published row indexes, correction samples and
+unchanged source provenance. Snapshot validation checks the audit reference and
+hash; ordinary publication preserves it. Actual content changes advance the
+content timestamp. Source check/attempt dates, errors, coverage gaps and partial
+status remain unchanged. A second run is an exact byte no-op.
+
+This is a narrow migration of preserved fields, without a source re-fetch or a
+full raw-parser replay. The original resource `transformVersion` stays at 1 so
+an ordinary refresh still attempts the current parser when sources recover.
+Unknown editions, unexpected identities and unsupported versions are refused.
 
 ESDC's source notes state that personal names are excluded, employers' names
 can have entry/spelling errors, and approved positions do not equal work

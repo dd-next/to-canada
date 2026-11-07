@@ -45,7 +45,7 @@ jobs:
           npm run services:check
           python3 -I pipeline/services/test_services.py
           npm run lmia:check
-          python3 -I pipeline/lmia/test_lmia.py
+          python3 -I -m unittest discover -s pipeline/lmia -p 'test_*.py'
           npm run check:directories
           python3 -I pipeline/tests/test_standalone_publication.py
       - run: npm run build

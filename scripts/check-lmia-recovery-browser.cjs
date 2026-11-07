@@ -51,6 +51,11 @@ fs.mkdirSync(output, { recursive: true });
     await checkCount(latest.rowCount);
     assert.equal(await page.getByLabel('Reporting period', { exact: true }).inputValue(), latest.id);
     report.checks.push('Latest available period opens with complete counts');
+    if (metadata.catalogue?.status === 'cached') {
+      assert.match(await page.locator('.lmia__coverage').innerText(), /Processing continued from the catalogue verified on/);
+      if (!metadata.lastSuccessfulCheckAt) assert.equal(await page.locator('.lmia__coverage-summary > div').last().locator('dd').innerText(), 'Not recorded');
+      report.checks.push('Cached catalogue date and unsuccessful full-series check remain explicit');
+    }
     await go({ period: 'all' });
     await checkCount(rows.length);
     const positions = rows.reduce((sum, { row }) => sum + (row[10] ?? 0), 0);

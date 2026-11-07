@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-07T20:17:15.573531+00:00",
+  "baselineCommit": "45895e2",
+  "sourceRefetch": false,
+  "totalsPreserved": {
+    "records": 261651,
+    "approvedLmiasUnknown": 132821,
+    "approvedPositionsKnown": 1012937,
+    "approvedLmiasKnown": 160949
+  },
+  "changedFieldCounts": {
+    "3": 4820,
+    "0": 1572,
+    "6": 1572,
+    "7": 1572,
+    "8": 1572
+  },
+  "duplicateObservationsBefore": 16,
+  "duplicateObservationsAfter": 16,
+  "sourceMetadataUnchanged": true,
+  "sourceAuditsUnchanged": true,
+  "catalogueCacheUnchanged": true,
+  "sourceCheckAndAttemptClocksUnchanged": true,
+  "migration": {
+    "id": "published-tuples-geography-noc-width",
+    "version": 1,
+    "appliedAt": "2026-11-07T20:15:25+00:00",
+    "auditPath": "lmia/normalization-audits/published-tuples-geography-noc-width-v1-81aeaaf38b5c3e601d16.json",
+    "auditSha256": "e31871149cc1603274ddd21fa152955aa57602ea9bf6e4937f4964e55624c6af",
+    "changedRows": 6335
+  },
+  "metadataSha256": "7da7205faae8982a452263ec6ec7b1085d578ecc686a05e8fc3ddcf072607795"
+}

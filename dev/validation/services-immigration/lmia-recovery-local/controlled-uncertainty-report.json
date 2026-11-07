@@ -1,0 +1,14 @@
+{
+  "kind": "Controlled browser responses against the production build; never published as source data",
+  "startedAt": "2026-11-07T20:12:04.120Z",
+  "checks": [
+    "Unnamed row retains approvals/source label, is counted separately and has no inferred history action",
+    "Undefined source byte is visible as an explicit escape with its explanation and no mobile overflow",
+    "Crafted unnamed-employer history URL cannot infer an entity",
+    "Unavailable period shows a readable failure and no partial totals",
+    "Unavailable metadata shows the official-source fallback"
+  ],
+  "errors": [],
+  "status": "passed",
+  "finishedAt": "2026-11-07T20:12:08.341Z"
+}
