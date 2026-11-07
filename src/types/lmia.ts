@@ -42,8 +42,9 @@ export interface LmiaMetadata {
   lastSuccessfulCheckAt: string | null;
   lastSuccessfulUpdateAt: string | null;
   status: 'ok' | 'partial' | 'failed';
+  runUrl?: string | null;
   error?: string;
-  catalogue?: { status: string; discoverySource?: string; discoveryNote?: string };
+  catalogue?: { status: string; checkedAt?: string | null; lastSuccessfulCheckAt?: string | null; lastAttemptAt?: string; error?: string; discoverySource?: string; discoveryNote?: string };
   coverage: {
     start: string | null;
     end: string | null;

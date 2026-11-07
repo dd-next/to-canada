@@ -2,10 +2,20 @@ import type { LmiaFilters, LmiaPartition, LmiaPeriod, LmiaRow } from '../../type
 
 export const LMIA_PAGE_SIZE = 30;
 export const UNREPORTED = '__unreported__';
+export const UNMAPPED_GEOGRAPHY = '__unmapped_geography__';
 export const LMIA_QUERY_KEYS = ['q', 'province', 'period', 'occupation', 'nocVersion', 'stream', 'location', 'employerLocation', 'record', 'page'] as const;
 
 export function normalizeLmia(value: string): string {
-  return value.normalize('NFKD').replace(/\p{M}/gu, '').toLocaleLowerCase('en-CA').replace(/\s+/g, ' ').trim();
+  return value.normalize('NFKD').replace(/\p{M}/gu, '').replace(/[\u0081\u008d\u008f\u0090\u009d]/g, ' ').toLocaleLowerCase('en-CA').replace(/\s+/g, ' ').trim();
+}
+
+/** Undefined bytes in legacy publisher text remain explicit, without guessing a character. */
+export function publisherText(value: string): string {
+  return value.replace(/[\u0081\u008d\u008f\u0090\u009d]/g, (character) => `\\x${character.charCodeAt(0).toString(16).toUpperCase()}`);
+}
+
+export function hasPublishedEmployerName(row: Pick<LmiaRow, 'employer'>): boolean {
+  return !!row.employer.trim() && normalizeLmia(row.employer) !== '(blank)';
 }
 
 export function safeSourceUrl(value: string | null | undefined): string | undefined {
@@ -59,14 +69,17 @@ export function prepareLmiaRows(rows: LmiaRow[]): SearchableLmiaRow[] {
 
 const terms = (value: string) => normalizeLmia(value).split(' ').filter(Boolean);
 const matchesField = (actual: string | null, expected: string) => !expected || (expected === UNREPORTED ? !actual : actual === expected);
+const matchesGeography = (row: LmiaRow, expected: string) => expected === UNREPORTED
+  ? !row.province && !row.provinceLabel
+  : expected === UNMAPPED_GEOGRAPHY ? !row.province && !!row.provinceLabel : matchesField(row.province, expected);
 
 /** Pagination is deliberately downstream of filtering and aggregation. */
 export function filterLmiaRows(rows: SearchableLmiaRow[], filters: LmiaFilters): SearchableLmiaRow[] {
   const employer = terms(filters.query), location = terms(filters.location), occupation = terms(filters.occupation);
   return rows.filter((row) => {
-    if (filters.employerLocationId && row.employerLocationId !== filters.employerLocationId) return false;
+    if (filters.employerLocationId && (!hasPublishedEmployerName(row) || row.employerLocationId !== filters.employerLocationId)) return false;
     if (filters.recordId && row.id !== filters.recordId) return false;
-    if (!matchesField(row.province, filters.province) || !matchesField(row.nocVersion, filters.nocVersion) || !matchesField(row.stream, filters.stream)) return false;
+    if (!matchesGeography(row, filters.province) || !matchesField(row.nocVersion, filters.nocVersion) || !matchesField(row.stream, filters.stream)) return false;
     return employer.every((word) => row.searchEmployer.includes(word)) && location.every((word) => row.searchLocation.includes(word)) && occupation.every((word) => row.searchOccupation.includes(word));
   });
 }
@@ -89,6 +102,7 @@ export function periodsOverlap(periods: LmiaPeriod[]): boolean {
 export interface LmiaSummary {
   rows: number;
   locations: number;
+  unnamedRecords: number;
   lmias: { known: number; unknown: number };
   positions: { known: number; unknown: number };
   overlappingPeriods: boolean;
@@ -97,7 +111,8 @@ export interface LmiaSummary {
 
 export function summarizeLmiaRows(rows: LmiaRow[], periods: LmiaPeriod[]): LmiaSummary {
   const matchingPeriodIds = new Set(rows.map((row) => row.periodId));
-  const summary: LmiaSummary = { rows: rows.length, locations: new Set(rows.map((row) => row.employerLocationId)).size, lmias: { known: 0, unknown: 0 }, positions: { known: 0, unknown: 0 }, overlappingPeriods: periodsOverlap(periods.filter((period) => matchingPeriodIds.has(period.id))), nocVersions: [...new Set(rows.map((row) => row.nocVersion ?? 'Not reported'))].sort() };
+  const namedRows = rows.filter(hasPublishedEmployerName);
+  const summary: LmiaSummary = { rows: rows.length, locations: new Set(namedRows.map((row) => row.employerLocationId)).size, unnamedRecords: rows.length - namedRows.length, lmias: { known: 0, unknown: 0 }, positions: { known: 0, unknown: 0 }, overlappingPeriods: periodsOverlap(periods.filter((period) => matchingPeriodIds.has(period.id))), nocVersions: [...new Set(rows.map((row) => row.nocVersion ?? 'Not reported'))].sort() };
   for (const row of rows) {
     if (row.approvedLmias === null) summary.lmias.unknown++; else summary.lmias.known += row.approvedLmias;
     if (row.approvedPositions === null) summary.positions.unknown++; else summary.positions.known += row.approvedPositions;
@@ -111,6 +126,7 @@ export function pageNumber(raw: string | null, rowCount: number): number {
 }
 
 export function employerHistoryHref(row: LmiaRow): string {
+  if (!hasPublishedEmployerName(row)) return recordHref(row);
   return `/immigration/lmia?${new URLSearchParams({ employerLocation: row.employerLocationId, period: 'all' })}`;
 }
 

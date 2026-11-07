@@ -13,13 +13,15 @@ import json
 import re
 import unicodedata
 from collections import Counter, defaultdict
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
 DATASET_ID = "90fed587-1364-4f33-a9ee-208181dc0b97"
 CATALOGUE_URL = f"https://open.canada.ca/data/api/3/action/package_show?id={DATASET_ID}"
-TRANSFORM_VERSION = 1
+# Reprocess cached releases after the French-footer, legacy-byte, unnamed-row
+# and declared-width NOC corrections, without changing source revision metadata.
+TRANSFORM_VERSION = 2
 DATASET = {
     "id": DATASET_ID,
     "title": "Temporary Foreign Worker Program: Positive LMIA Employers List",
@@ -35,9 +37,10 @@ PROVINCES = {
     "NS": ["Nova Scotia", "Nouvelle-Écosse"], "NB": ["New Brunswick", "Nouveau-Brunswick"],
     "QC": ["Quebec", "Québec"], "ON": ["Ontario"], "MB": ["Manitoba"], "SK": ["Saskatchewan"],
     "AB": ["Alberta"], "BC": ["British Columbia", "Colombie-Britannique"],
-    "YT": ["Yukon", "Yukon Territory"], "NT": ["Northwest Territories", "Territoires du Nord-Ouest"],
+    "YT": ["Yukon", "Yukon Territory"], "NT": ["Northwest Territories", "Territoires du Nord-Ouest", "Territoires-du-Nord-Ouest"],
     "NU": ["Nunavut"],
-    "HO": ["Employers carrying on business in Canada with Head Office outside of Canada", "Outside Canada", "Head Office outside of Canada"],
+    "HO": ["Employers carrying on business in Canada with Head Office outside of Canada", "Outside Canada", "Head Office outside of Canada",
+           "À l'extérieur du Canada", "Les employeurs exerçant leurs activités au Canada avec un siège social à l'extérieur du Canada"],
 }
 
 
@@ -184,6 +187,59 @@ def select_resources(package):
     return chosen, sorted(excluded, key=lambda r: r["id"])
 
 
+def validate_official_catalogue(package):
+    """Validate a complete canonical package before caching it for later outages."""
+    if not isinstance(package, dict) or package.get("id") != DATASET_ID:
+        raise ValueError("Invalid official LMIA catalogue dataset")
+    if any(key in package for key in ("_discoverySource", "_discoveryNote", "_catalogueError")):
+        raise ValueError("Secondary discovery references cannot become a verified catalogue cache")
+    resources = package.get("resources")
+    if not isinstance(resources, list) or not resources:
+        raise ValueError("Official LMIA catalogue resources are missing or empty")
+    for resource in resources:
+        if not isinstance(resource, dict) or not isinstance(resource.get("id"), str) or not resource["id"]:
+            raise ValueError("Invalid official LMIA catalogue resource identity")
+        if not safe_url(resource.get("url")):
+            raise ValueError("Unsafe or missing URL in official LMIA catalogue resource")
+    select_resources(package)
+    return package
+
+
+def catalogue_cache(package, provenance):
+    """Create a cache only from the verified canonical fetch's real provenance."""
+    checked_at = provenance.get("lastCheckedAt") or provenance.get("retrievedAt")
+    allowed = ("url", "method", "status", "retrievedAt", "lastCheckedAt", "sha256", "bytes", "contentType", "lastModified")
+    value = {"schemaVersion": 1, "sourceUrl": CATALOGUE_URL, "checkedAt": checked_at,
+             "packageSha256": digest(package), "package": package,
+             "provenance": {key: provenance[key] for key in allowed if key in provenance}}
+    validate_catalogue_cache(value)
+    return value
+
+
+def validate_catalogue_cache(value):
+    if not isinstance(value, dict) or value.get("schemaVersion") != 1 or value.get("sourceUrl") != CATALOGUE_URL:
+        raise ValueError("Invalid verified LMIA catalogue cache source")
+    package = validate_official_catalogue(value.get("package"))
+    if value.get("packageSha256") != digest(package):
+        raise ValueError("Verified LMIA catalogue cache digest mismatch")
+    provenance = value.get("provenance")
+    if not isinstance(provenance, dict) or provenance.get("url") != CATALOGUE_URL or provenance.get("method") != "GET" or provenance.get("status") != 200:
+        raise ValueError("Verified LMIA catalogue cache lacks canonical fetch provenance")
+    if not re.fullmatch(r"[a-f0-9]{64}", str(provenance.get("sha256", ""))):
+        raise ValueError("Verified LMIA catalogue cache lacks a raw source hash")
+    if not isinstance(provenance.get("bytes"), int) or isinstance(provenance["bytes"], bool) or provenance["bytes"] <= 0:
+        raise ValueError("Invalid verified LMIA catalogue cache source size")
+    try:
+        checked = datetime.fromisoformat(value["checkedAt"].replace("Z", "+00:00"))
+        retrieved = datetime.fromisoformat(provenance["retrievedAt"].replace("Z", "+00:00"))
+        last_checked = datetime.fromisoformat(provenance.get("lastCheckedAt", provenance["retrievedAt"]).replace("Z", "+00:00"))
+        if checked.utcoffset() is None or retrieved.utcoffset() is None or checked != last_checked or checked < retrieved:
+            raise ValueError("Invalid catalogue verification time")
+    except (KeyError, AttributeError, TypeError, ValueError) as error:
+        raise ValueError("Invalid verified LMIA catalogue cache timestamps") from error
+    return value
+
+
 def number(value):
     text = re.sub(r"[,\s]", "", clean(value))
     if not re.fullmatch(r"\d+(?:\.0+)?", text):
@@ -208,7 +264,43 @@ def header_columns(row):
     return columns if "employer" in columns and ("approvedPositions" in columns or "requestedPositions" in columns) else None
 
 
-def read_tables(path):
+UNDEFINED_CP1252_BYTES = frozenset((0x81, 0x8D, 0x8F, 0x90, 0x9D))
+
+
+def decode_csv(raw):
+    """Decode text without inventing glyphs for undefined legacy source bytes.
+
+    ESDC's legacy CSVs include bytes not assigned a character in Windows-1252.
+    Keep each as its same-numbered C1 control code point, which is reversible,
+    instead of replacing it, deleting it, or interpreting all CP1252 punctuation
+    as Latin-1. The source audit identifies every affected byte value and count.
+    """
+    if raw.startswith((b"\xff\xfe", b"\xfe\xff")):
+        return raw.decode("utf-16"), {"encoding": "UTF-16", "undefinedBytes": []}
+    try:
+        return raw.decode("utf-8-sig"), {"encoding": "UTF-8", "undefinedBytes": []}
+    except UnicodeDecodeError:
+        text = raw.decode("cp1252", errors="surrogateescape").translate(
+            {0xDC00 + byte: byte for byte in UNDEFINED_CP1252_BYTES})
+        counts = Counter(raw)
+        issues = []
+        for byte in sorted(UNDEFINED_CP1252_BYTES):
+            if not counts[byte]:
+                continue
+            offsets, start = [], 0
+            while len(offsets) < 20:
+                offset = raw.find(bytes((byte,)), start)
+                if offset < 0:
+                    break
+                offsets.append(offset)
+                start = offset + 1
+            issues.append({"hex": f"{byte:02X}", "codePoint": f"U+{byte:04X}",
+                           "count": counts[byte], "firstByteOffsets": offsets,
+                           "offsetsTruncated": counts[byte] > len(offsets)})
+        return text, {"encoding": "Windows-1252", "undefinedBytes": issues}
+
+
+def read_tables(path, *, decoding_audit=None):
     raw = Path(path).read_bytes()
     if len(raw) > 40 * 1024 * 1024:
         raise ValueError("Resource exceeds 40 MiB safety bound")
@@ -225,13 +317,9 @@ def read_tables(path):
         return [(sheet.name, [sheet.row_values(i) for i in range(sheet.nrows)]) for sheet in wb.sheets()]
     if raw[:100].lstrip().lower().startswith((b"<html", b"<!doctype", b"<?xml")):
         raise ValueError("Expected tabular data but received HTML/XML")
-    if raw.startswith((b"\xff\xfe", b"\xfe\xff")):
-        text = raw.decode("utf-16")
-    else:
-        try:
-            text = raw.decode("utf-8-sig")
-        except UnicodeDecodeError:
-            text = raw.decode("cp1252")
+    text, decoding = decode_csv(raw)
+    if decoding_audit is not None:
+        decoding_audit.update(decoding)
     try:
         dialect = csv.Sniffer().sniff(text[:16000], delimiters=",;\t")
     except csv.Error:
@@ -247,7 +335,8 @@ def parse_table(records, resource, sheet="CSV"):
     context = " ".join(clean(v) for row in records[:first + 1] for v in row) + " " + resource["name"]
     version = re.search(r"(?:NOC|CNP)\)?\s*(20\d{2})", context, re.I)
     declared_version = version[1] if version else None
-    notes, aggregates, quarantine, ignored, publisher_counts = [], [], [], Counter(), []
+    notes, aggregates, quarantine, ignored, publisher_counts, unpublished = [], [], [], Counter(), [], []
+    padding_count, padding_samples = 0, []
     section = None
     for record in records[:first]:
         cells = [clean(v) for v in record if clean(v)]
@@ -261,7 +350,8 @@ def parse_table(records, resource, sheet="CSV"):
         if not nonempty:
             ignored["blank"] += 1
             continue
-        if re.match(r"^notes?\s*:?$", nonempty[0], re.I) or (len(nonempty) == 1 and re.match(r"^\d+[.)]\s", nonempty[0])):
+        if len(nonempty) == 1 and (re.fullmatch(r"(?:notes?|remarques?)\s*:?", folded(nonempty[0]))
+                                  or re.match(r"^\d+[.)]\s", nonempty[0])):
             in_notes = True
         if in_notes:
             notes.append(" ".join(nonempty))
@@ -295,13 +385,13 @@ def parse_table(records, resource, sheet="CSV"):
             state.pop("address", None)
             state.pop("incorporation", None)
         if employer:
-            if employer != state.get("employer"):
+            if employer != state.get("employer") or folded(employer) == "(blank)":
                 state.pop("address", None)
                 state.pop("incorporation", None)
             state["employer"] = employer
         else:
             employer = state.get("employer", "")
-        if not employer or folded(employer) == "(blank)":
+        if not employer:
             quarantine.append({"sheet": sheet, "line": line, "reason": "Missing employer identity", "cells": cells})
             state.pop("employer", None)
             continue
@@ -314,9 +404,20 @@ def parse_table(records, resource, sheet="CSV"):
         province_label = val("provinceLabel") if "provinceLabel" in columns else section
         province = PROVINCE_LOOKUP.get(folded(province_label))
         occupation = current.get("occupation", "")
-        occupation_match = re.match(r"^(\d{4,5})\s*[-–—]\s*(.*)", occupation)
+        declared_width = 5 if declared_version == "2021" else 4 if declared_version in ("2006", "2011", "2016") else None
+        occupation_match = re.match(r"^(\d{1,5})\s*[-–—]\s*(.*)", occupation)
+        if occupation_match and len(occupation_match[1]) < 4 and declared_width is None:
+            # A short number without a declared edition might be an occupation
+            # group or free text. Its width cannot be inferred from the title.
+            occupation_match = None
         code = occupation_match[1] if occupation_match else None
         title = occupation_match[2] or None if occupation_match else (occupation or None)
+        if code and declared_width and len(code) < declared_width and "occupationCode" not in columns:
+            code = code.zfill(declared_width)
+            padding_count += 1
+            if len(padding_samples) < 20:
+                padding_samples.append({"line": line, "sourceOccupation": occupation,
+                                        "normalizedCode": code, "declaredNocVersion": declared_version})
         if "occupationCode" in columns:
             supplied = current.get("occupationCode", "")
             if supplied and folded(supplied) != "(blank)":
@@ -338,12 +439,17 @@ def parse_table(records, resource, sheet="CSV"):
                 noc = declared_version
             else:
                 noc = "Unspecified (4-digit)"
-        location_id = "loc-" + digest([employer, val("address"), province_label])[:20]
         identity = [employer, val("address"), province_label, val("stream"), code, title, noc, val("incorporation")]
         ihash = digest(identity)[:20]
         occurrence = seen[ihash]
         seen[ihash] += 1
-        row = {"id": f"{resource['id']}:{ihash}:{occurrence}", "employer": employer,
+        row_id = f"{resource['id']}:{ihash}:{occurrence}"
+        employer_unpublished = folded(employer) == "(blank)"
+        # A publisher's explicit unnamed-employer marker is source data, not an
+        # identity. Even the same address cannot join it to another unnamed row.
+        location_identity = ["unpublished-employer", row_id] if employer_unpublished else [employer, val("address"), province_label]
+        location_id = "loc-" + digest(location_identity)[:20]
+        row = {"id": row_id, "employer": employer,
                "address": val("address"), "province": province, "provinceLabel": province_label,
                "stream": val("stream"), "occupationCode": code, "occupationTitle": title, "nocVersion": noc,
                "approvedLmias": number(current.get("approvedLmias")), "approvedPositions": number(current.get("approvedPositions")),
@@ -353,6 +459,12 @@ def parse_table(records, resource, sheet="CSV"):
                                      "requestedLmias": number(current.get("requestedLmias")),
                                      "requestedPositions": number(current.get("requestedPositions"))})
         output.append([row.get(k) for k in COLUMNS])
+        if employer_unpublished:
+            unpublished.append({"rowId": row_id, "line": line, "sourceLabel": employer})
+            # A following empty grouped cell cannot inherit an unnamed identity
+            # or an address from this record.
+            for field in ("employer", "address", "incorporation"):
+                state.pop(field, None)
     if not output:
         raise ValueError("Employer release has no valid rows")
     # Unrecognised rows cannot silently turn a changed layout into a partial release.
@@ -360,14 +472,22 @@ def parse_table(records, resource, sheet="CSV"):
         raise ValueError(f"{len(quarantine)} unrecognised data rows; first: {quarantine[:2]}")
     if publisher_counts:
         notes.append("Publisher columns labelled requested LMIAs/positions are preserved in this audit, not relabelled as approved counts.")
+    if unpublished:
+        notes.append("Publisher rows labelled '(blank)' have no published employer name. They are retained with isolated per-record location identities and cannot establish employer history.")
+    if padding_count:
+        notes.append("Leading zeroes in combined occupation codes are restored only to the width of the explicitly declared NOC edition. The occupation-code-padding audit preserves counts and sample source values and lines.")
     return output, {"notes": notes, "aggregates": aggregates, "ignoredRows": dict(ignored), "quarantine": quarantine,
                     "publisherRequestedCounts": publisher_counts,
+                    "unpublishedEmployerRowCount": len(unpublished), "unpublishedEmployerRows": unpublished,
+                    "occupationCodePadding": {"count": padding_count, "samples": padding_samples,
+                                              "samplesTruncated": padding_count > len(padding_samples)},
                     "declaredNocVersion": declared_version, "sheet": sheet, "inputRows": len(records)}
 
 
 def parse_file(path, resource):
     candidates = []
-    for name, records in read_tables(path):
+    decoding = {}
+    for name, records in read_tables(path, decoding_audit=decoding):
         if any(header_columns(row) for row in records[:40]):
             candidates.append((name, records))
     if not candidates:
@@ -378,6 +498,10 @@ def parse_file(path, resource):
         raise ValueError(f"Multiple employer tables require review: {[c[0] for c in candidates]}")
     name, records = candidates[0]
     rows, audit = parse_table(records, resource, name)
+    if decoding:
+        audit["decoding"] = decoding
+        if decoding["undefinedBytes"]:
+            audit["notes"].append("Undefined Windows-1252 source bytes are preserved as corresponding C1 code points, not guessed characters or replacements. The decoding audit records byte values, counts and sample offsets; raw source hashes retain the original bytes.")
     if len(rows) > 200000:
         raise ValueError("Employer release exceeds 200,000-row safety bound")
     return {"schemaVersion": 1, "resourceId": resource["id"], "periodId": resource["period"]["id"], "columns": COLUMNS, "rows": rows}, audit
