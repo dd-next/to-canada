@@ -47,6 +47,7 @@ export interface NeighbourhoodBundle {
   boundaryVintage: string;
   coverageNote?: string;
   transportLabel?: string;
+  areaType?: 'neighbourhood' | 'census tract' | 'comparison area';
   definitions: Record<string, NeighbourhoodDefinition>;
   sources: SourceRecord[];
   neighbourhoods: Neighbourhood[];

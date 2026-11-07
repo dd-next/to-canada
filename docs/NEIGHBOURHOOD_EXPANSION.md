@@ -19,7 +19,9 @@ The existing schema is in `src/types/neighbourhoods.ts`. Extensions:
 - `NeighbourhoodDefinition.geographicScope?: string`: explicit geography or
   spatial attribution method; `note` must still explain the measure.
 - `NeighbourhoodBundle.coverageNote?: string`: gaps and municipal scope.
-- `NeighbourhoodBundle.transportLabel?: string`: e.g. Rail stations, Bus stops.
+- `NeighbourhoodBundle.areaType?: 'neighbourhood' | 'census tract' | 'comparison area'`:
+  names the displayed geographic unit in search and profile headings.
+- `NeighbourhoodBundle.transportLabel?: string`: e.g. Rail stations, TTC subway stations.
 - `Neighbourhood.amenities?: {name: string, category: string, sourceId: string}[]`.
 - `Neighbourhood.description?: {verifiedAt: string, sections:
   {heading: string, text: string, kind: 'measured' | 'editorial', sourceIds: string[]}[]}`.
