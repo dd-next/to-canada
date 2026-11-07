@@ -37,13 +37,18 @@ manifest = json.loads((D / "manifest.json").read_text())
 check(manifest.get("provisional") is False, "snapshot is not provisional")
 
 from neighbourhoods.check import validate as validate_neighbourhoods
-for city in ("edmonton", "calgary"):
-    neighbourhood_path = D / "neighbourhoods" / f"{city}.json"
+neighbourhood_files = {path.relative_to(D).as_posix() for path in (D / "neighbourhoods").glob("*.json")}
+listed_neighbourhoods = {file for file in manifest["files"] if file.startswith("neighbourhoods/")}
+check(neighbourhood_files == listed_neighbourhoods, "neighbourhood bundles match the manifest")
+for file in sorted(neighbourhood_files | listed_neighbourhoods):
+    neighbourhood_path = D / file
+    city = neighbourhood_path.stem
     if neighbourhood_path.exists():
         try:
             bundle = json.loads(neighbourhood_path.read_text())
             validate_neighbourhoods(bundle)
             check(bundle["placeId"] == city, f"{city} neighbourhood geography matches its file")
+            check(city in places, f"{city} neighbourhood city exists")
             check(f"neighbourhoods/{city}.json" in manifest["files"], f"{city} neighbourhoods included in manifest")
         except (AssertionError, KeyError, ValueError) as error:
             fails.append(f"{city} neighbourhood validation failed: {error}")

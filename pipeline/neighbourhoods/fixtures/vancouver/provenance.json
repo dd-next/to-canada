@@ -1,0 +1,6 @@
+{
+  "sourceUrl": "https://webtransfer.vancouver.ca/opendata/csv/CensusLocalAreaProfiles2016.csv",
+  "retrievedAt": "2026-11-07T18:16:37+00:00",
+  "originalSha256": "ef1f019375b282847a458f3dcba54d5e720cb1e0c5bab7e2d477dc952d5952e4",
+  "fixtureTransformation": "Selected 28 labelled variable rows and all geography columns, retaining CSD/CMA columns so tests verify their exclusion. Original CSV decoded as CP1252; fixture encoded UTF-8."
+}

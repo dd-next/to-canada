@@ -1,0 +1,247 @@
+{
+  "sourceUrl": "https://ckan0.cf.opendata.inter.prod-toronto.ca/dataset/6e19a90f-971c-46b3-852c-0c48c436d1fc/resource/19d4a806-7385-4889-acf2-256f1e079060/download/nbhd_2021_census_profile_full_158model.xlsx",
+  "retrievedAt": "2026-11-07T18:15:54+00:00",
+  "sheet": "hd2021_census_profile",
+  "rows": {
+    "1": [
+      "Neighbourhood Name",
+      "West Humber-Clairville",
+      "Thorncliffe Park",
+      "High Park-Swansea",
+      "Annex",
+      "Harbourfront-CityPlace"
+    ],
+    "2": [
+      "Neighbourhood Number",
+      1,
+      55,
+      87,
+      95,
+      165
+    ],
+    "4": [
+      "Total - Age groups of the population - 25% sample data",
+      33300,
+      20400,
+      22665,
+      29300,
+      28135
+    ],
+    "5": [
+      "  0 to 14 years",
+      4295,
+      4975,
+      3385,
+      2435,
+      2065
+    ],
+    "37": [
+      "Total - Persons in private households - 25% sample data",
+      33300,
+      20400,
+      22665,
+      29300,
+      28135
+    ],
+    "217": [
+      "Total - Occupied private dwellings by structural type of dwelling - 25% sample data",
+      10700,
+      7065,
+      10450,
+      16325,
+      16555
+    ],
+    "218": [
+      "  Single-detached house",
+      3930,
+      0,
+      2640,
+      615,
+      0
+    ],
+    "222": [
+      "  Apartment in a building that has fewer than five storeys",
+      695,
+      370,
+      3045,
+      4535,
+      15
+    ],
+    "223": [
+      "  Apartment in a building that has five or more storeys",
+      2510,
+      6600,
+      3415,
+      8895,
+      16470
+    ],
+    "226": [
+      "Total - Private households by household size - 25% sample data",
+      10700,
+      7065,
+      10450,
+      16330,
+      16550
+    ],
+    "227": [
+      "  1 person",
+      1990,
+      1995,
+      3895,
+      8065,
+      8100
+    ],
+    "232": [
+      "Average household size",
+      3.1,
+      2.9,
+      2.2,
+      1.8,
+      1.7
+    ],
+    "300": [
+      "Total - Private households by tenure - 25% sample data",
+      10700,
+      7065,
+      10450,
+      16325,
+      16550
+    ],
+    "302": [
+      "  Renter",
+      3705,
+      6070,
+      4210,
+      9655,
+      9930
+    ],
+    "380": [
+      "  Median monthly shelter costs for rented dwellings ($)",
+      1320,
+      1370,
+      1530,
+      1740,
+      2020
+    ],
+    "2221": [
+      "  All occupations",
+      17780,
+      8205,
+      13265,
+      18295,
+      21440
+    ],
+    "2222": [
+      "    0 Legislative and senior management occupations",
+      65,
+      55,
+      415,
+      690,
+      410
+    ],
+    "2223": [
+      "    1 Business, finance and administration occupations",
+      2915,
+      1395,
+      2875,
+      4555,
+      6815
+    ],
+    "2224": [
+      "    2 Natural and applied sciences and related occupations",
+      1445,
+      895,
+      1525,
+      1865,
+      4440
+    ],
+    "2225": [
+      "    3 Health occupations",
+      1210,
+      450,
+      825,
+      1115,
+      950
+    ],
+    "2226": [
+      "    4 Occupations in education, law and social, community and government services",
+      1425,
+      845,
+      2420,
+      3465,
+      2130
+    ],
+    "2227": [
+      "    5 Occupations in art, culture, recreation and sport",
+      260,
+      255,
+      1455,
+      2080,
+      1500
+    ],
+    "2228": [
+      "    6 Sales and service occupations",
+      4805,
+      2385,
+      2535,
+      3435,
+      4035
+    ],
+    "2229": [
+      "    7 Trades, transport and equipment operators and related occupations",
+      3685,
+      1570,
+      1030,
+      850,
+      1005
+    ],
+    "2230": [
+      "    8 Natural resources, agriculture and related production occupations",
+      105,
+      35,
+      80,
+      105,
+      30
+    ],
+    "2231": [
+      "    9 Occupations in manufacturing and utilities",
+      1870,
+      315,
+      105,
+      125,
+      125
+    ],
+    "2576": [
+      "Total - Main mode of commuting for the employed labour force aged 15 years and over with a usual place of work or no fixed workplace address - 25% sample data",
+      12920,
+      4960,
+      5495,
+      7175,
+      6790
+    ],
+    "2580": [
+      "  Public transit",
+      3110,
+      1465,
+      1420,
+      1760,
+      1635
+    ],
+    "2581": [
+      "  Walked",
+      255,
+      405,
+      480,
+      1715,
+      1980
+    ],
+    "2582": [
+      "  Bicycle",
+      80,
+      40,
+      275,
+      615,
+      235
+    ]
+  }
+}
