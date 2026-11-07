@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common.contract import FLAGS, PROCESSED, ROOT, UNITS, load_places  # noqa: E402
 
 OUT = Path(os.environ.get("NORTHWARD_APP_DATA", ROOT / "public" / "data"))
-DOMAINS = ["geo", "housing", "work", "immigration", "cost"]
+DOMAINS = ["geo", "housing", "work", "immigration", "cost", "neighbourhoods"]
 PRODUCT = "Northward"
 
 
@@ -217,6 +217,16 @@ def build() -> int:
     dump("insights/index.json", index, files)
 
     # ---------------------------------------------------------------- domain extras
+    from neighbourhoods.check import validate as validate_neighbourhoods
+    for city in ("edmonton", "calgary"):
+        neighbourhoods = read("neighbourhoods", city)
+        if neighbourhoods is not None:
+            validate_neighbourhoods(neighbourhoods)
+            if neighbourhoods["placeId"] != city or city not in place_ids:
+                errors.append(f"Invalid neighbourhood city: {city}")
+            if any(s["id"] not in sources for s in neighbourhoods["sources"]):
+                errors.append(f"Unregistered neighbourhood source: {city}")
+            dump(f"neighbourhoods/{city}.json", neighbourhoods, files, records=len(neighbourhoods["neighbourhoods"]))
     occ = read("work", "occupations")
     if occ is not None:
         dump("occupations.json", occ, files)
