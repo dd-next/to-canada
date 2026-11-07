@@ -5,6 +5,6 @@ export function hasProfile(n: Neighbourhood) {
 }
 
 export function mapLayers(bundle: NeighbourhoodBundle) {
-  const preferred = ['parkland', 'livingAlone', 'renters', 'apartments', 'rail', 'parks', 'busStops', 'tramStops', 'population'];
+  const preferred = ['parkland', 'livingAlone', 'renters', 'apartments', 'lowRiseApartments', 'rail', 'parks', 'busStops', 'tramStops', 'population'];
   return preferred.filter(key => bundle.definitions[key] && bundle.neighbourhoods.some(n => n.metrics[key]?.value != null));
 }

@@ -24,11 +24,11 @@ organisation whose data it uses.
   trend, rents (asking vs CMHC vs paid), MBM basket, climate, language and
   commuting, immigration context and programs, job-search links, sources.
 * **Neighbourhoods** (`/place/:id/neighbourhoods`) — Toronto, Vancouver, Halifax,
-  Victoria, Edmonton and Calgary maps,
+  Victoria, Winnipeg, Québec City, Edmonton and Calgary maps,
   search and individual profiles with census households, housing, parkland,
   transport and available public amenities. Toronto includes ten sourced local
   guides; Vancouver includes 22. Census periods and geography differ by city
-  (Vancouver uses 2016; Halifax uses census tracts; Victoria includes combined
+  (Vancouver and Winnipeg use 2016; Halifax uses census tracts; Victoria includes combined
   comparison areas); historical tenant shelter costs are not asking rents.
   Measured facts, editorial interpretation and external Hoodmaps/Reddit
   perspectives remain distinct. See [coverage and sources](docs/NEIGHBOURHOODS.md).

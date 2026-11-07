@@ -10,6 +10,8 @@ from the published manifest, and each city bundle is loaded on demand.
 | Vancouver | 22 | 2016 custom profile on permanent local planning areas, including the publisher's Musqueam 2 coverage; Stanley Park outside the polygons | Park polygons, dated rail/facility inventories, resident occupation groups and 22 local guides, ten with additional official area-guide context |
 | Halifax | 99 | Inhabited 2021 census tracts wholly within Halifax Regional Municipality; explicitly statistical areas, not named neighbourhoods | Census households/housing/commuting, parks, bus-stop proximity, libraries and public facilities |
 | Victoria | 10 | 2021 custom census; eight neighbourhoods plus two combined comparison areas that retain both sides of the 2022 transfers | Census housing/households, parks, bus-stop proximity and public facilities; combined-area medians stay missing |
+| Winnipeg | 194 | Exact 2016 census/neighbourhood-boundary pair; private-household population | Parks/open space, scheduled bus-stop proximity, libraries and recreation facilities; ambiguous zero shelter costs stay unavailable |
+| Québec City | 35 | 2021 census in the City's October 2026 quartier profiles; June 2020 geography with documented later name changes | Published housing shares, school/dog/linear park locations, RTC bus stops and mapped facilities; low-rise apartments are a separate measure |
 | Edmonton | 403 | 2021 census-day boundaries | Census households/housing/commuting, parks, LRT |
 | Calgary | 313 | 2021 census on the publisher's 2022 communities; private-household population | Census households, park sites, LRT |
 
@@ -23,6 +25,10 @@ selection, excluded reserve jurisdictions and omitted uninhabited tract. The
 [Victoria evidence](neighbourhoods/victoria.md) documents the boundary transfers,
 safe unions and unaggregable medians. Neither includes the wider metropolitan
 area or invents precise historical vertices from a current polygon release.
+See [Winnipeg evidence](neighbourhoods/winnipeg.md) and
+[Québec City evidence](neighbourhoods/quebec-city.md) for the third release.
+The [additional-city inventory](neighbourhoods/further-cities.md) records the
+remaining candidates and their specific source or geographic alignment gaps.
 
 Local guides retain a verification date and citations for each section.
 Measured resident statistics are separate from editorial interpretation and

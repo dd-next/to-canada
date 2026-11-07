@@ -1,0 +1,46 @@
+[
+  {
+    "year": "2016",
+    "topic_id": "9",
+    "topic": "Housing",
+    "subject_id": "37",
+    "subject": "Shelter-cost-to-income\u00a0ratio",
+    "description_id": "1763",
+    "description": "Total - Tenant households in non-farm, non-reserve private dwellings",
+    "sex": "All",
+    "boundary_code": "NE158158",
+    "boundary_type": "Neighbourhood",
+    "boundary_name": "Royalwood",
+    "value": "25"
+  },
+  {
+    "year": "2016",
+    "topic_id": "9",
+    "topic": "Housing",
+    "subject_id": "37",
+    "subject": "Shelter-cost-to-income\u00a0ratio",
+    "parent_description_id": "1763",
+    "description_id": "1766",
+    "description": "Median monthly shelter costs for rented dwellings ($)",
+    "sex": "All",
+    "boundary_code": "NE158158",
+    "boundary_type": "Neighbourhood",
+    "boundary_name": "Royalwood",
+    "value": "0"
+  },
+  {
+    "year": "2016",
+    "topic_id": "9",
+    "topic": "Housing",
+    "subject_id": "37",
+    "subject": "Shelter-cost-to-income\u00a0ratio",
+    "parent_description_id": "1763",
+    "description_id": "1767",
+    "description": "Average monthly shelter costs for rented dwellings ($)",
+    "sex": "All",
+    "boundary_code": "NE158158",
+    "boundary_type": "Neighbourhood",
+    "boundary_name": "Royalwood",
+    "value": "2126"
+  }
+]
