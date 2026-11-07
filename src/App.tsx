@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { CoreProvider, useCoreState } from './data/core';
 import Layout from './components/Layout';
+import HubLayout, { LegacyRedirect } from './components/HubLayout';
 import ExplorePage from './pages/ExplorePage';
 
 const PlacePage = lazy(() => import('./pages/PlacePage'));
@@ -13,6 +14,10 @@ const InsightPage = lazy(() => import('./pages/InsightPage'));
 const ImmigrationPage = lazy(() => import('./pages/ImmigrationPage'));
 const ExpressEntryPage = lazy(() => import('./pages/ExpressEntryPage'));
 const UpdatesPage = lazy(() => import('./pages/UpdatesPage'));
+const LmiaPage = lazy(() => import('./pages/LmiaPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const ServicesUpdatesPage = lazy(() => import('./pages/ServicesUpdatesPage'));
+const ServicesSourcesPage = lazy(() => import('./pages/ServicesSourcesPage'));
 const SourcesPage = lazy(() => import('./pages/SourcesPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
@@ -44,9 +49,20 @@ export default function App() {
               <Route path="/budget" element={<BudgetPage />} />
               <Route path="/insights" element={<InsightsPage />} />
               <Route path="/insights/:insightId" element={<InsightPage />} />
-              <Route path="/immigration" element={<ImmigrationPage />} />
-              <Route path="/express-entry" element={<ExpressEntryPage />} />
-              <Route path="/updates" element={<UpdatesPage />} />
+              <Route path="/immigration" element={<HubLayout section="immigration" />}>
+                <Route index element={<LegacyRedirect to="/immigration/programs" />} />
+                <Route path="programs" element={<ImmigrationPage />} />
+                <Route path="express-entry" element={<ExpressEntryPage />} />
+                <Route path="updates" element={<UpdatesPage />} />
+                <Route path="lmia" element={<LmiaPage />} />
+              </Route>
+              <Route path="/express-entry" element={<LegacyRedirect to="/immigration/express-entry" />} />
+              <Route path="/updates" element={<LegacyRedirect to="/immigration/updates" />} />
+              <Route path="/services" element={<HubLayout section="services" />}>
+                <Route index element={<ServicesPage />} />
+                <Route path="updates" element={<ServicesUpdatesPage />} />
+                <Route path="sources" element={<ServicesSourcesPage />} />
+              </Route>
               <Route path="/sources" element={<SourcesPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="*" element={<NotFoundPage />} />

@@ -91,7 +91,7 @@ export function CrsResults({ assessment }: { assessment: CrsAssessment }) {
       <div className="crs__result-footer">
         <p>This is a ranking estimate, not an eligibility decision or an invitation to apply. IRCC’s Express Entry system determines your official score.</p>
         <a href={CRS_RULES.calculator} target="_blank" rel="noreferrer">Check with the official calculator</a>
-        <Link to="/updates?type=express_entry">View Express Entry rounds →</Link>
+        <Link to="/immigration/updates?type=express_entry">View Express Entry rounds →</Link>
       </div>
     </aside>
   );

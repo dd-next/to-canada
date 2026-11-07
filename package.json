@@ -18,7 +18,12 @@
     "neighbourhoods:refresh": "python3 -I pipeline/refresh.py --domains neighbourhoods",
     "neighbourhoods:check": "python3 -I pipeline/neighbourhoods/check.py",
     "updates:refresh": "python3 -I pipeline/updates/run.py",
-    "updates:check": "python3 -I pipeline/updates/check.py"
+    "updates:check": "python3 -I pipeline/updates/check.py",
+    "services:refresh": "python3 -I pipeline/services/run.py",
+    "services:check": "python3 -I pipeline/services/check.py",
+    "lmia:refresh": "python3 -I pipeline/lmia/run.py",
+    "lmia:check": "python3 -I pipeline/lmia/check.py",
+    "check:directories": "node scripts/check-services.mjs && node scripts/check-lmia.mjs"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

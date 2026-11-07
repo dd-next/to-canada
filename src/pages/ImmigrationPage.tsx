@@ -1,8 +1,10 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useCore } from '../data/core';
 import { useJSON } from '../data/useJSON';
 import type { ProgramRecord } from '../types/contract';
 import { jurisdictionName, ProgramCard, CATEGORY_LABEL } from '../components/immigration/ProgramCard';
+import { PROGRAM_GROUPS, programGroupHref, programInGroup } from '../components/immigration/programGroups';
 import { Button, ButtonLink } from '../components/ui/Button';
 import { Combobox, type ComboOption } from '../components/ui/Combobox';
 import { EmptyState } from '../components/ui/EmptyState';
@@ -15,6 +17,7 @@ import { plural } from '../lib/format';
 import { useUrlState } from '../lib/state';
 import type { Place } from '../types/contract';
 import '../styles/immigration.css';
+import '../styles/services.css';
 
 const SUPPORT: ProgramRecord['category'][] = ['pre_arrival', 'settlement_support'];
 const JURIS_ORDER = ['federal', ...PROVINCE_ORDER];
@@ -25,6 +28,7 @@ function matchesText(p: ProgramRecord, q: string) {
 }
 
 export default function ImmigrationPage() {
+  const location = useLocation();
   const core = useCore();
   const programs = useJSON<ProgramRecord[]>('programs.json');
   const [params, update] = useUrlState();
@@ -33,6 +37,18 @@ export default function ImmigrationPage() {
   const job = params.get('job') ?? '';
   const programId = params.get('program') ?? '';
   const q = params.get('q') ?? '';
+  const group = PROGRAM_GROUPS.some((item) => item.id === params.get('group')) ? params.get('group') ?? '' : '';
+  const groupNav = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const nav = groupNav.current;
+    const active = nav?.querySelector<HTMLElement>('[aria-current="page"]');
+    if (!nav || !active) return;
+    const viewport = nav.getBoundingClientRect();
+    const link = active.getBoundingClientRect();
+    // Reveal the current group within this horizontal strip without moving the page.
+    if (link.left < viewport.left) nav.scrollLeft += link.left - viewport.left - 8;
+    else if (link.right > viewport.right) nav.scrollLeft += link.right - viewport.right + 8;
+  }, [group, location.search]);
   const placeId = params.get('place') && core.placeById.has(params.get('place')!) ? params.get('place')! : '';
   const place = placeId ? core.placeById.get(placeId)! : null;
 
@@ -43,6 +59,7 @@ export default function ImmigrationPage() {
   const filtered = useMemo(
     () =>
       all.filter((p) => {
+        if (!programInGroup(p, group)) return false;
         if (programId && p.id !== programId) return false;
         if (juris && p.jurisdiction !== juris) return false;
         if (category && p.category !== category) return false;
@@ -54,13 +71,14 @@ export default function ImmigrationPage() {
         }
         return !nq || matchesText(p, nq);
       }),
-    [all, juris, category, job, place, nq, programId],
+    [all, juris, category, job, place, nq, programId, group],
   );
 
   const support = filtered.filter((p) => SUPPORT.includes(p.category));
   const main = filtered.filter((p) => !SUPPORT.includes(p.category));
-  const groups = JURIS_ORDER.map((j) => ({ j, items: main.filter((p) => p.jurisdiction === j) })).filter((g) => g.items.length);
-  const filtering = !!(juris || category || job || placeId || q || programId);
+  const jurisdictions = [...JURIS_ORDER, ...new Set(all.map((p) => p.jurisdiction).filter((j) => !JURIS_ORDER.includes(j)))];
+  const groups = jurisdictions.map((j) => ({ j, items: main.filter((p) => p.jurisdiction === j) })).filter((g) => g.items.length);
+  const filtering = !!(juris || category || job || placeId || q || programId || group);
 
   const jurisOptions = useMemo(() => {
     const present = new Set(all.map((p) => p.jurisdiction as string));
@@ -90,6 +108,11 @@ export default function ImmigrationPage() {
 
   return (
     <div className="page imm">
+      <nav ref={groupNav} className="program-groups" aria-label="Program groups">
+        <ul>{PROGRAM_GROUPS.map((item) => (
+          <li key={item.id}><Link to={programGroupHref(location.search, item.id, location.hash)} aria-current={group === item.id ? 'page' : undefined}>{item.label}</Link></li>
+        ))}</ul>
+      </nav>
       <SectionHeader
         level={1}
         kicker="Immigration"
@@ -99,7 +122,7 @@ export default function ImmigrationPage() {
 
       <section className="imm__calculator" aria-labelledby="imm-calculator-title">
         <div><h2 id="imm-calculator-title" className="h3">Your Express Entry score</h2><p>Calculate CRS points under the November 2026 rules, with a full breakdown.</p></div>
-        <ButtonLink to="/express-entry" iconRight="arrowRight">Open EE calculator</ButtonLink>
+        <ButtonLink to="/immigration/express-entry" iconRight="arrowRight">Open EE calculator</ButtonLink>
       </section>
 
       <aside className="imm__disclaimer" aria-label="Important">
@@ -149,7 +172,7 @@ export default function ImmigrationPage() {
       <div className="imm__count" role="status">
         {programs.loading ? 'Loading programs…' : `${plural(filtered.length, 'program')}${filtering ? ' match your filters' : ''}`}
         {filtering && (
-            <Button variant="ghost" size="sm" onClick={() => update({ jurisdiction: null, category: null, job: null, place: null, q: null, program: null })}>
+            <Button variant="ghost" size="sm" onClick={() => update({ jurisdiction: null, category: null, job: null, place: null, q: null, program: null, group: null })}>
             Clear filters
           </Button>
         )}
@@ -169,7 +192,7 @@ export default function ImmigrationPage() {
         </EmptyState>
       )}
       {programs.data && all.length > 0 && filtered.length === 0 && (
-        <EmptyState title="No programs match" action={<Button onClick={() => update({ jurisdiction: null, category: null, job: null, place: null, q: null, program: null })}>Clear filters</Button>}>
+        <EmptyState title="No programs match" action={<Button onClick={() => update({ jurisdiction: null, category: null, job: null, place: null, q: null, program: null, group: null })}>Clear filters</Button>}>
           <p>Try fewer filters or a broader word.</p>
         </EmptyState>
       )}
