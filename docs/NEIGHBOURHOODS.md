@@ -1,11 +1,36 @@
 # Neighbourhoods: sources and implementation
 
-The initial release covers Edmonton and Calgary. Open a city profile →
-**Neighbourhoods**, or `/place/edmonton/neighbourhoods` and
-`/place/calgary/neighbourhoods`. Each mapped area has its own shareable profile.
-This is municipal coverage, not coverage of every municipality in either CMA.
+Open a city profile → **Neighbourhoods**, or `/place/:city/neighbourhoods`.
+Every covered area has a shareable direct link. City selectors are generated
+from the published manifest, and each city bundle is loaded on demand.
 
-## What is collected
+| City | Areas | Census and geography | Added local context |
+| --- | ---: | --- | --- |
+| Toronto | 158 | 2021 custom profile, 25% sample/private households; 158 social planning areas introduced April 2021 | City park polygons, TTC subway/bus/streetcar locations, libraries, recreation sites, ten local guides |
+| Vancouver | 22 | 2016 custom profile on permanent local planning areas, including the publisher's Musqueam 2 coverage; Stanley Park outside the polygons | Park polygons, dated rail/facility inventories, resident occupation groups and 22 local guides, ten with additional official area-guide context |
+| Edmonton | 403 | 2021 census-day boundaries | Census households/housing/commuting, parks, LRT |
+| Calgary | 313 | 2021 census on the publisher's 2022 communities; private-household population | Census households, park sites, LRT |
+
+These are not metropolitan statistics. Vancouver's local areas are also not
+identical to Vancouver census subdivision coverage. Each profile explains its
+scope and vintages. See the [Toronto evidence](neighbourhoods/toronto.md) and
+[Vancouver evidence](neighbourhoods/vancouver.md) for exact source URLs, geography
+joins, representative source values, current coverage gaps and refresh commands.
+
+Local guides retain a verification date and citations for each section.
+Measured resident statistics are separate from editorial interpretation and
+external residents' opinions. Occupation claims concern residents in the census,
+not the location of offices. No crime, safety or demographic reputation score is
+produced. Neighbourhood asking rents are unavailable; census shelter costs remain
+historical tenant costs across dwelling sizes.
+
+New-city calculations use their own suitable projected CRS on original
+polygons, with geometry simplified only for display. Counts, percentages and
+missing values retain their source definitions. Unknown coverage is not zero.
+For example, Vancouver's rail inventory is dated 2023 and its facility inventories
+are older; they must not be interpreted as a current service guarantee.
+
+## Initial Alberta coverage
 
 The snapshot contains **403 Edmonton neighbourhoods** on the official 2021
 census-day boundaries and **313 Calgary community records** on the boundaries
@@ -84,8 +109,8 @@ Rights and coverage must be verified for each intended integration.
 2. Add official GTFS schedules for bus/LRT service and commute destinations.
 3. Expand Calgary housing facts from its full community profiles with a
    validated parser and preserved geography/period definitions.
-4. Add editorial summaries supported by several dated, linked local sources,
-   and later first-party resident reviews with moderation. Keep opinions
+4. Extend the sourced local guides to more areas, and consider first-party
+   resident reviews with moderation. Keep opinions
    distinct from measurements and expose disagreements and sparse coverage.
 5. Add current neighbourhood asking rents only after obtaining a permitted
    listing feed, deduplicating listings and imposing a disclosed minimum sample.
@@ -95,7 +120,7 @@ Rights and coverage must be verified for each intended integration.
 ```bash
 NORTHWARD_REFRESH=1 npm run neighbourhoods:refresh
 npm run neighbourhoods:check
-python3 -I pipeline/neighbourhoods/test_neighbourhoods.py
+python3 -I -m unittest discover -s pipeline/neighbourhoods -p 'test_*.py'
 npm run build
 ```
 
@@ -108,6 +133,11 @@ as refreshing the new park/transit data.
 
 `pipeline/neighbourhoods/run.py` writes `data/processed/neighbourhoods/`.
 `pipeline/build_app_data.py` includes the bundles in the manifest and merges
-their source records. `npm run data:build` preserves/rebuilds the bundles.
+their source records. It discovers every city bundle and validates it against
+the application's place IDs; adding a city no longer requires a hardcoded build
+allowlist. `npm run data:build` preserves/rebuilds the bundles. For a scoped
+development refresh, use `python3 -I pipeline/neighbourhoods/run.py --cities toronto
+vancouver`, then build and check; production refreshes should use the staged
+`neighbourhoods:refresh` workflow above. A scoped run preserves untouched sources.
 The browser fetches a bundle only when a neighbourhood route is opened.
 `scripts/spa-fallback.mjs` emits a static entry page for each known profile.

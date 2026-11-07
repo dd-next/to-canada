@@ -23,11 +23,13 @@ organisation whose data it uses.
   chosen occupation (economic region vs province vs Canada), labour-market
   trend, rents (asking vs CMHC vs paid), MBM basket, climate, language and
   commuting, immigration context and programs, job-search links, sources.
-* **Neighbourhoods** (`/place/:id/neighbourhoods`) — Edmonton and Calgary maps,
-  search and individual profiles with census households, parkland and nearby
-  LRT stations; Edmonton also includes housing mix, historical tenant shelter
-  costs and commuting. Dated official sources and external Hoodmaps/Reddit
-  perspectives remain distinct. See [coverage and source options](docs/NEIGHBOURHOODS.md).
+* **Neighbourhoods** (`/place/:id/neighbourhoods`) — Toronto, Vancouver, Edmonton and Calgary maps,
+  search and individual profiles with census households, housing, parkland,
+  transport and available public amenities. Toronto includes ten sourced local
+  guides; Vancouver includes 22. Census periods and geography differ by city
+  (Vancouver uses 2016); historical tenant shelter costs are not asking rents.
+  Measured facts, editorial interpretation and external Hoodmaps/Reddit
+  perspectives remain distinct. See [coverage and sources](docs/NEIGHBOURHOODS.md).
 * **Compare** (`/compare?compare=a,b,c`) — up to three places under the same
   profession, housing type and budget scenario; dot strips on stable scales and
   a provenance-aware table.
@@ -94,7 +96,7 @@ node scripts/check-model.mjs   # budget and pay arithmetic checks
 npm run check:crs      # offline IRCC reference cases, score bands and CRS limits
 npm run updates:refresh # lightweight IRCC-only refresh, independent of statistical downloads
 npm run updates:check   # validate the saved IRCC feed
-npm run neighbourhoods:refresh # manual, staged Edmonton/Calgary refresh
+npm run neighbourhoods:refresh # manual, staged refresh of published neighbourhood cities
 npm run neighbourhoods:check   # validate neighbourhood sources and values
 ```
 

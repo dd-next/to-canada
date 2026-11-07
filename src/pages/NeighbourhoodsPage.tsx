@@ -104,9 +104,9 @@ function Metric({ bundle, n, metric }: { bundle: NeighbourhoodBundle; n: Neighbo
 }
 
 function Detail({ bundle, n }: { bundle: NeighbourhoodBundle; n: Neighbourhood }) {
-  const housingMetrics = ['apartments', 'renters', 'tenantShelter', 'transit', 'walkCycle'];
+  const housingMetrics = ['apartments', 'detached', 'duplex', 'renters', 'tenantShelter', 'transit', 'walkCycle'];
   const hasHousing = housingMetrics.some(key => bundle.definitions[key]);
-  const outsideMetrics = ['parkland', 'parks', 'rail', 'busStops', 'libraries', 'communityCentres'];
+  const outsideMetrics = ['parkland', 'parks', 'rail', 'busStops', 'tramStops', 'libraries', 'communityCentres'];
   const overviewLayer = mapLayers(bundle)[0] ?? Object.keys(bundle.definitions)[0];
   return <>
     <header className="hood-hero hood-hero--detail"><div><p className="kicker">Neighbourhood / {bundle.cityName}</p><h1>{n.name}</h1><p className="dek">A closer look at life here, from the households to the public spaces around them.</p></div><ButtonLink to={pathFor(bundle.placeId)} variant="outline">All neighbourhoods</ButtonLink></header>
@@ -128,7 +128,7 @@ function Detail({ bundle, n }: { bundle: NeighbourhoodBundle; n: Neighbourhood }
       <div className="hood-place-lists">
         <div><h3>Park sites in this area</h3>{n.parks.length ? <ul>{n.parks.slice(0, 10).map((park, i) => <li key={`${park}-${i}`}>{park}</li>)}</ul> : <p>{n.metrics.parks?.value == null ? 'Park coverage is not available in this snapshot.' : 'No park sites matched by this source’s method.'}</p>}{n.parks.length > 10 && <details><summary>{n.parks.length - 10} more park sites</summary><ul>{n.parks.slice(10).map((park, i) => <li key={`${park}-${i}`}>{park}</li>)}</ul></details>}</div>
         <div><h3>{bundle.transportLabel ?? 'Rail stations in or near the area'}</h3>{n.stations.length ? <ul>{n.stations.map(s => <li key={s.id}>{s.name}<small>{s.distanceToBoundaryM === 0 ? 'Inside the boundary' : `${s.distanceToBoundaryM} m from the boundary`}</small></li>)}</ul> : <p>{n.metrics.rail?.value == null ? 'Rail station coverage is not available in this snapshot.' : 'No listed rail stations inside or within 800 m of the boundary.'}</p>}<p className="hood-note">Check service and the route from your exact address. Proximity to an area’s boundary is not a walking distance from your home.</p></div>
-        {!!n.amenities?.length && <div><h3>Local amenities</h3><ul>{n.amenities.map((amenity, i) => <li key={`${amenity.sourceId}-${i}`}>{amenity.name}<small>{amenity.category} · <a href={`#source-${amenity.sourceId}`}>Source</a></small></li>)}</ul></div>}
+        {!!n.amenities?.length && <div><h3>Local amenities</h3><ul>{n.amenities.map((amenity, i) => <li key={`${amenity.sourceId}-${i}`}>{amenity.name}<small>{amenity.category.replace(/([a-z])([A-Z])/g, '$1 $2')} · <a href={`#source-${amenity.sourceId}`}>Source</a></small></li>)}</ul></div>}
       </div>
     </ProfileSection>
     <Perspectives bundle={bundle} n={n} />
