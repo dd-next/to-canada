@@ -12,6 +12,7 @@ import { useScrollReset } from '../components/insights/scroll';
 import { ClimateSection, hasClimateData } from '../components/place/ClimateSection';
 import { CostSection } from '../components/place/CostSection';
 import { HousingSection } from '../components/place/HousingSection';
+import { NeighbourhoodSection } from '../components/place/NeighbourhoodSection';
 import { ImmigrationSection, hasImmigrationData, programsFor } from '../components/place/ImmigrationSection';
 import { KeyFacts } from '../components/place/KeyFacts';
 import { PeopleSection, hasPeopleData } from '../components/place/PeopleSection';
@@ -102,12 +103,14 @@ function Profile({ place }: { place: Place }) {
 
   const showClimate = hasClimateData(core, series);
   const showPeople = hasPeopleData(core);
+  const showNeighbourhoods = !!core.manifest.files[`neighbourhoods/${place.id}.json`];
 
   const sections: NavItem[] = [
     { id: 'facts', label: 'Key facts' },
     { id: 'tradeoffs', label: 'Tradeoffs' },
     { id: 'work', label: 'Work' },
     { id: 'housing', label: 'Housing' },
+    ...(showNeighbourhoods ? [{ id: 'neighbourhoods', label: 'Neighbourhoods' }] : []),
     { id: 'cost', label: 'Cost' },
     ...(showClimate ? [{ id: 'climate', label: 'Climate' }] : []),
     ...(showPeople ? [{ id: 'people', label: 'People' }] : []),
@@ -184,6 +187,10 @@ function Profile({ place }: { place: Place }) {
         <ProfileSection id="housing" num={num('housing')} title="Housing" dek="What a new lease costs, what sitting tenants pay, vacancy and how rent prices are moving.">
           <HousingSection core={core} place={place} series={series} seriesLoading={seriesState.loading} />
         </ProfileSection>
+
+        {showNeighbourhoods && <ProfileSection id="neighbourhoods" num={num('neighbourhoods')} title="Neighbourhoods" dek="Zoom in from the city to the places you might call home.">
+          <NeighbourhoodSection placeId={place.id} name={place.name} />
+        </ProfileSection>}
 
         <ProfileSection id="cost" num={num('cost')} title="Everyday costs" dek="Statistics Canada’s basic-basket benchmark for the area, scaled to your household.">
           <CostSection core={core} place={place} />

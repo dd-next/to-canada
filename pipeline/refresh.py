@@ -82,7 +82,7 @@ def promote(staged_processed: Path, staged_app: Path, processed: Path, app: Path
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--domains', nargs='+', choices=ORDER, default=ORDER)
+    parser.add_argument('--domains', nargs='+', choices=ORDER + ['neighbourhoods'], default=ORDER)
     parser.add_argument('--full-geo', action='store_true')
     args = parser.parse_args()
     raw = ROOT / 'data' / 'raw'
