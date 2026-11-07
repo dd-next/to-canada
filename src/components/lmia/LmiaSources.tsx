@@ -20,8 +20,8 @@ export default function LmiaSources({ metadata }: { metadata: LmiaMetadata }) {
         <div><dt>Last successful check</dt><dd>{lmiaDate(metadata.lastSuccessfulCheckAt)}</dd></div>
       </dl>
       {metadata.status !== 'ok' && <p className="lmia__warning" role="status"><strong>{metadata.status === 'partial' ? 'The complete historical series has not been verified.' : 'The latest source check did not complete.'}</strong> {metadata.status === 'partial' ? 'The dates and counts shown describe only the available releases. ' : 'Available records remain browseable. '}{failed.length > 0 ? `${failed.length} resource${failed.length === 1 ? '' : 's'} could not be refreshed. ` : ''}Retained records may be out of date; inspect the coverage notes below.</p>}
-      <Disclosure summary="Coverage, source releases and reuse terms" defaultOpen={metadata.status !== 'ok' || coverage.rowCount === 0}>
-        <p className="lmia__source-intro">Published by {metadata.dataset.publisher}. Canonical releases are selected to avoid counting language copies, alternate formats and overlapping reporting periods twice. Historical reporting layouts and occupation classifications vary.</p>
+      <Disclosure summary="Coverage, source releases and reuse terms" defaultOpen={coverage.rowCount === 0}>
+        <p className="lmia__source-intro">Published by {metadata.dataset.publisher}. Available releases are selected to avoid counting language copies, alternate formats and overlapping reporting periods twice. Historical reporting layouts and occupation classifications vary.</p>
         <p className="lmia__source-links"><a className="link" href={safeSourceUrl(metadata.dataset.url)} target="_blank" rel="noopener noreferrer">Official dataset and releases</a><a className="link" href={safeSourceUrl(metadata.dataset.licence.url)} target="_blank" rel="noopener noreferrer">{metadata.dataset.licence.name}</a></p>
         <dl className="lmia__dates">
           <div><dt>Last attempt</dt><dd>{lmiaDate(metadata.lastAttemptAt)}</dd></div>

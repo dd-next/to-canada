@@ -5,6 +5,7 @@
 const { chromium } = require('playwright');
 const fs = require('node:fs');
 const path = require('node:path');
+const { X509Certificate, createHash } = require('node:crypto');
 const assert = require('node:assert/strict');
 const base = process.env.NORTHWARD_BROWSER_BASE || 'http://127.0.0.1:4173';
 const output = process.env.NORTHWARD_BROWSER_EVIDENCE || 'dev/validation/services-immigration';
@@ -15,13 +16,22 @@ const lmia=JSON.parse(fs.readFileSync('public/data/lmia/metadata.json','utf8'));
 const programs=JSON.parse(fs.readFileSync('public/data/programs.json','utf8'));
 const routes=['/services','/services/updates','/services/sources','/immigration/programs','/immigration/express-entry','/immigration/updates','/immigration/lmia'];
 (async()=>{
- const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH || '/usr/bin/chromium',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+ const browserArgs=['--no-sandbox','--disable-dev-shm-usage'];
+ if(process.env.NORTHWARD_BROWSER_CA_CERT){
+  // Managed HTTPS inspection: scope trust to this supplied certificate and this process.
+  // No global certificate-error bypass or persistent trust-store modification.
+  const certificate=new X509Certificate(fs.readFileSync(process.env.NORTHWARD_BROWSER_CA_CERT));
+  const pin=createHash('sha256').update(certificate.publicKey.export({type:'spki',format:'der'})).digest('base64');
+  browserArgs.push('--ignore-certificate-errors-spki-list='+pin);
+  report.browserTrust='Process-scoped public-key pin for the explicitly supplied environment CA';
+ }
+ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH || '/usr/bin/chromium',headless:true,args:browserArgs});
  try {
  const context=await browser.newContext();
  const page=await context.newPage();
  page.on('pageerror',e=>report.errors.push(e.message));
  const requests=[];page.on('request',r=>requests.push(r.url()));
- const go=async route=>{const response=await page.goto(base+route);assert.equal(response.status(),200,route);await page.locator('h1').first().waitFor();await page.waitForLoadState('networkidle');};
+ const go=async route=>{const response=await page.goto(base+route);assert.equal(response.status(),200,route);await page.locator('h1').first().waitFor({state:'attached'});await page.waitForLoadState('networkidle');};
  for(const width of [1440,768,375]){
   await page.setViewportSize({width,height:960});
   for(const route of routes){
@@ -66,7 +76,25 @@ const routes=['/services','/services/updates','/services/sources','/immigration/
  await page.getByRole('navigation',{name:'Immigration sections',exact:true}).getByRole('link',{name:'EE Calculator',exact:true}).click();assert.equal(await page.getByLabel('How old are you?',{exact:true}).inputValue(),'');
  await page.getByLabel('How old are you?',{exact:true}).selectOption('30');await page.reload();await page.getByLabel('How old are you?',{exact:true}).waitFor();assert.equal(await page.getByLabel('How old are you?',{exact:true}).inputValue(),'');
  report.checks.push('Full Services counts/category/search/reset/page history/stable detail; initial import drilldown; old links preserve query/hash; CRS answers never persist or enter URLs');
- if(lmia.periods.length){await go('/immigration/lmia?period=all');await page.locator('.lmia__results-heading').waitFor();assert.match(await page.locator('.lmia__results-heading').innerText(),new RegExp(lmia.coverage.rowCount.toLocaleString('en-CA')));await page.getByLabel('Employer search',{exact:true}).fill('zzzznoresultzzzz');await page.getByText('No records match these filters',{exact:true}).waitFor();report.checks.push('LMIA all-period exact row count and empty filter');}
+ if(lmia.periods.length){await go('/immigration/lmia?period=all');await page.locator('.lmia__results-heading').waitFor();assert.match(await page.locator('.lmia__results-heading').innerText(),new RegExp(lmia.coverage.rowCount.toLocaleString('en-CA')));const tuples=lmia.periods.flatMap(period=>JSON.parse(fs.readFileSync('public/data/'+period.indexPath,'utf8')).rows);
+ await page.getByLabel('Province / territory',{exact:true}).selectOption('ON');
+ await page.getByLabel('Program stream',{exact:true}).selectOption('High Wage');
+ const expected=tuples.filter(row=>row[3]==='ON'&&row[5]==='High Wage').length;
+ await page.waitForFunction(count=>document.querySelector('.lmia__results-heading')?.textContent.includes(count),expected.toLocaleString('en-CA'));
+ await page.getByRole('link',{name:'History for this name and address',exact:true}).first().click();
+ await page.locator('.lmia__history').waitFor();
+ const identity=new URL(page.url()).searchParams.get('employerLocation');
+ const historyRows=tuples.filter(row=>row[11]===identity).length;
+ await page.waitForFunction(count=>document.querySelector('.lmia__results-heading')?.textContent.includes(count),historyRows.toLocaleString('en-CA'));
+ await page.getByRole('link',{name:'Link to record',exact:true}).first().click();
+ await page.waitForFunction(()=>document.querySelectorAll('.lmia-record').length===1);
+ await page.setViewportSize({width:375,height:960});
+ await page.locator('.lmia-record').scrollIntoViewIfNeeded();
+ await page.screenshot({path:path.join(output,'lmia-record-375.png')});report.screenshots.push('lmia-record-375.png');
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1),false);
+ report.checks.push('LMIA province/stream intersection, exact-name/address history, stable single-record link and mobile record layout');
+ await go('/immigration/lmia?period=all');await page.locator('.lmia__results-heading').waitFor();
+ await page.getByLabel('Employer search',{exact:true}).fill('zzzznoresultzzzz');await page.getByText('No records match these filters',{exact:true}).waitFor();report.checks.push('LMIA all-period exact row count and empty filter');}
  for(const route of ['/','/compare?compare=toronto,vancouver','/budget?place=toronto','/insights','/place/toronto','/place/edmonton/neighbourhoods','/place/calgary/neighbourhoods','/place/toronto/neighbourhoods','/place/vancouver/neighbourhoods']){await go(route);report.checks.push(`${route}: existing page loads`);}
  await page.setViewportSize({width:375,height:812});await go('/services');await page.getByRole('button',{name:'Menu',exact:true}).click();assert.equal(await page.getByRole('navigation',{name:'Primary (mobile)',exact:true}).getByRole('link',{name:'Services',exact:true}).getAttribute('aria-current'),'page');await page.keyboard.press('Escape');assert.equal(await page.getByRole('button',{name:'Menu',exact:true}).getAttribute('aria-expanded'),'false');
  await page.keyboard.press('Tab');const focused=await page.evaluate(()=>document.activeElement.tagName);assert.notEqual(focused,'BODY');report.checks.push('Mobile menu current page, Escape and keyboard focus');
