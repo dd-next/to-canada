@@ -23,14 +23,21 @@ fs.mkdirSync(output, { recursive: true });
   page.setDefaultTimeout(60000);
   page.on('pageerror', error => report.errors.push(error.message));
   const go = async params => {
-    const response = await page.goto(base + '/immigration/lmia' + (params ? '?' + new URLSearchParams(params) : ''));
-    assert.equal(response.status(), 200);
+    const url = base + '/immigration/lmia' + (params ? '?' + new URLSearchParams(params) : '');
+    if (page.url().startsWith(base + '/immigration/lmia')) {
+      // Exercise URL state within the app while reusing its downloaded partitions.
+      await page.evaluate(next => { history.pushState(null, '', next); dispatchEvent(new PopStateEvent('popstate')); }, url);
+    } else {
+      const response = await page.goto(url);
+      assert.equal(response.status(), 200);
+    }
     await page.locator('.lmia__results-heading').waitFor();
   };
   const checkCount = async expected => {
     await page.waitForFunction(value => document.querySelector('.lmia__results-heading')?.textContent.trim().startsWith(value + ' matching record'), number(expected));
   };
   const screenshot = async name => {
+    await page.locator('.lmia-record').first().scrollIntoViewIfNeeded();
     await page.screenshot({ path: path.join(output, name) });
     report.screenshots.push(name);
   };
