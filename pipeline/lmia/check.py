@@ -1,6 +1,7 @@
 """Validate every committed LMIA partition and its coverage accounting."""
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 from datetime import date
@@ -24,6 +25,32 @@ def validate_directory(directory: Path):
         catalogue = metadata["catalogue"]
         if not cached or catalogue.get("checkedAt") != cached["checkedAt"] or catalogue.get("sha256") != cached["packageSha256"]:
             raise ValueError("LMIA cached-catalogue metadata and verified cache disagree")
+    migrations = metadata.get("normalizationMigrations", [])
+    if not isinstance(migrations, list):
+        raise ValueError("Invalid LMIA normalization history")
+    for migration in migrations:
+        if not isinstance(migration, dict):
+            raise ValueError("Invalid LMIA normalization audit reference")
+        published_path = migration.get("auditPath")
+        if not isinstance(published_path, str) or not published_path.startswith("lmia/normalization-audits/"):
+            raise ValueError("Invalid LMIA normalization audit path")
+        relative = Path(published_path.removeprefix("lmia/"))
+        path = directory / relative
+        if relative.is_absolute() or ".." in relative.parts or not path.resolve().is_relative_to(directory.resolve()):
+            raise ValueError("Unsafe LMIA normalization audit path")
+        if not path.is_file():
+            raise ValueError("Missing LMIA normalization audit")
+        raw = path.read_bytes()
+        if hashlib.sha256(raw).hexdigest() != migration.get("auditSha256"):
+            raise ValueError("LMIA normalization audit hash mismatch")
+        audit = json.loads(raw)
+        if (not isinstance(audit, dict) or audit.get("schemaVersion") != 1
+                or audit.get("migrationId") != migration.get("id")
+                or audit.get("migrationVersion") != migration.get("version")
+                or audit.get("appliedAt") != migration.get("appliedAt")
+                or not isinstance(audit.get("summary"), dict)
+                or audit["summary"].get("changedRows") != migration.get("changedRows")):
+            raise ValueError("LMIA normalization audit and history disagree")
     resources = {r["id"]: r for r in metadata["resources"]}
     if len(resources) != len(metadata["resources"]):
         raise ValueError("Duplicate LMIA resource metadata")
