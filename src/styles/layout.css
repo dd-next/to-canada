@@ -258,8 +258,8 @@
   display: none;
 }
 
-/* Six primary links need the menu before they can overlap the action trays. */
-@media (max-width: 1099.98px) {
+/* Switch to the menu before the seven primary links overlap the action trays. */
+@media (max-width: 1279.98px) {
   .nav--primary {
     display: none;
   }

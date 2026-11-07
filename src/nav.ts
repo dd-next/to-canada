@@ -5,6 +5,7 @@ export const NAV = [
   { to: '/budget', label: 'Budget' },
   { to: '/insights', label: 'Insights' },
   { to: '/immigration', label: 'Immigration' },
+  { to: '/express-entry', label: 'EE Calculator' },
   { to: '/updates', label: 'IRCC Updates' },
 ] as const;
 
