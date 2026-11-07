@@ -13,7 +13,7 @@ import '../styles/place.css';
 import '../styles/neighbourhoods.css';
 
 const pathFor = (city: string, id?: string) => `/place/${city}/neighbourhoods${id ? `/${id}` : ''}`;
-const normalise = (s: string) => s.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
+const normalise = (s: string) => s.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().replace(/[\p{Punctuation}\p{Symbol}]+/gu, ' ').replace(/\s+/g, ' ').trim();
 
 function format(value: number | null | undefined, definition: NeighbourhoodDefinition) {
   if (value == null) return 'Not available';
@@ -106,8 +106,9 @@ function Metric({ bundle, n, metric }: { bundle: NeighbourhoodBundle; n: Neighbo
 
 function Detail({ bundle, n }: { bundle: NeighbourhoodBundle; n: Neighbourhood }) {
   const areaType = bundle.areaType ?? 'neighbourhood';
-  const housingMetrics = ['apartments', 'detached', 'duplex', 'renters', 'tenantShelter', 'transit', 'walkCycle'];
+  const housingMetrics = ['occupiedDwellings', 'apartments', 'lowRiseApartments', 'detached', 'duplex', 'renters', 'majorRepairs', 'tenantShelter', 'transit', 'walkCycle'];
   const hasHousing = housingMetrics.some(key => bundle.definitions[key]);
+  const profileSource = bundle.sources.find(source => source.id === n.quality?.profileSourceId);
   const outsideMetrics = ['parkland', 'parks', 'rail', 'busStops', 'tramStops', 'libraries', 'communityCentres'];
   const overviewLayer = mapLayers(bundle)[0] ?? Object.keys(bundle.definitions)[0];
   return <>
@@ -122,7 +123,7 @@ function Detail({ bundle, n }: { bundle: NeighbourhoodBundle; n: Neighbourhood }
     <ProfileSection id="homes" num="01" title="Homes & getting around" dek={hasHousing ? 'A historical picture of the housing mix and journeys to work.' : 'More detail in the city’s community profile.'}>
       {hasHousing ? <div className="hood-metrics">{housingMetrics.map(metric => <Metric key={metric} bundle={bundle} n={n} metric={metric} />)}</div>
         : <p className="hood-note">Housing and commuting statistics have not been collected at this geography in this release. Check the official community profiles below.</p>}
-      <div className="hood-actions"><ButtonAnchor href={bundle.links.profiles} variant="outline">Official area profiles</ButtonAnchor><ButtonLink to={`/place/${bundle.placeId}#housing`}>Metropolitan housing context</ButtonLink></div>
+      <div className="hood-actions"><ButtonAnchor href={profileSource?.url ?? bundle.links.profiles} variant="outline">{profileSource ? 'Official area profile' : 'Official area profiles'}</ButtonAnchor><ButtonLink to={`/place/${bundle.placeId}#housing`}>Metropolitan housing context</ButtonLink></div>
       <p className="hood-note">Current asking rents are not available at neighbourhood level here. Metropolitan rent figures describe a wider area.</p>
     </ProfileSection>
     <ProfileSection id="outside" num="02" title="Outside your front door" dek="Public spaces, transport and amenities from the available local data.">

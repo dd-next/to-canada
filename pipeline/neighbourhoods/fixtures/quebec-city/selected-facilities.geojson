@@ -1,0 +1,1474 @@
+{
+  "type": "FeatureCollection",
+  "source": {
+    "url": "https://www.donneesquebec.ca/recherche/dataset/daa10606-5fdd-4c9b-b5ef-235081690b6e/resource/8902c982-bbb6-4e84-814a-550d094c0bae/download/vdq-lieupublic.geojson",
+    "sha256": "97c0ade681db742acfd94aa1293c0dc9e78f793e358c2dbc9fedfad00e4fdf9e",
+    "retrievedAt": "2026-11-07T18:34:00+00:00",
+    "selection": "Only Bibliothèques and Centres communautaires"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2636101075,
+          46.8134114092
+        ]
+      },
+      "properties": {
+        "ID": 102415,
+        "NO_CIVIQUE": 243,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Aliette-Marchand",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Pierre-Bertrand",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3088533268,
+          46.9008176886
+        ]
+      },
+      "properties": {
+        "ID": 102367,
+        "NO_CIVIQUE": 425,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Bon-Pasteur",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue du Bienheureux-Jean-XXIII",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3691281359,
+          46.7740131159
+        ]
+      },
+      "properties": {
+        "ID": 102407,
+        "NO_CIVIQUE": 1465,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Champigny",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Félix-Antoine-Savard",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2505830588,
+          46.779569846
+        ]
+      },
+      "properties": {
+        "ID": 109091,
+        "NO_CIVIQUE": 1445,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Charles-H.-Blais",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Avenue Maguire",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3598228705,
+          46.8527833734
+        ]
+      },
+      "properties": {
+        "ID": 200236,
+        "NO_CIVIQUE": 264,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Chrystine-Brouillet",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Racine",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2175712764,
+          46.8109398393
+        ]
+      },
+      "properties": {
+        "ID": 102397,
+        "NO_CIVIQUE": 755,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Claire-Martin",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Saint-Jean",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2437341158,
+          46.7950639495
+        ]
+      },
+      "properties": {
+        "ID": 102379,
+        "NO_CIVIQUE": 1120,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Collège-des-Jésuites",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard René-Lévesque Ouest",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2738417834,
+          46.7825550388
+        ]
+      },
+      "properties": {
+        "ID": 102417,
+        "NO_CIVIQUE": null,
+        "NOM_TOPOGRAPHIE": "Bibliothèque de l'Université Laval",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Avenue des Sciences-Humaines",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2378743331,
+          46.8114285342
+        ]
+      },
+      "properties": {
+        "ID": 202791,
+        "NO_CIVIQUE": 270,
+        "NOM_TOPOGRAPHIE": "Bibliothèque de Saint-Sauveur",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue de Carillon",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2118189531,
+          46.8497892243
+        ]
+      },
+      "properties": {
+        "ID": 102359,
+        "NO_CIVIQUE": 3095,
+        "NOM_TOPOGRAPHIE": "Bibliothèque du Chemin-Royal",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Chemin Royal",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2110746077,
+          46.8656915083
+        ]
+      },
+      "properties": {
+        "ID": 102357,
+        "NO_CIVIQUE": 3515,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Étienne-Parent",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Clemenceau",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4192774428,
+          46.8572453926
+        ]
+      },
+      "properties": {
+        "ID": 103769,
+        "NO_CIVIQUE": 1465,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Félix-Leclerc",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue de l'Innovation",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1557061086,
+          46.8783106272
+        ]
+      },
+      "properties": {
+        "ID": 202453,
+        "NO_CIVIQUE": 2,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Fernand-Dumont",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Monseigneur-Marc-Leclerc",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2259515284,
+          46.8142158924
+        ]
+      },
+      "properties": {
+        "ID": 102353,
+        "NO_CIVIQUE": 350,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Gabrielle-Roy",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Saint-Joseph Est",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2940746003,
+          46.8109581667
+        ]
+      },
+      "properties": {
+        "ID": 202551,
+        "NO_CIVIQUE": 2475,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Jean-Baptiste-Duberger",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Central",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3767895128,
+          46.9073435976
+        ]
+      },
+      "properties": {
+        "ID": 200237,
+        "NO_CIVIQUE": 530,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Le Tournesol",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Delage",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3074599778,
+          46.8422532575
+        ]
+      },
+      "properties": {
+        "ID": 102383,
+        "NO_CIVIQUE": 1650,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Lebourgneuf",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard La Morille",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2109915404,
+          46.8128893778
+        ]
+      },
+      "properties": {
+        "ID": 102399,
+        "NO_CIVIQUE": 42,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Maison de la Littérature",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Sainte-Angèle",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2226046554,
+          46.8373328498
+        ]
+      },
+      "properties": {
+        "ID": 101576,
+        "NO_CIVIQUE": 1601,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Marie-Claire-Blais",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Chemin de la Canardière",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2942761335,
+          46.7701200386
+        ]
+      },
+      "properties": {
+        "ID": 109989,
+        "NO_CIVIQUE": 1100,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Monique-Corriveau",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Route de l'Église",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3574604958,
+          46.8352286817
+        ]
+      },
+      "properties": {
+        "ID": 101578,
+        "NO_CIVIQUE": 4060,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Neufchâtel",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Blain",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2688259519,
+          46.8610043464
+        ]
+      },
+      "properties": {
+        "ID": 103529,
+        "NO_CIVIQUE": 7950,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Paul-Aimé-Paiement",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "1re Avenue",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3615448198,
+          46.7465056398
+        ]
+      },
+      "properties": {
+        "ID": 102361,
+        "NO_CIVIQUE": 4705,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Roger-Lemelin",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue de la Promenade-des-Soeurs",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3182163626,
+          46.8073081096
+        ]
+      },
+      "properties": {
+        "ID": 100693,
+        "NO_CIVIQUE": 2035,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Romain-Langlois",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Masson",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2434817791,
+          46.8355437134
+        ]
+      },
+      "properties": {
+        "ID": 100914,
+        "NO_CIVIQUE": 5,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Saint-Albert",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue des Ormes",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3361171681,
+          46.8580937109
+        ]
+      },
+      "properties": {
+        "ID": 102393,
+        "NO_CIVIQUE": 2155,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Saint-André",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Bastien",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2242681783,
+          46.823720361
+        ]
+      },
+      "properties": {
+        "ID": 102395,
+        "NO_CIVIQUE": 400,
+        "NOM_TOPOGRAPHIE": "Bibliothèque Saint-Charles",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "4e Avenue",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2734653544,
+          46.8535893026
+        ]
+      },
+      "properties": {
+        "ID": 201703,
+        "NO_CIVIQUE": 7260,
+        "NOM_TOPOGRAPHIE": "Carrefour communautaire de Charlesbourg",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Cloutier",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3088535564,
+          46.9008179007
+        ]
+      },
+      "properties": {
+        "ID": 201157,
+        "NO_CIVIQUE": 425,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Bon-Pasteur",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue du Bienheureux-Jean-XXIII",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2571111105,
+          46.8645627818
+        ]
+      },
+      "properties": {
+        "ID": 201158,
+        "NO_CIVIQUE": 570,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Bourassa",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "79e Rue Est",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3731838146,
+          46.7758893387
+        ]
+      },
+      "properties": {
+        "ID": 200433,
+        "NO_CIVIQUE": 7519,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Champigny",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Wilfrid-Hamel",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3361171681,
+          46.8580937109
+        ]
+      },
+      "properties": {
+        "ID": 104051,
+        "NO_CIVIQUE": 2155,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Charles-Auguste-Savard",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Bastien",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3195851718,
+          46.7747613098
+        ]
+      },
+      "properties": {
+        "ID": 201385,
+        "NO_CIVIQUE": 3200,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Claude-Allard",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Avenue D'Amours",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3545517384,
+          46.741029621
+        ]
+      },
+      "properties": {
+        "ID": 102795,
+        "NO_CIVIQUE": 4473,
+        "NOM_TOPOGRAPHIE": "Centre communautaire de Cap-Rouge",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Saint-Félix",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3233695237,
+          46.7541638164
+        ]
+      },
+      "properties": {
+        "ID": 203081,
+        "NO_CIVIQUE": 965,
+        "NOM_TOPOGRAPHIE": "Centre communautaire de la Pointe-de-Sainte-Foy",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Valentin",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2569579737,
+          46.796175372
+        ]
+      },
+      "properties": {
+        "ID": 202471,
+        "NO_CIVIQUE": 1360,
+        "NOM_TOPOGRAPHIE": "Centre communautaire de Saint-Sacrement",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard de l'Entente",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1612091333,
+          46.8720324681
+        ]
+      },
+      "properties": {
+        "ID": 201234,
+        "NO_CIVIQUE": 4551,
+        "NOM_TOPOGRAPHIE": "Centre communautaire des Chutes",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Sainte-Anne",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2853614654,
+          46.8819601673
+        ]
+      },
+      "properties": {
+        "ID": 203177,
+        "NO_CIVIQUE": 4225,
+        "NOM_TOPOGRAPHIE": "Centre communautaire du Jardin",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue des Roses",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2822911482,
+          46.8634180532
+        ]
+      },
+      "properties": {
+        "ID": 201190,
+        "NO_CIVIQUE": 8815,
+        "NOM_TOPOGRAPHIE": "Centre communautaire du Plateau",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Avenue Jean-Paquin",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4298120608,
+          46.8409434005
+        ]
+      },
+      "properties": {
+        "ID": 201285,
+        "NO_CIVIQUE": 3259,
+        "NOM_TOPOGRAPHIE": "Centre communautaire du Saint-Gérard",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Route de l'Aéroport",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2944411087,
+          46.8101486132
+        ]
+      },
+      "properties": {
+        "ID": 104053,
+        "NO_CIVIQUE": 2341,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Duberger",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue de la Rivière-du-Berger",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2329617796,
+          46.8074238276
+        ]
+      },
+      "properties": {
+        "ID": 100821,
+        "NO_CIVIQUE": 380,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Édouard-Lavergne",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Arago Ouest",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2938669293,
+          46.8108209658
+        ]
+      },
+      "properties": {
+        "ID": 104049,
+        "NO_CIVIQUE": 2455,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Elzéar-Turcotte",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Central",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2286994899,
+          46.8324107609
+        ]
+      },
+      "properties": {
+        "ID": 201311,
+        "NO_CIVIQUE": 1600,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Ferland",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "8e Avenue",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2649770369,
+          46.8129461745
+        ]
+      },
+      "properties": {
+        "ID": 104057,
+        "NO_CIVIQUE": 380,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Fernand-Dufour",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Chabot",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3000212682,
+          46.7708047331
+        ]
+      },
+      "properties": {
+        "ID": 203420,
+        "NO_CIVIQUE": 930,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Intact Assurance",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Avenue Roland-Beaudin",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.311328891,
+          46.8022253877
+        ]
+      },
+      "properties": {
+        "ID": 104075,
+        "NO_CIVIQUE": 4075,
+        "NOM_TOPOGRAPHIE": "Centre communautaire J.-B.-Lafrance",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Maria-Goretti",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2355902235,
+          46.8269176343
+        ]
+      },
+      "properties": {
+        "ID": 201667,
+        "NO_CIVIQUE": 16,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Jean-Guy Drolet",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Royal-Roussillon",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3077201091,
+          46.8424458932
+        ]
+      },
+      "properties": {
+        "ID": 104059,
+        "NO_CIVIQUE": 1650,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Lebourgneuf",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard La Morille",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.32260544,
+          46.8105127565
+        ]
+      },
+      "properties": {
+        "ID": 104061,
+        "NO_CIVIQUE": 4120,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Les Saules",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue De Musset",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3598828226,
+          46.8506119715
+        ]
+      },
+      "properties": {
+        "ID": 201275,
+        "NO_CIVIQUE": 305,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Loretteville",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Racine",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2286486806,
+          46.8067150293
+        ]
+      },
+      "properties": {
+        "ID": 104569,
+        "NO_CIVIQUE": 100,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Lucien-Borne",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Chemin Sainte-Foy",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2949314323,
+          46.8886353138
+        ]
+      },
+      "properties": {
+        "ID": 201173,
+        "NO_CIVIQUE": 17099,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Maison des Jeunes l'Intégrale",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Henri-Bourassa",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2407200221,
+          46.8374336603
+        ]
+      },
+      "properties": {
+        "ID": 201313,
+        "NO_CIVIQUE": 2740,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Marchand",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "2e Avenue",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2244449347,
+          46.8264709576
+        ]
+      },
+      "properties": {
+        "ID": 100738,
+        "NO_CIVIQUE": null,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Mères et Monde",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "6e Avenue",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3465934052,
+          46.8325240207
+        ]
+      },
+      "properties": {
+        "ID": 104063,
+        "NO_CIVIQUE": 3705,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Michel-Labadie",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Avenue Chauveau",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2241615238,
+          46.8432058256
+        ]
+      },
+      "properties": {
+        "ID": 202957,
+        "NO_CIVIQUE": 2025,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Monseigneur-Marcoux",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Adjutor-Rivard",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2497103846,
+          46.7854613658
+        ]
+      },
+      "properties": {
+        "ID": 104189,
+        "NO_CIVIQUE": 1229,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Noël-Brulart",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Avenue du Chanoine-Morel",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3767895128,
+          46.9073435976
+        ]
+      },
+      "properties": {
+        "ID": 201279,
+        "NO_CIVIQUE": 530,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Paul-Émile Beaulieu",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Delage",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2705492719,
+          46.8602889404
+        ]
+      },
+      "properties": {
+        "ID": 105369,
+        "NO_CIVIQUE": 748,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Pierre-Garon",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Louis-XIV",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3351560926,
+          46.8732208459
+        ]
+      },
+      "properties": {
+        "ID": 201277,
+        "NO_CIVIQUE": 2200,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Saint-Émile",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue de la Faune",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4504684805,
+          46.8725937655
+        ]
+      },
+      "properties": {
+        "ID": 201286,
+        "NO_CIVIQUE": 1829,
+        "NOM_TOPOGRAPHIE": "Centre communautaire Saint-Michel",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Pie-XI Nord",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2201934223,
+          46.8141242441
+        ]
+      },
+      "properties": {
+        "ID": 202863,
+        "NO_CIVIQUE": 500,
+        "NOM_TOPOGRAPHIE": "Centre communautaire YMCA-Saint-Roch",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue du Pont",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2513333016,
+          46.7942036942
+        ]
+      },
+      "properties": {
+        "ID": 201787,
+        "NO_CIVIQUE": 855,
+        "NOM_TOPOGRAPHIE": "Centre communautaire YWCA",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Avenue Holland",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2652337864,
+          46.8591962989
+        ]
+      },
+      "properties": {
+        "ID": 201156,
+        "NO_CIVIQUE": 7575,
+        "NOM_TOPOGRAPHIE": "Centre culturel et communautaire Ralph-Mercier",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Boulevard Henri-Bourassa",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4350077194,
+          46.8436528182
+        ]
+      },
+      "properties": {
+        "ID": 201283,
+        "NO_CIVIQUE": 3490,
+        "NOM_TOPOGRAPHIE": "Centre culturel Georges-Dor",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Route de l'Aéroport",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2127279014,
+          46.849678041
+        ]
+      },
+      "properties": {
+        "ID": 201235,
+        "NO_CIVIQUE": 2130,
+        "NOM_TOPOGRAPHIE": "Centre Deblois",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Avenue de l'École",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2501717955,
+          46.7856307919
+        ]
+      },
+      "properties": {
+        "ID": 201387,
+        "NO_CIVIQUE": 1675,
+        "NOM_TOPOGRAPHIE": "Centre musical Uni-Son de Sillery",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Dina-Bélanger",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2135706022,
+          46.8159426621
+        ]
+      },
+      "properties": {
+        "ID": 203015,
+        "NO_CIVIQUE": 19,
+        "NOM_TOPOGRAPHIE": "Édifice Saint-Nicolas",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Saint-Nicolas",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2662690784,
+          46.8139220107
+        ]
+      },
+      "properties": {
+        "ID": 103829,
+        "NO_CIVIQUE": 380,
+        "NOM_TOPOGRAPHIE": "Garage entreposage Entrepôt, 380 Beaucage",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Beaucage",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4434757359,
+          46.8241005221
+        ]
+      },
+      "properties": {
+        "ID": 201281,
+        "NO_CIVIQUE": 1194,
+        "NOM_TOPOGRAPHIE": "Maison Belle-Eau",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue du Beau-Milieu",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2110676136,
+          46.81307181
+        ]
+      },
+      "properties": {
+        "ID": 202454,
+        "NO_CIVIQUE": 40,
+        "NOM_TOPOGRAPHIE": "Maison de la Littérature",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Saint-Stanislas",
+        "DESCRIPTION": "Bibliothèques"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2501717955,
+          46.7856307919
+        ]
+      },
+      "properties": {
+        "ID": 201388,
+        "NO_CIVIQUE": 1225,
+        "NOM_TOPOGRAPHIE": "Maison des jeunes de Sillery",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Avenue du Chanoine-Morel",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3512649689,
+          46.7576042565
+        ]
+      },
+      "properties": {
+        "ID": 201391,
+        "NO_CIVIQUE": 1210,
+        "NOM_TOPOGRAPHIE": "Maison des jeunes la Symbiose de Cap-Rouge",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Provancher",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3772476682,
+          46.9071494227
+        ]
+      },
+      "properties": {
+        "ID": 201280,
+        "NO_CIVIQUE": 540,
+        "NOM_TOPOGRAPHIE": "Maison des jeunes l'Ambassade",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue Delage",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4163178059,
+          46.8602433308
+        ]
+      },
+      "properties": {
+        "ID": 201282,
+        "NO_CIVIQUE": 1565,
+        "NOM_TOPOGRAPHIE": "Maison des jeunes l'Escapade",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue de l'Innovation",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1895508763,
+          46.8594303183
+        ]
+      },
+      "properties": {
+        "ID": 201239,
+        "NO_CIVIQUE": 3,
+        "NOM_TOPOGRAPHIE": "Maison Rondeau",
+        "SUPERFICIE": "0",
+        "PERIMETRE": 0,
+        "RUE": "Rue du Temple",
+        "DESCRIPTION": "Centres communautaires"
+      }
+    }
+  ]
+}

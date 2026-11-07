@@ -28,7 +28,8 @@ def validate(bundle):
         assert d["label"] and d["unit"] in {"persons", "percent", "CAD_month", "count"}
     rows = bundle["neighbourhoods"]
     assert rows, "Empty neighbourhood coverage"
-    expected_counts = {"toronto": 158, "vancouver": 22}
+    expected_counts = {"toronto": 158, "vancouver": 22, "halifax": 99,
+                       "victoria": 10, "winnipeg": 194, "quebec-city": 35}
     if bundle["placeId"] in expected_counts:
         assert len(rows) == expected_counts[bundle["placeId"]], "Incomplete publisher geography"
     if bundle["placeId"] in {"edmonton", "calgary"}:
