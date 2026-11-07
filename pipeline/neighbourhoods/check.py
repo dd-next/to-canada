@@ -13,6 +13,7 @@ def validate(bundle):
     assert bundle["schemaVersion"] == 1
     assert re.fullmatch(r"[a-z0-9-]+", bundle["placeId"])
     assert bundle["cityName"] and bundle["boundaryNote"] and bundle["boundaryVintage"]
+    assert bundle.get("areaType", "neighbourhood") in {"neighbourhood", "census tract", "comparison area"}
     sources = {s["id"] for s in bundle["sources"]}
     assert bundle["boundarySourceId"] in sources
     assert len(sources) == len(bundle["sources"])

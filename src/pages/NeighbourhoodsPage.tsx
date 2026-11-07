@@ -58,6 +58,7 @@ function CityLinks() {
 }
 
 function Directory({ bundle }: { bundle: NeighbourhoodBundle }) {
+  const areaType = bundle.areaType ?? 'neighbourhood';
   const [params, setParams] = useSearchParams();
   const query = params.get('q') ?? '';
   const layerOptions = mapLayers(bundle);
@@ -69,7 +70,7 @@ function Directory({ bundle }: { bundle: NeighbourhoodBundle }) {
   const set = (key: string, value: string) => setParams(prev => { const next = new URLSearchParams(prev); if (value) next.set(key, value); else next.delete(key); return next; }, { replace: true });
   return <>
     <header className="hood-hero">
-      <div><p className="kicker">A closer look / {bundle.cityName}</p><h1>Find your corner<br />of {bundle.cityName}.</h1><p className="dek">Go beyond the city average. Explore the homes, households and public spaces that make each neighbourhood different.</p></div>
+      <div><p className="kicker">A closer look / {bundle.cityName}</p><h1>Find your corner<br />of {bundle.cityName}.</h1><p className="dek">Go beyond the city average. Explore the homes, households and public spaces in each {areaType}.</p></div>
       <div className="hood-hero__aside"><strong>{bundle.neighbourhoods.length}</strong><span>mapped areas</span><CityLinks /></div>
     </header>
     <p className="hood-coverage">{bundle.boundaryNote}{bundle.coverageNote && <> {bundle.coverageNote}</>}</p>
@@ -80,7 +81,7 @@ function Directory({ bundle }: { bundle: NeighbourhoodBundle }) {
         <p className="hood-note">{bundle.definitions[layer].period} · {bundle.definitions[layer].note}</p>
       </div>
       <div className="hood-directory">
-        <label className="hood-field">Find a neighbourhood<input type="search" value={query} onChange={e => set('q', e.target.value)} placeholder={`Search ${bundle.cityName} neighbourhoods`} /></label>
+        <label className="hood-field">Find a {areaType}<input type="search" value={query} onChange={e => set('q', e.target.value)} placeholder={`Search ${bundle.cityName} areas`} /></label>
         <p className="hood-result-count" role="status">{rows.length} of {bundle.neighbourhoods.length} areas · A–Z</p>
         <ul className="hood-results">
           {rows.map(n => <li key={n.id}>{hasProfile(n) ? <Link to={pathFor(bundle.placeId, n.id)} onMouseEnter={() => setSelected(n.id)} onFocus={() => setSelected(n.id)}>
@@ -88,7 +89,7 @@ function Directory({ bundle }: { bundle: NeighbourhoodBundle }) {
             <span className="hood-results__value">{format(n.metrics[layer]?.value, bundle.definitions[layer])}<span aria-hidden="true"> ↗</span></span>
           </Link> : <div className="hood-results__unavailable" tabIndex={0} onFocus={() => setSelected(n.id)}><strong>{n.name}</strong><small>Mapped boundary only. Profile data unavailable.</small></div>}</li>)}
         </ul>
-        {!rows.length && <div className="hood-status"><p>No neighbourhood matches “{query}”.</p><button className="text-link" onClick={() => set('q', '')}>Clear search</button></div>}
+        {!rows.length && <div className="hood-status"><p>No {areaType} matches “{query}”.</p><button className="text-link" onClick={() => set('q', '')}>Clear search</button></div>}
       </div>
     </div>
     <Perspectives bundle={bundle} />
@@ -104,30 +105,32 @@ function Metric({ bundle, n, metric }: { bundle: NeighbourhoodBundle; n: Neighbo
 }
 
 function Detail({ bundle, n }: { bundle: NeighbourhoodBundle; n: Neighbourhood }) {
+  const areaType = bundle.areaType ?? 'neighbourhood';
   const housingMetrics = ['apartments', 'detached', 'duplex', 'renters', 'tenantShelter', 'transit', 'walkCycle'];
   const hasHousing = housingMetrics.some(key => bundle.definitions[key]);
   const outsideMetrics = ['parkland', 'parks', 'rail', 'busStops', 'tramStops', 'libraries', 'communityCentres'];
   const overviewLayer = mapLayers(bundle)[0] ?? Object.keys(bundle.definitions)[0];
   return <>
-    <header className="hood-hero hood-hero--detail"><div><p className="kicker">Neighbourhood / {bundle.cityName}</p><h1>{n.name}</h1><p className="dek">A closer look at life here, from the households to the public spaces around them.</p></div><ButtonLink to={pathFor(bundle.placeId)} variant="outline">All neighbourhoods</ButtonLink></header>
+    <header className="hood-hero hood-hero--detail"><div><p className="kicker">{areaType} / {bundle.cityName}</p><h1>{n.name}</h1><p className="dek">A closer look at life here, from the households to the public spaces around them.</p></div><ButtonLink to={pathFor(bundle.placeId)} variant="outline">All {areaType}s</ButtonLink></header>
     <p className="hood-coverage">{bundle.boundaryNote}{bundle.coverageNote && <> {bundle.coverageNote}</>}</p>
     <div className="hood-overview">
       <NeighbourhoodMap bundle={bundle} layer={overviewLayer} focus={n.id} />
       <div className="hood-facts">{['population', 'households', 'householdSize', 'children', 'livingAlone'].map(metric => <Metric key={metric} bundle={bundle} n={n} metric={metric} />)}</div>
     </div>
     {n.description && <section className="hood-description" aria-labelledby="hood-description-title"><p className="kicker">Local guide</p><h2 id="hood-description-title">Living in {n.name}</h2><p className="hood-note">Sources verified {n.description.verifiedAt.slice(0, 10)}. Editorial observations interpret the cited evidence; they are not a survey of residents.</p><div className="hood-description__sections">{n.description.sections.map((section, i) => <article key={i}><span className="hood-description__kind">{section.kind === 'measured' ? 'Source facts' : 'Editorial interpretation'}</span><h3>{section.heading}</h3><p>{section.text}</p><div className="hood-description__citations">{section.sourceIds.map(id => <a key={id} href={`#source-${id}`}>{bundle.sources.find(source => source.id === id)?.title ?? id}</a>)}</div></article>)}</div></section>}
-    {n.quality && ['incomplete_enumeration_flag', 'short_form_data_quality_flag', 'long_form_data_quality_flag', 'long_form_income_data_quality'].some(key => n.quality?.[key] != null && Number(n.quality[key]) !== 0) && <p className="hood-coverage">The publisher flags census data quality for this area. Check the original census tables before relying on small differences.</p>}
+    {n.quality && ['incomplete_enumeration_flag', 'short_form_data_quality_flag', 'long_form_data_quality_flag', 'long_form_income_data_quality', 'dataQualityFlag'].some(key => n.quality?.[key] != null && Number(n.quality[key]) !== 0) && <p className="hood-coverage">The publisher flags census data quality for this area. Check the original census tables before relying on small differences.</p>}
     <ProfileSection id="homes" num="01" title="Homes & getting around" dek={hasHousing ? 'A historical picture of the housing mix and journeys to work.' : 'More detail in the city’s community profile.'}>
       {hasHousing ? <div className="hood-metrics">{housingMetrics.map(metric => <Metric key={metric} bundle={bundle} n={n} metric={metric} />)}</div>
         : <p className="hood-note">Housing and commuting statistics have not been collected at this geography in this release. Check the official community profiles below.</p>}
-      <div className="hood-actions"><ButtonAnchor href={bundle.links.profiles} variant="outline">City neighbourhood profiles</ButtonAnchor><ButtonLink to={`/place/${bundle.placeId}#housing`}>Metropolitan housing context</ButtonLink></div>
+      <div className="hood-actions"><ButtonAnchor href={bundle.links.profiles} variant="outline">Official area profiles</ButtonAnchor><ButtonLink to={`/place/${bundle.placeId}#housing`}>Metropolitan housing context</ButtonLink></div>
       <p className="hood-note">Current asking rents are not available at neighbourhood level here. Metropolitan rent figures describe a wider area.</p>
     </ProfileSection>
     <ProfileSection id="outside" num="02" title="Outside your front door" dek="Public spaces, transport and amenities from the available local data.">
       <div className="hood-metrics">{outsideMetrics.map(metric => <Metric key={metric} bundle={bundle} n={n} metric={metric} />)}</div>
       <div className="hood-place-lists">
         <div><h3>Park sites in this area</h3>{n.parks.length ? <ul>{n.parks.slice(0, 10).map((park, i) => <li key={`${park}-${i}`}>{park}</li>)}</ul> : <p>{n.metrics.parks?.value == null ? 'Park coverage is not available in this snapshot.' : 'No park sites matched by this source’s method.'}</p>}{n.parks.length > 10 && <details><summary>{n.parks.length - 10} more park sites</summary><ul>{n.parks.slice(10).map((park, i) => <li key={`${park}-${i}`}>{park}</li>)}</ul></details>}</div>
-        <div><h3>{bundle.transportLabel ?? 'Rail stations in or near the area'}</h3>{n.stations.length ? <ul>{n.stations.map(s => <li key={s.id}>{s.name}<small>{s.distanceToBoundaryM === 0 ? 'Inside the boundary' : `${s.distanceToBoundaryM} m from the boundary`}</small></li>)}</ul> : <p>{n.metrics.rail?.value == null ? 'Rail station coverage is not available in this snapshot.' : 'No listed rail stations inside or within 800 m of the boundary.'}</p>}<p className="hood-note">Check service and the route from your exact address. Proximity to an area’s boundary is not a walking distance from your home.</p></div>
+        {bundle.definitions.rail ? <div><h3>{bundle.transportLabel ?? 'Rail stations in or near the area'}</h3>{n.stations.length ? <ul>{n.stations.map(s => <li key={s.id}>{s.name}<small>{s.distanceToBoundaryM === 0 ? 'Inside the boundary' : `${s.distanceToBoundaryM} m from the boundary`}</small></li>)}</ul> : <p>{n.metrics.rail?.value == null ? 'Rail station coverage is not available in this snapshot.' : 'No listed rail stations inside or within 800 m of the boundary.'}</p>}<p className="hood-note">Check service and the route from your exact address. Proximity to an area’s boundary is not a walking distance from your home.</p></div>
+          : bundle.definitions.busStops ? <div><h3>Bus stop coverage</h3><p>{bundle.definitions.busStops.note}</p><p className="hood-note">Snapshot: {bundle.definitions.busStops.period}. Check your actual route and travel time; a count of stops does not measure service frequency.</p></div> : <div><h3>Transport coverage</h3><p>Transport location data has not been collected for these areas.</p></div>}
         {!!n.amenities?.length && <div><h3>Local amenities</h3><ul>{n.amenities.map((amenity, i) => <li key={`${amenity.sourceId}-${i}`}>{amenity.name}<small>{amenity.category.replace(/([a-z])([A-Z])/g, '$1 $2')} · <a href={`#source-${amenity.sourceId}`}>Source</a></small></li>)}</ul></div>}
       </div>
     </ProfileSection>

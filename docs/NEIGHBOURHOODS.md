@@ -8,6 +8,8 @@ from the published manifest, and each city bundle is loaded on demand.
 | --- | ---: | --- | --- |
 | Toronto | 158 | 2021 custom profile, 25% sample/private households; 158 social planning areas introduced April 2021 | City park polygons, TTC subway/bus/streetcar locations, libraries, recreation sites, ten local guides |
 | Vancouver | 22 | 2016 custom profile on permanent local planning areas, including the publisher's Musqueam 2 coverage; Stanley Park outside the polygons | Park polygons, dated rail/facility inventories, resident occupation groups and 22 local guides, ten with additional official area-guide context |
+| Halifax | 99 | Inhabited 2021 census tracts wholly within Halifax Regional Municipality; explicitly statistical areas, not named neighbourhoods | Census households/housing/commuting, parks, bus-stop proximity, libraries and public facilities |
+| Victoria | 10 | 2021 custom census; eight neighbourhoods plus two combined comparison areas that retain both sides of the 2022 transfers | Census housing/households, parks, bus-stop proximity and public facilities; combined-area medians stay missing |
 | Edmonton | 403 | 2021 census-day boundaries | Census households/housing/commuting, parks, LRT |
 | Calgary | 313 | 2021 census on the publisher's 2022 communities; private-household population | Census households, park sites, LRT |
 
@@ -16,6 +18,11 @@ identical to Vancouver census subdivision coverage. Each profile explains its
 scope and vintages. See the [Toronto evidence](neighbourhoods/toronto.md) and
 [Vancouver evidence](neighbourhoods/vancouver.md) for exact source URLs, geography
 joins, representative source values, current coverage gaps and refresh commands.
+The [Halifax evidence](neighbourhoods/halifax.md) explains the whole-tract municipal
+selection, excluded reserve jurisdictions and omitted uninhabited tract. The
+[Victoria evidence](neighbourhoods/victoria.md) documents the boundary transfers,
+safe unions and unaggregable medians. Neither includes the wider metropolitan
+area or invents precise historical vertices from a current polygon release.
 
 Local guides retain a verification date and citations for each section.
 Measured resident statistics are separate from editorial interpretation and
