@@ -20,6 +20,9 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from common.standalone import is_standalone, preserve, validate as validate_standalone
+
 ROOT = Path(__file__).resolve().parents[1]
 ORDER = ['geo', 'housing', 'work', 'immigration']
 VOLATILE = {'builtAt', 'computedAt', 'retrievedAt', 'lastCheckedAt', 'lastSuccessfulCheckAt', 'checkedAt', 'runId'}
@@ -47,7 +50,8 @@ def meaningful(value):
 def fingerprint(directory: Path) -> str:
     digest = hashlib.sha256()
     for path in sorted(directory.rglob('*.json')):
-        if path.name in {'manifest.json', 'refresh-status.json', 'freshness-checks.json', 'updates.json'}:
+        if (is_standalone(path.relative_to(directory))
+                or path.name in {'manifest.json', 'refresh-status.json', 'freshness-checks.json'}):
             continue
         digest.update(str(path.relative_to(directory)).encode())
         digest.update(json.dumps(meaningful(json.loads(path.read_text())), sort_keys=True).encode())
@@ -66,10 +70,9 @@ def exchange(left: Path, right: Path) -> None:
 
 
 def promote(staged_processed: Path, staged_app: Path, processed: Path, app: Path) -> None:
-    # The IRCC runner owns these files. They do not participate in statistical refresh.
-    for name in ('updates.json',):
-        if (app / name).exists():
-            shutil.copy2(app / name, staged_app / name)
+    # Independent feed runners own their own content and freshness timestamps.
+    preserve(app, staged_app)
+    validate_standalone(staged_app)
     if (processed / 'updates').exists():
         shutil.copytree(processed / 'updates', staged_processed / 'updates', dirs_exist_ok=True)
     exchange(staged_processed, processed)
@@ -89,13 +92,14 @@ def main() -> int:
     raw.mkdir(parents=True, exist_ok=True)
     processed, app = ROOT / 'data' / 'processed', ROOT / 'public' / 'data'
     status_path = processed / 'refresh-status.json'
-    previous = json.loads(status_path.read_text()) if status_path.exists() else {}
     started = now()
     errors = []
-    status = {'startedAt': started, 'domains': args.domains,
-              'lastSuccessfulUpdateAt': previous.get('lastSuccessfulUpdateAt')}
     with (raw / '.publication.lock').open('w') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
+        previous = json.loads(status_path.read_text()) if status_path.exists() else {}
+        status = {'startedAt': started, 'domains': args.domains,
+                  'lastSuccessfulCheckAt': previous.get('lastSuccessfulCheckAt'),
+                  'lastSuccessfulUpdateAt': previous.get('lastSuccessfulUpdateAt')}
         with tempfile.TemporaryDirectory(prefix='.refresh-', dir=raw) as temporary:
             staging = Path(temporary)
             staged_processed, staged_app = staging / 'processed', staging / 'app'
@@ -129,13 +133,15 @@ def main() -> int:
             else:
                 changed = fingerprint(app) != fingerprint(staged_app)
                 status.update(status='updated' if changed else 'no_changes', errors=errors,
-                              finishedAt=now(), lastSuccessfulUpdateAt=now())
+                              finishedAt=now(), lastSuccessfulCheckAt=now(),
+                              lastSuccessfulUpdateAt=now() if changed else previous.get('lastSuccessfulUpdateAt'))
                 atomic_json(staged_processed / 'refresh-status.json', status)
                 atomic_json(staged_app / 'refresh-status.json', status)
                 try:
                     promote(staged_processed, staged_app, processed, app)
                 except Exception as error:
                     status.update(status='error', errors=errors + [{'step': 'publish', 'error': str(error)}],
+                                  lastSuccessfulCheckAt=previous.get('lastSuccessfulCheckAt'),
                                   lastSuccessfulUpdateAt=previous.get('lastSuccessfulUpdateAt'),
                                   note='Publication failed; previous statistical snapshot retained.')
             # Error/check reports may be published without promoting failed statistical outputs.

@@ -21,6 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common.contract import FLAGS, PROCESSED, ROOT, UNITS, load_places  # noqa: E402
+from common.standalone import REPORTS, is_standalone, preserve, validate as validate_standalone  # noqa: E402
 
 OUT = Path(os.environ.get("NORTHWARD_APP_DATA", ROOT / "public" / "data"))
 DOMAINS = ["geo", "housing", "work", "immigration", "cost", "neighbourhoods"]
@@ -348,7 +349,8 @@ def build() -> int:
     dump("manifest.json", manifest, files)
 
     for f in sorted(OUT.rglob("*")):
-        if f.is_file() and f.relative_to(OUT).as_posix() not in files and f.name not in ("updates.json", "freshness-checks.json", "refresh-status.json"):
+        if (f.is_file() and f.relative_to(OUT).as_posix() not in files
+                and not is_standalone(f.relative_to(OUT)) and f.name not in REPORTS):
             f.unlink()
     for d in sorted((d for d in OUT.rglob("*") if d.is_dir()), key=lambda d: len(d.parts), reverse=True):
         if not any(d.iterdir()):
@@ -376,15 +378,13 @@ def main() -> int:
     target.parent.mkdir(parents=True, exist_ok=True)
     stage = Path(tempfile.mkdtemp(prefix=".app-stage-", dir=target.parent))
     try:
-        for name in ("updates.json", "freshness-checks.json", "refresh-status.json"):
-            if (target / name).exists():
-                shutil.copy2(target / name, stage / name)
+        preserve(target, stage, reports=True)
         OUT = stage
         code = build()
         if code:
             return code
-        if (target / "updates.json").exists():
-            shutil.copy2(target / "updates.json", stage / "updates.json")
+        preserve(target, stage)
+        validate_standalone(stage)
         if target.exists():
             from refresh import exchange
             exchange(stage, target)

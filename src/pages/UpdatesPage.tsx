@@ -78,7 +78,7 @@ function UpdateCard({ item, programs, source }: { item: IRCCUpdate; programs: Ma
           <p className="update__programs">
             <span>Program reference: </span>
             {related.map((program, index) => (
-              <span key={program.id}>{index > 0 && ' · '}<Link className="link" to={`/immigration?program=${encodeURIComponent(program.id)}`}>{program.shortName ?? program.name}</Link></span>
+              <span key={program.id}>{index > 0 && ' · '}<Link className="link" to={`/immigration/programs?program=${encodeURIComponent(program.id)}`}>{program.shortName ?? program.name}</Link></span>
             ))}
           </p>
         )}

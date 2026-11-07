@@ -1,0 +1,124 @@
+{
+  "checkedAt": "2026-11-07T18:35:53.119645+00:00",
+  "method": "Independent openpyxl read; every source row compared without importing pipeline parser",
+  "periods": [
+    {
+      "period": "2021-Q2",
+      "sourceUrl": "https://www.esdc.gc.ca/ouvert-open/bca-seb/imt-lmi/TFWP_2021Q2_Positive_EN.xlsx",
+      "sha256": "a06d94b053f08d993ae3de0f56fc5642ea2c263483cd6e3c5a04b511a1583322",
+      "checkedRows": 8168,
+      "approvedPositions": 21813,
+      "approvedLmias": null,
+      "approvedLmiasReason": "Publisher file has no approved-LMIA-count column",
+      "nocVersion": "2011",
+      "byProvinceRows": {
+        "Newfoundland and Labrador": 14,
+        "Prince Edward Island": 17,
+        "Nova Scotia": 79,
+        "New Brunswick": 71,
+        "Quebec": 1887,
+        "Ontario": 2122,
+        "Manitoba": 134,
+        "Saskatchewan": 98,
+        "Alberta": 1170,
+        "British Columbia": 2497,
+        "Yukon": 1,
+        "Northwest Territories": 2,
+        "Nunavut": 1,
+        "Employers carrying on business in Canada with Head Office outside of Canada": 75
+      },
+      "byStreamRows": {
+        "High Wage": 3275,
+        "Low Wage": 2797,
+        "Primary Agriculture": 1490,
+        "Global Talent Stream": 606
+      },
+      "samples": [
+        {
+          "sourceLine": 3,
+          "employer": "Central Regional Health Authority",
+          "address": "GRAND FALLS - WINDSOR, NL A2A 2E1",
+          "occupationCode": "3111",
+          "nocVersion": "2011",
+          "approvedPositions": 3
+        },
+        {
+          "sourceLine": 4087,
+          "employer": "PathFactory Inc.",
+          "address": "Toronto, ON M5T 2C2",
+          "occupationCode": "2172",
+          "nocVersion": "2011",
+          "approvedPositions": 1
+        },
+        {
+          "sourceLine": 8170,
+          "employer": "Scanmar Maritime Services Inc.",
+          "address": "Makati City, 1200",
+          "occupationCode": "6731",
+          "nocVersion": "2011",
+          "approvedPositions": 2
+        }
+      ]
+    },
+    {
+      "period": "2021-Q3",
+      "sourceUrl": "https://www.esdc.gc.ca/ouvert-open/bca-seb/ae-ei/TFWP_2021Q3_Positive_EN.xlsx",
+      "sha256": "372bf17d4d167f816df892531e51c5fd9e0abbcb0ab5f59e4098611a96617188",
+      "checkedRows": 4655,
+      "approvedPositions": 13193,
+      "approvedLmias": null,
+      "approvedLmiasReason": "Publisher file has no approved-LMIA-count column",
+      "nocVersion": "2011",
+      "byProvinceRows": {
+        "Newfoundland and Labrador": 13,
+        "Prince Edward Island": 15,
+        "Nova Scotia": 76,
+        "New Brunswick": 46,
+        "Quebec": 940,
+        "Ontario": 1172,
+        "Manitoba": 73,
+        "Saskatchewan": 59,
+        "Alberta": 671,
+        "British Columbia": 1526,
+        "Yukon": 2,
+        "Northwest Territories": 3,
+        "Employers carrying on business in Canada with Head Office outside of Canada": 59
+      },
+      "byStreamRows": {
+        "High Wage": 1715,
+        "Low Wage": 1655,
+        "Primary Agriculture": 785,
+        "Global Talent Stream": 500
+      },
+      "samples": [
+        {
+          "sourceLine": 3,
+          "employer": "Dr Jacqueline Tucker Orthodontic Services Inc",
+          "address": "St. John's, NL A1A 0L2",
+          "occupationCode": "3223",
+          "nocVersion": "2011",
+          "approvedPositions": 1
+        },
+        {
+          "sourceLine": 2330,
+          "employer": "La Bass Holsteins Ltd.",
+          "address": "La Broquerie, MB R0A 0W0",
+          "occupationCode": "8431",
+          "nocVersion": "2011",
+          "approvedPositions": 2
+        },
+        {
+          "sourceLine": 4657,
+          "employer": "TeeKay Shipping Norway A/S",
+          "address": "Stavanger, 4068",
+          "occupationCode": "7612",
+          "nocVersion": "2011",
+          "approvedPositions": 1
+        }
+      ]
+    }
+  ],
+  "checkedRows": 12823,
+  "approvedPositions": 35006,
+  "result": "passed"
+}

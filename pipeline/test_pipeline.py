@@ -85,6 +85,7 @@ class RefreshTests(unittest.TestCase):
             (processed / 'statistics.json').write_text('[{"value": 100}]')
             (app / 'statistics.json').write_text('[{"value": 100}]')
             (processed / 'sources.json').write_text('[{"referencePeriod": "2025"}]')
+            (processed / 'refresh-status.json').write_text('{"lastSuccessfulCheckAt":"2026-11-01T12:00:00Z"}')
             calls = []
             def command(args, **kwargs):
                 calls.append(args[-1])
@@ -103,6 +104,7 @@ class RefreshTests(unittest.TestCase):
             self.assertEqual(json.loads((app / 'statistics.json').read_text()), [{'value': 100}])
             self.assertEqual(json.loads((processed / 'statistics.json').read_text()), [{'value': 100}])
             self.assertEqual(json.loads((app / 'refresh-status.json').read_text())['status'], 'error')
+            self.assertEqual(json.loads((app / 'refresh-status.json').read_text())['lastSuccessfulCheckAt'], '2026-11-01T12:00:00Z')
             self.assertFalse(any('build_app_data' in call for call in calls))
             self.assertEqual(json.loads((app / 'freshness-checks.json').read_text())[0]['ourPeriod'], '2025')
 
