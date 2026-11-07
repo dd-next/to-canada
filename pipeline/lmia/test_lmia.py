@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lmia.check import validate_directory
-from lmia.ingest import (COLUMNS, DATASET_ID, parse_file, parse_table, period_from_name,
+from lmia.ingest import (COLUMNS, DATASET_ID, UNDEFINED_CP1252_BYTES, decode_csv, parse_file, parse_table, period_from_name,
                          resource_descriptor, select_resources, validate_partition)
 from lmia.run import dump, empty_metadata, refresh
 
@@ -77,6 +77,17 @@ class PeriodAndSelection(unittest.TestCase):
 
 
 class FormatsAndRows(unittest.TestCase):
+    def test_french_publisher_geographies_keep_labels_and_separate_outside_canada(self):
+        labels = ["Territoires-du-Nord-Ouest", "À l'extérieur du Canada",
+                  "Les employeurs exerçant leurs activités au Canada avec un siège social à l'extérieur du Canada",
+                  "Unmapped publisher geography"]
+        table = [HEADER, *[[label, "Haut salaire", f"Publisher {i}", "Source address", "21231-Profession", "", "", 2]
+                          for i, label in enumerate(labels)]]
+        rows, _ = parse_table(table, resource_descriptor(raw_resource()))
+        self.assertEqual([row[3] for row in rows], ["NT", "HO", "HO", None])
+        self.assertEqual([row[4] for row in rows], labels)
+        self.assertEqual(sum(row[10] for row in rows), 8)
+
     def test_modern_missing_counts_preserve_unknowns(self):
         resource = resource_descriptor(raw_resource())
         rows, audit = parse_table(TABLE, resource)
@@ -85,6 +96,80 @@ class FormatsAndRows(unittest.TestCase):
         self.assertEqual(rows[2][3], "HO")
         self.assertEqual(rows[0][8], "2021")
         self.assertEqual(audit["ignoredRows"]["notes"], 2)
+
+    def test_french_remarques_footer_keeps_published_rows_and_notes(self):
+        table = [["Province/Territoire", "Volet", "Employeur", "Adresse", "Profession", "Postes approuvés"],
+                 ["Québec", "Haut salaire", "Entreprise Démonstration", "Montréal", "21231-Profession", 3],
+                 ["Remarques:"],
+                 ["1. Les postes approuvés ne sont pas des permis de travail."],
+                 ["2. Les noms sont ceux publiés par l'éditeur."]]
+        rows, audit = parse_table(table, resource_descriptor(raw_resource()))
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0][1:4], ["Entreprise Démonstration", "Montréal", "QC"])
+        self.assertEqual(rows[0][10], 3)
+        self.assertEqual(audit["ignoredRows"]["notes"], 3)
+        self.assertEqual(audit["notes"], [row[0] for row in table[2:]])
+        # A genuine employer called Notes is not a footer when other fields exist.
+        named_notes = [["Employer", "Address", "Approved Positions"], ["Notes", "Ottawa", 2]]
+        self.assertEqual(parse_table(named_notes, resource_descriptor(raw_resource()))[0][0][1], "Notes")
+
+    def test_undefined_legacy_bytes_are_lossless_and_audited(self):
+        undefined = bytes(sorted(UNDEFINED_CP1252_BYTES))
+        raw = b"Soci\xe9t\xe9\x92s " + undefined + b" / " + b"\x8d" * 25
+        text, audit = decode_csv(raw)
+        reconstructed = b"".join(bytes((ord(char),)) if ord(char) in UNDEFINED_CP1252_BYTES
+                                 else char.encode("cp1252") for char in text)
+        self.assertEqual(reconstructed, raw)
+        self.assertTrue(text.startswith("Société’s "))
+        self.assertNotIn("\ufffd", text)
+        self.assertEqual(audit["encoding"], "Windows-1252")
+        self.assertEqual(sum(issue["count"] for issue in audit["undefinedBytes"]), 30)
+        issue = next(issue for issue in audit["undefinedBytes"] if issue["hex"] == "8D")
+        self.assertEqual(issue["count"], 26)
+        self.assertTrue(issue["offsetsTruncated"])
+        self.assertEqual(len(issue["firstByteOffsets"]), 20)
+        self.assertTrue(all(raw[offset] == 0x8D for offset in issue["firstByteOffsets"]))
+
+    def test_undefined_legacy_bytes_survive_full_csv_and_json_publication(self):
+        raw = (b"Employer,Address,Approved Positions\r\n"
+               b"Soci\xe9t\xe9\x8d Test,Ottawa\x90,4\r\nNotes:\r\n1. Source note\r\n")
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "legacy.csv"
+            path.write_bytes(raw)
+            partition, audit = parse_file(path, resource_descriptor(raw_resource()))
+            published = json.loads(json.dumps(partition, ensure_ascii=False).encode("utf-8"))
+            self.assertEqual(published["rows"][0][1:3], ["Société\u008d Test", "Ottawa\u0090"])
+            self.assertEqual(published["rows"][0][10], 4)
+            self.assertEqual({issue["hex"] for issue in audit["decoding"]["undefinedBytes"]}, {"8D", "90"})
+            self.assertIn("Undefined Windows-1252", audit["notes"][-1])
+
+    def test_publisher_unnamed_rows_preserve_counts_without_entity_history(self):
+        table = [["Province/Territoire", "Volet", "Employeur", "Adresse", "Profession", "Postes approuvés"],
+                 ["Colombie-Britannique", "Bas salaire", "Entreprise Démonstration", "Pitt Meadows, BC V3Y 2J4", "6311-Profession", 2],
+                 ["Colombie-Britannique", "Bas salaire", "(blank)", "Pitt Meadows, BC V3Y 2J4", "6311-Profession", 3],
+                 ["Colombie-Britannique", "Bas salaire", "(blank)", "Pitt Meadows, BC V3Y 2J4", "6311-Profession", 3],
+                 ["Colombie-Britannique", "Bas salaire", "(blank)", "", "6311-Profession", "x"]]
+        resource = resource_descriptor(raw_resource("2019-q3", "2019Q3-Employers NOC 2011"))
+        rows, audit = parse_table(table, resource)
+        self.assertEqual(len(rows), 4)
+        self.assertEqual([row[1] for row in rows], ["Entreprise Démonstration", "(blank)", "(blank)", "(blank)"])
+        self.assertEqual(sum(row[10] or 0 for row in rows), 8)
+        self.assertIsNone(rows[-1][10])
+        self.assertIsNone(rows[-1][2], "An unnamed row must not inherit another row's address")
+        self.assertEqual(len({row[11] for row in rows}), 4)
+        self.assertEqual(audit["unpublishedEmployerRowCount"], 3)
+        self.assertEqual([record["rowId"] for record in audit["unpublishedEmployerRows"]], [row[0] for row in rows[1:]])
+        again, _ = parse_table(table, resource)
+        self.assertEqual(again, rows, "Repeated ingestion must remain deterministic")
+        other, _ = parse_table(table, resource_descriptor(raw_resource("2019-q4", "2019Q4-Employers NOC 2011")))
+        self.assertEqual(rows[0][11], other[0][11], "Published exact employer/location identity still supports history")
+        self.assertTrue(all(a[11] != b[11] for a, b in zip(rows[1:], other[1:])))
+
+    def test_empty_grouped_cells_cannot_inherit_an_unnamed_employer(self):
+        table = [["Province", "Employer", "Address", "Approved Positions"],
+                 ["Ontario", "(blank)", "Ottawa", 2], ["", "", "Ottawa", 3]]
+        with self.assertRaisesRegex(ValueError, "Missing employer identity"):
+            parse_table(table, resource_descriptor(raw_resource()))
 
     def test_parenthesised_official_noc_heading(self):
         table = [["National Occupational Classification (NOC) 2011 and Business Location"],
@@ -99,6 +184,38 @@ class FormatsAndRows(unittest.TestCase):
                  ["Fixture", "Ottawa", 213, "Computer and information systems managers", 2]]
         rows, _ = parse_table(table, resource_descriptor(raw_resource("old", "2021Q2-Employers")))
         self.assertEqual(rows[0][6:9], ["0213", "Computer and information systems managers", "2011"])
+
+    def test_combined_codes_restore_only_declared_edition_width(self):
+        header = ["Province", "Employer", "Address", "Occupation", "Approved Positions"]
+        table = [header,
+                 ["Québec", "Fixture A", "Montréal", "631-Directeurs de la restauration", 2],
+                 ["Québec", "Fixture B", "Montréal", "16-Cadres supérieurs", 3],
+                 ["Québec", "Fixture C", "Montréal", "6-Cadres", "x"],
+                 ["Québec", "Fixture D", "Montréal", "0631-Directeurs", 4]]
+        for edition in ("2006", "2011", "2016", "2021"):
+            with self.subTest(edition=edition):
+                resource = resource_descriptor(raw_resource(name=f"2016-Employers NOC {edition}"))
+                rows, audit = parse_table(table, resource)
+                width = 5 if edition == "2021" else 4
+                self.assertEqual([row[6] for row in rows], [code.zfill(width) for code in ("631", "16", "6", "0631")])
+                self.assertEqual([row[7] for row in rows], ["Directeurs de la restauration", "Cadres supérieurs", "Cadres", "Directeurs"])
+                self.assertEqual({row[8] for row in rows}, {edition})
+                self.assertEqual([row[10] for row in rows], [2, 3, None, 4])
+                padding = audit["occupationCodePadding"]
+                self.assertEqual(padding["count"], 4 if edition == "2021" else 3)
+                self.assertEqual(padding["samples"][0], {"line": 2, "sourceOccupation": "631-Directeurs de la restauration",
+                                                        "normalizedCode": "631".zfill(width), "declaredNocVersion": edition})
+                self.assertFalse(padding["samplesTruncated"])
+
+    def test_combined_short_codes_without_known_edition_are_not_guessed(self):
+        table = [["Employer", "Address", "Occupation", "Approved Positions"],
+                 ["Fixture A", "Ottawa", "16-Cadres supérieurs", 3],
+                 ["Fixture B", "Ottawa", "0631-Directeurs", 2]]
+        for title in ("2016-Employers", "2016-Employers NOC 2019"):
+            rows, audit = parse_table(table, resource_descriptor(raw_resource(name=title)))
+            self.assertEqual(rows[0][6:9], [None, "16-Cadres supérieurs", None])
+            self.assertEqual(rows[1][6], "0631")
+            self.assertEqual(audit["occupationCodePadding"]["count"], 0)
 
     def test_sectioned_annual_and_totals(self):
         resource = resource_descriptor(raw_resource("2015", "2015-Positive employers"))

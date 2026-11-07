@@ -4,7 +4,35 @@ The LMIA History page uses local, validated releases from Employment and Social
 Development Canada (ESDC), under the [Open Government Licence – Canada](https://open.canada.ca/en/open-government-licence-canada).
 Official catalogue: [Temporary Foreign Worker Program: Positive LMIA Employers List](https://open.canada.ca/data/en/dataset/90fed587-1364-4f33-a9ee-208181dc0b97).
 
-## Delivered coverage and source outage
+## Current catalogue and verification
+
+The official catalogue recovered on 7 November 2026 UTC. It lists 80 resources
+(including language alternatives), from which the pipeline selects 40
+non-overlapping reporting periods covering 20 June 2014–30 June 2026.
+The current published counts, coverage gaps and check result are always in
+`public/data/lmia/metadata.json`; a catalogue listing alone does not establish
+that every source file has been parsed successfully.
+
+The first recovered canonical refresh validated 261,651 records across 28
+periods. The remaining releases exposed French `Remarques:` footers, undefined
+legacy Windows-1252 bytes and explicit `(blank)` employer markers. The parser
+keeps the notes, preserves undefined bytes reversibly with an encoding audit,
+and includes unnamed rows and their approval counts without inferring an
+employer identity. The UI shows unresolved characters as visible hexadecimal
+escapes and separates unnamed records from known name/location totals.
+Exact French publisher labels for the Northwest Territories and head offices
+outside Canada retain their original text and mapped geography. Unrecognised
+future labels remain distinct from missing geography. Shortened occupation
+codes are padded only when an explicit NOC edition establishes their width.
+
+For an independent check of the current sources before publication, dispatch
+the **Validate application and data contracts** workflow on the selected ref
+with `check_lmia_sources=true`. This optional job uses read-only repository
+permissions, refreshes only its isolated checkout, and retains source bytes and
+validation evidence as a seven-day Actions artifact. It never commits or
+deploys. Ordinary pull-request checks continue to use offline fixtures.
+
+## Initial coverage and source outage
 
 The initial snapshot is **partial**: 12,823 published rows covering
 **1 April–30 September 2021**, split into two non-overlapping releases:
@@ -165,8 +193,10 @@ discovery fallback's explicitly unsuccessful catalogue check.
 The initial two real workbooks were independently checked against their
 published rows: Q2 has 8,168 records and 21,813 positions; Q3 has 4,655 records
 and 13,193 positions. The committed UI contract validator checks all 12,823
-records across both partitions. Full-series validation remains blocked until
-the official catalogue and other resources become accessible.
+records across both initial partitions. The recovered catalogue and additional
+historical files are checked by the optional live-source validation job; a
+complete check requires all selected releases to pass, not only the original
+two workbooks. The UI contract validator checks every published row.
 
 The CanQuery project was inspected as an implementation reference. No code
 was reused, so no CanQuery code is incorporated or presented as a data source.

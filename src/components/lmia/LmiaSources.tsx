@@ -1,7 +1,7 @@
 import type { LmiaMetadata } from '../../types/lmia';
 import { Disclosure } from '../ui/Disclosure';
 import { formatDate, formatNumber } from '../../lib/format';
-import { safeSourceUrl } from './model';
+import { publisherText, safeSourceUrl } from './model';
 
 export function lmiaDate(value: string | null | undefined): string {
   return value && Number.isFinite(Date.parse(value)) ? formatDate(value) : 'Not recorded';
@@ -38,7 +38,7 @@ export default function LmiaSources({ metadata }: { metadata: LmiaMetadata }) {
           <p>{resource.period?.label ?? 'Reporting period unavailable'} · {resource.language} · {resource.format} · {formatNumber(resource.rows)} records · {resource.status.replaceAll('_', ' ')}</p>
           <p>Retrieved {lmiaDate(resource.retrievedAt)}{resource.revision ? ` · Publisher revision: ${resource.revision}` : ''}</p>
           {resource.error && <p className="lmia__source-error">{resource.error}</p>}
-          {resource.notes.length > 0 && <ul>{resource.notes.map((note, index) => <li key={index}>{note}</li>)}</ul>}
+          {resource.notes.length > 0 && <ul>{resource.notes.map((note, index) => <li key={index}>{publisherText(note)}</li>)}</ul>}
           <details className="lmia__provenance"><summary>Resource identity</summary><p>Catalogue resource: <code>{resource.id}</code></p>{resource.sha256 && <p>SHA-256: <code>{resource.sha256}</code></p>}</details>
         </li>)}</ul></details>}
         {metadata.excludedResources.length > 0 && <details className="lmia__release-details"><summary>Alternative or excluded files ({metadata.excludedResources.length})</summary><ul className="lmia__release-list">{metadata.excludedResources.map((resource, index) => <li key={`${resource.id}-${index}`}><a className="link" href={safeSourceUrl(resource.url)} target="_blank" rel="noopener noreferrer">{resource.name}</a><p>{resource.reason}</p></li>)}</ul></details>}

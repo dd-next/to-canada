@@ -3,6 +3,12 @@ name: Validate application and data contracts
 on:
   pull_request:
   workflow_dispatch:
+    inputs:
+      check_lmia_sources:
+        description: 'Also validate current official LMIA releases in an isolated checkout (does not publish)'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -43,3 +49,32 @@ jobs:
           npm run check:directories
           python3 -I pipeline/tests/test_standalone_publication.py
       - run: npm run build
+
+  official-lmia-sources:
+    if: github.event_name == 'workflow_dispatch' && inputs.check_lmia_sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - run: pip install -r pipeline/requirements.txt
+      - name: Validate current official releases without publishing
+        env:
+          NORTHWARD_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python3 -I pipeline/lmia/run.py
+          python3 -I pipeline/lmia/check.py
+      - name: Keep source bytes and validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lmia-official-source-validation
+          retention-days: 7
+          path: |
+            public/data/lmia
+            data/raw/open.canada.ca
+            data/raw/www.esdc.gc.ca
