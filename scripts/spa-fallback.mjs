@@ -17,7 +17,14 @@ if (existsSync(index)) {
     }
   };
   const routes = ['compare', 'budget', 'insights', 'immigration', 'express-entry', 'updates', 'sources', 'about'];
-  for (const p of read('public/data/places.json')) routes.push(`place/${p.id}`);
+  for (const p of read('public/data/places.json')) {
+    routes.push(`place/${p.id}`);
+    const neighbourhoods = read(`public/data/neighbourhoods/${p.id}.json`);
+    if (Array.isArray(neighbourhoods.neighbourhoods)) {
+      routes.push(`place/${p.id}/neighbourhoods`);
+      for (const n of neighbourhoods.neighbourhoods) routes.push(`place/${p.id}/neighbourhoods/${n.id}`);
+    }
+  }
   for (const i of read('public/data/insights/index.json')) routes.push(`insights/${i.id}`);
   for (const r of routes) {
     const file = join(dist, `${r}.html`);

@@ -28,6 +28,8 @@ jobs:
         run: |
           npm run check:model
           npm run data:check
+          npm run neighbourhoods:check
+          python3 -I pipeline/neighbourhoods/test_neighbourhoods.py
           python3 -I pipeline/test_pipeline.py
           python3 -I pipeline/tests/test_wage_editions.py
           python3 -I pipeline/tests/test_freshness.py

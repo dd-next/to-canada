@@ -36,6 +36,18 @@ manifest = json.loads((D / "manifest.json").read_text())
 # 1. Not a provisional build
 check(manifest.get("provisional") is False, "snapshot is not provisional")
 
+from neighbourhoods.check import validate as validate_neighbourhoods
+for city in ("edmonton", "calgary"):
+    neighbourhood_path = D / "neighbourhoods" / f"{city}.json"
+    if neighbourhood_path.exists():
+        try:
+            bundle = json.loads(neighbourhood_path.read_text())
+            validate_neighbourhoods(bundle)
+            check(bundle["placeId"] == city, f"{city} neighbourhood geography matches its file")
+            check(f"neighbourhoods/{city}.json" in manifest["files"], f"{city} neighbourhoods included in manifest")
+        except (AssertionError, KeyError, ValueError) as error:
+            fails.append(f"{city} neighbourhood validation failed: {error}")
+
 # 2. Plausible ranges by unit (catches scalar-factor and unit mix-ups)
 RANGES = {"CAD_month": (300, 6000), "CAD_hour": (10, 200), "percent": (-100, 100), "degC": (-45, 40),
           "mm": (0, 3500), "cm": (0, 1000), "per_1000": (0, 100), "pp": (-20, 20), "days": (0, 366)}

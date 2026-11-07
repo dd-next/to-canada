@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import ExplorePage from './pages/ExplorePage';
 
 const PlacePage = lazy(() => import('./pages/PlacePage'));
+const NeighbourhoodsPage = lazy(() => import('./pages/NeighbourhoodsPage'));
 const ComparePage = lazy(() => import('./pages/ComparePage'));
 const BudgetPage = lazy(() => import('./pages/BudgetPage'));
 const InsightsPage = lazy(() => import('./pages/InsightsPage'));
@@ -37,6 +38,8 @@ export default function App() {
             <Routes>
               <Route path="/" element={<ExplorePage />} />
               <Route path="/place/:placeId" element={<PlacePage />} />
+              <Route path="/place/:placeId/neighbourhoods" element={<NeighbourhoodsPage />} />
+              <Route path="/place/:placeId/neighbourhoods/:neighbourhoodId" element={<NeighbourhoodsPage />} />
               <Route path="/compare" element={<ComparePage />} />
               <Route path="/budget" element={<BudgetPage />} />
               <Route path="/insights" element={<InsightsPage />} />
