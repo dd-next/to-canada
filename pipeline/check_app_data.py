@@ -17,6 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common.contract import ROOT  # noqa: E402
+from common.standalone import validate as validate_standalone  # noqa: E402
 
 D = Path(os.environ.get("NORTHWARD_APP_DATA", ROOT / "public" / "data"))
 VERIFY_SOURCES = "--sources" in sys.argv
@@ -35,6 +36,11 @@ manifest = json.loads((D / "manifest.json").read_text())
 
 # 1. Not a provisional build
 check(manifest.get("provisional") is False, "snapshot is not provisional")
+try:
+    validate_standalone(D)
+    oks.append("independent Services and LMIA snapshots validated when present")
+except (AssertionError, KeyError, ValueError) as error:
+    fails.append(f"independent feed validation failed: {error}")
 
 from neighbourhoods.check import validate as validate_neighbourhoods
 for city in ("edmonton", "calgary"):

@@ -39,13 +39,24 @@ organisation whose data it uses.
 * **Insights** (`/insights`) — eight data explorations (housing, arrival budget,
   wages, labour markets, immigrant income, settlement, language and daily life,
   climate) with computed findings that jump to the map.
-* **Immigration** (`/immigration`) — a searchable reference directory of 67
+* **Immigration → Programs** (`/immigration/programs`) — a searchable reference directory of 68
   federal, provincial, Quebec and community program records from official pages
   (status shown only where the page states it), plus newcomer support links.
   Reference only: no eligibility scoring.
-* **IRCC Updates** (`/updates`) — searchable official news, program delivery
+* **Immigration → IRCC Updates** (`/immigration/updates`) — searchable official news, program delivery
   updates and Express Entry rounds. Filter by type and topic; follow each item
   to its official publication. Source coverage and failed checks remain visible.
+* **Immigration → LMIA History** (`/immigration/lmia`) — searchable historical
+  positive LMIA employer/location records, with reporting-period, geography,
+  occupation, NOC-version and stream filters. The initial snapshot is explicitly
+  partial: 12,823 named-employer records from official 2021 Q2 and Q3 releases.
+  The official catalogue and most download URLs were unavailable at import;
+  the page shows those gaps instead of claiming a complete historical series.
+* **Services** (`/services`) — all 1,908 resources in the current Awesome Canada
+  catalogue, across 35 original categories and 163 source jurisdiction labels.
+  Search, filters, stable entry links and pagination cover the complete snapshot.
+  The [update log](https://dd-next.github.io/to-canada/services/updates) distinguishes
+  source checks from content changes; Sources & credits preserves attribution.
 * **EE Calculator** (`/express-entry`) — Express Entry CRS estimate under the
   November 3, 2026 rules, including the labour market integration factor and
   a 1,270-point maximum. Five approved language tests, accompanying-partner
@@ -94,6 +105,10 @@ node scripts/check-model.mjs   # budget and pay arithmetic checks
 npm run check:crs      # offline IRCC reference cases, score bands and CRS limits
 npm run updates:refresh # lightweight IRCC-only refresh, independent of statistical downloads
 npm run updates:check   # validate the saved IRCC feed
+npm run services:refresh # daily/manual Awesome Canada catalogue check
+npm run services:check   # validate catalogue, audit history and full MIT notice
+npm run lmia:refresh     # weekly/manual official LMIA metadata and changed-file check
+npm run lmia:check       # validate periods, resource provenance, partitions and counts
 npm run neighbourhoods:refresh # manual, staged Edmonton/Calgary refresh
 npm run neighbourhoods:check   # validate neighbourhood sources and values
 ```
@@ -141,6 +156,20 @@ snapshot or change retrieval timestamps to hide failure. Missing ignored raw
 files cause strict `--sources` verification to fail explicitly; the default
 snapshot check reports those integration checks as skipped.
 
+**Independent directories.** Services checks run daily at 07:43 UTC and LMIA
+metadata checks run Wednesdays at 08:47 UTC, each with an Actions manual trigger.
+Their workflows share `northward-data-publication` with the existing refreshes,
+commit only their own directory and deploy the exact validated commit. Both
+statistical publication paths preserve these feeds and their histories under
+the shared publication lock. A successful check of one feed never updates
+another feed's content date. See [Services](docs/SERVICES.md), [LMIA](docs/LMIA.md)
+and [third-party notices](THIRD_PARTY_NOTICES.md).
+
+**Immigration links.** `/immigration` opens Programs. Legacy `/express-entry`
+and `/updates` links redirect to the corresponding Immigration child route,
+preserving query parameters and hashes. Calculator answers remain component
+state only and clear on leaving or reloading the page.
+
 ```bash
 npm run check:model
 npm run data:check
@@ -150,6 +179,12 @@ python3 -I pipeline/tests/test_freshness.py
 python3 -I pipeline/immigration/test_periods.py
 npm run updates:check
 python3 -I pipeline/updates/test_updates.py
+npm run services:check
+python3 -I pipeline/services/test_services.py
+npm run lmia:check
+python3 -I pipeline/lmia/test_lmia.py
+npm run check:directories
+python3 -I pipeline/tests/test_standalone_publication.py
 npm run build
 ```
 

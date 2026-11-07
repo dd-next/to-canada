@@ -5,8 +5,20 @@ export const NAV = [
   { to: '/budget', label: 'Budget' },
   { to: '/insights', label: 'Insights' },
   { to: '/immigration', label: 'Immigration' },
-  { to: '/express-entry', label: 'EE Calculator' },
-  { to: '/updates', label: 'IRCC Updates' },
+  { to: '/services', label: 'Services' },
+] as const;
+
+export const IMMIGRATION_NAV = [
+  { to: '/immigration/programs', label: 'Programs' },
+  { to: '/immigration/express-entry', label: 'EE Calculator' },
+  { to: '/immigration/updates', label: 'IRCC Updates' },
+  { to: '/immigration/lmia', label: 'LMIA History' },
+] as const;
+
+export const SERVICES_NAV = [
+  { to: '/services', label: 'Directory' },
+  { to: '/services/updates', label: 'Update log' },
+  { to: '/services/sources', label: 'Sources & credits' },
 ] as const;
 
 export const FOOTER_NAV = [

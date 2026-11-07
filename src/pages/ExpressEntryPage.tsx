@@ -156,7 +156,7 @@ export default function ExpressEntryPage() {
               hint="Paid work in TEER 0, 1, 2 or 3, full-time or the part-time equivalent, while physically in Canada." />
             <LanguageFields id="spouseLanguage" title="Partner’s official language" value={answers.spouseLanguage} onChange={(v) => update('spouseLanguage', v)} optional />
           </Section>}
-          <div className="crs__actions"><a className="btn btn--primary btn--md" href="#crs-result-title">View your score ↑</a><Button onClick={() => setAnswers(emptyCrsAnswers())}>Reset all answers</Button><ButtonLink to="/immigration" variant="ghost">Explore immigration programs →</ButtonLink></div>
+          <div className="crs__actions"><a className="btn btn--primary btn--md" href="#crs-result-title">View your score ↑</a><Button onClick={() => setAnswers(emptyCrsAnswers())}>Reset all answers</Button><ButtonLink to="/immigration/programs" variant="ghost">Explore immigration programs →</ButtonLink></div>
         </form>
         <CrsResults assessment={assessment} />
       </div>

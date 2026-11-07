@@ -121,15 +121,15 @@ export function ImmigrationSection({ core, place, series, programs }: { core: Co
             ))}
           </ul>
           <div className="cluster">
-            <ButtonLink to={`/immigration?place=${encodeURIComponent(place.id)}`} variant="outline" size="sm" iconRight="arrowRight">
+            <ButtonLink to={`/immigration/programs?place=${encodeURIComponent(place.id)}`} variant="outline" size="sm" iconRight="arrowRight">
               All programs for {place.name}
             </ButtonLink>
-            <ButtonLink to={`/immigration?jurisdiction=${place.province}`} variant="ghost" size="sm" iconRight="arrowRight">
+            <ButtonLink to={`/immigration/programs?jurisdiction=${place.province}`} variant="ghost" size="sm" iconRight="arrowRight">
               {provinceName(place.province)} only
             </ButtonLink>
           </div>
           <p className="ppanel__note">
-            Reference only, not eligibility advice. Status is shown only where the official page stated it on the day it was checked. <Link to="/immigration">All programs</Link>
+            Reference only, not eligibility advice. Status is shown only where the official page stated it on the day it was checked. <Link to="/immigration/programs">All programs</Link>
           </p>
         </div>
       </div>
