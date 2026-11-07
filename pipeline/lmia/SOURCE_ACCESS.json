@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-11-07T18:29:15.931217+00:00",
+  "officialDataset": "https://open.canada.ca/data/en/dataset/90fed587-1364-4f33-a9ee-208181dc0b97",
+  "officialMetadataStatus": "unavailable",
+  "error": "HTTP 503 upstream connect error or disconnect/reset before headers. reset reason: connection timeout",
+  "blockedEndpoints": [
+    "https://open.canada.ca/data/api/3/action/package_show?id=90fed587-1364-4f33-a9ee-208181dc0b97",
+    "https://open.canada.ca/data/en/api/3/action/package_show?id=90fed587-1364-4f33-a9ee-208181dc0b97",
+    "https://www.open.canada.ca/data/api/3/action/package_show?id=90fed587-1364-4f33-a9ee-208181dc0b97",
+    "https://search.open.canada.ca/opendata/?id=90fed587-1364-4f33-a9ee-208181dc0b97",
+    "https://open.canada.ca/data/dataset/90fed587-1364-4f33-a9ee-208181dc0b97.xml",
+    "https://open.canada.ca/data/dataset/90fed587-1364-4f33-a9ee-208181dc0b97/resource/2b94f80d-fa27-4d2e-9b90-6f67fe69bf50/download/tfwp_2026q2_pos_en.xlsx"
+  ],
+  "secondaryManifest": {
+    "url": "https://lmiawatch.ca/downloads/esdc_resources.csv",
+    "positiveResources": 40,
+    "firstListedPeriod": "2014",
+    "lastListedPeriod": "2026Q2",
+    "use": "Discovery only; current official metadata completeness not established; no derived employer rows imported."
+  },
+  "officialFiles": [
+    {
+      "period": "2021Q2",
+      "officialDownloadUrl": "https://www.esdc.gc.ca/ouvert-open/bca-seb/imt-lmi/TFWP_2021Q2_Positive_EN.xlsx",
+      "discoverySource": "https://lmiawatch.ca/downloads/esdc_resources.csv",
+      "resourceIdFromSecondaryManifest": "55209ff8-a9cd-466e-85f3-72a0a31a5e9b",
+      "retrievedAt": "2026-11-07T18:27:37.603023+00:00",
+      "sha256": "a06d94b053f08d993ae3de0f56fc5642ea2c263483cd6e3c5a04b511a1583322",
+      "matchesSecondaryManifestChecksum": true,
+      "bytes": 408682,
+      "verifiedWorkbookHeading": true,
+      "nocVersionInWorkbook": "2011",
+      "metadataStatus": "Official current catalogue unavailable; URL discovered through secondary source manifest.",
+      "workbookTitle": "Employers Who Were Issued a Positive Labour Market Impact Assessment (LMIA) by Program Stream, National Occupational Classification (NOC) 2011 and Business Location, April to June 2021",
+      "columns": [
+        "Province/Territory",
+        "Program Stream",
+        "Employer ",
+        "Address",
+        "Occupation",
+        "Approved Positions"
+      ],
+      "secondaryManifestRecord": {
+        "resource_id": "55209ff8-a9cd-466e-85f3-72a0a31a5e9b",
+        "dataset": "positive",
+        "period": "2021Q2",
+        "name": "2021Q2-Employers Who Were Issued a Positive Labour Market Impact Assessment (LMIA) by Program Stream, National Occupational Classification (NOC) 2011 and Business Location, April to June 2021",
+        "url": "https://www.esdc.gc.ca/ouvert-open/bca-seb/imt-lmi/TFWP_2021Q2_Positive_EN.xlsx",
+        "published": "2021-09-03",
+        "sha256": "a06d94b053f08d993ae3de0f56fc5642ea2c263483cd6e3c5a04b511a1583322",
+        "bytes": "408682",
+        "rows_loaded": "8168",
+        "loaded_at": "2026-10-20T00:12:46Z"
+      }
+    },
+    {
+      "period": "2021Q3",
+      "officialDownloadUrl": "https://www.esdc.gc.ca/ouvert-open/bca-seb/ae-ei/TFWP_2021Q3_Positive_EN.xlsx",
+      "discoverySource": "https://lmiawatch.ca/downloads/esdc_resources.csv",
+      "resourceIdFromSecondaryManifest": "cbb38578-9116-44f4-9976-124c1031e201",
+      "retrievedAt": "2026-11-07T18:27:36.615028+00:00",
+      "sha256": "372bf17d4d167f816df892531e51c5fd9e0abbcb0ab5f59e4098611a96617188",
+      "matchesSecondaryManifestChecksum": true,
+      "bytes": 246782,
+      "verifiedWorkbookHeading": true,
+      "nocVersionInWorkbook": "2011",
+      "metadataStatus": "Official current catalogue unavailable; URL discovered through secondary source manifest.",
+      "workbookTitle": "Employers Who Were Issued a Positive Labour Market Impact Assessment (LMIA) by Program Stream, National Occupational Classification (NOC) 2011 and Business Location, July to September 2021",
+      "columns": [
+        "Province/Territory",
+        "Program Stream",
+        "Employer ",
+        "Address ",
+        "Occupation ",
+        "Approved Positions"
+      ],
+      "secondaryManifestRecord": {
+        "resource_id": "cbb38578-9116-44f4-9976-124c1031e201",
+        "dataset": "positive",
+        "period": "2021Q3",
+        "name": "2021Q3-Employers Who Were Issued a Positive Labour Market Impact Assessment (LMIA) by Program Stream, National Occupational Classification (NOC) 2011 and Business Location, July to September 2021",
+        "url": "https://www.esdc.gc.ca/ouvert-open/bca-seb/ae-ei/TFWP_2021Q3_Positive_EN.xlsx",
+        "published": "2021-12-10",
+        "sha256": "372bf17d4d167f816df892531e51c5fd9e0abbcb0ab5f59e4098611a96617188",
+        "bytes": "246782",
+        "rows_loaded": "4655",
+        "loaded_at": "2026-10-20T00:12:46Z"
+      }
+    }
+  ]
+}
