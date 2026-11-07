@@ -94,6 +94,20 @@ def build() -> int:
             prev = sources.get(s["id"])
             if prev is None or (s.get("retrievedAt") or "") > (prev.get("retrievedAt") or ""):
                 sources[s["id"]] = s
+    # City bundles are self-contained. Discover them so adding a city cannot
+    # silently omit its sources or profile file from the app generation.
+    neighbourhood_bundles = []
+    for path in sorted((PROCESSED / "neighbourhoods").glob("*.json")):
+        if path.name == "sources.json":
+            continue
+        bundle = json.loads(path.read_text(encoding="utf-8"))
+        if bundle.get("placeId") != path.stem:
+            errors.append(f"Neighbourhood bundle filename mismatch: {path.name}")
+        neighbourhood_bundles.append(bundle)
+        for source in bundle["sources"]:
+            previous = sources.get(source["id"])
+            if previous is None or source["retrievedAt"] >= previous.get("retrievedAt", ""):
+                sources[source["id"]] = source
 
     # ---------------------------------------------------------------- metrics
     metrics: dict[str, dict] = {}
@@ -218,15 +232,14 @@ def build() -> int:
 
     # ---------------------------------------------------------------- domain extras
     from neighbourhoods.check import validate as validate_neighbourhoods
-    for city in ("edmonton", "calgary"):
-        neighbourhoods = read("neighbourhoods", city)
-        if neighbourhoods is not None:
-            validate_neighbourhoods(neighbourhoods)
-            if neighbourhoods["placeId"] != city or city not in place_ids:
-                errors.append(f"Invalid neighbourhood city: {city}")
-            if any(s["id"] not in sources for s in neighbourhoods["sources"]):
-                errors.append(f"Unregistered neighbourhood source: {city}")
-            dump(f"neighbourhoods/{city}.json", neighbourhoods, files, records=len(neighbourhoods["neighbourhoods"]))
+    for neighbourhoods in neighbourhood_bundles:
+        city = neighbourhoods["placeId"]
+        validate_neighbourhoods(neighbourhoods)
+        if city not in place_ids:
+            errors.append(f"Invalid neighbourhood city: {city}")
+        if any(s["id"] not in sources for s in neighbourhoods["sources"]):
+            errors.append(f"Unregistered neighbourhood source: {city}")
+        dump(f"neighbourhoods/{city}.json", neighbourhoods, files, records=len(neighbourhoods["neighbourhoods"]))
     occ = read("work", "occupations")
     if occ is not None:
         dump("occupations.json", occ, files)
