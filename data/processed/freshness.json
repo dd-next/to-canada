@@ -1,5 +1,49 @@
 [
  {
+  "sourceId": "calgary-2axz-xm4q",
+  "title": "Transit LRT Stations",
+  "ourPeriod": "Dataset updated 2026-11-01",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": null
+ },
+ {
+  "sourceId": "calgary-f9wk-wej9",
+  "title": "2021 Federal Census Population and Dwellings by Community",
+  "ourPeriod": "2021",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": null
+ },
+ {
+  "sourceId": "calgary-kami-qbfh",
+  "title": "Parks Sites",
+  "ourPeriod": "Dataset updated 2026-11-05",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": null
+ },
+ {
+  "sourceId": "calgary-msjx-5ygv",
+  "title": "2021 Federal Census Families and Households by Community",
+  "ourPeriod": "2021",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": null
+ },
+ {
   "sourceId": "cmhc-rms-2025",
   "title": "Rental Market Survey Data Tables, 2025 edition (October survey)",
   "ourPeriod": "2025-10 (October survey)",
@@ -7,8 +51,8 @@
   "latestRelease": null,
   "status": "current",
   "note": "Newest workbook edition linked by the official CMHC catalog: 2025; stored edition: 2025.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "comm-kelowna",
@@ -18,7 +62,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -29,7 +73,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -40,7 +84,62 @@
   "latestRelease": null,
   "status": "static",
   "note": "Climate normals 1991-2020: fixed 30-year period; the next set is not yet published.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": null
+ },
+ {
+  "sourceId": "edmonton-5bk4-5txu",
+  "title": "2021 Federal Census: Neighbourhoods as of Official Census Day",
+  "ourPeriod": "2021",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": null
+ },
+ {
+  "sourceId": "edmonton-9325-erna",
+  "title": "2021 Federal Census: 25% Data (Long Form)",
+  "ourPeriod": "2021",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": null
+ },
+ {
+  "sourceId": "edmonton-fhxi-cnhe",
+  "title": "LRT Stations and Stops",
+  "ourPeriod": "Dataset updated 2026-10-28",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": null
+ },
+ {
+  "sourceId": "edmonton-gdd9-eqv9",
+  "title": "Parks",
+  "ourPeriod": "Dataset updated 2026-11-02",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": null
+ },
+ {
+  "sourceId": "edmonton-rw8s-vqrs",
+  "title": "2021 Federal Census: 100% Data (Short Form)",
+  "ourPeriod": "2021",
+  "latestPeriod": null,
+  "latestRelease": null,
+  "status": "manual_update_required",
+  "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -51,7 +150,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -62,7 +161,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -73,7 +172,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -84,7 +183,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -95,7 +194,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -106,7 +205,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -117,7 +216,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -128,7 +227,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -139,7 +238,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -150,7 +249,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -161,19 +260,19 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
   "sourceId": "ircc-pr-cma",
   "title": "Permanent Residents - Monthly IRCC Updates: Canada - Admissions of Permanent Residents by Province/Territory and Census Metropolitan Area of Intended Destination",
-  "ourPeriod": "January 2015 to August 2026 (monthly); annual totals 2015-2025; year-to-date 2026-01 to 2026-08",
+  "ourPeriod": "Jan 2015 to Aug 2026 (monthly); annual totals 2015-2025; year-to-date 2026-01 to 2026-08",
   "latestPeriod": "2026-08",
   "latestRelease": "2026-10-20",
   "status": "current",
   "note": "Dataset last modified 2026-10-20, same as our 2026-10-20 update; IRCC publishes monthly (about the 20th).",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "ircc-pre-arrival",
@@ -183,7 +282,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -194,7 +293,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -205,7 +304,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -216,7 +315,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -227,7 +326,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -238,7 +337,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -249,8 +348,8 @@
   "latestRelease": "2025-11-19",
   "status": "current",
   "note": "2025 is the newest edition listed on open.canada.ca (dataset modified 2025-11-19). Editions are annual, usually Nov-Dec.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "prog-ab",
@@ -260,7 +359,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -271,7 +370,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -282,7 +381,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -293,7 +392,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -304,7 +403,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -315,7 +414,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -326,7 +425,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -337,7 +436,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -348,7 +447,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -359,7 +458,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -370,7 +469,7 @@
   "latestRelease": null,
   "status": "manual_update_required",
   "note": "Web page read by hand; no machine-readable release signal. Re-read when refreshing programs.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -381,8 +480,8 @@
   "latestRelease": "2026-04-29",
   "status": "current",
   "note": "Matches StatCan's latest release (2026-04-29); cube ends 2025-01-01.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "statcan-11-10-0104-01",
@@ -392,41 +491,41 @@
   "latestRelease": "2026-04-29",
   "status": "current",
   "note": "Matches StatCan's latest release (2026-04-29); cube ends 2025-01-01.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "statcan-14-10-0292-01",
   "title": "Labour force characteristics by territory, three-month moving average, seasonally adjusted and unadjusted",
-  "ourPeriod": "1992-03-01 to 2026-09-01",
-  "latestPeriod": "2026-09-01",
-  "latestRelease": "2026-10-09",
+  "ourPeriod": "1992-03-01 to 2026-10-01",
+  "latestPeriod": "2026-10-01",
+  "latestRelease": "2026-11-06",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "note": "Matches StatCan's latest release (2026-11-06); cube ends 2026-10-01.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "statcan-14-10-0459-01",
   "title": "Labour force characteristics by census metropolitan area, three-month moving average, seasonally adjusted",
-  "ourPeriod": "2011-01-01 to 2026-09-01",
-  "latestPeriod": "2026-09-01",
-  "latestRelease": "2026-10-09",
+  "ourPeriod": "2011-01-01 to 2026-10-01",
+  "latestPeriod": "2026-10-01",
+  "latestRelease": "2026-11-06",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "note": "Matches StatCan's latest release (2026-11-06); cube ends 2026-10-01.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "statcan-14-10-0462-01",
   "title": "Labour force characteristics by economic region, three-month moving average, unadjusted for seasonality",
-  "ourPeriod": "2011-03-01 to 2026-09-01",
-  "latestPeriod": "2026-09-01",
-  "latestRelease": "2026-10-09",
+  "ourPeriod": "2011-03-01 to 2026-10-01",
+  "latestPeriod": "2026-10-01",
+  "latestRelease": "2026-11-06",
   "status": "current",
-  "note": "Matches StatCan's latest release (2026-10-09); cube ends 2026-09-01.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "note": "Matches StatCan's latest release (2026-11-06); cube ends 2026-10-01.",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "statcan-17-10-0148-01",
@@ -436,8 +535,8 @@
   "latestRelease": "2026-01-14",
   "status": "current",
   "note": "Matches StatCan's latest release (2026-01-14); cube ends 2025-01-01.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "statcan-18-10-0004-01",
@@ -447,30 +546,30 @@
   "latestRelease": "2026-10-19",
   "status": "current",
   "note": "Matches StatCan's latest release (2026-10-19); cube ends 2026-09-01.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "statcan-43-10-0022-01",
   "title": "Mobility of immigrant taxfilers by census metropolitan areas and tax year",
-  "ourPeriod": "Tax years 2007-2023; admission years 2007-2023",
+  "ourPeriod": "Tax years 2007-2023; five-year cohort 2018",
   "latestPeriod": "2023-01-01",
   "latestRelease": "2025-12-19",
   "status": "current",
   "note": "Matches StatCan's latest release (2025-12-19); cube ends 2023-01-01.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "statcan-43-10-0030-01",
   "title": "Immigrant taxfilers by economic outcomes and tax year, Canada, provinces and census metropolitan areas, 2023 constant dollars",
-  "ourPeriod": "Tax years 2009-2023; admission years 2008-2022",
+  "ourPeriod": "Tax years 2009-2023; five-year cohort 2018",
   "latestPeriod": "2023-01-01",
   "latestRelease": "2025-12-08",
   "status": "current",
   "note": "Matches StatCan's latest release (2025-12-08); cube ends 2023-01-01.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "statcan-46-10-0092-01",
@@ -480,8 +579,8 @@
   "latestRelease": "2026-09-09",
   "status": "current",
   "note": "Matches StatCan's latest release (2026-09-09); cube ends 2026-04-01.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
-  "lastSuccessfulCheckAt": "2026-11-05T13:10:20+00:00"
+  "checkedAt": "2026-11-09T21:04:25+00:00",
+  "lastSuccessfulCheckAt": "2026-11-09T21:04:25+00:00"
  },
  {
   "sourceId": "statcan-98-10-0002-01",
@@ -491,7 +590,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -502,7 +601,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -513,7 +612,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -524,7 +623,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -535,7 +634,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -546,7 +645,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -557,7 +656,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -568,7 +667,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -579,7 +678,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "Census of Population 2021: fixed reference year; the next census is 2026 (first results expected 2027).",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -590,7 +689,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "2021 Census boundary files: fixed vintage until the 2026 Census geography.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  },
  {
@@ -601,7 +700,7 @@
   "latestRelease": null,
   "status": "static",
   "note": "NOC 2021 Version 1.0 classification: fixed until a new NOC version is published.",
-  "checkedAt": "2026-11-05T13:10:20+00:00",
+  "checkedAt": "2026-11-09T21:04:25+00:00",
   "lastSuccessfulCheckAt": null
  }
 ]

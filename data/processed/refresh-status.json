@@ -1,11 +1,14 @@
 {
- "startedAt": "2026-11-05T13:09:31+00:00",
+ "startedAt": "2026-11-09T20:52:38+00:00",
  "domains": [
+  "geo",
   "housing",
-  "work"
+  "work",
+  "immigration"
  ],
- "lastSuccessfulUpdateAt": "2026-11-05T13:10:21+00:00",
+ "lastSuccessfulCheckAt": "2026-11-09T21:04:27+00:00",
+ "lastSuccessfulUpdateAt": "2026-11-09T21:04:27+00:00",
  "status": "updated",
  "errors": [],
- "finishedAt": "2026-11-05T13:10:21+00:00"
+ "finishedAt": "2026-11-09T21:04:27+00:00"
 }

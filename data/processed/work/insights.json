@@ -710,7 +710,7 @@
    "winnipeg",
    "yellowknife"
   ],
-  "computedAt": "2026-11-05T13:10:18+00:00"
+  "computedAt": "2026-11-09T20:53:34+00:00"
  },
  {
   "id": "work-labour",
@@ -722,16 +722,16 @@
    {
     "id": "labour-rate-spread",
     "kind": "observation",
-    "headline": "Unemployment ranges from 4.0% in Sherbrooke to 9.3% in Kelowna (three months to 2026-09)",
-    "detail": "Across 23 CMAs the seasonally adjusted three-month average unemployment rate runs from 4.0% (Sherbrooke) to 9.3% (Kelowna); the middle is about 6.4%. Employment rates (share of everyone 15+ who is working) range from 57.5% in London to 66.8% in Calgary, which also reflects age structure and who is in the labour force. Ottawa-Gatineau parts are shown separately from whole-CMA ranks. Differences of one point or less between nearby cities are often within sampling error.",
+    "headline": "Unemployment ranges from 3.6% in Thunder Bay to 9.6% in Kelowna (three months to 2026-10)",
+    "detail": "Across 23 CMAs the seasonally adjusted three-month average unemployment rate runs from 3.6% (Thunder Bay) to 9.6% (Kelowna); the middle is about 6.6%. Employment rates (share of everyone 15+ who is working) range from 57.4% in London to 66.7% in Calgary, which also reflects age structure and who is in the labour force. Ottawa-Gatineau parts are shown separately from whole-CMA ranks. Differences of one point or less between nearby cities are often within sampling error.",
     "stat": {
-     "value": 5.3,
+     "value": 6.0,
      "unit": "pp",
      "label": "Highest minus lowest unemployment rate",
-     "period": "2026-09"
+     "period": "2026-10"
     },
     "placeIds": [
-     "sherbrooke",
+     "thunder-bay",
      "kelowna",
      "calgary",
      "london",
@@ -742,38 +742,35 @@
     "sourceIds": [
      "statcan-14-10-0459-01"
     ],
-    "calc": "Table 14-10-0459-01, seasonally adjusted, Estimate, REF_DATE 2026-09; unemployment rate and employment rate for whole-CMA places on the same geography; territories, Charlottetown (provincial) and Brandon (regional, unadjusted) excluded from the ranking."
+    "calc": "Table 14-10-0459-01, seasonally adjusted, Estimate, REF_DATE 2026-10; unemployment rate and employment rate for whole-CMA places on the same geography; territories, Charlottetown (provincial) and Brandon (regional, unadjusted) excluded from the ranking."
    },
    {
     "id": "labour-yoy-change",
     "kind": "calculation",
-    "headline": "Compared with a year earlier, unemployment fell in 14 of 23 places and rose in 9, but only 5 changes are clearly larger than sampling noise",
-    "detail": "Changes beyond 1.96 standard errors: Windsor -3.1 pp, Toronto -1.9 pp, Calgary -1.8 pp, Winnipeg -1.4 pp, London +2.1 pp. Every other change is small relative to the survey's sampling error and should not be read as a trend. Both values are three-month moving averages, so a one-month swing is dampened and consecutive months overlap.",
+    "headline": "Compared with a year earlier, unemployment fell in 14 of 23 places and rose in 9, but only 2 changes are clearly larger than sampling noise",
+    "detail": "Changes beyond 1.96 standard errors: Toronto -1.5 pp, Winnipeg -1.4 pp. Every other change is small relative to the survey's sampling error and should not be read as a trend. Both values are three-month moving averages, so a one-month swing is dampened and consecutive months overlap.",
     "stat": {
-     "value": 5,
+     "value": 2,
      "unit": "count",
      "label": "Changes exceeding 1.96 standard errors",
-     "period": "2026-09"
+     "period": "2026-10"
     },
     "placeIds": [
-     "windsor",
      "toronto",
-     "calgary",
-     "winnipeg",
-     "london"
+     "winnipeg"
     ],
     "metricId": "lfs_unemployment_rate_change_1y",
     "sourceIds": [
      "statcan-14-10-0459-01"
     ],
-    "calc": "change = rate(2026-09) - rate(2025-09) from 14-10-0459-01 (SA, 3-month moving average); significant if |change| > 1.96 x published standard error of year-over-year change; whole-CMA places."
+    "calc": "change = rate(2026-10) - rate(2025-10) from 14-10-0459-01 (SA, 3-month moving average); significant if |change| > 1.96 x published standard error of year-over-year change; whole-CMA places."
    }
   ],
   "charts": [
    {
     "id": "unemployment-ranked",
     "type": "bar_ranked",
-    "title": "Unemployment rate by city, three months to 2026-09",
+    "title": "Unemployment rate by city, three months to 2026-10",
     "subtitle": "Seasonally adjusted three-month moving average, population 15+",
     "unit": "percent",
     "series": [
@@ -783,77 +780,67 @@
       "points": [
        {
         "x": "Kelowna",
-        "y": 9.3,
+        "y": 9.6,
         "placeId": "kelowna"
        },
        {
         "x": "London",
-        "y": 8.4,
+        "y": 8.1,
         "placeId": "london"
        },
        {
-        "x": "Kitchener–Waterloo",
-        "y": 7.7,
-        "placeId": "kitchener-waterloo"
-       },
-       {
-        "x": "Moncton",
-        "y": 7.6,
-        "placeId": "moncton"
-       },
-       {
-        "x": "Windsor",
-        "y": 7.3,
-        "placeId": "windsor"
-       },
-       {
-        "x": "Toronto",
-        "y": 6.9,
-        "placeId": "toronto"
-       },
-       {
         "x": "Hamilton",
-        "y": 6.9,
+        "y": 7.6,
         "placeId": "hamilton"
        },
        {
+        "x": "Windsor",
+        "y": 7.5,
+        "placeId": "windsor"
+       },
+       {
+        "x": "Moncton",
+        "y": 7.2,
+        "placeId": "moncton"
+       },
+       {
+        "x": "Toronto",
+        "y": 7.1,
+        "placeId": "toronto"
+       },
+       {
+        "x": "Kitchener–Waterloo",
+        "y": 7.1,
+        "placeId": "kitchener-waterloo"
+       },
+       {
         "x": "Edmonton",
-        "y": 6.9,
+        "y": 7.1,
         "placeId": "edmonton"
        },
        {
         "x": "Montréal",
-        "y": 6.8,
+        "y": 6.9,
         "placeId": "montreal"
        },
        {
-        "x": "Abbotsford–Mission",
-        "y": 6.8,
-        "placeId": "abbotsford-mission"
-       },
-       {
         "x": "Vancouver",
-        "y": 6.5,
+        "y": 6.7,
         "placeId": "vancouver"
        },
        {
-        "x": "Regina",
-        "y": 6.4,
-        "placeId": "regina"
+        "x": "Abbotsford–Mission",
+        "y": 6.7,
+        "placeId": "abbotsford-mission"
        },
        {
         "x": "Calgary",
-        "y": 6.3,
+        "y": 6.6,
         "placeId": "calgary"
        },
        {
-        "x": "Greater Sudbury",
-        "y": 6.0,
-        "placeId": "sudbury"
-       },
-       {
         "x": "Fredericton",
-        "y": 6.0,
+        "y": 6.5,
         "placeId": "fredericton"
        },
        {
@@ -862,19 +849,24 @@
         "placeId": "saskatoon"
        },
        {
-        "x": "Halifax",
-        "y": 5.8,
-        "placeId": "halifax"
+        "x": "Regina",
+        "y": 5.9,
+        "placeId": "regina"
        },
        {
         "x": "Saint John",
-        "y": 5.6,
+        "y": 5.7,
         "placeId": "saint-john"
        },
        {
-        "x": "Victoria",
-        "y": 5.3,
-        "placeId": "victoria"
+        "x": "Greater Sudbury",
+        "y": 5.6,
+        "placeId": "sudbury"
+       },
+       {
+        "x": "Halifax",
+        "y": 5.4,
+        "placeId": "halifax"
        },
        {
         "x": "Winnipeg",
@@ -882,19 +874,24 @@
         "placeId": "winnipeg"
        },
        {
-        "x": "Thunder Bay",
-        "y": 4.3,
-        "placeId": "thunder-bay"
+        "x": "Victoria",
+        "y": 4.8,
+        "placeId": "victoria"
        },
        {
         "x": "Québec City",
-        "y": 4.3,
+        "y": 4.5,
         "placeId": "quebec-city"
        },
        {
         "x": "Sherbrooke",
-        "y": 4.0,
+        "y": 4.2,
         "placeId": "sherbrooke"
+       },
+       {
+        "x": "Thunder Bay",
+        "y": 3.6,
+        "placeId": "thunder-bay"
        }
       ]
      }
@@ -908,7 +905,7 @@
     "id": "unemployment-change-ranked",
     "type": "bar_ranked",
     "title": "Change in unemployment rate vs a year earlier (percentage points)",
-    "subtitle": "2026-09 minus 2025-09, three-month moving averages",
+    "subtitle": "2026-10 minus 2025-10, three-month moving averages",
     "unit": "pp",
     "series": [
      {
@@ -916,16 +913,22 @@
       "label": "Change, pp",
       "points": [
        {
-        "x": "Kelowna",
-        "y": 2.2,
-        "placeId": "kelowna",
+        "x": "London",
+        "y": 1.4,
+        "placeId": "london",
         "label": "within sampling error"
        },
        {
-        "x": "London",
-        "y": 2.1,
-        "placeId": "london",
-        "label": "significant at 1.96 SE"
+        "x": "Hamilton",
+        "y": 0.7,
+        "placeId": "hamilton",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Montréal",
+        "y": 0.6,
+        "placeId": "montreal",
+        "label": "within sampling error"
        },
        {
         "x": "Victoria",
@@ -934,86 +937,86 @@
         "label": "within sampling error"
        },
        {
-        "x": "Saskatoon",
-        "y": 0.6,
-        "placeId": "saskatoon",
-        "label": "within sampling error"
-       },
-       {
-        "x": "Montréal",
-        "y": 0.4,
-        "placeId": "montreal",
-        "label": "within sampling error"
-       },
-       {
-        "x": "Kitchener–Waterloo",
-        "y": 0.4,
-        "placeId": "kitchener-waterloo",
-        "label": "within sampling error"
-       },
-       {
-        "x": "Moncton",
-        "y": 0.4,
-        "placeId": "moncton",
-        "label": "within sampling error"
-       },
-       {
         "x": "Vancouver",
-        "y": 0.2,
+        "y": 0.4,
         "placeId": "vancouver",
         "label": "within sampling error"
        },
        {
-        "x": "Halifax",
+        "x": "Saskatoon",
+        "y": 0.4,
+        "placeId": "saskatoon",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Kelowna",
+        "y": 0.3,
+        "placeId": "kelowna",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Moncton",
         "y": 0.2,
-        "placeId": "halifax",
-        "label": "within sampling error"
-       },
-       {
-        "x": "Regina",
-        "y": -0.1,
-        "placeId": "regina",
-        "label": "within sampling error"
-       },
-       {
-        "x": "Hamilton",
-        "y": -0.3,
-        "placeId": "hamilton",
-        "label": "within sampling error"
-       },
-       {
-        "x": "Abbotsford–Mission",
-        "y": -0.4,
-        "placeId": "abbotsford-mission",
+        "placeId": "moncton",
         "label": "within sampling error"
        },
        {
         "x": "Québec City",
-        "y": -0.5,
+        "y": 0.1,
         "placeId": "quebec-city",
         "label": "within sampling error"
        },
        {
         "x": "Fredericton",
-        "y": -0.5,
+        "y": -0.1,
         "placeId": "fredericton",
         "label": "within sampling error"
        },
        {
-        "x": "Thunder Bay",
+        "x": "Halifax",
+        "y": -0.4,
+        "placeId": "halifax",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Kitchener–Waterloo",
         "y": -0.5,
-        "placeId": "thunder-bay",
+        "placeId": "kitchener-waterloo",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Regina",
+        "y": -0.5,
+        "placeId": "regina",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Abbotsford–Mission",
+        "y": -0.5,
+        "placeId": "abbotsford-mission",
         "label": "within sampling error"
        },
        {
         "x": "Greater Sudbury",
-        "y": -0.7,
+        "y": -0.9,
         "placeId": "sudbury",
         "label": "within sampling error"
        },
        {
-        "x": "Sherbrooke",
+        "x": "Calgary",
         "y": -1.2,
+        "placeId": "calgary",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Edmonton",
+        "y": -1.3,
+        "placeId": "edmonton",
+        "label": "within sampling error"
+       },
+       {
+        "x": "Sherbrooke",
+        "y": -1.3,
         "placeId": "sherbrooke",
         "label": "within sampling error"
        },
@@ -1024,34 +1027,28 @@
         "label": "significant at 1.96 SE"
        },
        {
-        "x": "Edmonton",
-        "y": -1.7,
-        "placeId": "edmonton",
+        "x": "Thunder Bay",
+        "y": -1.4,
+        "placeId": "thunder-bay",
         "label": "within sampling error"
        },
        {
-        "x": "Calgary",
-        "y": -1.8,
-        "placeId": "calgary",
-        "label": "significant at 1.96 SE"
-       },
-       {
         "x": "Toronto",
-        "y": -1.9,
+        "y": -1.5,
         "placeId": "toronto",
         "label": "significant at 1.96 SE"
        },
        {
         "x": "Saint John",
-        "y": -2.0,
+        "y": -1.6,
         "placeId": "saint-john",
         "label": "within sampling error"
        },
        {
         "x": "Windsor",
-        "y": -3.1,
+        "y": -2.2,
         "placeId": "windsor",
-        "label": "significant at 1.96 SE"
+        "label": "within sampling error"
        }
       ]
      }
@@ -1444,6 +1441,10 @@
        {
         "x": "2026-09",
         "y": 6.9
+       },
+       {
+        "x": "2026-10",
+        "y": 7.1
        }
       ]
      },
@@ -1823,6 +1824,10 @@
        {
         "x": "2026-09",
         "y": 6.8
+       },
+       {
+        "x": "2026-10",
+        "y": 6.9
        }
       ]
      },
@@ -2202,6 +2207,10 @@
        {
         "x": "2026-09",
         "y": 6.5
+       },
+       {
+        "x": "2026-10",
+        "y": 6.7
        }
       ]
      },
@@ -2581,6 +2590,10 @@
        {
         "x": "2026-09",
         "y": 6.3
+       },
+       {
+        "x": "2026-10",
+        "y": 6.6
        }
       ]
      },
@@ -2960,6 +2973,10 @@
        {
         "x": "2026-09",
         "y": 5.8
+       },
+       {
+        "x": "2026-10",
+        "y": 5.4
        }
       ]
      },
@@ -3339,6 +3356,10 @@
        {
         "x": "2026-09",
         "y": 4.3
+       },
+       {
+        "x": "2026-10",
+        "y": 4.5
        }
       ]
      }
@@ -3355,7 +3376,7 @@
    "For Whitehorse, Yellowknife and Iqaluit the figures are territory-wide; Charlottetown shows Prince Edward Island; Brandon shows the Southwest economic region (unadjusted). They sit in the map and place profiles with that label rather than in the rankings."
   ],
   "methodology": [
-   "Source: Statistics Canada Labour Force Survey, Table 14-10-0459-01 (CMA, three-month moving average, seasonally adjusted), latest period 2026-09; release date is shown in Sources. Territories: Table 14-10-0292-01 (seasonally adjusted series); Brandon: Table 14-10-0462-01 (economic region, unadjusted).",
+   "Source: Statistics Canada Labour Force Survey, Table 14-10-0459-01 (CMA, three-month moving average, seasonally adjusted), latest period 2026-10; release date is shown in Sources. Territories: Table 14-10-0292-01 (seasonally adjusted series); Brandon: Table 14-10-0462-01 (economic region, unadjusted).",
    "Each rate is the three-month moving average ending in the month shown. The one-year change subtracts the same measure twelve months earlier; significance uses Statistics Canada's standard error of the year-over-year change.",
    "Ottawa and Gatineau use the LFS's Ontario and Quebec parts of the Ottawa-Gatineau CMA."
   ],
@@ -3376,10 +3397,10 @@
    "london",
    "montreal",
    "ottawa",
-   "sherbrooke",
+   "thunder-bay",
    "toronto",
    "vancouver"
   ],
-  "computedAt": "2026-11-05T13:10:18+00:00"
+  "computedAt": "2026-11-09T20:53:34+00:00"
  }
 ]

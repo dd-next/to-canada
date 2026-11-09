@@ -7,20 +7,20 @@
   "url": "https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda",
   "downloadUrl": "https://www.ircc.canada.ca/opendata-donneesouvertes/data/EN_ODP-PR-CMA.xlsx",
   "releaseDate": "2026-10-20",
-  "retrievedAt": "2026-11-05T13:07:38+00:00",
-  "referencePeriod": "January 2015 to Aug 2026 (monthly); annual totals through 2025",
+  "retrievedAt": "2026-11-09T20:53:36+00:00",
+  "referencePeriod": "Jan 2015 to Aug 2026 (monthly); annual totals 2015-2025; year-to-date 2026-01 to 2026-08",
   "licence": "Open Government Licence - Canada",
   "attribution": "Contains information licensed under the Open Government Licence - Canada. Source: IRCC, Permanent Residents - Monthly IRCC Updates.",
   "transformations": [
-   "Read the XLSX (not the CSV, which IRCC labels 'rounded - not for calculations'); took each row's calendar-year Total column (annual totals) and the 2026 year-to-date total (January-August).",
+   "Read the XLSX (not the CSV, which IRCC labels 'rounded - not for calculations'); took each row's calendar-year Total column (annual totals) and the 2026-01 to 2026-08 year-to-date total.",
    "IRCC rounds every value to the nearest 5 and shows 0-5 as '--' (kept as null + suppressed flag); all values carry the 'rounded' flag. Calendar-year totals are published values and may not equal the sum of monthly cells.",
    "Rows are 'CMA' per IRCC, which includes some census agglomerations (Charlottetown, Brandon, Whitehorse, Yellowknife are present). Ottawa - Gatineau is published as Ontario part and Quebec part and used as such.",
    "Change = (latest-year / previous-year - 1) x 100 on rounded values; per-1,000 = admissions / StatCan July 1 population x 1000."
   ],
   "notes": [
    "Admissions are by intended destination at landing, not current residence.",
-   "Iqaluit: IRCC publishes Nunavut only as 'Other - Nunavut', so no Iqaluit value is available.",
-   "Publisher catalog update 2026-10-20T12:02:29.893583; file last modified Tue, 20 Oct 2026 11:31:10 GMT"
+   "Publisher catalog update 2026-10-20T12:02:29.893583; file last-modified header Tue, 20 Oct 2026 11:31:40 GMT.",
+   "Iqaluit: IRCC publishes Nunavut only as 'Other - Nunavut', so no Iqaluit value is available."
   ],
   "status": "ok"
  },
@@ -32,7 +32,7 @@
   "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710014801",
   "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/17100148-eng.zip",
   "releaseDate": "2026-01-14",
-  "retrievedAt": "2026-11-04T18:06:13+00:00",
+  "retrievedAt": "2026-11-09T20:52:46+00:00",
   "referencePeriod": "July 1, 2001 to 2025 (annual); 2025 used",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, Table 17-10-0148-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
@@ -53,8 +53,8 @@
   "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=4310003001",
   "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/43100030-eng.zip",
   "releaseDate": "2025-12-08",
-  "retrievedAt": "2026-11-04T18:03:35+00:00",
-  "referencePeriod": "Tax years 2009-2023; admission years 2008-2022",
+  "retrievedAt": "2026-11-09T20:57:06+00:00",
+  "referencePeriod": "Tax years 2009-2023; five-year cohort 2018",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, Table 43-10-0030-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
   "transformations": [
@@ -77,18 +77,36 @@
   "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=4310002201",
   "downloadUrl": "https://www150.statcan.gc.ca/n1/tbl/csv/43100022-eng.zip",
   "releaseDate": "2025-12-19",
-  "retrievedAt": "2026-11-04T18:06:08+00:00",
-  "referencePeriod": "Tax years 2007-2023; admission years 2007-2023",
+  "retrievedAt": "2026-11-09T21:02:24+00:00",
+  "referencePeriod": "Tax years 2007-2023; five-year cohort 2018",
   "licence": "Statistics Canada Open Licence",
   "attribution": "Source: Statistics Canada, Table 43-10-0022-01. Reproduced and distributed on an 'as is' basis with the permission of Statistics Canada.",
   "transformations": [
    "Streamed the ~20 GB full-table CSV from the zip (not extracted) and kept Age group='Total, age group', Pre-admission experience='Total', Knowledge of official languages='Total' for Canada, provinces and our CMAs (data/raw/statcan_tables/43100022/filtered_northward.csv).",
    "Used Statistics='Retention rate' (percent) for admission year 2018 in tax year 2023 (5 years after admission), category total; province values flagged provincial_value on place observations; CMA values as imm_retention_cma_5y.",
-   "Series: retention by years since admission for the 2015 cohort (tax years 2016-2023)."
+   "Series: retention by years since admission for the 2015 historical cohort (tax years 2016-2023)."
   ],
   "notes": [
    "'Retention rate represents the percentage of immigrant taxfilers continuing their residence in the geographical area (province or CMA) of intended destination ... This does not take into account immigrants migrating in from another destination.' (table note 11). Retention = stayed / (stayed + out migration).",
    "Table covers Canada, provinces and CMAs; no territories or census agglomerations."
+  ],
+  "status": "ok"
+ },
+ {
+  "id": "ircc-fstp",
+  "title": "Federal Skilled Trades Program: job offer or certificate of qualification",
+  "publisher": "Immigration, Refugees and Citizenship Canada",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
+  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
+  "retrievedAt": "2026-11-05T12:54:50+00:00",
+  "referencePeriod": "Page(s) read on 2026-11-05",
+  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
+  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
+  "transformations": [
+   "Text paraphrased factually; no scoring or eligibility judgement added."
+  ],
+  "notes": [
+   "Job offer OR Canadian certificate of qualification; verified 2026-11-05"
   ],
   "status": "ok"
  },
@@ -580,24 +598,6 @@
    "Text paraphrased factually; no scoring or eligibility judgement added."
   ],
   "notes": [],
-  "status": "ok"
- },
- {
-  "id": "ircc-fstp",
-  "title": "Federal Skilled Trades Program: job offer or certificate of qualification",
-  "publisher": "Immigration, Refugees and Citizenship Canada",
-  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
-  "downloadUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
-  "retrievedAt": "2026-11-05T12:54:50+00:00",
-  "referencePeriod": "Page(s) read on 2026-11-05",
-  "licence": "Government website content; reproduced here only as short factual paraphrases with a link to the original page",
-  "attribution": "Source: Immigration, Refugees and Citizenship Canada, https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
-  "transformations": [
-   "Text paraphrased factually; no scoring or eligibility judgement added."
-  ],
-  "notes": [
-   "Job offer OR Canadian certificate of qualification; verified 2026-11-05"
-  ],
   "status": "ok"
  }
 ]

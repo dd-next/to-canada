@@ -2,8 +2,8 @@
  {
   "placeId": "toronto",
   "metricId": "lfs_unemployment_rate",
-  "value": 6.9,
-  "period": "2026-09",
+  "value": 7.1,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "535",
@@ -12,13 +12,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.3 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.3 pp."
  },
  {
   "placeId": "toronto",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -1.9,
-  "period": "2026-09",
+  "value": -1.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "535",
@@ -27,43 +27,88 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6.9 - 8.8 (both three-month moving averages).  Standard error of year-over-year change: 0.5 pp."
+  "note": "2026-10 minus 2025-10: 7.1 - 8.6 (both three-month moving averages).  Standard error of year-over-year change: 0.5 pp."
  },
  {
   "placeId": "toronto",
+  "metricId": "lfs_employment_rate",
+  "value": 62.2,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.5 pp."
+ },
+ {
+  "placeId": "toronto",
+  "metricId": "lfs_participation_rate",
+  "value": 66.9,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "535",
+   "name": "Toronto",
+   "dguid": "2021S0503535",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.5 pp."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "lfs_unemployment_rate",
+  "value": 6.9,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.4 pp."
+ },
+ {
+  "placeId": "montreal",
+  "metricId": "lfs_unemployment_rate_change_1y",
+  "value": 0.6,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "2026-10 minus 2025-10: 6.9 - 6.3 (both three-month moving averages).  Standard error of year-over-year change: 0.5 pp."
+ },
+ {
+  "placeId": "montreal",
   "metricId": "lfs_employment_rate",
   "value": 62.1,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
-   "id": "535",
-   "name": "Toronto",
-   "dguid": "2021S0503535",
+   "id": "462",
+   "name": "Montréal",
+   "dguid": "2021S0503462",
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
  },
  {
-  "placeId": "toronto",
+  "placeId": "montreal",
   "metricId": "lfs_participation_rate",
   "value": 66.7,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "535",
-   "name": "Toronto",
-   "dguid": "2021S0503535",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.5 pp."
- },
- {
-  "placeId": "montreal",
-  "metricId": "lfs_unemployment_rate",
-  "value": 6.8,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "462",
@@ -72,58 +117,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.4 pp."
- },
- {
-  "placeId": "montreal",
-  "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 0.4,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "462",
-   "name": "Montréal",
-   "dguid": "2021S0503462",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6.8 - 6.4 (both three-month moving averages).  Standard error of year-over-year change: 0.5 pp."
- },
- {
-  "placeId": "montreal",
-  "metricId": "lfs_employment_rate",
-  "value": 62.5,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "462",
-   "name": "Montréal",
-   "dguid": "2021S0503462",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
- },
- {
-  "placeId": "montreal",
-  "metricId": "lfs_participation_rate",
-  "value": 67.1,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "462",
-   "name": "Montréal",
-   "dguid": "2021S0503462",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
  },
  {
   "placeId": "vancouver",
   "metricId": "lfs_unemployment_rate",
-  "value": 6.5,
-  "period": "2026-09",
+  "value": 6.7,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "933",
@@ -132,13 +132,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.4 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.4 pp."
  },
  {
   "placeId": "vancouver",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 0.2,
-  "period": "2026-09",
+  "value": 0.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "933",
@@ -147,13 +147,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6.5 - 6.3 (both three-month moving averages).  Standard error of year-over-year change: 0.5 pp."
+  "note": "2026-10 minus 2025-10: 6.7 - 6.3 (both three-month moving averages).  Standard error of year-over-year change: 0.5 pp."
  },
  {
   "placeId": "vancouver",
   "metricId": "lfs_employment_rate",
-  "value": 63.5,
-  "period": "2026-09",
+  "value": 63.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "933",
@@ -162,13 +162,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.7 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.7 pp."
  },
  {
   "placeId": "vancouver",
   "metricId": "lfs_participation_rate",
   "value": 68.0,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "933",
@@ -177,13 +177,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
  },
  {
   "placeId": "calgary",
   "metricId": "lfs_unemployment_rate",
-  "value": 6.3,
-  "period": "2026-09",
+  "value": 6.6,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "825",
@@ -192,13 +192,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.5 pp."
  },
  {
   "placeId": "calgary",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -1.8,
-  "period": "2026-09",
+  "value": -1.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "825",
@@ -207,13 +207,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6.3 - 8.1 (both three-month moving averages).  Standard error of year-over-year change: 0.8 pp."
+  "note": "2026-10 minus 2025-10: 6.6 - 7.8 (both three-month moving averages).  Standard error of year-over-year change: 0.8 pp."
  },
  {
   "placeId": "calgary",
   "metricId": "lfs_employment_rate",
-  "value": 66.8,
-  "period": "2026-09",
+  "value": 66.7,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "825",
@@ -222,13 +222,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.1 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.1 pp."
  },
  {
   "placeId": "calgary",
   "metricId": "lfs_participation_rate",
-  "value": 71.3,
-  "period": "2026-09",
+  "value": 71.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "825",
@@ -237,13 +237,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.1 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.1 pp."
  },
  {
   "placeId": "edmonton",
   "metricId": "lfs_unemployment_rate",
-  "value": 6.9,
-  "period": "2026-09",
+  "value": 7.1,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "835",
@@ -252,13 +252,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.7 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.7 pp."
  },
  {
   "placeId": "edmonton",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -1.7,
-  "period": "2026-09",
+  "value": -1.3,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "835",
@@ -267,13 +267,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6.9 - 8.6 (both three-month moving averages).  Standard error of year-over-year change: 0.9 pp."
+  "note": "2026-10 minus 2025-10: 7.1 - 8.4 (both three-month moving averages).  Standard error of year-over-year change: 0.9 pp."
  },
  {
   "placeId": "edmonton",
   "metricId": "lfs_employment_rate",
-  "value": 64.0,
-  "period": "2026-09",
+  "value": 63.8,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "835",
@@ -282,13 +282,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.1 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.1 pp."
  },
  {
   "placeId": "edmonton",
   "metricId": "lfs_participation_rate",
   "value": 68.7,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "835",
@@ -297,13 +297,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.1 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.1 pp."
  },
  {
   "placeId": "ottawa",
   "metricId": "lfs_unemployment_rate",
-  "value": 7.2,
-  "period": "2026-09",
+  "value": 7.3,
+  "period": "2026-10",
   "geo": {
    "level": "cma_part",
    "id": "35505",
@@ -312,13 +312,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 0.8 pp."
+  "note": "Three months ending 2026-10. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 0.8 pp."
  },
  {
   "placeId": "ottawa",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 0.1,
-  "period": "2026-09",
+  "value": 0.0,
+  "period": "2026-10",
   "geo": {
    "level": "cma_part",
    "id": "35505",
@@ -327,13 +327,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 7.2 - 7.1 (both three-month moving averages). Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of year-over-year change: 1 pp."
+  "note": "2026-10 minus 2025-10: 7.3 - 7.3 (both three-month moving averages). Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of year-over-year change: 1 pp."
  },
  {
   "placeId": "ottawa",
   "metricId": "lfs_employment_rate",
-  "value": 61.7,
-  "period": "2026-09",
+  "value": 61.1,
+  "period": "2026-10",
   "geo": {
    "level": "cma_part",
    "id": "35505",
@@ -342,13 +342,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 1.5 pp."
+  "note": "Three months ending 2026-10. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 1.5 pp."
  },
  {
   "placeId": "ottawa",
   "metricId": "lfs_participation_rate",
-  "value": 66.5,
-  "period": "2026-09",
+  "value": 65.9,
+  "period": "2026-10",
   "geo": {
    "level": "cma_part",
    "id": "35505",
@@ -357,13 +357,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 1.4 pp."
+  "note": "Three months ending 2026-10. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 1.4 pp."
  },
  {
   "placeId": "gatineau",
   "metricId": "lfs_unemployment_rate",
   "value": 6.3,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma_part",
    "id": "24505",
@@ -372,13 +372,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 0.7 pp."
+  "note": "Three months ending 2026-10. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 0.7 pp."
  },
  {
   "placeId": "gatineau",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -0.6,
-  "period": "2026-09",
+  "value": -0.9,
+  "period": "2026-10",
   "geo": {
    "level": "cma_part",
    "id": "24505",
@@ -387,13 +387,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6.3 - 6.9 (both three-month moving averages). Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of year-over-year change: 1 pp."
+  "note": "2026-10 minus 2025-10: 6.3 - 7.2 (both three-month moving averages). Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of year-over-year change: 1 pp."
  },
  {
   "placeId": "gatineau",
   "metricId": "lfs_employment_rate",
-  "value": 60.3,
-  "period": "2026-09",
+  "value": 59.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma_part",
    "id": "24505",
@@ -402,13 +402,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 1.6 pp."
+  "note": "Three months ending 2026-10. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 1.6 pp."
  },
  {
   "placeId": "gatineau",
   "metricId": "lfs_participation_rate",
-  "value": 64.4,
-  "period": "2026-09",
+  "value": 63.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma_part",
    "id": "24505",
@@ -417,13 +417,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 1.6 pp."
+  "note": "Three months ending 2026-10. Provincial part of the Ottawa-Gatineau CMA as published by LFS. Standard error of estimate: 1.6 pp."
  },
  {
   "placeId": "winnipeg",
   "metricId": "lfs_unemployment_rate",
   "value": 5.0,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "602",
@@ -432,13 +432,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.4 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.4 pp."
  },
  {
   "placeId": "winnipeg",
   "metricId": "lfs_unemployment_rate_change_1y",
   "value": -1.4,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "602",
@@ -447,13 +447,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 5 - 6.4 (both three-month moving averages).  Standard error of year-over-year change: 0.5 pp."
+  "note": "2026-10 minus 2025-10: 5 - 6.4 (both three-month moving averages).  Standard error of year-over-year change: 0.5 pp."
  },
  {
   "placeId": "winnipeg",
   "metricId": "lfs_employment_rate",
-  "value": 64.6,
-  "period": "2026-09",
+  "value": 64.3,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "602",
@@ -462,13 +462,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
  },
  {
   "placeId": "winnipeg",
   "metricId": "lfs_participation_rate",
-  "value": 68.0,
-  "period": "2026-09",
+  "value": 67.8,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "602",
@@ -477,13 +477,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
  },
  {
   "placeId": "quebec-city",
   "metricId": "lfs_unemployment_rate",
-  "value": 4.3,
-  "period": "2026-09",
+  "value": 4.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "421",
@@ -492,13 +492,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.5 pp."
  },
  {
   "placeId": "quebec-city",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -0.5,
-  "period": "2026-09",
+  "value": 0.1,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "421",
@@ -507,13 +507,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 4.3 - 4.8 (both three-month moving averages).  Standard error of year-over-year change: 0.7 pp."
+  "note": "2026-10 minus 2025-10: 4.5 - 4.4 (both three-month moving averages).  Standard error of year-over-year change: 0.7 pp."
  },
  {
   "placeId": "quebec-city",
   "metricId": "lfs_employment_rate",
-  "value": 62.9,
-  "period": "2026-09",
+  "value": 63.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "421",
@@ -522,13 +522,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.7 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.7 pp."
  },
  {
   "placeId": "quebec-city",
   "metricId": "lfs_participation_rate",
-  "value": 65.7,
-  "period": "2026-09",
+  "value": 66.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "421",
@@ -537,13 +537,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.7 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.7 pp."
  },
  {
   "placeId": "hamilton",
   "metricId": "lfs_unemployment_rate",
-  "value": 6.9,
-  "period": "2026-09",
+  "value": 7.6,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "537",
@@ -552,13 +552,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.7 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.7 pp."
  },
  {
   "placeId": "hamilton",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -0.3,
-  "period": "2026-09",
+  "value": 0.7,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "537",
@@ -567,13 +567,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6.9 - 7.2 (both three-month moving averages).  Standard error of year-over-year change: 1 pp."
+  "note": "2026-10 minus 2025-10: 7.6 - 6.9 (both three-month moving averages).  Standard error of year-over-year change: 1 pp."
  },
  {
   "placeId": "hamilton",
   "metricId": "lfs_employment_rate",
   "value": 60.7,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "537",
@@ -582,13 +582,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.5 pp."
  },
  {
   "placeId": "hamilton",
   "metricId": "lfs_participation_rate",
-  "value": 65.2,
-  "period": "2026-09",
+  "value": 65.7,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "537",
@@ -597,13 +597,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.5 pp."
  },
  {
   "placeId": "kitchener-waterloo",
   "metricId": "lfs_unemployment_rate",
-  "value": 7.7,
-  "period": "2026-09",
+  "value": 7.1,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "541",
@@ -612,13 +612,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.8 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.8 pp."
  },
  {
   "placeId": "kitchener-waterloo",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 0.4,
-  "period": "2026-09",
+  "value": -0.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "541",
@@ -627,13 +627,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 7.7 - 7.3 (both three-month moving averages).  Standard error of year-over-year change: 1 pp."
+  "note": "2026-10 minus 2025-10: 7.1 - 7.6 (both three-month moving averages).  Standard error of year-over-year change: 1 pp."
  },
  {
   "placeId": "kitchener-waterloo",
   "metricId": "lfs_employment_rate",
-  "value": 64.8,
-  "period": "2026-09",
+  "value": 65.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "541",
@@ -642,13 +642,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.4 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.4 pp."
  },
  {
   "placeId": "kitchener-waterloo",
   "metricId": "lfs_participation_rate",
   "value": 70.2,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "541",
@@ -657,13 +657,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.2 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.2 pp."
  },
  {
   "placeId": "london",
   "metricId": "lfs_unemployment_rate",
-  "value": 8.4,
-  "period": "2026-09",
+  "value": 8.1,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "555",
@@ -672,13 +672,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.8 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.8 pp."
  },
  {
   "placeId": "london",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 2.1,
-  "period": "2026-09",
+  "value": 1.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "555",
@@ -687,13 +687,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 8.4 - 6.3 (both three-month moving averages).  Standard error of year-over-year change: 1 pp."
+  "note": "2026-10 minus 2025-10: 8.1 - 6.7 (both three-month moving averages).  Standard error of year-over-year change: 1 pp."
  },
  {
   "placeId": "london",
   "metricId": "lfs_employment_rate",
-  "value": 57.5,
-  "period": "2026-09",
+  "value": 57.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "555",
@@ -702,13 +702,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.5 pp."
  },
  {
   "placeId": "london",
   "metricId": "lfs_participation_rate",
-  "value": 62.7,
-  "period": "2026-09",
+  "value": 62.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "555",
@@ -717,13 +717,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.5 pp."
  },
  {
   "placeId": "halifax",
   "metricId": "lfs_unemployment_rate",
-  "value": 5.8,
-  "period": "2026-09",
+  "value": 5.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "205",
@@ -732,13 +732,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.5 pp."
  },
  {
   "placeId": "halifax",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 0.2,
-  "period": "2026-09",
+  "value": -0.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "205",
@@ -747,13 +747,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 5.8 - 5.6 (both three-month moving averages).  Standard error of year-over-year change: 0.7 pp."
+  "note": "2026-10 minus 2025-10: 5.4 - 5.8 (both three-month moving averages).  Standard error of year-over-year change: 0.7 pp."
  },
  {
   "placeId": "halifax",
   "metricId": "lfs_employment_rate",
-  "value": 64.3,
-  "period": "2026-09",
+  "value": 65.0,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "205",
@@ -762,13 +762,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.8 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.8 pp."
  },
  {
   "placeId": "halifax",
   "metricId": "lfs_participation_rate",
-  "value": 68.2,
-  "period": "2026-09",
+  "value": 68.7,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "205",
@@ -777,13 +777,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.8 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.8 pp."
  },
  {
   "placeId": "victoria",
   "metricId": "lfs_unemployment_rate",
-  "value": 5.3,
-  "period": "2026-09",
+  "value": 4.8,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "935",
@@ -792,13 +792,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
  },
  {
   "placeId": "victoria",
   "metricId": "lfs_unemployment_rate_change_1y",
   "value": 0.6,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "935",
@@ -807,13 +807,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 5.3 - 4.7 (both three-month moving averages).  Standard error of year-over-year change: 0.8 pp."
+  "note": "2026-10 minus 2025-10: 4.8 - 4.2 (both three-month moving averages).  Standard error of year-over-year change: 0.8 pp."
  },
  {
   "placeId": "victoria",
   "metricId": "lfs_employment_rate",
-  "value": 60.2,
-  "period": "2026-09",
+  "value": 61.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "935",
@@ -822,13 +822,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.4 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.4 pp."
  },
  {
   "placeId": "victoria",
   "metricId": "lfs_participation_rate",
-  "value": 63.5,
-  "period": "2026-09",
+  "value": 64.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "935",
@@ -837,13 +837,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.4 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.4 pp."
  },
  {
   "placeId": "saskatoon",
   "metricId": "lfs_unemployment_rate",
   "value": 5.9,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "725",
@@ -852,13 +852,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.5 pp."
  },
  {
   "placeId": "saskatoon",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 0.6,
-  "period": "2026-09",
+  "value": 0.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "725",
@@ -867,13 +867,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 5.9 - 5.3 (both three-month moving averages).  Standard error of year-over-year change: 0.7 pp."
+  "note": "2026-10 minus 2025-10: 5.9 - 5.5 (both three-month moving averages).  Standard error of year-over-year change: 0.7 pp."
  },
  {
   "placeId": "saskatoon",
   "metricId": "lfs_employment_rate",
-  "value": 64.7,
-  "period": "2026-09",
+  "value": 64.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "725",
@@ -882,13 +882,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.2 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.2 pp."
  },
  {
   "placeId": "saskatoon",
   "metricId": "lfs_participation_rate",
-  "value": 68.8,
-  "period": "2026-09",
+  "value": 68.6,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "725",
@@ -897,13 +897,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.2 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.2 pp."
  },
  {
   "placeId": "regina",
   "metricId": "lfs_unemployment_rate",
-  "value": 6.4,
-  "period": "2026-09",
+  "value": 5.9,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "705",
@@ -912,13 +912,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
  },
  {
   "placeId": "regina",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -0.1,
-  "period": "2026-09",
+  "value": -0.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "705",
@@ -927,13 +927,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6.4 - 6.5 (both three-month moving averages).  Standard error of year-over-year change: 0.9 pp."
+  "note": "2026-10 minus 2025-10: 5.9 - 6.4 (both three-month moving averages).  Standard error of year-over-year change: 0.9 pp."
  },
  {
   "placeId": "regina",
   "metricId": "lfs_employment_rate",
-  "value": 65.3,
-  "period": "2026-09",
+  "value": 65.7,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "705",
@@ -942,13 +942,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.3 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.3 pp."
  },
  {
   "placeId": "regina",
   "metricId": "lfs_participation_rate",
   "value": 69.8,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "705",
@@ -957,13 +957,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.3 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.3 pp."
  },
  {
   "placeId": "st-johns",
   "metricId": "lfs_unemployment_rate",
-  "value": 6.6,
-  "period": "2026-09",
+  "value": 6.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "031",
@@ -972,13 +972,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
  },
  {
   "placeId": "st-johns",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -0.4,
-  "period": "2026-09",
+  "value": -1.0,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "031",
@@ -987,13 +987,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6.6 - 7 (both three-month moving averages).  Standard error of year-over-year change: 0.8 pp."
+  "note": "2026-10 minus 2025-10: 6.5 - 7.5 (both three-month moving averages).  Standard error of year-over-year change: 0.8 pp."
  },
  {
   "placeId": "st-johns",
   "metricId": "lfs_employment_rate",
-  "value": 61.3,
-  "period": "2026-09",
+  "value": 62.0,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "031",
@@ -1002,13 +1002,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1 pp."
  },
  {
   "placeId": "st-johns",
   "metricId": "lfs_participation_rate",
-  "value": 65.7,
-  "period": "2026-09",
+  "value": 66.3,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "031",
@@ -1017,13 +1017,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1 pp."
  },
  {
   "placeId": "windsor",
   "metricId": "lfs_unemployment_rate",
-  "value": 7.3,
-  "period": "2026-09",
+  "value": 7.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "559",
@@ -1032,13 +1032,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.8 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.8 pp."
  },
  {
   "placeId": "windsor",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -3.1,
-  "period": "2026-09",
+  "value": -2.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "559",
@@ -1047,13 +1047,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 7.3 - 10.4 (both three-month moving averages).  Standard error of year-over-year change: 1.2 pp."
+  "note": "2026-10 minus 2025-10: 7.5 - 9.7 (both three-month moving averages).  Standard error of year-over-year change: 1.2 pp."
  },
  {
   "placeId": "windsor",
   "metricId": "lfs_employment_rate",
-  "value": 59.7,
-  "period": "2026-09",
+  "value": 59.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "559",
@@ -1062,13 +1062,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.5 pp."
  },
  {
   "placeId": "windsor",
   "metricId": "lfs_participation_rate",
-  "value": 64.3,
-  "period": "2026-09",
+  "value": 64.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "559",
@@ -1077,13 +1077,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.5 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.5 pp."
  },
  {
   "placeId": "kelowna",
   "metricId": "lfs_unemployment_rate",
-  "value": 9.3,
-  "period": "2026-09",
+  "value": 9.6,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "915",
@@ -1092,13 +1092,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.4 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.4 pp."
  },
  {
   "placeId": "kelowna",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 2.2,
-  "period": "2026-09",
+  "value": 0.3,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "915",
@@ -1107,13 +1107,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 9.3 - 7.1 (both three-month moving averages).  Standard error of year-over-year change: 1.8 pp."
+  "note": "2026-10 minus 2025-10: 9.6 - 9.3 (both three-month moving averages).  Standard error of year-over-year change: 1.8 pp."
  },
  {
   "placeId": "kelowna",
   "metricId": "lfs_employment_rate",
   "value": 61.0,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "915",
@@ -1122,13 +1122,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 2.8 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 2.8 pp."
  },
  {
   "placeId": "kelowna",
   "metricId": "lfs_participation_rate",
-  "value": 67.2,
-  "period": "2026-09",
+  "value": 67.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "915",
@@ -1137,13 +1137,13 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 2.8 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 2.8 pp."
  },
  {
   "placeId": "abbotsford-mission",
   "metricId": "lfs_unemployment_rate",
-  "value": 6.8,
-  "period": "2026-09",
+  "value": 6.7,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "932",
@@ -1152,626 +1152,626 @@
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
  },
  {
   "placeId": "abbotsford-mission",
-  "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -0.4,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "932",
-   "name": "Abbotsford-Mission",
-   "dguid": "2021S0503932",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6.8 - 7.2 (both three-month moving averages).  Standard error of year-over-year change: 0.9 pp."
- },
- {
-  "placeId": "abbotsford-mission",
-  "metricId": "lfs_employment_rate",
-  "value": 61.7,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "932",
-   "name": "Abbotsford-Mission",
-   "dguid": "2021S0503932",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.3 pp."
- },
- {
-  "placeId": "abbotsford-mission",
-  "metricId": "lfs_participation_rate",
-  "value": 66.2,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "932",
-   "name": "Abbotsford-Mission",
-   "dguid": "2021S0503932",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.3 pp."
- },
- {
-  "placeId": "moncton",
-  "metricId": "lfs_unemployment_rate",
-  "value": 7.6,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "305",
-   "name": "Moncton",
-   "dguid": "2021S0503305",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.7 pp."
- },
- {
-  "placeId": "moncton",
-  "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 0.4,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "305",
-   "name": "Moncton",
-   "dguid": "2021S0503305",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 7.6 - 7.2 (both three-month moving averages).  Standard error of year-over-year change: 1 pp."
- },
- {
-  "placeId": "moncton",
-  "metricId": "lfs_employment_rate",
-  "value": 60.6,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "305",
-   "name": "Moncton",
-   "dguid": "2021S0503305",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.4 pp."
- },
- {
-  "placeId": "moncton",
-  "metricId": "lfs_participation_rate",
-  "value": 65.6,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "305",
-   "name": "Moncton",
-   "dguid": "2021S0503305",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.4 pp."
- },
- {
-  "placeId": "saint-john",
-  "metricId": "lfs_unemployment_rate",
-  "value": 5.6,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "310",
-   "name": "Saint John",
-   "dguid": "2021S0503310",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.8 pp."
- },
- {
-  "placeId": "saint-john",
-  "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -2.0,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "310",
-   "name": "Saint John",
-   "dguid": "2021S0503310",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 5.6 - 7.6 (both three-month moving averages).  Standard error of year-over-year change: 1.2 pp."
- },
- {
-  "placeId": "saint-john",
-  "metricId": "lfs_employment_rate",
-  "value": 58.7,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "310",
-   "name": "Saint John",
-   "dguid": "2021S0503310",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.7 pp."
- },
- {
-  "placeId": "saint-john",
-  "metricId": "lfs_participation_rate",
-  "value": 62.2,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "310",
-   "name": "Saint John",
-   "dguid": "2021S0503310",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.7 pp."
- },
- {
-  "placeId": "fredericton",
-  "metricId": "lfs_unemployment_rate",
-  "value": 6.0,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "320",
-   "name": "Fredericton",
-   "dguid": "2021S0503320",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1 pp."
- },
- {
-  "placeId": "fredericton",
   "metricId": "lfs_unemployment_rate_change_1y",
   "value": -0.5,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
-   "id": "320",
-   "name": "Fredericton",
-   "dguid": "2021S0503320",
+   "id": "932",
+   "name": "Abbotsford-Mission",
+   "dguid": "2021S0503932",
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6 - 6.5 (both three-month moving averages).  Standard error of year-over-year change: 1.5 pp."
+  "note": "2026-10 minus 2025-10: 6.7 - 7.2 (both three-month moving averages).  Standard error of year-over-year change: 0.9 pp."
  },
  {
-  "placeId": "fredericton",
+  "placeId": "abbotsford-mission",
   "metricId": "lfs_employment_rate",
-  "value": 63.2,
-  "period": "2026-09",
+  "value": 61.0,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
-   "id": "320",
-   "name": "Fredericton",
-   "dguid": "2021S0503320",
+   "id": "932",
+   "name": "Abbotsford-Mission",
+   "dguid": "2021S0503932",
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.9 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.3 pp."
  },
  {
-  "placeId": "fredericton",
+  "placeId": "abbotsford-mission",
   "metricId": "lfs_participation_rate",
-  "value": 67.3,
-  "period": "2026-09",
+  "value": 65.3,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
-   "id": "320",
-   "name": "Fredericton",
-   "dguid": "2021S0503320",
+   "id": "932",
+   "name": "Abbotsford-Mission",
+   "dguid": "2021S0503932",
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.8 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.3 pp."
  },
  {
-  "placeId": "sherbrooke",
+  "placeId": "moncton",
   "metricId": "lfs_unemployment_rate",
-  "value": 4.0,
-  "period": "2026-09",
+  "value": 7.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
-   "id": "433",
-   "name": "Sherbrooke",
-   "dguid": "2021S0503433",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.7 pp."
  },
  {
-  "placeId": "sherbrooke",
+  "placeId": "moncton",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -1.2,
-  "period": "2026-09",
+  "value": 0.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
-   "id": "433",
-   "name": "Sherbrooke",
-   "dguid": "2021S0503433",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 4 - 5.2 (both three-month moving averages).  Standard error of year-over-year change: 0.9 pp."
+  "note": "2026-10 minus 2025-10: 7.2 - 7 (both three-month moving averages).  Standard error of year-over-year change: 1 pp."
  },
  {
-  "placeId": "sherbrooke",
+  "placeId": "moncton",
   "metricId": "lfs_employment_rate",
-  "value": 60.4,
-  "period": "2026-09",
+  "value": 61.1,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
-   "id": "433",
-   "name": "Sherbrooke",
-   "dguid": "2021S0503433",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.4 pp."
  },
  {
-  "placeId": "sherbrooke",
+  "placeId": "moncton",
   "metricId": "lfs_participation_rate",
-  "value": 62.9,
-  "period": "2026-09",
+  "value": 65.8,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
-   "id": "433",
-   "name": "Sherbrooke",
-   "dguid": "2021S0503433",
+   "id": "305",
+   "name": "Moncton",
+   "dguid": "2021S0503305",
    "vintage": "2021"
   },
   "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.6 pp."
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.4 pp."
  },
  {
-  "placeId": "sudbury",
-  "metricId": "lfs_unemployment_rate",
-  "value": 6.0,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "580",
-   "name": "Greater Sudbury",
-   "dguid": "2021S0503580",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
- },
- {
-  "placeId": "sudbury",
-  "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -0.7,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "580",
-   "name": "Greater Sudbury",
-   "dguid": "2021S0503580",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 6 - 6.7 (both three-month moving averages).  Standard error of year-over-year change: 1 pp."
- },
- {
-  "placeId": "sudbury",
-  "metricId": "lfs_employment_rate",
-  "value": 61.4,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "580",
-   "name": "Greater Sudbury",
-   "dguid": "2021S0503580",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.4 pp."
- },
- {
-  "placeId": "sudbury",
-  "metricId": "lfs_participation_rate",
-  "value": 65.4,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "580",
-   "name": "Greater Sudbury",
-   "dguid": "2021S0503580",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.4 pp."
- },
- {
-  "placeId": "thunder-bay",
-  "metricId": "lfs_unemployment_rate",
-  "value": 4.3,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "595",
-   "name": "Thunder Bay",
-   "dguid": "2021S0503595",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 0.6 pp."
- },
- {
-  "placeId": "thunder-bay",
-  "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -0.5,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "595",
-   "name": "Thunder Bay",
-   "dguid": "2021S0503595",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "2026-09 minus 2025-09: 4.3 - 4.8 (both three-month moving averages).  Standard error of year-over-year change: 0.8 pp."
- },
- {
-  "placeId": "thunder-bay",
-  "metricId": "lfs_employment_rate",
-  "value": 59.5,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "595",
-   "name": "Thunder Bay",
-   "dguid": "2021S0503595",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.4 pp."
- },
- {
-  "placeId": "thunder-bay",
-  "metricId": "lfs_participation_rate",
-  "value": 62.1,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "595",
-   "name": "Thunder Bay",
-   "dguid": "2021S0503595",
-   "vintage": "2021"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "note": "Three months ending 2026-09.  Standard error of estimate: 1.4 pp."
- },
- {
-  "placeId": "charlottetown",
-  "metricId": "lfs_unemployment_rate",
-  "value": 7.3,
-  "period": "2026-09",
-  "geo": {
-   "level": "province",
-   "id": "11",
-   "name": "Prince Edward Island",
-   "dguid": "2021A000211"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "flags": [
-   "provincial_value"
-  ],
-  "note": "Three months ending 2026-09. Province-wide value (Prince Edward Island is a single economic region); Charlottetown is not published separately by the LFS. Standard error of estimate: 0.6 pp."
- },
- {
-  "placeId": "charlottetown",
-  "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -1.4,
-  "period": "2026-09",
-  "geo": {
-   "level": "province",
-   "id": "11",
-   "name": "Prince Edward Island",
-   "dguid": "2021A000211"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "flags": [
-   "provincial_value"
-  ],
-  "note": "2026-09 minus 2025-09: 7.3 - 8.7 (both three-month moving averages). Province-wide value (Prince Edward Island is a single economic region); Charlottetown is not published separately by the LFS. Standard error of year-over-year change: 0.8 pp."
- },
- {
-  "placeId": "charlottetown",
-  "metricId": "lfs_employment_rate",
-  "value": 61.5,
-  "period": "2026-09",
-  "geo": {
-   "level": "province",
-   "id": "11",
-   "name": "Prince Edward Island",
-   "dguid": "2021A000211"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "flags": [
-   "provincial_value"
-  ],
-  "note": "Three months ending 2026-09. Province-wide value (Prince Edward Island is a single economic region); Charlottetown is not published separately by the LFS. Standard error of estimate: 0.7 pp."
- },
- {
-  "placeId": "charlottetown",
-  "metricId": "lfs_participation_rate",
-  "value": 66.4,
-  "period": "2026-09",
-  "geo": {
-   "level": "province",
-   "id": "11",
-   "name": "Prince Edward Island",
-   "dguid": "2021A000211"
-  },
-  "sourceId": "statcan-14-10-0459-01",
-  "flags": [
-   "provincial_value"
-  ],
-  "note": "Three months ending 2026-09. Province-wide value (Prince Edward Island is a single economic region); Charlottetown is not published separately by the LFS. Standard error of estimate: 0.6 pp."
- },
- {
-  "placeId": "brandon",
+  "placeId": "saint-john",
   "metricId": "lfs_unemployment_rate",
   "value": 5.7,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
-   "level": "economic_region",
-   "id": "4630",
-   "name": "Southwest",
-   "dguid": "2021S05004630",
-   "vintage": "ER 2021"
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
   },
-  "sourceId": "statcan-14-10-0462-01",
-  "flags": [
-   "regional_value"
-  ],
-  "note": "Three months ending 2026-09. Southwest economic region (Manitoba), UNADJUSTED three-month moving average; not seasonally adjusted, so not strictly comparable with the SA values of other places. Standard error of estimate: 0.7 pp."
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.8 pp."
  },
  {
-  "placeId": "brandon",
+  "placeId": "saint-john",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -0.5,
-  "period": "2026-09",
+  "value": -1.6,
+  "period": "2026-10",
   "geo": {
-   "level": "economic_region",
-   "id": "4630",
-   "name": "Southwest",
-   "dguid": "2021S05004630",
-   "vintage": "ER 2021"
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
   },
-  "sourceId": "statcan-14-10-0462-01",
-  "flags": [
-   "regional_value"
-  ],
-  "note": "2026-09 minus 2025-09: 5.7 - 6.2 (both three-month moving averages). Southwest economic region (Manitoba), UNADJUSTED three-month moving average; not seasonally adjusted, so not strictly comparable with the SA values of other places. Standard error of year-over-year change: 0.9 pp."
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "2026-10 minus 2025-10: 5.7 - 7.3 (both three-month moving averages).  Standard error of year-over-year change: 1.2 pp."
  },
  {
-  "placeId": "brandon",
+  "placeId": "saint-john",
   "metricId": "lfs_employment_rate",
-  "value": 61.8,
-  "period": "2026-09",
+  "value": 58.8,
+  "period": "2026-10",
   "geo": {
-   "level": "economic_region",
-   "id": "4630",
-   "name": "Southwest",
-   "dguid": "2021S05004630",
-   "vintage": "ER 2021"
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
   },
-  "sourceId": "statcan-14-10-0462-01",
-  "flags": [
-   "regional_value"
-  ],
-  "note": "Three months ending 2026-09. Southwest economic region (Manitoba), UNADJUSTED three-month moving average; not seasonally adjusted, so not strictly comparable with the SA values of other places. Standard error of estimate: 2.1 pp."
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.7 pp."
  },
  {
-  "placeId": "brandon",
+  "placeId": "saint-john",
   "metricId": "lfs_participation_rate",
-  "value": 65.5,
-  "period": "2026-09",
+  "value": 62.5,
+  "period": "2026-10",
   "geo": {
-   "level": "economic_region",
-   "id": "4630",
-   "name": "Southwest",
-   "dguid": "2021S05004630",
-   "vintage": "ER 2021"
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John",
+   "dguid": "2021S0503310",
+   "vintage": "2021"
   },
-  "sourceId": "statcan-14-10-0462-01",
-  "flags": [
-   "regional_value"
-  ],
-  "note": "Three months ending 2026-09. Southwest economic region (Manitoba), UNADJUSTED three-month moving average; not seasonally adjusted, so not strictly comparable with the SA values of other places. Standard error of estimate: 2.1 pp."
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.7 pp."
  },
  {
-  "placeId": "whitehorse",
+  "placeId": "fredericton",
   "metricId": "lfs_unemployment_rate",
-  "value": 4.6,
-  "period": "2026-09",
+  "value": 6.5,
+  "period": "2026-10",
   "geo": {
-   "level": "province",
-   "id": "60",
-   "name": "Yukon",
-   "dguid": "2021A000260"
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
   },
-  "sourceId": "statcan-14-10-0292-01",
-  "flags": [
-   "provincial_value"
-  ],
-  "note": "Three months ending 2026-09. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 0.7 pp."
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1 pp."
  },
  {
-  "placeId": "whitehorse",
+  "placeId": "fredericton",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 0.4,
-  "period": "2026-09",
+  "value": -0.1,
+  "period": "2026-10",
   "geo": {
-   "level": "province",
-   "id": "60",
-   "name": "Yukon",
-   "dguid": "2021A000260"
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
   },
-  "sourceId": "statcan-14-10-0292-01",
-  "flags": [
-   "provincial_value"
-  ],
-  "note": "2026-09 minus 2025-09: 4.6 - 4.2 (both three-month moving averages). Territory-wide value; the LFS does not publish the capital separately. Standard error of year-over-year change: 0.9 pp."
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "2026-10 minus 2025-10: 6.5 - 6.6 (both three-month moving averages).  Standard error of year-over-year change: 1.5 pp."
  },
  {
-  "placeId": "whitehorse",
+  "placeId": "fredericton",
   "metricId": "lfs_employment_rate",
-  "value": 69.3,
-  "period": "2026-09",
+  "value": 62.4,
+  "period": "2026-10",
   "geo": {
-   "level": "province",
-   "id": "60",
-   "name": "Yukon",
-   "dguid": "2021A000260"
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
   },
-  "sourceId": "statcan-14-10-0292-01",
-  "flags": [
-   "provincial_value"
-  ],
-  "note": "Three months ending 2026-09. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.2 pp."
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.9 pp."
  },
  {
-  "placeId": "whitehorse",
+  "placeId": "fredericton",
   "metricId": "lfs_participation_rate",
-  "value": 72.7,
-  "period": "2026-09",
+  "value": 66.8,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "320",
+   "name": "Fredericton",
+   "dguid": "2021S0503320",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.8 pp."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "lfs_unemployment_rate",
+  "value": 4.2,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "lfs_unemployment_rate_change_1y",
+  "value": -1.3,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "2026-10 minus 2025-10: 4.2 - 5.5 (both three-month moving averages).  Standard error of year-over-year change: 0.9 pp."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "lfs_employment_rate",
+  "value": 59.5,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.6 pp."
+ },
+ {
+  "placeId": "sherbrooke",
+  "metricId": "lfs_participation_rate",
+  "value": 62.1,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "433",
+   "name": "Sherbrooke",
+   "dguid": "2021S0503433",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.6 pp."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "lfs_unemployment_rate",
+  "value": 5.6,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "lfs_unemployment_rate_change_1y",
+  "value": -0.9,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "2026-10 minus 2025-10: 5.6 - 6.5 (both three-month moving averages).  Standard error of year-over-year change: 1 pp."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "lfs_employment_rate",
+  "value": 61.0,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.4 pp."
+ },
+ {
+  "placeId": "sudbury",
+  "metricId": "lfs_participation_rate",
+  "value": 64.6,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "580",
+   "name": "Greater Sudbury",
+   "dguid": "2021S0503580",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.4 pp."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "lfs_unemployment_rate",
+  "value": 3.6,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 0.6 pp."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "lfs_unemployment_rate_change_1y",
+  "value": -1.4,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "2026-10 minus 2025-10: 3.6 - 5 (both three-month moving averages).  Standard error of year-over-year change: 0.8 pp."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "lfs_employment_rate",
+  "value": 59.2,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.4 pp."
+ },
+ {
+  "placeId": "thunder-bay",
+  "metricId": "lfs_participation_rate",
+  "value": 61.6,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "595",
+   "name": "Thunder Bay",
+   "dguid": "2021S0503595",
+   "vintage": "2021"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "note": "Three months ending 2026-10.  Standard error of estimate: 1.4 pp."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "lfs_unemployment_rate",
+  "value": 7.5,
+  "period": "2026-10",
   "geo": {
    "level": "province",
-   "id": "60",
-   "name": "Yukon",
-   "dguid": "2021A000260"
+   "id": "11",
+   "name": "Prince Edward Island",
+   "dguid": "2021A000211"
   },
-  "sourceId": "statcan-14-10-0292-01",
+  "sourceId": "statcan-14-10-0459-01",
   "flags": [
    "provincial_value"
   ],
-  "note": "Three months ending 2026-09. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.2 pp."
+  "note": "Three months ending 2026-10. Province-wide value (Prince Edward Island is a single economic region); Charlottetown is not published separately by the LFS. Standard error of estimate: 0.6 pp."
  },
  {
-  "placeId": "yellowknife",
+  "placeId": "charlottetown",
+  "metricId": "lfs_unemployment_rate_change_1y",
+  "value": -1.1,
+  "period": "2026-10",
+  "geo": {
+   "level": "province",
+   "id": "11",
+   "name": "Prince Edward Island",
+   "dguid": "2021A000211"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "2026-10 minus 2025-10: 7.5 - 8.6 (both three-month moving averages). Province-wide value (Prince Edward Island is a single economic region); Charlottetown is not published separately by the LFS. Standard error of year-over-year change: 0.8 pp."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "lfs_employment_rate",
+  "value": 61.3,
+  "period": "2026-10",
+  "geo": {
+   "level": "province",
+   "id": "11",
+   "name": "Prince Edward Island",
+   "dguid": "2021A000211"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "Three months ending 2026-10. Province-wide value (Prince Edward Island is a single economic region); Charlottetown is not published separately by the LFS. Standard error of estimate: 0.7 pp."
+ },
+ {
+  "placeId": "charlottetown",
+  "metricId": "lfs_participation_rate",
+  "value": 66.2,
+  "period": "2026-10",
+  "geo": {
+   "level": "province",
+   "id": "11",
+   "name": "Prince Edward Island",
+   "dguid": "2021A000211"
+  },
+  "sourceId": "statcan-14-10-0459-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "Three months ending 2026-10. Province-wide value (Prince Edward Island is a single economic region); Charlottetown is not published separately by the LFS. Standard error of estimate: 0.6 pp."
+ },
+ {
+  "placeId": "brandon",
   "metricId": "lfs_unemployment_rate",
   "value": 5.8,
-  "period": "2026-09",
+  "period": "2026-10",
+  "geo": {
+   "level": "economic_region",
+   "id": "4630",
+   "name": "Southwest",
+   "dguid": "2021S05004630",
+   "vintage": "ER 2021"
+  },
+  "sourceId": "statcan-14-10-0462-01",
+  "flags": [
+   "regional_value"
+  ],
+  "note": "Three months ending 2026-10. Southwest economic region (Manitoba), UNADJUSTED three-month moving average; not seasonally adjusted, so not strictly comparable with the SA values of other places. Standard error of estimate: 0.7 pp."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "lfs_unemployment_rate_change_1y",
+  "value": 0.1,
+  "period": "2026-10",
+  "geo": {
+   "level": "economic_region",
+   "id": "4630",
+   "name": "Southwest",
+   "dguid": "2021S05004630",
+   "vintage": "ER 2021"
+  },
+  "sourceId": "statcan-14-10-0462-01",
+  "flags": [
+   "regional_value"
+  ],
+  "note": "2026-10 minus 2025-10: 5.8 - 5.7 (both three-month moving averages). Southwest economic region (Manitoba), UNADJUSTED three-month moving average; not seasonally adjusted, so not strictly comparable with the SA values of other places. Standard error of year-over-year change: 0.9 pp."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "lfs_employment_rate",
+  "value": 60.2,
+  "period": "2026-10",
+  "geo": {
+   "level": "economic_region",
+   "id": "4630",
+   "name": "Southwest",
+   "dguid": "2021S05004630",
+   "vintage": "ER 2021"
+  },
+  "sourceId": "statcan-14-10-0462-01",
+  "flags": [
+   "regional_value"
+  ],
+  "note": "Three months ending 2026-10. Southwest economic region (Manitoba), UNADJUSTED three-month moving average; not seasonally adjusted, so not strictly comparable with the SA values of other places. Standard error of estimate: 2.1 pp."
+ },
+ {
+  "placeId": "brandon",
+  "metricId": "lfs_participation_rate",
+  "value": 63.9,
+  "period": "2026-10",
+  "geo": {
+   "level": "economic_region",
+   "id": "4630",
+   "name": "Southwest",
+   "dguid": "2021S05004630",
+   "vintage": "ER 2021"
+  },
+  "sourceId": "statcan-14-10-0462-01",
+  "flags": [
+   "regional_value"
+  ],
+  "note": "Three months ending 2026-10. Southwest economic region (Manitoba), UNADJUSTED three-month moving average; not seasonally adjusted, so not strictly comparable with the SA values of other places. Standard error of estimate: 2.1 pp."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "lfs_unemployment_rate",
+  "value": 5.3,
+  "period": "2026-10",
+  "geo": {
+   "level": "province",
+   "id": "60",
+   "name": "Yukon",
+   "dguid": "2021A000260"
+  },
+  "sourceId": "statcan-14-10-0292-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "Three months ending 2026-10. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 0.7 pp."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "lfs_unemployment_rate_change_1y",
+  "value": 0.7,
+  "period": "2026-10",
+  "geo": {
+   "level": "province",
+   "id": "60",
+   "name": "Yukon",
+   "dguid": "2021A000260"
+  },
+  "sourceId": "statcan-14-10-0292-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "2026-10 minus 2025-10: 5.3 - 4.6 (both three-month moving averages). Territory-wide value; the LFS does not publish the capital separately. Standard error of year-over-year change: 0.9 pp."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "lfs_employment_rate",
+  "value": 68.9,
+  "period": "2026-10",
+  "geo": {
+   "level": "province",
+   "id": "60",
+   "name": "Yukon",
+   "dguid": "2021A000260"
+  },
+  "sourceId": "statcan-14-10-0292-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "Three months ending 2026-10. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.2 pp."
+ },
+ {
+  "placeId": "whitehorse",
+  "metricId": "lfs_participation_rate",
+  "value": 73.0,
+  "period": "2026-10",
+  "geo": {
+   "level": "province",
+   "id": "60",
+   "name": "Yukon",
+   "dguid": "2021A000260"
+  },
+  "sourceId": "statcan-14-10-0292-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "Three months ending 2026-10. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.2 pp."
+ },
+ {
+  "placeId": "yellowknife",
+  "metricId": "lfs_unemployment_rate",
+  "value": 5.1,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "61",
@@ -1782,13 +1782,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "Three months ending 2026-09. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.1 pp."
+  "note": "Three months ending 2026-10. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.1 pp."
  },
  {
   "placeId": "yellowknife",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": -0.4,
-  "period": "2026-09",
+  "value": 0.8,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "61",
@@ -1799,13 +1799,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "2026-09 minus 2025-09: 5.8 - 6.2 (both three-month moving averages). Territory-wide value; the LFS does not publish the capital separately. Standard error of year-over-year change: 1.4 pp."
+  "note": "2026-10 minus 2025-10: 5.1 - 4.3 (both three-month moving averages). Territory-wide value; the LFS does not publish the capital separately. Standard error of year-over-year change: 1.4 pp."
  },
  {
   "placeId": "yellowknife",
   "metricId": "lfs_employment_rate",
-  "value": 67.7,
-  "period": "2026-09",
+  "value": 67.8,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "61",
@@ -1816,13 +1816,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "Three months ending 2026-09. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.6 pp."
+  "note": "Three months ending 2026-10. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.6 pp."
  },
  {
   "placeId": "yellowknife",
   "metricId": "lfs_participation_rate",
-  "value": 72.2,
-  "period": "2026-09",
+  "value": 71.4,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "61",
@@ -1833,13 +1833,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "Three months ending 2026-09. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.4 pp."
+  "note": "Three months ending 2026-10. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.4 pp."
  },
  {
   "placeId": "iqaluit",
   "metricId": "lfs_unemployment_rate",
-  "value": 11.0,
-  "period": "2026-09",
+  "value": 12.2,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "62",
@@ -1850,13 +1850,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "Three months ending 2026-09. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.4 pp."
+  "note": "Three months ending 2026-10. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.4 pp."
  },
  {
   "placeId": "iqaluit",
   "metricId": "lfs_unemployment_rate_change_1y",
-  "value": 2.2,
-  "period": "2026-09",
+  "value": 2.3,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "62",
@@ -1867,13 +1867,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "2026-09 minus 2025-09: 11 - 8.8 (both three-month moving averages). Territory-wide value; the LFS does not publish the capital separately. Standard error of year-over-year change: 1.6 pp."
+  "note": "2026-10 minus 2025-10: 12.2 - 9.9 (both three-month moving averages). Territory-wide value; the LFS does not publish the capital separately. Standard error of year-over-year change: 1.6 pp."
  },
  {
   "placeId": "iqaluit",
   "metricId": "lfs_employment_rate",
-  "value": 55.5,
-  "period": "2026-09",
+  "value": 54.4,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "62",
@@ -1884,13 +1884,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "Three months ending 2026-09. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.5 pp."
+  "note": "Three months ending 2026-10. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.5 pp."
  },
  {
   "placeId": "iqaluit",
   "metricId": "lfs_participation_rate",
-  "value": 62.4,
-  "period": "2026-09",
+  "value": 62.0,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "62",
@@ -1901,6 +1901,6 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "Three months ending 2026-09. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.4 pp."
+  "note": "Three months ending 2026-10. Territory-wide value; the LFS does not publish the capital separately. Standard error of estimate: 1.4 pp."
  }
 ]
