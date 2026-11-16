@@ -105,26 +105,26 @@
    {
     "id": "cpi-rent-1y",
     "kind": "observation",
-    "headline": "In the 16 cities with a rent CPI, rents already being paid changed by between -4.9% and +9.5% over the 12 months to 2026-09",
-    "detail": "12-month change in the CPI 'rented accommodation' index (rent and related tenant costs), Victoria +9.5%, St. John's +8.9%, Charlottetown +8.0%, Thunder Bay +7.9%, Halifax +7.0% at the top and Calgary -4.9%, Edmonton -0.1%, Saskatoon +1.7%, Toronto +1.8% at the bottom. CPI measures change in rents of the existing rental stock (including renewals), so it can differ in direction from asking rents on new listings. It says nothing about which city is cheaper. Charlottetown's value covers Charlottetown and Summerside; other places without a city CPI use provincial values (see map layer flags).",
+    "headline": "In the 16 cities with a rent CPI, rents already being paid changed by between -6.0% and +15.5% over the 12 months to 2026-10",
+    "detail": "12-month change in the CPI 'rented accommodation' index (rent and related tenant costs), St. John's +15.5%, Halifax +9.6%, Thunder Bay +7.3%, Saint John +5.6%, Charlottetown +4.8% at the top and Calgary -6.0%, Toronto -0.2%, Québec City +1.2%, Edmonton +1.8% at the bottom. CPI measures change in rents of the existing rental stock (including renewals), so it can differ in direction from asking rents on new listings. It says nothing about which city is cheaper. Charlottetown's value covers Charlottetown and Summerside; other places without a city CPI use provincial values (see map layer flags).",
     "stat": {
-     "value": 4.2,
+     "value": 3.8,
      "unit": "percent",
      "label": "median 12-month change, rent CPI (cities)",
-     "period": "2026-09"
+     "period": "2026-10"
     },
     "placeIds": [
-     "victoria",
      "st-johns",
-     "charlottetown",
+     "halifax",
+     "thunder-bay",
      "calgary",
-     "edmonton"
+     "toronto"
     ],
     "metricId": "cpi_rent_change_1y",
     "sourceIds": [
      "statcan-18-10-0004-01"
     ],
-    "calc": "CPI 'Rented accommodation' index (2002=100), 2026-09 / same month a year earlier - 1, x 100, for the cities StatCan publishes in table 18-10-0004-01."
+    "calc": "CPI 'Rented accommodation' index (2002=100), 2026-10 / same month a year earlier - 1, x 100, for the cities StatCan publishes in table 18-10-0004-01."
    }
   ],
   "charts": [
@@ -2010,8 +2010,6 @@
   "relatedPlaceIds": [
    "abbotsford-mission",
    "calgary",
-   "charlottetown",
-   "edmonton",
    "fredericton",
    "halifax",
    "hamilton",
@@ -2021,12 +2019,12 @@
    "sherbrooke",
    "st-johns",
    "sudbury",
+   "thunder-bay",
    "toronto",
    "vancouver",
-   "victoria",
    "winnipeg"
   ],
-  "computedAt": "2026-11-09"
+  "computedAt": "2026-11-16"
  },
  {
   "id": "arrival-budget",
@@ -2542,6 +2540,6 @@
    "toronto",
    "vancouver"
   ],
-  "computedAt": "2026-11-09"
+  "computedAt": "2026-11-16"
  }
 ]

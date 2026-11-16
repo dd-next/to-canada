@@ -5418,8 +5418,8 @@
  {
   "placeId": "toronto",
   "metricId": "cpi_rent_change_1y",
-  "value": 1.8,
-  "period": "2026-09",
+  "value": -0.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "535",
@@ -5428,13 +5428,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Toronto, Ontario, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Toronto, Ontario, 2026-10 vs 2025-10."
  },
  {
   "placeId": "toronto",
   "metricId": "cpi_all_items_change_1y",
   "value": 2.1,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "535",
@@ -5443,13 +5443,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Toronto, Ontario, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Toronto, Ontario, 2026-10 vs 2025-10."
  },
  {
   "placeId": "montreal",
   "metricId": "cpi_rent_change_1y",
-  "value": 2.6,
-  "period": "2026-09",
+  "value": 3.6,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "462",
@@ -5458,73 +5458,58 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Montréal, Quebec, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Montréal, Quebec, 2026-10 vs 2025-10."
  },
  {
   "placeId": "montreal",
-  "metricId": "cpi_all_items_change_1y",
-  "value": 3.0,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "462",
-   "name": "Montréal, Quebec",
-   "dguid": "2011S0503462",
-   "vintage": "2011"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Montréal, Quebec, 2026-09 vs 2025-09."
- },
- {
-  "placeId": "vancouver",
-  "metricId": "cpi_rent_change_1y",
-  "value": 6.3,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "933",
-   "name": "Vancouver, British Columbia",
-   "dguid": "2011S0503933",
-   "vintage": "2011"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Vancouver, British Columbia, 2026-09 vs 2025-09."
- },
- {
-  "placeId": "vancouver",
-  "metricId": "cpi_all_items_change_1y",
-  "value": 3.0,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "933",
-   "name": "Vancouver, British Columbia",
-   "dguid": "2011S0503933",
-   "vintage": "2011"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Vancouver, British Columbia, 2026-09 vs 2025-09."
- },
- {
-  "placeId": "calgary",
-  "metricId": "cpi_rent_change_1y",
-  "value": -4.9,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "825",
-   "name": "Calgary, Alberta",
-   "dguid": "2011S0503825",
-   "vintage": "2011"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Calgary, Alberta, 2026-09 vs 2025-09."
- },
- {
-  "placeId": "calgary",
   "metricId": "cpi_all_items_change_1y",
   "value": 3.4,
-  "period": "2026-09",
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "462",
+   "name": "Montréal, Quebec",
+   "dguid": "2011S0503462",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Montréal, Quebec, 2026-10 vs 2025-10."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cpi_rent_change_1y",
+  "value": 2.8,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver, British Columbia",
+   "dguid": "2011S0503933",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Vancouver, British Columbia, 2026-10 vs 2025-10."
+ },
+ {
+  "placeId": "vancouver",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 2.5,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "933",
+   "name": "Vancouver, British Columbia",
+   "dguid": "2011S0503933",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Vancouver, British Columbia, 2026-10 vs 2025-10."
+ },
+ {
+  "placeId": "calgary",
+  "metricId": "cpi_rent_change_1y",
+  "value": -6.0,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "825",
@@ -5533,154 +5518,154 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Calgary, Alberta, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Calgary, Alberta, 2026-10 vs 2025-10."
  },
  {
-  "placeId": "edmonton",
-  "metricId": "cpi_rent_change_1y",
-  "value": -0.1,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "835",
-   "name": "Edmonton, Alberta",
-   "dguid": "2011S0503835",
-   "vintage": "2011"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Edmonton, Alberta, 2026-09 vs 2025-09."
- },
- {
-  "placeId": "edmonton",
-  "metricId": "cpi_all_items_change_1y",
-  "value": 3.5,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "835",
-   "name": "Edmonton, Alberta",
-   "dguid": "2011S0503835",
-   "vintage": "2011"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Edmonton, Alberta, 2026-09 vs 2025-09."
- },
- {
-  "placeId": "ottawa",
-  "metricId": "cpi_rent_change_1y",
-  "value": 3.9,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma_part",
-   "id": "35505",
-   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
-   "dguid": "2011S050535505",
-   "vintage": "2011"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ottawa-Gatineau, Ontario part, Ontario/Quebec, 2026-09 vs 2025-09."
- },
- {
-  "placeId": "ottawa",
-  "metricId": "cpi_all_items_change_1y",
-  "value": 3.0,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma_part",
-   "id": "35505",
-   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
-   "dguid": "2011S050535505",
-   "vintage": "2011"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Ottawa-Gatineau, Ontario part, Ontario/Quebec, 2026-09 vs 2025-09."
- },
- {
-  "placeId": "gatineau",
-  "metricId": "cpi_rent_change_1y",
-  "value": 3.2,
-  "period": "2026-09",
-  "geo": {
-   "level": "province",
-   "id": "24",
-   "name": "Quebec",
-   "dguid": "2016A000224",
-   "vintage": "2016"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "flags": [
-   "provincial_value"
-  ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Quebec, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
- },
- {
-  "placeId": "gatineau",
+  "placeId": "calgary",
   "metricId": "cpi_all_items_change_1y",
   "value": 3.1,
-  "period": "2026-09",
-  "geo": {
-   "level": "province",
-   "id": "24",
-   "name": "Quebec",
-   "dguid": "2016A000224",
-   "vintage": "2016"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "flags": [
-   "provincial_value"
-  ],
-  "note": "12-month change of the All-items CPI (2002=100) for Quebec, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
- },
- {
-  "placeId": "winnipeg",
-  "metricId": "cpi_rent_change_1y",
-  "value": 5.3,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "cma",
-   "id": "602",
-   "name": "Winnipeg, Manitoba",
-   "dguid": "2011S0503602",
+   "id": "825",
+   "name": "Calgary, Alberta",
+   "dguid": "2011S0503825",
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Winnipeg, Manitoba, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Calgary, Alberta, 2026-10 vs 2025-10."
  },
  {
-  "placeId": "winnipeg",
+  "placeId": "edmonton",
+  "metricId": "cpi_rent_change_1y",
+  "value": 1.8,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "835",
+   "name": "Edmonton, Alberta",
+   "dguid": "2011S0503835",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Edmonton, Alberta, 2026-10 vs 2025-10."
+ },
+ {
+  "placeId": "edmonton",
   "metricId": "cpi_all_items_change_1y",
-  "value": 4.2,
-  "period": "2026-09",
+  "value": 3.4,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
-   "id": "602",
-   "name": "Winnipeg, Manitoba",
-   "dguid": "2011S0503602",
+   "id": "835",
+   "name": "Edmonton, Alberta",
+   "dguid": "2011S0503835",
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Winnipeg, Manitoba, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Edmonton, Alberta, 2026-10 vs 2025-10."
  },
  {
-  "placeId": "quebec-city",
+  "placeId": "ottawa",
   "metricId": "cpi_rent_change_1y",
-  "value": 2.7,
-  "period": "2026-09",
+  "value": 4.6,
+  "period": "2026-10",
   "geo": {
-   "level": "cma",
-   "id": "421",
-   "name": "Québec, Quebec",
-   "dguid": "2011S0503421",
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "dguid": "2011S050535505",
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Québec, Quebec, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ottawa-Gatineau, Ontario part, Ontario/Quebec, 2026-10 vs 2025-10."
  },
  {
-  "placeId": "quebec-city",
+  "placeId": "ottawa",
   "metricId": "cpi_all_items_change_1y",
   "value": 3.3,
-  "period": "2026-09",
+  "period": "2026-10",
+  "geo": {
+   "level": "cma_part",
+   "id": "35505",
+   "name": "Ottawa-Gatineau, Ontario part, Ontario/Quebec",
+   "dguid": "2011S050535505",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Ottawa-Gatineau, Ontario part, Ontario/Quebec, 2026-10 vs 2025-10."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cpi_rent_change_1y",
+  "value": 3.0,
+  "period": "2026-10",
+  "geo": {
+   "level": "province",
+   "id": "24",
+   "name": "Quebec",
+   "dguid": "2016A000224",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Quebec, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "gatineau",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.4,
+  "period": "2026-10",
+  "geo": {
+   "level": "province",
+   "id": "24",
+   "name": "Quebec",
+   "dguid": "2016A000224",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for Quebec, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cpi_rent_change_1y",
+  "value": 3.2,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg, Manitoba",
+   "dguid": "2011S0503602",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Winnipeg, Manitoba, 2026-10 vs 2025-10."
+ },
+ {
+  "placeId": "winnipeg",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 4.1,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "602",
+   "name": "Winnipeg, Manitoba",
+   "dguid": "2011S0503602",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Winnipeg, Manitoba, 2026-10 vs 2025-10."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cpi_rent_change_1y",
+  "value": 1.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "421",
@@ -5689,13 +5674,28 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Québec, Quebec, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Québec, Quebec, 2026-10 vs 2025-10."
+ },
+ {
+  "placeId": "quebec-city",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 3.5,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "421",
+   "name": "Québec, Quebec",
+   "dguid": "2011S0503421",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Québec, Quebec, 2026-10 vs 2025-10."
  },
  {
   "placeId": "hamilton",
   "metricId": "cpi_rent_change_1y",
-  "value": 1.9,
-  "period": "2026-09",
+  "value": 1.1,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "35",
@@ -5707,13 +5707,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "hamilton",
   "metricId": "cpi_all_items_change_1y",
   "value": 2.5,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "35",
@@ -5725,13 +5725,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "kitchener-waterloo",
   "metricId": "cpi_rent_change_1y",
-  "value": 1.9,
-  "period": "2026-09",
+  "value": 1.1,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "35",
@@ -5743,13 +5743,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "kitchener-waterloo",
   "metricId": "cpi_all_items_change_1y",
   "value": 2.5,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "35",
@@ -5761,13 +5761,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "london",
   "metricId": "cpi_rent_change_1y",
-  "value": 1.9,
-  "period": "2026-09",
+  "value": 1.1,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "35",
@@ -5779,13 +5779,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "london",
   "metricId": "cpi_all_items_change_1y",
   "value": 2.5,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "35",
@@ -5797,13 +5797,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "halifax",
   "metricId": "cpi_rent_change_1y",
-  "value": 7.0,
-  "period": "2026-09",
+  "value": 9.6,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "205",
@@ -5812,13 +5812,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Halifax, Nova Scotia, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Halifax, Nova Scotia, 2026-10 vs 2025-10."
  },
  {
   "placeId": "halifax",
   "metricId": "cpi_all_items_change_1y",
-  "value": 5.4,
-  "period": "2026-09",
+  "value": 5.8,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "205",
@@ -5827,13 +5827,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Halifax, Nova Scotia, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Halifax, Nova Scotia, 2026-10 vs 2025-10."
  },
  {
   "placeId": "victoria",
   "metricId": "cpi_rent_change_1y",
-  "value": 9.5,
-  "period": "2026-09",
+  "value": 2.9,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "935",
@@ -5842,13 +5842,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Victoria, British Columbia, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Victoria, British Columbia, 2026-10 vs 2025-10."
  },
  {
   "placeId": "victoria",
   "metricId": "cpi_all_items_change_1y",
-  "value": 3.4,
-  "period": "2026-09",
+  "value": 2.7,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "935",
@@ -5857,13 +5857,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Victoria, British Columbia, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Victoria, British Columbia, 2026-10 vs 2025-10."
  },
  {
   "placeId": "saskatoon",
   "metricId": "cpi_rent_change_1y",
-  "value": 1.7,
-  "period": "2026-09",
+  "value": 4.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "725",
@@ -5872,13 +5872,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Saskatoon, Saskatchewan, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Saskatoon, Saskatchewan, 2026-10 vs 2025-10."
  },
  {
   "placeId": "saskatoon",
   "metricId": "cpi_all_items_change_1y",
-  "value": 3.1,
-  "period": "2026-09",
+  "value": 3.6,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "725",
@@ -5887,13 +5887,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Saskatoon, Saskatchewan, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Saskatoon, Saskatchewan, 2026-10 vs 2025-10."
  },
  {
   "placeId": "regina",
   "metricId": "cpi_rent_change_1y",
-  "value": 4.4,
-  "period": "2026-09",
+  "value": 3.9,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "705",
@@ -5902,13 +5902,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Regina, Saskatchewan, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Regina, Saskatchewan, 2026-10 vs 2025-10."
  },
  {
   "placeId": "regina",
   "metricId": "cpi_all_items_change_1y",
-  "value": 3.4,
-  "period": "2026-09",
+  "value": 3.6,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "705",
@@ -5917,13 +5917,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Regina, Saskatchewan, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Regina, Saskatchewan, 2026-10 vs 2025-10."
  },
  {
   "placeId": "st-johns",
   "metricId": "cpi_rent_change_1y",
-  "value": 8.9,
-  "period": "2026-09",
+  "value": 15.5,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "001",
@@ -5932,13 +5932,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for St. John's, Newfoundland and Labrador, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for St. John's, Newfoundland and Labrador, 2026-10 vs 2025-10."
  },
  {
   "placeId": "st-johns",
   "metricId": "cpi_all_items_change_1y",
-  "value": 4.6,
-  "period": "2026-09",
+  "value": 5.1,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "001",
@@ -5947,13 +5947,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for St. John's, Newfoundland and Labrador, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for St. John's, Newfoundland and Labrador, 2026-10 vs 2025-10."
  },
  {
   "placeId": "windsor",
   "metricId": "cpi_rent_change_1y",
-  "value": 1.9,
-  "period": "2026-09",
+  "value": 1.1,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "35",
@@ -5965,13 +5965,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "windsor",
   "metricId": "cpi_all_items_change_1y",
   "value": 2.5,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "35",
@@ -5983,13 +5983,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "kelowna",
   "metricId": "cpi_rent_change_1y",
-  "value": 5.3,
-  "period": "2026-09",
+  "value": 1.3,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "59",
@@ -6001,13 +6001,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for British Columbia, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for British Columbia, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "kelowna",
   "metricId": "cpi_all_items_change_1y",
-  "value": 3.0,
-  "period": "2026-09",
+  "value": 2.5,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "59",
@@ -6019,13 +6019,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for British Columbia, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the All-items CPI (2002=100) for British Columbia, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "abbotsford-mission",
   "metricId": "cpi_rent_change_1y",
-  "value": 5.3,
-  "period": "2026-09",
+  "value": 1.3,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "59",
@@ -6037,13 +6037,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for British Columbia, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for British Columbia, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "abbotsford-mission",
   "metricId": "cpi_all_items_change_1y",
-  "value": 3.0,
-  "period": "2026-09",
+  "value": 2.5,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "59",
@@ -6055,13 +6055,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for British Columbia, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the All-items CPI (2002=100) for British Columbia, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "moncton",
   "metricId": "cpi_rent_change_1y",
-  "value": 6.9,
-  "period": "2026-09",
+  "value": 10.5,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "13",
@@ -6073,46 +6073,31 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for New Brunswick, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for New Brunswick, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "moncton",
-  "metricId": "cpi_all_items_change_1y",
-  "value": 5.0,
-  "period": "2026-09",
-  "geo": {
-   "level": "province",
-   "id": "13",
-   "name": "New Brunswick",
-   "dguid": "2016A000213",
-   "vintage": "2016"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "flags": [
-   "provincial_value"
-  ],
-  "note": "12-month change of the All-items CPI (2002=100) for New Brunswick, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
- },
- {
-  "placeId": "saint-john",
-  "metricId": "cpi_rent_change_1y",
-  "value": 2.8,
-  "period": "2026-09",
-  "geo": {
-   "level": "cma",
-   "id": "310",
-   "name": "Saint John, New Brunswick",
-   "dguid": "2011S0503310",
-   "vintage": "2011"
-  },
-  "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Saint John, New Brunswick, 2026-09 vs 2025-09."
- },
- {
-  "placeId": "saint-john",
   "metricId": "cpi_all_items_change_1y",
   "value": 4.8,
-  "period": "2026-09",
+  "period": "2026-10",
+  "geo": {
+   "level": "province",
+   "id": "13",
+   "name": "New Brunswick",
+   "dguid": "2016A000213",
+   "vintage": "2016"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "flags": [
+   "provincial_value"
+  ],
+  "note": "12-month change of the All-items CPI (2002=100) for New Brunswick, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cpi_rent_change_1y",
+  "value": 5.6,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "310",
@@ -6121,13 +6106,28 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Saint John, New Brunswick, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Saint John, New Brunswick, 2026-10 vs 2025-10."
+ },
+ {
+  "placeId": "saint-john",
+  "metricId": "cpi_all_items_change_1y",
+  "value": 4.7,
+  "period": "2026-10",
+  "geo": {
+   "level": "cma",
+   "id": "310",
+   "name": "Saint John, New Brunswick",
+   "dguid": "2011S0503310",
+   "vintage": "2011"
+  },
+  "sourceId": "statcan-18-10-0004-01",
+  "note": "12-month change of the All-items CPI (2002=100) for Saint John, New Brunswick, 2026-10 vs 2025-10."
  },
  {
   "placeId": "fredericton",
   "metricId": "cpi_rent_change_1y",
-  "value": 6.9,
-  "period": "2026-09",
+  "value": 10.5,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "13",
@@ -6139,13 +6139,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for New Brunswick, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for New Brunswick, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "fredericton",
   "metricId": "cpi_all_items_change_1y",
-  "value": 5.0,
-  "period": "2026-09",
+  "value": 4.8,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "13",
@@ -6157,13 +6157,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for New Brunswick, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the All-items CPI (2002=100) for New Brunswick, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "sherbrooke",
   "metricId": "cpi_rent_change_1y",
-  "value": 3.2,
-  "period": "2026-09",
+  "value": 3.0,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "24",
@@ -6175,13 +6175,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Quebec, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Quebec, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "sherbrooke",
   "metricId": "cpi_all_items_change_1y",
-  "value": 3.1,
-  "period": "2026-09",
+  "value": 3.4,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "24",
@@ -6193,13 +6193,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for Quebec, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the All-items CPI (2002=100) for Quebec, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "sudbury",
   "metricId": "cpi_rent_change_1y",
-  "value": 1.9,
-  "period": "2026-09",
+  "value": 1.1,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "35",
@@ -6211,13 +6211,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Ontario, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "sudbury",
   "metricId": "cpi_all_items_change_1y",
   "value": 2.5,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "35",
@@ -6229,13 +6229,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the All-items CPI (2002=100) for Ontario, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "thunder-bay",
   "metricId": "cpi_rent_change_1y",
-  "value": 7.9,
-  "period": "2026-09",
+  "value": 7.3,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "595",
@@ -6244,13 +6244,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Thunder Bay, Ontario, 2026-09 vs 2025-09."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Thunder Bay, Ontario, 2026-10 vs 2025-10."
  },
  {
   "placeId": "thunder-bay",
   "metricId": "cpi_all_items_change_1y",
-  "value": 2.8,
-  "period": "2026-09",
+  "value": 3.2,
+  "period": "2026-10",
   "geo": {
    "level": "cma",
    "id": "595",
@@ -6259,13 +6259,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Thunder Bay, Ontario, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Thunder Bay, Ontario, 2026-10 vs 2025-10."
  },
  {
   "placeId": "charlottetown",
   "metricId": "cpi_rent_change_1y",
-  "value": 8.0,
-  "period": "2026-09",
+  "value": 4.8,
+  "period": "2026-10",
   "geo": {
    "level": "ca",
    "id": "charlottetown-summerside",
@@ -6275,13 +6275,13 @@
   "flags": [
    "regional_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Charlottetown and Summerside, Prince Edward Island, 2026-09 vs 2025-09. Published for Charlottetown and Summerside combined."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Charlottetown and Summerside, Prince Edward Island, 2026-10 vs 2025-10. Published for Charlottetown and Summerside combined."
  },
  {
   "placeId": "charlottetown",
   "metricId": "cpi_all_items_change_1y",
-  "value": 5.6,
-  "period": "2026-09",
+  "value": 5.1,
+  "period": "2026-10",
   "geo": {
    "level": "ca",
    "id": "charlottetown-summerside",
@@ -6291,13 +6291,13 @@
   "flags": [
    "regional_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for Charlottetown and Summerside, Prince Edward Island, 2026-09 vs 2025-09. Published for Charlottetown and Summerside combined."
+  "note": "12-month change of the All-items CPI (2002=100) for Charlottetown and Summerside, Prince Edward Island, 2026-10 vs 2025-10. Published for Charlottetown and Summerside combined."
  },
  {
   "placeId": "brandon",
   "metricId": "cpi_rent_change_1y",
-  "value": 5.2,
-  "period": "2026-09",
+  "value": 3.3,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "46",
@@ -6309,13 +6309,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Manitoba, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Manitoba, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "brandon",
   "metricId": "cpi_all_items_change_1y",
-  "value": 4.4,
-  "period": "2026-09",
+  "value": 4.2,
+  "period": "2026-10",
   "geo": {
    "level": "province",
    "id": "46",
@@ -6327,13 +6327,13 @@
   "flags": [
    "provincial_value"
   ],
-  "note": "12-month change of the All-items CPI (2002=100) for Manitoba, 2026-09 vs 2025-09. No city CPI is published for this place; this is the province's value."
+  "note": "12-month change of the All-items CPI (2002=100) for Manitoba, 2026-10 vs 2025-10. No city CPI is published for this place; this is the province's value."
  },
  {
   "placeId": "whitehorse",
   "metricId": "cpi_rent_change_1y",
   "value": null,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "csd",
    "id": "6001009",
@@ -6345,13 +6345,13 @@
   "flags": [
    "not_available"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Whitehorse, Yukon, 2026-09 vs 2025-09. Rented accommodation CPI is not published for this geography."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Whitehorse, Yukon, 2026-10 vs 2025-10. Rented accommodation CPI is not published for this geography."
  },
  {
   "placeId": "whitehorse",
   "metricId": "cpi_all_items_change_1y",
-  "value": 6.1,
-  "period": "2026-09",
+  "value": 5.0,
+  "period": "2026-10",
   "geo": {
    "level": "csd",
    "id": "6001009",
@@ -6360,13 +6360,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Whitehorse, Yukon, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Whitehorse, Yukon, 2026-10 vs 2025-10."
  },
  {
   "placeId": "yellowknife",
   "metricId": "cpi_rent_change_1y",
   "value": null,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "csd",
    "id": "6106023",
@@ -6378,13 +6378,13 @@
   "flags": [
    "not_available"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Yellowknife, Northwest Territories, 2026-09 vs 2025-09. Rented accommodation CPI is not published for this geography."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Yellowknife, Northwest Territories, 2026-10 vs 2025-10. Rented accommodation CPI is not published for this geography."
  },
  {
   "placeId": "yellowknife",
   "metricId": "cpi_all_items_change_1y",
-  "value": 4.7,
-  "period": "2026-09",
+  "value": 4.6,
+  "period": "2026-10",
   "geo": {
    "level": "csd",
    "id": "6106023",
@@ -6393,13 +6393,13 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Yellowknife, Northwest Territories, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Yellowknife, Northwest Territories, 2026-10 vs 2025-10."
  },
  {
   "placeId": "iqaluit",
   "metricId": "cpi_rent_change_1y",
   "value": null,
-  "period": "2026-09",
+  "period": "2026-10",
   "geo": {
    "level": "csd",
    "id": "6204003",
@@ -6411,13 +6411,13 @@
   "flags": [
    "not_available"
   ],
-  "note": "12-month change of the Rented accommodation CPI (2002=100) for Iqaluit, Nunavut, 2026-09 vs 2025-09. Rented accommodation CPI is not published for this geography."
+  "note": "12-month change of the Rented accommodation CPI (2002=100) for Iqaluit, Nunavut, 2026-10 vs 2025-10. Rented accommodation CPI is not published for this geography."
  },
  {
   "placeId": "iqaluit",
   "metricId": "cpi_all_items_change_1y",
-  "value": 3.0,
-  "period": "2026-09",
+  "value": 3.2,
+  "period": "2026-10",
   "geo": {
    "level": "csd",
    "id": "6204003",
@@ -6426,6 +6426,6 @@
    "vintage": "2011"
   },
   "sourceId": "statcan-18-10-0004-01",
-  "note": "12-month change of the All-items CPI (2002=100) for Iqaluit, Nunavut, 2026-09 vs 2025-09."
+  "note": "12-month change of the All-items CPI (2002=100) for Iqaluit, Nunavut, 2026-10 vs 2025-10."
  }
 ]
