@@ -9,14 +9,14 @@
    {
     "id": "wage-region-range-31301",
     "kind": "observation",
-    "headline": "Registered nurses: comparable regional medians range from $39.38 to $58.00 per hour",
-    "detail": "Among 30 economic regions using Labour Force Survey, reference period 2023-2024: Capitale-Nationale has $39.38/hour and Northwest Territories has $58.00/hour. These are regional wages of employed workers, not city pay or starting salaries.",
+    "headline": "Registered nurses: comparable regional medians range from $40.00 to $62.00 per hour",
+    "detail": "Among 28 economic regions using Labour Force Survey, reference period 2024-2025: Capitale-Nationale has $40.00/hour and Northwest Territories has $62.00/hour. These are regional wages of employed workers, not city pay or starting salaries.",
     "placeIds": [
      "quebec-city",
      "yellowknife"
     ],
     "sourceIds": [
-     "jobbank-wages-2025"
+     "jobbank-wages-2026"
     ],
     "metricId": "noc_wage",
     "mapParams": {
@@ -27,14 +27,14 @@
    {
     "id": "wage-region-range-72106",
     "kind": "observation",
-    "headline": "Welders: comparable regional medians range from $25.00 to $39.90 per hour",
-    "detail": "Among 19 economic regions using Labour Force Survey, reference period 2023-2024: Prince Edward Island has $25.00/hour and Edmonton has $39.90/hour. These are regional wages of employed workers, not city pay or starting salaries.",
+    "headline": "Welders: comparable regional medians range from $25.00 to $40.00 per hour",
+    "detail": "Among 15 economic regions using Labour Force Survey, reference period 2024-2025: Prince Edward Island has $25.00/hour and Calgary has $40.00/hour. These are regional wages of employed workers, not city pay or starting salaries.",
     "placeIds": [
      "charlottetown",
-     "edmonton"
+     "calgary"
     ],
     "sourceIds": [
-     "jobbank-wages-2025"
+     "jobbank-wages-2026"
     ],
     "metricId": "noc_wage",
     "mapParams": {
@@ -45,14 +45,14 @@
    {
     "id": "wage-region-range-73300",
     "kind": "observation",
-    "headline": "Transport truck drivers: comparable regional medians range from $20.00 to $34.00 per hour",
-    "detail": "Among 28 economic regions using Labour Force Survey, reference period 2023-2024: Fredericton--Oromocto has $20.00/hour and Yukon Territory has $34.00/hour. These are regional wages of employed workers, not city pay or starting salaries.",
+    "headline": "Transport truck drivers: comparable regional medians range from $24.15 to $34.00 per hour",
+    "detail": "Among 24 economic regions using Labour Force Survey, reference period 2024-2025: Saint John--St. Stephen has $24.15/hour and Vancouver Island and Coast has $34.00/hour. These are regional wages of employed workers, not city pay or starting salaries.",
     "placeIds": [
-     "fredericton",
-     "whitehorse"
+     "saint-john",
+     "victoria"
     ],
     "sourceIds": [
-     "jobbank-wages-2025"
+     "jobbank-wages-2026"
     ],
     "metricId": "noc_wage",
     "mapParams": {
@@ -66,7 +66,7 @@
     "id": "wage-region-31301",
     "type": "range",
     "title": "Registered nurses: published economic-region wages",
-    "subtitle": "NOC 31301 · 2023-2024 · Labour Force Survey",
+    "subtitle": "NOC 31301 · 2024-2025 · Labour Force Survey",
     "unit": "CAD_hour",
     "yLabel": "CAD per hour",
     "series": [
@@ -76,227 +76,213 @@
       "points": [
        {
         "x": "Avalon Peninsula",
-        "y": 44.0,
-        "y0": 33.11,
-        "y1": 51.66,
+        "y": 48.0,
+        "y0": 35.0,
+        "y1": 55.0,
         "placeId": "st-johns"
        },
        {
         "x": "Calgary",
-        "y": 48.01,
-        "y0": 34.57,
-        "y1": 55.0,
+        "y": 49.0,
+        "y0": 30.0,
+        "y1": 60.0,
         "placeId": "calgary"
        },
        {
         "x": "Capitale-Nationale",
-        "y": 39.38,
-        "y0": 27.0,
-        "y1": 48.0,
+        "y": 40.0,
+        "y0": 28.0,
+        "y1": 51.0,
         "placeId": "quebec-city"
        },
        {
         "x": "Edmonton",
-        "y": 46.0,
+        "y": 50.0,
         "y0": 30.0,
-        "y1": 53.74,
+        "y1": 58.0,
         "placeId": "edmonton"
        },
        {
         "x": "Estrie",
-        "y": 41.0,
-        "y0": 26.67,
-        "y1": 47.98,
+        "y": 41.13,
+        "y0": 27.47,
+        "y1": 52.0,
         "placeId": "sherbrooke"
        },
        {
         "x": "Fredericton--Oromocto",
-        "y": 44.77,
+        "y": 43.0,
         "y0": 31.0,
         "y1": 49.0,
         "placeId": "fredericton"
        },
        {
         "x": "Halifax",
-        "y": 42.0,
-        "y0": 30.0,
-        "y1": 51.0,
+        "y": 46.7,
+        "y0": 35.0,
+        "y1": 52.0,
         "placeId": "halifax"
        },
        {
         "x": "Hamilton--Niagara Peninsula",
-        "y": 43.0,
-        "y0": 29.6,
+        "y": 42.1,
+        "y0": 30.0,
         "y1": 56.0,
         "placeId": "hamilton"
        },
        {
         "x": "Kitchener--Waterloo--Barrie",
-        "y": 41.0,
-        "y0": 29.73,
-        "y1": 55.0,
+        "y": 43.0,
+        "y0": 30.18,
+        "y1": 57.0,
         "placeId": "kitchener-waterloo"
        },
        {
         "x": "London",
-        "y": 43.27,
-        "y0": 31.4,
-        "y1": 55.0,
+        "y": 45.0,
+        "y0": 31.2,
+        "y1": 56.0,
         "placeId": "london"
        },
        {
         "x": "Lower Mainland",
-        "y": 47.54,
-        "y0": 34.0,
-        "y1": 57.0,
+        "y": 50.5,
+        "y0": 40.0,
+        "y1": 60.28,
         "placeId": "vancouver"
        },
        {
         "x": "Moncton--Richibucto",
         "y": 45.0,
-        "y0": 28.57,
-        "y1": 50.0,
+        "y0": 29.04,
+        "y1": 49.82,
         "placeId": "moncton"
        },
        {
         "x": "Montréal",
-        "y": 40.0,
-        "y0": 28.07,
-        "y1": 50.48,
+        "y": 41.0,
+        "y0": 28.0,
+        "y1": 52.88,
         "placeId": "montreal"
        },
        {
         "x": "Northeast",
-        "y": 44.0,
-        "y0": 31.0,
-        "y1": 55.0,
+        "y": 45.99,
+        "y0": 35.0,
+        "y1": 56.0,
         "placeId": "sudbury"
        },
        {
         "x": "Northwest",
-        "y": 42.5,
-        "y0": 31.0,
-        "y1": 56.0,
+        "y": 47.0,
+        "y0": 35.14,
+        "y1": 57.0,
         "placeId": "thunder-bay"
        },
        {
         "x": "Northwest Territories",
-        "y": 58.0,
+        "y": 62.0,
         "y0": 45.0,
-        "y1": 69.23,
+        "y1": 76.92,
         "placeId": "yellowknife"
        },
        {
         "x": "Nunavut",
-        "y": 57.99,
+        "y": 60.0,
         "y0": 45.0,
-        "y1": 71.57,
+        "y1": 75.55,
         "placeId": "iqaluit"
        },
        {
         "x": "Ottawa",
-        "y": 45.0,
-        "y0": 28.85,
-        "y1": 54.38,
+        "y": 46.62,
+        "y0": 31.32,
+        "y1": 56.0,
         "placeId": "ottawa"
        },
        {
         "x": "Outaouais",
-        "y": 41.0,
-        "y0": 25.0,
-        "y1": 53.42,
+        "y": 45.0,
+        "y0": 28.0,
+        "y1": 56.0,
         "placeId": "gatineau"
        },
        {
         "x": "Prince Edward Island",
-        "y": 42.0,
-        "y0": 31.5,
-        "y1": 49.98,
+        "y": 44.0,
+        "y0": 31.59,
+        "y1": 51.0,
         "placeId": "charlottetown"
        },
        {
         "x": "Regina--Moose Mountain",
-        "y": 47.27,
-        "y0": 37.0,
-        "y1": 53.49,
+        "y": 50.0,
+        "y0": 38.0,
+        "y1": 53.0,
         "placeId": "regina"
        },
        {
         "x": "Saint John--St. Stephen",
         "y": 45.0,
         "y0": 31.0,
-        "y1": 48.0,
+        "y1": 50.04,
         "placeId": "saint-john"
        },
        {
         "x": "Saskatoon--Biggar",
-        "y": 48.0,
-        "y0": 37.8,
-        "y1": 52.0,
+        "y": 49.0,
+        "y0": 38.0,
+        "y1": 52.44,
         "placeId": "saskatoon"
        },
        {
         "x": "Southwest",
-        "y": 40.0,
-        "y0": 31.52,
-        "y1": 50.0,
+        "y": 42.0,
+        "y0": 33.0,
+        "y1": 52.0,
         "placeId": "brandon"
        },
        {
         "x": "Thompson--Okanagan",
-        "y": 48.0,
-        "y0": 40.35,
-        "y1": 56.0,
+        "y": 50.0,
+        "y0": 41.0,
+        "y1": 61.25,
         "placeId": "kelowna"
        },
        {
         "x": "Toronto",
-        "y": 40.59,
-        "y0": 28.0,
-        "y1": 55.0,
+        "y": 44.0,
+        "y0": 30.0,
+        "y1": 56.0,
         "placeId": "toronto"
        },
        {
-        "x": "Vancouver Island and Coast",
-        "y": 47.0,
-        "y0": 36.42,
-        "y1": 55.61,
-        "placeId": "victoria"
-       },
-       {
         "x": "Windsor--Sarnia",
-        "y": 44.0,
-        "y0": 27.86,
-        "y1": 55.0,
+        "y": 45.0,
+        "y0": 28.0,
+        "y1": 57.0,
         "placeId": "windsor"
        },
        {
         "x": "Winnipeg",
         "y": 45.0,
-        "y0": 35.0,
-        "y1": 52.4,
+        "y0": 37.39,
+        "y1": 53.26,
         "placeId": "winnipeg"
-       },
-       {
-        "x": "Yukon Territory",
-        "y": 48.5,
-        "y0": 33.0,
-        "y1": 60.88,
-        "placeId": "whitehorse"
        }
       ]
      }
     ],
     "sourceIds": [
-     "jobbank-wages-2025"
+     "jobbank-wages-2026"
     ],
-    "notes": "Economic regions, not cities; shared regions appear once. Only hourly cells with the same period and source method are shown. 0 other-method or other-period regions omitted."
+    "notes": "Economic regions, not cities; shared regions appear once. Only hourly cells with the same period and source method are shown. 2 other-method or other-period regions omitted."
    },
    {
     "id": "wage-region-72106",
     "type": "range",
     "title": "Welders: published economic-region wages",
-    "subtitle": "NOC 72106 · 2023-2024 · Labour Force Survey",
+    "subtitle": "NOC 72106 · 2024-2025 · Labour Force Survey",
     "unit": "CAD_hour",
     "yLabel": "CAD per hour",
     "series": [
@@ -306,150 +292,122 @@
       "points": [
        {
         "x": "Avalon Peninsula",
-        "y": 36.0,
-        "y0": 23.46,
-        "y1": 42.65,
+        "y": 38.0,
+        "y0": 23.0,
+        "y1": 45.0,
         "placeId": "st-johns"
        },
        {
-        "x": "Edmonton",
-        "y": 39.9,
+        "x": "Calgary",
+        "y": 40.0,
         "y0": 28.0,
-        "y1": 54.0,
+        "y1": 50.0,
+        "placeId": "calgary"
+       },
+       {
+        "x": "Edmonton",
+        "y": 40.0,
+        "y0": 26.0,
+        "y1": 56.7,
         "placeId": "edmonton"
        },
        {
-        "x": "Fredericton--Oromocto",
-        "y": 27.0,
-        "y0": 22.0,
-        "y1": 46.09,
-        "placeId": "fredericton"
+        "x": "Halifax",
+        "y": 30.0,
+        "y0": 25.5,
+        "y1": 55.0,
+        "placeId": "halifax"
        },
        {
         "x": "Hamilton--Niagara Peninsula",
-        "y": 27.0,
-        "y0": 20.0,
-        "y1": 35.0,
+        "y": 26.5,
+        "y0": 20.6,
+        "y1": 44.25,
         "placeId": "hamilton"
        },
        {
         "x": "Kitchener--Waterloo--Barrie",
-        "y": 27.66,
-        "y0": 21.0,
-        "y1": 37.0,
+        "y": 28.0,
+        "y0": 20.5,
+        "y1": 40.0,
         "placeId": "kitchener-waterloo"
        },
        {
         "x": "London",
-        "y": 28.0,
-        "y0": 21.0,
-        "y1": 41.28,
+        "y": 29.0,
+        "y0": 22.0,
+        "y1": 44.12,
         "placeId": "london"
        },
        {
         "x": "Lower Mainland",
-        "y": 37.5,
+        "y": 37.3,
         "y0": 26.0,
-        "y1": 49.5,
+        "y1": 51.87,
         "placeId": "vancouver"
        },
        {
         "x": "Moncton--Richibucto",
-        "y": 27.0,
-        "y0": 22.0,
+        "y": 28.0,
+        "y0": 19.0,
         "y1": 34.0,
         "placeId": "moncton"
        },
        {
-        "x": "Northeast",
-        "y": 32.0,
-        "y0": 17.6,
-        "y1": 45.0,
-        "placeId": "sudbury"
-       },
-       {
-        "x": "Northwest",
-        "y": 36.0,
-        "y0": 25.75,
-        "y1": 41.5,
-        "placeId": "thunder-bay"
-       },
-       {
-        "x": "Ottawa",
-        "y": 28.0,
-        "y0": 21.0,
-        "y1": 41.28,
-        "placeId": "ottawa"
-       },
-       {
         "x": "Prince Edward Island",
         "y": 25.0,
-        "y0": 20.0,
+        "y0": 19.82,
         "y1": 32.5,
         "placeId": "charlottetown"
        },
        {
-        "x": "Saint John--St. Stephen",
-        "y": 29.0,
-        "y0": 22.0,
-        "y1": 48.0,
-        "placeId": "saint-john"
+        "x": "Regina--Moose Mountain",
+        "y": 33.0,
+        "y0": 25.5,
+        "y1": 48.08,
+        "placeId": "regina"
        },
        {
         "x": "Saskatoon--Biggar",
-        "y": 32.45,
-        "y0": 23.0,
-        "y1": 52.0,
+        "y": 33.0,
+        "y0": 24.0,
+        "y1": 49.0,
         "placeId": "saskatoon"
        },
        {
         "x": "Southwest",
-        "y": 26.25,
-        "y0": 21.31,
-        "y1": 37.0,
+        "y": 28.0,
+        "y0": 23.5,
+        "y1": 76.92,
         "placeId": "brandon"
        },
        {
-        "x": "Toronto",
-        "y": 28.0,
-        "y0": 20.0,
-        "y1": 42.0,
-        "placeId": "toronto"
-       },
-       {
-        "x": "Vancouver Island and Coast",
-        "y": 35.0,
-        "y0": 23.0,
-        "y1": 48.0,
-        "placeId": "victoria"
-       },
-       {
         "x": "Windsor--Sarnia",
-        "y": 25.5,
-        "y0": 20.0,
-        "y1": 38.0,
+        "y": 27.0,
+        "y0": 21.0,
+        "y1": 50.0,
         "placeId": "windsor"
        },
        {
         "x": "Winnipeg",
-        "y": 28.0,
+        "y": 29.0,
         "y0": 23.0,
-        "y1": 40.16,
+        "y1": 38.0,
         "placeId": "winnipeg"
        }
       ]
      }
     ],
     "sourceIds": [
-     "jobbank-wages-2025"
+     "jobbank-wages-2026"
     ],
-    "notes": "Economic regions, not cities; shared regions appear once. Only hourly cells with the same period and source method are shown. 10 other-method or other-period regions omitted."
+    "notes": "Economic regions, not cities; shared regions appear once. Only hourly cells with the same period and source method are shown. 14 other-method or other-period regions omitted."
    },
    {
     "id": "wage-region-73300",
     "type": "range",
     "title": "Transport truck drivers: published economic-region wages",
-    "subtitle": "NOC 73300 · 2023-2024 · Labour Force Survey",
+    "subtitle": "NOC 73300 · 2024-2025 · Labour Force Survey",
     "unit": "CAD_hour",
     "yLabel": "CAD per hour",
     "series": [
@@ -459,207 +417,179 @@
       "points": [
        {
         "x": "Avalon Peninsula",
-        "y": 24.2,
-        "y0": 17.97,
+        "y": 25.0,
+        "y0": 18.0,
         "y1": 32.0,
         "placeId": "st-johns"
        },
        {
-        "x": "Calgary",
-        "y": 30.0,
-        "y0": 21.0,
-        "y1": 42.31,
-        "placeId": "calgary"
-       },
-       {
-        "x": "Capitale-Nationale",
-        "y": 25.25,
-        "y0": 20.0,
-        "y1": 35.0,
-        "placeId": "quebec-city"
-       },
-       {
         "x": "Edmonton",
-        "y": 28.85,
-        "y0": 21.0,
+        "y": 29.0,
+        "y0": 22.0,
         "y1": 40.0,
         "placeId": "edmonton"
        },
        {
-        "x": "Estrie",
-        "y": 25.2,
-        "y0": 19.45,
-        "y1": 34.5,
-        "placeId": "sherbrooke"
-       },
-       {
         "x": "Fredericton--Oromocto",
-        "y": 20.0,
-        "y0": 15.65,
-        "y1": 28.5,
+        "y": 25.0,
+        "y0": 15.9,
+        "y1": 34.0,
         "placeId": "fredericton"
        },
        {
         "x": "Halifax",
-        "y": 25.0,
+        "y": 25.76,
         "y0": 19.0,
-        "y1": 28.05,
+        "y1": 30.0,
         "placeId": "halifax"
        },
        {
         "x": "Hamilton--Niagara Peninsula",
-        "y": 26.0,
-        "y0": 19.23,
-        "y1": 38.0,
+        "y": 28.0,
+        "y0": 20.5,
+        "y1": 38.46,
         "placeId": "hamilton"
        },
        {
         "x": "Kitchener--Waterloo--Barrie",
-        "y": 28.0,
+        "y": 27.27,
         "y0": 20.0,
-        "y1": 34.75,
+        "y1": 35.0,
         "placeId": "kitchener-waterloo"
        },
        {
         "x": "London",
-        "y": 25.0,
-        "y0": 19.6,
-        "y1": 34.62,
+        "y": 27.0,
+        "y0": 18.88,
+        "y1": 36.0,
         "placeId": "london"
        },
        {
         "x": "Lower Mainland",
-        "y": 29.0,
-        "y0": 21.0,
-        "y1": 40.0,
+        "y": 30.0,
+        "y0": 21.5,
+        "y1": 43.0,
         "placeId": "vancouver"
        },
        {
         "x": "Moncton--Richibucto",
-        "y": 23.95,
-        "y0": 17.0,
-        "y1": 34.12,
+        "y": 24.73,
+        "y0": 20.0,
+        "y1": 33.65,
         "placeId": "moncton"
-       },
-       {
-        "x": "Montréal",
-        "y": 23.68,
-        "y0": 16.15,
-        "y1": 33.75,
-        "placeId": "montreal"
        },
        {
         "x": "Northeast",
         "y": 27.0,
-        "y0": 20.0,
-        "y1": 38.49,
+        "y0": 21.0,
+        "y1": 37.0,
         "placeId": "sudbury"
        },
        {
         "x": "Northwest",
-        "y": 27.0,
-        "y0": 20.0,
-        "y1": 33.11,
+        "y": 29.0,
+        "y0": 21.98,
+        "y1": 35.0,
         "placeId": "thunder-bay"
        },
        {
         "x": "Northwest Territories",
-        "y": 30.0,
+        "y": 33.5,
         "y0": 25.0,
-        "y1": 40.0,
+        "y1": 36.55,
         "placeId": "yellowknife"
        },
        {
         "x": "Nunavut",
-        "y": 29.0,
-        "y0": 20.0,
-        "y1": 40.0,
+        "y": 30.0,
+        "y0": 25.0,
+        "y1": 85.0,
         "placeId": "iqaluit"
        },
        {
         "x": "Ottawa",
-        "y": 26.0,
+        "y": 27.0,
         "y0": 20.0,
-        "y1": 32.0,
+        "y1": 35.0,
         "placeId": "ottawa"
        },
        {
+        "x": "Outaouais",
+        "y": 28.0,
+        "y0": 18.5,
+        "y1": 35.0,
+        "placeId": "gatineau"
+       },
+       {
         "x": "Prince Edward Island",
-        "y": 24.0,
-        "y0": 18.0,
-        "y1": 30.29,
+        "y": 25.0,
+        "y0": 19.23,
+        "y1": 30.0,
         "placeId": "charlottetown"
        },
        {
         "x": "Regina--Moose Mountain",
-        "y": 26.35,
+        "y": 27.0,
         "y0": 20.0,
-        "y1": 38.89,
+        "y1": 40.0,
         "placeId": "regina"
        },
        {
         "x": "Saint John--St. Stephen",
-        "y": 23.68,
-        "y0": 17.0,
+        "y": 24.15,
+        "y0": 16.95,
         "y1": 30.0,
         "placeId": "saint-john"
        },
        {
         "x": "Saskatoon--Biggar",
         "y": 27.0,
-        "y0": 19.78,
+        "y0": 20.0,
         "y1": 35.0,
         "placeId": "saskatoon"
        },
        {
         "x": "Southwest",
-        "y": 25.5,
-        "y0": 17.4,
-        "y1": 36.0,
+        "y": 25.0,
+        "y0": 19.0,
+        "y1": 35.0,
         "placeId": "brandon"
        },
        {
         "x": "Thompson--Okanagan",
-        "y": 32.0,
+        "y": 32.5,
         "y0": 22.0,
-        "y1": 41.54,
+        "y1": 50.0,
         "placeId": "kelowna"
        },
        {
+        "x": "Toronto",
+        "y": 25.0,
+        "y0": 20.0,
+        "y1": 40.0,
+        "placeId": "toronto"
+       },
+       {
         "x": "Vancouver Island and Coast",
-        "y": 32.45,
-        "y0": 22.0,
-        "y1": 42.5,
+        "y": 34.0,
+        "y0": 23.08,
+        "y1": 44.0,
         "placeId": "victoria"
        },
        {
         "x": "Windsor--Sarnia",
-        "y": 26.0,
-        "y0": 17.6,
-        "y1": 33.33,
+        "y": 27.47,
+        "y0": 19.0,
+        "y1": 36.06,
         "placeId": "windsor"
-       },
-       {
-        "x": "Winnipeg",
-        "y": 24.0,
-        "y0": 17.0,
-        "y1": 34.72,
-        "placeId": "winnipeg"
-       },
-       {
-        "x": "Yukon Territory",
-        "y": 34.0,
-        "y0": 26.5,
-        "y1": 43.27,
-        "placeId": "whitehorse"
        }
       ]
      }
     ],
     "sourceIds": [
-     "jobbank-wages-2025"
+     "jobbank-wages-2026"
     ],
-    "notes": "Economic regions, not cities; shared regions appear once. Only hourly cells with the same period and source method are shown. 2 other-method or other-period regions omitted."
+    "notes": "Economic regions, not cities; shared regions appear once. Only hourly cells with the same period and source method are shown. 6 other-method or other-period regions omitted."
    }
   ],
   "interpretation": [
@@ -671,11 +601,11 @@
    "For each chart, keep the largest cohort of distinct economic regions with the same period and methodology. Regions are listed alphabetically; provincial and national fallbacks are not substituted."
   ],
   "limitations": [
-   "Different methods or periods are not pooled into a single ranking. Published periods in this snapshot: 2021, 2023-2024, 2024",
+   "Different methods or periods are not pooled into a single ranking. Published periods in this snapshot: 2021, 2024-2025, 2025",
    "Wages are nominal earnings of employed workers; they are not adjusted for regional living costs and exclude benefits. Some occupations and regions have no published estimate."
   ],
   "sourceIds": [
-   "jobbank-wages-2025",
+   "jobbank-wages-2026",
    "statcan-noc-2021-v1.0"
   ],
   "relatedPlaceIds": [
@@ -705,12 +635,11 @@
    "toronto",
    "vancouver",
    "victoria",
-   "whitehorse",
    "windsor",
    "winnipeg",
    "yellowknife"
   ],
-  "computedAt": "2026-11-16T20:35:24+00:00"
+  "computedAt": "2026-11-23T22:07:30+00:00"
  },
  {
   "id": "work-labour",
@@ -3401,6 +3330,6 @@
    "toronto",
    "vancouver"
   ],
-  "computedAt": "2026-11-16T20:35:24+00:00"
+  "computedAt": "2026-11-23T22:07:30+00:00"
  }
 ]

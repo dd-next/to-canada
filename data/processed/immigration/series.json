@@ -14,7 +14,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -33,7 +33,7 @@
    },
    {
     "t": "2017",
-    "v": 86610.0,
+    "v": 86615.0,
     "f": [
      "rounded"
     ]
@@ -61,14 +61,14 @@
    },
    {
     "t": "2021",
-    "v": 142815.0,
+    "v": 142800.0,
     "f": [
      "rounded"
     ]
    },
    {
     "t": "2022",
-    "v": 128230.0,
+    "v": 128225.0,
     "f": [
      "rounded"
     ]
@@ -89,14 +89,14 @@
    },
    {
     "t": "2025",
-    "v": 97690.0,
+    "v": 97695.0,
     "f": [
      "rounded"
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 67250.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 81250.0,
     "f": [
      "rounded"
     ]
@@ -118,7 +118,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -199,8 +199,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 17610.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 20300.0,
     "f": [
      "rounded"
     ]
@@ -222,7 +222,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -262,7 +262,7 @@
    },
    {
     "t": "2020",
-    "v": 22740.0,
+    "v": 22735.0,
     "f": [
      "rounded"
     ]
@@ -276,7 +276,7 @@
    },
    {
     "t": "2022",
-    "v": 48405.0,
+    "v": 48420.0,
     "f": [
      "rounded"
     ]
@@ -303,8 +303,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 24050.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 28725.0,
     "f": [
      "rounded"
     ]
@@ -326,7 +326,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -373,14 +373,14 @@
    },
    {
     "t": "2021",
-    "v": 17880.0,
+    "v": 17875.0,
     "f": [
      "rounded"
     ]
    },
    {
     "t": "2022",
-    "v": 24735.0,
+    "v": 24730.0,
     "f": [
      "rounded"
     ]
@@ -407,8 +407,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 15760.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 18350.0,
     "f": [
      "rounded"
     ]
@@ -430,7 +430,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -511,8 +511,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 12310.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 14415.0,
     "f": [
      "rounded"
     ]
@@ -534,7 +534,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -581,14 +581,14 @@
    },
    {
     "t": "2021",
-    "v": 13865.0,
+    "v": 13870.0,
     "f": [
      "rounded"
     ]
    },
    {
     "t": "2022",
-    "v": 17415.0,
+    "v": 17420.0,
     "f": [
      "rounded"
     ]
@@ -615,8 +615,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 15915.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 18740.0,
     "f": [
      "rounded"
     ]
@@ -638,7 +638,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -719,8 +719,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 1180.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 1380.0,
     "f": [
      "rounded"
     ]
@@ -742,7 +742,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -796,7 +796,7 @@
    },
    {
     "t": "2022",
-    "v": 15780.0,
+    "v": 15775.0,
     "f": [
      "rounded"
     ]
@@ -817,14 +817,14 @@
    },
    {
     "t": "2025",
-    "v": 14245.0,
+    "v": 14240.0,
     "f": [
      "rounded"
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 11110.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 12330.0,
     "f": [
      "rounded"
     ]
@@ -846,7 +846,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -927,8 +927,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 3770.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 4390.0,
     "f": [
      "rounded"
     ]
@@ -950,7 +950,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -1031,8 +1031,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 4295.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 5075.0,
     "f": [
      "rounded"
     ]
@@ -1054,12 +1054,12 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
     "t": "2015",
-    "v": 2520.0,
+    "v": 2525.0,
     "f": [
      "rounded"
     ]
@@ -1135,8 +1135,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 5795.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 6965.0,
     "f": [
      "rounded"
     ]
@@ -1158,7 +1158,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -1212,14 +1212,14 @@
    },
    {
     "t": "2022",
-    "v": 5460.0,
+    "v": 5450.0,
     "f": [
      "rounded"
     ]
    },
    {
     "t": "2023",
-    "v": 7045.0,
+    "v": 7050.0,
     "f": [
      "rounded"
     ]
@@ -1239,8 +1239,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 4750.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 5715.0,
     "f": [
      "rounded"
     ]
@@ -1262,7 +1262,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -1309,14 +1309,14 @@
    },
    {
     "t": "2021",
-    "v": 7075.0,
+    "v": 7090.0,
     "f": [
      "rounded"
     ]
    },
    {
     "t": "2022",
-    "v": 9845.0,
+    "v": 9835.0,
     "f": [
      "rounded"
     ]
@@ -1343,8 +1343,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 5590.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 6455.0,
     "f": [
      "rounded"
     ]
@@ -1366,7 +1366,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -1447,8 +1447,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 1985.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 2300.0,
     "f": [
      "rounded"
     ]
@@ -1470,7 +1470,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -1524,7 +1524,7 @@
    },
    {
     "t": "2022",
-    "v": 9195.0,
+    "v": 9200.0,
     "f": [
      "rounded"
     ]
@@ -1551,8 +1551,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 3650.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 4175.0,
     "f": [
      "rounded"
     ]
@@ -1574,7 +1574,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -1628,7 +1628,7 @@
    },
    {
     "t": "2022",
-    "v": 8320.0,
+    "v": 8330.0,
     "f": [
      "rounded"
     ]
@@ -1655,8 +1655,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 3720.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 4195.0,
     "f": [
      "rounded"
     ]
@@ -1678,7 +1678,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -1725,7 +1725,7 @@
    },
    {
     "t": "2021",
-    "v": 1545.0,
+    "v": 1540.0,
     "f": [
      "rounded"
     ]
@@ -1753,14 +1753,14 @@
    },
    {
     "t": "2025",
-    "v": 3530.0,
+    "v": 3525.0,
     "f": [
      "rounded"
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 2990.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 3480.0,
     "f": [
      "rounded"
     ]
@@ -1782,7 +1782,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -1794,7 +1794,7 @@
    },
    {
     "t": "2016",
-    "v": 2620.0,
+    "v": 2625.0,
     "f": [
      "rounded"
     ]
@@ -1863,8 +1863,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 2950.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 3600.0,
     "f": [
      "rounded"
     ]
@@ -1886,7 +1886,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -1940,7 +1940,7 @@
    },
    {
     "t": "2022",
-    "v": 1410.0,
+    "v": 1415.0,
     "f": [
      "rounded"
     ]
@@ -1967,8 +1967,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 1020.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 1195.0,
     "f": [
      "rounded"
     ]
@@ -1990,7 +1990,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -2071,8 +2071,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 1255.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 1430.0,
     "f": [
      "rounded"
     ]
@@ -2094,7 +2094,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -2141,7 +2141,7 @@
    },
    {
     "t": "2021",
-    "v": 2285.0,
+    "v": 2290.0,
     "f": [
      "rounded"
     ]
@@ -2175,8 +2175,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 3165.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 3730.0,
     "f": [
      "rounded"
     ]
@@ -2198,7 +2198,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -2252,7 +2252,7 @@
    },
    {
     "t": "2022",
-    "v": 1495.0,
+    "v": 1505.0,
     "f": [
      "rounded"
     ]
@@ -2279,8 +2279,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 1210.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 1435.0,
     "f": [
      "rounded"
     ]
@@ -2302,7 +2302,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -2349,7 +2349,7 @@
    },
    {
     "t": "2021",
-    "v": 960.0,
+    "v": 970.0,
     "f": [
      "rounded"
     ]
@@ -2383,8 +2383,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 1100.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 1245.0,
     "f": [
      "rounded"
     ]
@@ -2406,7 +2406,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -2487,8 +2487,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 650.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 765.0,
     "f": [
      "rounded"
     ]
@@ -2510,7 +2510,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -2591,8 +2591,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 1485.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 1750.0,
     "f": [
      "rounded"
     ]
@@ -2614,7 +2614,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -2626,7 +2626,7 @@
    },
    {
     "t": "2016",
-    "v": 265.0,
+    "v": 260.0,
     "f": [
      "rounded"
     ]
@@ -2695,8 +2695,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 990.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 1170.0,
     "f": [
      "rounded"
     ]
@@ -2718,7 +2718,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -2799,8 +2799,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 1290.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 1495.0,
     "f": [
      "rounded"
     ]
@@ -2822,7 +2822,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -2903,8 +2903,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 850.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 970.0,
     "f": [
      "rounded"
     ]
@@ -2926,7 +2926,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -3007,8 +3007,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 545.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 585.0,
     "f": [
      "rounded"
     ]
@@ -3030,7 +3030,7 @@
   },
   "sourceId": "ircc-pr-cma",
   "dims": {
-   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-08"
+   "basis": "calendar year; last point is year-to-date 2026-01 to 2026-09"
   },
   "points": [
    {
@@ -3111,8 +3111,8 @@
     ]
    },
    {
-    "t": "2026 YTD (Jan-Aug)",
-    "v": 375.0,
+    "t": "2026 YTD (Jan-Sep)",
+    "v": 410.0,
     "f": [
      "rounded"
     ]

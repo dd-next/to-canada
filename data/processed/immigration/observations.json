@@ -2,7 +2,7 @@
  {
   "placeId": "toronto",
   "metricId": "imm_pr_admissions",
-  "value": 97690.0,
+  "value": 97695.0,
   "period": "2025",
   "geo": {
    "level": "cma",
@@ -33,7 +33,7 @@
   "flags": [
    "rounded"
   ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (97690 vs 124755)."
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (97695 vs 124755)."
  },
  {
   "placeId": "montreal",
@@ -254,7 +254,7 @@
  {
   "placeId": "winnipeg",
   "metricId": "imm_pr_admissions",
-  "value": 14245.0,
+  "value": 14240.0,
   "period": "2025",
   "geo": {
    "level": "cma",
@@ -272,7 +272,7 @@
  {
   "placeId": "winnipeg",
   "metricId": "imm_pr_admissions_change",
-  "value": -22.6,
+  "value": -22.7,
   "period": "2025",
   "geo": {
    "level": "cma",
@@ -285,7 +285,7 @@
   "flags": [
    "rounded"
   ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (14245 vs 18410)."
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (14240 vs 18410)."
  },
  {
   "placeId": "quebec-city",
@@ -578,7 +578,7 @@
  {
   "placeId": "st-johns",
   "metricId": "imm_pr_admissions",
-  "value": 3530.0,
+  "value": 3525.0,
   "period": "2025",
   "geo": {
    "level": "cma",
@@ -596,7 +596,7 @@
  {
   "placeId": "st-johns",
   "metricId": "imm_pr_admissions_change",
-  "value": -11.4,
+  "value": -11.5,
   "period": "2025",
   "geo": {
    "level": "cma",
@@ -609,7 +609,7 @@
   "flags": [
    "rounded"
   ],
-  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (3530 vs 3985)."
+  "note": "(2025 admissions / 2024 admissions - 1) x 100, computed from IRCC values rounded to the nearest 5 (3525 vs 3985)."
  },
  {
   "placeId": "windsor",
@@ -1095,7 +1095,7 @@
   "flags": [
    "rounded"
   ],
-  "note": "97690 admissions (IRCC, rounded to 5) / 7,108,874 residents (StatCan 17-10-0148-01, July 1 2025, Toronto (CMA), Ontario) x 1,000."
+  "note": "97695 admissions (IRCC, rounded to 5) / 7,108,874 residents (StatCan 17-10-0148-01, July 1 2025, Toronto (CMA), Ontario) x 1,000."
  },
  {
   "placeId": "montreal",
@@ -1208,7 +1208,7 @@
  {
   "placeId": "winnipeg",
   "metricId": "imm_pr_admissions_per_1000",
-  "value": 14.97,
+  "value": 14.96,
   "period": "2025",
   "geo": {
    "level": "cma",
@@ -1221,7 +1221,7 @@
   "flags": [
    "rounded"
   ],
-  "note": "14245 admissions (IRCC, rounded to 5) / 951,758 residents (StatCan 17-10-0148-01, July 1 2025, Winnipeg (CMA), Manitoba) x 1,000."
+  "note": "14240 admissions (IRCC, rounded to 5) / 951,758 residents (StatCan 17-10-0148-01, July 1 2025, Winnipeg (CMA), Manitoba) x 1,000."
  },
  {
   "placeId": "quebec-city",
@@ -1370,7 +1370,7 @@
  {
   "placeId": "st-johns",
   "metricId": "imm_pr_admissions_per_1000",
-  "value": 14.5,
+  "value": 14.48,
   "period": "2025",
   "geo": {
    "level": "cma",
@@ -1383,7 +1383,7 @@
   "flags": [
    "rounded"
   ],
-  "note": "3530 admissions (IRCC, rounded to 5) / 243,478 residents (StatCan 17-10-0148-01, July 1 2025, St. John's (CMA), Newfoundland and Labrador) x 1,000."
+  "note": "3525 admissions (IRCC, rounded to 5) / 243,478 residents (StatCan 17-10-0148-01, July 1 2025, St. John's (CMA), Newfoundland and Labrador) x 1,000."
  },
  {
   "placeId": "windsor",

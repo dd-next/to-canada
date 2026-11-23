@@ -476,7 +476,7 @@
     "id": "intended-destinations-per-1000",
     "kind": "calculation",
     "headline": "Admissions per 1,000 residents range from 5.9 to 23.3 among comparable CMAs in 2025",
-    "detail": "21 of 24 full CMAs with observed changes had fewer admissions than in 2024. The newest published year covers 2026-01 to 2026-08; partial years are not pooled with full calendar years.",
+    "detail": "21 of 24 full CMAs with observed changes had fewer admissions than in 2024. The newest published year covers 2026-01 to 2026-09; partial years are not pooled with full calendar years.",
     "stat": {
      "value": 23.32,
      "unit": "per_1000",
@@ -546,7 +546,7 @@
        },
        {
         "x": "Winnipeg",
-        "y": 14.97,
+        "y": 14.96,
         "placeId": "winnipeg",
         "f": [
          "rounded"
@@ -554,7 +554,7 @@
        },
        {
         "x": "St. John's",
-        "y": 14.5,
+        "y": 14.48,
         "placeId": "st-johns",
         "f": [
          "rounded"
@@ -831,7 +831,7 @@
    "Retention does not explain why people left and excludes people who moved into the province from another initial destination."
   ],
   "methodology": [
-   "IRCC workbook coverage: 2015-01 to 2026-08; latest complete calendar year 2025. Values rounded to five; suppressed values remain missing.",
+   "IRCC workbook coverage: 2015-01 to 2026-09; latest complete calendar year 2025. Values rounded to five; suppressed values remain missing.",
    "Retention uses the 2018 admission cohort in tax year 2023, from StatCan 43-10-0022-01.",
    "Admissions per 1,000 use matching year and full-CMA July 1 population denominators; CA and CMA-part figures remain contextual."
   ],
