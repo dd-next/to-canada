@@ -24,12 +24,12 @@ check time. The source status records the unsuccessful attempt and its error.
   50 records and original teasers. News releases, backgrounders, statements and
   media advisories may be separate publications with similar titles. Read the
   same endpoint's Atom category to preserve those official subtypes explicitly.
-- [Program delivery updates](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/updates.html):
-  read only the update table, including its publication dates and documented
-  topic codes. Initial ingestion covers the current year and two prior years,
-  matching the archive policy stated on that page. Unknown/typo category codes
-  are not expanded into invented topics. The original title and direct source
-  link stand alone where the index provides no summary.
+- Program delivery updates come from the official JSON that powers the table on
+  Canada.ca. Ingestion uses the source's ISO date in `dataOrder` and maps known
+  category codes to topics. Initial ingestion covers the current year and two
+  prior years. Each entry shows the publisher's title and a direct link.
+  [Program delivery updates](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals.html)
+  · [Official JSON](https://www.canada.ca/content/dam/ircc/documents/json/pdi/pdu-en.json)
 - [Express Entry rounds](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html):
   discover the official English JSON endpoint from the table's configuration.
   Retain all available draws with their category, date, invitation count, CRS

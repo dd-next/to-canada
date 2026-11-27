@@ -1,0 +1,39 @@
+{
+  "pdu": [
+    {
+      "category": "service-delivery",
+      "link": "/content/canadasite/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/updates/2026-sudan-haiti-temporary-public-policy.html",
+      "title": "Open work permit renewals for foreign nationals facilitated under previous public policies related to the crises in Sudan and Haiti",
+      "dataOrder": "2026-11-26",
+      "date": "November 26, 2026"
+    },
+    {
+      "category": "service-delivery",
+      "link": "/content/canadasite/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/updates/2025-special-meaures-wildfires.html",
+      "title": "Special processing measures for the 2025 wildfire season",
+      "dataOrder": "2025-10-27",
+      "date": "October 27, 2025"
+    },
+    {
+      "category": "standard-requirements, permanent-residence",
+      "link": "/content/canadasite/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/updates/2025-fees-travel-document-return-canada.html",
+      "title": "Application abroad for a travel document to return to Canada under A31(3) and R315",
+      "dataOrder": "2025-10-09",
+      "date": "October 9, 2025"
+    },
+    {
+      "category": "temporary-resident-program",
+      "link": "/content/canadasite/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/updates/work-transportation-marine-workers.html",
+      "title": "Work related to transportation – Marine workers – International Mobility Program",
+      "dataOrder": "2025-07-16",
+      "date": "July 18, 2025"
+    },
+    {
+      "category": "temporary-resident-program",
+      "link": "/content/canadasite/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/updates/2023-temporary-resident-visas-military.html",
+      "title": "Temporary resident visas: Exemption for military members of countries designated for the purposes of the Visiting Forces Act",
+      "dataOrder": "2023-12-31",
+      "date": "December 31, 2023"
+    }
+  ]
+}

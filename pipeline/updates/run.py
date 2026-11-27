@@ -12,7 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common.fetch import fetch  # noqa: E402
-from ingest import (SOURCES, NEWS_PAGE, PDU_PAGE, ROUNDS_PAGE, news_endpoint, rounds_endpoint,
+from ingest import (SOURCES, NEWS_PAGE, PDU_ENDPOINT, ROUNDS_PAGE, news_endpoint, rounds_endpoint,
                     news_atom_endpoint, news_publication_types,
                     parse_news, parse_pdu, parse_rounds, merge_source, validate_feed)  # noqa: E402
 
@@ -29,7 +29,7 @@ def refresh(previous, read, checked_at):
 
     loaders = {
         "ircc-news": news,
-        "ircc-program-delivery": lambda: parse_pdu(read(PDU_PAGE), year - 2),
+        "ircc-program-delivery": lambda: parse_pdu(read(PDU_ENDPOINT), year - 2),
         "ircc-express-entry": lambda: parse_rounds(read(rounds_endpoint(read(ROUNDS_PAGE)))),
     }
     entries, states = [], []
