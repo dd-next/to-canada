@@ -9,14 +9,15 @@ import hashlib
 import json
 import re
 import xml.etree.ElementTree as ET
-from datetime import datetime
+from datetime import date, datetime
 from html import unescape
 from html.parser import HTMLParser
 from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit, urlunsplit
 
 BASE = "https://www.canada.ca"
 NEWS_PAGE = BASE + "/en/immigration-refugees-citizenship/news/rss.html"
-PDU_PAGE = BASE + "/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/updates.html"
+PDU_PAGE = BASE + "/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals.html"
+PDU_ENDPOINT = BASE + "/content/dam/ircc/documents/json/pdi/pdu-en.json"
 ROUNDS_PAGE = BASE + "/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html"
 SOURCES = [
     {"id": "ircc-news", "label": "IRCC newsroom", "url": NEWS_PAGE},
@@ -182,38 +183,42 @@ def parse_news(raw, publication_types=None):
     return result
 
 
-PDU_TOPICS = {"cit": "Citizenship", "pr": "Permanent residents", "ref": "Refugees",
-              "man": "Service delivery", "req": "Standard requirements", "med": "Medical", "tr": "Temporary residents"}
+PDU_TOPICS = {
+    "canadian-citizenship": "Citizenship",
+    "permanent-residence": "Permanent residents",
+    "refugee-protection": "Refugees",
+    "service-delivery": "Service delivery",
+    "standard-requirements": "Standard requirements",
+    "medical-requirements": "Medical",
+    "temporary-resident-program": "Temporary residents",
+}
 
 
 def parse_pdu(raw, earliest_year):
-    tables = [n for n in Document(raw).root.find("table") if n.attrs.get("id") == "tbl"]
-    if len(tables) != 1:
-        raise ValueError("Program delivery update table missing or ambiguous")
+    payload = json.loads(raw)
+    rows = payload.get("pdu") if isinstance(payload, dict) else None
+    if not isinstance(rows, list) or not rows:
+        raise ValueError("Program delivery update feed is empty or has changed format")
     result = []
-    for row in tables[0].find("tr"):
-        cells = list(row.find("td"))
-        if not cells:
+    for row in rows:
+        if not isinstance(row, dict) or any(
+            not isinstance(row.get(field), str) or not row[field].strip()
+            for field in ("dataOrder", "category", "link", "title")
+        ):
+            raise ValueError("Program delivery update has missing or invalid fields")
+        # This field carries the same ISO date as the former table's data-order.
+        published = date.fromisoformat(row["dataOrder"].strip())
+        if published.year < earliest_year:
             continue
-        if len(cells) != 3:
-            raise ValueError("Program delivery table columns changed")
-        date = cells[2].attrs.get("data-order", "")
-        # Some legacy archive rows use a YYYY-MM-DD suffix in human text. Never
-        # infer the date from the page modification stamp or retrieval clock.
-        iso(date)
-        if int(date[:4]) < earliest_year:
-            continue
-        links = list(cells[1].find("a"))
-        if len(links) != 1:
-            raise ValueError("Program delivery publication link missing or ambiguous")
-        codes = re.findall(r"[a-z]+", cells[0].text().lower())
-        if not codes:
-            raise ValueError("Program delivery category is missing")
-        # The live table contains typos ('red', 'reg') and undocumented legacy
-        # tags ('id', 'info'). Only expand the codes the official filter defines.
-        topics = list(dict.fromkeys(PDU_TOPICS[c] for c in codes if c in PDU_TOPICS))
-        item = record("ircc-program-delivery", "program_delivery", links[0].text(),
-                      links[0].attrs["href"], date, topics=topics, audience="IRCC staff and stakeholders")
+        categories = re.split(r"[\s,]+", row["category"].strip().lower())
+        topics = list(dict.fromkeys(PDU_TOPICS[category] for category in categories if category in PDU_TOPICS))
+        # The JSON misspells this URL. Use the working link to keep the saved ID.
+        link = row["link"].strip().replace(
+            "/updates/2025-special-meaures-wildfires.html",
+            "/updates/2025-special-measures-wildfires.html",
+        )
+        item = record("ircc-program-delivery", "program_delivery", row["title"],
+                      link, published.isoformat(), topics=topics, audience="IRCC staff and stakeholders")
         result.append(item)
     if not result:
         raise ValueError("No recent program delivery updates found")

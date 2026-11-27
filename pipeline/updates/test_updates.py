@@ -10,14 +10,14 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from ingest import (SOURCES, NEWS_PAGE, PDU_PAGE, ROUNDS_PAGE, parse_news, parse_pdu,
+from ingest import (SOURCES, NEWS_PAGE, PDU_ENDPOINT, ROUNDS_PAGE, parse_news, parse_pdu,
                     parse_rounds, news_endpoint, rounds_endpoint, merge_source, validate_feed,
                     news_atom_endpoint, news_publication_types)
 from run import refresh
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
-NOW = "2026-11-05T12:00:00+00:00"
-LATER = "2026-11-05T18:00:00+00:00"
+NOW = "2026-11-27T00:00:00+00:00"
+LATER = "2026-11-27T06:00:00+00:00"
 
 
 def fixture(name):
@@ -28,7 +28,7 @@ def source_inputs():
     news_landing, rounds_landing = fixture("news-landing.html"), fixture("rounds-landing.html")
     return {NEWS_PAGE: news_landing, news_endpoint(news_landing): fixture("news.json"),
             news_atom_endpoint(news_endpoint(news_landing)): fixture('news-atom.xml'),
-            PDU_PAGE: fixture("program-delivery.html"), ROUNDS_PAGE: rounds_landing,
+            PDU_ENDPOINT: fixture("program-delivery.json"), ROUNDS_PAGE: rounds_landing,
             rounds_endpoint(rounds_landing): fixture("rounds.json")}
 
 
@@ -55,12 +55,18 @@ class IRCCUpdatesTests(unittest.TestCase):
         self.assertEqual(rows[1]['publicationType'], 'news releases')
 
     def test_real_program_delivery_rows(self):
-        rows = parse_pdu(fixture("program-delivery.html"), 2024)
-        self.assertEqual(len(rows), 3)
-        self.assertEqual(rows[0]["title"], "Temporary resident permits: applying for permanent residence")
-        self.assertEqual(rows[0]["publishedAt"], "2026-11-03")
-        self.assertEqual(rows[0]["topics"], ["Temporary residents"])
-        self.assertEqual(rows[-1]["topics"], ["Refugees"])
+        rows = parse_pdu(fixture("program-delivery.json"), 2024)
+        self.assertEqual(len(rows), 4)
+        self.assertEqual(
+            rows[0]["title"],
+            "Open work permit renewals for foreign nationals facilitated under "
+            "previous public policies related to the crises in Sudan and Haiti",
+        )
+        self.assertEqual(rows[0]["publishedAt"], "2026-11-26")
+        self.assertEqual(rows[0]["topics"], ["Service delivery"])
+        self.assertTrue(rows[0]["url"].startswith("https://www.canada.ca/en/"))
+        self.assertEqual(rows[2]["topics"], ["Standard requirements", "Permanent residents"])
+        self.assertEqual(rows[3]["publishedAt"], "2025-07-16")
 
     def test_real_draw_fields_and_alphanumeric_rounds(self):
         rows = parse_rounds(fixture("rounds.json"))
@@ -99,14 +105,23 @@ class IRCCUpdatesTests(unittest.TestCase):
         self.assertEqual(after["contentChangedAt"], LATER)
         self.assertNotIn("updatedAt", after)  # Observation is not a publisher date.
 
-    def test_pdu_footer_changes_do_not_create_or_change_publications(self):
-        original = parse_pdu(fixture("program-delivery.html"), 2024)
-        altered = parse_pdu(fixture("program-delivery.html") + '<footer>Updated 2026-11-05 <a href="/en/contact.html">Contact</a></footer>', 2024)
-        self.assertEqual(original, altered)
+    def test_pdu_link_typo_does_not_duplicate_a_saved_publication(self):
+        correct_slug = "2025-special-measures-wildfires.html"
+        previous_inputs = dict(self.inputs)
+        previous_inputs[PDU_ENDPOINT] = self.inputs[PDU_ENDPOINT].replace(
+            "2025-special-meaures-wildfires.html", correct_slug,
+        )
+        previous = refresh({"entries": [], "sources": []}, previous_inputs.__getitem__, NOW)
+        before = next(e for e in previous["entries"] if e["url"].endswith(correct_slug))
+        after = refresh(previous, self.inputs.__getitem__, LATER)
+        retained = next(e for e in after["entries"] if e["id"] == before["id"])
+        self.assertEqual(len(after["entries"]), len(previous["entries"]))
+        self.assertEqual(retained["firstSeenAt"], NOW)
+        self.assertEqual(retained["lastCheckedAt"], LATER)
 
     def test_network_failure_retains_entries_and_successful_check_time(self):
         def read(url):
-            if url == PDU_PAGE:
+            if url == PDU_ENDPOINT:
                 raise OSError("Simulated unavailable official source")
             return self.inputs[url]
         after = refresh(self.feed, read, LATER)
@@ -118,11 +133,11 @@ class IRCCUpdatesTests(unittest.TestCase):
         self.assertEqual(state["lastCheckedAt"], LATER)
 
     def test_unexpected_format_retains_source_and_reports_error(self):
-        self.inputs[PDU_PAGE] = "<html>Site maintenance <footer>Updated today</footer></html>"
+        self.inputs[PDU_ENDPOINT] = '{"data": []}'
         after = refresh(self.feed, self.inputs.__getitem__, LATER)
         self.assertEqual(after["sources"][1]["status"], "failed")
-        self.assertEqual(after["sources"][1]["count"], 3)
-        self.assertIn("table missing", after["sources"][1]["error"])
+        self.assertEqual(after["sources"][1]["count"], self.feed["sources"][1]["count"])
+        self.assertIn("feed is empty or has changed format", after["sources"][1]["error"])
 
     def test_conflicting_duplicate_does_not_publish_partial_source(self):
         endpoint = news_endpoint(self.inputs[NEWS_PAGE])
