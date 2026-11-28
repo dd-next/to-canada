@@ -1,1 +1,1 @@
-{"schemaVersion":1,"attemptedAt":"2026-11-27T17:40:25+00:00","sourceCommit":"6ea942a7d3df9d4a0922015105b5263057fdb175","accepted":true,"error":null,"records":[]}
+{"schemaVersion":1,"attemptedAt":"2026-11-28T16:25:45+00:00","sourceCommit":null,"accepted":false,"error":"Failed to fetch https://api.github.com/repos/wra-sol/awesome-canada/commits/main: HTTP 404 for https://api.github.com/repos/wra-sol/awesome-canada/commits/main","records":[]}
